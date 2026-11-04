@@ -248,28 +248,49 @@ def main():
 {rd('base.css')}
 {rd('page.css')}
 {rd('extra.css')}
+{rd('theme.css')}
 </head>
 <body>
 <div class="lx-page-wrap">
-<div class="lx-dash">
-  <header class="lx-head">
-    <h1 class="lx-title"><img class="lx-logo-inline" src="{logo}" alt="LX Pantos" style="height:1em;width:auto;display:inline-block;vertical-align:-0.14em;margin-right:.4rem;"><span class="lx-title-sub">Textile / Garment Schedule</span></h1>
-    <p class="lx-sub" id="lx-updated-row"><span class="lx-updated dash-skeleton" data-draw="last-updated" data-source="route_meta">—</span></p>
-  </header>
-
-  <div class="lx-group">
-    <p class="lx-group-label">Network</p>
+<header class="lx-topbar">
+  <div class="lx-topbar-in">
+    <a class="lx-brand" href="./"><img src="{logo}" alt="LX Pantos"><span class="lx-brand-div"></span><span class="lx-brand-name">Textile / Garment Schedule</span></a>
     <nav class="lx-nav" role="tablist" aria-label="Network">
       <button class="lx-nav-btn" id="tab-net-asia" role="tab" aria-selected="true" aria-controls="net-asia" data-net="asia">Asia</button>
       <button class="lx-nav-btn" id="tab-net-ca" role="tab" aria-selected="false" aria-controls="net-ca" data-net="ca">C.America</button>
       <button class="lx-nav-btn" id="tab-net-med" role="tab" aria-selected="false" aria-controls="net-med" data-net="med">Mediterranean</button>
     </nav>
   </div>
+</header>
+<section class="lx-hero">
+  <div class="lx-hero-in">
+    <p class="lx-hero-kicker">LX Pantos · Textile &amp; Garment Logistics</p>
+    <h1>선적 스케줄 한눈에 보기</h1>
+    <p class="lx-hero-sub">아시아 역내 · 중미 · 지중해 주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
+    <span class="lx-updated-pill" id="hero-updated">—</span>
+  </div>
+</section>
+<div class="lx-dash">
+  <section class="lx-kpis" aria-label="Summary">
+    <div class="lx-kpi"><p class="lx-kpi-label">운영 노선</p><p class="lx-kpi-value" id="kpi-lanes">—</p><p class="lx-kpi-note" id="kpi-lanes-note">&nbsp;</p></div>
+    <div class="lx-kpi"><p class="lx-kpi-label">향후 7일 출항</p><p class="lx-kpi-value" id="kpi-week">—</p><p class="lx-kpi-note" id="kpi-week-note">&nbsp;</p></div>
+    <div class="lx-kpi lx-kpi--ok"><p class="lx-kpi-label">신규 항차</p><p class="lx-kpi-value" id="kpi-new">—</p><p class="lx-kpi-note">최근 수집 대비 새로 잡힌 항차</p></div>
+    <div class="lx-kpi lx-kpi--warn"><p class="lx-kpi-label">일정 변경</p><p class="lx-kpi-value" id="kpi-chg">—</p><p class="lx-kpi-note">ETD · ETA · T/T 변경 항차</p></div>
+  </section>
+  <header class="lx-head">
+    <p class="lx-sub" id="lx-updated-row"><span class="lx-updated dash-skeleton" data-draw="last-updated" data-source="route_meta">—</span></p>
+  </header>
 {asia_markup()}
 {ca_markup()}
 {med_markup()}
 </div>
-<p class="lx-site-foot">Site generated {built}</p>
+<footer class="lx-footer">
+  <div class="lx-footer-in">
+    <div><img src="{logo}" alt="LX Pantos"><p>Textile / Garment Schedule</p><p>사이트 생성 {built}</p></div>
+    <div><h3>업데이트</h3><p>평일 매일 오전, 각 선사 공개 스케줄 조회 결과를 반영합니다. 노선별 업데이트 날짜는 각 노선 상단 배지와 상단 업데이트 표시를 참고하세요.</p></div>
+    <div><h3>안내</h3><p>표시된 일정은 선사 사정에 따라 변경될 수 있으며, 실제 부킹 시 선사 확정 스케줄을 확인해 주세요.</p></div>
+  </div>
+</footer>
 </div>
 {rd('d3.html')}
 <script>window.__LX_STATIC__ = {data_js};</script>
@@ -277,6 +298,7 @@ def main():
 {rd('main.html')}
 {rd('calcs.html')}
 {gt}
+{rd('summary.html')}
 </body>
 </html>
 '''

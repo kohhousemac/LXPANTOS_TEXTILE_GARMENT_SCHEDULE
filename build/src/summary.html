@@ -1,0 +1,46 @@
+<script>
+// KPI cards in the hero: computed from the same datasets the tables use.
+(function () {
+  function sched(s) {
+    var m = /^(\d{1,2})-(\d{1,2})/.exec(s || '');
+    if (!m) return null;
+    var now = new Date(), best = null, bd = Infinity;
+    [-1, 0, 1].forEach(function (y) {
+      var d = new Date(now.getFullYear() + y, +m[1] - 1, +m[2]);
+      var diff = Math.abs(d - now);
+      if (diff < bd) { bd = diff; best = d; }
+    });
+    return best;
+  }
+  function set(id, html) { var el = document.getElementById(id); if (el) el.innerHTML = html; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  var meta = (dash.data('route_meta').data || []);
+  var routes = meta.map(function (r) { return r.routeId; });
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var in7 = new Date(today.getTime() + 7 * 864e5);
+  var week = 0, next = null;
+  routes.forEach(function (id) {
+    (dash.data(id).data || []).forEach(function (r) {
+      var d = sched(r.etd);
+      if (!d || d < today) return;
+      if (d < in7) week++;
+      if (!next || d < next.d) next = { d: d, r: r, id: id };
+    });
+  });
+  var newC = meta.reduce(function (a, r) { return a + (r.newCount || 0); }, 0);
+  var chC = meta.reduce(function (a, r) { return a + (r.changedCount || 0); }, 0);
+  var mmdd = ('0' + (today.getMonth() + 1)).slice(-2) + '/' + ('0' + today.getDate()).slice(-2);
+  var latest = meta.map(function (r) { return r.updateDate || ''; }).sort().pop() || '';
+  var fresh = meta.filter(function (r) { return r.updateDate === latest; }).length;
+
+  set('kpi-lanes', routes.length + '<small>개 노선</small>');
+  set('kpi-lanes-note', '최신(' + esc(latest) + ') 반영 ' + fresh + '개 노선');
+  set('kpi-week', week + '<small>항차</small>');
+  set('kpi-week-note', next ? '다음 출항 ' + esc(next.r.etd) + ' · ' + esc(next.r.vessel) : '예정 항차 없음');
+  set('kpi-new', newC + '<small>건</small>');
+  set('kpi-chg', chC + '<small>건</small>');
+  var upd = document.getElementById('hero-updated');
+  if (upd) upd.textContent = latest ? '스케줄 업데이트 ' + latest + (latest === mmdd ? ' (오늘)' : '') : '';
+})();
+</script>
