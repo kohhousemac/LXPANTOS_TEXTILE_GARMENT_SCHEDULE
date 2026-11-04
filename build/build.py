@@ -270,9 +270,9 @@ def main():
     <g><circle cx="700" cy="90" r="3"/></g><g><circle cx="180" cy="270" r="2.6"/></g><g><circle cx="620" cy="280" r="2.6"/></g>
   </svg>
   <div class="lx-hero-in">
-    <p class="lx-hero-eyebrow">Sailing Schedule · 선적 스케줄</p>
-    <h1>LX Pantos<span class="dot">·</span><span class="thin">Textile &amp; Garment Logistics</span></h1>
-    <p class="lx-hero-sub">Asia · Central America · Mediterranean 주요 노선의 직항 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
+    <p class="lx-hero-eyebrow">Asia · Central America · Mediterranean</p>
+    <h1>LX Pantos <span class="thin">Textile &amp; Garment Schedule</span></h1>
+    <p class="lx-hero-sub">주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
     <span class="lx-updated-pill" id="hero-updated">—</span>
   </div>
 </section>

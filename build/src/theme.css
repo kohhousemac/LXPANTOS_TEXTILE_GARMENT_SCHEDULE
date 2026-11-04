@@ -56,7 +56,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 .lx-hero-in { max-width: 1200px; margin: 0 auto; padding: 2.75rem 1.25rem 2.75rem; position: relative; z-index: 1; }
 .lx-hero-eyebrow { display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; font-size: .8rem; font-weight: 600; letter-spacing: .08em; color: rgba(255,255,255,.72); }
 .lx-hero-eyebrow::before { content: ""; width: 28px; height: 2px; background: #ff3d6e; border-radius: 2px; }
-.lx-hero h1 { margin: 0; font-weight: 800; letter-spacing: .02em; line-height: 1.12; font-size: clamp(1.55rem, .9rem + 2.9vw, 3rem); text-transform: uppercase; max-width: 18ch; }
+.lx-hero h1 { margin: 0; font-weight: 800; letter-spacing: .02em; line-height: 1.12; font-size: clamp(1.15rem, .35rem + 3.1vw, 2.75rem); text-transform: uppercase; white-space: nowrap; }
 .lx-hero h1 .dot { color: #ff3d6e; margin: 0 .12em; }
 .lx-hero h1 .thin { font-weight: 300; color: rgba(255,255,255,.88); }
 .lx-hero-sub { margin: 1rem 0 0; color: rgba(255,255,255,.66); font-size: .95rem; max-width: 52ch; line-height: 1.6; }
@@ -126,3 +126,5 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 .lx-kpi { padding: .95rem 1.15rem; }
 .lx-kpi-value { font-size: 1.6rem; }
 </style>
+
+<style>@media (max-width: 30rem) { .lx-hero h1 { white-space: normal; font-size: 1.45rem; } }</style>
