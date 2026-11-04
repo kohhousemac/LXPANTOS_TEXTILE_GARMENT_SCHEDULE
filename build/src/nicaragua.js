@@ -131,3 +131,104 @@
     dash.draw('rows-ni-corinto', function (el) { niRenderTable(el); });
   })();
 
+  // ---- Corinto: transit time by origin, change history, routing by sailing ----
+  (function () {
+    var POL_ORDER = ['Busan', 'Shanghai', 'Yantian', 'Nansha', 'Ho Chi Minh'];
+    function ttDays(s) {
+      var m = /(\d+)\s*d(?:\s*(\d+)\s*h)?/.exec(s || '');
+      return m ? (+m[1] + (m[2] ? +m[2] / 24 : 0)) : null;
+    }
+    function tsList(ts) {
+      if (Array.isArray(ts)) return ts;
+      return String(ts || '').split(/\s*(?:,|→|->)\s*/).filter(Boolean);
+    }
+
+    // transit chart
+    var box = document.getElementById('ni-tt-chart');
+    function drawTT() {
+      if (!box) return;
+      var d = dash.data('nicaragua_corinto');
+      box.replaceChildren();
+      if (d.status !== 'ok' || !d.data.length) return;
+      var by = {};
+      d.data.forEach(function (r) { var v = ttDays(r.tt); if (v != null) (by[r.pol] = by[r.pol] || []).push(v); });
+      var rows = Object.keys(by).sort(function (a, b) { return POL_ORDER.indexOf(a) - POL_ORDER.indexOf(b); }).map(function (p) {
+        var v = by[p];
+        return { pol: p, avg: Math.round(v.reduce(function (a, b) { return a + b; }, 0) / v.length * 10) / 10,
+                 min: Math.round(Math.min.apply(null, v)), max: Math.round(Math.max.apply(null, v)), n: v.length };
+      });
+      var W = box.clientWidth || 640, rowH = 30, top = 4, H = top + rows.length * rowH + 4;
+      var svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', '0 0 ' + W + ' ' + H).attr('role', 'img').attr('aria-label', 'Average transit days to Corinto by origin port');
+      var left = 96, right = 210;
+      var x = d3.scaleLinear([0, d3.max(rows, function (r) { return r.max; }) || 1], [left, Math.max(left + 40, W - right)]);
+      var g = svg.selectAll('g').data(rows).join('g').attr('transform', function (r, i) { return 'translate(0,' + (top + i * rowH) + ')'; });
+      g.append('text').attr('x', left - 10).attr('y', rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12.5).attr('font-weight', 600).attr('fill', 'var(--color-fg)').text(function (r) { return r.pol; });
+      g.append('rect').attr('x', left).attr('y', 7).attr('height', rowH - 14).attr('rx', 5).attr('fill', 'color-mix(in srgb, var(--color-fg) 7%, transparent)')
+        .attr('width', function (r) { return Math.max(2, x(r.max) - left); });
+      g.append('rect').attr('x', left).attr('y', 7).attr('height', rowH - 14).attr('rx', 5).attr('fill', '#0f5fa8')
+        .attr('width', function (r) { return Math.max(2, x(r.avg) - left); });
+      g.append('text').attr('x', function (r) { return x(r.max) + 8; }).attr('y', rowH / 2 + 4).attr('font-size', 12).attr('fill', 'var(--color-fg-muted)')
+        .text(function (r) { return r.avg + 'd avg (' + r.min + '–' + r.max + 'd · ' + r.n + ' sailings)'; });
+      box.style.minHeight = H + 'px';
+    }
+    window.gtRedraw = window.gtRedraw || {};
+    window.gtRedraw.niTT = drawTT;
+    dash.onData(drawTT);
+    document.querySelectorAll('[data-ca-pod="ni"]').forEach(function (b) {
+      b.addEventListener('click', function () { setTimeout(drawTT, 30); });
+    });
+
+    // change history
+    var chg = document.getElementById('ni-chg-table');
+    dash.onData(function () {
+      if (!chg) return;
+      var d = dash.data('changes_ni'), body = chg.tBodies[0];
+      body.replaceChildren();
+      if (d.status !== 'ok') return;
+      d.data.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; }).forEach(function (r) {
+        var tr = body.insertRow();
+        tr.dataset.key = r.id;
+        if (r.vessel === 'All') tr.className = 'sys';
+        [r.date, r.pol || '—', r.vessel].forEach(function (t) { tr.insertCell().textContent = t; });
+        var c = tr.insertCell(); c.textContent = r.change;
+        if (/Removed/.test(r.change)) c.className = 'late';
+        else if (/New/.test(r.change)) c.className = 'early';
+        else if (/changed/.test(r.change)) c.style.color = 'var(--color-warn)';
+        tr.insertCell().textContent = r.old || '—';
+        tr.insertCell().textContent = r.new || '—';
+      });
+    });
+
+    // routing by sailing
+    var pick = document.getElementById('ni-vsl-pick');
+    var rot = document.getElementById('ni-rot-table');
+    var chosen = '';
+    if (pick) pick.addEventListener('change', function () { chosen = pick.value; drawRot(); });
+    function drawRot() {
+      if (!pick || !rot) return;
+      var d = dash.data('nicaragua_corinto'), body = rot.tBodies[0];
+      body.replaceChildren();
+      if (d.status !== 'ok') return;
+      var rows = d.data.slice().sort(function (a, b) { return (a.etd || '') < (b.etd || '') ? -1 : 1; });
+      var keys = rows.map(function (r) { return r.pol + '|' + r.vessel; });
+      if (!chosen || keys.indexOf(chosen) === -1) chosen = keys[0] || '';
+      pick.replaceChildren.apply(pick, rows.map(function (r) { return new Option(r.etd.slice(0, 5) + ' · ' + r.pol + ' · ' + r.vessel, r.pol + '|' + r.vessel); }));
+      pick.value = chosen;
+      var r = rows[keys.indexOf(chosen)];
+      if (!r) return;
+      var steps = [[r.pol.toUpperCase(), 'Departure (POL)', r.etd]];
+      tsList(r.ts).forEach(function (p) { steps.push([p.toUpperCase(), 'Transshipment', '—']); });
+      steps.push(['CORINTO', 'Arrival (POD)', r.eta]);
+      steps.forEach(function (s, i) {
+        var tr = body.insertRow();
+        var p = tr.insertCell(); p.textContent = s[0];
+        if (i === 0 || i === steps.length - 1) p.className = 'v';
+        tr.insertCell().textContent = s[1];
+        tr.insertCell().textContent = s[2];
+      });
+      var tr = body.insertRow(); tr.className = 'sys';
+      var c = tr.insertCell(); c.colSpan = 3; c.textContent = 'Transit time ' + (r.tt || '—') + ' · ' + r.carrier;
+    }
+    dash.onData(drawRot);
+  })();
+

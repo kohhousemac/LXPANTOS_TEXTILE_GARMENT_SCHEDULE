@@ -157,6 +157,44 @@ NI_PAGE = '''
       </div>
       <p class="empty" id="ni-sail-empty" hidden>No sailings to display.</p>
     </section>
+
+    <section class="card" id="ni-transit">
+      <h2>Transit time by origin</h2>
+      <p class="note">Average transit days from each POL to Corinto across the sailings listed above. The number beside each bar shows the fastest/slowest transit and number of sailings.</p>
+      <div class="chart" id="ni-tt-chart" data-source="nicaragua_corinto" style="min-height: 140px"></div>
+    </section>
+
+    <div class="grid2">
+      <section class="card" id="ni-changes">
+        <h2>Schedule change history</h2>
+        <p class="note">ETD/ETA and transshipment changes versus the prior day's collection, plus new and removed sailings.</p>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="ni-chg-table" data-source="changes_ni" data-row-key="id">
+            <thead><tr>
+              <th data-field="date">Date</th>
+              <th data-field="pol">POL</th>
+              <th data-field="vessel">Vessel / Voyage</th>
+              <th data-field="change">Change</th>
+              <th data-field="old">Previous</th>
+              <th data-field="new">New</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card" id="ni-rotation">
+        <h2>Routing by sailing</h2>
+        <p class="note">Departure, transshipment hubs and Corinto arrival for the selected sailing.</p>
+        <div class="bar"><select id="ni-vsl-pick" aria-label="Select sailing"></select></div>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="ni-rot-table">
+            <thead><tr><th>Port</th><th>Role</th><th>Date</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   </div>
   </section>
 '''
