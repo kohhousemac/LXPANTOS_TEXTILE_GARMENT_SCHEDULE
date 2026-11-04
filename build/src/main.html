@@ -228,7 +228,14 @@
     td.className = 'lx-date';
     var main = document.createElement('div');
     if (changed) main.appendChild(statusCheck('changed'));
-    main.appendChild(document.createTextNode(value || '—'));
+    var mm = /^(\d{1,2}-\d{1,2})\s*\((\w+)\)/.exec(value || '');
+    if (mm) {
+      var dd = document.createElement('span'); dd.className = 'lx-d'; dd.textContent = mm[1].replace('-', '.');
+      var dw = document.createElement('span'); dw.className = 'lx-dow'; dw.textContent = mm[2];
+      main.appendChild(dd); main.appendChild(dw);
+    } else {
+      main.appendChild(document.createTextNode(value || '—'));
+    }
     td.appendChild(main);
     if (changed && prevValue) {
       var prev = document.createElement('div');
@@ -268,7 +275,7 @@
     tdTt.className = 'lx-num';
     var ttMain = document.createElement('div');
     if (fields.indexOf('tt') !== -1) ttMain.appendChild(statusCheck('changed'));
-    ttMain.appendChild(document.createTextNode((typeof v.tt === 'number') ? v.tt + 'd' : '—'));
+    var ttp = document.createElement('span'); ttp.className = 'lx-tt'; ttp.textContent = (typeof v.tt === 'number') ? v.tt + ' days' : '—'; ttMain.appendChild(ttp);
     tdTt.appendChild(ttMain);
     if (fields.indexOf('tt') !== -1 && typeof v.prevTt === 'number') {
       var ttPrev = document.createElement('div');

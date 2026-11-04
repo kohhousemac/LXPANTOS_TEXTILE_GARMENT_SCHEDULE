@@ -490,6 +490,67 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 <style>@media (max-width: 30rem) { .lx-hero h1 { white-space: normal; font-size: 1.45rem; } }</style>
 
 <style>.lx-netgroup { margin-top: 1.75rem; }</style>
+<style>
+/* ===== Premium pass ===== */
+.lx-dash { gap: 1.5rem; }
+/* Network: segmented control */
+.lx-netgroup .lx-group-label { display: none; }
+.lx-netgroup .lx-nav { display: inline-flex; width: auto; align-self: flex-start; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 999px; padding: .3rem; gap: .2rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.lx-netgroup .lx-nav-btn { margin: 0; padding: .55rem 1.25rem; border-radius: 999px; border-bottom: none; font-size: .95rem; transition: background-color .2s, color .2s; }
+.lx-netgroup .lx-nav-btn[aria-selected="true"] { background: #16171b; color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lx-netgroup .lx-nav-btn[aria-selected="true"] { background: #f2f2f4; color: #111; } }
+.lx-netgroup .lx-nav-indicator { display: none; }
+
+/* Info strip: holidays + carrier legend side by side */
+#net-asia { gap: 1.25rem; }
+.lx-infostrip > .lx-group { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: .85rem 1.1rem; gap: .55rem; }
+.lx-legend-item { font-weight: 600; font-size: .74rem; }
+.lx-legend-dot { width: .55rem; height: .55rem; }
+
+/* POL bar */
+#net-asia > div.lx-group .lx-nav, #net-med .lx-nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: .25rem; }
+#net-asia > div.lx-group .lx-nav::-webkit-scrollbar { display: none; }
+.lx-nav-btn { white-space: nowrap; padding: .6rem .7rem; font-size: 1rem; }
+
+/* Lane card */
+.lx-lane { padding: 0; overflow: hidden; gap: 0; }
+.lx-lane-head { padding: 1.1rem 1.35rem; border-bottom: 1px solid var(--color-border-line); background: linear-gradient(180deg, color-mix(in srgb, var(--color-fg) 2.5%, var(--color-panel)), var(--color-panel)); }
+.lx-lane-head-left { align-items: center; row-gap: .4rem; }
+.lx-lane-head h2 { font-size: 1.22rem; font-weight: 750; letter-spacing: -.015em; }
+.lx-arrow { color: var(--lx-red); font-weight: 400; }
+.lx-code { font: 600 .7rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .06em; color: var(--color-fg-muted); background: color-mix(in srgb, var(--color-fg) 5%, transparent); padding: .32rem .5rem; border-radius: .35rem; }
+.lx-code i { font-style: normal; color: var(--lx-red); }
+.lx-table-wrap { border-radius: 0; padding: 0 .35rem; }
+.lx-table thead th { background: transparent; border-bottom: 1px solid var(--color-border-line); padding-top: .85rem; letter-spacing: .08em; }
+.lx-table td { padding-top: .75rem; padding-bottom: .75rem; vertical-align: middle; }
+.lx-table tbody tr:nth-child(even) td { background: transparent; }
+.lx-table tbody tr td { border-bottom: 1px solid color-mix(in srgb, var(--color-border-line) 70%, transparent); }
+.lx-table tbody tr:hover td { background: color-mix(in srgb, var(--lx-red) 4%, transparent); }
+.lx-table tbody tr:hover { transform: none; box-shadow: none; }
+.lx-d { font-weight: 700; font-size: .98rem; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.lx-dow { margin-left: .4rem; font-size: .7rem; font-weight: 600; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+.lx-tt { display: inline-block; font-size: .78rem; font-weight: 700; padding: .22rem .55rem; border-radius: 999px; background: color-mix(in srgb, var(--color-fg) 6%, transparent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lx-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82rem; }
+.lx-table .lx-chip { font-weight: 600; font-size: .72rem; }
+.lx-table .lx-chip:not(.lx-chip--ok):not(.lx-chip--warn) { color: #2463eb; border-color: color-mix(in srgb, #2463eb 35%, transparent); background: color-mix(in srgb, #2463eb 8%, transparent); }
+.lx-table .lx-chip--warn, .lx-table .lx-chip--ok { animation: none; }
+.lx-berth-mini { margin: 0; border: none; border-top: 1px solid var(--color-border-line); border-radius: 0; padding: .65rem 1.35rem; background: color-mix(in srgb, var(--color-fg) 2%, var(--color-panel)); }
+.lx-toolbar { margin-bottom: -.4rem; }
+
+/* page transition */
+@media (prefers-reduced-motion: no-preference) {
+  .lx-page:not([hidden]), .lx-group[data-net]:not([hidden]) { animation: lxFadeUp .35s cubic-bezier(.2,.7,.2,1); }
+  @keyframes lxFadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+/* C.America cards */
+.gt .card { box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 6px 18px -14px rgba(0,0,0,.25); }
+.gt h2 { font-size: 1.1rem; font-weight: 750; }
+.gt .gt-title { font-size: 1.35rem; }
+</style>
+<style>
+.lx-infostrip { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1rem; }
+.lx-infostrip:has(.lx-holidays:empty) { grid-template-columns: 1fr; }
+</style>
 
 </head>
 <body>
@@ -532,6 +593,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
   </header>
 
   <section class="lx-group" id="net-asia" data-net="asia" role="tabpanel" aria-labelledby="tab-net-asia">
+  <div class="lx-infostrip">
   <div class="lx-group" id="lx-holidays-group">
     <p class="lx-group-label">Upcoming holidays (ID · VN · KR · TW · CN)</p>
     <div class="lx-holidays" id="lx-holidays" data-draw="holidays-banner" data-source="holidays" aria-label="Upcoming Asia port-country holidays"></div>
@@ -540,6 +602,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
   <div class="lx-group">
     <p class="lx-group-label">Carrier colors</p>
     <div class="lx-legend" id="lx-legend" aria-label="Carrier color key"></div>
+  </div>
   </div>
 
   <div class="lx-group">
@@ -577,6 +640,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnsgn_idjkt-h"><span>Ho Chi Minh</span><span class="lx-arrow">→</span><span>Jakarta</span></h2>
+            <span class="lx-code">VNSGN <i>→</i> IDJKT</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnsgn_idjkt" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnsgn_idjkt">Copy</button>
@@ -603,6 +667,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnsgn_idsrg-h"><span>Ho Chi Minh</span><span class="lx-arrow">→</span><span>Semarang</span></h2>
+            <span class="lx-code">VNSGN <i>→</i> IDSRG</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnsgn_idsrg" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnsgn_idsrg">Copy</button>
@@ -629,6 +694,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnsgn_krpus-h"><span>Ho Chi Minh</span><span class="lx-arrow">→</span><span>Busan</span></h2>
+            <span class="lx-code">VNSGN <i>→</i> KRPUS</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnsgn_krpus" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnsgn_krpus">Copy</button>
@@ -655,6 +721,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnsgn_krinc-h"><span>Ho Chi Minh</span><span class="lx-arrow">→</span><span>Incheon</span></h2>
+            <span class="lx-code">VNSGN <i>→</i> KRINC</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnsgn_krinc" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnsgn_krinc">Copy</button>
@@ -681,6 +748,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnsgn_cnsha-h"><span>Ho Chi Minh</span><span class="lx-arrow">→</span><span>Shanghai</span></h2>
+            <span class="lx-code">VNSGN <i>→</i> CNSHA</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnsgn_cnsha" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnsgn_cnsha">Copy</button>
@@ -717,6 +785,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnhph_idjkt-h"><span>Haiphong</span><span class="lx-arrow">→</span><span>Jakarta</span></h2>
+            <span class="lx-code">VNHPH <i>→</i> IDJKT</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnhph_idjkt" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnhph_idjkt">Copy</button>
@@ -743,6 +812,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnhph_krpus-h"><span>Haiphong</span><span class="lx-arrow">→</span><span>Busan</span></h2>
+            <span class="lx-code">VNHPH <i>→</i> KRPUS</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnhph_krpus" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnhph_krpus">Copy</button>
@@ -769,6 +839,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnhph_krinc-h"><span>Haiphong</span><span class="lx-arrow">→</span><span>Incheon</span></h2>
+            <span class="lx-code">VNHPH <i>→</i> KRINC</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnhph_krinc" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnhph_krinc">Copy</button>
@@ -795,6 +866,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-vnhph_cnsha-h"><span>Haiphong</span><span class="lx-arrow">→</span><span>Shanghai</span></h2>
+            <span class="lx-code">VNHPH <i>→</i> CNSHA</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-vnhph_cnsha" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="vnhph_cnsha">Copy</button>
@@ -830,6 +902,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-idjkt_vnhph-h"><span>Jakarta</span><span class="lx-arrow">→</span><span>Haiphong</span></h2>
+            <span class="lx-code">IDJKT <i>→</i> VNHPH</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-idjkt_vnhph" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="idjkt_vnhph">Copy</button>
@@ -856,6 +929,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-idjkt_cnsha-h"><span>Jakarta</span><span class="lx-arrow">→</span><span>Shanghai</span></h2>
+            <span class="lx-code">IDJKT <i>→</i> CNSHA</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-idjkt_cnsha" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="idjkt_cnsha">Copy</button>
@@ -882,6 +956,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-idjkt_krinc-h"><span>Jakarta</span><span class="lx-arrow">→</span><span>Incheon</span></h2>
+            <span class="lx-code">IDJKT <i>→</i> KRINC</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-idjkt_krinc" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="idjkt_krinc">Copy</button>
@@ -918,6 +993,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-cnsha_vnhph-h"><span>Shanghai</span><span class="lx-arrow">→</span><span>Haiphong</span></h2>
+            <span class="lx-code">CNSHA <i>→</i> VNHPH</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-cnsha_vnhph" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="cnsha_vnhph">Copy</button>
@@ -944,6 +1020,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-cnsha_vnsgn-h"><span>Shanghai</span><span class="lx-arrow">→</span><span>Ho Chi Minh</span></h2>
+            <span class="lx-code">CNSHA <i>→</i> VNSGN</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-cnsha_vnsgn" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="cnsha_vnsgn">Copy</button>
@@ -970,6 +1047,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-cnsha_krpus-h"><span>Shanghai</span><span class="lx-arrow">→</span><span>Busan</span></h2>
+            <span class="lx-code">CNSHA <i>→</i> KRPUS</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-cnsha_krpus" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="cnsha_krpus">Copy</button>
@@ -996,6 +1074,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-cnsha_krinc-h"><span>Shanghai</span><span class="lx-arrow">→</span><span>Incheon</span></h2>
+            <span class="lx-code">CNSHA <i>→</i> KRINC</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-cnsha_krinc" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="cnsha_krinc">Copy</button>
@@ -1029,6 +1108,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-cnshk_vnsgn-h"><span>Shekou</span><span class="lx-arrow">→</span><span>Ho Chi Minh</span></h2>
+            <span class="lx-code">CNSHK <i>→</i> VNSGN</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-cnshk_vnsgn" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="cnshk_vnsgn">Copy</button>
@@ -1063,6 +1143,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-twkel_vnsgn-h"><span>Keelung</span><span class="lx-arrow">→</span><span>Ho Chi Minh</span></h2>
+            <span class="lx-code">TWKEL <i>→</i> VNSGN</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-twkel_vnsgn" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="twkel_vnsgn">Copy</button>
@@ -1089,6 +1170,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-twkel_vnhph-h"><span>Keelung</span><span class="lx-arrow">→</span><span>Haiphong</span></h2>
+            <span class="lx-code">TWKEL <i>→</i> VNHPH</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-twkel_vnhph" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="twkel_vnhph">Copy</button>
@@ -1124,6 +1206,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-hkhkg_vnhph-h"><span>Hong Kong</span><span class="lx-arrow">→</span><span>Haiphong</span></h2>
+            <span class="lx-code">HKHKG <i>→</i> VNHPH</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-hkhkg_vnhph" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="hkhkg_vnhph">Copy</button>
@@ -1150,6 +1233,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-hkhkg_vnsgn-h"><span>Hong Kong</span><span class="lx-arrow">→</span><span>Ho Chi Minh</span></h2>
+            <span class="lx-code">HKHKG <i>→</i> VNSGN</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-hkhkg_vnsgn" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="hkhkg_vnsgn">Copy</button>
@@ -1176,6 +1260,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-hkhkg_idjkt-h"><span>Hong Kong</span><span class="lx-arrow">→</span><span>Jakarta</span></h2>
+            <span class="lx-code">HKHKG <i>→</i> IDJKT</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-hkhkg_idjkt" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="hkhkg_idjkt">Copy</button>
@@ -1210,6 +1295,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-krpus_vnsgn-h"><span>Busan</span><span class="lx-arrow">→</span><span>Ho Chi Minh</span></h2>
+            <span class="lx-code">KRPUS <i>→</i> VNSGN</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-krpus_vnsgn" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="krpus_vnsgn">Copy</button>
@@ -1236,6 +1322,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-krpus_idjkt-h"><span>Busan</span><span class="lx-arrow">→</span><span>Jakarta</span></h2>
+            <span class="lx-code">KRPUS <i>→</i> IDJKT</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-krpus_idjkt" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="krpus_idjkt">Copy</button>
@@ -1496,6 +1583,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-krpus_trist-h"><span>Busan</span><span class="lx-arrow">→</span><span>Istanbul</span></h2>
+            <span class="lx-code">KRPUS <i>→</i> TRIST</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-krpus_trist" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="krpus_trist">Copy</button>
@@ -1516,7 +1604,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 </div>
 <footer class="lx-footer">
   <div class="lx-footer-in">
-    <div><img src="data:image/png;base64,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" alt="LX Pantos"><p>Textile / Garment Schedule</p><p>사이트 생성 2026-11-04 23:53 KST</p></div>
+    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhAAAABrCAYAAAAmeruiAAAeoUlEQVR4Xu2de2xU153Hr1chYoZNVXucqDGYqmDZDriKsaAtD/cPGxuyG+OoDwMrUdyiXfFUM7EELUkap01oYEWcxrHhj3VqGmkTIF1hTGpiY7QqGNrawkQ1xPbaidZjmzZr46oID6orzeo7ntsOwzzuOffcmTue70eyGpWZe88998493/N7pvl8Po0QQgghRIR/EPkwIYQQQgiggCCEEEKIMBQQhBBCCBGGAoIQQgghwlBAEEIIIUQYCghCCCGECEMBQQghhBBhKCAIIYQQIgwFBCGEEEKEoYAghBBCiDAUEIQQQggRhgKCEEIIIcJQQBBCCCFEmIeEvxGBP1y5cmHovXdL/9jdrc3cuRP1sFv6bqSpOu/d8fFvtZaXnVZ1vHiSnp+v5W7bpj226ivfXpCV9X48z00IIYSYwbSAwAL+2+cPnv6su9vMOFKSqf5+7bfPP68tyMo6var25c4vrFmzPiUnghBCSNJhyoUB8XCxejvFg0nujo9r//1v/1r6acsZn8lDEUIIIXHBlIDoa2w4jcWPqKH3tdf8okzN0QghhBDrkBYQiHn49MwZ60aWgvzlzh1t8J1fJGU8ByGEkNRCWkD8768+KE2tqYoPEGUzd+48EZ+zEUIIIXJIC4g/9ffLnZFEBVaIu2NjWzhNhBBC7Iy0gEAGAbGGqYH+H1lzZEIIIUQNptM4SXJxb3p66dioZ4/IqNNdrvYMV+Z5ke9YyfjoyG7vtDdH5BwLF2U3zHc6h0W+QzSp50UWh9MxlJGR+SHvEyHJAQVECtF95fLAqRNv50pcsntT1Za/FpeWz5P4rlJuT05srPtJbYPEQd1Lc/O0sopn6pbm5j0n8X0lQMD9urNjaHiwX7s16tG809NCx63eta91eeGKTUJfMsGxo4eHxkc9Jo4gjsPp1LIWZWvLC4tmlublPZu1aHGj+FEIIVZDAZFCXO7skBEPfi51XniouLQ84bMFS0hxSZl26WKH8FiGBwe04aOH3cUlZe5Nm7cqq4ZqlOHBgddPHKt3i4oGnQxXppaVnS0jnqTxesUEjgowP/57NTgAwdqQ7spsKK+ovFnw5IpNtE4QYh8oIFKIRCwGVoDFf2x0xPfJ4IDU4SE+vN5p3+bqHXETET1Xu26cbG5aJjXgANt3792T7sr80MwxkpGpyQkNc9fuyhxatXoNrEhxu2+EkMhIB1ESkki+u2tfDnbksvRc7dI6WuNT+RMxG2bFw6aqrTOpbsqHkGg/d1Y7dHC/D9Yc2XtPCFEDBQRJSmDK3lmzfyP85bJgMbrU2T4j+30jIGajubHelNuh/OlNWnFp2cNGzpcKQEgcP3rYHS8BSAgJD10YJGmBOX/7rn11WExkL+Lsqfceysr+4utWBFYiYPL40cNtU5OTssPTlheuoMk+AhCAtycn4+qKIrGBaB4e6P9ZtE86nQsG4hkMTKyBAoIkNVj4N1Vt2QchIHshCGx89oVa5amq751oGjIjHuCi2bJ9h1C6aqoBV5TD4fQlIiiWhOdkc1ObgfikXPeLtbtT3S2X7NCFQZIepJciM0MWRP0fP3qkDRYD2WOE0t7a4rtxvVf6cBAPcNEw6yA2CIq12hVF1DPuEatHQ+yH9K6NEDthNjMDfvXmY/VDO2sOmI7wx2LWca5FenoQ1wHxkGwZF+kSQa33vNPCtTDC0XHu7EPLC4s22qngGSFzHQoIMmdAZkbdK7VDtycnpK4JtQfOnnzXlDkcGRdm3Clg8/YdrckmHvzjrt4hVaRLr456o/ea+8ZHvfChC98/WJFONTe1qRCAJD7cnpgwldZMEg9dGGTOoCIzA+Zw2eh+VRkXqRZchvvmj2XZvDXth4eOpFVt/96gTIpuoPgU0zuThHuCVViJ/aCAIHMKPTPDzEUhuh+Fn0SOAfFgNuMCcRwskqRpq9asy4OQKHu6UuQW+IEVQ/hLJCF4vd6EnJeogwKCzDkCmRl/NXNhZ0+9uwzuCKPHQOS5mYwL9H5gJsH9lFdUpiGNVYSe33T5XSIi3yGJweu9m5gTE2VQQJA5CTIzZHawOvCpNze+1QDLQqwJQsaFgbS1iMBcX717X8zzpCJIYxUpFhboo2HKAkXiw9SEeKwLsRcMoiRzFuxgx0dHpNMpkZlxorG+bVfNgZxI6ZQQD6mYcREvMO/rSso0kTkeHuivELVcRGJqcmJDuH9LxiBXu2EHFwasVV7v9AO1Vux6fyON1+FwDiUi5ZsCgsxpsIOt88hnZqCVNQpCVe/a90B6543rvWdFFrZwJGvGRTz5emlZTse5liGj50SrdFHgrhoeGHhj3DMyb9wz4m88F8slpbcdR/rq0rz8m0ty82rilUaKheT27YkNYyMj37/l8eTOjnfibxks4caO8c53OPwWr/lOp7Y0N38mK3vxW1ZUYTUCUnjjSfA9xjNyz+uNmkKs39+sRYtxf1sfz85ujNf9Bej3Mu4Z2Ytn0sh4AVyh6ZmZ+pilsqJEoIAgcxo9M+P40SPnZdIDwS2Px//CDlb4cG2cPNFUYWby0OMi1TIuZMC8L8nN04y6iYzsbHE/hwcH6vquX6tA6qhMi3W97bimDSDoFimJbXiBF68vv7ly9drlMtcaCYz399ev/Qpioe+jazHFTTgwXvzp4uLG9V60S3c7nE435regsEj5uKOBsZxsbvLFmieHw6mtW1/2lMzijd9pz5WutsvowCuY9RHUVh7ZWfitVyzNzdNWrlln2TxBNCAQGLE8ouMF2PDgD0XsOs61IKDYrY/ZCoFLAUHmPP7MjN179xw/eqRB5keJ74aKB2RcyBxLB+KBGRfGWbhosWEBgZ14tIX4150dQzILihHw8va3Hm9t8ZVXVJpaaCAauq92fdx3/do8o+JJBjzHWHBuXO9VMm4RUIrcCF6vt21z9fcMF3mDcOhobWkzenyjBFKFlc8ThEN76xm3FfdZHzME7srVayGAlFkmKCBISoCa+5uqtu4Rbasdro024iJimbejwQZZ4sDkbgYsxlYKh1AgYvCsDQ/0+8oqKoV3z7PVTM8+ZEakyqCPu+fKZV9V9Q7hcduBeMydPk8Qijtr9kvPE57L9taWIdSfiQcQVD1Xu9zprkx3ZdXWVrMWUGZhkJQBZmWRzIxwbbRRqRK7TFnYICv+4CX9+isvDSFeJd4LMl7Y6LNiJJsnmESIh2Cwa8W4RVKZEw3uc/Oxeh8qwcbrPs+2lj/Shngo0evHM3Hs6OG4iYdgMO5Lne2mXLCAAoKkFMjMgBkvFuGKOmG3YWanwAZZiQHupzTNsPVbOfoiI1KfIl4LYDQC425IBhGBucVibKaBnSyBPjoVIsXnMF5YMs1sRsyCWA6zx6CAIClHZdXWHAS7RQL/Vl5ReV9ql4qMC8RS2DU9bK6DuU/kNerN2hI5BhkCnWoN1UNJJHADJHIxBn6X1aCxUuqJHq8/FkJBoC8FBEk5sCNF4aZw/Rb0ok6qMy7CxVIQ44yPjhj/cBhmY2DMVSc1S7L26tAblZm9fqtAzIMZy6BKTjY3uWNZmmDRSeR48Y4rr6hUUriOQZQkJQmXmRGujbbe48KMSTlcLAURA7UZjBLJuoTqpMODAzELiwXn/6dnZs7Mdzg+zch89AP9/HpuPiLmRVODz578T7f7xZefM3otRsGY0zNcWlb2F7V0l8v/tXSXa1D//j2v90tTExP+egIyO3WIH5joVexaVYLf56XODql1LPg+P56d7Z8rs/MESxOsC9HK0l+60NEgOgcY68qvrfXXo8jKXlyvf//25MRT+G88k8OD/fOQch7rmSyrqLypyhIqNfGEzAVCMzPCFXVixkXigVlYJOsFhXQiEamwmP6CXr6iKGaKm154CVUqu690nRcpJobFG9ejsnjTwUP/Xp7uchkO48e421tbzoumOLa3tiwzEj8kAjKSHI4FMb9SvH59WBcUUjVFng2AHfi60rKZVavXPhGteqPsPMG6sG59GSyc50MvDNYJkXnHc4n3UqRsCf2+43kqLi3znw4Wjp6urgbUNwkVExDXKkUgBQRJafBjuj0x4UvTfA8UdWLGhT3ouXJZqMMmKixGGjkWjKrqHXXHjx72HxNFdopLy1uX5ua5oy0m4cAuDkG5S/PyX9ePZwQUClIpIETEA8C4N1fvSCuvqNwgUmANu2vV4qey6l+ExE8oolVHReqvBM9Tc2P9eRHLzeULHW3hrBBjox6hWBz3C7UbRa0F/o3RZvxt9d8v/H500aK65w5jIEjKg0UgtKgTMy7sQfeVywMiOzZQULgianoaFu/qXftad9YcqNtZcwAdPzeJiodg/Lu/ktndnxH6Puo18jHLwcIEMSVyIju1S0dgs4j1QUQ8BIN5ihQzFQlUkgzH7Yn/+2ej8w1rj6h4CAXPJsTiwUNHNv6k7q0cs8cLhQKCkBBmC9G0SM9LuFgKIo6/muC5llyRb/p7AbgyP4z1HYgGlVaA0KydaGAnHyvQLl6Iip9IC2MiQBlyo+eF28JM5VdRsYWYKbPpr+ixogqM34xIjgQFBCFBzC5aZ0259tggyzywPLzxSq2wfxt9KMyfXRy9X4dR0AjL6GetBuLHaMv0QC8N4+YWC4kVLBgMAgfNDgViy+g8gXGPmLsilHuCvTsSAQUEIQFUZFyA+U5n0uX72wHsymGWPnb0sO/UibdzRTNfsMtUGSAmSri04EiYXVxUAvHzeJS6KKGMe0b2qTy/LLcEKsJmZWcLZz6EA5kQRhkfGUH/iftwOhcMGP0+rD2iFUzjjamdViqwICtLe/hzn9Om+sVbBJPkAYsXGmSJ+FQjceJYvfvZF2rbZboHJjPwj4v4eHXQYXJsdMS/IIiKhmBU7DLNoNLkHG8KCotmPhkcQHfOmNhlURN5VhBYGPPCDIC0Xk3TDM1TuK6wCNZFV08Dp9KLeLWZ6bVhNRQQEYBwWFX7cucX1qxZj4/cHR//1sXq7afvjo9bfU9IAnjvRNOQCvEAAtX72p57oTbHCr+jXQkUxxGKWVCFqsp6qUpA7Bpd2AwtoHMR1ATRNPlnXLQ1PeJlfnpwf5vekhuWFFViSAUUEGGAeChpPvHtBVlZ7+v/jP/G/9f72k9Pj168qGLuiU1AxoXqGvp66WJE+dvkMucsKivrwRKF+ISxkZHvo6iQd3p6HnzRXu/03+ZPtzQ4nM4ZLLxwWWW4XDEDN+0M3W7xo7zimb+lERslqCV3g8PpbECw8JLcfBSWqlu4KLshURsVCogQwomHYBGx7s36tL7GRl9foxKXGkkwZjMuooEfPWpJRKtKR8xhNuMFgqH7atfHqOKHapeCVijsxPVdu1CtCrtxb3r6vt4vxDoQjLkkN8+NSqYywMIZEBRax7kWPHfu4KqaKIYWL1FBARFENPEQTMHu3WmZhYUXumtfKqVLI3lBmhVa/1p5BTDrp2e6ZlBG2crzpCKwPMg2KEOBnfbWM9Iv8bnG9PTdvLl2TXZmS/WOjSJFvGIRLCouXezwiwrd7bEkN6/GqngsZmEEMCoedBAbAZdGen5+rHtLbAgCwZob6+NiRoJIQXaBDachacHLcWfN/o2i/mDcd2R5oHKk7A6QELOgLgOeX5HMHVFgpUCHUMRQnGxu8lkR/EoBoWnC4iFIdLy/4f1fphXsFqpOShKMyowLo5w80VRhxQ841fD3BqjecROxJUYKRgWDZlCoLUHhQOyALiIiNX9TCaq54tnvaD3jU3nclBcQopaHcMCl8dVXX/Ufi9gflRkXRtEzMygi5IBwQCnig68eyZGp9QDxgN2YSOofIVYDEeF+8eU0tJq30hoB8Oy3nzvrj8tSdV2W+n/tjgrxoPOlymfSHlv1FaZ62hwrMi6MgswMdPfcVXMgpdI7ZYFoWP5kkbZyzdqYHTKjAdEG8SA7DkKsBjFSBYVFG/qu97Ze7uyYJ1JlUxTEZXm90z70yBD9bigpKyDmPfKIVvxm/Y+DUzXNgmNVtHek9R5+zTfwzjtmD0cUYzbjAjsENB861dzklv2Bo6Nfy6l3h1T8eO0G4hLSXY8KDUufR4fT4W/rnO5y4W8wJ++JvaJdJiOBAmFCgyIkAcAaUVxa9jDaciNmCr0+4G6TfddEAy4Nh8NpOkMsJQUExEPpz5t//Pn8/JeseE5WHPhB2oKshb7fNzZoM3fuWHEKIoiKjAtE/CNob2fN/g/rXqk9L2sOx483w+XymWnuY0dWrll3U8a9YCXoqSGYmum3fKBk8dK8/Nas7MX14YTM1ORk2e3JiaeQ/ggLx9TExLwbH/Va8rInqQeavS0vXOG/cLy7hgcG3kCq8dTEhH8TogJYItatL0Mg53nZ46WcgLBaPOjkbtuWtrC0VMql4Xj0sU7ZG0oeREXGxaaqrTN6xD92Ctt37RMuBhMMfJHpmY/esNuCO9foudolVBkTcRbFpeUxXUwQFaHCAmbh21cn5toUkgSD9w7+YJkACAIfG/XsQdn42TLwHu2TQblWC5cvdLSZqVOTkCDKmTt3nkjEPYmXeNCBS2PjL/9r2Zeeecbw5SKjQy+fTcyjN8gS3YUGM7uolD0c/P+hGAwCn8yM8Oypd5eZbflLIoMXrUjGBUQirEKJqupHiBHwfOL9s2rNujws/rtq9qcdPHRkY9X27w2KBmKabc+eEAHxlzt3lhuZKJXEWzzozHvkkY+/+sqraUUHfhDzciAekNER84MJ4F5QKd9k4mRzkynxADNiJFcDAp+KS+Q7G8MF0tz4VgMzM6wBuzSjR8aLN1QkEhIKypvbcVZgFYWgcL9Qiywlw0M02549IQJirLPztOErVEAs8fCn/v6Xf7n6a77W8jLf4DvvKEtxCQYujYr2DvTXCHtFdhYPIFDp7HUFtyNuIONCZAcaChaVLdt3RC3xix3Aklz5In7IzDh+9Egbdstxm5gUQaQz6PInZ/3NZG6CmBUVV4ZYF6PHcTgcRj+qDFgnKqu25iCOxyiI5TH62VASEgMxerETC6rsmIUwIh46v1v9IwQ74u/a4de0qYF+X9GBHyyD9UDoZDGI1JDL7uJB52Rzk7vgyRXu+QIPp9WsXLP2qXBBQBAPHedapE8P8YBKcUbM2d/dtS+n7pXaIdloaYgI1Kao3rXPltanVMBOz3QqMTzY/4ZsHBAydoy6JvuuX/tAhYVpWCDWIND6O+7gnYUg4EB3XEtJiID4rLtbw04fu3Irr05EPATz6Zkz2me/+93N0I6cKoCI0Btyfdb9O21RSanfOqHi2FaDhS4eD6UIGZmZRzNW3x9FjBQoM+JBtEETfrAQG2Zq26MbKKrEzbXMjGQBHTeJGiC+P9GMNYrquXJ5mYjJPZilufn+jCYj3Lh+bZ4ehCgL+qeIZEBkZS9+K9q5kCF06sTbubj+sorKsBshu5MQFwbATt8qdwGQFQ86aJL14Te/cdqqMSLWoeTnzWnJIh7sCOITQncv/qJBJ5r0DolSbKraelO0TLI/M2P33j0ipsNQkJmBWhVSgyYP4HQuMLaKaZo/mIxuJDU4HMbN54GuklKu0azsxYZ/KziPmTLOeDZONv+H4Y6reA8g0DHSjOI91XGuxZ8hBBEENyaqpaq5A5rW99E1w4dyOB1Dhj8cQsIEhC4iUHRJdvDRWHv09c5IdR4Q86C7LaLxl4BLA2NMVOYICQ92OZVVWzcG/6uecSFbnwEg40LWpIpUK4gPM/cMjbew0zFzDDLL0tw8wy98f5nf1hbpFyn5O6ifITIfcI3KBBKvWr1WKJsPAl1GRAQasA0ZdZeAWDE1Ha0t9wV3w7qLaqmHDu73QUjIzIcO3LdGxzrbBnxxo8j9CiahAgKgYiOCF++Oj39L9iJCQV+KSKmQRsVDMBjj+W9+46bKMUaDYiU6kVwMKBNt9IcTDmRUmHUhQHyUPV0Z4wqic+JYvdQLldwPXEsijYrgnqv7yUs+WQHnTdJMJdVAuIlY4rB46o2eRBZO3F+92JJRICL0RTrWd2B1wGKMsYm4LsDKNevqIh0fqduRXC+6kNA7aIo8i/gsOs2KuG/NBICDhMRAhAJ3wcXq7acL9uzx95SIdWOjAfEQ6Rgy4kFHd2kg4NFKt8OnLbPd0szOw1xm8/YdraEuBjSIEf2RB4OFxkxBlWDKKyrTpiYnsJOQug16463nXqiNWdCIRGd5YZFQ5T48Q2j1ne7KdKM0N8zk8GXDzOtwOIe93uml3mlvDjI8kNI37hnx9y24Nerx3zei+Rf2xxdlayIZUHqjp/ZzZ9vwWwwnQHA/QgU+rJA3rvcKVVLUF+mzp9714VxLcvNxvpn5DsenuKfItECwpOz7BKImmvuiubG+wchzgvdHz9UuWNFmn8VFi/2BmRgn3HPT03fz9PHCZSGzeSooLDJlMbWFgABYoH/7/PPa3bExX8HuPYZFBIISkRqJ71slHnR0l8bd8TEfylUbeQhEgHjAHOA6rCAre7HUQ2Yn4GJAmdfgMWGXYCa4E+6Q6t377nOHmAWpVOOekSHZlxBecs3H6ofQttrsWFKZr5eW5Vy+2DEkurhj/ntQVfJqF9L2DLtCyCzlFc9IV2qN9JtBHENZxf1F+bCRgMVPZNetE0hN9x8XYXOapglVLQ0HhE+oazX0XSWz0AdiRYLHaXqseO/Jumt1Eu7CCKWvsVHYpYEGVt+8+ptlVlgewmGF20UXD1YCBZvMhHMxmM240NM1RYMmY4FdGESJaGW4YPDSUNl6NxXBfSh7epOpiqFEHOzAzZrHjQKLX7zOFYuypytnIr1LAoGTsQ4RN5A5ZvZkthMQQHdp6OZ8I0Sq2WDGbREN3aUhMsZIxEM8AOzGjMylHQnnYlCRcYHumqrFgw6Oix+piD84FFhWZAK/yN8xWzGUyLGleoepZ18E1GIxI9ZVEK7kfTBOh/N/Ej1GHYxVxXvPlgIC6C6NvsYG6SwNq8SDDlwacDmYySSJl3gA2I2ZKb2cKMK5GFRkXKD3QTRfpQr0xltmjoXAL1hazBwj1UF8SzI++8lMQECbSm02il6LRSRoViV6H5Vox8QYf3joSJrZIGuzQDyYDRbXsa2A0JFxaQCrxUMwsi6NeIoHnfKKypxE/chksCrjItZuQSUqGm+htgUbb5kDIsJsAzRVICBT1bHsDFIEd9bs3xOPnTcEi/vFl+O6QM+6QA/UiVS5hMsFza9kC2jJgndp9a59rarEA7C9gACiLo14igcd0TEmQjwAqOBdNQeEGq4kioB42KM640KlAjcKzOhYvGTdGWy8pQbch0S8vHXSXZlhA4HnMgEREbcFMx4LNH7HeI+geZWMFRPvtM3VO+ImJGB9O/jqkZzQAHSz2CYLIxZGszQSIR6CRYSRTJJEiQcdiAg8vCvXrHv9Ume7G+lWolHqVoIfZ3HJerzsH0hjxC5cNuMikAZWJ/ODVwEWr4LCog3trS3nxz0jwmliyAy45fHsDtf7wyqw4BmNGlfhU40H+su7vKJyQ9/13taeK5fnyWbLxALWPpRcfjw7ezAn74m96S5XR6zvAAQFGkmDVLWzz8h89AOjWQgZmZnCqX/6nOOd097a4v5EoKeEDMH3GL83zKVsr5pg8A5ZXlg0gyJWRvrkxCJ4nEMD/W/2XL2Sq2puor1HVZHm88mFGLxXsFzuiwpIz8/X1r1Zj86W7wcf7g9XrlzoqnmuFE2xEg1SS0N7aaBA1MA7v7gJt0w0oqWjWoWqbnUqiPWSFSmuorNwUXaDih+8akTnPdbcWIGRMTocjk/sOL9GmZqc2DDu8ewZ84zAVYSui9rU7cmYwhoCC+B/sZijwVO6yzW4cPHin5mp8AeMzLvK5wGFk7xe75JYc6binJhvLJi3PJ7csVGPdmt0JOZco76CmYZz2HwMDwy8MTzYP8877Y15TtzTrOxsLSMj0y8Av1xY9E/xesb9fTc8I3vHPR5/nRFsHvAXCYwV3T+zsr+IMc8szct71uzzZ4SkFBA6i0pKtM/n5/u7aE719/ubdNmNx1at0hYsXKjN/PnP2h+7u/1jjUUiBAQhJDLBi3myiyU7E040qRAs0QgVTna+v3Yba1ILiLkKBQQhhBC7kxRBlIQQQgixF9ICAu2yiTU4Hn2s05ojE0IIIWqQFhD/uHChmhGQB5ifkSHXhYkQQgiJE9ICYmFJSZyGmFoge+Pz+fkvpdZVE0IISTakBUTetu8soxtDPWhpTgghhNgdaQGB5lVf3s3FTiWobxGpoyghhBBiJ6QFBMjdti2tgCJCCXpxLCUHI4QQQixGug5EMCjN3NfQ4C83TcSAGyhv23e0vG3b4BL6WOzbhBBCSGJQIiB0UEp64npvKYVEbB5+5BF/Fc1FJaUUDoQQQpIOpQKCEEIIIamBqRgIQgghhKQmFBCEEEIIEYYCghBCCCHCUEAQQgghRBgKCEIIIYQIQwFBCCGEEGEoIAghhBAiDAUEIYQQQoShgCCEEEKIMBQQhBBCCBGGAoIQQgghwlBAEEIIIUQYCghCCCGECPP/vSr/lpp9cVIAAAAASUVORK5CYII=" alt="LX Pantos"><p>Textile / Garment Schedule</p><p>사이트 생성 2026-11-04 23:59 KST</p></div>
     <div><h3>업데이트</h3><p>평일 매일 오전, 각 선사 공개 스케줄 조회 결과를 반영합니다. 노선별 업데이트 날짜는 각 노선 상단 배지와 상단 업데이트 표시를 참고하세요.</p></div>
     <div><h3>안내</h3><p>표시된 일정은 선사 사정에 따라 변경될 수 있으며, 실제 부킹 시 선사 확정 스케줄을 확인해 주세요.</p></div>
   </div>
@@ -1806,7 +1894,14 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
     td.className = 'lx-date';
     var main = document.createElement('div');
     if (changed) main.appendChild(statusCheck('changed'));
-    main.appendChild(document.createTextNode(value || '—'));
+    var mm = /^(\d{1,2}-\d{1,2})\s*\((\w+)\)/.exec(value || '');
+    if (mm) {
+      var dd = document.createElement('span'); dd.className = 'lx-d'; dd.textContent = mm[1].replace('-', '.');
+      var dw = document.createElement('span'); dw.className = 'lx-dow'; dw.textContent = mm[2];
+      main.appendChild(dd); main.appendChild(dw);
+    } else {
+      main.appendChild(document.createTextNode(value || '—'));
+    }
     td.appendChild(main);
     if (changed && prevValue) {
       var prev = document.createElement('div');
@@ -1846,7 +1941,7 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
     tdTt.className = 'lx-num';
     var ttMain = document.createElement('div');
     if (fields.indexOf('tt') !== -1) ttMain.appendChild(statusCheck('changed'));
-    ttMain.appendChild(document.createTextNode((typeof v.tt === 'number') ? v.tt + 'd' : '—'));
+    var ttp = document.createElement('span'); ttp.className = 'lx-tt'; ttp.textContent = (typeof v.tt === 'number') ? v.tt + ' days' : '—'; ttMain.appendChild(ttp);
     tdTt.appendChild(ttMain);
     if (fields.indexOf('tt') !== -1 && typeof v.prevTt === 'number') {
       var ttPrev = document.createElement('div');

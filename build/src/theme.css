@@ -130,3 +130,64 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 <style>@media (max-width: 30rem) { .lx-hero h1 { white-space: normal; font-size: 1.45rem; } }</style>
 
 <style>.lx-netgroup { margin-top: 1.75rem; }</style>
+<style>
+/* ===== Premium pass ===== */
+.lx-dash { gap: 1.5rem; }
+/* Network: segmented control */
+.lx-netgroup .lx-group-label { display: none; }
+.lx-netgroup .lx-nav { display: inline-flex; width: auto; align-self: flex-start; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 999px; padding: .3rem; gap: .2rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.lx-netgroup .lx-nav-btn { margin: 0; padding: .55rem 1.25rem; border-radius: 999px; border-bottom: none; font-size: .95rem; transition: background-color .2s, color .2s; }
+.lx-netgroup .lx-nav-btn[aria-selected="true"] { background: #16171b; color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lx-netgroup .lx-nav-btn[aria-selected="true"] { background: #f2f2f4; color: #111; } }
+.lx-netgroup .lx-nav-indicator { display: none; }
+
+/* Info strip: holidays + carrier legend side by side */
+#net-asia { gap: 1.25rem; }
+.lx-infostrip > .lx-group { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: .85rem 1.1rem; gap: .55rem; }
+.lx-legend-item { font-weight: 600; font-size: .74rem; }
+.lx-legend-dot { width: .55rem; height: .55rem; }
+
+/* POL bar */
+#net-asia > div.lx-group .lx-nav, #net-med .lx-nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: .25rem; }
+#net-asia > div.lx-group .lx-nav::-webkit-scrollbar { display: none; }
+.lx-nav-btn { white-space: nowrap; padding: .6rem .7rem; font-size: 1rem; }
+
+/* Lane card */
+.lx-lane { padding: 0; overflow: hidden; gap: 0; }
+.lx-lane-head { padding: 1.1rem 1.35rem; border-bottom: 1px solid var(--color-border-line); background: linear-gradient(180deg, color-mix(in srgb, var(--color-fg) 2.5%, var(--color-panel)), var(--color-panel)); }
+.lx-lane-head-left { align-items: center; row-gap: .4rem; }
+.lx-lane-head h2 { font-size: 1.22rem; font-weight: 750; letter-spacing: -.015em; }
+.lx-arrow { color: var(--lx-red); font-weight: 400; }
+.lx-code { font: 600 .7rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .06em; color: var(--color-fg-muted); background: color-mix(in srgb, var(--color-fg) 5%, transparent); padding: .32rem .5rem; border-radius: .35rem; }
+.lx-code i { font-style: normal; color: var(--lx-red); }
+.lx-table-wrap { border-radius: 0; padding: 0 .35rem; }
+.lx-table thead th { background: transparent; border-bottom: 1px solid var(--color-border-line); padding-top: .85rem; letter-spacing: .08em; }
+.lx-table td { padding-top: .75rem; padding-bottom: .75rem; vertical-align: middle; }
+.lx-table tbody tr:nth-child(even) td { background: transparent; }
+.lx-table tbody tr td { border-bottom: 1px solid color-mix(in srgb, var(--color-border-line) 70%, transparent); }
+.lx-table tbody tr:hover td { background: color-mix(in srgb, var(--lx-red) 4%, transparent); }
+.lx-table tbody tr:hover { transform: none; box-shadow: none; }
+.lx-d { font-weight: 700; font-size: .98rem; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.lx-dow { margin-left: .4rem; font-size: .7rem; font-weight: 600; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+.lx-tt { display: inline-block; font-size: .78rem; font-weight: 700; padding: .22rem .55rem; border-radius: 999px; background: color-mix(in srgb, var(--color-fg) 6%, transparent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lx-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82rem; }
+.lx-table .lx-chip { font-weight: 600; font-size: .72rem; }
+.lx-table .lx-chip:not(.lx-chip--ok):not(.lx-chip--warn) { color: #2463eb; border-color: color-mix(in srgb, #2463eb 35%, transparent); background: color-mix(in srgb, #2463eb 8%, transparent); }
+.lx-table .lx-chip--warn, .lx-table .lx-chip--ok { animation: none; }
+.lx-berth-mini { margin: 0; border: none; border-top: 1px solid var(--color-border-line); border-radius: 0; padding: .65rem 1.35rem; background: color-mix(in srgb, var(--color-fg) 2%, var(--color-panel)); }
+.lx-toolbar { margin-bottom: -.4rem; }
+
+/* page transition */
+@media (prefers-reduced-motion: no-preference) {
+  .lx-page:not([hidden]), .lx-group[data-net]:not([hidden]) { animation: lxFadeUp .35s cubic-bezier(.2,.7,.2,1); }
+  @keyframes lxFadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+/* C.America cards */
+.gt .card { box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 6px 18px -14px rgba(0,0,0,.25); }
+.gt h2 { font-size: 1.1rem; font-weight: 750; }
+.gt .gt-title { font-size: 1.35rem; }
+</style>
+<style>
+.lx-infostrip { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1rem; }
+.lx-infostrip:has(.lx-holidays:empty) { grid-template-columns: 1fr; }
+</style>

@@ -47,6 +47,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
         <div class="lx-lane-head">
           <div class="lx-lane-head-left">
             <h2 id="lane-{route}-h"><span>{pol_name}</span><span class="lx-arrow">→</span><span>{pod_name}</span></h2>
+            <span class="lx-code">{route.split("_")[0].upper()} <i>→</i> {route.split("_")[1].upper()}</span>
             <div class="lx-badges dash-skeleton" data-draw="badges-{route}" data-source="route_meta">—</div>
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="{route}">Copy</button>
@@ -65,6 +66,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
 def asia_markup():
     out = ['''
   <section class="lx-group" id="net-asia" data-net="asia" role="tabpanel" aria-labelledby="tab-net-asia">
+  <div class="lx-infostrip">
   <div class="lx-group" id="lx-holidays-group">
     <p class="lx-group-label">Upcoming holidays (ID · VN · KR · TW · CN)</p>
     <div class="lx-holidays" id="lx-holidays" data-draw="holidays-banner" data-source="holidays" aria-label="Upcoming Asia port-country holidays"></div>
@@ -73,6 +75,7 @@ def asia_markup():
   <div class="lx-group">
     <p class="lx-group-label">Carrier colors</p>
     <div class="lx-legend" id="lx-legend" aria-label="Carrier color key"></div>
+  </div>
   </div>
 
   <div class="lx-group">
