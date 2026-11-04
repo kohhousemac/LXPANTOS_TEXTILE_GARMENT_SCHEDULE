@@ -277,12 +277,6 @@ def main():
   </div>
 </section>
 <div class="lx-dash">
-  <section class="lx-kpis" aria-label="Summary">
-    <div class="lx-kpi"><p class="lx-kpi-label">운영 노선</p><p class="lx-kpi-value" id="kpi-lanes">—</p><p class="lx-kpi-note" id="kpi-lanes-note">&nbsp;</p></div>
-    <div class="lx-kpi"><p class="lx-kpi-label">향후 7일 출항</p><p class="lx-kpi-value" id="kpi-week">—</p><p class="lx-kpi-note" id="kpi-week-note">&nbsp;</p></div>
-    <div class="lx-kpi lx-kpi--ok"><p class="lx-kpi-label">신규 항차</p><p class="lx-kpi-value" id="kpi-new">—</p><p class="lx-kpi-note">최근 수집 대비 새로 잡힌 항차</p></div>
-    <div class="lx-kpi lx-kpi--warn"><p class="lx-kpi-label">일정 변경</p><p class="lx-kpi-value" id="kpi-chg">—</p><p class="lx-kpi-note">ETD · ETA · T/T 변경 항차</p></div>
-  </section>
   <div class="lx-group lx-netgroup">
     <p class="lx-group-label">Network</p>
     <nav class="lx-nav" role="tablist" aria-label="Network">

@@ -128,3 +128,5 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 </style>
 
 <style>@media (max-width: 30rem) { .lx-hero h1 { white-space: normal; font-size: 1.45rem; } }</style>
+
+<style>.lx-netgroup { margin-top: 1.75rem; }</style>
