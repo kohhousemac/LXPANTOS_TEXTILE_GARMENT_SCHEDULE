@@ -63,7 +63,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     </section>
 '''
 
-LOCODE = {'vnsgn': 'hcm', 'vnhph': 'hph', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
+LOCODE = {'egdam': 'dam', 'egsok': 'sok', 'egaly': 'aly', 'egpsd': 'psd', 'vnsgn': 'hcm', 'vnhph': 'hph', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
           'cnsha': 'sha', 'cnshk': 'skk', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist'}
 PORT_LOCODE_NAME = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang', 'pus': 'Busan', 'inc': 'Incheon',
                     'sha': 'Shanghai', 'skk': 'Shekou', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul'}
@@ -74,7 +74,7 @@ def merge_new_lanes():
         meta = json.loads((DATA / 'route_meta.json').read_text(encoding='utf-8'))
     except Exception:
         return
-    known = {r for _, pods in ASIA for _, r in pods} | {'krpus_trist'}
+    known = {r for _, pods in ASIA for _, r in pods} | {r for _, pods in MED for _, r in pods}
     for row in meta:
         rid = row.get('routeId', '')
         if rid in known or row.get('group') == 'med' or not (DATA / f'{rid}.json').exists():
@@ -136,27 +136,42 @@ def asia_markup():
     out.append('  </section>')
     return '\n'.join(out)
 
+MED = [('pus', [('ist', 'krpus_trist'), ('dam', 'krpus_egdam'), ('sok', 'krpus_egsok'), ('aly', 'krpus_egaly'), ('psd', 'krpus_egpsd')])]
+PORT.update({'dam': 'Damietta', 'sok': 'Ain Sokhna', 'aly': 'Alexandria', 'psd': 'Port Said'})
+
+def med_routes():
+    return [r for _, pods in MED for _, r in pods if (DATA / f'{r}.json').exists()]
+
 def med_markup():
-    return '''
+    have = set(med_routes())
+    out = ['''
   <section class="lx-group" id="net-med" data-net="med" role="tabpanel" aria-labelledby="tab-net-med" hidden>
   <p class="lx-sub"><span class="lx-updated dash-skeleton" data-draw="last-updated-med" data-source="route_meta">—</span></p>
 
   <div class="lx-group">
     <p class="lx-group-label">POL</p>
-    <nav class="lx-nav" role="tablist" aria-label="Departure port (Mediterranean)">
-      <button class="lx-nav-btn" id="tab-med-pol-pus" role="tab" aria-selected="true" aria-controls="medpolgroup-pus" data-pol="medpus">Busan</button>
-    </nav>
-  </div>
-
-  <section class="lx-group" id="medpolgroup-pus" data-pol="medpus" role="tabpanel" aria-labelledby="tab-med-pol-pus">
+    <nav class="lx-nav" role="tablist" aria-label="Departure port (Mediterranean)">''']
+    pols = [(pol, [p for p in pods if p[1] in have]) for pol, pods in MED]
+    pols = [(pol, pods) for pol, pods in pols if pods]
+    for i, (pol, _) in enumerate(pols):
+        sel = 'true' if i == 0 else 'false'
+        out.append(f'      <button class="lx-nav-btn" id="tab-med-pol-{pol}" role="tab" aria-selected="{sel}" aria-controls="medpolgroup-{pol}" data-pol="med{pol}">{PORT[pol]}</button>')
+    out.append('    </nav>\n  </div>')
+    for i, (pol, pods) in enumerate(pols):
+        h = ' hidden' if i else ''
+        out.append(f'''
+  <section class="lx-group" id="medpolgroup-{pol}" data-pol="med{pol}" role="tabpanel" aria-labelledby="tab-med-pol-{pol}"{h}>
     <p class="lx-group-label">POD</p>
-    <nav class="lx-subnav" role="tablist" aria-label="Destination port (ex Busan)">
-      <button class="lx-subnav-btn" id="tab-med-pod-pus-ist" role="tab" aria-selected="true" aria-controls="medpage-pus-ist" data-pod="ist">Istanbul</button>
-    </nav>
-''' + lane_page('medpage-pus-ist', 'tab-med-pod-pus-ist', 'ist', 'krpus_trist', 'Busan', 'Istanbul', False) + '''
-  </section>
-  </section>
-'''
+    <nav class="lx-subnav" role="tablist" aria-label="Destination port (ex {PORT[pol]})">''')
+        for j, (pod, _) in enumerate(pods):
+            sel = 'true' if j == 0 else 'false'
+            out.append(f'      <button class="lx-subnav-btn" id="tab-med-pod-{pol}-{pod}" role="tab" aria-selected="{sel}" aria-controls="medpage-{pol}-{pod}" data-pod="{pod}">{PORT[pod]}</button>')
+        out.append('    </nav>')
+        for j, (pod, route) in enumerate(pods):
+            out.append(lane_page(f'medpage-{pol}-{pod}', f'tab-med-pod-{pol}-{pod}', pod, route, PORT[pol], PORT[pod], j > 0))
+        out.append('  </section>')
+    out.append('  </section>')
+    return '\n'.join(out)
 
 NI_TAB = '      <button class="lx-subnav-btn" id="tab-ca-pod-ni" role="tab" aria-selected="false" aria-controls="ca-page-ni" data-ca-pod="ni">Corinto (NI)</button>\n'
 NI_PAGE = '''
@@ -304,7 +319,7 @@ def main():
     data_js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
     merge_new_lanes()
-    route_ids = [r for _, pods in ASIA for _, r in pods] + ['krpus_trist']
+    route_ids = [r for _, pods in ASIA for _, r in pods] + med_routes()
     gt = rd('gt.html')
     marker = '  // ---- POL/POD port flags ----'
     assert marker in gt

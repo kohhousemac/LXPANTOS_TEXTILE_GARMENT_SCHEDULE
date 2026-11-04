@@ -4,7 +4,7 @@
 
   var ROUTE_IDS = __ROUTE_IDS__;
   var CARRIER_ORDER = ['SITC', 'SINOKOR', 'GSL', 'EMC', 'WHL', 'CNC', 'KMTC', 'PANOCEAN', 'DONGJIN', 'NAMSUNG'];
-  var CARRIER_COLOR_OVERRIDE = { SITC: '#2f9e44', CNC: '#0891b2', GSL: '#8a5a2e', SINOKOR: '#eab308', KMTC: '#7c3aed', PANOCEAN: '#ea580c', 'YANG MING': '#be123c', DONGJIN: '#0d9488', NAMSUNG: '#db2777' };
+  var CARRIER_COLOR_OVERRIDE = { SITC: '#2f9e44', CNC: '#0891b2', GSL: '#8a5a2e', SINOKOR: '#eab308', KMTC: '#7c3aed', PANOCEAN: '#ea580c', 'YANG MING': '#be123c', DONGJIN: '#0d9488', NAMSUNG: '#db2777', 'CMA CGM': '#1d4ed8', MSK: '#0f5fa8' };
 
   function carrierColor(carrier) {
     if (CARRIER_COLOR_OVERRIDE[carrier]) return CARRIER_COLOR_OVERRIDE[carrier];

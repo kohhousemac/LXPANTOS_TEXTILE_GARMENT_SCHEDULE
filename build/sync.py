@@ -37,7 +37,7 @@ def _mmdd_date(s, today):
     return best
 
 RETAIN_DAYS = 14
-NO_RETAIN = {'krpus_trist'}
+NO_RETAIN = {'krpus_trist', 'krpus_egdam', 'krpus_egsok', 'krpus_egaly', 'krpus_egpsd'}
 
 def is_lane(ds):
     a, _, b = ds.partition('_')
