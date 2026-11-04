@@ -138,6 +138,21 @@
       var m = /(\d+)\s*d(?:\s*(\d+)\s*h)?/.exec(s || '');
       return m ? (+m[1] + (m[2] ? +m[2] / 24 : 0)) : null;
     }
+    function legDate(s) {
+      var m = /^(\d{1,2})-(\d{1,2})(?:\s+(\d{1,2}):(\d{2}))?/.exec(s || '');
+      if (!m) return null;
+      var now = new Date(), best = null, bd = Infinity;
+      [-1, 0, 1].forEach(function (y) {
+        var d = new Date(now.getFullYear() + y, +m[1] - 1, +m[2], m[3] ? +m[3] : 0, m[4] ? +m[4] : 0);
+        if (Math.abs(d - now) < bd) { bd = Math.abs(d - now); best = d; }
+      });
+      return best;
+    }
+    function dwell(arr, dep) {
+      var a = legDate(arr), d = legDate(dep);
+      if (!a || !d || d < a) return '';
+      return Math.round((d - a) / 864e5 * 10) / 10 + 'd';
+    }
     function tsList(ts) {
       if (Array.isArray(ts)) return ts;
       return String(ts || '').split(/\s*(?:,|→|->)\s*/).filter(Boolean);
@@ -216,18 +231,33 @@
       pick.value = chosen;
       var r = rows[keys.indexOf(chosen)];
       if (!r) return;
-      var steps = [[r.pol.toUpperCase(), 'Departure (POL)', r.etd]];
-      tsList(r.ts).forEach(function (p) { steps.push([p.toUpperCase(), 'Transshipment', '—']); });
-      steps.push(['CORINTO', 'Arrival (POD)', r.eta]);
+      var legs = Array.isArray(r.legs) ? r.legs : [];
+      var steps;
+      if (legs.length) {
+        // [port, role, arrival, departure, vessel, dwell]
+        steps = [[legs[0].from || r.pol, 'POL', '—', legs[0].dep || r.etd, legs[0].vessel || r.vessel, '']];
+        for (var i = 1; i < legs.length; i++) {
+          steps.push([legs[i].from || '', 'T/S', legs[i - 1].arr || '—', legs[i].dep || '—', legs[i].vessel || '', dwell(legs[i - 1].arr, legs[i].dep)]);
+        }
+        var last = legs[legs.length - 1];
+        steps.push([last.to || 'Corinto', 'POD', last.arr || r.eta, '—', '', '']);
+      } else {
+        steps = [[r.pol, 'POL', '—', r.etd, r.vessel, '']];
+        tsList(r.ts).forEach(function (p) { steps.push([p, 'T/S', '—', '—', '', '']); });
+        steps.push(['Corinto', 'POD', r.eta, '—', '', '']);
+      }
       steps.forEach(function (s, i) {
         var tr = body.insertRow();
-        var p = tr.insertCell(); p.textContent = s[0];
+        var p = tr.insertCell(); p.textContent = String(s[0]).toUpperCase();
         if (i === 0 || i === steps.length - 1) p.className = 'v';
         tr.insertCell().textContent = s[1];
         tr.insertCell().textContent = s[2];
+        tr.insertCell().textContent = s[3];
+        var v = tr.insertCell(); v.textContent = s[4] || '—';
+        if (s[5]) { var sub = document.createElement('div'); sub.className = 'sub'; sub.textContent = 'T/S dwell ' + s[5]; v.appendChild(sub); }
       });
       var tr = body.insertRow(); tr.className = 'sys';
-      var c = tr.insertCell(); c.colSpan = 3; c.textContent = 'Transit time ' + (r.tt || '—') + ' · ' + r.carrier;
+      var c = tr.insertCell(); c.colSpan = 5; c.textContent = 'Transit time ' + (r.tt || '—') + ' · ' + r.carrier + (legs.length ? '' : ' · 환적항 일정은 수집 대기 중');
     }
     dash.onData(drawRot);
   })();

@@ -63,7 +63,11 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     </section>
 '''
 
+COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3}
+
 def asia_markup():
+    # POD order inside each POL: Vietnam → Indonesia → China → Korea
+    pols = [(pol, sorted(pods, key=lambda p: COUNTRY.get(p[0], 9))) for pol, pods in ASIA]
     out = ['''
   <section class="lx-group" id="net-asia" data-net="asia" role="tabpanel" aria-labelledby="tab-net-asia">
   <div class="lx-infostrip">
@@ -81,11 +85,11 @@ def asia_markup():
   <div class="lx-group">
     <p class="lx-group-label">POL</p>
     <nav class="lx-nav" role="tablist" aria-label="Departure port">''']
-    for i, (pol, _) in enumerate(ASIA):
+    for i, (pol, _) in enumerate(pols):
         sel = 'true' if i == 0 else 'false'
         out.append(f'      <button class="lx-nav-btn" id="tab-pol-{pol}" role="tab" aria-selected="{sel}" aria-controls="polgroup-{pol}" data-pol="{pol}">{PORT[pol]}</button>')
     out.append('    </nav>\n  </div>')
-    for i, (pol, pods) in enumerate(ASIA):
+    for i, (pol, pods) in enumerate(pols):
         h = ' hidden' if i else ''
         out.append(f'''
   <section class="lx-group" id="polgroup-{pol}" data-pol="{pol}" role="tabpanel" aria-labelledby="tab-pol-{pol}"{h}>
@@ -185,11 +189,11 @@ NI_PAGE = '''
 
       <section class="card" id="ni-rotation">
         <h2>Routing by sailing</h2>
-        <p class="note">Departure, transshipment hubs and Corinto arrival for the selected sailing.</p>
+        <p class="note">Port-by-port arrival and departure for the selected sailing, including the vessel on each leg and dwell time at transshipment hubs.</p>
         <div class="bar"><select id="ni-vsl-pick" aria-label="Select sailing"></select></div>
         <div class="scroll" style="max-height: 24rem">
           <table id="ni-rot-table">
-            <thead><tr><th>Port</th><th>Role</th><th>Date</th></tr></thead>
+            <thead><tr><th>Port</th><th>Role</th><th>Arrival</th><th>Departure</th><th>Vessel / Voyage</th></tr></thead>
             <tbody></tbody>
           </table>
         </div>
