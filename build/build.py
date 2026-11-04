@@ -255,18 +255,24 @@ def main():
 <header class="lx-topbar">
   <div class="lx-topbar-in">
     <a class="lx-brand" href="./"><img src="{logo}" alt="LX Pantos"><span class="lx-brand-div"></span><span class="lx-brand-name">Textile / Garment Schedule</span></a>
-    <nav class="lx-nav" role="tablist" aria-label="Network">
-      <button class="lx-nav-btn" id="tab-net-asia" role="tab" aria-selected="true" aria-controls="net-asia" data-net="asia">Asia</button>
-      <button class="lx-nav-btn" id="tab-net-ca" role="tab" aria-selected="false" aria-controls="net-ca" data-net="ca">C.America</button>
-      <button class="lx-nav-btn" id="tab-net-med" role="tab" aria-selected="false" aria-controls="net-med" data-net="med">Mediterranean</button>
-    </nav>
   </div>
 </header>
 <section class="lx-hero">
+  <svg class="lx-hero-routes" viewBox="0 0 720 320" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <defs><linearGradient id="lxArc" x1="0" x2="1"><stop offset="0" stop-color="#ff3d6e" stop-opacity="0"/><stop offset=".45" stop-color="#ff3d6e" stop-opacity=".9"/><stop offset="1" stop-color="#ffb3c6" stop-opacity=".5"/></linearGradient></defs>
+    <path d="M120 250 C 260 90, 470 70, 640 150"/>
+    <path d="M180 270 C 300 170, 420 160, 560 230"/>
+    <path d="M90 200 C 230 40, 520 20, 700 90"/>
+    <path d="M240 290 C 360 220, 500 220, 620 280"/>
+    <g><circle cx="120" cy="250" r="3.5"/><circle class="halo" cx="120" cy="250" r="5"/></g>
+    <g><circle cx="640" cy="150" r="3.5"/><circle class="halo" cx="640" cy="150" r="5" style="animation-delay:.9s"/></g>
+    <g><circle cx="560" cy="230" r="3"/><circle class="halo" cx="560" cy="230" r="4.5" style="animation-delay:1.6s"/></g>
+    <g><circle cx="700" cy="90" r="3"/></g><g><circle cx="180" cy="270" r="2.6"/></g><g><circle cx="620" cy="280" r="2.6"/></g>
+  </svg>
   <div class="lx-hero-in">
-    <p class="lx-hero-kicker">LX Pantos · Textile &amp; Garment Logistics</p>
-    <h1>선적 스케줄 한눈에 보기</h1>
-    <p class="lx-hero-sub">아시아 역내 · 중미 · 지중해 주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
+    <p class="lx-hero-eyebrow">Sailing Schedule · 선적 스케줄</p>
+    <h1>LX Pantos<span class="dot">·</span><span class="thin">Textile &amp; Garment Logistics</span></h1>
+    <p class="lx-hero-sub">Asia · Central America · Mediterranean 주요 노선의 직항 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
     <span class="lx-updated-pill" id="hero-updated">—</span>
   </div>
 </section>
@@ -277,6 +283,14 @@ def main():
     <div class="lx-kpi lx-kpi--ok"><p class="lx-kpi-label">신규 항차</p><p class="lx-kpi-value" id="kpi-new">—</p><p class="lx-kpi-note">최근 수집 대비 새로 잡힌 항차</p></div>
     <div class="lx-kpi lx-kpi--warn"><p class="lx-kpi-label">일정 변경</p><p class="lx-kpi-value" id="kpi-chg">—</p><p class="lx-kpi-note">ETD · ETA · T/T 변경 항차</p></div>
   </section>
+  <div class="lx-group lx-netgroup">
+    <p class="lx-group-label">Network</p>
+    <nav class="lx-nav" role="tablist" aria-label="Network">
+      <button class="lx-nav-btn" id="tab-net-asia" role="tab" aria-selected="true" aria-controls="net-asia" data-net="asia">Asia</button>
+      <button class="lx-nav-btn" id="tab-net-ca" role="tab" aria-selected="false" aria-controls="net-ca" data-net="ca">C.America</button>
+      <button class="lx-nav-btn" id="tab-net-med" role="tab" aria-selected="false" aria-controls="net-med" data-net="med">Mediterranean</button>
+    </nav>
+  </div>
   <header class="lx-head">
     <p class="lx-sub" id="lx-updated-row"><span class="lx-updated dash-skeleton" data-draw="last-updated" data-source="route_meta">—</span></p>
   </header>
