@@ -1,19 +1,6 @@
 [
  {
   "carrier": "KMTC",
-  "vessel": "KMTC TAIPEIS",
-  "voyage": "2613S",
-  "etd": "11-03 (Tue)",
-  "eta": "11-05 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
   "vessel": "SYMEON P",
   "voyage": "037S",
   "etd": "11-04 (Wed)",
@@ -21,11 +8,9 @@
   "tt": 3,
   "prevEtd": "11-04 (Wed)",
   "prevEta": "11-07 (Sat)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -36,38 +21,40 @@
   "tt": 2,
   "prevEtd": "11-08 (Sun)",
   "prevEta": "11-10 (Tue)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
- },
- {
-  "carrier": "KMTC",
-  "vessel": "CA MANILA",
-  "voyage": "2616S",
-  "etd": "11-10 (Tue)",
-  "eta": "11-12 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevTt": 2,
   "status": "unchanged",
   "changedFields": []
  },
  {
   "carrier": "KMTC",
-  "vessel": "KMTC PUSAN",
-  "voyage": "2613S",
+  "vessel": "CA MANILA",
+  "voyage": "2616S",
   "etd": "11-11 (Wed)",
   "eta": "11-13 (Fri)",
   "tt": 2,
-  "prevEtd": "11-11 (Wed)",
-  "prevEta": "11-13 (Fri)",
-  "prevTt": 3,
+  "prevEtd": "11-10 (Tue)",
+  "prevEta": "11-12 (Thu)",
+  "prevTt": 2,
   "status": "changed",
   "changedFields": [
-   "tt"
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC PUSAN",
+  "voyage": "2613S",
+  "etd": "11-12 (Thu)",
+  "eta": "11-14 (Sat)",
+  "tt": 2,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-13 (Fri)",
+  "prevTt": 2,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
   ]
  },
  {
@@ -79,11 +66,9 @@
   "tt": 2,
   "prevEtd": "11-15 (Sun)",
   "prevEta": "11-17 (Tue)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -93,30 +78,10 @@
   "eta": "11-18 (Wed)",
   "tt": 3,
   "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "KMTC",
-  "vessel": "URU BHUM",
-  "voyage": "177S",
-  "etd": "11-18 (Wed)",
-  "eta": "11-21 (Sat)",
-  "tt": 3,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-18 (Wed)",
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -126,24 +91,21 @@
   "eta": "11-20 (Fri)",
   "tt": 2,
   "prevEtd": "11-18 (Wed)",
-  "prevEta": "11-21 (Sat)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-20 (Fri)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
-  "vessel": "SAWASDEE ATLANTIC",
-  "voyage": "2612S",
-  "etd": "11-21 (Sat)",
-  "eta": "11-23 (Mon)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "vessel": "URU BHUM",
+  "voyage": "177S",
+  "etd": "11-18 (Wed)",
+  "eta": "11-21 (Sat)",
+  "tt": 3,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "11-21 (Sat)",
+  "prevTt": 3,
   "status": "unchanged",
   "changedFields": []
  },
@@ -156,26 +118,24 @@
   "tt": 3,
   "prevEtd": "11-21 (Sat)",
   "prevEta": "11-24 (Tue)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
-  "vessel": "PANCON BRIDGE",
-  "voyage": "2615S",
-  "etd": "11-23 (Mon)",
-  "eta": "11-25 (Wed)",
+  "vessel": "SAWASDEE ATLANTIC",
+  "voyage": "2612S",
+  "etd": "11-22 (Sun)",
+  "eta": "11-24 (Tue)",
   "tt": 2,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "11-25 (Wed)",
-  "prevTt": 4,
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 2,
   "status": "changed",
   "changedFields": [
    "etd",
-   "tt"
+   "eta"
   ]
  },
  {
@@ -187,24 +147,38 @@
   "tt": 3,
   "prevEtd": "11-23 (Mon)",
   "prevEta": "11-26 (Thu)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "PANCON BRIDGE",
+  "voyage": "2615S",
+  "etd": "11-23 (Mon)",
+  "eta": "11-25 (Wed)",
+  "tt": 2,
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "11-25 (Wed)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
   "vessel": "KMTC JAKARTA",
   "voyage": "2613S",
   "etd": "11-27 (Fri)",
-  "eta": "11-29 (Sun)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "eta": "11-30 (Mon)",
+  "tt": 3,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "11-29 (Sun)",
+  "prevTt": 2,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "KMTC",
@@ -215,75 +189,24 @@
   "tt": 2,
   "prevEtd": "11-29 (Sun)",
   "prevEta": "12-01 (Tue)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2614S",
-  "etd": "12-01 (Tue)",
-  "eta": "12-03 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "CA MANILA",
-  "voyage": "2617S",
-  "etd": "12-01 (Tue)",
+  "etd": "12-02 (Wed)",
   "eta": "12-04 (Fri)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "YM CONTINENT",
-  "voyage": "2611S",
-  "etd": "12-04 (Fri)",
-  "eta": "12-07 (Mon)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SAWASDEE VEGA",
-  "voyage": "2615S",
-  "etd": "12-05 (Sat)",
-  "eta": "12-08 (Tue)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "URU BHUM",
-  "voyage": "178S",
-  "etd": "12-07 (Mon)",
-  "eta": "12-11 (Fri)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "tt": 2,
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 2,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  }
 ]
