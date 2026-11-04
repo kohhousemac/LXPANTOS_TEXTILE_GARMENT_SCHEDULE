@@ -805,5 +805,31 @@
   "prevTt": null,
   "status": "new",
   "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC HAIPHONG",
+  "voyage": "2608N",
+  "etd": "11-01 (Sun)",
+  "eta": "11-05 (Thu)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC MUMBAI",
+  "voyage": "2607W",
+  "etd": "11-01 (Sun)",
+  "eta": "11-03 (Tue)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

@@ -256,5 +256,44 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "carrier": "DONGJIN / PANOCEAN / SINOKOR",
+  "vessel": "KMTC ULSAN",
+  "voyage": "2617S",
+  "etd": "11-01 (Sun)",
+  "eta": "11-05 (Thu)",
+  "tt": 4,
+  "prevEtd": "11-01 (Sun)",
+  "prevEta": "11-05 (Thu)",
+  "prevTt": 4,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "DONGJIN / SINOKOR",
+  "vessel": "SAWASDEE BALTIC",
+  "voyage": "2618S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-07 (Sat)",
+  "tt": 5,
+  "prevEtd": "11-02 (Mon)",
+  "prevEta": "11-07 (Sat)",
+  "prevTt": 5,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "KMTC JAKARTA",
+  "voyage": "2612S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-07 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

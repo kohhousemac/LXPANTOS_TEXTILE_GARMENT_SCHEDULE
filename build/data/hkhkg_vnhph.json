@@ -108,5 +108,18 @@
   "prevTt": 1,
   "status": "unchanged",
   "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "STAR FRONTIER",
+  "voyage": "2621S",
+  "etd": "11-03 (Tue)",
+  "eta": "11-05 (Thu)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

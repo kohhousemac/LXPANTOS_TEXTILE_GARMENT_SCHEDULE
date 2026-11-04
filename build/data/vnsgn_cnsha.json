@@ -619,5 +619,18 @@
   "prevTt": null,
   "status": "new",
   "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC RENDE",
+  "voyage": "2623N",
+  "etd": "11-01 (Sun)",
+  "eta": "11-14 (Sat)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

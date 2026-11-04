@@ -45,5 +45,18 @@
   "prevTt": null,
   "status": "new",
   "changedFields": []
+ },
+ {
+  "carrier": "KMTC / SINOKOR",
+  "vessel": "KMTC SHIMIZU",
+  "voyage": "2610S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-14 (Sat)",
+  "tt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

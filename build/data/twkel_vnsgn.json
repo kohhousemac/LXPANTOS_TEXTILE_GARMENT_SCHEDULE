@@ -155,5 +155,57 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 288",
+  "voyage": "S114",
+  "etd": "10-28 (Wed)",
+  "eta": "11-02 (Mon)",
+  "tt": 6,
+  "prevEtd": "10-27 (Tue)",
+  "prevEta": "11-01 (Sun)",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 308",
+  "voyage": "S063",
+  "etd": "10-29 (Thu)",
+  "eta": "11-03 (Tue)",
+  "tt": 6,
+  "prevEtd": "10-28 (Wed)",
+  "prevEta": "11-02 (Mon)",
+  "prevTt": 4,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "ABRAO COCHIN",
+  "voyage": "S021",
+  "etd": "10-29 (Thu)",
+  "eta": "11-02 (Mon)",
+  "tt": 5,
+  "prevEtd": "10-30 (Fri)",
+  "prevEta": "11-03 (Tue)",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 315",
+  "voyage": "S270",
+  "etd": "10-28 (Wed)",
+  "eta": "11-01 (Sun)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

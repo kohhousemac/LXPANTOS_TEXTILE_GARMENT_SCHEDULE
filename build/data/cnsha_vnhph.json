@@ -278,5 +278,70 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YOKKAICHI",
+  "voyage": "2628S",
+  "etd": "10-28 (Wed)",
+  "eta": "11-01 (Sun)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": "11-02 (Mon)",
+  "prevTt": 5,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "ERASMUS OASIS",
+  "voyage": "2650S",
+  "etd": "10-30 (Fri)",
+  "eta": "11-02 (Mon)",
+  "tt": 3,
+  "prevEtd": "10-29 (Thu)",
+  "prevEta": "11-01 (Sun)",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YIHE",
+  "voyage": "2636S",
+  "etd": "10-30 (Fri)",
+  "eta": "11-05 (Thu)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SINOTRANS DALIAN",
+  "voyage": "2637S",
+  "etd": "10-31 (Sat)",
+  "eta": "11-04 (Wed)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC QINGDAO",
+  "voyage": "2626S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-05 (Thu)",
+  "tt": 3,
+  "prevEtd": "11-01 (Sun)",
+  "prevEta": null,
+  "prevTt": 4,
+  "status": "departed",
+  "changedFields": []
  }
 ]

@@ -36,6 +36,35 @@ def _mmdd_date(s, today):
             best = c
     return best
 
+RETAIN_DAYS = 14
+NO_RETAIN = {'krpus_trist'}
+
+def is_lane(ds):
+    a, _, b = ds.partition('_')
+    return len(a) == 5 and len(b) == 5 and ds not in NO_RETAIN
+
+def _rkey(r):
+    return '|'.join(str(r.get(k) or '') for k in ('vessel', 'voyage', 'carrier'))
+
+def retain_departed(old, new):
+    """Collection drops sailings once their ETD has passed. Keep those rows
+    (unchanged) until 14 days after their ETA so arrivals stay visible."""
+    today = datetime.datetime.now(KST).date()
+    have = {_rkey(r) for r in new}
+    kept = []
+    for r in old or []:
+        if _rkey(r) in have:
+            continue
+        etd = _mmdd_date(r.get('etd', ''), today)
+        eta = _mmdd_date(r.get('eta', ''), today)
+        if not etd or etd >= today:
+            continue  # not departed: genuinely removed from the schedule
+        if eta and (today - eta).days > RETAIN_DAYS:
+            continue  # arrived more than 14 days ago
+        r = dict(r); r['status'] = 'departed'; r['changedFields'] = []
+        kept.append(r)
+    return new + kept, len(kept)
+
 def track_changes(ds, old, new):
     out = DATA / f'{TRACK[ds]}.json'
     log = json.loads(out.read_text(encoding='utf-8')) if out.exists() else []
@@ -86,6 +115,10 @@ def main(pairs):
                 raise ValueError('not a list')
             target = DATA / f'{ds}.json'
             old = json.loads(target.read_text(encoding='utf-8')) if target.exists() else None
+            if is_lane(ds):
+                v, n_kept = retain_departed(old, v)
+                if n_kept:
+                    print(f'{ds}: kept {n_kept} departed sailing(s)')
             if ds in TRACK:
                 n = track_changes(ds, old, v)
                 print(f'{ds}: {n} change(s) logged to {TRACK[ds]}.json')

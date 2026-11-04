@@ -434,5 +434,31 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2608N",
+  "etd": "11-01 (Sun)",
+  "eta": "11-07 (Sat)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC NAGOYA",
+  "voyage": "2612N",
+  "etd": "11-02 (Mon)",
+  "eta": "11-07 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

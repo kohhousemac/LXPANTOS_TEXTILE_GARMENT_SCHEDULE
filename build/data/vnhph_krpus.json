@@ -286,5 +286,18 @@
    "etd",
    "eta"
   ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SKY MOON",
+  "voyage": "2618N",
+  "etd": "10-31 (Sat)",
+  "eta": "11-08 (Sun)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

@@ -50,5 +50,18 @@
   "prevTt": 9,
   "status": "unchanged",
   "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC LIANYUNGANG",
+  "voyage": "2630S",
+  "etd": "10-28 (Wed)",
+  "eta": "11-06 (Fri)",
+  "tt": 9,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

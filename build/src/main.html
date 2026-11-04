@@ -297,7 +297,7 @@
   function renderTable(el, id) {
     withState(el, id, function (g) {
       var rows = (g.data || []).slice().sort(function (a, b) { return parseKey(a.etd) - parseKey(b.etd); });
-      if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged'; });
+      if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged' && r.status !== 'same' && r.status !== 'departed'; });
       rows = rows.filter(function (r) {
         if (rowStage(r) !== 'arrived') return true;
         var eta = scheduleDate(r.eta);
@@ -527,7 +527,7 @@
     if (!rows) {
       var g = dash.data(routeId);
       rows = (g.data || []).slice().sort(function (a, b) { return parseKey(a.etd) - parseKey(b.etd); });
-      if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged'; });
+      if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged' && r.status !== 'same' && r.status !== 'departed'; });
     }
     var lines = ['Carrier\tVessel\tVoyage\tETD\tETA\tTT'];
     rows.forEach(function (v) {

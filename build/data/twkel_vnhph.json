@@ -236,5 +236,18 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S466",
+  "etd": "10-28 (Wed)",
+  "eta": "10-30 (Fri)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]

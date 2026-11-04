@@ -393,5 +393,57 @@
    "etd",
    "tt"
   ]
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC RUIDE",
+  "voyage": "2622S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-07 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "HONG AN",
+  "voyage": "2625S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-07 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC SHANGHAI",
+  "voyage": "2622S",
+  "etd": "11-03 (Tue)",
+  "eta": "11-07 (Sat)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YUANMING",
+  "voyage": "2616S",
+  "etd": "11-04 (Wed)",
+  "eta": "11-08 (Sun)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  }
 ]
