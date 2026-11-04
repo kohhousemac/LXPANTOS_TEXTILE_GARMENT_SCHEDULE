@@ -231,7 +231,9 @@
       pick.value = chosen;
       var r = rows[keys.indexOf(chosen)];
       if (!r) return;
-      var legs = Array.isArray(r.legs) ? r.legs : [];
+      var legs = r.legs;
+      if (typeof legs === 'string') { try { legs = legs ? JSON.parse(legs) : []; } catch (e) { legs = []; } }
+      if (!Array.isArray(legs)) legs = [];
       var steps;
       if (legs.length) {
         // [port, role, arrival, departure, vessel, dwell]

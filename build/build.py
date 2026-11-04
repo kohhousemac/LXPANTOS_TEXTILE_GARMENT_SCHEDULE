@@ -54,7 +54,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
         </div>
         <div class="lx-table-wrap">
           <table class="lx-table" aria-label="{pol_name} to {pod_name} sailing schedule">
-            <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th></tr></thead>
+            <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th>{'<th>Calling order</th>' if route.startswith('krpus_') else ''}</tr></thead>
             <tbody class="dash-skeleton" data-draw="rows-{route}" data-source="{route}"></tbody>
           </table>
         </div>
@@ -93,6 +93,9 @@ def merge_new_lanes():
 COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3}
 KR_ORDER = {'pus': 0, 'inc': 1}
 
+BUSAN_NOTE = '''
+    <p class="lx-pol-note">부산발 스케줄은 출항일(ETD)이 <b>토·일·월·화</b> 4일간인 항차만 확인하여 업데이트합니다.</p>'''
+
 def asia_markup():
     # POD order inside each POL: Vietnam → Indonesia → China → Korea
     pols = [(pol, sorted(pods, key=lambda p: (COUNTRY.get(p[0], 9), KR_ORDER.get(p[0], 0)))) for pol, pods in ASIA]
@@ -120,7 +123,7 @@ def asia_markup():
     for i, (pol, pods) in enumerate(pols):
         h = ' hidden' if i else ''
         out.append(f'''
-  <section class="lx-group" id="polgroup-{pol}" data-pol="{pol}" role="tabpanel" aria-labelledby="tab-pol-{pol}"{h}>
+  <section class="lx-group" id="polgroup-{pol}" data-pol="{pol}" role="tabpanel" aria-labelledby="tab-pol-{pol}"{h}>{BUSAN_NOTE if pol == 'pus' else ''}
     <p class="lx-group-label">POD</p>
     <nav class="lx-subnav" role="tablist" aria-label="Destination port (ex {PORT[pol]})">''')
         for j, (pod, _) in enumerate(pods):

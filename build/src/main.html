@@ -246,7 +246,24 @@
     return td;
   }
 
-  function buildRow(v) {
+  function rotationCell(v) {
+    var td = document.createElement('td');
+    td.className = 'lx-rot';
+    var rot = v.rotation;
+    if (Array.isArray(rot)) rot = rot.join(' → ');
+    var ports = String(rot || '').split(/\s*(?:→|->|>|,)\s*/).filter(Boolean);
+    if (!ports.length) { td.textContent = '—'; td.title = '기항 순서 수집 대기'; return td; }
+    ports.forEach(function (p, i) {
+      if (i) { var a = document.createElement('span'); a.className = 'lx-rot-arrow'; a.textContent = '›'; td.appendChild(a); }
+      var s = document.createElement('span');
+      s.className = 'lx-rot-port' + (i === 0 ? ' is-pol' : '') + (i === ports.length - 1 ? ' is-pod' : '');
+      s.textContent = p;
+      td.appendChild(s);
+    });
+    return td;
+  }
+
+  function buildRow(v, routeId) {
     var tr = document.createElement('tr');
     tr.className = 'lx-row-carrier';
     tr.dataset.carrier = v.carrier;
@@ -291,6 +308,7 @@
     tr.appendChild(tdEta);
     tr.appendChild(tdTt);
     tr.appendChild(stageCell(rowStage(v)));
+    if (routeId && routeId.indexOf('krpus_') === 0) tr.appendChild(rotationCell(v));
     return tr;
   }
 
@@ -308,13 +326,13 @@
         var tr = document.createElement('tr');
         tr.className = 'lx-empty-row';
         var td = document.createElement('td');
-        td.colSpan = 7;
+        td.colSpan = id.indexOf('krpus_') === 0 ? 8 : 7;
         td.textContent = 'No sailings to display.';
         tr.appendChild(td);
         el.replaceChildren(tr);
         return;
       }
-      el.replaceChildren.apply(el, rows.map(buildRow));
+      el.replaceChildren.apply(el, rows.map(function (r) { return buildRow(r, id); }));
     });
   }
 
