@@ -1,0 +1,197 @@
+[
+ {
+  "carrier": "KMTC",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2608N",
+  "etd": "11-04 (Wed)",
+  "eta": "11-15 (Sun)",
+  "tt": 11,
+  "prevEtd": "11-04 (Wed)",
+  "prevEta": "11-14 (Sat)",
+  "prevTt": 10,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2608N",
+  "etd": "11-04 (Wed)",
+  "eta": "11-14 (Sat)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP VENUS",
+  "voyage": "2609N",
+  "etd": "11-07 (Sat)",
+  "eta": "11-20 (Fri)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2608N",
+  "etd": "11-08 (Sun)",
+  "eta": "11-19 (Thu)",
+  "tt": 11,
+  "prevEtd": "11-08 (Sun)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 10,
+  "status": "changed",
+  "changedFields": [
+   "tt",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2608N",
+  "etd": "11-09 (Mon)",
+  "eta": "11-20 (Fri)",
+  "tt": 11,
+  "prevEtd": "11-08 (Sun)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 10,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "AS CASPRIA",
+  "voyage": "0382N",
+  "etd": "11-15 (Sun)",
+  "eta": "11-28 (Sat)",
+  "tt": 13,
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 12,
+  "status": "changed",
+  "changedFields": [
+   "tt"
+  ]
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "TS NAGOYA",
+  "voyage": "2634N",
+  "etd": "11-17 (Tue)",
+  "eta": "11-29 (Sun)",
+  "tt": 12,
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 12,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "etd": "11-20 (Fri)",
+  "eta": "12-03 (Thu)",
+  "tt": 13,
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 12,
+  "status": "changed",
+  "changedFields": [
+   "tt",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "INTERASIA ENGAGE",
+  "voyage": "0046N",
+  "etd": "11-21 (Sat)",
+  "eta": "12-03 (Thu)",
+  "tt": 12,
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 11,
+  "status": "changed",
+  "changedFields": [
+   "tt"
+  ]
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609N",
+  "etd": "11-25 (Wed)",
+  "eta": "12-05 (Sat)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609N",
+  "etd": "11-27 (Fri)",
+  "eta": "12-07 (Mon)",
+  "tt": 10,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 10,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609N",
+  "etd": "11-30 (Mon)",
+  "eta": "12-10 (Thu)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "etd": "12-07 (Mon)",
+  "eta": "12-17 (Thu)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

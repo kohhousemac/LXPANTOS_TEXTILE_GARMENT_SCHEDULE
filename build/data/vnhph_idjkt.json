@@ -1,0 +1,54 @@
+[
+ {
+  "carrier": "SITC",
+  "vessel": "SITC SHIDAO",
+  "voyage": "2630S",
+  "etd": "11-04 (Wed)",
+  "eta": "11-13 (Fri)",
+  "tt": 9,
+  "prevEtd": "11-04 (Wed)",
+  "prevEta": "11-13 (Fri)",
+  "prevTt": 9,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "M. ATLAS",
+  "voyage": "2632S",
+  "etd": "11-11 (Wed)",
+  "eta": "11-20 (Fri)",
+  "tt": 9,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-20 (Fri)",
+  "prevTt": 9,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC LIANYUNGANG",
+  "voyage": "2632S",
+  "etd": "11-18 (Wed)",
+  "eta": "11-27 (Fri)",
+  "tt": 9,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "11-27 (Fri)",
+  "prevTt": 9,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC SHIDAO",
+  "voyage": "2632S",
+  "etd": "11-25 (Wed)",
+  "eta": "12-04 (Fri)",
+  "tt": 9,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 9,
+  "status": "unchanged",
+  "changedFields": []
+ }
+]

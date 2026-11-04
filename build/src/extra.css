@@ -1,0 +1,13 @@
+<style>
+.lx-berth-mini { margin-top: .6rem; padding: .5rem .75rem; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); }
+.lx-berth-mini-row { display: flex; align-items: center; gap: .6rem; font-size: var(--cds-font-size-caption); }
+.lx-berth-mini-label { color: var(--color-fg-muted); white-space: nowrap; }
+.lx-berth-mini-track { flex: 1; height: .5rem; min-width: 3rem; border-radius: 999px; background: color-mix(in srgb, var(--color-fg-muted) 16%, transparent); overflow: hidden; }
+.lx-berth-mini-fill { height: 100%; border-radius: 999px; background: var(--color-ok); }
+.lx-berth-mini-fill--warn { background: var(--color-warn); }
+.lx-berth-mini-fill--bad { background: var(--color-bad); }
+.lx-berth-mini-note { color: var(--color-fg-muted); white-space: nowrap; }
+.lx-berth-mini-empty { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-style: italic; margin: 0; }
+.lx-site-foot { margin-top: 2.5rem; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); border-top: 1px solid var(--color-border-line); padding-top: .75rem; }
+@media (max-width: 30rem) { .lx-page-wrap { padding-left: 1rem; padding-right: 1rem; } }
+</style>

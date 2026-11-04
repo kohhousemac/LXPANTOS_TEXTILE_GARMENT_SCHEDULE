@@ -1,0 +1,164 @@
+[
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC THAIS",
+  "voyage": "MD32642W",
+  "etd": "11-06 (Fri)",
+  "eta": "12-05 (Sat)",
+  "tt": 29,
+  "prevEtd": "11-06 (Fri)",
+  "prevEta": "12-07 (Mon)",
+  "prevTt": 31,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC REEF",
+  "voyage": "MD32643W",
+  "etd": "11-08 (Sun)",
+  "eta": "12-09 (Wed)",
+  "tt": 31,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC ISTANBUL",
+  "voyage": "MD32644W",
+  "etd": "11-17 (Tue)",
+  "eta": "12-19 (Sat)",
+  "tt": 32,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC INGY",
+  "voyage": "MD32645W",
+  "etd": "11-19 (Thu)",
+  "eta": "12-23 (Wed)",
+  "tt": 34,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "12-23 (Wed)",
+  "prevTt": 35,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC MIRJA",
+  "voyage": "MD32646W",
+  "etd": "11-22 (Sun)",
+  "eta": "12-30 (Wed)",
+  "tt": 38,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC SIXIN",
+  "voyage": "MD32647W",
+  "etd": "12-02 (Wed)",
+  "eta": "01-08 (Fri)",
+  "tt": 37,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "01-06 (Wed)",
+  "prevTt": 35,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC OLIVER",
+  "voyage": "MD32648W",
+  "etd": "12-16 (Wed)",
+  "eta": "01-19 (Tue)",
+  "tt": 34,
+  "prevEtd": "12-14 (Mon)",
+  "prevEta": "01-19 (Tue)",
+  "prevTt": 36,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC VIVIANA",
+  "voyage": "MD32649W",
+  "etd": "12-20 (Sun)",
+  "eta": "01-25 (Mon)",
+  "tt": 36,
+  "prevEtd": "12-19 (Sat)",
+  "prevEta": "01-24 (Sun)",
+  "prevTt": 36,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC METTE",
+  "voyage": "MD32650W",
+  "etd": "12-28 (Mon)",
+  "eta": "02-05 (Fri)",
+  "tt": 39,
+  "prevEtd": "12-26 (Sat)",
+  "prevEta": "01-30 (Sat)",
+  "prevTt": 35,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC MIA",
+  "voyage": "MD32651W",
+  "etd": "01-02 (Sat)",
+  "eta": "02-10 (Wed)",
+  "tt": 39,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC DANIELA",
+  "voyage": "MD32652W",
+  "etd": "01-03 (Sun)",
+  "eta": "02-10 (Wed)",
+  "tt": 38,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

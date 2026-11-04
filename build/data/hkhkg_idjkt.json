@@ -1,0 +1,78 @@
+[
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SHIMIZU",
+  "voyage": "2610S",
+  "etd": "11-06 (Fri)",
+  "eta": "11-13 (Fri)",
+  "tt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "TIANJIN VOYAGER",
+  "voyage": "2610S",
+  "etd": "11-13 (Fri)",
+  "eta": "11-21 (Sat)",
+  "tt": 8,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 9,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC HOCHIMINH",
+  "voyage": "2611S",
+  "etd": "11-17 (Tue)",
+  "eta": "11-25 (Wed)",
+  "tt": 8,
+  "prevEtd": "11-16 (Mon)",
+  "prevEta": "11-24 (Tue)",
+  "prevTt": 9,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "BELAWAN",
+  "voyage": "2611S",
+  "etd": "11-23 (Mon)",
+  "eta": "12-01 (Tue)",
+  "tt": 8,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "12-01 (Tue)",
+  "prevTt": 7,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SHIMIZU",
+  "voyage": "2611S",
+  "etd": "12-04 (Fri)",
+  "eta": "12-10 (Thu)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

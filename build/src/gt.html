@@ -1,0 +1,618 @@
+<script>
+(function () {
+  'use strict';
+
+  const fmtDT = (s) => s ? s.slice(5, 10).replace('-', '/') + ' ' + s.slice(11, 16) : '—';
+  const ST = { ACTUAL: ['A', 'Departed'], ESTIMATED: ['E', 'Est.'], SKIP: ['S', 'Skip'], LONGTERM: ['L', 'Long-term'] };
+
+  // The underlying datasets (collected daily from an external site) carry Korean labels for
+  // stage/status/change text. We keep matching/filtering logic against those raw values, and
+  // only translate what's shown to the viewer, so the page stays correct across daily refreshes.
+  const STAGE_EN = { '선적 예정': 'Upcoming', '항해 중': 'At sea', '과테말라 도착': 'Arrived' };
+  const trStage = (s) => STAGE_EN[s] || s;
+  const CHANGE_EN = { 'ETA 당김': 'ETA pulled forward', 'ETA 지연': 'ETA delayed', 'ETD 당김': 'ETD pulled forward', 'ETD 지연': 'ETD delayed', '기준 수집': 'Baseline collection' };
+  function trChange(s) {
+    if (!s) return s;
+    if (CHANGE_EN[s]) return CHANGE_EN[s];
+    if (s.indexOf('상태 ') === 0) return 'Status ' + s.slice(3);
+    if (s.indexOf('삭제') !== -1) return 'Removed';
+    if (s.indexOf('신규') !== -1) return 'New';
+    return s;
+  }
+  function trDelayNote(s) {
+    if (!s) return s;
+    return s
+      .replace(/(.+?)부터 \+([\d.]+)일 변동 · /, '+$2d shift since $1 · ')
+      .replace(/(.+?) 선석대기 ([\d.]+)일/, '$1 berth wait $2d');
+  }
+  function trLastShift(s) {
+    if (!s) return s;
+    return s.replace(/\(([^,]+), \+([\d.]+)일\)/, '($1, +$2d)');
+  }
+  function pill(td, status, actualLabel) {
+    const s = ST[status];
+    if (!s) return;
+    const p = document.createElement('span');
+    p.className = 'pill p-' + s[0];
+    p.textContent = status === 'ACTUAL' && actualLabel ? actualLabel : s[1];
+    td.appendChild(p);
+  }
+  function gtDateCell(tr, value, status, actualLabel) {
+    const td = tr.insertCell();
+    const t = document.createElement('span');
+    t.textContent = fmtDT(value);
+    if (status === 'SKIP') t.className = 'skip';
+    td.appendChild(t);
+    if (value) pill(td, status, actualLabel);
+    return td;
+  }
+  window.gtDate = (s) => s ? new Date(s.replace(' ', 'T') + ':00') : null;
+
+  // ---- freight rate chart
+  (() => {
+    const color = dash.colors[1];
+    const updEl = document.querySelector('[data-draw="freight-updated"]');
+    const box = document.getElementById('gt-freight-chart');
+
+    function draw() {
+      let d;
+      try {
+        d = dash.data('freight_rate');
+        box.replaceChildren();
+        if (d.status === 'error') { const f = document.createElement('div'); f.className = 'fail'; f.textContent = 'Failed to load'; box.appendChild(f); return; }
+        if (d.status !== 'ok' || !d.data.length) return;
+        const rows = d.data.slice().sort((a, b) => a.date < b.date ? -1 : 1).map((r) => ({ ...r, t: window.gtDate(r.date + ' 00:00').getTime() }));
+
+        if (updEl) {
+          updEl.classList.remove('dash-skeleton');
+          const last = rows[rows.length - 1];
+          updEl.textContent = last.period + ' ($' + last.ft40.toLocaleString() + ')';
+        }
+
+        const W = box.clientWidth || 640, top = 10, bottom = 26, left = 54, right = 16;
+        const H = 220;
+        const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Shanghai to Guatemala market rate over time, 40ft containers');
+        const tMin = rows[0].t, tMax = rows[rows.length - 1].t;
+        const x = d3.scaleLinear([tMin, tMax], [left, W - right]);
+        const yMax = d3.max(rows, (r) => r.ft40);
+        const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - bottom, top]);
+        const g = svg.append('g');
+        const yTicks = y.ticks(5);
+        g.selectAll('line.grid').data(yTicks).join('line').attr('x1', left).attr('x2', W - right).attr('y1', (t) => y(t)).attr('y2', (t) => y(t)).attr('stroke', 'var(--cds-chart-grid)');
+        g.selectAll('text.ytick').data(yTicks).join('text').attr('x', left - 8).attr('y', (t) => y(t) + 4).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text((t) => '$' + (t >= 1000 ? (t / 1000) + 'k' : t));
+        const xTickN = Math.max(2, Math.floor((W - left) / 90));
+        const xTickRows = [];
+        for (let i = 0; i < xTickN; i++) {
+          const target = tMin + (tMax - tMin) * i / (xTickN - 1);
+          let best = rows[0], bestDiff = Infinity;
+          for (const r of rows) { const diff = Math.abs(r.t - target); if (diff < bestDiff) { bestDiff = diff; best = r; } }
+          if (!xTickRows.length || xTickRows[xTickRows.length - 1] !== best) xTickRows.push(best);
+        }
+        g.selectAll('text.xtick').data(xTickRows).join('text').attr('x', (r) => x(r.t)).attr('y', H - 8).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text((r) => r.period.slice(0, 7).replace('-', '/'));
+
+        const tip = d3.select(box).append('div').attr('class', 'tip').style('display', 'none');
+        const line = d3.line().x((r) => x(r.t)).y((r) => y(r.ft40));
+        g.append('path').datum(rows).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2).attr('d', line);
+        g.selectAll('circle.pt-ft40').data(rows).join('circle').attr('class', 'pt-ft40')
+          .attr('cx', (r) => x(r.t)).attr('cy', (r) => y(r.ft40)).attr('r', 2.5).attr('fill', color)
+          .on('mousemove', (ev, r) => {
+            const [mx, my] = d3.pointer(ev, box);
+            tip.style('display', null).html('');
+            tip.append('div').attr('class', 'd').text(r.period + (r.note ? ' · ' + r.note : ''));
+            tip.append('div').text('$' + r.ft40.toLocaleString());
+            const tw = tip.node().offsetWidth;
+            tip.style('left', Math.min(mx + 12, box.clientWidth - tw - 4) + 'px').style('top', (my + 12) + 'px');
+          })
+          .on('mouseleave', () => tip.style('display', 'none'));
+        box.style.minHeight = H + 'px';
+      } catch (e) {
+        box.replaceChildren();
+        const f = document.createElement('div'); f.className = 'fail'; f.textContent = 'Chart error: ' + e.message; box.appendChild(f);
+      }
+    }
+    window.gtRedraw = window.gtRedraw || {};
+    window.gtRedraw.freight = draw;
+    dash.onData(draw);
+  })();
+
+  // ---- tiles + lede
+  dash.onData(() => {
+    const s = dash.data('summary');
+    document.querySelectorAll('#net-ca [data-source="summary"]').forEach((el) => {
+      if (s.status === 'ok' && s.data[0]) {
+        el.classList.remove('dash-skeleton');
+        const v = s.data[0][el.dataset.field];
+        el.textContent = v === '' || v == null ? '—' : String(v);
+      } else if (s.status !== 'loading') {
+        el.classList.remove('dash-skeleton');
+        el.textContent = '—';
+      }
+    });
+  });
+
+  // ---- sailings table
+  (() => {
+    const table = document.getElementById('gt-sail-table');
+    const body = table.tBodies[0];
+    const q = document.getElementById('gt-sail-q');
+    let stage = '', sortKey = 'pq_eta', dir = 1;
+    document.querySelectorAll('#gt-sailings .chip').forEach((b) => b.addEventListener('click', () => {
+      stage = b.dataset.stage;
+      document.querySelectorAll('#gt-sailings .chip').forEach((c) => c.setAttribute('aria-pressed', String(c === b)));
+      draw();
+    }));
+    q.addEventListener('input', () => draw());
+    table.querySelectorAll('th button').forEach((b) => b.addEventListener('click', () => {
+      const k = b.dataset.sort;
+      dir = sortKey === k ? -dir : 1; sortKey = k;
+      table.querySelectorAll('th button').forEach((x) => x.removeAttribute('aria-sort'));
+      b.setAttribute('aria-sort', dir > 0 ? 'ascending' : 'descending');
+      draw();
+    }));
+    function draw() {
+      const d = dash.data('sailings');
+      body.replaceChildren();
+      const wrap = table.parentElement;
+      wrap.querySelector('.fail')?.remove();
+      if (d.status === 'error') { const f = document.createElement('div'); f.className = 'fail'; f.textContent = 'Failed to load'; wrap.appendChild(f); return; }
+      if (d.status !== 'ok') return;
+      const term = q.value.trim().toUpperCase();
+      // On the Arrived tab, keep arrived sailings visible for a year; everywhere else
+      // (All / Upcoming / At sea) they drop off two weeks after arrival.
+      const cut = Date.now() - (stage === '과테말라 도착' ? 365 : 14) * 864e5;
+      const rows = d.data.filter((r) => !(r.pq_status === 'ACTUAL' && window.gtDate(r.pq_eta) < cut))
+        .filter((r) => (!stage || r.stage === stage) && (!term || r.vessel.includes(term)))
+        .slice().sort((a, b) => {
+          const x = a[sortKey], y = b[sortKey];
+          if (x === y) return 0;
+          if (x == null || x === '') return 1;
+          if (y == null || y === '') return -1;
+          return (x < y ? -1 : 1) * dir;
+        });
+      rows.forEach((r) => {
+        const tr = body.insertRow();
+        tr.dataset.key = r.key;
+        if (r.stage === '과테말라 도착') tr.className = 'past';
+        const v = tr.insertCell(); v.className = 'v'; v.textContent = r.vessel;
+        tr.insertCell().textContent = r.voyage;
+        tr.insertCell().textContent = r.service;
+        gtDateCell(tr, r.sha_etd, r.sha_status, 'Departed');
+        gtDateCell(tr, r.ngb_etd, r.ngb_status, 'Departed');
+        gtDateCell(tr, r.pq_eta, r.pq_status, 'Arrived');
+        tr.insertCell().textContent = r.transit_days == null ? '—' : String(r.transit_days);
+        const sc = tr.insertCell(); const sp = document.createElement('span');
+        sp.className = 'stage' + (r.stage === '과테말라 도착' ? ' s-arr' : r.stage === '항해 중' ? ' s-sea' : '');
+        sp.textContent = trStage(r.stage); sc.appendChild(sp);
+        const ch = tr.insertCell();
+        if (r.eta_shift_days == null || r.eta_shift_days === 0) ch.textContent = '—';
+        else { ch.textContent = (r.eta_shift_days > 0 ? '+' : '') + r.eta_shift_days + 'd'; ch.className = r.eta_shift_days > 0 ? 'late' : 'early'; }
+        const dn = tr.insertCell(); dn.className = 'why';
+        const main = document.createElement('div');
+        main.textContent = r.delay_note ? trDelayNote(r.delay_note) : '—';
+        if (r.wait_days >= 3) main.className = 'late';
+        dn.appendChild(main);
+        if (r.last_shift_from && !(r.delay_note || '').includes('변동')) {
+          const sub = document.createElement('div'); sub.className = 'sub';
+          sub.textContent = 'Recent shift started: ' + trLastShift(r.last_shift_from); dn.appendChild(sub);
+        }
+        tr.insertCell().textContent = r.skipped_ports || '—';
+      });
+    }
+    dash.onData(draw);
+  })();
+
+  // ---- congestion
+  (() => {
+    const box = document.getElementById('gt-cong-chart');
+    function draw() {
+      const d = dash.data('port_wait');
+      box.replaceChildren();
+      if (d.status === 'error') { const f = document.createElement('div'); f.className = 'fail'; f.textContent = 'Failed to load'; box.appendChild(f); return; }
+      if (d.status !== 'ok' || !d.data.length) return;
+      const rows = d.data;
+      const W = box.clientWidth || 640, rowH = 24, top = 4;
+      const H = top + rows.length * rowH + 4;
+      const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Average berthing wait days by port');
+      const meas = svg.append('text').attr('font-size', 12);
+      let lw = 0; rows.forEach((r) => { meas.text(r.port); lw = Math.max(lw, meas.node().getComputedTextLength()); });
+      let rw = 0; rows.forEach((r) => { meas.text(`max ${r.max_days}d · ${r.calls} calls`); rw = Math.max(rw, meas.node().getComputedTextLength()); });
+      meas.remove();
+      const left = Math.ceil(lw) + 12, right = Math.ceil(rw) + 48;
+      const x = d3.scaleLinear([0, d3.max(rows, (r) => r.avg_days) || 1], [left, Math.max(left + 40, W - right)]);
+      const g = svg.selectAll('g').data(rows).join('g').attr('transform', (r, i) => `translate(0,${top + i * rowH})`);
+      g.append('text').attr('x', left - 8).attr('y', rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)').text((r) => r.port);
+      g.append('rect').attr('x', left).attr('y', 5).attr('height', rowH - 10).attr('rx', 4)
+        .attr('width', (r) => Math.max(2, x(r.avg_days) - left))
+        .attr('fill', (r) => r.avg_days >= 2 ? 'var(--cds-chart-status-critical)' : dash.colors[0]);
+      g.append('text').attr('x', (r) => x(r.avg_days) + 6).attr('y', rowH / 2 + 4).attr('font-size', 12).attr('fill', 'var(--color-fg-muted)')
+        .text((r) => `${r.avg_days}d (max ${r.max_days}d · ${r.calls} calls)`);
+      box.style.minHeight = H + 'px';
+    }
+    window.gtRedraw = window.gtRedraw || {};
+    window.gtRedraw.cong = draw;
+    dash.onData(draw);
+  })();
+
+  // ---- changes
+  (() => {
+    const table = document.getElementById('gt-chg-table');
+    const body = table.tBodies[0];
+    const empty = document.getElementById('gt-chg-empty');
+    dash.onData(() => {
+      const d = dash.data('changes');
+      body.replaceChildren();
+      empty.hidden = !(d.status === 'ok' && d.data.length === 0);
+      if (d.status !== 'ok') return;
+      d.data.forEach((r) => {
+        const tr = body.insertRow();
+        tr.dataset.key = r.id;
+        if (r.vessel === '전체') tr.className = 'sys';
+        [r.date, r.vessel === '전체' ? 'All' : r.vessel, r.voyage || '—', r.port || '—'].forEach((t) => { tr.insertCell().textContent = t; });
+        const c = tr.insertCell(); c.textContent = trChange(r.change);
+        if (/지연|삭제|SKIP/.test(r.change)) c.className = 'late';
+        else if (/당김|신규/.test(r.change)) c.className = 'early';
+        tr.insertCell().textContent = /^\d{4}-/.test(r.old) ? fmtDT(r.old) : (r.old || '—');
+        tr.insertCell().textContent = /^\d{4}-/.test(r.new) ? fmtDT(r.new) : (r.new || '—');
+      });
+    });
+  })();
+
+  // ---- rotation
+  (() => {
+    const pick = document.getElementById('gt-vsl-pick');
+    const body = document.getElementById('gt-rot-table').tBodies[0];
+    let chosen = '';
+    pick.addEventListener('change', () => { chosen = pick.value; draw(); });
+    function draw() {
+      const d = dash.data('port_calls');
+      body.replaceChildren();
+      if (d.status !== 'ok') return;
+      const names = [...new Set(d.data.map((r) => r.vessel))].sort();
+      if (!chosen || !names.includes(chosen)) chosen = names[0] || '';
+      pick.replaceChildren(...names.map((n) => new Option(n, n)));
+      pick.value = chosen;
+      const t = (r) => r.eta || r.etd;
+      const cs = d.data.filter((r) => r.vessel === chosen);
+      const pqRows = cs.filter((r) => r.port === 'PUERTO QUETZAL' && r.in_voy && r.in_voy[0] === 'E').sort((a, b) => t(a) < t(b) ? -1 : 1);
+      const pq = pqRows[pqRows.length - 1];
+      let rows = [];
+      if (pq) {
+        const voy = pq.in_voy;
+        const chain = cs.filter((r) => (r.out_voy === voy || r.in_voy === voy) && t(r) <= t(pq) && r.key !== pq.key);
+        rows = [...chain, pq].sort((a, b) => t(a) < t(b) ? -1 : 1);
+      }
+      rows.forEach((r) => {
+        const tr = body.insertRow();
+        tr.dataset.key = r.key;
+        const p = tr.insertCell(); p.textContent = r.port;
+        if (r.port === 'PUERTO QUETZAL') p.className = 'v';
+        if (r.port === 'SHANGHAI' || r.port === 'NINGBO') p.className = 'v';
+        if (r.status === 'SKIP') p.classList.add('skip');
+        tr.insertCell().textContent = r.in_voy || '—';
+        tr.insertCell().textContent = fmtDT(r.eta);
+        tr.insertCell().textContent = fmtDT(r.etb);
+        tr.insertCell().textContent = fmtDT(r.etd);
+        const s = tr.insertCell(); s.textContent = (ST[r.status] || ['', r.status])[1];
+        s.className = 'p-' + ((ST[r.status] || ['E'])[0]);
+      });
+    }
+    dash.onData(draw);
+  })();
+
+  // ---- Caucedo sailings table ----
+  (() => {
+    const table = document.getElementById('cc-sail-table');
+    if (!table) return;
+    const body = table.tBodies[0];
+    function draw() {
+      const d = dash.data('sailings_cc');
+      body.replaceChildren();
+      const wrap = table.parentElement;
+      wrap.querySelector('.fail')?.remove();
+      if (d.status === 'error') { const f = document.createElement('div'); f.className = 'fail'; f.textContent = 'Failed to load'; wrap.appendChild(f); return; }
+      if (d.status !== 'ok') return;
+      const cut = Date.now() - 14 * 864e5;
+      const rows = d.data.filter((r) => !(r.stage === '카우세도 도착' && window.gtDate(r.cc_eta) < cut))
+        .slice().sort((a, b) => a.cc_eta < b.cc_eta ? -1 : 1);
+      rows.forEach((r) => {
+        const tr = body.insertRow();
+        tr.dataset.key = r.key;
+        if (r.stage === '카우세도 도착') tr.className = 'past';
+        const v = tr.insertCell(); v.className = 'v'; v.textContent = r.vessel;
+        tr.insertCell().textContent = r.voyage;
+        tr.insertCell().textContent = r.sha_etd ? fmtDT(r.sha_etd) : '—';
+        tr.insertCell().textContent = r.szx_etd ? fmtDT(r.szx_etd) : '—';
+        tr.insertCell().textContent = fmtDT(r.cc_eta);
+        tr.insertCell().textContent = r.transit_days == null ? '—' : String(r.transit_days);
+      });
+    }
+    dash.onData(draw);
+  })();
+
+  // ---- Caucedo rotation ----
+  (() => {
+    const pick = document.getElementById('cc-vsl-pick');
+    if (!pick) return;
+    const body = document.getElementById('cc-rot-table').tBodies[0];
+    let chosen = '';
+    pick.addEventListener('change', () => { chosen = pick.value; draw(); });
+    function draw() {
+      const d = dash.data('port_calls_cc');
+      body.replaceChildren();
+      if (d.status !== 'ok') return;
+      const names = [...new Set(d.data.map((r) => r.vessel))].sort();
+      if (!chosen || !names.includes(chosen)) chosen = names[0] || '';
+      pick.replaceChildren(...names.map((n) => new Option(n, n)));
+      pick.value = chosen;
+      const t = (r) => r.eta || r.etd;
+      const rows = d.data.filter((r) => r.vessel === chosen).slice().sort((a, b) => t(a) < t(b) ? -1 : 1);
+      rows.forEach((r) => {
+        const tr = body.insertRow();
+        tr.dataset.key = r.key;
+        const p = tr.insertCell(); p.textContent = r.port;
+        if (r.port === 'CAUCEDO') p.className = 'v';
+        tr.insertCell().textContent = r.in_voy || r.out_voy || '—';
+        tr.insertCell().textContent = fmtDT(r.eta);
+        tr.insertCell().textContent = fmtDT(r.etd);
+        const s = tr.insertCell(); s.textContent = (ST[r.status] || ['', r.status])[1];
+        s.className = 'p-' + ((ST[r.status] || ['E'])[0]);
+      });
+    }
+    dash.onData(draw);
+  })();
+
+  // ---- Caucedo congestion ----
+  (() => {
+    const box = document.getElementById('cc-cong-chart');
+    if (!box) return;
+    function draw() {
+      const d = dash.data('port_wait_cc');
+      box.replaceChildren();
+      if (d.status === 'error') { const f = document.createElement('div'); f.className = 'fail'; f.textContent = 'Failed to load'; box.appendChild(f); return; }
+      if (d.status !== 'ok' || !d.data.length) return;
+      const rows = d.data;
+      const W = box.clientWidth || 640, rowH = 24, top = 4;
+      const H = top + rows.length * rowH + 4;
+      const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Average berthing wait days by port, Caucedo lane');
+      const meas = svg.append('text').attr('font-size', 12);
+      let lw = 0; rows.forEach((r) => { meas.text(r.port); lw = Math.max(lw, meas.node().getComputedTextLength()); });
+      let rw = 0; rows.forEach((r) => { meas.text(`max ${r.max_days}d · ${r.calls} calls`); rw = Math.max(rw, meas.node().getComputedTextLength()); });
+      meas.remove();
+      const left = Math.ceil(lw) + 12, right = Math.ceil(rw) + 48;
+      const x = d3.scaleLinear([0, d3.max(rows, (r) => r.avg_days) || 1], [left, Math.max(left + 40, W - right)]);
+      const g = svg.selectAll('g').data(rows).join('g').attr('transform', (r, i) => `translate(0,${top + i * rowH})`);
+      g.append('text').attr('x', left - 8).attr('y', rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)').text((r) => r.port);
+      g.append('rect').attr('x', left).attr('y', 5).attr('height', rowH - 10).attr('rx', 4)
+        .attr('width', (r) => Math.max(2, x(r.avg_days) - left))
+        .attr('fill', (r) => r.avg_days >= 2 ? 'var(--cds-chart-status-critical)' : dash.colors[0]);
+      g.append('text').attr('x', (r) => x(r.avg_days) + 6).attr('y', rowH / 2 + 4).attr('font-size', 12).attr('fill', 'var(--color-fg-muted)')
+        .text((r) => `${r.avg_days}d (max ${r.max_days}d · ${r.calls} calls)`);
+      box.style.minHeight = H + 'px';
+    }
+    window.gtRedraw = window.gtRedraw || {};
+    window.gtRedraw.ccCong = draw;
+    dash.onData(draw);
+  })();
+
+  // ---- Caucedo changes ----
+  (() => {
+    const table = document.getElementById('cc-chg-table');
+    if (!table) return;
+    const body = table.tBodies[0];
+    const empty = document.getElementById('cc-chg-empty');
+    dash.onData(() => {
+      const d = dash.data('changes_cc');
+      body.replaceChildren();
+      empty.hidden = !(d.status === 'ok' && d.data.length === 0);
+      if (d.status !== 'ok') return;
+      d.data.forEach((r) => {
+        const tr = body.insertRow();
+        tr.dataset.key = r.id;
+        if (r.vessel === '전체') tr.className = 'sys';
+        [r.date, r.vessel === '전체' ? 'All' : r.vessel, r.voyage || '—', r.port || '—'].forEach((t) => { tr.insertCell().textContent = t; });
+        const c = tr.insertCell(); c.textContent = trChange(r.change);
+        if (/지연|삭제|SKIP/.test(r.change)) c.className = 'late';
+        else if (/당김|신규/.test(r.change)) c.className = 'early';
+        tr.insertCell().textContent = /^\d{4}-/.test(r.old) ? fmtDT(r.old) : (r.old || '—');
+        tr.insertCell().textContent = /^\d{4}-/.test(r.new) ? fmtDT(r.new) : (r.new || '—');
+      });
+    });
+  })();
+
+  // ---- C.America news banner
+  // ca_news is a flat per-country dataset (one row per country), matching every
+  // other dataset on this page -- a nested array-of-objects field inside a single
+  // row does NOT survive dash.data() (it comes back as undefined), so this must
+  // stay one row per country rather than one row with a nested "items" list.
+  (() => {
+    const el = document.getElementById('ca-news-banner');
+    if (!el) return;
+    const textEl = el.querySelector('[data-field="summary"]');
+    const timeEl = el.querySelector('[data-field="updatedAt"]');
+    const itemsEl = document.getElementById('ca-news-items');
+    dash.onData(() => {
+      const n = dash.data('ca_news');
+      if (n.status !== 'ok' || !n.data.length) {
+        el.hidden = true;
+        return;
+      }
+      const issues = n.data.filter((r) => r && r.hasIssue);
+      if (!issues.length) {
+        el.hidden = true;
+        return;
+      }
+      el.hidden = false;
+
+      if (textEl) {
+        const parts = issues.map((r) => {
+          const bits = [];
+          if (r.holiday) bits.push('공휴일(' + r.holiday + ')');
+          if (r.headline) bits.push(r.headline);
+          return [r.country, bits.join(' · ')].filter(Boolean).join(' ');
+        });
+        textEl.textContent = parts.join(' · ') || '중미 물류 뉴스에 이슈가 있습니다.';
+      }
+
+      if (timeEl) {
+        const updatedAt = n.data.reduce((m, r) => (r.updatedAt || '') > m ? r.updatedAt : m, '');
+        timeEl.textContent = updatedAt
+          ? '업데이트 ' + new Date(updatedAt).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+          : '';
+      }
+
+      if (itemsEl) {
+        itemsEl.replaceChildren();
+        issues.forEach((it) => {
+          const li = document.createElement('li');
+          li.className = 'lx-ca-news-item';
+          const country = document.createElement('span');
+          country.className = 'lx-ca-news-item-country';
+          country.textContent = [it.flag, it.country].filter(Boolean).join(' ');
+          li.appendChild(country);
+          if (it.holiday) {
+            const badge = document.createElement('span');
+            badge.className = 'lx-ca-news-holiday';
+            badge.textContent = '🎌 ' + it.holiday;
+            li.appendChild(badge);
+          }
+          if (it.headline) {
+            if (it.url) {
+              const a = document.createElement('a');
+              a.href = it.url;
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+              a.textContent = it.headline;
+              li.appendChild(a);
+            } else {
+              const span = document.createElement('span');
+              span.textContent = it.headline;
+              li.appendChild(span);
+            }
+          }
+          itemsEl.appendChild(li);
+        });
+        itemsEl.hidden = false;
+      }
+    });
+  })();
+
+  // ---- POL/POD port flags ----
+  // Static UI labels only (nav buttons + lane headers): the port name text never
+  // changes at runtime, so this runs once against the DOM as rendered.
+  (() => {
+    const PORT_FLAGS = {
+      'Ho Chi Minh': '🇻🇳',
+      'Haiphong': '🇻🇳',
+      'Jakarta': '🇮🇩',
+      'Semarang': '🇮🇩',
+      'Shanghai': '🇨🇳',
+      'Shekou': '🇨🇳',
+      'Keelung': '🇹🇼',
+      'Hong Kong': '🇭🇰',
+      'Guatemala': '🇬🇹',
+      'Caucedo (DO)': '🇩🇴',
+      'Busan': '🇰🇷',
+      'Incheon': '🇰🇷',
+    };
+    function addFlag(el) {
+      if (!el || el.dataset.flagged === '1') return;
+      const name = el.textContent.trim();
+      const flag = PORT_FLAGS[name];
+      if (!flag) return;
+      el.dataset.flagged = '1';
+      const span = document.createElement('span');
+      span.className = 'lx-port-flag';
+      span.setAttribute('aria-hidden', 'true');
+      span.textContent = flag;
+      el.insertBefore(span, el.firstChild);
+    }
+    document.querySelectorAll('.lx-nav-btn[data-pol], .lx-subnav-btn[data-pod], .lx-subnav-btn[data-ca-pod]').forEach(addFlag);
+    document.querySelectorAll('h2[id^="lane-"] > span:first-child, h2[id^="lane-"] > span:last-child').forEach(addFlag);
+  })();
+})();
+
+// ---- flashier motion pass: sliding tab glow, selection pop, row reveal, chart draw-in ----
+(function () {
+  try {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    function placeIndicator(nav, bar) {
+      var active = nav.querySelector('.lx-nav-btn[aria-selected="true"]');
+      if (!active) { bar.style.opacity = '0'; return; }
+      var navRect = nav.getBoundingClientRect();
+      var r = active.getBoundingClientRect();
+      bar.style.top = (r.bottom - navRect.top + 1) + 'px';
+      bar.style.left = (r.left - navRect.left) + 'px';
+      bar.style.width = r.width + 'px';
+      bar.classList.add('is-ready');
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('.lx-nav[role="tablist"]')).forEach(function (nav) {
+      var bar = document.createElement('span');
+      bar.className = 'lx-nav-indicator';
+      bar.setAttribute('aria-hidden', 'true');
+      nav.appendChild(bar);
+      var place = function () { placeIndicator(nav, bar); };
+      place();
+      setTimeout(place, 80);
+      setTimeout(place, 400);
+      window.addEventListener('resize', place);
+      new MutationObserver(place).observe(nav, { attributes: true, attributeFilter: ['aria-selected'], subtree: true });
+    });
+
+    function wirePop(attr) {
+      new MutationObserver(function (muts) {
+        muts.forEach(function (m) {
+          var t = m.target;
+          if (t.getAttribute && t.getAttribute(attr) === 'true') {
+            t.classList.remove('lx-pop');
+            void t.offsetWidth;
+            t.classList.add('lx-pop');
+          }
+        });
+      }).observe(document.body, { attributes: true, attributeFilter: [attr], subtree: true });
+    }
+    wirePop('aria-selected');
+    wirePop('aria-pressed');
+
+    Array.prototype.slice.call(document.querySelectorAll('.lx-table tbody')).forEach(function (tb) {
+      new MutationObserver(function () {
+        Array.prototype.slice.call(tb.rows).forEach(function (tr, i) {
+          tr.classList.remove('lx-row-reveal');
+          tr.style.animationDelay = Math.min(i * 22, 260) + 'ms';
+          void tr.offsetWidth;
+          tr.classList.add('lx-row-reveal');
+        });
+      }).observe(tb, { childList: true });
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll('.gt .chart')).forEach(function (box) {
+      new MutationObserver(function () {
+        var svg = box.querySelector('svg');
+        if (!svg) return;
+        Array.prototype.slice.call(svg.querySelectorAll('path')).forEach(function (p) {
+          if (p.classList.contains('lx-draw-path')) return;
+          try {
+            var len = p.getTotalLength();
+            if (!len) return;
+            p.classList.add('lx-draw-path');
+            p.style.strokeDasharray = len;
+            p.style.strokeDashoffset = len;
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () { p.style.strokeDashoffset = '0'; });
+            });
+          } catch (e) {}
+        });
+        Array.prototype.slice.call(svg.querySelectorAll('rect')).forEach(function (r, i) {
+          if (r.classList.contains('lx-draw-rect')) return;
+          var w = r.getAttribute('width');
+          if (!w) return;
+          r.classList.add('lx-draw-rect');
+          r.style.width = '0px';
+          setTimeout(function () { r.style.width = w + 'px'; }, 30 + i * 40);
+        });
+      }).observe(box, { childList: true, subtree: true });
+    });
+  } catch (e) { /* visual flourish only; never break the dashboard */ }
+})();
+</script>

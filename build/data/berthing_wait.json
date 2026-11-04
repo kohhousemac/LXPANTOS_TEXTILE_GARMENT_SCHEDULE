@@ -1,0 +1,252 @@
+[
+ {
+  "routeId": "vnsgn_idjkt",
+  "pod": "Jakarta",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnsgn_idsrg",
+  "pod": "Semarang",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnhph_idjkt",
+  "pod": "Jakarta",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "pod": "Haiphong",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "pod": "Haiphong",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "pod": "Ho Chi Minh",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "pod": "Ho Chi Minh",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "twkel_vnsgn",
+  "pod": "Ho Chi Minh",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "twkel_vnhph",
+  "pod": "Haiphong",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "pod": "Haiphong",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "pod": "Ho Chi Minh",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "pod": "Jakarta",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "cnsha_krpus",
+  "pod": "Busan",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnsgn_krpus",
+  "pod": "Busan",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnsgn_krinc",
+  "pod": "Incheon",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "pod": "Busan",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnhph_krinc",
+  "pod": "Incheon",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "pod": "Ho Chi Minh",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "pod": "Jakarta",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "krpus_trist",
+  "pod": "Istanbul",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "pod": "Shanghai",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "vnhph_cnsha",
+  "pod": "Shanghai",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "idjkt_cnsha",
+  "pod": "Shanghai",
+  "status": "no_tool",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "cnsha_krinc",
+  "pod": "Incheon",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ },
+ {
+  "routeId": "idjkt_krinc",
+  "pod": "Incheon",
+  "status": "collecting",
+  "calls": 0,
+  "avg_days": null,
+  "max_days": null,
+  "windowDays": 60,
+  "asOf": null
+ }
+]

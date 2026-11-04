@@ -1,0 +1,180 @@
+  <section class="lx-group" id="net-ca" data-net="ca" role="tabpanel" aria-labelledby="tab-net-ca" hidden>
+  <div class="lx-ca-news" id="ca-news-banner" data-source="ca_news" hidden>
+    <span class="lx-dot"></span>
+    <div class="lx-ca-news-body">
+      <p class="lx-ca-news-title">중미 물류 뉴스 이슈</p>
+      <p class="lx-ca-news-text" data-field="summary">—</p>
+      <ul class="lx-ca-news-items" id="ca-news-items" hidden></ul>
+    </div>
+    <span class="lx-ca-news-time" data-field="updatedAt"></span>
+  </div>
+
+  <div class="lx-group">
+    <p class="lx-group-label">POD</p>
+    <nav class="lx-subnav" role="tablist" aria-label="C.America destination port">
+      <button class="lx-subnav-btn" id="tab-ca-pod-gt" role="tab" aria-selected="true" aria-controls="ca-page-gt" data-ca-pod="gt">Guatemala</button>
+      <button class="lx-subnav-btn" id="tab-ca-pod-cc" role="tab" aria-selected="false" aria-controls="ca-page-cc" data-ca-pod="cc">Caucedo (DO)</button>
+    </nav>
+  </div>
+
+  <section class="lx-page" id="ca-page-gt" data-ca-pod="gt" role="tabpanel" aria-labelledby="tab-ca-pod-gt">
+  <div class="gt">
+    <header id="gt-top">
+      <p class="gt-title">Guatemala Vessel Tracker</p>
+    </header>
+
+    <section class="card" id="gt-sailings">
+      <h2>Sailings to Guatemala <span class="upd">Updated <span class="dash-skeleton" data-source="summary" data-field="updated">—</span></span></h2>
+      <div class="bar">
+        <button class="chip" id="gt-st-all" aria-pressed="true" data-stage="">All</button>
+        <button class="chip" id="gt-st-up" aria-pressed="false" data-stage="선적 예정">Upcoming</button>
+        <button class="chip" id="gt-st-sea" aria-pressed="false" data-stage="항해 중">At sea</button>
+        <button class="chip" id="gt-st-arr" aria-pressed="false" data-stage="과테말라 도착">Arrived</button>
+        <input type="search" id="gt-sail-q" placeholder="Search vessel name" aria-label="Search vessel name">
+      </div>
+      <div class="scroll">
+        <table id="gt-sail-table" data-source="sailings" data-row-key="key">
+          <thead><tr>
+            <th data-field="vessel"><button data-sort="vessel">Vessel</button></th>
+            <th data-field="voyage">Voyage</th>
+            <th data-field="service"><button data-sort="service">Service</button></th>
+            <th data-field="sha_etd"><button data-sort="sha_etd">Shanghai ETD</button></th>
+            <th data-field="ngb_etd"><button data-sort="ngb_etd">Ningbo ETD</button></th>
+            <th data-field="pq_eta"><button data-sort="pq_eta" aria-sort="ascending">Arrival ETA</button></th>
+            <th data-field="transit_days"><button data-sort="transit_days">T/T (days)</button></th>
+            <th data-field="stage">Stage</th>
+            <th data-field="eta_shift_days">ETA shift</th>
+            <th data-field="delay_note">Delay point</th>
+            <th data-field="skipped_ports">Skipped ports</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="gt-freight">
+      <h2>Shanghai–Guatemala Market rate <span class="upd">Latest <span class="dash-skeleton" data-draw="freight-updated">—</span></span></h2>
+      <div class="chart" id="gt-freight-chart" data-source="freight_rate" style="min-height: 220px"></div>
+    </section>
+
+    <section class="card" id="gt-congestion">
+      <h2>Port berthing wait</h2>
+      <p class="note">Average days waited from arrival (ETA) to berthing (ETB) at ports actually called by tracked vessels over the last 60 days. The number beside each bar shows the longest wait and number of calls.</p>
+      <div class="chart" id="gt-cong-chart" data-source="port_wait" style="min-height: 160px"></div>
+    </section>
+
+    <div class="grid2">
+      <section class="card" id="gt-changes">
+        <h2>Schedule change history</h2>
+        <p class="note">ETA/ETD changes of 6+ hours versus the prior day's collection, status changes, and new/removed sailings.</p>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="gt-chg-table" data-source="changes" data-row-key="id">
+            <thead><tr>
+              <th data-field="date">Date</th>
+              <th data-field="vessel">Vessel</th>
+              <th data-field="voyage">Voyage</th>
+              <th data-field="port">Port</th>
+              <th data-field="change">Change</th>
+              <th data-field="old">Previous</th>
+              <th data-field="new">New</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="empty" id="gt-chg-empty" hidden>No changes yet.</p>
+      </section>
+
+      <section class="card" id="gt-rotation">
+        <h2>Port call schedule by vessel</h2>
+        <p class="note">All port calls for the selected vessel (including the most recent departure). Skip is struck through.</p>
+        <div class="bar"><select id="gt-vsl-pick" aria-label="Select vessel"></select></div>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="gt-rot-table" data-source="port_calls" data-row-key="key">
+            <thead><tr>
+              <th data-field="port">Port</th>
+              <th data-field="in_voy">Inbound voyage</th>
+              <th data-field="eta">ETA</th>
+              <th data-field="etb">ETB</th>
+              <th data-field="etd">ETD</th>
+              <th data-field="status">Status</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+  </section>
+
+  <section class="lx-page" id="ca-page-cc" data-ca-pod="cc" role="tabpanel" aria-labelledby="tab-ca-pod-cc" hidden>
+  <div class="gt">
+    <header id="cc-top">
+      <p class="gt-title">Caucedo (Dominican Republic) Vessel Tracker</p>
+    </header>
+
+    <section class="card" id="cc-sailings">
+      <h2>Sailings to Caucedo</h2>
+      <div class="scroll">
+        <table id="cc-sail-table" data-source="sailings_cc" data-row-key="key">
+          <thead><tr>
+            <th data-field="vessel">Vessel</th>
+            <th data-field="voyage">Voyage</th>
+            <th data-field="sha_etd">Shanghai ETD</th>
+            <th data-field="szx_etd">Shekou ETD</th>
+            <th data-field="cc_eta">Caucedo ETA</th>
+            <th data-field="transit_days">T/T (days)</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="cc-congestion">
+      <h2>Port berthing wait</h2>
+      <p class="note">Average days waited from arrival (ETA) to berthing (ETB) at ports actually called by tracked vessels. The number beside each bar shows the longest wait and number of calls.</p>
+      <div class="chart" id="cc-cong-chart" data-source="port_wait_cc" style="min-height: 160px"></div>
+    </section>
+
+    <div class="grid2">
+      <section class="card" id="cc-changes">
+        <h2>Schedule change history</h2>
+        <p class="note">ETA/ETD changes of 6+ hours versus the prior collection, status changes, and new/removed sailings.</p>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="cc-chg-table" data-source="changes_cc" data-row-key="id">
+            <thead><tr>
+              <th data-field="date">Date</th>
+              <th data-field="vessel">Vessel</th>
+              <th data-field="voyage">Voyage</th>
+              <th data-field="port">Port</th>
+              <th data-field="change">Change</th>
+              <th data-field="old">Previous</th>
+              <th data-field="new">New</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="empty" id="cc-chg-empty" hidden>No changes yet.</p>
+      </section>
+
+      <section class="card" id="cc-rotation">
+        <h2>Port call schedule by vessel</h2>
+        <p class="note">Port calls for the selected vessel's current Caucedo-bound sailing.</p>
+        <div class="bar"><select id="cc-vsl-pick" aria-label="Select vessel"></select></div>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="cc-rot-table" data-source="port_calls_cc" data-row-key="key">
+            <thead><tr>
+              <th data-field="port">Port</th>
+              <th data-field="voyage">Voyage</th>
+              <th data-field="eta">ETA</th>
+              <th data-field="etd">ETD</th>
+              <th data-field="status">Status</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+  </section>
+  </section>
+

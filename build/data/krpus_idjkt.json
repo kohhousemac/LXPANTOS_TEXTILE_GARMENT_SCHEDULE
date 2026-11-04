@@ -1,0 +1,49 @@
+[
+ {
+  "carrier": "KMTC",
+  "vessel": "TIANJIN VOYAGER",
+  "voyage": "2610S",
+  "etd": "11-08 (Sun)",
+  "eta": "11-20 (Fri)",
+  "tt": 12,
+  "prevEtd": "11-08 (Sun)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 11,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SHIMIZU",
+  "voyage": "2611S",
+  "etd": "12-01 (Tue)",
+  "eta": "12-10 (Thu)",
+  "tt": 9,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 9,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "carrier"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "TIANJIN VOYAGER",
+  "voyage": "2611S",
+  "etd": "12-08 (Tue)",
+  "eta": "12-16 (Wed)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

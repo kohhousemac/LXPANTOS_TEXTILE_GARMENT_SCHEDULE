@@ -1,0 +1,111 @@
+<script>
+dash.calc('summary', {
+  title: 'Sailing summary',
+  description: 'Vessel count, sailings by stage, next departure/arrival, the latest collection’s change count, and last collection time.',
+  inputs: ['sailings', 'changes'],
+  fn: (sailings, changes) => {
+    const fmt = (s) => s ? s.slice(5, 10).replace('-', '/') : '';
+    const firstEtd = (r) => [r.sha_status !== 'SKIP' && r.sha_etd, r.ngb_status !== 'SKIP' && r.ngb_etd].filter(Boolean).sort()[0] || '';
+    const up = sailings.filter((r) => r.stage === '선적 예정').sort((a, b) => firstEtd(a) < firstEtd(b) ? -1 : 1);
+    const coming = sailings.filter((r) => r.stage !== '과테말라 도착').sort((a, b) => a.pq_eta < b.pq_eta ? -1 : 1);
+    const last = changes.reduce((m, r) => r.date > m ? r.date : m, '');
+    const updated = sailings.reduce((m, r) => (r.collected_at || '') > m ? r.collected_at : m, '');
+    return [{
+      vessels: new Set(sailings.map((r) => r.vessel)).size,
+      upcoming: up.length,
+      at_sea: sailings.filter((r) => r.stage === '항해 중').length,
+      changes_latest: changes.filter((r) => r.date === last).length,
+      next_dep: up[0] ? up[0].key + ' (' + fmt(firstEtd(up[0])) + ')' : '',
+      next_arr: coming[0] ? coming[0].key + ' (' + fmt(coming[0].pq_eta) + ')' : '',
+      updated: updated ? updated.replace(/-/g, '.') + (updated.length > 10 ? '' : '') : '',
+    }];
+  },
+});
+</script>
+
+<script>
+dash.calc('port_wait', {
+  title: 'Port berthing wait',
+  description: 'Average, max, and count of ETA-to-ETB wait days at actual (ACTUAL) port calls, aggregated by port (ports with 3+ calls, top 10 by average, descending).',
+  inputs: ['port_calls'],
+  fn: (port_calls) => {
+    const t = (s) => new Date(s.replace(' ', 'T') + ':00Z').getTime();
+    const by = {};
+    port_calls.filter((r) => r.status === 'ACTUAL' && r.eta && r.etb && r.port !== 'CALLAO' && r.port !== 'GUAYAQUIL').forEach((r) => {
+      const d = (t(r.etb) - t(r.eta)) / 864e5;
+      (by[r.port] = by[r.port] || []).push(Math.max(0, d));
+    });
+    return Object.entries(by).filter(([, v]) => v.length >= 3).map(([port, v]) => ({
+      port,
+      avg_days: Math.round(v.reduce((a, b) => a + b, 0) / v.length * 10) / 10,
+      max_days: Math.round(Math.max(...v) * 10) / 10,
+      calls: v.length,
+    })).sort((a, b) => b.avg_days - a.avg_days).slice(0, 10);
+  },
+});
+</script>
+
+<script>
+dash.calc('port_wait_cc', {
+  title: 'Port berthing wait (Caucedo)',
+  description: 'Average, max, and count of ETA-to-ETB wait days at actual (ACTUAL) port calls on the Caucedo lane, aggregated by port (ports with 3+ calls, top 10 by average, descending). Empty until actual port calls with both ETA and ETB are collected.',
+  inputs: ['port_calls_cc'],
+  fn: (port_calls_cc) => {
+    const t = (s) => new Date(s.replace(' ', 'T') + ':00Z').getTime();
+    const by = {};
+    port_calls_cc.filter((r) => r.status === 'ACTUAL' && r.eta && r.etb).forEach((r) => {
+      const d = (t(r.etb) - t(r.eta)) / 864e5;
+      (by[r.port] = by[r.port] || []).push(Math.max(0, d));
+    });
+    return Object.entries(by).filter(([, v]) => v.length >= 3).map(([port, v]) => ({
+      port,
+      avg_days: Math.round(v.reduce((a, b) => a + b, 0) / v.length * 10) / 10,
+      max_days: Math.round(Math.max(...v) * 10) / 10,
+      calls: v.length,
+    })).sort((a, b) => b.avg_days - a.avg_days).slice(0, 10);
+  },
+});
+</script>
+
+<script>
+dash.calc('sailings_cc', {
+  title: 'Sailings to Caucedo',
+  description: 'Per-voyage Shanghai and Shekou departure and Caucedo arrival, derived from the full vessel rotation snapshot.',
+  inputs: ['port_calls_cc'],
+  fn: (port_calls_cc) => {
+    const t = (s) => s ? new Date(s.replace(' ', 'T')).getTime() : null;
+    const byVoy = {};
+    port_calls_cc.forEach((r) => {
+      const voy = r.out_voy || r.in_voy;
+      if (!voy) return;
+      const e = (byVoy[voy] = byVoy[voy] || {});
+      if (r.port === 'CAUCEDO') e.pod = r;
+      else if (r.port === 'SHANGHAI') e.sha = r;
+      else if (r.port === 'SHEKOU') e.skk = r;
+    });
+    const now = Date.now();
+    return Object.keys(byVoy).map((voy) => {
+      const e = byVoy[voy];
+      const refPol = e.sha || e.skk;
+      if (!e.pod || !refPol) return null;
+      const polT = t(refPol.etd), podT = t(e.pod.eta);
+      const transit = polT && podT ? Math.round((podT - polT) / 864e5) : null;
+      let stage;
+      if (now >= podT) stage = '카우세도 도착';
+      else if (now >= polT) stage = '항해 중';
+      else stage = '선적 예정';
+      return {
+        key: refPol.vessel + ' ' + voy,
+        vessel: refPol.vessel,
+        voyage: voy,
+        service: e.pod.service,
+        sha_etd: e.sha ? e.sha.etd : '',
+        szx_etd: e.skk ? e.skk.etd : '',
+        cc_eta: e.pod.eta,
+        transit_days: transit,
+        stage,
+      };
+    }).filter(Boolean).sort((a, b) => (a.cc_eta < b.cc_eta ? -1 : 1));
+  },
+});
+</script>

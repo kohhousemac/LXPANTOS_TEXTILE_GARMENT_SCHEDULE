@@ -1,0 +1,38 @@
+[
+ {
+  "country": "과테말라",
+  "flag": "🇬🇹",
+  "hasIssue": false,
+  "headline": "",
+  "url": "",
+  "holiday": "",
+  "updatedAt": "2026-11-04T11:24:00Z"
+ },
+ {
+  "country": "니카라과",
+  "flag": "🇳🇮",
+  "hasIssue": false,
+  "headline": "",
+  "url": "",
+  "holiday": "",
+  "updatedAt": "2026-11-04T11:24:00Z"
+ },
+ {
+  "country": "파나마",
+  "flag": "🇵🇦",
+  "hasIssue": true,
+  "headline": "",
+  "url": "",
+  "holiday": "국기의 날 (11/04)",
+  "updatedAt": "2026-11-04T11:24:00Z"
+ },
+ {
+  "country": "엘살바도르",
+  "flag": "🇸🇻",
+  "hasIssue": false,
+  "headline": "",
+  "url": "",
+  "holiday": "",
+  "updatedAt": "2026-11-04T11:24:00Z"
+ }
+]

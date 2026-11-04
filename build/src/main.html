@@ -1,0 +1,538 @@
+<script>
+(function () {
+  'use strict';
+
+  var ROUTE_IDS = ['vnsgn_idjkt', 'vnsgn_idsrg', 'vnhph_idjkt', 'idjkt_vnhph', 'cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'twkel_vnsgn', 'twkel_vnhph', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'cnsha_krpus', 'vnsgn_krpus', 'vnsgn_krinc', 'vnhph_krpus', 'vnhph_krinc', 'krpus_vnsgn', 'krpus_idjkt', 'krpus_trist', 'vnsgn_cnsha', 'vnhph_cnsha', 'idjkt_cnsha', 'cnsha_krinc', 'idjkt_krinc'];
+  var CARRIER_ORDER = ['SITC', 'SINOKOR', 'GSL', 'EMC', 'WHL', 'CNC', 'KMTC', 'PANOCEAN', 'DONGJIN', 'NAMSUNG'];
+  var CARRIER_COLOR_OVERRIDE = { SITC: '#2f9e44', CNC: '#0891b2', GSL: '#8a5a2e', SINOKOR: '#eab308', KMTC: '#7c3aed', PANOCEAN: '#ea580c', 'YANG MING': '#be123c', DONGJIN: '#0d9488', NAMSUNG: '#db2777' };
+
+  function carrierColor(carrier) {
+    if (CARRIER_COLOR_OVERRIDE[carrier]) return CARRIER_COLOR_OVERRIDE[carrier];
+    var idx = CARRIER_ORDER.indexOf(carrier);
+    if (idx === -1) {
+      idx = 0;
+      for (var i = 0; i < carrier.length; i++) idx = (idx * 31 + carrier.charCodeAt(i)) % 8;
+    }
+    return dash.colors[idx % dash.colors.length];
+  }
+
+  (function buildLegend() {
+    var el = document.getElementById('lx-legend');
+    if (!el) return;
+    el.replaceChildren.apply(el, CARRIER_ORDER.map(function (c) {
+      var item = document.createElement('span');
+      item.className = 'lx-legend-item';
+      var dot = document.createElement('i');
+      dot.className = 'lx-legend-dot';
+      dot.style.background = carrierColor(c);
+      item.appendChild(dot);
+      item.appendChild(document.createTextNode(c));
+      return item;
+    }));
+  })();
+
+  var parseKey = function (s) {
+    if (!s) return Infinity;
+    var m = /^(\d{2})-(\d{2})/.exec(s);
+    if (!m) return Infinity;
+    var mo = parseInt(m[1], 10);
+    if (mo <= 3) mo += 12;
+    return mo * 100 + parseInt(m[2], 10);
+  };
+
+  var onlyChanges = false;
+  var lastRendered = {};
+
+  Array.prototype.slice.call(document.querySelectorAll('.lx-only-changes')).forEach(function (cb) {
+    cb.addEventListener('change', function () {
+      onlyChanges = cb.checked;
+      Array.prototype.slice.call(document.querySelectorAll('.lx-only-changes')).forEach(function (other) {
+        other.checked = onlyChanges;
+      });
+      ROUTE_IDS.forEach(function (id) { dash.draw('rows-' + id); });
+    });
+  });
+
+  function showFail(el) {
+    var wrap = document.createElement('div');
+    wrap.className = 'lx-failstate';
+    var dot = document.createElement('i');
+    dot.className = 'lx-fail-dot';
+    var txt = document.createElement('span');
+    txt.textContent = 'Failed to load';
+    wrap.appendChild(dot);
+    wrap.appendChild(txt);
+    el.replaceChildren(wrap);
+  }
+
+  function withState(el, id, onOk) {
+    var g = dash.data(id);
+    if (g.status === 'loading') {
+      el.classList.add('dash-skeleton');
+      return;
+    }
+    el.classList.remove('dash-skeleton');
+    if (g.status === 'error' || g.status === 'connect' || g.status === 'declined') {
+      showFail(el);
+      return;
+    }
+    onOk(g);
+  }
+
+  function chip(label, n, tone) {
+    var span = document.createElement('span');
+    span.className = 'lx-chip' + (n > 0 ? ' lx-chip--' + tone : '');
+    var dot = document.createElement('i');
+    dot.className = 'lx-dot';
+    span.appendChild(dot);
+    span.appendChild(document.createTextNode(label + ' ' + n));
+    return span;
+  }
+
+  function renderBadges(el, routeId) {
+    withState(el, 'route_meta', function (g) {
+      var row = (g.data || []).filter(function (r) { return r.routeId === routeId; })[0];
+      if (!row) { el.replaceChildren(); return; }
+      el.replaceChildren(
+        chip('New', row.newCount, 'ok'),
+        chip('Changed', row.changedCount, 'warn'),
+        chip('Excluded', row.excludedCount, 'bad')
+      );
+    });
+  }
+
+  ROUTE_IDS.forEach(function (id) {
+    dash.draw('badges-' + id, function (el) { renderBadges(el, id); });
+  });
+
+  function fmtHolidayDate(startIso, endIso) {
+    function mmdd(iso) { var p = iso.split('-'); return p[1] + '/' + p[2]; }
+    return startIso === endIso ? mmdd(startIso) : mmdd(startIso) + '–' + mmdd(endIso);
+  }
+
+  function renderHolidays(el) {
+    withState(el, 'holidays', function (g) {
+      var all = g.data || [];
+      var now = new Date();
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      var horizon = new Date(today.getTime() + 45 * 86400000);
+      var upcoming = all.filter(function (h) {
+        var end = new Date(h.end + 'T00:00:00');
+        var start = new Date(h.start + 'T00:00:00');
+        return end >= today && start <= horizon;
+      }).sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+      if (!upcoming.length) {
+        el.replaceChildren();
+        return;
+      }
+      el.replaceChildren.apply(el, upcoming.map(function (h) {
+        var chipEl = document.createElement('span');
+        chipEl.className = 'lx-holiday-chip';
+        var dateEl = document.createElement('span');
+        dateEl.className = 'lx-holiday-date';
+        dateEl.textContent = h.flag + ' ' + fmtHolidayDate(h.start, h.end);
+        chipEl.appendChild(dateEl);
+        if (h.url) {
+          var nameLink = document.createElement('a');
+          nameLink.className = 'lx-holiday-name';
+          nameLink.href = h.url;
+          nameLink.target = '_blank';
+          nameLink.rel = 'noopener noreferrer';
+          nameLink.textContent = h.country + ' · ' + h.name;
+          chipEl.appendChild(nameLink);
+        } else {
+          var nameEl = document.createElement('span');
+          nameEl.className = 'lx-holiday-name';
+          nameEl.textContent = h.country + ' · ' + h.name;
+          chipEl.appendChild(nameEl);
+        }
+        return chipEl;
+      }));
+    });
+  }
+
+  dash.draw('holidays-banner', function (el) { renderHolidays(el); });
+
+  function latestUpdateDate(rows) {
+    var now = new Date();
+    var best = null, bestTime = -Infinity;
+    rows.forEach(function (r) {
+      var m = /^(\d{1,2})\/(\d{1,2})$/.exec(r.updateDate || '');
+      if (!m) return;
+      var mo = parseInt(m[1], 10) - 1, da = parseInt(m[2], 10);
+      var d = new Date(now.getFullYear(), mo, da);
+      if (d.getTime() - now.getTime() > 5 * 86400000) d = new Date(now.getFullYear() - 1, mo, da);
+      if (d.getTime() > bestTime) { bestTime = d.getTime(); best = r.updateDate; }
+    });
+    return best;
+  }
+
+  dash.draw('last-updated', function (el) {
+    withState(el, 'route_meta', function (g) {
+      var rows = (g.data || []).filter(function (r) { return r.group !== 'med'; });
+      if (!rows.length) { el.textContent = ''; return; }
+      el.textContent = 'Update : ' + (latestUpdateDate(rows) || rows[0].updateDate);
+    });
+  });
+
+  dash.draw('last-updated-med', function (el) {
+    withState(el, 'route_meta', function (g) {
+      var rows = (g.data || []).filter(function (r) { return r.group === 'med'; });
+      if (!rows.length) { el.textContent = ''; return; }
+      el.textContent = 'Update : ' + (latestUpdateDate(rows) || rows[0].updateDate);
+    });
+  });
+
+  function scheduleDate(s) {
+    var m = /^(\d{1,2})-(\d{1,2})/.exec(s || '');
+    if (!m) return null;
+    var mo = parseInt(m[1], 10) - 1, da = parseInt(m[2], 10);
+    var now = new Date(), best = null, bestDiff = Infinity;
+    [-1, 0, 1].forEach(function (yOff) {
+      var d = new Date(now.getFullYear() + yOff, mo, da);
+      var diff = Math.abs(d.getTime() - now.getTime());
+      if (diff < bestDiff) { bestDiff = diff; best = d; }
+    });
+    return best;
+  }
+
+  var STAGE_LABEL = { upcoming: 'Upcoming', transit: 'At sea', arrived: 'Arrived' };
+  var ARRIVED_RETENTION_MS = 14 * 86400000;
+
+  function rowStage(v) {
+    var eta = scheduleDate(v.eta), etd = scheduleDate(v.etd), now = Date.now();
+    if (eta && now >= eta.getTime()) return 'arrived';
+    if (etd && now >= etd.getTime()) return 'transit';
+    return 'upcoming';
+  }
+
+  function stageCell(stage) {
+    var td = document.createElement('td');
+    var chip = document.createElement('span');
+    chip.className = 'lx-chip' + (stage === 'arrived' ? ' lx-chip--ok' : stage === 'transit' ? ' lx-chip--warn' : '');
+    chip.textContent = STAGE_LABEL[stage] || stage;
+    td.appendChild(chip);
+    return td;
+  }
+
+  function statusCheck(status) {
+    var check = document.createElement('span');
+    check.className = 'lx-status-check lx-status-check--' + status;
+    check.textContent = '✓';
+    check.title = status === 'new' ? 'New sailing' : 'Changed';
+    return check;
+  }
+
+  function dateCell(value, prevValue, changed) {
+    var td = document.createElement('td');
+    td.className = 'lx-date';
+    var main = document.createElement('div');
+    if (changed) main.appendChild(statusCheck('changed'));
+    main.appendChild(document.createTextNode(value || '—'));
+    td.appendChild(main);
+    if (changed && prevValue) {
+      var prev = document.createElement('div');
+      prev.className = 'lx-prev';
+      prev.textContent = prevValue;
+      td.appendChild(prev);
+    }
+    return td;
+  }
+
+  function buildRow(v) {
+    var tr = document.createElement('tr');
+    tr.className = 'lx-row-carrier';
+    tr.dataset.carrier = v.carrier;
+    tr.style.setProperty('--row-tint', carrierColor(v.carrier));
+
+    var tdCarrier = document.createElement('td');
+    if (v.status === 'new') tdCarrier.appendChild(statusCheck('new'));
+    var tag = document.createElement('span');
+    tag.className = 'lx-tag';
+    tag.textContent = v.carrier;
+    tdCarrier.appendChild(tag);
+
+    var tdVessel = document.createElement('td');
+    tdVessel.className = 'lx-vessel';
+    tdVessel.appendChild(document.createTextNode(v.vessel));
+
+    var tdVoyage = document.createElement('td');
+    tdVoyage.className = 'lx-mono';
+    tdVoyage.textContent = v.voyage;
+
+    var fields = v.changedFields || [];
+    var tdEtd = dateCell(v.etd, v.prevEtd, fields.indexOf('etd') !== -1);
+    var tdEta = dateCell(v.eta, v.prevEta, fields.indexOf('eta') !== -1);
+
+    var tdTt = document.createElement('td');
+    tdTt.className = 'lx-num';
+    var ttMain = document.createElement('div');
+    if (fields.indexOf('tt') !== -1) ttMain.appendChild(statusCheck('changed'));
+    ttMain.appendChild(document.createTextNode((typeof v.tt === 'number') ? v.tt + 'd' : '—'));
+    tdTt.appendChild(ttMain);
+    if (fields.indexOf('tt') !== -1 && typeof v.prevTt === 'number') {
+      var ttPrev = document.createElement('div');
+      ttPrev.className = 'lx-prev';
+      ttPrev.textContent = v.prevTt + 'd';
+      tdTt.appendChild(ttPrev);
+    }
+
+    tr.appendChild(tdCarrier);
+    tr.appendChild(tdVessel);
+    tr.appendChild(tdVoyage);
+    tr.appendChild(tdEtd);
+    tr.appendChild(tdEta);
+    tr.appendChild(tdTt);
+    tr.appendChild(stageCell(rowStage(v)));
+    return tr;
+  }
+
+  function renderTable(el, id) {
+    withState(el, id, function (g) {
+      var rows = (g.data || []).slice().sort(function (a, b) { return parseKey(a.etd) - parseKey(b.etd); });
+      if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged'; });
+      rows = rows.filter(function (r) {
+        if (rowStage(r) !== 'arrived') return true;
+        var eta = scheduleDate(r.eta);
+        return !eta || (Date.now() - eta.getTime()) < ARRIVED_RETENTION_MS;
+      });
+      lastRendered[id] = rows;
+      if (!rows.length) {
+        var tr = document.createElement('tr');
+        tr.className = 'lx-empty-row';
+        var td = document.createElement('td');
+        td.colSpan = 7;
+        td.textContent = 'No sailings to display.';
+        tr.appendChild(td);
+        el.replaceChildren(tr);
+        return;
+      }
+      el.replaceChildren.apply(el, rows.map(buildRow));
+    });
+  }
+
+  ROUTE_IDS.forEach(function (id) {
+    dash.draw('rows-' + id, function (el) { renderTable(el, id); });
+  });
+
+  // ---- Port berthing wait, per lane ----
+  var BERTH_WAIT_CAP_DAYS = 3;
+
+  function berthTone(days) {
+    if (typeof days !== 'number') return null;
+    if (days >= 1) return 'bad';
+    if (days >= 0.5) return 'warn';
+    return null;
+  }
+
+  function renderBerthMini(el, routeId) {
+    withState(el, 'berthing_wait', function (g) {
+      var row = (g.data || []).filter(function (r) { return r.routeId === routeId; })[0];
+      if (!row || row.status === 'no_tool') {
+        el.replaceChildren();
+        var empty = document.createElement('p');
+        empty.className = 'lx-berth-mini-empty';
+        empty.textContent = '접안 대기: 선사 모선 추적 도구 미확인';
+        el.appendChild(empty);
+        return;
+      }
+      if (row.status === 'collecting' || !row.calls) {
+        el.replaceChildren();
+        var collecting = document.createElement('p');
+        collecting.className = 'lx-berth-mini-empty';
+        collecting.textContent = '접안 대기: 데이터 수집 중 (최근 60일, ' + (row.calls || 0) + '건 확보)';
+        el.appendChild(collecting);
+        return;
+      }
+      var tone = berthTone(row.avg_days);
+      var pct = Math.max(4, Math.min(100, (row.avg_days / BERTH_WAIT_CAP_DAYS) * 100));
+      var wrap = document.createElement('div');
+      wrap.className = 'lx-berth-mini-row';
+      var label = document.createElement('span');
+      label.className = 'lx-berth-mini-label';
+      label.textContent = (row.pod || routeId) + ' 접안 대기';
+      var track = document.createElement('div');
+      track.className = 'lx-berth-mini-track';
+      var fill = document.createElement('div');
+      fill.className = 'lx-berth-mini-fill' + (tone ? ' lx-berth-mini-fill--' + tone : '');
+      fill.style.width = pct + '%';
+      track.appendChild(fill);
+      var note = document.createElement('span');
+      note.className = 'lx-berth-mini-note';
+      note.textContent = row.avg_days + 'd 평균 (최대 ' + row.max_days + 'd · ' + row.calls + '건, 최근 ' + (row.windowDays || 60) + '일)';
+      wrap.appendChild(label);
+      wrap.appendChild(track);
+      wrap.appendChild(note);
+      el.replaceChildren(wrap);
+    });
+  }
+
+  ROUTE_IDS.forEach(function (id) {
+    dash.draw('berthmini-' + id, function (el) { renderBerthMini(el, id); });
+  });
+
+  // ---- Network (ASIA / C.America / Med) navigation ----
+  var netSections = Array.prototype.slice.call(document.querySelectorAll('.lx-group[data-net]'));
+  var netTabs = Array.prototype.slice.call(document.querySelectorAll('.lx-nav-btn[data-net]'));
+
+  function showNet(netCode, fromHash) {
+    netSections.forEach(function (sec) { sec.hidden = sec.dataset.net !== netCode; });
+    netTabs.forEach(function (btn) { btn.setAttribute('aria-selected', btn.dataset.net === netCode ? 'true' : 'false'); });
+    var updatedRow = document.getElementById('lx-updated-row');
+    if (updatedRow) updatedRow.hidden = netCode !== 'asia';
+    if (netCode === 'ca' && window.gtRedraw) {
+      (window.requestAnimationFrame || function (fn) { setTimeout(fn, 0); })(function () {
+        if (window.gtRedraw.cong) window.gtRedraw.cong();
+        if (window.gtRedraw.freight) window.gtRedraw.freight();
+      });
+    }
+    if (!fromHash && dash.setLink) {
+      if (netCode === 'ca') {
+        dash.setLink('ca');
+      } else if (netCode === 'med') {
+        var medGroup = netSections.filter(function (s) { return s.dataset.net === 'med'; })[0];
+        var medPolGroup = medGroup ? Array.prototype.slice.call(medGroup.querySelectorAll('.lx-group[data-pol]')).filter(function (s) { return !s.hidden; })[0] : null;
+        var medPodPage = medPolGroup ? medPolGroup.querySelector('.lx-page:not([hidden])') : null;
+        dash.setLink(medPolGroup && medPodPage ? medPolGroup.dataset.pol + '-' + medPodPage.dataset.pod : 'med');
+      } else {
+        var activeGroup = polSections.filter(function (s) { return !s.hidden; })[0];
+        var activePage = activeGroup ? activeGroup.querySelector('.lx-page:not([hidden])') : null;
+        dash.setLink(activeGroup && activePage ? activeGroup.dataset.pol + '-' + activePage.dataset.pod : 'asia');
+      }
+    }
+  }
+
+  netTabs.forEach(function (btn) {
+    btn.addEventListener('click', function () { showNet(btn.dataset.net); });
+  });
+
+  // ---- C.America POD navigation ----
+  var caPodPages = Array.prototype.slice.call(document.querySelectorAll('.lx-page[data-ca-pod]'));
+  var caPodTabs = Array.prototype.slice.call(document.querySelectorAll('.lx-subnav-btn[data-ca-pod]'));
+
+  function showCaPod(podCode) {
+    caPodPages.forEach(function (p) { p.hidden = p.dataset.caPod !== podCode; });
+    caPodTabs.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.caPod === podCode ? 'true' : 'false'); });
+    if (window.gtRedraw) {
+      (window.requestAnimationFrame || function (fn) { setTimeout(fn, 0); })(function () {
+        if (window.gtRedraw.cong) window.gtRedraw.cong();
+        if (window.gtRedraw.freight) window.gtRedraw.freight();
+        if (window.gtRedraw.ccCong) window.gtRedraw.ccCong();
+      });
+    }
+  }
+
+  caPodTabs.forEach(function (btn) {
+    btn.addEventListener('click', function () { showCaPod(btn.dataset.caPod); });
+  });
+
+  // ---- POL + POD navigation ----
+  var polSections = Array.prototype.slice.call(document.querySelectorAll('.lx-group[data-pol]'));
+  var polTabs = Array.prototype.slice.call(document.querySelectorAll('.lx-nav-btn[data-pol]'));
+
+  function showPol(polCode, fromHash) {
+    var owner = polSections.filter(function (s) { return s.dataset.pol === polCode; })[0];
+    var ownerNet = owner && owner.closest ? owner.closest('.lx-group[data-net]') : null;
+    var scopedSections = ownerNet ? polSections.filter(function (s) { return s.closest && s.closest('.lx-group[data-net]') === ownerNet; }) : polSections;
+    var scopedTabs = ownerNet ? polTabs.filter(function (b) { return b.closest && b.closest('.lx-group[data-net]') === ownerNet; }) : polTabs;
+    scopedSections.forEach(function (sec) { sec.hidden = sec.dataset.pol !== polCode; });
+    scopedTabs.forEach(function (btn) { btn.setAttribute('aria-selected', btn.dataset.pol === polCode ? 'true' : 'false'); });
+    if (!fromHash) {
+      var activeGroup = scopedSections.filter(function (s) { return s.dataset.pol === polCode; })[0];
+      var activePage = activeGroup ? activeGroup.querySelector('.lx-page:not([hidden])') : null;
+      if (activePage && dash.setLink) dash.setLink(polCode + '-' + activePage.dataset.pod);
+    }
+  }
+
+  polTabs.forEach(function (btn) {
+    btn.addEventListener('click', function () { showPol(btn.dataset.pol); });
+  });
+
+  function showPod(groupEl, podCode, fromHash) {
+    Array.prototype.slice.call(groupEl.querySelectorAll('.lx-page')).forEach(function (p) {
+      p.hidden = p.dataset.pod !== podCode;
+    });
+    Array.prototype.slice.call(groupEl.querySelectorAll('.lx-subnav-btn')).forEach(function (b) {
+      b.setAttribute('aria-selected', b.dataset.pod === podCode ? 'true' : 'false');
+    });
+    if (!fromHash && dash.setLink) dash.setLink(groupEl.dataset.pol + '-' + podCode);
+  }
+
+  polSections.forEach(function (groupEl) {
+    Array.prototype.slice.call(groupEl.querySelectorAll('.lx-subnav-btn')).forEach(function (btn) {
+      btn.addEventListener('click', function () { showPod(groupEl, btn.dataset.pod); });
+    });
+  });
+
+  var initialHash = (location.hash || '').slice(1);
+  if (initialHash === 'ca') {
+    showNet('ca', true);
+  } else if (initialHash === 'med') {
+    showNet('med', true);
+  } else if (initialHash && initialHash.indexOf('-') !== -1) {
+    var parts = initialHash.split('-');
+    var polCode = parts[0];
+    var podCode = parts.slice(1).join('-');
+    var ownerGroup = polSections.filter(function (g) { return g.dataset.pol === polCode; })[0];
+    if (ownerGroup && ownerGroup.querySelector('.lx-page[data-pod="' + podCode + '"]')) {
+      var ownerNetSection = ownerGroup.closest ? ownerGroup.closest('.lx-group[data-net]') : null;
+      var ownerNetCode = ownerNetSection ? ownerNetSection.dataset.net : 'asia';
+      showNet(ownerNetCode, true);
+      showPol(polCode, true);
+      showPod(ownerGroup, podCode, true);
+    }
+  }
+
+  // ---- copy to clipboard ----
+  function copyText(text, btn) {
+    function onDone() {
+      if (!btn) return;
+      var original = btn.textContent;
+      btn.dataset.copied = 'true';
+      btn.textContent = 'Copied';
+      setTimeout(function () {
+        btn.dataset.copied = 'false';
+        btn.textContent = original;
+      }, 1400);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(onDone, function () { fallbackCopy(text, onDone); });
+    } else {
+      fallbackCopy(text, onDone);
+    }
+  }
+
+  function fallbackCopy(text, onDone) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    onDone();
+  }
+
+  function tsvForRoute(routeId) {
+    var rows = lastRendered[routeId];
+    if (!rows) {
+      var g = dash.data(routeId);
+      rows = (g.data || []).slice().sort(function (a, b) { return parseKey(a.etd) - parseKey(b.etd); });
+      if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged'; });
+    }
+    var lines = ['Carrier\tVessel\tVoyage\tETD\tETA\tTT'];
+    rows.forEach(function (v) {
+      lines.push([v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : ''].join('\t'));
+    });
+    return lines.join('\n');
+  }
+
+  Array.prototype.slice.call(document.querySelectorAll('.lx-copy-table')).forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      copyText(tsvForRoute(btn.dataset.route), btn);
+    });
+  });
+})();
+</script>

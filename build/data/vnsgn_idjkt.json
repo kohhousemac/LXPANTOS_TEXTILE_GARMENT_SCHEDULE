@@ -1,0 +1,259 @@
+[
+ {
+  "carrier": "GSL",
+  "vessel": "NATTHA BHUM",
+  "voyage": "NB3/42/068S",
+  "etd": "11-06 (Fri)",
+  "eta": "11-11 (Wed)",
+  "tt": 5,
+  "prevEtd": "11-05 (Thu)",
+  "prevEta": "11-10 (Tue)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "GREEN PACIFIC",
+  "voyage": "2630S",
+  "etd": "11-07 (Sat)",
+  "eta": "11-09 (Mon)",
+  "tt": 2,
+  "prevEtd": "11-07 (Sat)",
+  "prevEta": "11-09 (Mon)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609S",
+  "etd": "11-11 (Wed)",
+  "eta": "11-17 (Tue)",
+  "tt": 6,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-17 (Tue)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "tt"
+  ]
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YUHE",
+  "voyage": "2630S",
+  "etd": "11-14 (Sat)",
+  "eta": "11-16 (Mon)",
+  "tt": 2,
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "11-16 (Mon)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "SAN PEDRO",
+  "voyage": "UFM/118",
+  "etd": "11-14 (Sat)",
+  "eta": "11-20 (Fri)",
+  "tt": 6,
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "11-20 (Fri)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609S",
+  "etd": "11-18 (Wed)",
+  "eta": "11-23 (Mon)",
+  "tt": 5,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "NATTHA BHUM",
+  "voyage": "NB3/43/069S",
+  "etd": "11-19 (Thu)",
+  "eta": "11-24 (Tue)",
+  "tt": 5,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "GREEN PACIFIC",
+  "voyage": "2631N",
+  "etd": "11-20 (Fri)",
+  "eta": "11-30 (Mon)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SINAR BANGKA",
+  "voyage": "2630S",
+  "etd": "11-21 (Sat)",
+  "eta": "11-23 (Mon)",
+  "tt": 2,
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609S",
+  "etd": "11-24 (Tue)",
+  "eta": "11-30 (Mon)",
+  "tt": 6,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-30 (Mon)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "GREEN PACIFIC",
+  "voyage": "2632S",
+  "etd": "11-28 (Sat)",
+  "eta": "11-30 (Mon)",
+  "tt": 2,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "11-30 (Mon)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "SAN PEDRO",
+  "voyage": "UFM/119",
+  "etd": "11-28 (Sat)",
+  "eta": "12-04 (Fri)",
+  "tt": 6,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609S",
+  "etd": "11-30 (Mon)",
+  "eta": "12-06 (Sun)",
+  "tt": 6,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "NATTHA BHUM",
+  "voyage": "NB3/44/070S",
+  "etd": "12-02 (Wed)",
+  "eta": "12-08 (Tue)",
+  "tt": 6,
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd"
+  ]
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2610S",
+  "etd": "12-09 (Wed)",
+  "eta": "12-14 (Mon)",
+  "tt": 5,
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "12-14 (Mon)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "tt"
+  ]
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "SAN PEDRO",
+  "voyage": "UFM/120",
+  "etd": "12-12 (Sat)",
+  "eta": "12-18 (Fri)",
+  "tt": 6,
+  "prevEtd": "12-12 (Sat)",
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2610S",
+  "etd": "12-16 (Wed)",
+  "eta": "12-21 (Mon)",
+  "tt": 5,
+  "prevEtd": "12-15 (Tue)",
+  "prevEta": "12-21 (Mon)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2610S",
+  "etd": "12-22 (Tue)",
+  "eta": "12-28 (Mon)",
+  "tt": 6,
+  "prevEtd": "12-22 (Tue)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ }
+]
