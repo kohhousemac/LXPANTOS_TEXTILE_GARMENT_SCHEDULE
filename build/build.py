@@ -63,11 +63,39 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     </section>
 '''
 
+LOCODE = {'vnsgn': 'hcm', 'vnhph': 'hph', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
+          'cnsha': 'sha', 'cnshk': 'skk', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist'}
+PORT_LOCODE_NAME = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang', 'pus': 'Busan', 'inc': 'Incheon',
+                    'sha': 'Shanghai', 'skk': 'Shekou', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul'}
+
+def merge_new_lanes():
+    """Add lanes that exist in route_meta but not yet in ASIA (new lanes added on the dashboard)."""
+    try:
+        meta = json.loads((DATA / 'route_meta.json').read_text(encoding='utf-8'))
+    except Exception:
+        return
+    known = {r for _, pods in ASIA for _, r in pods} | {'krpus_trist'}
+    for row in meta:
+        rid = row.get('routeId', '')
+        if rid in known or row.get('group') == 'med' or not (DATA / f'{rid}.json').exists():
+            continue
+        a, _, b = rid.partition('_')
+        pol, pod = LOCODE.get(a), LOCODE.get(b)
+        if not pol or not pod:
+            print('skip unknown lane', rid); continue
+        for i, (p, pods) in enumerate(ASIA):
+            if p == pol:
+                pods.append((pod, rid)); break
+        else:
+            ASIA.append((pol, [(pod, rid)]))
+        print('auto-added lane', rid)
+
 COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3}
+KR_ORDER = {'pus': 0, 'inc': 1}
 
 def asia_markup():
     # POD order inside each POL: Vietnam → Indonesia → China → Korea
-    pols = [(pol, sorted(pods, key=lambda p: COUNTRY.get(p[0], 9))) for pol, pods in ASIA]
+    pols = [(pol, sorted(pods, key=lambda p: (COUNTRY.get(p[0], 9), KR_ORDER.get(p[0], 0)))) for pol, pods in ASIA]
     out = ['''
   <section class="lx-group" id="net-asia" data-net="asia" role="tabpanel" aria-labelledby="tab-net-asia">
   <div class="lx-infostrip">
@@ -272,6 +300,8 @@ def main():
         data[p.stem] = v
     data_js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
+    merge_new_lanes()
+    route_ids = [r for _, pods in ASIA for _, r in pods] + ['krpus_trist']
     gt = rd('gt.html')
     marker = '  // ---- POL/POD port flags ----'
     assert marker in gt
@@ -348,7 +378,7 @@ def main():
 {rd('d3.html')}
 <script>window.__LX_STATIC__ = {data_js};</script>
 {SHIM}
-{rd('main.html')}
+{rd('main.html').replace('__ROUTE_IDS__', json.dumps(route_ids))}
 {rd('calcs.html')}
 {gt}
 {rd('summary.html')}

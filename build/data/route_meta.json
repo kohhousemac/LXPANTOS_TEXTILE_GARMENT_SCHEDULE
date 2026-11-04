@@ -298,5 +298,17 @@
   "changedCount": 8,
   "excludedCount": 1,
   "vesselCount": 13
+ },
+ {
+  "routeId": "idjkt_krpus",
+  "label": "Jakarta → Busan",
+  "pol": "Jakarta",
+  "pod": "Busan",
+  "group": "kr",
+  "updateDate": "11/04",
+  "newCount": 18,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 18
  }
 ]
