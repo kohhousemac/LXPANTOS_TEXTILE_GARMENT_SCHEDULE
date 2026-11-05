@@ -358,5 +358,29 @@
   "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 3
+ },
+ {
+  "routeId": "cnshk_krinc",
+  "label": "Shekou → Incheon",
+  "pol": "Shekou",
+  "pod": "Incheon",
+  "group": "kr",
+  "updateDate": "11/05",
+  "newCount": 43,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 43
+ },
+ {
+  "routeId": "cnshk_krpus",
+  "label": "Shekou → Busan",
+  "pol": "Shekou",
+  "pod": "Busan",
+  "group": "kr",
+  "updateDate": "11/05",
+  "newCount": 39,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 39
  }
 ]

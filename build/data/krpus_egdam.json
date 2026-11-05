@@ -1,22 +1,24 @@
 [
  {
-  "pol": "Busan",
   "carrier": "YANG MING",
   "vessel": "HMM HANBADA",
   "voyage": "MS22630BD / 021W",
   "etd": "11-08 (Sun)",
   "eta": "12-12 (Sat)",
-  "tt": "33d",
+  "tt": 34,
+  "status": "same",
+  "changedFields": [],
   "ts": "Shanghai"
  },
  {
-  "pol": "Busan",
   "carrier": "YANG MING",
   "vessel": "HMM HANBADA",
   "voyage": "MS22630BD / 021W",
   "etd": "11-08 (Sun)",
   "eta": "12-21 (Mon)",
-  "tt": "43d",
+  "tt": 43,
+  "status": "same",
+  "changedFields": [],
   "ts": "Shanghai"
  }
 ]

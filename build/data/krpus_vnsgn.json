@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
  },
  {
@@ -22,239 +22,60 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
  },
  {
   "carrier": "DONGJIN",
-  "vessel": "KMTC PUSAN",
-  "voyage": "2613S",
-  "etd": "11-07 (Sat)",
-  "eta": "11-13 (Fri)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "HEUNG-A HOCHIMINH",
-  "voyage": "2613S",
-  "etd": "11-08 (Sun)",
-  "eta": "11-14 (Sat)",
-  "tt": 6,
-  "prevEtd": "11-08 (Sun)",
-  "prevEta": "11-15 (Sun)",
-  "prevTt": 7,
+  "vessel": "DONGJIN CONFIDENT",
+  "voyage": "0154S",
+  "etd": "11-15 (Sun)",
+  "eta": "11-20 (Fri)",
+  "tt": 5,
+  "rotation": "Busan, Ho Chi Minh",
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 5,
   "status": "changed",
   "changedFields": [
+   "etd",
    "eta",
-   "tt"
+   "carrier"
   ]
  },
  {
-  "carrier": "DONGJIN / SINOKOR",
-  "vessel": "SAWASDEE VEGA",
-  "voyage": "2614S",
-  "etd": "11-10 (Tue)",
-  "eta": "11-16 (Mon)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "DONGJIN / PANOCEAN / SINOKOR",
+  "carrier": "PANOCEAN",
   "vessel": "PANCON CHAMPION",
   "voyage": "2612S",
-  "etd": "11-14 (Sat)",
-  "eta": "11-19 (Thu)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "DONGJIN CONFIDENT",
-  "voyage": "0154S",
-  "etd": "11-14 (Sat)",
-  "eta": "11-19 (Thu)",
-  "tt": 5,
+  "etd": "11-15 (Sun)",
+  "eta": "11-21 (Sat)",
+  "tt": 6,
+  "rotation": "Busan, Ho Chi Minh",
   "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 6,
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 5,
   "status": "changed",
   "changedFields": [
+   "etd",
    "eta",
    "tt",
    "carrier"
   ]
  },
  {
-  "carrier": "DONGJIN",
-  "vessel": "DONGJIN CONFIDENT",
-  "voyage": "0154S",
-  "etd": "11-15 (Sun)",
-  "eta": "11-20 (Fri)",
-  "tt": 5,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt",
-   "carrier"
-  ]
- },
- {
-  "carrier": "DONGJIN",
-  "vessel": "STARSHIP URSA",
-  "voyage": "2615S",
-  "etd": "11-15 (Sun)",
-  "eta": "11-20 (Fri)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "SAWASDEE ATLANTIC",
-  "voyage": "2612S",
-  "etd": "11-17 (Tue)",
-  "eta": "11-23 (Mon)",
-  "tt": 6,
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
- },
- {
-  "carrier": "DONGJIN / PANOCEAN / SINOKOR",
+  "carrier": "PANOCEAN",
   "vessel": "SAWASDEE SPICA",
   "voyage": "2612S",
   "etd": "11-21 (Sat)",
   "eta": "11-26 (Thu)",
   "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "DONGJIN / SINOKOR",
-  "vessel": "PEGASUS PROTO",
-  "voyage": "2614S",
-  "etd": "11-21 (Sat)",
-  "eta": "11-26 (Thu)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "KMTC JAKARTA",
-  "voyage": "2613S",
-  "etd": "11-21 (Sat)",
-  "eta": "11-27 (Fri)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "DONGJIN / SINOKOR",
-  "vessel": "SAWASDEE BALTIC",
-  "voyage": "2619S",
-  "etd": "11-23 (Mon)",
-  "eta": "11-28 (Sat)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "SKY ORION",
-  "voyage": "2614S",
-  "etd": "11-23 (Mon)",
-  "eta": "11-29 (Sun)",
-  "tt": 6,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "carrier"
-  ]
- },
- {
-  "carrier": "DONGJIN",
-  "vessel": "SKY ORION",
-  "voyage": "2614S",
-  "etd": "11-24 (Tue)",
-  "eta": "11-30 (Mon)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "DONGJIN / PANOCEAN / SINOKOR",
-  "vessel": "PANCON CHAMPION",
-  "voyage": "2613S",
-  "etd": "11-28 (Sat)",
-  "eta": "12-04 (Fri)",
-  "tt": 6,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-03 (Thu)",
+  "rotation": "Busan, Ho Chi Minh",
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "11-26 (Thu)",
   "prevTt": 5,
   "status": "changed",
   "changedFields": [
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "HEUNG-A HOCHIMINH",
-  "voyage": "2614S",
-  "etd": "11-29 (Sun)",
-  "eta": "12-05 (Sat)",
-  "tt": 6,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
+   "carrier"
   ]
  },
  {

@@ -1,32 +1,35 @@
 [
  {
-  "pol": "Busan",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM OSIRIS",
   "voyage": "PHX060W19",
   "etd": "11-06 (Fri)",
   "eta": "12-11 (Fri)",
-  "tt": "35d",
+  "tt": 35,
+  "status": "same",
+  "changedFields": [],
   "ts": "Shekou"
  },
  {
-  "pol": "Busan",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM IGUACU",
   "voyage": "AC1010E19",
   "etd": "11-08 (Sun)",
   "eta": "01-01 (Fri)",
-  "tt": "54d",
+  "tt": 54,
+  "status": "same",
+  "changedFields": [],
   "ts": "Qingdao"
  },
  {
-  "pol": "Busan",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM MERCURY",
   "voyage": "0MH2UW1MA",
   "etd": "11-11 (Wed)",
   "eta": "01-01 (Fri)",
-  "tt": "51d",
+  "tt": 51,
+  "status": "same",
+  "changedFields": [],
   "ts": "Qingdao"
  }
 ]

@@ -6,16 +6,16 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-04T11:24:00Z"
+  "updatedAt": "2026-11-05T11:10:00Z"
  },
  {
   "country": "니카라과",
   "flag": "🇳🇮",
-  "hasIssue": false,
+  "hasIssue": true,
   "headline": "",
   "url": "",
-  "holiday": "",
-  "updatedAt": "2026-11-04T11:24:00Z"
+  "holiday": "Carlos Fonseca Amador Day (11/08)",
+  "updatedAt": "2026-11-05T11:10:00Z"
  },
  {
   "country": "파나마",
@@ -23,8 +23,8 @@
   "hasIssue": true,
   "headline": "",
   "url": "",
-  "holiday": "국기의 날 (11/04)",
-  "updatedAt": "2026-11-04T11:24:00Z"
+  "holiday": "Colón Day (11/05)",
+  "updatedAt": "2026-11-05T11:10:00Z"
  },
  {
   "country": "엘살바도르",
@@ -33,6 +33,6 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-04T11:24:00Z"
+  "updatedAt": "2026-11-05T11:10:00Z"
  }
 ]

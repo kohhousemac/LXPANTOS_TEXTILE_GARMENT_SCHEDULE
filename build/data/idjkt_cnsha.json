@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
  },
  {
@@ -19,82 +19,27 @@
   "etd": "11-04 (Wed)",
   "eta": "11-19 (Thu)",
   "tt": 15,
-  "prevEtd": "11-04 (Wed)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2608N",
-  "etd": "11-08 (Sun)",
+  "etd": "11-09 (Mon)",
   "eta": "11-25 (Wed)",
-  "tt": 17,
+  "tt": 16,
   "prevEtd": "11-08 (Sun)",
   "prevEta": "11-25 (Wed)",
-  "prevTt": 16,
+  "prevTt": 17,
   "status": "changed",
   "changedFields": [
+   "etd",
    "tt"
   ]
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "SAWASDEE SUNRISE",
-  "voyage": "2612N",
-  "etd": "11-11 (Wed)",
-  "eta": "11-18 (Wed)",
-  "tt": 7,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "SHANGHAI VOYAGER",
-  "voyage": "2609N",
-  "etd": "11-12 (Thu)",
-  "eta": "11-23 (Mon)",
-  "tt": 11,
-  "prevEtd": "11-12 (Thu)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 10,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "SAWASDEE SHANGHAI",
-  "voyage": "2640N",
-  "etd": "11-12 (Thu)",
-  "eta": "11-24 (Tue)",
-  "tt": 12,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "HOCHIMINH VOYAGER",
-  "voyage": "2610N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-30 (Mon)",
-  "tt": 13,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
  },
  {
   "carrier": "SINOKOR",
@@ -103,36 +48,6 @@
   "etd": "11-20 (Fri)",
   "eta": "12-07 (Mon)",
   "tt": 17,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "CHENNAI VOYAGER",
-  "voyage": "2610N",
-  "etd": "11-22 (Sun)",
-  "eta": "12-05 (Sat)",
-  "tt": 13,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "LAEM CHABANG VOYAGER",
-  "voyage": "2608N",
-  "etd": "11-25 (Wed)",
-  "eta": "12-06 (Sun)",
-  "tt": 11,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -143,27 +58,12 @@
   "carrier": "SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
-  "etd": "11-25 (Wed)",
-  "eta": "12-10 (Thu)",
+  "etd": "11-26 (Thu)",
+  "eta": "12-11 (Fri)",
   "tt": 15,
   "prevEtd": "11-25 (Wed)",
   "prevEta": "12-10 (Thu)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "tt"
-  ]
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "INCHEON VOYAGER",
-  "voyage": "2609N",
-  "etd": "11-27 (Fri)",
-  "eta": "12-10 (Thu)",
-  "tt": 13,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-09 (Wed)",
-  "prevTt": 13,
+  "prevTt": 15,
   "status": "changed",
   "changedFields": [
    "etd",
@@ -172,15 +72,15 @@
  },
  {
   "carrier": "SINOKOR",
-  "vessel": "HAPPY LUCKY",
-  "voyage": "2646N",
-  "etd": "11-30 (Mon)",
-  "eta": "12-12 (Sat)",
-  "tt": 12,
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609N",
+  "etd": "12-02 (Wed)",
+  "eta": "12-17 (Thu)",
+  "tt": 15,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "new",
   "changedFields": []
  }
 ]
