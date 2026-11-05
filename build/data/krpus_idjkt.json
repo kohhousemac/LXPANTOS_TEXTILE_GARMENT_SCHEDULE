@@ -10,7 +10,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
   "carrier": "KMTC",
@@ -23,7 +24,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
   "carrier": "KMTC",
@@ -36,7 +38,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
   "carrier": "KMTC",
@@ -49,33 +52,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2609S",
-  "etd": "11-21 (Sat)",
-  "eta": "12-07 (Mon)",
-  "tt": 16,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2610S",
-  "etd": "11-28 (Sat)",
-  "eta": "12-08 (Tue)",
-  "tt": 10,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
   "carrier": "KMTC",
@@ -92,7 +70,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
   "carrier": "KMTC",
@@ -105,7 +84,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
   "carrier": "KMTC / SINOKOR",
@@ -118,6 +98,7 @@
   "prevEta": null,
   "prevTt": null,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  }
 ]

@@ -10,7 +10,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Ho Chi Minh"
  },
  {
   "carrier": "DONGJIN / SINOKOR",
@@ -23,7 +24,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh"
  },
  {
   "carrier": "DONGJIN",
@@ -32,7 +34,7 @@
   "etd": "11-15 (Sun)",
   "eta": "11-20 (Fri)",
   "tt": 5,
-  "rotation": "Busan, Ho Chi Minh",
+  "rotation": "Busan → Ho Chi Minh",
   "prevEtd": "11-14 (Sat)",
   "prevEta": "11-19 (Thu)",
   "prevTt": 5,
@@ -50,7 +52,7 @@
   "etd": "11-15 (Sun)",
   "eta": "11-21 (Sat)",
   "tt": 6,
-  "rotation": "Busan, Ho Chi Minh",
+  "rotation": "Busan → Ho Chi Minh",
   "prevEtd": "11-14 (Sat)",
   "prevEta": "11-19 (Thu)",
   "prevTt": 5,
@@ -69,7 +71,7 @@
   "etd": "11-21 (Sat)",
   "eta": "11-26 (Thu)",
   "tt": 5,
-  "rotation": "Busan, Ho Chi Minh",
+  "rotation": "Busan → Ho Chi Minh",
   "prevEtd": "11-21 (Sat)",
   "prevEta": "11-26 (Thu)",
   "prevTt": 5,
@@ -89,7 +91,8 @@
   "prevEta": "11-05 (Thu)",
   "prevTt": 4,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Ho Chi Minh"
  },
  {
   "carrier": "DONGJIN / SINOKOR",
@@ -102,7 +105,8 @@
   "prevEta": "11-07 (Sat)",
   "prevTt": 5,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Ho Chi Minh"
  },
  {
   "carrier": "SINOKOR",
@@ -115,6 +119,7 @@
   "prevEta": null,
   "prevTt": null,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Busan → Ulsan → Ho Chi Minh"
  }
 ]
