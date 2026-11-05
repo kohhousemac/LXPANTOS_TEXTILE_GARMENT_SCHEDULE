@@ -1,6 +1,45 @@
 [
  {
   "carrier": "SITC",
+  "vessel": "SITC SHIDAO",
+  "voyage": "2629N",
+  "etd": "10-25 (Sun)",
+  "eta": "11-04 (Wed)",
+  "tt": 10,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "M. ATLAS",
+  "voyage": "2631N",
+  "etd": "10-31 (Sat)",
+  "eta": "11-10 (Tue)",
+  "tt": 10,
+  "prevEtd": "10-31 (Sat)",
+  "prevEta": "11-10 (Tue)",
+  "prevTt": 10,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "EVER CHASTE",
+  "voyage": "0559-097N",
+  "etd": "11-01 (Sun)",
+  "eta": "11-08 (Sun)",
+  "tt": 7,
+  "prevEtd": "10-31 (Sat)",
+  "prevEta": null,
+  "prevTt": 8,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC LIANYUNGANG",
   "voyage": "2631N",
   "etd": "11-07 (Sat)",
@@ -29,19 +68,6 @@
   ]
  },
  {
-  "carrier": "SITC",
-  "vessel": "SITC SHIDAO",
-  "voyage": "2631N",
-  "etd": "11-14 (Sat)",
-  "eta": "11-24 (Tue)",
-  "tt": 10,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 10,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
   "carrier": "EMC",
   "vessel": "EVER CANDID",
   "voyage": "0561-092N",
@@ -51,6 +77,19 @@
   "prevEtd": "11-14 (Sat)",
   "prevEta": "11-20 (Fri)",
   "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC SHIDAO",
+  "voyage": "2631N",
+  "etd": "11-14 (Sat)",
+  "eta": "11-24 (Tue)",
+  "tt": 10,
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "11-24 (Tue)",
+  "prevTt": 10,
   "status": "unchanged",
   "changedFields": []
  },
@@ -112,31 +151,5 @@
    "etd",
    "tt"
   ]
- },
- {
-  "carrier": "EMC",
-  "vessel": "EVER CHASTE",
-  "voyage": "0559-097N",
-  "etd": "11-01 (Sun)",
-  "eta": "11-08 (Sun)",
-  "tt": 7,
-  "prevEtd": "10-31 (Sat)",
-  "prevEta": null,
-  "prevTt": 8,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "M. ATLAS",
-  "voyage": "2631N",
-  "etd": "10-31 (Sat)",
-  "eta": "11-10 (Tue)",
-  "tt": 10,
-  "prevEtd": "11-01 (Sun)",
-  "prevEta": null,
-  "prevTt": 9,
-  "status": "departed",
-  "changedFields": []
  }
 ]

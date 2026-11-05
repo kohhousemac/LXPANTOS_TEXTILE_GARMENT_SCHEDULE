@@ -1,34 +1,135 @@
 [
  {
   "carrier": "SITC",
+  "vessel": "YOUCAN",
+  "voyage": "2631N",
+  "etd": "10-21 (Wed)",
+  "eta": "10-28 (Wed)",
+  "tt": 7,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SINOTRANS DALIAN",
+  "voyage": "2636N",
+  "etd": "10-22 (Thu)",
+  "eta": "10-28 (Wed)",
+  "tt": 6,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YANTAI",
+  "voyage": "2629N",
+  "etd": "10-22 (Thu)",
+  "eta": "10-28 (Wed)",
+  "tt": 6,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC SHENZHEN",
+  "voyage": "2625N",
+  "etd": "10-25 (Sun)",
+  "eta": "10-30 (Fri)",
+  "tt": 5,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC HONGKONG",
+  "voyage": "2631N",
+  "etd": "10-26 (Mon)",
+  "eta": "11-02 (Mon)",
+  "tt": 7,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC FANGCHENG",
+  "voyage": "2623N",
+  "etd": "11-01 (Sun)",
+  "eta": "11-05 (Thu)",
+  "tt": 4,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YOKKAICHI",
+  "voyage": "2629N",
+  "etd": "11-03 (Tue)",
+  "eta": "11-07 (Sat)",
+  "tt": 4,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SIRI BHUM",
+  "voyage": "2644N",
+  "etd": "11-07 (Sat)",
+  "eta": "11-14 (Sat)",
+  "tt": 7,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC QINGDAO",
   "voyage": "2627N",
   "etd": "11-08 (Sun)",
   "eta": "11-13 (Fri)",
   "tt": 5,
   "prevEtd": "11-08 (Sun)",
-  "prevEta": "11-12 (Thu)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-13 (Fri)",
+  "prevTt": 5,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
   "vessel": "SINOTRANS DALIAN",
   "voyage": "2638N",
   "etd": "11-11 (Wed)",
-  "eta": "11-18 (Wed)",
-  "tt": 7,
-  "prevEtd": "11-09 (Mon)",
-  "prevEta": "11-16 (Mon)",
+  "eta": "11-20 (Fri)",
+  "tt": 9,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-18 (Wed)",
   "prevTt": 7,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "eta"
+   "eta",
+   "tt"
   ]
  },
  {
@@ -38,14 +139,11 @@
   "etd": "11-12 (Thu)",
   "eta": "11-15 (Sun)",
   "tt": 3,
-  "prevEtd": "11-11 (Wed)",
+  "prevEtd": "11-12 (Thu)",
   "prevEta": "11-15 (Sun)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -55,13 +153,10 @@
   "eta": "11-19 (Thu)",
   "tt": 5,
   "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-18 (Wed)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 5,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -70,14 +165,11 @@
   "etd": "11-18 (Wed)",
   "eta": "11-21 (Sat)",
   "tt": 3,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "11-20 (Fri)",
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "11-21 (Sat)",
   "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -87,13 +179,23 @@
   "eta": "11-23 (Mon)",
   "tt": 3,
   "prevEtd": "11-20 (Fri)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SIRI BHUM",
+  "voyage": "2646N",
+  "etd": "11-22 (Sun)",
+  "eta": "11-27 (Fri)",
+  "tt": 5,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -103,28 +205,26 @@
   "eta": "11-28 (Sat)",
   "tt": 4,
   "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-27 (Fri)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 4,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
   "vessel": "SINOTRANS DALIAN",
   "voyage": "2640N",
-  "etd": "11-26 (Thu)",
-  "eta": "12-03 (Thu)",
-  "tt": 7,
-  "prevEtd": "11-23 (Mon)",
-  "prevEta": "11-30 (Mon)",
+  "etd": "11-28 (Sat)",
+  "eta": "12-04 (Fri)",
+  "tt": 6,
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "12-03 (Thu)",
   "prevTt": 7,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta"
+   "eta",
+   "tt"
   ]
  },
  {
@@ -134,14 +234,11 @@
   "etd": "11-29 (Sun)",
   "eta": "12-03 (Thu)",
   "tt": 4,
-  "prevEtd": "11-28 (Sat)",
+  "prevEtd": "11-29 (Sun)",
   "prevEta": "12-03 (Thu)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevTt": 4,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -150,29 +247,10 @@
   "etd": "12-02 (Wed)",
   "eta": "12-06 (Sun)",
   "tt": 4,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-05 (Sat)",
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-06 (Sun)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
- },
- {
-  "carrier": "SITC",
-  "vessel": "SIRI BHUM",
-  "voyage": "2648N",
-  "etd": "12-03 (Thu)",
-  "eta": "12-10 (Thu)",
-  "tt": 7,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  }
 ]

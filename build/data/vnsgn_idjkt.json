@@ -1,5 +1,70 @@
 [
  {
+  "carrier": "SITC",
+  "vessel": "SITC YUHE",
+  "voyage": "2628S",
+  "etd": "10-24 (Sat)",
+  "eta": "10-28 (Wed)",
+  "tt": 4,
+  "prevEtd": "",
+  "prevEta": "",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "PALAWAN",
+  "voyage": "PW3/13/041S",
+  "etd": "10-28 (Wed)",
+  "eta": "11-02 (Mon)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SINOKOR",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2608S",
+  "etd": "10-31 (Sat)",
+  "eta": "11-06 (Fri)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": "11-08 (Sun)",
+  "prevTt": 8,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "SAN PEDRO",
+  "voyage": "UFM/117",
+  "etd": "10-31 (Sat)",
+  "eta": "11-06 (Fri)",
+  "tt": 6,
+  "prevEtd": "10-30 (Fri)",
+  "prevEta": "11-05 (Thu)",
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SINAR BANGKA",
+  "voyage": "2628S",
+  "etd": "11-01 (Sun)",
+  "eta": "11-03 (Tue)",
+  "tt": 2,
+  "prevEtd": "11-01 (Sun)",
+  "prevEta": "11-04 (Wed)",
+  "prevTt": 3,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
   "carrier": "GSL",
   "vessel": "NATTHA BHUM",
   "voyage": "NB3/42/068S",
@@ -21,13 +86,16 @@
   "vessel": "GREEN PACIFIC",
   "voyage": "2630S",
   "etd": "11-07 (Sat)",
-  "eta": "11-09 (Mon)",
-  "tt": 2,
+  "eta": "11-10 (Tue)",
+  "tt": 3,
   "prevEtd": "11-07 (Sat)",
   "prevEta": "11-09 (Mon)",
   "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "SINOKOR",
@@ -45,19 +113,6 @@
   ]
  },
  {
-  "carrier": "SITC",
-  "vessel": "SITC YUHE",
-  "voyage": "2630S",
-  "etd": "11-14 (Sat)",
-  "eta": "11-16 (Mon)",
-  "tt": 2,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-16 (Mon)",
-  "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
   "carrier": "GSL",
   "vessel": "SAN PEDRO",
   "voyage": "UFM/118",
@@ -67,6 +122,19 @@
   "prevEtd": "11-14 (Sat)",
   "prevEta": "11-20 (Fri)",
   "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YUHE",
+  "voyage": "2630S",
+  "etd": "11-14 (Sat)",
+  "eta": "11-16 (Mon)",
+  "tt": 2,
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "11-16 (Mon)",
+  "prevTt": 2,
   "status": "unchanged",
   "changedFields": []
  },
@@ -110,10 +178,10 @@
   "etd": "11-20 (Fri)",
   "eta": "11-30 (Mon)",
   "tt": 10,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "11-30 (Mon)",
+  "prevTt": 10,
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -254,58 +322,6 @@
   "prevEta": "12-28 (Mon)",
   "prevTt": 6,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "GSL",
-  "vessel": "PALAWAN",
-  "voyage": "PW3/13/041S",
-  "etd": "10-28 (Wed)",
-  "eta": "11-02 (Mon)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2608S",
-  "etd": "10-31 (Sat)",
-  "eta": "11-06 (Fri)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": "11-08 (Sun)",
-  "prevTt": 8,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "GSL",
-  "vessel": "SAN PEDRO",
-  "voyage": "UFM/117",
-  "etd": "10-31 (Sat)",
-  "eta": "11-06 (Fri)",
-  "tt": 6,
-  "prevEtd": "10-30 (Fri)",
-  "prevEta": "11-05 (Thu)",
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "SINAR BANGKA",
-  "voyage": "2628S",
-  "etd": "11-01 (Sun)",
-  "eta": "11-04 (Wed)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": "11-03 (Tue)",
-  "prevTt": 2,
-  "status": "departed",
   "changedFields": []
  }
 ]

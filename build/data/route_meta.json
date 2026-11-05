@@ -5,11 +5,11 @@
   "pol": "Ho Chi Minh",
   "pod": "Jakarta",
   "group": "vn_id",
-  "updateDate": "11/01",
-  "newCount": 1,
-  "changedCount": 8,
+  "updateDate": "11/05",
+  "newCount": 0,
+  "changedCount": 9,
   "excludedCount": 0,
-  "vesselCount": 18
+  "vesselCount": 23
  },
  {
   "routeId": "vnsgn_idsrg",
@@ -29,11 +29,11 @@
   "pol": "Haiphong",
   "pod": "Jakarta",
   "group": "vn_id",
-  "updateDate": "11/01",
-  "newCount": 0,
-  "changedCount": 0,
+  "updateDate": "11/05",
+  "newCount": 1,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 4
+  "vesselCount": 7
  },
  {
   "routeId": "idjkt_vnhph",
@@ -41,11 +41,11 @@
   "pol": "Jakarta",
   "pod": "Haiphong",
   "group": "vn_id",
-  "updateDate": "11/01",
+  "updateDate": "11/05",
   "newCount": 0,
   "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 8
+  "vesselCount": 11
  },
  {
   "routeId": "cnsha_vnhph",
@@ -53,11 +53,11 @@
   "pol": "Shanghai",
   "pod": "Haiphong",
   "group": "cn",
-  "updateDate": "11/01",
-  "newCount": 0,
-  "changedCount": 14,
+  "updateDate": "11/05",
+  "newCount": 2,
+  "changedCount": 13,
   "excludedCount": 0,
-  "vesselCount": 18
+  "vesselCount": 29
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -65,11 +65,11 @@
   "pol": "Shanghai",
   "pod": "Ho Chi Minh",
   "group": "cn",
-  "updateDate": "11/01",
-  "newCount": 1,
-  "changedCount": 14,
+  "updateDate": "11/05",
+  "newCount": 3,
+  "changedCount": 15,
   "excludedCount": 0,
-  "vesselCount": 27
+  "vesselCount": 38
  },
  {
   "routeId": "cnshk_vnsgn",
@@ -257,11 +257,11 @@
   "pol": "Haiphong",
   "pod": "Shanghai",
   "group": "cn",
-  "updateDate": "11/03",
-  "newCount": 1,
-  "changedCount": 6,
+  "updateDate": "11/05",
+  "newCount": 2,
+  "changedCount": 2,
   "excludedCount": 0,
-  "vesselCount": 20
+  "vesselCount": 19
  },
  {
   "routeId": "idjkt_cnsha",
@@ -382,5 +382,53 @@
   "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 39
+ },
+ {
+  "routeId": "vnhph_uslax",
+  "label": "Haiphong → Los Angeles",
+  "pol": "Haiphong",
+  "pod": "Los Angeles",
+  "group": "us",
+  "updateDate": "11/05",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "vnsgn_uslgb",
+  "label": "Ho Chi Minh → Long Beach",
+  "pol": "Ho Chi Minh",
+  "pod": "Long Beach",
+  "group": "us",
+  "updateDate": "11/05",
+  "newCount": 5,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 5
+ },
+ {
+  "routeId": "vnhph_usnyc",
+  "label": "Haiphong → New York",
+  "pol": "Haiphong",
+  "pod": "New York",
+  "group": "us",
+  "updateDate": "11/05",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "vnsgn_usnyc",
+  "label": "Ho Chi Minh → New York",
+  "pol": "Ho Chi Minh",
+  "pod": "New York",
+  "group": "us",
+  "updateDate": "11/05",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
  }
 ]
