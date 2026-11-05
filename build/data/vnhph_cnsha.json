@@ -65,38 +65,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "ATHOS I",
-  "voyage": "2656S",
-  "etd": "11-14 (Sat)",
-  "eta": "11-27 (Fri)",
-  "tt": 13,
-  "prevEtd": "11-13 (Fri)",
-  "prevEta": "11-27 (Fri)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC TAICANG",
-  "voyage": "2667N",
-  "etd": "11-16 (Mon)",
-  "eta": "11-29 (Sun)",
-  "tt": 13,
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC SHENZHEN",
   "voyage": "2627N",
   "etd": "11-18 (Wed)",
@@ -113,23 +81,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "HF FORTUNE",
-  "voyage": "2636S",
-  "etd": "11-19 (Thu)",
-  "eta": "12-02 (Wed)",
-  "tt": 13,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC FANGCHENG",
   "voyage": "2625N",
   "etd": "11-20 (Fri)",
@@ -141,22 +92,6 @@
   "status": "changed",
   "changedFields": [
    "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC MINHE",
-  "voyage": "2629N",
-  "etd": "11-22 (Sun)",
-  "eta": "12-04 (Fri)",
-  "tt": 12,
-  "prevEtd": "11-23 (Mon)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "etd",
    "tt"
   ]
  },
@@ -178,22 +113,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "ERASMUS OASIS",
-  "voyage": "2652S",
-  "etd": "11-25 (Wed)",
-  "eta": "12-08 (Tue)",
-  "tt": 13,
-  "prevEtd": "11-23 (Mon)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
- },
- {
-  "carrier": "SITC",
   "vessel": "SINOTRANS DALIAN",
   "voyage": "2640N",
   "etd": "11-26 (Thu)",
@@ -210,23 +129,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC YIHE",
-  "voyage": "2639N",
-  "etd": "11-27 (Fri)",
-  "eta": "12-09 (Wed)",
-  "tt": 12,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC QINGDAO",
   "voyage": "2629N",
   "etd": "11-29 (Sun)",
@@ -239,21 +141,6 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
- },
- {
-  "carrier": "SITC",
-  "vessel": "ATHOS I",
-  "voyage": "2658S",
-  "etd": "11-30 (Mon)",
-  "eta": "12-15 (Tue)",
-  "tt": 15,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-15 (Tue)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd"
   ]
  },
  {
@@ -287,18 +174,5 @@
    "etd",
    "eta"
   ]
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC TAICANG",
-  "voyage": "2669N",
-  "etd": "12-07 (Mon)",
-  "eta": "12-20 (Sun)",
-  "tt": 13,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
  }
 ]

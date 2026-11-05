@@ -4,7 +4,7 @@
 // {routeId, carrier, vessel, voyage, seq, port, role(POL|CALL|POD), eta, etd, status(ACTUAL|ESTIMATED|SKIP), collectedAt}
 // Clicking a sailing row in the lane table above switches this panel to that vessel/voyage.
 (function () {
-  var PC_IDS = ['cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'idjkt_vnhph', 'vnsgn_idjkt'];
+  var PC_IDS = Array.prototype.slice.call(document.querySelectorAll('[data-draw^="pc-"]')).map(function (e) { return e.getAttribute('data-draw').slice(3); });
   var KEEP_AFTER_ARRIVAL_MS = 14 * 864e5;
   var sel = {};
 
