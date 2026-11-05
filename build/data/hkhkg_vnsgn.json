@@ -23,7 +23,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -36,7 +37,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -49,7 +51,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -62,7 +65,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -75,7 +79,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -88,7 +93,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -101,7 +107,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -117,7 +124,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",

@@ -1,0 +1,67 @@
+[
+ {
+  "carrier": "MSC",
+  "vessel": "MSC MINA",
+  "voyage": "FV643N",
+  "etd": "11-10 (Tue)",
+  "eta": "11-30 (Mon)",
+  "tt": 20,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC RIFAYA",
+  "voyage": "FV644N",
+  "etd": "11-16 (Mon)",
+  "eta": "12-06 (Sun)",
+  "tt": 20,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC DIANA",
+  "voyage": "FV645N",
+  "etd": "11-17 (Tue)",
+  "eta": "12-08 (Tue)",
+  "tt": 21,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC ELOANE",
+  "voyage": "FV646N",
+  "etd": "11-24 (Tue)",
+  "eta": "12-16 (Wed)",
+  "tt": 22,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC ERICA",
+  "voyage": "FV647N",
+  "etd": "11-30 (Mon)",
+  "eta": "12-22 (Tue)",
+  "tt": 22,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

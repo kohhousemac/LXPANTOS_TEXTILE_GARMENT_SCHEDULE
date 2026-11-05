@@ -1,0 +1,54 @@
+[
+ {
+  "carrier": "MSC",
+  "vessel": "MSC PINA",
+  "voyage": "GQ644N",
+  "etd": "11-06 (Fri)",
+  "eta": "11-26 (Thu)",
+  "tt": 20,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "EXPRESS ATHENS",
+  "voyage": "GQ645N",
+  "etd": "11-08 (Sun)",
+  "eta": "11-28 (Sat)",
+  "tt": 20,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "GREENLAND",
+  "voyage": "GQ646N",
+  "etd": "11-20 (Fri)",
+  "eta": "12-09 (Wed)",
+  "tt": 19,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "EXPRESS ROME",
+  "voyage": "GQ647N",
+  "etd": "11-22 (Sun)",
+  "eta": "12-09 (Wed)",
+  "tt": 17,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

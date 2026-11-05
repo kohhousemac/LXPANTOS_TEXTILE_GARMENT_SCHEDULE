@@ -39,7 +39,8 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
+  "bookingClosed": true
  },
  {
   "carrier": "HEUNG-A",
@@ -67,7 +68,8 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
+  "bookingClosed": true
  },
  {
   "carrier": "HEUNG-A / KMTC",

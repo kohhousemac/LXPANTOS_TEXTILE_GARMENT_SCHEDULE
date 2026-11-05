@@ -36,7 +36,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -51,7 +52,8 @@
   "status": "changed",
   "changedFields": [
    "carrier"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "NAMSUNG",

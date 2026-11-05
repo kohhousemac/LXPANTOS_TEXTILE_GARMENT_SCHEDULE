@@ -1,0 +1,5969 @@
+[
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 280,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 480,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 530,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 530,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 570,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 2100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 2000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 1050,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 1350,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 1600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 1500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 1600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 450,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 1200,
+  "note": "W14"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 1400,
+  "note": "W16"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 1400,
+  "note": "W17"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 1400,
+  "note": "W19"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 1200,
+  "note": "W22"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 1200,
+  "note": "W23"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 1000,
+  "note": "W24"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 1000,
+  "note": "W25"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 700,
+  "note": "W26"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 700,
+  "note": "W27"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 700,
+  "note": "W28"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 700,
+  "note": "W29"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 1300,
+  "note": "W30"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 1300,
+  "note": "W31"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 1600,
+  "note": "W32"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 1600,
+  "note": "W33"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 1900,
+  "note": "W34"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 2000,
+  "note": "W35"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 4000,
+  "note": "W36"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 2300,
+  "note": "W37"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 2100,
+  "note": "W38"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 2100,
+  "note": "W39"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 1500,
+  "note": "W40"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 1500,
+  "note": "W41"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "label": "Shanghai → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 1400,
+  "note": "W43"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-10",
+  "date": "2023-10-01",
+  "ft40": 460,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 460,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 380,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 2100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 2000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 750,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 1600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 1500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 1150,
+  "note": "W14"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 1200,
+  "note": "W16"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 1200,
+  "note": "W17"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 1350,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 1350,
+  "note": "W19"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 1250,
+  "note": "W22"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 1250,
+  "note": "W23"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 1300,
+  "note": "W24"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 1300,
+  "note": "W25"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 950,
+  "note": "W26"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 950,
+  "note": "W27"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 950,
+  "note": "W28"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 950,
+  "note": "W29"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 1050,
+  "note": "W30"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 1050,
+  "note": "W31"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 1200,
+  "note": "W32"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 1200,
+  "note": "W33"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 1600,
+  "note": "W34"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 1700,
+  "note": "W35"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 2500,
+  "note": "W36"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 2600,
+  "note": "W37"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 2400,
+  "note": "W38"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 2400,
+  "note": "W39"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 2400,
+  "note": "W40"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 2400,
+  "note": "W41"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "label": "Shanghai → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 2400,
+  "note": "W43"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 50,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 50,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 30,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 60,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-10",
+  "date": "2023-10-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 80,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 350,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 760,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 760,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 350,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 350,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 60,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 350,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 700,
+  "note": "W22"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 800,
+  "note": "W24"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 800,
+  "note": "W25"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 750,
+  "note": "W28"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 700,
+  "note": "W31"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 650,
+  "note": "W32"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 800,
+  "note": "W36"
+ },
+ {
+  "routeId": "cnshk_vnsgn",
+  "label": "Shekou → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 1100,
+  "note": "W40"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 30,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 60,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 65,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 15,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 60,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 1800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 350,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 160,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 450,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 400,
+  "note": "W14"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 700,
+  "note": "W16"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 700,
+  "note": "W17"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 700,
+  "note": "W19"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 300,
+  "note": "W22"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 300,
+  "note": "W23"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 700,
+  "note": "W24"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 700,
+  "note": "W25"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 700,
+  "note": "W26"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 700,
+  "note": "W27"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 700,
+  "note": "W28"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 700,
+  "note": "W29"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 700,
+  "note": "W30"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 700,
+  "note": "W31"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 700,
+  "note": "W32"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 700,
+  "note": "W33"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 700,
+  "note": "W34"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 800,
+  "note": "W35"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 900,
+  "note": "W36"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 700,
+  "note": "W37"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 1000,
+  "note": "W38"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 1000,
+  "note": "W39"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 700,
+  "note": "W40"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 700,
+  "note": "W41"
+ },
+ {
+  "routeId": "hkhkg_vnhph",
+  "label": "Hong Kong → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 700,
+  "note": "W43"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 80,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 80,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 30,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 60,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-10",
+  "date": "2023-10-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 80,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 15,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 20,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 260,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 60,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 1800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 450,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 550,
+  "note": "W14"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 700,
+  "note": "W16"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 700,
+  "note": "W17"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 700,
+  "note": "W19"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 900,
+  "note": "W22"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 900,
+  "note": "W23"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 800,
+  "note": "W24"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 800,
+  "note": "W25"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 800,
+  "note": "W26"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 800,
+  "note": "W27"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 750,
+  "note": "W28"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 750,
+  "note": "W29"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 600,
+  "note": "W30"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 600,
+  "note": "W31"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 600,
+  "note": "W32"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 600,
+  "note": "W33"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 600,
+  "note": "W34"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 600,
+  "note": "W35"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 800,
+  "note": "W36"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 700,
+  "note": "W37"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 1200,
+  "note": "W38"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 1200,
+  "note": "W39"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 800,
+  "note": "W40"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 800,
+  "note": "W41"
+ },
+ {
+  "routeId": "hkhkg_vnsgn",
+  "label": "Hong Kong → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 800,
+  "note": "W43"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 750,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 750,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 350,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 3200,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 2600,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 2050,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 1500,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 1950,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1950,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 1050,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 2100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 2100,
+  "note": "W14"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 2100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 2200,
+  "note": "W16"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 2200,
+  "note": "W17"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 2100,
+  "note": ""
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 2100,
+  "note": "W19"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 900,
+  "note": "W22"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 900,
+  "note": "W23"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 900,
+  "note": "W24"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 900,
+  "note": "W25"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 900,
+  "note": "W26"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 900,
+  "note": "W27"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 2200,
+  "note": "W28"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 2200,
+  "note": "W29"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 2100,
+  "note": "W30"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 2100,
+  "note": "W31"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 2100,
+  "note": "W32"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 2100,
+  "note": "W33"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 1900,
+  "note": "W34"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 2000,
+  "note": "W35"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 1200,
+  "note": "W36"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 1100,
+  "note": "W37"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 1100,
+  "note": "W38"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 1100,
+  "note": "W39"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 900,
+  "note": "W40"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 900,
+  "note": "W41"
+ },
+ {
+  "routeId": "hkhkg_idjkt",
+  "label": "Hong Kong → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 900,
+  "note": "W43"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 460,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 40,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-10",
+  "date": "2023-10-01",
+  "ft40": 80,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 80,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 1050,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 900,
+  "note": "W14"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 1050,
+  "note": "W16"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 1050,
+  "note": "W17"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 1050,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 1050,
+  "note": "W19"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 1100,
+  "note": "W22"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 1100,
+  "note": "W23"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 1100,
+  "note": "W24"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 1100,
+  "note": "W25"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 1100,
+  "note": "W26"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 1100,
+  "note": "W27"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 1100,
+  "note": "W28"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 1100,
+  "note": "W29"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 1100,
+  "note": "W30"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 1100,
+  "note": "W31"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 1100,
+  "note": "W32"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 1100,
+  "note": "W33"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 1100,
+  "note": "W34"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 1200,
+  "note": "W35"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 1200,
+  "note": "W36"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 1600,
+  "note": "W37"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 1600,
+  "note": "W38"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 1600,
+  "note": "W39"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 1600,
+  "note": "W40"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 1600,
+  "note": "W41"
+ },
+ {
+  "routeId": "krpus_vnsgn",
+  "label": "Busan → Ho Chi Minh",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 1600,
+  "note": "W43"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 1150,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 450,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-10",
+  "date": "2023-10-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 1800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 1800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 1600,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 1500,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 1300,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 950,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 1100,
+  "note": "W14"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 1200,
+  "note": "W16"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 1200,
+  "note": "W17"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 1200,
+  "note": ""
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 1200,
+  "note": "W19"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 1200,
+  "note": "W22"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 1200,
+  "note": "W23"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 1200,
+  "note": "W24"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 1200,
+  "note": "W25"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 1200,
+  "note": "W26"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 1200,
+  "note": "W27"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 1200,
+  "note": "W28"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 1200,
+  "note": "W29"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 1200,
+  "note": "W30"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 1200,
+  "note": "W31"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 1200,
+  "note": "W32"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 1200,
+  "note": "W33"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 1200,
+  "note": "W34"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 1400,
+  "note": "W35"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 3100,
+  "note": "W36"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 2700,
+  "note": "W37"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 3200,
+  "note": "W38"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 3200,
+  "note": "W39"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 3200,
+  "note": "W40"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 3200,
+  "note": "W41"
+ },
+ {
+  "routeId": "krpus_idjkt",
+  "label": "Busan → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 3000,
+  "note": "W43"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 750,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 750,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 720,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 550,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 750,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 650,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 160,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 120,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 400,
+  "note": "W24"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 400,
+  "note": "W25"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 400,
+  "note": "W28"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 400,
+  "note": "W31"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 300,
+  "note": "W32"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 400,
+  "note": "W36"
+ },
+ {
+  "routeId": "idjkt_vnhph",
+  "label": "Jakarta → Haiphong",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 400,
+  "note": "W40"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 340,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 250,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 300,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 1100,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 850,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 1000,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 900,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 800,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 100,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 150,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 1400,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 500,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 400,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 700,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 600,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 530,
+  "note": "W14"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 530,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 650,
+  "note": "W16"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 670,
+  "note": "W17"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 670,
+  "note": ""
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 670,
+  "note": "W19"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 670,
+  "note": "W22"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 650,
+  "note": "W23"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 650,
+  "note": "W24"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 650,
+  "note": "W25"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 700,
+  "note": "W26"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 700,
+  "note": "W27"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 700,
+  "note": "W28"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 700,
+  "note": "W29"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 700,
+  "note": "W30"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 700,
+  "note": "W31"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 700,
+  "note": "W32"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 700,
+  "note": "W33"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 700,
+  "note": "W34"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 820,
+  "note": "W35"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 700,
+  "note": "W36"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 840,
+  "note": "W37"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 750,
+  "note": "W38"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 800,
+  "note": "W39"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 800,
+  "note": "W40"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 800,
+  "note": "W41"
+ },
+ {
+  "routeId": "vnsgn_idjkt",
+  "label": "Ho Chi Minh → Jakarta",
+  "terms": "CY-CY",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 800,
+  "note": "W43"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-04",
+  "date": "2023-04-01",
+  "ft40": 4700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-05",
+  "date": "2023-05-01",
+  "ft40": 4200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-07",
+  "date": "2023-07-01",
+  "ft40": 4200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-09",
+  "date": "2023-09-01",
+  "ft40": 3100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-10",
+  "date": "2023-10-01",
+  "ft40": 2600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-11",
+  "date": "2023-11-01",
+  "ft40": 2300,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2023-12",
+  "date": "2023-12-01",
+  "ft40": 2600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-01",
+  "date": "2024-01-01",
+  "ft40": 4000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-01-15",
+  "date": "2024-01-15",
+  "ft40": 5000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-02",
+  "date": "2024-02-01",
+  "ft40": 4500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-03",
+  "date": "2024-03-01",
+  "ft40": 4200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-04",
+  "date": "2024-04-01",
+  "ft40": 4300,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-05",
+  "date": "2024-05-01",
+  "ft40": 7800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-06",
+  "date": "2024-06-01",
+  "ft40": 10500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-07",
+  "date": "2024-07-01",
+  "ft40": 9200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-08",
+  "date": "2024-08-01",
+  "ft40": 8600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-09",
+  "date": "2024-09-01",
+  "ft40": 8600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-10",
+  "date": "2024-10-01",
+  "ft40": 8600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-11",
+  "date": "2024-11-01",
+  "ft40": 7000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2024-12",
+  "date": "2024-12-01",
+  "ft40": 6200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-01",
+  "date": "2025-01-01",
+  "ft40": 6200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 6500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 4300,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 4200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 2500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 7000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 3900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 4000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 3200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 4000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 2600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 2600,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 2200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 2700,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 3800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 3400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 6000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 6400,
+  "note": "W22"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 8300,
+  "note": "W24"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 7200,
+  "note": "W25"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 6000,
+  "note": "W28"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 7400,
+  "note": "W31"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 9000,
+  "note": "W32"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 7800,
+  "note": "W36"
+ },
+ {
+  "routeId": "cnsha_nicto",
+  "label": "Shanghai → Corinto",
+  "terms": "CY-CY",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 7500,
+  "note": "W40"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-02",
+  "date": "2025-02-01",
+  "ft40": 8543,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-03",
+  "date": "2025-03-01",
+  "ft40": 7943,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-04",
+  "date": "2025-04-01",
+  "ft40": 8443,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-05",
+  "date": "2025-05-01",
+  "ft40": 5500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-06",
+  "date": "2025-06-01",
+  "ft40": 8900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-07",
+  "date": "2025-07-01",
+  "ft40": 9500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-08",
+  "date": "2025-08-01",
+  "ft40": 9100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-09",
+  "date": "2025-09-01",
+  "ft40": 8200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-10",
+  "date": "2025-10-01",
+  "ft40": 7400,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-11",
+  "date": "2025-11-01",
+  "ft40": 6900,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2025-12",
+  "date": "2025-12-01",
+  "ft40": 6200,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-01",
+  "date": "2026-01-01",
+  "ft40": 7800,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-02",
+  "date": "2026-02-01",
+  "ft40": 7500,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-03",
+  "date": "2026-03-01",
+  "ft40": 8000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-03-30",
+  "date": "2026-03-30",
+  "ft40": 8000,
+  "note": "W14"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-04",
+  "date": "2026-04-01",
+  "ft40": 8000,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-04-13",
+  "date": "2026-04-13",
+  "ft40": 3600,
+  "note": "W16"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-04-20",
+  "date": "2026-04-20",
+  "ft40": 3600,
+  "note": "W17"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-05",
+  "date": "2026-05-01",
+  "ft40": 8100,
+  "note": ""
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-05-04",
+  "date": "2026-05-04",
+  "ft40": 8500,
+  "note": "W19"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-05-25",
+  "date": "2026-05-25",
+  "ft40": 11100,
+  "note": "W22"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-06-01",
+  "date": "2026-06-01",
+  "ft40": 13100,
+  "note": "W23"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-06-08",
+  "date": "2026-06-08",
+  "ft40": 13800,
+  "note": "W24"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-06-15",
+  "date": "2026-06-15",
+  "ft40": 16100,
+  "note": "W25"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-06-22",
+  "date": "2026-06-22",
+  "ft40": 12600,
+  "note": "W26"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-06-29",
+  "date": "2026-06-29",
+  "ft40": 12500,
+  "note": "W27"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-07-06",
+  "date": "2026-07-06",
+  "ft40": 12300,
+  "note": "W28"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-07-13",
+  "date": "2026-07-13",
+  "ft40": 11300,
+  "note": "W29"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-07-20",
+  "date": "2026-07-20",
+  "ft40": 12300,
+  "note": "W30"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-07-27",
+  "date": "2026-07-27",
+  "ft40": 13300,
+  "note": "W31"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-08-03",
+  "date": "2026-08-03",
+  "ft40": 14200,
+  "note": "W32"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-08-10",
+  "date": "2026-08-10",
+  "ft40": 15100,
+  "note": "W33"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-08-17",
+  "date": "2026-08-17",
+  "ft40": 15000,
+  "note": "W34"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-08-24",
+  "date": "2026-08-24",
+  "ft40": 15200,
+  "note": "W35"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-08-31",
+  "date": "2026-08-31",
+  "ft40": 15000,
+  "note": "W36"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-09-07",
+  "date": "2026-09-07",
+  "ft40": 14200,
+  "note": "W37"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-09-14",
+  "date": "2026-09-14",
+  "ft40": 13200,
+  "note": "W38"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-09-21",
+  "date": "2026-09-21",
+  "ft40": 14400,
+  "note": "W39"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-09-28",
+  "date": "2026-09-28",
+  "ft40": 14400,
+  "note": "W40"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-10-05",
+  "date": "2026-10-05",
+  "ft40": 14800,
+  "note": "W41"
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "terms": "CY-DOOR",
+  "period": "2026-10-19",
+  "date": "2026-10-19",
+  "ft40": 13900,
+  "note": "W43"
+ }
+]

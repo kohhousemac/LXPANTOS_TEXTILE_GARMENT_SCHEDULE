@@ -111,7 +111,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "GSL",

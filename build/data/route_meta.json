@@ -233,11 +233,11 @@
   "pol": "Busan",
   "pod": "Istanbul",
   "group": "med",
-  "updateDate": "11/04",
-  "newCount": 2,
+  "updateDate": "11/05",
+  "newCount": 0,
   "changedCount": 6,
-  "excludedCount": 0,
-  "vesselCount": 11
+  "excludedCount": 2,
+  "vesselCount": 9
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -317,7 +317,7 @@
   "pol": "Busan",
   "pod": "Damietta",
   "group": "med",
-  "updateDate": "11/04",
+  "updateDate": "11/05",
   "newCount": 2,
   "changedCount": 0,
   "excludedCount": 0,
@@ -329,7 +329,7 @@
   "pol": "Busan",
   "pod": "Ain Sukhna",
   "group": "med",
-  "updateDate": "11/04",
+  "updateDate": "11/05",
   "newCount": 3,
   "changedCount": 0,
   "excludedCount": 0,
@@ -341,7 +341,7 @@
   "pol": "Busan",
   "pod": "Alexandria",
   "group": "med",
-  "updateDate": "11/04",
+  "updateDate": "11/05",
   "newCount": 3,
   "changedCount": 0,
   "excludedCount": 0,
@@ -353,7 +353,7 @@
   "pol": "Busan",
   "pod": "Port Said",
   "group": "med",
-  "updateDate": "11/04",
+  "updateDate": "11/05",
   "newCount": 3,
   "changedCount": 0,
   "excludedCount": 0,
@@ -430,5 +430,17 @@
   "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 4
+ },
+ {
+  "routeId": "krinc_vnhph",
+  "label": "Incheon → Haiphong",
+  "pol": "Incheon",
+  "pod": "Haiphong",
+  "group": "kr_pol",
+  "updateDate": "11/06",
+  "newCount": 18,
+  "changedCount": 0,
+  "excludedCount": 4,
+  "vesselCount": 12
  }
 ]

@@ -13,7 +13,8 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -26,7 +27,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -42,7 +44,8 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -58,6 +61,7 @@
   "changedFields": [
    "eta",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  }
 ]

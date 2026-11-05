@@ -1,0 +1,54 @@
+[
+ {
+  "carrier": "MSC",
+  "vessel": "MSC VITTORIA",
+  "voyage": "GU644W",
+  "etd": "11-10 (Tue)",
+  "eta": "12-12 (Sat)",
+  "tt": 32,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC TOGO",
+  "voyage": "GU645W",
+  "etd": "11-19 (Thu)",
+  "eta": "12-19 (Sat)",
+  "tt": 30,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC UGANDA",
+  "voyage": "GU646W",
+  "etd": "11-26 (Thu)",
+  "eta": "12-27 (Sun)",
+  "tt": 31,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC VANCOUVER",
+  "voyage": "GU647W",
+  "etd": "11-28 (Sat)",
+  "eta": "12-31 (Thu)",
+  "tt": 33,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ }
+]

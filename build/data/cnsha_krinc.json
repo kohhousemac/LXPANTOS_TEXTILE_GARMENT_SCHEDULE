@@ -81,7 +81,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "PANOCEAN",
@@ -229,7 +230,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
+  "changedFields": [],
+  "bookingClosed": true
  },
  {
   "carrier": "NAMSUNG",

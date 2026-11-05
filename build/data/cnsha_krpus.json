@@ -149,7 +149,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -166,7 +167,8 @@
    "etd",
    "tt",
    "carrier"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -213,7 +215,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -262,7 +265,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "NAMSUNG",
@@ -325,7 +329,8 @@
    "etd",
    "eta",
    "carrier"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -390,7 +395,8 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -425,7 +431,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "NAMSUNG",
@@ -472,7 +479,8 @@
    "eta",
    "tt",
    "carrier"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "NAMSUNG",
@@ -531,7 +539,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -583,7 +592,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "NAMSUNG",
@@ -629,7 +639,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
+  ],
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
