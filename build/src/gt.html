@@ -261,8 +261,27 @@
   (() => {
     const pick = document.getElementById('gt-vsl-pick');
     const body = document.getElementById('gt-rot-table').tBodies[0];
-    let chosen = '';
-    pick.addEventListener('change', () => { chosen = pick.value; draw(); });
+    let chosen = '', chosenVoy = '';
+    pick.addEventListener('change', () => { chosen = pick.value; chosenVoy = ''; draw(); });
+    const sailBody = document.getElementById('gt-sail-table').tBodies[0];
+    function markSail() {
+      [...sailBody.rows].forEach((tr) => {
+        if (!tr.cells || tr.cells.length < 2) return;
+        tr.classList.add('lx-pc-clickable'); tr.tabIndex = 0;
+        const on = tr.cells[0].textContent.trim() === chosen && (!chosenVoy || tr.cells[1].textContent.trim() === chosenVoy);
+        tr.classList.toggle('lx-row-selected', on);
+        tr.setAttribute('aria-current', on ? 'true' : 'false');
+      });
+    }
+    function chooseSail(tr) {
+      if (!tr || !tr.cells || tr.cells.length < 2) return;
+      chosen = tr.cells[0].textContent.trim();
+      chosenVoy = tr.cells[1].textContent.trim();
+      draw();
+    }
+    sailBody.addEventListener('click', (ev) => chooseSail(ev.target.closest('tr')));
+    sailBody.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); chooseSail(ev.target.closest('tr')); } });
+    new MutationObserver(markSail).observe(sailBody, { childList: true });
     function draw() {
       const d = dash.data('port_calls');
       body.replaceChildren();
@@ -274,7 +293,9 @@
       const t = (r) => r.eta || r.etd;
       const cs = d.data.filter((r) => r.vessel === chosen);
       const pqRows = cs.filter((r) => r.port === 'PUERTO QUETZAL' && r.in_voy && r.in_voy[0] === 'E').sort((a, b) => t(a) < t(b) ? -1 : 1);
-      const pq = pqRows[pqRows.length - 1];
+      const pqVoy = chosenVoy ? pqRows.filter((r) => String(r.in_voy).toUpperCase().includes(chosenVoy.toUpperCase())) : [];
+      const pq = pqVoy.length ? pqVoy[pqVoy.length - 1] : pqRows[pqRows.length - 1];
+      markSail();
       let rows = [];
       if (pq) {
         const voy = pq.in_voy;

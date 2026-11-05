@@ -1,0 +1,154 @@
+<script>
+// ---- Port call schedule by vessel, under each Asia lane's market rate ----
+// Source: datasets/port_calls_asia — one flat row per port call
+// {routeId, carrier, vessel, voyage, seq, port, role(POL|CALL|POD), eta, etd, status(ACTUAL|ESTIMATED|SKIP), collectedAt}
+// Clicking a sailing row in the lane table above switches this panel to that vessel/voyage.
+(function () {
+  var PC_IDS = ['cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'idjkt_vnhph', 'vnsgn_idjkt'];
+  var KEEP_AFTER_ARRIVAL_MS = 14 * 864e5;
+  var sel = {};
+
+  function t(s) { return s ? new Date(String(s).replace(' ', 'T') + (String(s).length <= 10 ? 'T00:00' : '')).getTime() : NaN; }
+  function fmt(s) { if (!s) return '—'; var x = String(s); return x.slice(5, 10).replace('-', '/') + (x.length > 10 ? ' ' + x.slice(11, 16) : ''); }
+  function key(v, voy) { return String(v || '').trim().toUpperCase() + '|' + String(voy || '').trim().toUpperCase(); }
+
+  function laneRows(id) {
+    var g = dash.data(id);
+    if (g.status !== 'ok') return [];
+    var now = Date.now();
+    return (g.data || []).filter(function (r) {
+      var m = /^(\d{2})-(\d{2})/.exec(r.eta || '');
+      if (!m) return true;
+      var d = new Date(new Date().getFullYear(), +m[1] - 1, +m[2]);
+      if (d.getTime() - now > 180 * 864e5) d.setFullYear(d.getFullYear() - 1);
+      if (now - d.getTime() > 180 * 864e5) d.setFullYear(d.getFullYear() + 1);
+      return now - d.getTime() < KEEP_AFTER_ARRIVAL_MS;
+    });
+  }
+
+  function groupsFor(id) {
+    var g = dash.data('port_calls_asia');
+    var by = {};
+    if (g.status !== 'ok') return { status: g.status, by: by };
+    (g.data || []).forEach(function (r) {
+      if (r.routeId !== id) return;
+      var k = key(r.vessel, r.voyage);
+      (by[k] = by[k] || []).push(r);
+    });
+    Object.keys(by).forEach(function (k) {
+      by[k].sort(function (a, b) { return (Number(a.seq) || 0) - (Number(b.seq) || 0); });
+      var pod = by[k].filter(function (r) { return r.role === 'POD'; })[0];
+      if (pod && Date.now() - t(pod.eta || pod.etd) > KEEP_AFTER_ARRIVAL_MS) delete by[k];
+    });
+    return { status: 'ok', by: by };
+  }
+
+  function stageOf(calls) {
+    var pol = calls.filter(function (r) { return r.role === 'POL'; })[0];
+    var pod = calls.filter(function (r) { return r.role === 'POD'; })[0];
+    var now = Date.now();
+    if (pod && (pod.status === 'ACTUAL' || now >= t(pod.eta))) return ['arr', '도착'];
+    if (pol && (pol.status === 'ACTUAL' || now >= t(pol.etd))) return ['sea', '항해 중'];
+    return ['pre', '선적 전'];
+  }
+
+  function pickDefault(id, by) {
+    var rows = laneRows(id).slice().sort(function (a, b) { return (a.etd || '') < (b.etd || '') ? -1 : 1; });
+    var withData = rows.filter(function (r) { return by[key(r.vessel, r.voyage)]; });
+    var live = withData.filter(function (r) { return stageOf(by[key(r.vessel, r.voyage)])[0] !== 'arr'; });
+    var r = live[0] || withData[0] || rows[0];
+    return r ? { vessel: r.vessel, voyage: r.voyage, carrier: r.carrier } : null;
+  }
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function highlight(id) {
+    var tb = document.querySelector('tbody[data-draw="rows-' + id + '"]');
+    if (!tb) return;
+    var s = sel[id];
+    Array.prototype.slice.call(tb.rows).forEach(function (tr) {
+      if (!tr.cells || tr.cells.length < 3) return;
+      tr.classList.add('lx-pc-clickable');
+      tr.tabIndex = 0;
+      var on = !!s && key(tr.cells[1].textContent, tr.cells[2].textContent) === key(s.vessel, s.voyage);
+      tr.classList.toggle('lx-row-selected', on);
+      tr.setAttribute('aria-current', on ? 'true' : 'false');
+    });
+  }
+
+  function draw(box, id) {
+    var res = groupsFor(id);
+    if (res.status === 'loading') { box.classList.add('dash-skeleton'); return; }
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren();
+    if (res.status !== 'ok') { box.appendChild(el('p', 'lx-mkt-empty', 'Failed to load')); return; }
+    var by = res.by;
+    if (!sel[id]) sel[id] = pickDefault(id, by);
+    var s = sel[id];
+    highlight(id);
+    if (!s) { box.appendChild(el('p', 'lx-mkt-empty', '표시할 항차가 없습니다.')); return; }
+    var calls = by[key(s.vessel, s.voyage)];
+    var head = el('div', 'lx-pc-head');
+    var name = el('span', 'lx-pc-vsl', s.vessel + ' / ' + s.voyage);
+    head.appendChild(name);
+    if (s.carrier) head.appendChild(el('span', 'lx-tag', s.carrier));
+    if (!calls || !calls.length) {
+      box.appendChild(head);
+      box.appendChild(el('p', 'lx-mkt-empty', '이 항차의 기항 일정은 아직 수집 전입니다 (출항 3주 전부터 수집 · 매일 갱신).'));
+      return;
+    }
+    var st = stageOf(calls);
+    var chip = el('span', 'lx-chip lx-pc-stage lx-pc-stage--' + st[0], st[1]);
+    head.appendChild(chip);
+    var steps = el('div', 'lx-pc-steps');
+    [['pre', '선적 전'], ['sea', '항해 중'], ['arr', '도착']].forEach(function (p, i) {
+      if (i) steps.appendChild(el('span', 'lx-pc-step-line'));
+      var d = el('span', 'lx-pc-step' + (p[0] === st[0] ? ' is-on' : ''), p[1]);
+      steps.appendChild(d);
+    });
+    head.appendChild(steps);
+    box.appendChild(head);
+
+    var wrap = el('div', 'lx-table-wrap');
+    var tbl = el('table', 'lx-table lx-pc-table');
+    tbl.setAttribute('aria-label', s.vessel + ' ' + s.voyage + ' port calls');
+    var th = tbl.createTHead().insertRow();
+    ['Port', '', 'ETA', 'ETD', 'Status'].forEach(function (h) { var c = document.createElement('th'); c.textContent = h; th.appendChild(c); });
+    var tb = tbl.createTBody();
+    var now = Date.now();
+    calls.forEach(function (r) {
+      var tr = tb.insertRow();
+      var passed = r.status === 'ACTUAL' || now > t(r.etd || r.eta);
+      if (passed) tr.className = 'lx-pc-past';
+      var p = tr.insertCell(); p.textContent = r.port; if (r.role === 'POL' || r.role === 'POD') p.className = 'lx-vessel';
+      if (r.status === 'SKIP') p.classList.add('lx-pc-skip');
+      var role = tr.insertCell(); role.className = 'lx-pc-role';
+      role.textContent = r.role === 'POL' ? '선적항' : r.role === 'POD' ? '도착항' : '경유';
+      var a = tr.insertCell(); a.className = 'lx-date'; a.textContent = fmt(r.eta);
+      var d = tr.insertCell(); d.className = 'lx-date'; d.textContent = fmt(r.etd);
+      var sc = tr.insertCell(); sc.className = 'lx-pc-st';
+      sc.textContent = r.status === 'ACTUAL' ? (r.role === 'POD' ? 'Arrived' : 'Departed') : r.status === 'SKIP' ? 'Skip' : 'Est.';
+      if (r.status === 'ACTUAL') sc.classList.add('is-act');
+    });
+    wrap.appendChild(tbl);
+    box.appendChild(wrap);
+    var upd = calls.reduce(function (m, r) { return (r.collectedAt || '') > m ? r.collectedAt : m; }, '');
+    if (upd) box.appendChild(el('p', 'lx-lane-note', '선사 모선별 스케줄 기준 · 수집 ' + fmt(upd)));
+  }
+
+  PC_IDS.forEach(function (id) {
+    dash.draw('pc-' + id, function (box) { draw(box, id); });
+    var tb = document.querySelector('tbody[data-draw="rows-' + id + '"]');
+    if (!tb) return;
+    function choose(tr) {
+      if (!tr || !tr.cells || tr.cells.length < 3) return;
+      var carrierText = tr.dataset.carrier || '';
+      sel[id] = { vessel: tr.cells[1].textContent.trim(), voyage: tr.cells[2].textContent.trim(), carrier: carrierText };
+      dash.draw('pc-' + id);
+    }
+    tb.addEventListener('click', function (ev) { choose(ev.target.closest('tr')); });
+    tb.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); choose(ev.target.closest('tr')); } });
+    new MutationObserver(function () { highlight(id); }).observe(tb, { childList: true });
+  });
+})();
+</script>

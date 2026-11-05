@@ -52,6 +52,25 @@
       </div>
     </section>
 
+    <section class="card" id="gt-rotation">
+        <h2>Port call schedule by vessel</h2>
+        <p class="note">Click a sailing above to see its port calls (or pick a vessel). Skip is struck through.</p>
+        <div class="bar"><select id="gt-vsl-pick" aria-label="Select vessel"></select></div>
+        <div class="scroll" style="max-height: 24rem">
+          <table id="gt-rot-table" data-source="port_calls" data-row-key="key">
+            <thead><tr>
+              <th data-field="port">Port</th>
+              <th data-field="in_voy">Inbound voyage</th>
+              <th data-field="eta">ETA</th>
+              <th data-field="etb">ETB</th>
+              <th data-field="etd">ETD</th>
+              <th data-field="status">Status</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
     <section class="card" id="gt-freight">
       <h2>Shanghai–Guatemala Market rate <span class="upd">Latest <span class="dash-skeleton" data-draw="freight-updated">—</span></span></h2>
       <div class="chart" id="gt-freight-chart" data-source="freight_rate" style="min-height: 220px"></div>
@@ -84,24 +103,6 @@
         <p class="empty" id="gt-chg-empty" hidden>No changes yet.</p>
       </section>
 
-      <section class="card" id="gt-rotation">
-        <h2>Port call schedule by vessel</h2>
-        <p class="note">All port calls for the selected vessel (including the most recent departure). Skip is struck through.</p>
-        <div class="bar"><select id="gt-vsl-pick" aria-label="Select vessel"></select></div>
-        <div class="scroll" style="max-height: 24rem">
-          <table id="gt-rot-table" data-source="port_calls" data-row-key="key">
-            <thead><tr>
-              <th data-field="port">Port</th>
-              <th data-field="in_voy">Inbound voyage</th>
-              <th data-field="eta">ETA</th>
-              <th data-field="etb">ETB</th>
-              <th data-field="etd">ETD</th>
-              <th data-field="status">Status</th>
-            </tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </section>
     </div>
   </div>
   </section>

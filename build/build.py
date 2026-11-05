@@ -33,6 +33,9 @@ ASIA = [  # (pol code, [(pod code, route id), ...])
     ('pus', [('hcm', 'krpus_vnsgn'), ('jkt', 'krpus_idjkt')]),
 ]
 
+PC_IDS = {'cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'idjkt_vnhph', 'vnsgn_idjkt'}
+PC_PANEL = '''        <div class="lx-pc-wrap"><p class="lx-mkt-title">Port call schedule<span class="lx-mkt-sub">모선별 기항 일정 · 위 스케줄 행을 누르면 바뀝니다</span></p><div class="lx-pc dash-skeleton" data-draw="pc-{route}" data-source="port_calls_asia"></div></div>'''
+
 def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     h = ' hidden' if hidden else ''
     return f'''
@@ -58,6 +61,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
             <tbody class="dash-skeleton" data-draw="rows-{route}" data-source="{route}"></tbody>
           </table>
         </div>
+{PC_PANEL.format(route=route) if route in PC_IDS else ''}
         <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-{route}" data-source="berthing_wait"></div>
       </section>
     </section>
@@ -401,6 +405,7 @@ def main():
 {rd('main.html').replace('__ROUTE_IDS__', json.dumps(route_ids))}
 {rd('calcs.html')}
 {gt}
+{rd('pc.html')}
 {rd('summary.html')}
 </body>
 </html>
