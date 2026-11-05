@@ -7,5 +7,383 @@
   "change": "Baseline collection",
   "old": "",
   "new": "23 sailings"
+ },
+ {
+  "id": "2026-11-05-0-Busan|MAERSK EL ALTO",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "MAERSK EL ALTO",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-11 (Wed)"
+ },
+ {
+  "id": "2026-11-05-1-Busan|MAERSK EVORA",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "MAERSK EVORA",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-14 (Sat)"
+ },
+ {
+  "id": "2026-11-05-2-Busan|MAERSK EDINBURGH",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "MAERSK EDINBURGH",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-21 (Sat)"
+ },
+ {
+  "id": "2026-11-05-3-Busan|SEASPAN PRIDE",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "SEASPAN PRIDE",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-01 (Tue)"
+ },
+ {
+  "id": "2026-11-05-4-Shanghai|NAVIOS LAPIS",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS LAPIS",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-06 (Fri)"
+ },
+ {
+  "id": "2026-11-05-5-Shanghai|MAERSK EDMONTON",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "MAERSK EDMONTON",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-07 (Sat)"
+ },
+ {
+  "id": "2026-11-05-6-Shanghai|OEL RUDRA",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "OEL RUDRA",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-12 (Thu)"
+ },
+ {
+  "id": "2026-11-05-7-Shanghai|CLIFFORD MAERSK",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "CLIFFORD MAERSK",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-13 (Fri)"
+ },
+ {
+  "id": "2026-11-05-8-Shanghai|GUNVOR MAERSK",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "GUNVOR MAERSK",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-25 (Wed)"
+ },
+ {
+  "id": "2026-11-05-9-Shanghai|NAVIOS JASMINE",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS JASMINE",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-28 (Sat)"
+ },
+ {
+  "id": "2026-11-05-10-Shanghai|CHASTINE MAERSK",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "CHASTINE MAERSK",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-01 (Tue)"
+ },
+ {
+  "id": "2026-11-05-11-Shanghai|MAERSK SALINA",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "MAERSK SALINA",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-04 (Fri)"
+ },
+ {
+  "id": "2026-11-05-12-Yantian|MAERSK ANTARES",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "MAERSK ANTARES",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-07 (Sat)"
+ },
+ {
+  "id": "2026-11-05-13-Yantian|MAERSK TUNIS",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "MAERSK TUNIS",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-12 (Thu)"
+ },
+ {
+  "id": "2026-11-05-14-Yantian|MAERSK SANA",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "MAERSK SANA",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-21 (Sat)"
+ },
+ {
+  "id": "2026-11-05-15-Yantian|GSL GRANIA",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "GSL GRANIA",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-28 (Sat)"
+ },
+ {
+  "id": "2026-11-05-16-Nansha|MAERSK BERMUDA",
+  "date": "2026-11-05",
+  "pol": "Nansha",
+  "vessel": "MAERSK BERMUDA",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-13 (Fri)"
+ },
+ {
+  "id": "2026-11-05-17-Nansha|PHOENIX D",
+  "date": "2026-11-05",
+  "pol": "Nansha",
+  "vessel": "PHOENIX D",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-26 (Thu)"
+ },
+ {
+  "id": "2026-11-05-18-Nansha|MERATUS JIMBARAN",
+  "date": "2026-11-05",
+  "pol": "Nansha",
+  "vessel": "MERATUS JIMBARAN",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-03 (Thu)"
+ },
+ {
+  "id": "2026-11-05-19-Ho Chi Minh|AMALFI BAY",
+  "date": "2026-11-05",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-04 (Fri)"
+ },
+ {
+  "id": "2026-11-05-20-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-05",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "New sailing",
+  "old": "",
+  "new": "11-27 (Fri)"
+ },
+ {
+  "id": "2026-11-05-21-Busan|MAERSK EL ALTO / 644E",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "MAERSK EL ALTO / 644E",
+  "change": "Removed",
+  "old": "11-09 (Mon)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-22-Busan|MAERSK EVORA / 645E",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "MAERSK EVORA / 645E",
+  "change": "Removed",
+  "old": "11-14 (Sat)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-23-Busan|MAERSK EDINBURGH / 646E",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "MAERSK EDINBURGH / 646E",
+  "change": "Removed",
+  "old": "11-21 (Sat)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-24-Busan|SEASPAN PRIDE / 647E",
+  "date": "2026-11-05",
+  "pol": "Busan",
+  "vessel": "SEASPAN PRIDE / 647E",
+  "change": "Removed",
+  "old": "11-28 (Sat)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-25-Shanghai|NAVIOS LAPIS / 645E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS LAPIS / 645E",
+  "change": "Removed",
+  "old": "11-05 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-26-Shanghai|MAERSK EDMONTON / 645E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "MAERSK EDMONTON / 645E",
+  "change": "Removed",
+  "old": "11-06 (Fri)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-27-Shanghai|OEL RUDRA / 646E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "OEL RUDRA / 646E",
+  "change": "Removed",
+  "old": "11-12 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-28-Shanghai|GUNVOR MAERSK / 647E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "GUNVOR MAERSK / 647E",
+  "change": "Removed",
+  "old": "11-20 (Fri)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-29-Shanghai|MAERSK EMERALD / 646E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "MAERSK EMERALD / 646E",
+  "change": "Removed",
+  "old": "11-21 (Sat)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-30-Shanghai|NAVIOS JASMINE / 648E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS JASMINE / 648E",
+  "change": "Removed",
+  "old": "11-26 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-31-Shanghai|CHASTINE MAERSK / 648E",
+  "date": "2026-11-05",
+  "pol": "Shanghai",
+  "vessel": "CHASTINE MAERSK / 648E",
+  "change": "Removed",
+  "old": "11-27 (Fri)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-32-Yantian|MAERSK ANTARES / 644E",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "MAERSK ANTARES / 644E",
+  "change": "Removed",
+  "old": "11-06 (Fri)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-33-Yantian|MAERSK TUNIS / 645E",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "MAERSK TUNIS / 645E",
+  "change": "Removed",
+  "old": "11-12 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-34-Yantian|MAERSK SANA / 646E",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "MAERSK SANA / 646E",
+  "change": "Removed",
+  "old": "11-19 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-35-Yantian|GSL GRANIA / 647E",
+  "date": "2026-11-05",
+  "pol": "Yantian",
+  "vessel": "GSL GRANIA / 647E",
+  "change": "Removed",
+  "old": "11-26 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-36-Nansha|MAERSK BERMUDA / 645N",
+  "date": "2026-11-05",
+  "pol": "Nansha",
+  "vessel": "MAERSK BERMUDA / 645N",
+  "change": "Removed",
+  "old": "11-12 (Thu)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-37-Nansha|PHOENIX D / 647N",
+  "date": "2026-11-05",
+  "pol": "Nansha",
+  "vessel": "PHOENIX D / 647N",
+  "change": "Removed",
+  "old": "11-29 (Sun)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-38-Ho Chi Minh|AMALFI BAY / O4PN",
+  "date": "2026-11-05",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY / O4PN",
+  "change": "Removed",
+  "old": "11-06 (Fri)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-39-Ho Chi Minh|SHIMANAMI BAY / 010N",
+  "date": "2026-11-05",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY / 010N",
+  "change": "Removed",
+  "old": "11-14 (Sat)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-40-Ho Chi Minh|AMALFI BAY / 030N",
+  "date": "2026-11-05",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY / 030N",
+  "change": "Removed",
+  "old": "11-20 (Fri)",
+  "new": ""
+ },
+ {
+  "id": "2026-11-05-41-Ho Chi Minh|SHIMANAMI BAY / 050N",
+  "date": "2026-11-05",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY / 050N",
+  "change": "Removed",
+  "old": "11-27 (Fri)",
+  "new": ""
  }
 ]

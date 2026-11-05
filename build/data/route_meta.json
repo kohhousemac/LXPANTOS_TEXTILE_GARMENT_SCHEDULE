@@ -310,5 +310,53 @@
   "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 18
+ },
+ {
+  "routeId": "krpus_egdam",
+  "label": "Busan → Damietta",
+  "pol": "Busan",
+  "pod": "Damietta",
+  "group": "med",
+  "updateDate": "11/04",
+  "newCount": 2,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 2
+ },
+ {
+  "routeId": "krpus_egsok",
+  "label": "Busan → Ain Sukhna",
+  "pol": "Busan",
+  "pod": "Ain Sukhna",
+  "group": "med",
+  "updateDate": "11/04",
+  "newCount": 3,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 3
+ },
+ {
+  "routeId": "krpus_egaly",
+  "label": "Busan → Alexandria",
+  "pol": "Busan",
+  "pod": "Alexandria",
+  "group": "med",
+  "updateDate": "11/04",
+  "newCount": 3,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 3
+ },
+ {
+  "routeId": "krpus_egpsd",
+  "label": "Busan → Port Said",
+  "pol": "Busan",
+  "pod": "Port Said",
+  "group": "med",
+  "updateDate": "11/04",
+  "newCount": 3,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 3
  }
 ]
