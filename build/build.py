@@ -328,6 +328,8 @@ def main():
         gt = gt.replace("'Caucedo (DO)': '🇩🇴',", "'Caucedo (DO)': '🇩🇴',\n      'Corinto (NI)': '🇳🇮',", 1)
 
     built = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime('%Y-%m-%d %H:%M KST')
+    now_kst = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
+    built_short = now_kst.strftime('%m/%d %H:%M')
     logo = rd('logo.txt').strip()
 
     page = f'''<!doctype html>
@@ -366,7 +368,7 @@ def main():
     <p class="lx-hero-eyebrow">Asia · Central America · Mediterranean</p>
     <h1>LX Pantos <span class="thin">Textile &amp; Garment Schedule</span></h1>
     <p class="lx-hero-sub">주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
-    <span class="lx-updated-pill" id="hero-updated">—</span>
+    <span class="lx-updated-pill" id="hero-updated" data-built="{built_short}">—</span>
   </div>
 </section>
 <div class="lx-dash">

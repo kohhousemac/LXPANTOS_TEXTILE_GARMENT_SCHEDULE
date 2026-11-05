@@ -41,6 +41,11 @@
   set('kpi-new', newC + '<small>건</small>');
   set('kpi-chg', chC + '<small>건</small>');
   var upd = document.getElementById('hero-updated');
-  if (upd) upd.textContent = latest ? '스케줄 업데이트 ' + latest + (latest === mmdd ? ' (오늘)' : '') : '';
+  if (upd) {
+    var built = upd.getAttribute('data-built') || '';
+    var day = built ? built.slice(0, 5) : latest;
+    var time = built ? built.slice(6) : '';
+    upd.textContent = day ? '스케줄 업데이트 ' + day + (time ? ' ' + time : '') + (day === mmdd ? ' (오늘)' : '') : '';
+  }
 })();
 </script>
