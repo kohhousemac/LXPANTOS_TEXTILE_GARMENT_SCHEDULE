@@ -44,16 +44,23 @@ def is_lane(ds):
     return len(a) == 5 and len(b) == 5 and ds not in NO_RETAIN
 
 def _rkey(r):
-    return '|'.join(str(r.get(k) or '') for k in ('vessel', 'voyage', 'carrier'))
+    return '|'.join(str(r.get(k) or '').strip().upper() for k in ('vessel', 'voyage'))
+
+def _carriers(r):
+    return {c.strip().upper() for c in str(r.get('carrier') or '').split('/') if c.strip()}
 
 def retain_departed(old, new):
     """Collection drops sailings once their ETD has passed. Keep those rows
     (unchanged) until 14 days after their ETA so arrivals stay visible."""
     today = datetime.datetime.now(KST).date()
-    have = {_rkey(r) for r in new}
+    have = {}
+    for r in new:
+        have.setdefault(_rkey(r), set()).update(_carriers(r))
     kept = []
     for r in old or []:
-        if _rkey(r) in have:
+        # same vessel/voyage already in the new collection under an overlapping carrier
+        # (e.g. "KMTC" now merged as "KMTC / PANOCEAN") -> not a departed leftover
+        if _rkey(r) in have and (not _carriers(r) or _carriers(r) & have[_rkey(r)]):
             continue
         etd = _mmdd_date(r.get('etd', ''), today)
         eta = _mmdd_date(r.get('eta', ''), today)

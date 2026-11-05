@@ -270,24 +270,6 @@
  },
  {
   "carrier": "PANOCEAN",
-  "vessel": "SKY RAINBOW",
-  "voyage": "2613N",
-  "etd": "11-12 (Thu)",
-  "eta": "11-19 (Thu)",
-  "tt": 7,
-  "prevEtd": "11-06 (Fri)",
-  "prevEta": "11-14 (Sat)",
-  "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt",
-   "carrier"
-  ]
- },
- {
-  "carrier": "PANOCEAN",
   "vessel": "SKY SUNSHINE",
   "voyage": "2613N",
   "etd": "11-12 (Thu)",
@@ -1078,19 +1060,6 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "POS SINGAPORE",
-  "voyage": "1042N",
-  "etd": "11-04 (Wed)",
-  "eta": "11-13 (Fri)",
-  "tt": 9,
-  "prevEtd": "11-05 (Thu)",
-  "prevEta": "11-13 (Fri)",
-  "prevTt": 8,
-  "status": "departed",
   "changedFields": []
  },
  {

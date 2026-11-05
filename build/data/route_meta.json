@@ -6,10 +6,10 @@
   "pod": "Jakarta",
   "group": "vn_id",
   "updateDate": "11/05",
-  "newCount": 0,
-  "changedCount": 9,
+  "newCount": 2,
+  "changedCount": 11,
   "excludedCount": 0,
-  "vesselCount": 23
+  "vesselCount": 25
  },
  {
   "routeId": "vnsgn_idsrg",
@@ -17,9 +17,9 @@
   "pol": "Ho Chi Minh",
   "pod": "Semarang",
   "group": "vn_id",
-  "updateDate": "11/01",
+  "updateDate": "11/05",
   "newCount": 0,
-  "changedCount": 3,
+  "changedCount": 2,
   "excludedCount": 0,
   "vesselCount": 4
  },
@@ -43,7 +43,7 @@
   "group": "vn_id",
   "updateDate": "11/05",
   "newCount": 0,
-  "changedCount": 3,
+  "changedCount": 4,
   "excludedCount": 0,
   "vesselCount": 11
  },
@@ -66,8 +66,8 @@
   "pod": "Ho Chi Minh",
   "group": "cn",
   "updateDate": "11/05",
-  "newCount": 3,
-  "changedCount": 15,
+  "newCount": 4,
+  "changedCount": 16,
   "excludedCount": 0,
   "vesselCount": 38
  },
@@ -89,9 +89,9 @@
   "pol": "Keelung",
   "pod": "Ho Chi Minh",
   "group": "tw",
-  "updateDate": "11/01",
-  "newCount": 1,
-  "changedCount": 9,
+  "updateDate": "11/05",
+  "newCount": 0,
+  "changedCount": 10,
   "excludedCount": 0,
   "vesselCount": 10
  },
@@ -101,11 +101,11 @@
   "pol": "Keelung",
   "pod": "Haiphong",
   "group": "tw",
-  "updateDate": "11/01",
+  "updateDate": "11/05",
   "newCount": 6,
-  "changedCount": 9,
+  "changedCount": 8,
   "excludedCount": 0,
-  "vesselCount": 15
+  "vesselCount": 21
  },
  {
   "routeId": "hkhkg_vnhph",

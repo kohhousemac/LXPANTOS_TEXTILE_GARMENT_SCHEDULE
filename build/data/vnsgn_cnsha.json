@@ -14,19 +14,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "SKY RAINBOW",
-  "voyage": "2613N",
-  "etd": "11-12 (Thu)",
-  "eta": "11-12 (Thu)",
-  "tt": 0,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
   "vessel": "KMTC SHANGHAI",
   "voyage": "2609N",
   "etd": "11-19 (Thu)",

@@ -181,14 +181,17 @@
   "carrier": "EMC",
   "vessel": "EVER CENTER",
   "voyage": "0396-090S",
-  "etd": "11-10 (Tue)",
-  "eta": "11-16 (Mon)",
+  "etd": "11-11 (Wed)",
+  "eta": "11-17 (Tue)",
   "tt": 6,
   "prevEtd": "11-10 (Tue)",
   "prevEta": "11-16 (Mon)",
   "prevTt": 6,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "SITC",
@@ -330,13 +333,10 @@
   "eta": "11-24 (Tue)",
   "tt": 6,
   "prevEtd": "11-18 (Wed)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "11-24 (Tue)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -429,13 +429,16 @@
   "vessel": "UNI-POPULAR",
   "voyage": "0398-520S",
   "etd": "11-25 (Wed)",
-  "eta": "11-29 (Sun)",
-  "tt": 4,
+  "eta": "12-01 (Tue)",
+  "tt": 6,
   "prevEtd": "11-25 (Wed)",
   "prevEta": "11-29 (Sun)",
   "prevTt": 4,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "SITC",
@@ -456,14 +459,14 @@
  {
   "carrier": "EMC",
   "vessel": "EVER CENTER",
-  "voyage": "0399-091S",
-  "etd": "11-29 (Sun)",
-  "eta": "12-01 (Tue)",
-  "tt": 2,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-01 (Tue)",
-  "prevTt": 2,
-  "status": "unchanged",
+  "voyage": "0400-091S",
+  "etd": "12-01 (Tue)",
+  "eta": "12-09 (Wed)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
   "changedFields": []
  },
  {

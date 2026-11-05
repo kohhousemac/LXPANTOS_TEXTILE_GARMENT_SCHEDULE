@@ -3,29 +3,32 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 286",
   "voyage": "S116",
-  "etd": "11-04 (Wed)",
-  "eta": "11-08 (Sun)",
+  "etd": "11-06 (Fri)",
+  "eta": "11-09 (Mon)",
   "tt": 4,
   "prevEtd": "11-04 (Wed)",
   "prevEta": "11-08 (Sun)",
-  "prevTt": 5,
+  "prevTt": 4,
   "status": "changed",
   "changedFields": [
-   "tt"
+   "etd",
+   "eta"
   ]
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 292",
   "voyage": "S074",
-  "etd": "11-06 (Fri)",
-  "eta": "11-11 (Wed)",
-  "tt": 5,
+  "etd": "11-07 (Sat)",
+  "eta": "11-13 (Fri)",
+  "tt": 6,
   "prevEtd": "11-06 (Fri)",
   "prevEta": "11-11 (Wed)",
-  "prevTt": 6,
+  "prevTt": 5,
   "status": "changed",
   "changedFields": [
+   "etd",
+   "eta",
    "tt"
   ]
  },
@@ -33,79 +36,80 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 287",
   "voyage": "S080",
-  "etd": "11-11 (Wed)",
-  "eta": "11-15 (Sun)",
+  "etd": "11-12 (Thu)",
+  "eta": "11-16 (Mon)",
   "tt": 4,
-  "prevEtd": "11-09 (Mon)",
-  "prevEta": "11-13 (Fri)",
-  "prevTt": 5,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-15 (Sun)",
+  "prevTt": 4,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "tt"
+   "eta"
   ]
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 288",
   "voyage": "S115",
-  "etd": "11-18 (Wed)",
-  "eta": "11-23 (Mon)",
+  "etd": "11-19 (Thu)",
+  "eta": "11-24 (Tue)",
   "tt": 5,
   "prevEtd": "11-18 (Wed)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 286",
-  "voyage": "S117",
-  "etd": "11-21 (Sat)",
-  "eta": "11-25 (Wed)",
-  "tt": 4,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-25 (Wed)",
+  "prevEta": "11-23 (Mon)",
   "prevTt": 5,
   "status": "changed",
   "changedFields": [
-   "tt"
+   "etd",
+   "eta"
   ]
  },
  {
   "carrier": "WHL",
   "vessel": "ABRAO COCHIN",
   "voyage": "S022",
-  "etd": "11-21 (Sat)",
-  "eta": "11-25 (Wed)",
+  "etd": "11-20 (Fri)",
+  "eta": "11-24 (Tue)",
   "tt": 4,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 5,
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "11-25 (Wed)",
+  "prevTt": 4,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "tt"
+   "eta"
+  ]
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 286",
+  "voyage": "S117",
+  "etd": "11-23 (Mon)",
+  "eta": "11-27 (Fri)",
+  "tt": 4,
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "11-25 (Wed)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
   ]
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 315",
   "voyage": "S271",
-  "etd": "11-24 (Tue)",
-  "eta": "11-26 (Thu)",
-  "tt": 2,
+  "etd": "11-25 (Wed)",
+  "eta": "11-30 (Mon)",
+  "tt": 5,
   "prevEtd": "11-24 (Tue)",
   "prevEta": "11-26 (Thu)",
-  "prevTt": 3,
+  "prevTt": 2,
   "status": "changed",
   "changedFields": [
+   "etd",
+   "eta",
    "tt"
   ]
  },
@@ -113,11 +117,27 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 308",
   "voyage": "S064",
-  "etd": "11-26 (Thu)",
-  "eta": "12-01 (Tue)",
+  "etd": "11-25 (Wed)",
+  "eta": "11-30 (Mon)",
   "tt": 5,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "11-30 (Mon)",
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "12-01 (Tue)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 292",
+  "voyage": "S075",
+  "etd": "11-29 (Sun)",
+  "eta": "12-04 (Fri)",
+  "tt": 5,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-03 (Thu)",
   "prevTt": 6,
   "status": "changed",
   "changedFields": [
@@ -128,27 +148,14 @@
  },
  {
   "carrier": "WHL",
-  "vessel": "WAN HAI 292",
-  "voyage": "S075",
-  "etd": "11-27 (Fri)",
-  "eta": "12-03 (Thu)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
   "vessel": "WAN HAI 287",
   "voyage": "S081",
-  "etd": "12-03 (Thu)",
-  "eta": "12-06 (Sun)",
-  "tt": 3,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 5,
+  "etd": "12-06 (Sun)",
+  "eta": "12-10 (Thu)",
+  "tt": 4,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 3,
   "status": "changed",
   "changedFields": [
    "etd",

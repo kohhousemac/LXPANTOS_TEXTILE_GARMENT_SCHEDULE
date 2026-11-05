@@ -1,6 +1,6 @@
 [
  {
-  "carrier": "KMTC",
+  "carrier": "HEUNG-A / KMTC",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "etd": "11-08 (Sun)",
@@ -14,7 +14,7 @@
   "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "HEUNG-A / KMTC",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "etd": "11-09 (Mon)",
@@ -42,6 +42,20 @@
   "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
+  "carrier": "HEUNG-A",
+  "vessel": "BELAWAN",
+  "voyage": "2611S",
+  "etd": "11-21 (Sat)",
+  "eta": "12-02 (Wed)",
+  "tt": 11,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta"
+ },
+ {
   "carrier": "KMTC",
   "vessel": "BELAWAN",
   "voyage": "2611S",
@@ -56,7 +70,7 @@
   "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "HEUNG-A / KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611S",
   "etd": "11-29 (Sun)",
@@ -74,7 +88,7 @@
   "rotation": "Busan → Hong Kong → Singapore → Jakarta"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "HEUNG-A / KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611S",
   "etd": "11-30 (Mon)",
