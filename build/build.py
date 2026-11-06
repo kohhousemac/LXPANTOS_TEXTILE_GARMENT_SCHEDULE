@@ -20,7 +20,8 @@ def rd(name):
 # ---------------------------------------------------------------- lanes
 PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang',
         'pus': 'Busan', 'inc': 'Incheon', 'sha': 'Shanghai', 'skk': 'Shekou',
-        'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul'}
+        'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
+        'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
 ASIA = [  # (pol code, [(pod code, route id), ...])
     ('hcm', [('jkt', 'vnsgn_idjkt'), ('srg', 'vnsgn_idsrg'), ('pus', 'vnsgn_krpus'), ('inc', 'vnsgn_krinc'), ('sha', 'vnsgn_cnsha')]),
@@ -42,6 +43,14 @@ def _mkt_ids():
     except Exception: return set()
 MKT_IDS = _mkt_ids()
 
+LANE_NOTES = {
+    'vnsgn_uslgb': 'MSC SENTOSA 서비스 직항 · 선적항 Vung Tau(Cai Mep, SSIT 터미널) · MSC에 호치민→LA 노선이 없어 인접 Long Beach(Pier T)로 대체',
+    'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항 · 선적항 Vung Tau(Cai Mep, SSIT 터미널) · 도착 Port Newark',
+    'vnhph_uslax': 'MSC PEARL 서비스 직항 · 도착 West Basin Container Terminal',
+    'vnhph_usnyc': 'MSC AMERICA SERVICE 직항 · 도착 Port Newark',
+    'krinc_vnhph': 'PANOCEAN · 흥아 · 동진 · SM상선 · SITC 직항 · 출항 토~화만 · 상해·닝보 기항 항차 제외 · ⛔ = 선사 스케줄에서 부킹 불가(빨간색)',
+}
+
 def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     h = ' hidden' if hidden else ''
     return f'''
@@ -61,6 +70,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="{route}">Copy</button>
         </div>
+{('        <p class="lx-lane-note">' + LANE_NOTES[route] + '</p>') if route in LANE_NOTES else ''}
         <div class="lx-table-wrap">
           <table class="lx-table" aria-label="{pol_name} to {pod_name} sailing schedule">
             <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th>{'<th>Calling order</th>' if route.startswith('krpus_') else ''}</tr></thead>
@@ -69,15 +79,17 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
         </div>
 {PC_PANEL.format(route=route) if not route.startswith(('krpus_trist', 'krpus_eg')) else ''}
 {MKT_PANEL.format(route=route) if route in MKT_IDS else ''}
-        <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-{route}" data-source="berthing_wait"></div>
+{'' if route.split('_')[1].startswith('us') or route == 'krinc_vnhph' else '        <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-' + route + '" data-source="berthing_wait"></div>'}
       </section>
     </section>
 '''
 
 LOCODE = {'egdam': 'dam', 'egsok': 'sok', 'egaly': 'aly', 'egpsd': 'psd', 'vnsgn': 'hcm', 'vnhph': 'hph', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
-          'cnsha': 'sha', 'cnshk': 'skk', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist'}
+          'cnsha': 'sha', 'cnshk': 'skk', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist',
+          'uslax': 'lax', 'uslgb': 'lgb', 'usnyc': 'nyc'}
 PORT_LOCODE_NAME = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang', 'pus': 'Busan', 'inc': 'Incheon',
-                    'sha': 'Shanghai', 'skk': 'Shekou', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul'}
+                    'sha': 'Shanghai', 'skk': 'Shekou', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
+                    'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
 def merge_new_lanes():
     """Add lanes that exist in route_meta but not yet in ASIA (new lanes added on the dashboard)."""
@@ -101,7 +113,7 @@ def merge_new_lanes():
             ASIA.append((pol, [(pod, rid)]))
         print('auto-added lane', rid)
 
-COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3}
+COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3, 'lax': 4, 'lgb': 4, 'nyc': 5}
 KR_ORDER = {'pus': 0, 'inc': 1}
 
 BUSAN_NOTE = '''

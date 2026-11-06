@@ -68,4 +68,5 @@
 .lx-dl-link:focus-visible { outline: 2px solid #a50034; outline-offset: 3px; opacity: 1; border-radius: 2px; }
 .lx-dl-link[data-dl-state="ok"] { color: #1f8a5b; opacity: 1; }
 .lx-dl-link[data-dl-state="err"] { color: #d1453b; opacity: 1; }
+.lx-lane > .lx-lane-note { padding: .6rem 1.25rem 0; }
 </style>
