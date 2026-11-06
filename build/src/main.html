@@ -624,11 +624,14 @@
     ]);
   }
   function asiaRowsForXlsx() {
-    var rows = [['Lane', 'Carrier', 'Vessel', 'Voyage', 'ETD', 'ETA', 'T/T (days)', 'Stage', 'Calling Order', 'Booking']];
+    var rows = [['POL', 'POD', 'Carrier', 'Vessel', 'Voyage', 'ETD', 'ETA', 'T/T (days)', 'Stage', 'Calling Order', 'Booking']];
     Array.prototype.slice.call(document.querySelectorAll('#net-asia tbody[data-draw^="rows-"]')).forEach(function (tb) {
       var id = tb.getAttribute('data-draw').slice(5);
       var h2 = document.getElementById('lane-' + id + '-h');
       var lane = h2 ? h2.textContent.replace(/[\u{1F1E6}-\u{1F1FF}]/gu, '').replace(/\s*→\s*/g, ' → ').replace(/\s+/g, ' ').trim() : id;
+      // POL / POD as separate columns instead of one "Lane" column.
+      var ends = lane.split(' → ');
+      var pol = ends.length >= 2 ? ends[0] : lane, pod = ends.length >= 2 ? ends[ends.length - 1] : '';
       var data = lastRendered[id];
       if (!data) {
         var g = dash.data(id);
@@ -637,7 +640,7 @@
       data.forEach(function (v) {
         var rot = v.rotation; if (Array.isArray(rot)) rot = rot.join(' → ');
         var co = String(rot || '').split(/\s*(?:→|->|>|,)\s*/).filter(Boolean).join(' → ');
-        rows.push([lane, v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : '',
+        rows.push([pol, pod, v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : '',
           STAGE_LABEL[rowStage(v)] || '', co, v.bookingClosed ? '부킹 불가' : '']);
       });
     });
