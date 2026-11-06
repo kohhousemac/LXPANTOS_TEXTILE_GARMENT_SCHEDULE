@@ -67,8 +67,8 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
             <tbody class="dash-skeleton" data-draw="rows-{route}" data-source="{route}"></tbody>
           </table>
         </div>
-{MKT_PANEL.format(route=route) if route in MKT_IDS else ''}
 {PC_PANEL.format(route=route) if not route.startswith(('krpus_trist', 'krpus_eg')) else ''}
+{MKT_PANEL.format(route=route) if route in MKT_IDS else ''}
         <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-{route}" data-source="berthing_wait"></div>
       </section>
     </section>

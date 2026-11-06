@@ -48,7 +48,7 @@
 .lx-bkg-closed { display: inline-block; margin-left: .35rem; font-size: .85rem; line-height: 1; vertical-align: middle; cursor: help; }
 .lx-legend-bkg { font-weight: 600; }
 .lx-chip--warn, .lx-chip--bad { animation: none !important; }
-.lx-lane > .lx-mkt-wrap { padding: .9rem 1.25rem 0; }
+.lx-lane > .lx-mkt-wrap { padding: .9rem 1.25rem .9rem; border-top: 1px solid var(--color-border, rgba(127,127,127,.2)); }
 .lx-mkt { margin-top: .5rem; }
 .lx-mkt-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .75rem; margin-bottom: .35rem; }
 .lx-mkt-val { font-size: 1.35rem; font-weight: 800; color: var(--color-fg); font-variant-numeric: tabular-nums; }
