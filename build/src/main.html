@@ -643,22 +643,31 @@
   function xEsc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]; }); }
   function xCol(n) { var s = ''; n += 1; while (n > 0) { var r = (n - 1) % 26; s = String.fromCharCode(65 + r) + s; n = Math.floor((n - 1) / 26); } return s; }
   function xlsxWorkbook(sheetName, rows) {
-    var sheet = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>' +
+    var sheet = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><cols><col min="1" max="2" width="14" customWidth="1"/><col min="3" max="3" width="30" customWidth="1"/><col min="4" max="4" width="22" customWidth="1"/><col min="5" max="5" width="10" customWidth="1"/><col min="6" max="7" width="12" customWidth="1"/><col min="8" max="9" width="11" customWidth="1"/><col min="10" max="10" width="36" customWidth="1"/></cols><sheetData>' +
       rows.map(function (row, ri) {
         return '<row r="' + (ri + 1) + '">' + row.map(function (cell, ci) {
           if (cell === null || cell === undefined || cell === '') return '';
           var ref = xCol(ci) + (ri + 1);
+          // ETD/ETA are real Excel dates (serial number + yyyy-mm-dd format), not text.
+          if (typeof cell === 'object' && typeof cell.d === 'number') return '<c r="' + ref + '" s="1"><v>' + cell.d + '</v></c>';
           return (typeof cell === 'number' && isFinite(cell)) ? '<c r="' + ref + '"><v>' + cell + '</v></c>'
             : '<c r="' + ref + '" t="inlineStr"><is><t xml:space="preserve">' + xEsc(cell) + '</t></is></c>';
         }).join('') + '</row>';
       }).join('') + '</sheetData></worksheet>';
     return xlsxZip([
-      { name: '[Content_Types].xml', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>' },
+      { name: '[Content_Types].xml', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>' },
       { name: '_rels/.rels', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>' },
       { name: 'xl/workbook.xml', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="' + xEsc(sheetName).slice(0, 31) + '" sheetId="1" r:id="rId1"/></sheets></workbook>' },
-      { name: 'xl/_rels/workbook.xml.rels', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>' },
+      { name: 'xl/_rels/workbook.xml.rels', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>' },
+      { name: 'xl/styles.xml', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="yyyy-mm-dd"/></numFmts><fonts count="1"><font><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>' },
       { name: 'xl/worksheets/sheet1.xml', data: sheet }
     ]);
+  }
+  // "11-07 (Sat)" -> Excel date serial (year = the one closest to today, same rule as the table).
+  function xlsxDate(s) {
+    var d = scheduleDate(s);
+    if (!d) return s || '';
+    return { d: Math.round((Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) - Date.UTC(1899, 11, 30)) / 864e5) };
   }
   function asiaRowsForXlsx() {
     var rows = [['POL', 'POD', 'Carrier', 'Vessel', 'Voyage', 'ETD', 'ETA', 'T/T (days)', 'Stage', 'Calling Order']];
@@ -675,7 +684,7 @@
         var rot = v.rotation; if (Array.isArray(rot)) rot = rot.join(' → ');
         var co = String(rot || '').split(/\s*(?:→|->|>|,)\s*/).filter(Boolean).join(' → ');
         var pp = lane.split(' → ');
-        rows.push([pp[0] || lane, pp[1] || '', v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : '',
+        rows.push([pp[0] || lane, pp[1] || '', v.carrier, v.vessel, v.voyage, xlsxDate(v.etd), xlsxDate(v.eta), (typeof v.tt === 'number') ? v.tt : '',
           STAGE_LABEL[rowStage(v)] || '', co]);
       });
     });

@@ -69,28 +69,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "KOTA NAZAR",
-  "voyage": "2643N",
-  "etd": "11-04 (Wed)",
-  "eta": "11-09 (Mon)",
-  "tt": 5,
-  "status": "departed",
-  "changedFields": [],
-  "service": "CVS2"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC CAGAYAN",
-  "voyage": "2617N",
-  "etd": "11-04 (Wed)",
-  "eta": "11-10 (Tue)",
-  "tt": 6,
-  "status": "departed",
-  "changedFields": [],
-  "service": "FIE"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC RENDE",
   "voyage": "2623N",
   "etd": "11-05 (Thu)",
@@ -175,28 +153,6 @@
   "status": "new",
   "changedFields": [],
   "service": "VTX1"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC CEBU",
-  "voyage": "2617N",
-  "etd": "11-11 (Wed)",
-  "eta": "11-19 (Thu)",
-  "tt": 8,
-  "status": "new",
-  "changedFields": [],
-  "service": "FIE"
- },
- {
-  "carrier": "SITC",
-  "vessel": "HONG AN",
-  "voyage": "2626N",
-  "etd": "11-14 (Sat)",
-  "eta": "11-19 (Thu)",
-  "tt": 5,
-  "status": "new",
-  "changedFields": [],
-  "service": "CVS2"
  },
  {
   "carrier": "SITC",
@@ -291,17 +247,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC MACAO",
-  "voyage": "2625N",
-  "etd": "11-20 (Fri)",
-  "eta": "11-27 (Fri)",
-  "tt": 7,
-  "status": "new",
-  "changedFields": [],
-  "service": "CVS2"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC XINGDE",
   "voyage": "2624S",
   "etd": "11-21 (Sat)",
@@ -382,17 +327,6 @@
   "status": "new",
   "changedFields": [],
   "service": "VTX6"
- },
- {
-  "carrier": "SITC",
-  "vessel": "KOTA NAZAR",
-  "voyage": "2646N",
-  "etd": "11-28 (Sat)",
-  "eta": "12-04 (Fri)",
-  "tt": 6,
-  "status": "new",
-  "changedFields": [],
-  "service": "CVS2"
  },
  {
   "carrier": "SITC",
