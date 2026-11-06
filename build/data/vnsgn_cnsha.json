@@ -1,6 +1,28 @@
 [
  {
   "carrier": "SITC",
+  "vessel": "PIYA BHUM",
+  "voyage": "099N",
+  "etd": "10-24 (Sat)",
+  "eta": "11-07 (Sat)",
+  "tt": 14,
+  "status": "departed",
+  "changedFields": [],
+  "service": "VTX4"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC HUIMING",
+  "voyage": "2613N",
+  "etd": "10-24 (Sat)",
+  "eta": "11-08 (Sun)",
+  "tt": 15,
+  "status": "departed",
+  "changedFields": [],
+  "service": "CBX2"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC SHENGDE",
   "voyage": "2623N",
   "etd": "10-25 (Sun)",
@@ -247,9 +269,9 @@
   "carrier": "SITC",
   "vessel": "SITC KANTO",
   "voyage": "2627N",
-  "etd": "11-18 (Wed)",
+  "etd": "11-19 (Thu)",
   "eta": "12-01 (Tue)",
-  "tt": 13,
+  "tt": 12,
   "status": "new",
   "changedFields": [],
   "service": "VTX6"
@@ -431,6 +453,17 @@
   "status": "new",
   "changedFields": [],
   "service": "VTX2"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "RESURGENCE",
+  "voyage": "2623N",
+  "etd": "12-01 (Tue)",
+  "eta": "12-13 (Sun)",
+  "tt": 12,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX8"
  },
  {
   "vessel": "LAEM CHABANG VOYAGER",

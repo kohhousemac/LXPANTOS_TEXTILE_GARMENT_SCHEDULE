@@ -23471,7 +23471,7 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-18"
+  "etd": "2026-11-19"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -23765,6 +23765,90 @@
   "port": "Shanghai",
   "role": "POD",
   "eta": "2026-12-15",
+  "etd": ""
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "carrier": "SITC",
+  "vessel": "PIYA BHUM",
+  "voyage": "099N",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-06",
+  "source": "p2p",
+  "seq": 1,
+  "port": "Ho Chi Minh",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-10-24"
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "carrier": "SITC",
+  "vessel": "PIYA BHUM",
+  "voyage": "099N",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-06",
+  "source": "p2p",
+  "seq": 2,
+  "port": "Shanghai",
+  "role": "POD",
+  "eta": "2026-11-07",
+  "etd": ""
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "carrier": "SITC",
+  "vessel": "SITC HUIMING",
+  "voyage": "2613N",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-06",
+  "source": "p2p",
+  "seq": 1,
+  "port": "Ho Chi Minh",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-10-24"
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "carrier": "SITC",
+  "vessel": "SITC HUIMING",
+  "voyage": "2613N",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-06",
+  "source": "p2p",
+  "seq": 2,
+  "port": "Shanghai",
+  "role": "POD",
+  "eta": "2026-11-08",
+  "etd": ""
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "carrier": "SITC",
+  "vessel": "RESURGENCE",
+  "voyage": "2623N",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-06",
+  "source": "p2p",
+  "seq": 1,
+  "port": "Ho Chi Minh",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-01"
+ },
+ {
+  "routeId": "vnsgn_cnsha",
+  "carrier": "SITC",
+  "vessel": "RESURGENCE",
+  "voyage": "2623N",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-06",
+  "source": "p2p",
+  "seq": 2,
+  "port": "Shanghai",
+  "role": "POD",
+  "eta": "2026-12-13",
   "etd": ""
  }
 ]
