@@ -1,60 +1,5 @@
 [
  {
-  "carrier": "SITC",
-  "vessel": "PIYA BHUM",
-  "voyage": "099N",
-  "etd": "10-24 (Sat)",
-  "eta": "11-07 (Sat)",
-  "tt": 14,
-  "status": "departed",
-  "changedFields": [],
-  "service": "VTX4"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC HUIMING",
-  "voyage": "2613N",
-  "etd": "10-24 (Sat)",
-  "eta": "11-08 (Sun)",
-  "tt": 15,
-  "status": "departed",
-  "changedFields": [],
-  "service": "CBX2"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC SHENGDE",
-  "voyage": "2623N",
-  "etd": "10-25 (Sun)",
-  "eta": "11-09 (Mon)",
-  "tt": 15,
-  "status": "departed",
-  "changedFields": [],
-  "service": "VTX3"
- },
- {
-  "carrier": "SITC",
-  "vessel": "RENOWN",
-  "voyage": "2637N",
-  "etd": "10-27 (Tue)",
-  "eta": "11-08 (Sun)",
-  "tt": 12,
-  "status": "departed",
-  "changedFields": [],
-  "service": "VTX8"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC CHANGMING",
-  "voyage": "2615N",
-  "etd": "10-30 (Fri)",
-  "eta": "11-13 (Fri)",
-  "tt": 14,
-  "status": "departed",
-  "changedFields": [],
-  "service": "CBX2"
- },
- {
   "carrier": "SINOKOR",
   "vessel": "KWANGYANG VOYAGER",
   "voyage": "2609N",
@@ -69,17 +14,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC RENDE",
-  "voyage": "2623N",
-  "etd": "11-05 (Thu)",
-  "eta": "11-19 (Thu)",
-  "tt": 14,
-  "status": "departed",
-  "changedFields": [],
-  "service": "VTX3"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC WENDE",
   "voyage": "2623N",
   "etd": "11-07 (Sat)",
@@ -90,17 +24,6 @@
   "service": "VTX2"
  },
  {
-  "carrier": "SITC",
-  "vessel": "SITC RUIMING",
-  "voyage": "2617N",
-  "etd": "11-08 (Sun)",
-  "eta": "11-22 (Sun)",
-  "tt": 14,
-  "status": "new",
-  "changedFields": [],
-  "service": "CBX2"
- },
- {
   "vessel": "HAPPY LUCKY",
   "voyage": "2641N",
   "etd": "11-09 (Mon)",
@@ -109,28 +32,6 @@
   "status": "unchanged",
   "changedFields": [],
   "carrier": "HEUNG-A / SINOKOR"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC CHANGDE",
-  "voyage": "2623N",
-  "etd": "11-09 (Mon)",
-  "eta": "11-22 (Sun)",
-  "tt": 13,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX3"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC HOCHIMINH",
-  "voyage": "2623N",
-  "etd": "11-10 (Tue)",
-  "eta": "11-22 (Sun)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX8"
  },
  {
   "carrier": "SITC",
@@ -145,39 +46,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC SHANGHAI",
-  "voyage": "2622S",
-  "etd": "11-10 (Tue)",
-  "eta": "11-21 (Sat)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX1"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC SHENGMING",
-  "voyage": "2615N",
-  "etd": "11-14 (Sat)",
-  "eta": "11-28 (Sat)",
-  "tt": 14,
-  "status": "new",
-  "changedFields": [],
-  "service": "CBX2"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC FUJIAN",
-  "voyage": "2627N",
-  "etd": "11-16 (Mon)",
-  "eta": "11-28 (Sat)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX3"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC MINGDE",
   "voyage": "2623N",
   "etd": "11-16 (Mon)",
@@ -186,51 +54,6 @@
   "status": "new",
   "changedFields": [],
   "service": "VTX2"
- },
- {
-  "vessel": "SAWASDEE ALTAIR",
-  "voyage": "2611N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-28 (Sat)",
-  "tt": 11,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "SINOKOR",
-  "bookingClosed": true,
-  "closedCarriers": "SINOKOR"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC DALIAN",
-  "voyage": "2635N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-29 (Sun)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX8"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC SHANDONG",
-  "voyage": "2624S",
-  "etd": "11-17 (Tue)",
-  "eta": "11-28 (Sat)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX1"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2627N",
-  "etd": "11-19 (Thu)",
-  "eta": "12-01 (Tue)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX6"
  },
  {
   "carrier": "KMTC",
@@ -247,17 +70,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC XINGDE",
-  "voyage": "2624S",
-  "etd": "11-21 (Sat)",
-  "eta": "12-02 (Wed)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX1"
- },
- {
-  "carrier": "SITC",
   "vessel": "SUNRISE DRAGON",
   "voyage": "2627N",
   "etd": "11-21 (Sat)",
@@ -266,39 +78,6 @@
   "status": "new",
   "changedFields": [],
   "service": "VTX2"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC SHENGDE",
-  "voyage": "2625N",
-  "etd": "11-22 (Sun)",
-  "eta": "12-05 (Sat)",
-  "tt": 13,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX3"
- },
- {
-  "carrier": "SITC",
-  "vessel": "RENOWN",
-  "voyage": "2639N",
-  "etd": "11-24 (Tue)",
-  "eta": "12-06 (Sun)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX8"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC QIUMING",
-  "voyage": "2615N",
-  "etd": "11-24 (Tue)",
-  "eta": "12-05 (Sat)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "CBX2"
  },
  {
   "carrier": "KMTC",
@@ -316,28 +95,6 @@
    "eta",
    "tt"
   ]
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2625N",
-  "etd": "11-26 (Thu)",
-  "eta": "12-09 (Wed)",
-  "tt": 13,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX6"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC SHUNDE",
-  "voyage": "2626S",
-  "etd": "11-28 (Sat)",
-  "eta": "12-09 (Wed)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX1"
  },
  {
   "vessel": "SAWASDEE MIMOSA",
@@ -389,17 +146,6 @@
   "service": "VTX2"
  },
  {
-  "carrier": "SITC",
-  "vessel": "RESURGENCE",
-  "voyage": "2623N",
-  "etd": "12-01 (Tue)",
-  "eta": "12-13 (Sun)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX8"
- },
- {
   "vessel": "LAEM CHABANG VOYAGER",
   "voyage": "2608N",
   "etd": "12-03 (Thu)",
@@ -408,16 +154,5 @@
   "status": "unchanged",
   "changedFields": [],
   "carrier": "HEUNG-A / SINOKOR"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC XIN",
-  "voyage": "2627N",
-  "etd": "12-03 (Thu)",
-  "eta": "12-15 (Tue)",
-  "tt": 12,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX6"
  }
 ]
