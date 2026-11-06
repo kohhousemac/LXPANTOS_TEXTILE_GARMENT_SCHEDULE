@@ -56,7 +56,7 @@
   "bookingClosed": true
  },
  {
-  "carrier": "NAMSUNG",
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2608N",
   "etd": "11-09 (Mon)",
@@ -114,6 +114,16 @@
   "changedFields": []
  },
  {
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "etd": "11-20 (Fri)",
+  "eta": "12-03 (Thu)",
+  "tt": 13,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
   "carrier": "NAMSUNG",
   "vessel": "INTERASIA ENGAGE",
   "voyage": "0046N",
@@ -144,7 +154,7 @@
   ]
  },
  {
-  "carrier": "NAMSUNG",
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
   "etd": "11-26 (Thu)",
@@ -194,5 +204,15 @@
    "eta",
    "carrier"
   ]
+ },
+ {
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609N",
+  "etd": "12-02 (Wed)",
+  "eta": "12-12 (Sat)",
+  "tt": 10,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
  }
 ]

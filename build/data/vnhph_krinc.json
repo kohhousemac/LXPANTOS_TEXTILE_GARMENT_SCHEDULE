@@ -16,7 +16,18 @@
   ]
  },
  {
-  "carrier": "KMTC",
+  "vessel": "KMTC POHANG",
+  "voyage": "2615N",
+  "etd": "11-05 (Thu)",
+  "eta": "11-10 (Tue)",
+  "tt": 5,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STAR EXPLORER",
   "voyage": "2621N",
   "etd": "11-05 (Thu)",
@@ -29,12 +40,23 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "STAR FRONTIER",
+  "vessel": "STAR EXPLORER",
   "voyage": "2621N",
+  "etd": "11-05 (Thu)",
+  "eta": "11-13 (Fri)",
+  "tt": 8,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "PANOCEAN",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "PANCON HARMONY",
+  "voyage": "2620N",
   "etd": "11-06 (Fri)",
-  "eta": "11-12 (Thu)",
-  "tt": 6,
+  "eta": "11-13 (Fri)",
+  "tt": 7,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -57,12 +79,12 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
-  "vessel": "PANCON HARMONY",
-  "voyage": "2620N",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "STAR FRONTIER",
+  "voyage": "2621N",
   "etd": "11-06 (Fri)",
-  "eta": "11-13 (Fri)",
-  "tt": 7,
+  "eta": "11-12 (Thu)",
+  "tt": 6,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -71,7 +93,7 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STARSHIP TAURUS",
   "voyage": "2619N",
   "etd": "11-07 (Sat)",
@@ -81,11 +103,10 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
+  "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2621N",
   "etd": "11-10 (Tue)",
@@ -112,20 +133,17 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2622N",
+  "vessel": "KMTC POHANG",
+  "voyage": "2616N",
   "etd": "11-19 (Thu)",
-  "eta": "11-25 (Wed)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "eta": "11-24 (Tue)",
+  "tt": 5,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "carrier": "NAMSUNG"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "PANCON HARMONY",
   "voyage": "2621N",
   "etd": "11-19 (Thu)",
@@ -138,7 +156,7 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2622N",
   "etd": "11-19 (Thu)",
@@ -151,21 +169,27 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "STAR FRONTIER",
+  "voyage": "2622N",
+  "etd": "11-19 (Thu)",
+  "eta": "11-25 (Wed)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
   "vessel": "STARSHIP TAURUS",
   "voyage": "2620N",
-  "etd": "11-20 (Fri)",
-  "eta": "11-25 (Wed)",
-  "tt": 5,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "etd": "11-19 (Thu)",
+  "eta": "11-23 (Mon)",
+  "tt": 4,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
  },
  {
   "carrier": "KMTC",
@@ -177,6 +201,23 @@
   "prevEtd": "11-18 (Wed)",
   "prevEta": "11-23 (Mon)",
   "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "STARSHIP TAURUS",
+  "voyage": "2620N",
+  "etd": "11-20 (Fri)",
+  "eta": "11-25 (Wed)",
+  "tt": 5,
+  "prevEtd": "11-19 (Thu)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 4,
   "status": "changed",
   "changedFields": [
    "etd",
@@ -199,7 +240,7 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2622N",
   "etd": "11-23 (Mon)",
@@ -226,7 +267,7 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STAR FRONTIER",
   "voyage": "2623N",
   "etd": "12-02 (Wed)",
@@ -242,7 +283,7 @@
   ]
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2623N",
   "etd": "12-03 (Thu)",

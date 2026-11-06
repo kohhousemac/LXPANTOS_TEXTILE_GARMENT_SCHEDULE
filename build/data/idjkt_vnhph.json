@@ -6,10 +6,10 @@
   "etd": "10-25 (Sun)",
   "eta": "11-04 (Wed)",
   "tt": 10,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
-  "status": "departed",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -22,7 +22,7 @@
   "prevEtd": "10-31 (Sat)",
   "prevEta": "11-10 (Tue)",
   "prevTt": 10,
-  "status": "departed",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -61,28 +61,8 @@
   "prevEtd": "11-08 (Sun)",
   "prevEta": "11-16 (Mon)",
   "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
- },
- {
-  "carrier": "EMC",
-  "vessel": "EVER CANDID",
-  "voyage": "0561-092N",
-  "etd": "11-15 (Sun)",
-  "eta": "11-23 (Mon)",
-  "tt": 8,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -96,6 +76,22 @@
   "prevTt": 10,
   "status": "unchanged",
   "changedFields": []
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "EVER CANDID",
+  "voyage": "0561-092N",
+  "etd": "11-14 (Sat)",
+  "eta": "11-23 (Mon)",
+  "tt": 9,
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 8,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "SITC",
@@ -120,12 +116,8 @@
   "prevEtd": "11-23 (Mon)",
   "prevEta": "11-30 (Mon)",
   "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -150,10 +142,7 @@
   "prevEtd": "11-29 (Sun)",
   "prevEta": "12-05 (Sat)",
   "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  }
 ]

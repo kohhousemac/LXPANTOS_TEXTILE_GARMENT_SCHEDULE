@@ -14,19 +14,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "STAR EXPLORER",
-  "voyage": "2621N",
-  "etd": "11-05 (Thu)",
-  "eta": "11-10 (Tue)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
   "vessel": "KMTC POHANG",
   "voyage": "2615N",
   "etd": "11-05 (Thu)",
@@ -42,26 +29,36 @@
   ]
  },
  {
-  "carrier": "KMTC",
-  "vessel": "PANCON HARMONY",
-  "voyage": "2620N",
-  "etd": "11-06 (Fri)",
-  "eta": "11-11 (Wed)",
+  "vessel": "KMTC POHANG",
+  "voyage": "2615N",
+  "etd": "11-05 (Thu)",
+  "eta": "11-12 (Thu)",
+  "tt": 7,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "STAR EXPLORER",
+  "voyage": "2621N",
+  "etd": "11-05 (Thu)",
+  "eta": "11-10 (Tue)",
   "tt": 5,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
+  "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "YM COOPERATION",
-  "voyage": "062N",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "PANCON HARMONY",
+  "voyage": "2620N",
   "etd": "11-06 (Fri)",
-  "eta": "11-14 (Sat)",
-  "tt": 8,
+  "eta": "11-11 (Wed)",
+  "tt": 5,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -84,7 +81,21 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "YM COOPERATION",
+  "voyage": "062N",
+  "etd": "11-06 (Fri)",
+  "eta": "11-14 (Sat)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STARSHIP TAURUS",
   "voyage": "2619N",
   "etd": "11-07 (Sat)",
@@ -94,11 +105,10 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
+  "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / PANOCEAN",
   "vessel": "SUNNY ACACIA",
   "voyage": "2617N",
   "etd": "11-11 (Wed)",
@@ -108,8 +118,7 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -139,7 +148,27 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "vessel": "SKY IRIS",
+  "voyage": "2617N",
+  "etd": "11-18 (Wed)",
+  "eta": "11-23 (Mon)",
+  "tt": 5,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "PANOCEAN"
+ },
+ {
+  "vessel": "KMTC POHANG",
+  "voyage": "2616N",
+  "etd": "11-19 (Thu)",
+  "eta": "11-25 (Wed)",
+  "tt": 6,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
+ },
+ {
+  "carrier": "KMTC / PANOCEAN",
   "vessel": "PANCON HARMONY",
   "voyage": "2621N",
   "etd": "11-19 (Thu)",
@@ -152,7 +181,17 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "vessel": "PANCON HARMONY",
+  "voyage": "2621N",
+  "etd": "11-19 (Thu)",
+  "eta": "11-30 (Mon)",
+  "tt": 11,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
+ },
+ {
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2622N",
   "etd": "11-19 (Thu)",
@@ -165,20 +204,14 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
   "vessel": "STARSHIP TAURUS",
   "voyage": "2620N",
-  "etd": "11-20 (Fri)",
-  "eta": "11-26 (Thu)",
+  "etd": "11-19 (Thu)",
+  "eta": "11-25 (Wed)",
   "tt": 6,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "11-25 (Wed)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
  },
  {
   "carrier": "KMTC",
@@ -199,10 +232,50 @@
  },
  {
   "carrier": "KMTC",
+  "vessel": "STARSHIP TAURUS",
+  "voyage": "2620N",
+  "etd": "11-20 (Fri)",
+  "eta": "11-26 (Thu)",
+  "tt": 6,
+  "prevEtd": "11-19 (Thu)",
+  "prevEta": "11-25 (Wed)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "KMTC",
   "vessel": "SKY TIARA",
   "voyage": "2620N",
   "etd": "11-21 (Sat)",
   "eta": "11-29 (Sun)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
+  "bookingClosed": true
+ },
+ {
+  "vessel": "SUNNY ACACIA",
+  "voyage": "2618N",
+  "etd": "11-24 (Tue)",
+  "eta": "12-01 (Tue)",
+  "tt": 7,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "PANOCEAN"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SKY MOON",
+  "voyage": "2620N",
+  "etd": "11-28 (Sat)",
+  "eta": "12-06 (Sun)",
   "tt": 8,
   "prevEtd": null,
   "prevEta": null,
@@ -228,18 +301,14 @@
   ]
  },
  {
-  "carrier": "KMTC",
-  "vessel": "SKY MOON",
-  "voyage": "2620N",
-  "etd": "11-28 (Sat)",
-  "eta": "12-06 (Sun)",
-  "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "vessel": "MARIA C",
+  "voyage": "0099N",
+  "etd": "11-29 (Sun)",
+  "eta": "12-05 (Sat)",
+  "tt": 6,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "carrier": "NAMSUNG"
  },
  {
   "carrier": "KMTC",
@@ -259,7 +328,7 @@
   ]
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2623N",
   "etd": "12-03 (Thu)",

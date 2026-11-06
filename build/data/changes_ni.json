@@ -385,5 +385,86 @@
   "change": "Removed",
   "old": "11-27 (Fri)",
   "new": ""
+ },
+ {
+  "id": "2026-11-06-0-Shanghai|OEL RUDRA",
+  "date": "2026-11-06",
+  "pol": "Shanghai",
+  "vessel": "OEL RUDRA",
+  "change": "ETD changed",
+  "old": "11-12 (Thu)",
+  "new": "11-13 (Fri)"
+ },
+ {
+  "id": "2026-11-06-1-Shanghai|NAVIOS JASMINE",
+  "date": "2026-11-06",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS JASMINE",
+  "change": "ETD changed",
+  "old": "11-28 (Sat)",
+  "new": "11-27 (Fri)"
+ },
+ {
+  "id": "2026-11-06-2-Shanghai|DYROS",
+  "date": "2026-11-06",
+  "pol": "Shanghai",
+  "vessel": "DYROS",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-05 (Sat)"
+ },
+ {
+  "id": "2026-11-06-3-Yantian|SAN FERNANDO",
+  "date": "2026-11-06",
+  "pol": "Yantian",
+  "vessel": "SAN FERNANDO",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-05 (Sat)"
+ },
+ {
+  "id": "2026-11-06-4-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-06",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "ETD changed",
+  "old": "11-27 (Fri)",
+  "new": "12-25 (Fri)"
+ },
+ {
+  "id": "2026-11-06-5-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-06",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "ETA changed",
+  "old": "01-07 (Thu)",
+  "new": "02-04 (Thu)"
+ },
+ {
+  "id": "2026-11-06-6-Ho Chi Minh|AMALFI BAY",
+  "date": "2026-11-06",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY",
+  "change": "ETD changed",
+  "old": "12-04 (Fri)",
+  "new": "01-01 (Fri)"
+ },
+ {
+  "id": "2026-11-06-7-Ho Chi Minh|AMALFI BAY",
+  "date": "2026-11-06",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY",
+  "change": "ETA changed",
+  "old": "01-14 (Thu)",
+  "new": "02-11 (Thu)"
+ },
+ {
+  "id": "2026-11-06-8-Shanghai|NAVIOS LAPIS",
+  "date": "2026-11-06",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS LAPIS",
+  "change": "Removed",
+  "old": "11-06 (Fri)",
+  "new": ""
  }
 ]

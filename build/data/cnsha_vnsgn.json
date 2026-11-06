@@ -6,10 +6,10 @@
   "etd": "10-26 (Mon)",
   "eta": "11-08 (Sun)",
   "tt": 13,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
-  "status": "departed",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -19,34 +19,8 @@
   "etd": "10-28 (Wed)",
   "eta": "11-05 (Thu)",
   "tt": 8,
-  "prevEtd": "",
-  "prevEta": "",
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "KOTA NAZAR",
-  "voyage": "2643S",
-  "etd": "10-29 (Thu)",
-  "eta": "11-04 (Wed)",
-  "tt": 6,
-  "prevEtd": "",
-  "prevEta": "",
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC CHANGDE",
-  "voyage": "2622S",
-  "etd": "10-29 (Thu)",
-  "eta": "11-08 (Sun)",
-  "tt": 10,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
   "status": "departed",
   "changedFields": []
@@ -58,23 +32,36 @@
   "etd": "10-29 (Thu)",
   "eta": "11-03 (Tue)",
   "tt": 5,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
-  "status": "departed",
+  "status": "unchanged",
   "changedFields": []
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC DALIAN",
-  "voyage": "2634S",
-  "etd": "11-03 (Tue)",
-  "eta": "11-16 (Mon)",
-  "tt": 13,
-  "prevEtd": "11-03 (Tue)",
-  "prevEta": "11-16 (Mon)",
-  "prevTt": 13,
-  "status": "departed",
+  "vessel": "KOTA NAZAR",
+  "voyage": "2643S",
+  "etd": "10-29 (Thu)",
+  "eta": "11-04 (Wed)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC CHANGDE",
+  "voyage": "2622S",
+  "etd": "10-29 (Thu)",
+  "eta": "11-08 (Sun)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -87,7 +74,20 @@
   "prevEtd": "11-02 (Mon)",
   "prevEta": "11-07 (Sat)",
   "prevTt": 5,
-  "status": "departed",
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC DALIAN",
+  "voyage": "2634S",
+  "etd": "11-03 (Tue)",
+  "eta": "11-16 (Mon)",
+  "tt": 13,
+  "prevEtd": "11-03 (Tue)",
+  "prevEta": "11-16 (Mon)",
+  "prevTt": 13,
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -100,7 +100,7 @@
   "prevEtd": "11-04 (Wed)",
   "prevEta": "11-08 (Sun)",
   "prevTt": 4,
-  "status": "departed",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -113,11 +113,8 @@
   "prevEtd": "11-03 (Tue)",
   "prevEta": "11-07 (Sat)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -126,10 +123,10 @@
   "etd": "11-06 (Fri)",
   "eta": "11-15 (Sun)",
   "tt": 9,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -155,11 +152,8 @@
   "prevEtd": "11-02 (Mon)",
   "prevEta": "11-07 (Sat)",
   "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -171,27 +165,21 @@
   "prevEtd": "11-06 (Fri)",
   "prevEta": "11-13 (Fri)",
   "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
-  "carrier": "EMC",
-  "vessel": "EVER CENTER",
-  "voyage": "0396-090S",
-  "etd": "11-11 (Wed)",
-  "eta": "11-17 (Tue)",
-  "tt": 6,
+  "carrier": "SITC",
+  "vessel": "SITC HUIMING",
+  "voyage": "2614S",
+  "etd": "11-10 (Tue)",
+  "eta": "11-15 (Sun)",
+  "tt": 5,
   "prevEtd": "11-10 (Tue)",
-  "prevEta": "11-16 (Mon)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEta": "11-14 (Sat)",
+  "prevTt": 4,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -208,22 +196,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC HUIMING",
-  "voyage": "2614S",
-  "etd": "11-10 (Tue)",
-  "eta": "11-15 (Sun)",
-  "tt": 5,
-  "prevEtd": "11-10 (Tue)",
-  "prevEta": "11-14 (Sat)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC SHANDONG",
   "voyage": "2624S",
   "etd": "11-11 (Wed)",
@@ -232,11 +204,8 @@
   "prevEtd": "11-10 (Tue)",
   "prevEta": "11-15 (Sun)",
   "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -248,11 +217,21 @@
   "prevEtd": "11-09 (Mon)",
   "prevEta": "11-21 (Sat)",
   "prevTt": 12,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "EVER CENTER",
+  "voyage": "0396-090S",
+  "etd": "11-11 (Wed)",
+  "eta": "11-17 (Tue)",
+  "tt": 6,
+  "prevEtd": "11-10 (Tue)",
+  "prevEta": "11-16 (Mon)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -290,11 +269,8 @@
   "prevEtd": "11-15 (Sun)",
   "prevEta": "11-19 (Thu)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -306,11 +282,8 @@
   "prevEtd": "11-15 (Sun)",
   "prevEta": "11-19 (Thu)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -379,18 +352,30 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "SITC WENDE",
+  "voyage": "2624S",
+  "etd": "11-24 (Tue)",
+  "eta": "11-29 (Sun)",
+  "tt": 5,
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "11-30 (Mon)",
+  "prevTt": 7,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC RUIMING",
   "voyage": "2618S",
-  "etd": "11-23 (Mon)",
+  "etd": "11-24 (Tue)",
   "eta": "11-28 (Sat)",
-  "tt": 5,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 4,
+  "tt": 4,
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 5,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
    "tt"
   ]
  },
@@ -408,23 +393,6 @@
   "changedFields": []
  },
  {
-  "carrier": "SITC",
-  "vessel": "SITC WENDE",
-  "voyage": "2624S",
-  "etd": "11-24 (Tue)",
-  "eta": "11-29 (Sun)",
-  "tt": 5,
-  "prevEtd": "11-23 (Mon)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
   "carrier": "EMC",
   "vessel": "UNI-POPULAR",
   "voyage": "0398-520S",
@@ -434,11 +402,8 @@
   "prevEtd": "11-25 (Wed)",
   "prevEta": "11-29 (Sun)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -450,23 +415,7 @@
   "prevEtd": "11-28 (Sat)",
   "prevEta": "12-04 (Fri)",
   "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "EMC",
-  "vessel": "EVER CENTER",
-  "voyage": "0400-091S",
-  "etd": "12-01 (Tue)",
-  "eta": "12-09 (Wed)",
-  "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -479,11 +428,8 @@
   "prevEtd": "11-26 (Thu)",
   "prevEta": "12-01 (Tue)",
   "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -495,11 +441,8 @@
   "prevEtd": "11-29 (Sun)",
   "prevEta": "12-04 (Fri)",
   "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -508,10 +451,23 @@
   "etd": "12-01 (Tue)",
   "eta": "12-14 (Mon)",
   "tt": 13,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "EVER CENTER",
+  "voyage": "0400-091S",
+  "etd": "12-01 (Tue)",
+  "eta": "12-09 (Wed)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -524,12 +480,8 @@
   "prevEtd": "12-01 (Tue)",
   "prevEta": "12-04 (Fri)",
   "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -538,8 +490,164 @@
   "etd": "12-03 (Thu)",
   "eta": "12-15 (Tue)",
   "tt": 12,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC MINGDE",
+  "voyage": "2624S",
+  "etd": "12-05 (Sat)",
+  "eta": "12-12 (Sat)",
+  "tt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC QIUMING",
+  "voyage": "2616S",
+  "etd": "12-07 (Mon)",
+  "eta": "12-12 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC MACAO",
+  "voyage": "2626S",
+  "etd": "12-07 (Mon)",
+  "eta": "12-12 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC SHANDONG",
+  "voyage": "2626S",
+  "etd": "12-08 (Tue)",
+  "eta": "12-14 (Mon)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "RENOWN",
+  "voyage": "2640S",
+  "etd": "12-08 (Tue)",
+  "eta": "12-21 (Mon)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SUNRISE DRAGON",
+  "voyage": "2628S",
+  "etd": "12-11 (Fri)",
+  "eta": "12-18 (Fri)",
+  "tt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC RUNDE",
+  "voyage": "2626S",
+  "etd": "12-11 (Fri)",
+  "eta": "12-22 (Tue)",
+  "tt": 11,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "KOTA NAZAR",
+  "voyage": "2650S",
+  "etd": "12-12 (Sat)",
+  "eta": "12-18 (Fri)",
+  "tt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC XINGDE",
+  "voyage": "2626S",
+  "etd": "12-13 (Sun)",
+  "eta": "12-18 (Fri)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YUANMING",
+  "voyage": "2618S",
+  "etd": "12-14 (Mon)",
+  "eta": "12-19 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC WENDE",
+  "voyage": "2626S",
+  "etd": "12-18 (Fri)",
+  "eta": "12-25 (Fri)",
+  "tt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC HUIMING",
+  "voyage": "2616S",
+  "etd": "12-20 (Sun)",
+  "eta": "12-25 (Fri)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
   "status": "new",
   "changedFields": []

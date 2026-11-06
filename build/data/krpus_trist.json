@@ -7,13 +7,10 @@
   "eta": "12-06 (Sun)",
   "tt": 30,
   "prevEtd": "11-06 (Fri)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 29,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 30,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "YANG MING",
@@ -23,13 +20,10 @@
   "eta": "12-11 (Fri)",
   "tt": 33,
   "prevEtd": "11-08 (Sun)",
-  "prevEta": "12-09 (Wed)",
-  "prevTt": 31,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 33,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "YANG MING",
@@ -38,14 +32,11 @@
   "etd": "11-18 (Wed)",
   "eta": "12-20 (Sun)",
   "tt": 32,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "12-19 (Sat)",
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "12-20 (Sun)",
   "prevTt": 32,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "YANG MING",
@@ -54,15 +45,11 @@
   "etd": "11-20 (Fri)",
   "eta": "12-25 (Fri)",
   "tt": 35,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "12-23 (Wed)",
-  "prevTt": 34,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "12-25 (Fri)",
+  "prevTt": 35,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "YANG MING",
@@ -71,14 +58,11 @@
   "etd": "12-04 (Fri)",
   "eta": "01-08 (Fri)",
   "tt": 35,
-  "prevEtd": "12-02 (Wed)",
+  "prevEtd": "12-04 (Fri)",
   "prevEta": "01-08 (Fri)",
-  "prevTt": 37,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevTt": 35,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "YANG MING",
@@ -90,7 +74,7 @@
   "prevEtd": "12-20 (Sun)",
   "prevEta": "01-25 (Mon)",
   "prevTt": 36,
-  "status": "same",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -100,15 +84,11 @@
   "etd": "12-23 (Wed)",
   "eta": "01-28 (Thu)",
   "tt": 36,
-  "prevEtd": "12-28 (Mon)",
-  "prevEta": "02-05 (Fri)",
-  "prevTt": 39,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": "12-23 (Wed)",
+  "prevEta": "01-28 (Thu)",
+  "prevTt": 36,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "YANG MING",
@@ -120,7 +100,7 @@
   "prevEtd": "01-02 (Sat)",
   "prevEta": "02-10 (Wed)",
   "prevTt": 39,
-  "status": "same",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -133,7 +113,7 @@
   "prevEtd": "01-03 (Sun)",
   "prevEta": "02-10 (Wed)",
   "prevTt": 38,
-  "status": "same",
+  "status": "unchanged",
   "changedFields": []
  }
 ]

@@ -13,6 +13,27 @@
   "changedFields": []
  },
  {
+  "vessel": "HAPPY LUCKY",
+  "voyage": "2641N",
+  "etd": "11-09 (Mon)",
+  "eta": "11-15 (Sun)",
+  "tt": 6,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "SAWASDEE ALTAIR",
+  "voyage": "2611N",
+  "etd": "11-17 (Tue)",
+  "eta": "11-28 (Sat)",
+  "tt": 11,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "SINOKOR",
+  "bookingClosed": true
+ },
+ {
   "carrier": "KMTC",
   "vessel": "KMTC SHANGHAI",
   "voyage": "2609N",
@@ -43,6 +64,27 @@
   ]
  },
  {
+  "vessel": "SAWASDEE MIMOSA",
+  "voyage": "2611N",
+  "etd": "11-29 (Sun)",
+  "eta": "12-08 (Tue)",
+  "tt": 9,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "SINOKOR",
+  "bookingClosed": true
+ },
+ {
+  "vessel": "CHENNAI VOYAGER",
+  "voyage": "2610N",
+  "etd": "12-01 (Tue)",
+  "eta": "12-07 (Mon)",
+  "tt": 6,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
   "carrier": "KMTC",
   "vessel": "KMTC HAIPHONG",
   "voyage": "2609N",
@@ -57,6 +99,16 @@
    "etd",
    "eta"
   ]
+ },
+ {
+  "vessel": "LAEM CHABANG VOYAGER",
+  "voyage": "2608N",
+  "etd": "12-03 (Thu)",
+  "eta": "12-07 (Mon)",
+  "tt": 4,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "SITC",

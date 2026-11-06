@@ -27,6 +27,16 @@
   "bookingClosed": true
  },
  {
+  "vessel": "SKY ORION",
+  "voyage": "2613S",
+  "etd": "11-08 (Sun)",
+  "eta": "11-11 (Wed)",
+  "tt": 3,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
   "carrier": "KMTC",
   "vessel": "CA MANILA",
   "voyage": "2616S",
@@ -41,7 +51,17 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
+  "vessel": "CA MANILA",
+  "voyage": "2616S",
+  "etd": "11-11 (Wed)",
+  "eta": "11-14 (Sat)",
+  "tt": 3,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC PUSAN",
   "voyage": "2613S",
   "etd": "11-12 (Thu)",
@@ -53,6 +73,16 @@
   "status": "unchanged",
   "changedFields": [],
   "bookingClosed": true
+ },
+ {
+  "vessel": "SAWASDEE VEGA",
+  "voyage": "2614S",
+  "etd": "11-14 (Sat)",
+  "eta": "11-16 (Mon)",
+  "tt": 2,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "KMTC",
@@ -111,6 +141,27 @@
   "bookingClosed": true
  },
  {
+  "vessel": "STARSHIP URSA",
+  "voyage": "2615S",
+  "etd": "11-19 (Thu)",
+  "eta": "11-21 (Sat)",
+  "tt": 2,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG",
+  "bookingClosed": true
+ },
+ {
+  "vessel": "SAWASDEE ATLANTIC",
+  "voyage": "2612S",
+  "etd": "11-21 (Sat)",
+  "eta": "11-23 (Mon)",
+  "tt": 2,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
   "carrier": "KMTC",
   "vessel": "SYMEON P",
   "voyage": "038S",
@@ -128,6 +179,19 @@
   "bookingClosed": true
  },
  {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "vessel": "KMTC TAIPEIS",
+  "voyage": "2614S",
+  "etd": "11-23 (Mon)",
+  "eta": "11-26 (Thu)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
   "carrier": "KMTC",
   "vessel": "PANCON BRIDGE",
   "voyage": "2615S",
@@ -141,17 +205,14 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "KMTC TAIPEIS",
-  "voyage": "2614S",
+  "vessel": "PANCON BRIDGE",
+  "voyage": "2615S",
   "etd": "11-23 (Mon)",
   "eta": "11-26 (Thu)",
   "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "carrier": "NAMSUNG"
  },
  {
   "carrier": "KMTC",
@@ -169,6 +230,26 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "vessel": "KMTC JAKARTA",
+  "voyage": "2613S",
+  "etd": "11-26 (Thu)",
+  "eta": "11-28 (Sat)",
+  "tt": 2,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "SKY ORION",
+  "voyage": "2614S",
+  "etd": "11-28 (Sat)",
+  "eta": "12-01 (Tue)",
+  "tt": 3,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "KMTC",
@@ -199,6 +280,16 @@
    "eta",
    "tt"
   ]
+ },
+ {
+  "vessel": "KMTC PUSAN",
+  "voyage": "2614S",
+  "etd": "12-02 (Wed)",
+  "eta": "12-05 (Sat)",
+  "tt": 3,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
  },
  {
   "carrier": "KMTC",

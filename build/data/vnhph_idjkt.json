@@ -6,8 +6,8 @@
   "etd": "10-20 (Tue)",
   "eta": "10-31 (Sat)",
   "tt": 11,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
   "status": "departed",
   "changedFields": []
@@ -22,7 +22,7 @@
   "prevEtd": "10-28 (Wed)",
   "prevEta": "11-06 (Fri)",
   "prevTt": 9,
-  "status": "departed",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -35,11 +35,8 @@
   "prevEtd": "11-04 (Wed)",
   "prevEta": "11-13 (Fri)",
   "prevTt": 9,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -87,10 +84,10 @@
   "etd": "12-02 (Wed)",
   "eta": "12-11 (Fri)",
   "tt": 9,
-  "prevEtd": "",
-  "prevEta": "",
+  "prevEtd": null,
+  "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  }
 ]

@@ -5,11 +5,11 @@
   "pol": "Ho Chi Minh",
   "pod": "Jakarta",
   "group": "vn_id",
-  "updateDate": "11/05",
-  "newCount": 2,
-  "changedCount": 11,
-  "excludedCount": 0,
-  "vesselCount": 25
+  "updateDate": "11/06",
+  "newCount": 8,
+  "changedCount": 0,
+  "excludedCount": 13,
+  "vesselCount": 29
  },
  {
   "routeId": "vnsgn_idsrg",
@@ -17,9 +17,9 @@
   "pol": "Ho Chi Minh",
   "pod": "Semarang",
   "group": "vn_id",
-  "updateDate": "11/05",
+  "updateDate": "11/06",
   "newCount": 0,
-  "changedCount": 2,
+  "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 4
  },
@@ -29,9 +29,9 @@
   "pol": "Haiphong",
   "pod": "Jakarta",
   "group": "vn_id",
-  "updateDate": "11/05",
-  "newCount": 1,
-  "changedCount": 1,
+  "updateDate": "11/06",
+  "newCount": 0,
+  "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 7
  },
@@ -41,9 +41,9 @@
   "pol": "Jakarta",
   "pod": "Haiphong",
   "group": "vn_id",
-  "updateDate": "11/05",
+  "updateDate": "11/06",
   "newCount": 0,
-  "changedCount": 4,
+  "changedCount": 1,
   "excludedCount": 0,
   "vesselCount": 11
  },
@@ -53,11 +53,11 @@
   "pol": "Shanghai",
   "pod": "Haiphong",
   "group": "cn",
-  "updateDate": "11/05",
-  "newCount": 2,
-  "changedCount": 13,
+  "updateDate": "11/06",
+  "newCount": 10,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 29
+  "vesselCount": 39
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -65,11 +65,11 @@
   "pol": "Shanghai",
   "pod": "Ho Chi Minh",
   "group": "cn",
-  "updateDate": "11/05",
-  "newCount": 4,
-  "changedCount": 16,
+  "updateDate": "11/06",
+  "newCount": 12,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 38
+  "vesselCount": 50
  },
  {
   "routeId": "cnshk_vnsgn",
@@ -101,9 +101,9 @@
   "pol": "Keelung",
   "pod": "Haiphong",
   "group": "tw",
-  "updateDate": "11/05",
-  "newCount": 6,
-  "changedCount": 8,
+  "updateDate": "11/06",
+  "newCount": 0,
+  "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 21
  },
@@ -209,11 +209,11 @@
   "pol": "Busan",
   "pod": "Ho Chi Minh",
   "group": "kr_pol",
-  "updateDate": "11/05",
-  "newCount": 0,
-  "changedCount": 7,
-  "excludedCount": 26,
-  "vesselCount": 18
+  "updateDate": "11/06",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 2,
+  "vesselCount": 9
  },
  {
   "routeId": "krpus_idjkt",
@@ -221,11 +221,11 @@
   "pol": "Busan",
   "pod": "Jakarta",
   "group": "kr_pol",
-  "updateDate": "11/05",
-  "newCount": 1,
-  "changedCount": 2,
+  "updateDate": "11/06",
+  "newCount": 2,
+  "changedCount": 4,
   "excludedCount": 12,
-  "vesselCount": 3
+  "vesselCount": 8
  },
  {
   "routeId": "krpus_trist",
@@ -233,10 +233,10 @@
   "pol": "Busan",
   "pod": "Istanbul",
   "group": "med",
-  "updateDate": "11/05",
+  "updateDate": "11/06",
   "newCount": 0,
-  "changedCount": 6,
-  "excludedCount": 2,
+  "changedCount": 0,
+  "excludedCount": 0,
   "vesselCount": 9
  },
  {
@@ -257,11 +257,11 @@
   "pol": "Haiphong",
   "pod": "Shanghai",
   "group": "cn",
-  "updateDate": "11/05",
-  "newCount": 2,
-  "changedCount": 2,
+  "updateDate": "11/06",
+  "newCount": 8,
+  "changedCount": 0,
   "excludedCount": 0,
-  "vesselCount": 19
+  "vesselCount": 27
  },
  {
   "routeId": "idjkt_cnsha",
@@ -317,11 +317,11 @@
   "pol": "Busan",
   "pod": "Damietta",
   "group": "med",
-  "updateDate": "11/05",
-  "newCount": 2,
+  "updateDate": "11/06",
+  "newCount": 0,
   "changedCount": 0,
-  "excludedCount": 0,
-  "vesselCount": 2
+  "excludedCount": 2,
+  "vesselCount": 0
  },
  {
   "routeId": "krpus_egsok",
@@ -329,11 +329,11 @@
   "pol": "Busan",
   "pod": "Ain Sukhna",
   "group": "med",
-  "updateDate": "11/05",
-  "newCount": 3,
-  "changedCount": 0,
+  "updateDate": "11/06",
+  "newCount": 26,
+  "changedCount": 2,
   "excludedCount": 0,
-  "vesselCount": 3
+  "vesselCount": 29
  },
  {
   "routeId": "krpus_egaly",
@@ -341,11 +341,11 @@
   "pol": "Busan",
   "pod": "Alexandria",
   "group": "med",
-  "updateDate": "11/05",
-  "newCount": 3,
-  "changedCount": 0,
+  "updateDate": "11/06",
+  "newCount": 7,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 3
+  "vesselCount": 10
  },
  {
   "routeId": "krpus_egpsd",
@@ -353,11 +353,11 @@
   "pol": "Busan",
   "pod": "Port Said",
   "group": "med",
-  "updateDate": "11/05",
-  "newCount": 3,
-  "changedCount": 0,
+  "updateDate": "11/06",
+  "newCount": 17,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 3
+  "vesselCount": 20
  },
  {
   "routeId": "cnshk_krinc",

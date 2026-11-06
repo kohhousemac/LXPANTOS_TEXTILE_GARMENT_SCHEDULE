@@ -22,12 +22,8 @@
   "prevEtd": "11-12 (Thu)",
   "prevEta": "11-20 (Fri)",
   "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",
@@ -52,12 +48,8 @@
   "prevEtd": "11-24 (Tue)",
   "prevEta": "12-01 (Tue)",
   "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",

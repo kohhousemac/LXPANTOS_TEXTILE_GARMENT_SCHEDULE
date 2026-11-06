@@ -17,7 +17,17 @@
   "bookingClosed": true
  },
  {
-  "carrier": "KMTC",
+  "vessel": "KMTC SHIMIZU",
+  "voyage": "2610S",
+  "etd": "11-07 (Sat)",
+  "eta": "11-13 (Fri)",
+  "tt": 6,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "etd": "11-12 (Thu)",
@@ -27,8 +37,17 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "vessel": "KMTC HOCHIMINH",
+  "voyage": "2611S",
+  "etd": "11-17 (Tue)",
+  "eta": "11-26 (Thu)",
+  "tt": 9,
+  "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "carrier": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "KMTC",
@@ -63,5 +82,15 @@
    "tt"
   ],
   "bookingClosed": true
+ },
+ {
+  "vessel": "BELAWAN",
+  "voyage": "2611S",
+  "etd": "11-24 (Tue)",
+  "eta": "12-02 (Wed)",
+  "tt": 8,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
  }
 ]

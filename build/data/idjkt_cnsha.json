@@ -26,7 +26,7 @@
   "changedFields": []
  },
  {
-  "carrier": "SINOKOR",
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2608N",
   "etd": "11-09 (Mon)",
@@ -42,7 +42,57 @@
   ]
  },
  {
-  "carrier": "SINOKOR",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2608N",
+  "etd": "11-09 (Mon)",
+  "eta": "11-24 (Tue)",
+  "tt": 15,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
+ },
+ {
+  "vessel": "SHANGHAI VOYAGER",
+  "voyage": "2609N",
+  "etd": "11-12 (Thu)",
+  "eta": "11-23 (Mon)",
+  "tt": 11,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "SAWASDEE SUNRISE",
+  "voyage": "2612N",
+  "etd": "11-13 (Fri)",
+  "eta": "11-24 (Tue)",
+  "tt": 11,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "SAWASDEE SHANGHAI",
+  "voyage": "2640N",
+  "etd": "11-15 (Sun)",
+  "eta": "11-29 (Sun)",
+  "tt": 14,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "HOCHIMINH VOYAGER",
+  "voyage": "2610N",
+  "etd": "11-19 (Thu)",
+  "eta": "12-02 (Wed)",
+  "tt": 13,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "etd": "11-20 (Fri)",
@@ -55,7 +105,37 @@
   "changedFields": []
  },
  {
-  "carrier": "SINOKOR",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "etd": "11-20 (Fri)",
+  "eta": "12-06 (Sun)",
+  "tt": 16,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
+ },
+ {
+  "vessel": "CHENNAI VOYAGER",
+  "voyage": "2610N",
+  "etd": "11-24 (Tue)",
+  "eta": "12-07 (Mon)",
+  "tt": 13,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "LAEM CHABANG VOYAGER",
+  "voyage": "2608N",
+  "etd": "11-26 (Thu)",
+  "eta": "12-07 (Mon)",
+  "tt": 11,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
   "etd": "11-26 (Thu)",
@@ -71,7 +151,37 @@
   ]
  },
  {
-  "carrier": "SINOKOR",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609N",
+  "etd": "11-26 (Thu)",
+  "eta": "12-10 (Thu)",
+  "tt": 14,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "NAMSUNG"
+ },
+ {
+  "vessel": "INCHEON VOYAGER",
+  "voyage": "2609N",
+  "etd": "11-29 (Sun)",
+  "eta": "12-12 (Sat)",
+  "tt": 13,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "vessel": "HAPPY LUCKY",
+  "voyage": "2646N",
+  "etd": "12-01 (Tue)",
+  "eta": "12-13 (Sun)",
+  "tt": 12,
+  "status": "unchanged",
+  "changedFields": [],
+  "carrier": "HEUNG-A / SINOKOR"
+ },
+ {
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
   "etd": "12-02 (Wed)",
