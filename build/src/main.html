@@ -28,7 +28,7 @@
       item.appendChild(dot);
       item.appendChild(document.createTextNode(c));
       return item;
-    }));
+    }).concat([(function () { var k = document.createElement('span'); k.className = 'lx-legend-item lx-legend-bkg'; k.textContent = '⛔ = 부킹 불가'; return k; })()]));
   })();
 
   var parseKey = function (s) {
@@ -275,6 +275,15 @@
     tag.className = 'lx-tag';
     tag.textContent = v.carrier;
     tdCarrier.appendChild(tag);
+    if (v.bookingClosed) {
+      var bk = document.createElement('span');
+      bk.className = 'lx-bkg-closed';
+      bk.textContent = '⛔';
+      bk.title = '부킹 불가';
+      bk.setAttribute('aria-label', '부킹 불가');
+      tdCarrier.appendChild(bk);
+      tr.classList.add('is-bkg-closed');
+    }
 
     var tdVessel = document.createElement('td');
     tdVessel.className = 'lx-vessel';

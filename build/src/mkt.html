@@ -1,0 +1,62 @@
+<script>
+// ---- Per-lane market rate mini charts (datasets/market_rate_40, USD per 40ft) ----
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function money(v) { return '$' + Number(v).toLocaleString('en-US'); }
+  function draw(box, id) {
+    var g = dash.data('market_rate_40');
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren();
+    if (g.status !== 'ok') { var p0 = document.createElement('p'); p0.className = 'lx-mkt-empty'; p0.textContent = g.status === 'error' ? '시장가 데이터를 불러오지 못했습니다' : '불러오는 중…'; box.appendChild(p0); return; }
+    var rows = (g.data || []).filter(function (r) { return r.routeId === id && typeof r.ft40 === 'number'; })
+      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+    if (!rows.length) { var p1 = document.createElement('p'); p1.className = 'lx-mkt-empty'; p1.textContent = '시장가 수집 대기'; box.appendChild(p1); return; }
+    var last = rows[rows.length - 1], prev = rows.length > 1 ? rows[rows.length - 2] : null;
+    var head = document.createElement('div'); head.className = 'lx-mkt-head';
+    var big = document.createElement('span'); big.className = 'lx-mkt-val'; big.textContent = money(last.ft40);
+    head.appendChild(big);
+    if (prev) {
+      var d = last.ft40 - prev.ft40, ch = document.createElement('span');
+      ch.className = 'lx-mkt-chg ' + (d > 0 ? 'is-up' : d < 0 ? 'is-down' : 'is-flat');
+      ch.textContent = (d > 0 ? '▲ ' : d < 0 ? '▼ ' : '– ') + money(Math.abs(d)) + ' vs ' + (prev.note || prev.date.slice(0, 7));
+      head.appendChild(ch);
+    }
+    var meta = document.createElement('span'); meta.className = 'lx-mkt-meta';
+    meta.textContent = "40' · " + (last.terms || '') + ' · ' + last.date.replace(/-/g, '/') + (last.note ? ' (' + last.note + ')' : '');
+    head.appendChild(meta);
+    box.appendChild(head);
+
+    var W = 640, H = 150, L = 46, R = 10, T = 10, B = 22;
+    var ts = rows.map(function (r) { return new Date(r.date + 'T00:00').getTime(); });
+    var t0 = ts[0], t1 = ts[ts.length - 1] === t0 ? t0 + 1 : ts[ts.length - 1];
+    var vs = rows.map(function (r) { return r.ft40; });
+    var vmin = 0, vmax = Math.max.apply(null, vs) * 1.1 || 1;
+    var x = function (t) { return L + (t - t0) / (t1 - t0) * (W - L - R); };
+    var y = function (v) { return T + (1 - (v - vmin) / (vmax - vmin)) * (H - T - B); };
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, class: 'lx-mkt-svg', role: 'img', 'aria-label': 'Market rate trend, latest ' + money(last.ft40) });
+    var step = Math.pow(10, Math.floor(Math.log10(vmax / 3))); var nice = [1, 2, 5, 10].map(function (m) { return m * step; }).filter(function (s) { return vmax / s <= 5; })[0] || step * 10;
+    for (var v = 0; v <= vmax; v += nice) {
+      svg.appendChild(el('line', { x1: L, x2: W - R, y1: y(v), y2: y(v), class: 'lx-mkt-grid' }));
+      var tx = el('text', { x: L - 6, y: y(v) + 3, 'text-anchor': 'end', class: 'lx-mkt-axis' }); tx.textContent = v >= 1000 ? (v / 1000) + 'k' : v; svg.appendChild(tx);
+    }
+    var y0 = new Date(t0).getFullYear(), y1 = new Date(t1).getFullYear();
+    for (var yr = y0 + 1; yr <= y1; yr++) {
+      var tt = new Date(yr, 0, 1).getTime(); if (tt <= t0 || tt >= t1) continue;
+      var lb = el('text', { x: x(tt), y: H - 6, 'text-anchor': 'middle', class: 'lx-mkt-axis' }); lb.textContent = yr; svg.appendChild(lb);
+    }
+    var d1 = rows.map(function (r, i) { return (i ? 'L' : 'M') + x(ts[i]).toFixed(1) + ',' + y(r.ft40).toFixed(1); }).join('');
+    svg.appendChild(el('path', { d: d1 + 'L' + x(ts[ts.length - 1]).toFixed(1) + ',' + y(0) + 'L' + x(ts[0]).toFixed(1) + ',' + y(0) + 'Z', class: 'lx-mkt-area' }));
+    svg.appendChild(el('path', { d: d1, class: 'lx-mkt-line' }));
+    rows.forEach(function (r, i) {
+      var c = el('circle', { cx: x(ts[i]), cy: y(r.ft40), r: i === rows.length - 1 ? 3.5 : 6, class: i === rows.length - 1 ? 'lx-mkt-last' : 'lx-mkt-hit' });
+      var ti = el('title', {}); ti.textContent = r.date + (r.note ? ' ' + r.note : '') + ' · ' + money(r.ft40); c.appendChild(ti); svg.appendChild(c);
+    });
+    box.appendChild(svg);
+  }
+  Array.prototype.slice.call(document.querySelectorAll('[data-draw^="mkt-"]')).forEach(function (e) {
+    var id = e.getAttribute('data-draw').slice(4);
+    dash.draw('mkt-' + id, function (box) { draw(box, id); });
+  });
+})();
+</script>

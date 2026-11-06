@@ -36,6 +36,12 @@ ASIA = [  # (pol code, [(pod code, route id), ...])
 PC_IDS = {'cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'idjkt_vnhph', 'vnsgn_idjkt'}
 PC_PANEL = '''        <div class="lx-pc-wrap"><p class="lx-mkt-title">Port call schedule<span class="lx-mkt-sub">모선별 기항 일정 · 위 스케줄 행을 누르면 바뀝니다</span></p><div class="lx-pc dash-skeleton" data-draw="pc-{route}" data-source="port_calls_asia"></div></div>'''
 
+MKT_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Market rate<span class="lx-mkt-sub">시장가 추이 · USD / 40ft</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-{route}" data-source="market_rate_40"></div></div>'''
+def _mkt_ids():
+    try: return {r.get('routeId') for r in json.loads((DATA / 'market_rate_40.json').read_text(encoding='utf-8'))}
+    except Exception: return set()
+MKT_IDS = _mkt_ids()
+
 def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     h = ' hidden' if hidden else ''
     return f'''
@@ -61,6 +67,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
             <tbody class="dash-skeleton" data-draw="rows-{route}" data-source="{route}"></tbody>
           </table>
         </div>
+{MKT_PANEL.format(route=route) if route in MKT_IDS else ''}
 {PC_PANEL.format(route=route) if not route.startswith(('krpus_trist', 'krpus_eg')) else ''}
         <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-{route}" data-source="berthing_wait"></div>
       </section>
@@ -211,6 +218,8 @@ NI_PAGE = '''
       </div>
       <p class="empty" id="ni-sail-empty" hidden>No sailings to display.</p>
     </section>
+
+    <section class="card" id="ni-market"><div class="lx-mkt-wrap lx-mkt-card"><p class="lx-mkt-title">Shanghai → Corinto Market rate<span class="lx-mkt-sub">시장가 추이 · USD / 40ft</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-cnsha_nicto" data-source="market_rate_40"></div></div></section>
 
     <section class="card" id="ni-transit">
       <h2>Transit time by origin</h2>
@@ -406,6 +415,7 @@ def main():
 {rd('calcs.html')}
 {gt}
 {rd('pc.html')}
+{rd('mkt.html')}
 {rd('summary.html')}
 </body>
 </html>
