@@ -1,6 +1,6 @@
 [
  {
-  "carrier": "DONGJIN / HEUNG-A",
+  "carrier": "DONGJIN / HEUNG-A / SINOKOR",
   "vessel": "DONGJIN CONTINENTAL",
   "voyage": "0229W",
   "etd": "11-07 (Sat)",
@@ -11,7 +11,8 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Incheon → Pyeongtaek → Haiphong"
+  "rotation": "Incheon → Pyeongtaek → Haiphong",
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "PANOCEAN / SM LINE",
@@ -28,7 +29,7 @@
   "rotation": "Incheon → Qingdao → Haiphong"
  },
  {
-  "carrier": "HEUNG-A",
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "HEUNG-A YOUNG",
   "voyage": "2618S",
   "etd": "11-09 (Mon)",
@@ -40,21 +41,8 @@
   "status": "new",
   "changedFields": [],
   "rotation": "Incheon → Hong Kong → Haiphong",
-  "bookingClosed": true
- },
- {
-  "carrier": "DONGJIN / PANOCEAN",
-  "vessel": "SM TOKYO",
-  "voyage": "2621W",
-  "etd": "11-14 (Sat)",
-  "eta": "11-21 (Sat)",
-  "tt": 7,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Incheon → Kwangyang → Busan → Haiphong"
+  "bookingClosed": true,
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "PANOCEAN / SM LINE",
@@ -71,21 +59,22 @@
   "rotation": "Incheon → Qingdao → Haiphong"
  },
  {
-  "carrier": "SM LINE",
+  "carrier": "DONGJIN / PANOCEAN / SM LINE",
   "vessel": "SM TOKYO",
   "voyage": "2621W",
   "etd": "11-14 (Sat)",
-  "eta": "11-19 (Thu)",
-  "tt": 5,
+  "eta": "11-21 (Sat)",
+  "tt": 7,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Incheon → Kwangyang → Busan → Haiphong"
+  "rotation": "Incheon → Kwangyang → Busan → Haiphong",
+  "altDates": "SM LINE 11-14 (Sat)→11-19 (Thu)"
  },
  {
-  "carrier": "HEUNG-A",
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "HEUNG-A SARAH",
   "voyage": "2618S",
   "etd": "11-15 (Sun)",
@@ -97,7 +86,8 @@
   "status": "new",
   "changedFields": [],
   "rotation": "Incheon → Hong Kong → Haiphong",
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "DONGJIN",
@@ -114,7 +104,7 @@
   "rotation": "Incheon → Qingdao → Haiphong"
  },
  {
-  "carrier": "DONGJIN / HEUNG-A",
+  "carrier": "DONGJIN / HEUNG-A / SINOKOR",
   "vessel": "YOKOHAMA TRADER",
   "voyage": "2618W",
   "etd": "11-16 (Mon)",
@@ -125,10 +115,11 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Incheon → Pyeongtaek → Haiphong"
+  "rotation": "Incheon → Pyeongtaek → Haiphong",
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
-  "carrier": "DONGJIN",
+  "carrier": "DONGJIN / HEUNG-A / SINOKOR",
   "vessel": "DONGJIN CONTINENTAL",
   "voyage": "0230W",
   "etd": "11-21 (Sat)",
@@ -139,25 +130,12 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Incheon → Pyeongtaek → Haiphong"
- },
- {
-  "carrier": "HEUNG-A",
-  "vessel": "DONGJIN CONTINENTAL",
-  "voyage": "0230W",
-  "etd": "11-21 (Sat)",
-  "eta": "11-27 (Fri)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
   "rotation": "Incheon → Pyeongtaek → Haiphong",
-  "bookingClosed": true
+  "altDates": "HEUNG-A 11-21 (Sat)→11-27 (Fri)",
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
-  "carrier": "HEUNG-A",
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "HEUNG-A YOUNG",
   "voyage": "2619S",
   "etd": "11-24 (Tue)",
@@ -169,7 +147,8 @@
   "status": "new",
   "changedFields": [],
   "rotation": "Incheon → Hong Kong → Haiphong",
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
   "carrier": "SM LINE",
@@ -228,21 +207,7 @@
   "rotation": "Incheon → Qingdao → Haiphong"
  },
  {
-  "carrier": "DONGJIN / HEUNG-A",
-  "vessel": "YOKOHAMA TRADER",
-  "voyage": "2619W",
-  "etd": "11-30 (Mon)",
-  "eta": "12-05 (Sat)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Incheon → Pyeongtaek → Haiphong"
- },
- {
-  "carrier": "HEUNG-A",
+  "carrier": "HEUNG-A / SINOKOR",
   "vessel": "HEUNG-A SARAH",
   "voyage": "2619S",
   "etd": "11-30 (Mon)",
@@ -254,6 +219,22 @@
   "status": "new",
   "changedFields": [],
   "rotation": "Incheon → Hong Kong → Haiphong",
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "HEUNG-A / SINOKOR"
+ },
+ {
+  "carrier": "DONGJIN / HEUNG-A / SINOKOR",
+  "vessel": "YOKOHAMA TRADER",
+  "voyage": "2619W",
+  "etd": "11-30 (Mon)",
+  "eta": "12-05 (Sat)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Incheon → Pyeongtaek → Haiphong",
+  "closedCarriers": "HEUNG-A / SINOKOR"
  }
 ]

@@ -304,31 +304,5 @@
   "changedFields": [
    "tt"
   ]
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 283",
-  "voyage": "S122",
-  "etd": "10-29 (Thu)",
-  "eta": "11-01 (Sun)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 291",
-  "voyage": "S071",
-  "etd": "10-31 (Sat)",
-  "eta": "11-03 (Tue)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
  }
 ]

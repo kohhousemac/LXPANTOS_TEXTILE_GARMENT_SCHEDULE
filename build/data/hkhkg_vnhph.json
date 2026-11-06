@@ -24,10 +24,11 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "KMTC / NAMSUNG"
  },
  {
-  "carrier": "KMTC / PANOCEAN",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "PANCON HARMONY",
   "voyage": "2621S",
   "etd": "11-16 (Mon)",
@@ -38,7 +39,9 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "altDates": "NAMSUNG 11-17 (Tue)→11-18 (Wed)",
+  "closedCarriers": "KMTC / NAMSUNG / PANOCEAN"
  },
  {
   "vessel": "STAR FRONTIER",
@@ -48,19 +51,10 @@
   "tt": 2,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "NAMSUNG",
-  "bookingClosed": true
- },
- {
-  "vessel": "PANCON HARMONY",
-  "voyage": "2621S",
-  "etd": "11-17 (Tue)",
-  "eta": "11-18 (Wed)",
-  "tt": 1,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG",
-  "bookingClosed": true
+  "carrier": "KMTC / NAMSUNG",
+  "bookingClosed": true,
+  "altDates": "KMTC 11-17 (Tue)→11-18 (Wed)",
+  "closedCarriers": "KMTC / NAMSUNG"
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN",
@@ -73,21 +67,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2622S",
-  "etd": "11-17 (Tue)",
-  "eta": "11-18 (Wed)",
-  "tt": 1,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "closedCarriers": "KMTC"
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -100,10 +81,11 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
+  "changedFields": [],
+  "closedCarriers": "NAMSUNG"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STAR FRONTIER",
   "voyage": "2623S",
   "etd": "11-29 (Sun)",
@@ -116,17 +98,8 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
- },
- {
-  "vessel": "STAR FRONTIER",
-  "voyage": "2623S",
-  "etd": "11-29 (Sun)",
-  "eta": "11-30 (Mon)",
-  "tt": 1,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
+  ],
+  "altDates": "NAMSUNG 11-29 (Sun)→11-30 (Mon)"
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN",
@@ -139,19 +112,6 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2621S",
-  "etd": "11-03 (Tue)",
-  "eta": "11-05 (Thu)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
   "changedFields": []
  }
 ]

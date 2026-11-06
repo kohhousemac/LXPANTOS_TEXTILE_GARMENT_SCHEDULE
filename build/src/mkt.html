@@ -1,62 +1,184 @@
 <script>
-// ---- Per-lane market rate mini charts (datasets/market_rate_40, USD per 40ft) ----
+// ---- Market rate (40ft) mini chart under each lane's schedule (same as the dashboard) ----
 (function () {
-  var NS = 'http://www.w3.org/2000/svg';
-  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
-  function money(v) { return '$' + Number(v).toLocaleString('en-US'); }
-  function draw(box, id) {
+  function mktDraw(el, id) {
     var g = dash.data('market_rate_40');
-    box.classList.remove('dash-skeleton');
-    box.replaceChildren();
-    if (g.status !== 'ok') { var p0 = document.createElement('p'); p0.className = 'lx-mkt-empty'; p0.textContent = g.status === 'error' ? '시장가 데이터를 불러오지 못했습니다' : '불러오는 중…'; box.appendChild(p0); return; }
-    var rows = (g.data || []).filter(function (r) { return r.routeId === id && typeof r.ft40 === 'number'; })
-      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
-    if (!rows.length) { var p1 = document.createElement('p'); p1.className = 'lx-mkt-empty'; p1.textContent = '시장가 수집 대기'; box.appendChild(p1); return; }
-    var last = rows[rows.length - 1], prev = rows.length > 1 ? rows[rows.length - 2] : null;
-    var head = document.createElement('div'); head.className = 'lx-mkt-head';
-    var big = document.createElement('span'); big.className = 'lx-mkt-val'; big.textContent = money(last.ft40);
-    head.appendChild(big);
-    if (prev) {
-      var d = last.ft40 - prev.ft40, ch = document.createElement('span');
-      ch.className = 'lx-mkt-chg ' + (d > 0 ? 'is-up' : d < 0 ? 'is-down' : 'is-flat');
-      ch.textContent = (d > 0 ? '▲ ' : d < 0 ? '▼ ' : '– ') + money(Math.abs(d)) + ' vs ' + (prev.note || prev.date.slice(0, 7));
-      head.appendChild(ch);
+    if (g.status === 'loading') { el.classList.add('dash-skeleton'); return; }
+    el.classList.remove('dash-skeleton');
+    el.replaceChildren();
+    if (g.status !== 'ok') {
+      var f = document.createElement('p'); f.className = 'lx-mkt-empty'; f.textContent = 'Failed to load'; el.appendChild(f);
+      return;
     }
-    var meta = document.createElement('span'); meta.className = 'lx-mkt-meta';
-    meta.textContent = "40' · " + (last.terms || '') + ' · ' + last.date.replace(/-/g, '/') + (last.note ? ' (' + last.note + ')' : '');
-    head.appendChild(meta);
-    box.appendChild(head);
-
-    var W = 640, H = 150, L = 46, R = 10, T = 10, B = 22;
-    var ts = rows.map(function (r) { return new Date(r.date + 'T00:00').getTime(); });
-    var t0 = ts[0], t1 = ts[ts.length - 1] === t0 ? t0 + 1 : ts[ts.length - 1];
-    var vs = rows.map(function (r) { return r.ft40; });
-    var vmin = 0, vmax = Math.max.apply(null, vs) * 1.1 || 1;
-    var x = function (t) { return L + (t - t0) / (t1 - t0) * (W - L - R); };
-    var y = function (v) { return T + (1 - (v - vmin) / (vmax - vmin)) * (H - T - B); };
-    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, class: 'lx-mkt-svg', role: 'img', 'aria-label': 'Market rate trend, latest ' + money(last.ft40) });
-    var step = Math.pow(10, Math.floor(Math.log10(vmax / 3))); var nice = [1, 2, 5, 10].map(function (m) { return m * step; }).filter(function (s) { return vmax / s <= 5; })[0] || step * 10;
-    for (var v = 0; v <= vmax; v += nice) {
-      svg.appendChild(el('line', { x1: L, x2: W - R, y1: y(v), y2: y(v), class: 'lx-mkt-grid' }));
-      var tx = el('text', { x: L - 6, y: y(v) + 3, 'text-anchor': 'end', class: 'lx-mkt-axis' }); tx.textContent = v >= 1000 ? (v / 1000) + 'k' : v; svg.appendChild(tx);
+    var rows = (g.data || []).filter(function (r) { return r.routeId === id && Number(r.ft40) > 0; })
+      .map(function (r) { return { date: r.date, period: r.period, note: r.note || '', terms: r.terms, v: Number(r.ft40), t: new Date(r.date + 'T00:00:00').getTime() }; })
+      .sort(function (a, b) { return a.t - b.t; });
+    if (!rows.length) {
+      var e = document.createElement('p'); e.className = 'lx-mkt-empty'; e.textContent = '—'; el.appendChild(e);
+      return;
     }
-    var y0 = new Date(t0).getFullYear(), y1 = new Date(t1).getFullYear();
-    for (var yr = y0 + 1; yr <= y1; yr++) {
-      var tt = new Date(yr, 0, 1).getTime(); if (tt <= t0 || tt >= t1) continue;
-      var lb = el('text', { x: x(tt), y: H - 6, 'text-anchor': 'middle', class: 'lx-mkt-axis' }); lb.textContent = yr; svg.appendChild(lb);
-    }
-    var d1 = rows.map(function (r, i) { return (i ? 'L' : 'M') + x(ts[i]).toFixed(1) + ',' + y(r.ft40).toFixed(1); }).join('');
-    svg.appendChild(el('path', { d: d1 + 'L' + x(ts[ts.length - 1]).toFixed(1) + ',' + y(0) + 'L' + x(ts[0]).toFixed(1) + ',' + y(0) + 'Z', class: 'lx-mkt-area' }));
-    svg.appendChild(el('path', { d: d1, class: 'lx-mkt-line' }));
-    rows.forEach(function (r, i) {
-      var c = el('circle', { cx: x(ts[i]), cy: y(r.ft40), r: i === rows.length - 1 ? 3.5 : 6, class: i === rows.length - 1 ? 'lx-mkt-last' : 'lx-mkt-hit' });
-      var ti = el('title', {}); ti.textContent = r.date + (r.note ? ' ' + r.note : '') + ' · ' + money(r.ft40); c.appendChild(ti); svg.appendChild(c);
-    });
-    box.appendChild(svg);
+    var color = (dash.colors && dash.colors[1]) || '#2563eb';
+    var W = el.clientWidth || 600, H = 150, top = 18, bottom = 22, left = 46, right = 12;
+    var svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', '0 0 ' + W + ' ' + H)
+      .attr('role', 'img').attr('aria-label', 'Market rate 40ft over time');
+    var tMin = rows[0].t, tMax = rows[rows.length - 1].t;
+    if (tMax === tMin) tMax = tMin + 864e5;
+    var x = d3.scaleLinear([tMin, tMax], [left, W - right]);
+    var y = d3.scaleLinear().domain([0, d3.max(rows, function (r) { return r.v; })]).nice().range([H - bottom, top]);
+    var gg = svg.append('g');
+    var yt = y.ticks(4);
+    gg.selectAll('line.grid').data(yt).join('line').attr('x1', left).attr('x2', W - right)
+      .attr('y1', function (t) { return y(t); }).attr('y2', function (t) { return y(t); }).attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))');
+    gg.selectAll('text.yt').data(yt).join('text').attr('x', left - 6).attr('y', function (t) { return y(t) + 4; })
+      .attr('text-anchor', 'end').attr('font-size', 10).attr('fill', 'var(--color-fg-muted)')
+      .text(function (t) { return '$' + (t >= 1000 ? (t / 1000) + 'k' : t); });
+    var years = [];
+    for (var yr = new Date(tMin).getFullYear() + 1; yr <= new Date(tMax).getFullYear(); yr++) years.push(yr);
+    gg.selectAll('text.xt').data(years).join('text').attr('x', function (yr) { return x(new Date(yr, 0, 1).getTime()); })
+      .attr('y', H - 6).attr('text-anchor', 'middle').attr('font-size', 10).attr('fill', 'var(--color-fg-muted)')
+      .text(function (yr) { return String(yr); });
+    gg.append('path').datum(rows).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 1.8)
+      .attr('d', d3.line().x(function (r) { return x(r.t); }).y(function (r) { return y(r.v); }));
+    var last = rows[rows.length - 1];
+    gg.append('circle').attr('cx', x(last.t)).attr('cy', y(last.v)).attr('r', 3.2).attr('fill', color);
+    gg.append('text').attr('x', W - right).attr('y', 12).attr('text-anchor', 'end').attr('font-size', 11)
+      .attr('fill', 'var(--color-fg)').attr('font-weight', 600)
+      .text('$' + last.v.toLocaleString() + ' (' + (last.note ? last.note + ' · ' : '') + last.date.slice(5).replace('-', '/') + ')');
+    var tip = document.createElement('div'); tip.className = 'lx-mkt-tip'; tip.style.display = 'none'; el.appendChild(tip);
+    var dot = gg.append('circle').attr('r', 3.5).attr('fill', color).attr('display', 'none');
+    svg.append('rect').attr('x', left).attr('y', top).attr('width', Math.max(1, W - left - right)).attr('height', H - top - bottom)
+      .attr('fill', 'transparent')
+      .on('mousemove', function (ev) {
+        var p = d3.pointer(ev, svg.node());
+        var tt = x.invert(p[0]), best = rows[0], bd = Infinity;
+        rows.forEach(function (r) { var d = Math.abs(r.t - tt); if (d < bd) { bd = d; best = r; } });
+        dot.attr('display', null).attr('cx', x(best.t)).attr('cy', y(best.v));
+        tip.replaceChildren();
+        var a = document.createElement('div'); a.className = 'd'; a.textContent = best.period + (best.note ? ' · ' + best.note : '') + ' · ' + best.terms;
+        var b = document.createElement('div'); b.textContent = '40ft $' + best.v.toLocaleString();
+        tip.appendChild(a); tip.appendChild(b);
+        tip.style.display = '';
+        var scale = el.clientWidth / W;
+        var px = x(best.t) * scale, py = y(best.v) * scale;
+        var tw = tip.offsetWidth;
+        tip.style.left = Math.max(0, Math.min(px + 10, el.clientWidth - tw - 2)) + 'px';
+        tip.style.top = Math.max(0, py - 40) + 'px';
+      })
+      .on('mouseleave', function () { tip.style.display = 'none'; dot.attr('display', 'none'); });
   }
   Array.prototype.slice.call(document.querySelectorAll('[data-draw^="mkt-"]')).forEach(function (e) {
     var id = e.getAttribute('data-draw').slice(4);
-    dash.draw('mkt-' + id, function (box) { draw(box, id); });
+    dash.draw('mkt-' + id, function (el) { mktDraw(el, id); });
   });
+})();
+</script>
+
+<script>
+// ---- Port berthing wait per SITC / Wan Hai lane (same as the dashboard) ----
+(function () {
+  var WINDOW_DAYS = 60;
+  var MAX_LEG_DAYS = 10;
+  var BW_ENDS = {
+    cnsha_vnhph: ['CNSHA', 'VNHPH'], cnsha_vnsgn: ['CNSHA', 'VNSGN'], vnsgn_cnsha: ['VNSGN', 'CNSHA'],
+    vnhph_cnsha: ['VNHPH', 'CNSHA'], vnhph_idjkt: ['VNHPH', 'IDJKT'], idjkt_vnhph: ['IDJKT', 'VNHPH'],
+    vnsgn_idjkt: ['VNSGN', 'IDJKT'],
+    twkel_vnsgn: ['TWKHH', 'VNSGN'], twkel_vnhph: ['TWKHH', 'VNHPH'], cnshk_vnsgn: ['CNSHK', 'VNSGN']
+  };
+  var BW_CARRIERS = ['SITC', 'WHL'];
+  function parseT(s) { if (!s) return NaN; return new Date(String(s).replace(/\//g, '-').replace(' ', 'T')).getTime(); }
+
+  function bwDraw(el, id) {
+    var lane = dash.data(id), log = dash.data('sitc_berth_log'), wlog = dash.data('whl_berth_log');
+    if (lane.status === 'loading' || log.status === 'loading' || wlog.status === 'loading') { el.classList.add('dash-skeleton'); return; }
+    el.classList.remove('dash-skeleton');
+    el.replaceChildren();
+    function msg(t) { var p = document.createElement('p'); p.className = 'lx-mkt-empty'; p.textContent = t; el.appendChild(p); }
+    if (lane.status !== 'ok' || (log.status !== 'ok' && wlog.status !== 'ok')) { msg('Failed to load'); return; }
+    var vs = {};
+    (lane.data || []).forEach(function (r) {
+      var c = String(r.carrier || '');
+      if (BW_CARRIERS.some(function (k) { return c.indexOf(k) !== -1; })) vs[r.vessel] = 1;
+    });
+    var cut = Date.now() - WINDOW_DAYS * 864e5;
+    var ends = BW_ENDS[id] || [];
+    var pol = [].concat(ends[0]), pod = ends[1];
+    var allLog = (log.status === 'ok' ? log.data || [] : []).concat(wlog.status === 'ok' ? wlog.data || [] : []);
+    var byVessel = {};
+    allLog.forEach(function (r) { if (!vs[r.vessel]) return; (byVessel[r.vessel] = byVessel[r.vessel] || []).push(r); });
+    var by = {}, seen = {};
+    Object.keys(byVessel).forEach(function (v) {
+      var calls = byVessel[v].slice().sort(function (a, b) { return parseT(a.ata) - parseT(b.ata); });
+      for (var i = 0; i < calls.length; i++) {
+        if (pol.indexOf(calls[i].portCode) === -1) continue;
+        var j = i + 1;
+        while (j < calls.length && calls[j].portCode !== pod && pol.indexOf(calls[j].portCode) === -1) j++;
+        if (j >= calls.length || calls[j].portCode !== pod) continue;
+        if (parseT(calls[j].ata) - parseT(calls[i].ata) > MAX_LEG_DAYS * 864e5) { i = j - 1; continue; }
+        for (var k = i; k <= j; k++) {
+          var r = calls[k];
+          var key = r.vessel + '|' + r.voyage + '|' + r.portCode;
+          if (seen[key]) continue;
+          seen[key] = 1;
+          var t = parseT(r.atb), w = Number(r.wait_days);
+          if (!(t >= cut) || !(w >= 0)) continue;
+          (by[r.port] = by[r.port] || []).push(w);
+        }
+        i = j - 1;
+      }
+    });
+    var rows = Object.keys(by).map(function (p) {
+      var v = by[p], s = 0, m = 0;
+      v.forEach(function (x) { s += x; if (x > m) m = x; });
+      return { port: p, avg: Math.round(s / v.length * 10) / 10, max: Math.round(m * 10) / 10, calls: v.length };
+    }).sort(function (a, b) { return b.avg - a.avg; });
+    if (!rows.length) {
+      msg(Object.keys(vs).length ? '수집 중 — 이 노선 모선의 최근 60일 출발항~도착항 구간 접안 실측이 아직 없습니다.' : '현재 이 노선 스케줄에 SITC·완하이 모선이 없습니다.');
+      return;
+    }
+    var W = el.clientWidth || 600, rowH = 24, top = 4;
+    var H = top + rows.length * rowH + 4;
+    var svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', '0 0 ' + W + ' ' + H)
+      .attr('role', 'img').attr('aria-label', 'Average berthing wait days by port');
+    var meas = svg.append('text').attr('font-size', 12);
+    var lw = 0, rw = 0;
+    rows.forEach(function (r) {
+      meas.text(r.port); lw = Math.max(lw, meas.node().getComputedTextLength());
+      meas.text(r.avg + 'd (max ' + r.max + 'd · ' + r.calls + ' calls)'); rw = Math.max(rw, meas.node().getComputedTextLength());
+    });
+    meas.remove();
+    var left = Math.ceil(lw) + 12, right = Math.ceil(rw) + 12;
+    var x = d3.scaleLinear([0, d3.max(rows, function (r) { return r.avg; }) || 1], [left, Math.max(left + 40, W - right)]);
+    var g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row')
+      .attr('transform', function (r, i) { return 'translate(0,' + (top + i * rowH) + ')'; });
+    g.append('text').attr('x', left - 8).attr('y', rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12)
+      .attr('fill', 'var(--color-fg)').text(function (r) { return r.port; });
+    g.append('rect').attr('x', left).attr('y', 5).attr('height', rowH - 10).attr('rx', 4)
+      .attr('width', function (r) { return Math.max(2, x(r.avg) - left); })
+      .attr('fill', function (r) { return r.avg >= 2 ? 'var(--cds-chart-status-critical, var(--color-bad))' : dash.colors[0]; });
+    g.append('text').attr('x', function (r) { return x(r.avg) + 6; }).attr('y', rowH / 2 + 4).attr('font-size', 12)
+      .attr('fill', 'var(--color-fg-muted)')
+      .text(function (r) { return r.avg + 'd (max ' + r.max + 'd · ' + r.calls + ' calls)'; });
+  }
+  Array.prototype.slice.call(document.querySelectorAll('[data-draw^="bw-"]')).forEach(function (e) {
+    var id = e.getAttribute('data-draw').slice(3);
+    dash.draw('bw-' + id, function (el) { bwDraw(el, id); });
+  });
+})();
+</script>
+
+<script>
+// Charts drawn inside a hidden tab measure 0px wide; redraw them once they become visible / change width.
+(function () {
+  if (!window.ResizeObserver) return;
+  var last = new WeakMap();
+  var ro = new ResizeObserver(function (entries) {
+    entries.forEach(function (en) {
+      var w = Math.round(en.contentRect.width), el = en.target;
+      if (!w || last.get(el) === w) return;
+      last.set(el, w);
+      dash.draw(el.getAttribute('data-draw'));
+    });
+  });
+  Array.prototype.slice.call(document.querySelectorAll('[data-draw^="mkt-"], [data-draw^="bw-"]')).forEach(function (el) { ro.observe(el); });
 })();
 </script>

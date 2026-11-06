@@ -78,7 +78,7 @@
 
     <section class="card" id="gt-congestion">
       <h2>Port berthing wait</h2>
-      <p class="note">Average days waited from arrival (ETA) to berthing (ETB) at ports actually called by tracked vessels over the last 60 days. The number beside each bar shows the longest wait and number of calls.</p>
+      <p class="note">Average days waited from arrival (ETA) to berthing (ETB) at ports called between Shanghai/Ningbo and Puerto Quetzal (both included) by tracked vessels over the last 60 days. The number beside each bar shows the longest wait and number of calls.</p>
       <div class="chart" id="gt-cong-chart" data-source="port_wait" style="min-height: 160px"></div>
     </section>
 
@@ -128,13 +128,15 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="lx-mkt-wrap">
+        <p class="lx-mkt-title">Market rate<span class="lx-mkt-sub">Shanghai → Caucedo · 40ft · USD · CY-DOOR(도착지 내륙운송 포함) · LX판토스 시장가</span></p>
+        <div class="lx-mkt dash-skeleton" data-draw="mkt-cnsha_docau" data-source="market_rate_40"></div>
+      </div>
     </section>
-
-    <section class="card" id="cc-market"><div class="lx-mkt-wrap lx-mkt-card"><p class="lx-mkt-title">Shanghai → Caucedo Market rate<span class="lx-mkt-sub">시장가 추이 · USD / 40ft</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-cnsha_docau" data-source="market_rate_40"></div></div></section>
 
     <section class="card" id="cc-congestion">
       <h2>Port berthing wait</h2>
-      <p class="note">Average days waited from arrival (ETA) to berthing (ETB) at ports actually called by tracked vessels. The number beside each bar shows the longest wait and number of calls.</p>
+      <p class="note">Average days waited from arrival (ETA) to berthing (ETB) at ports called between Shanghai/Shekou and Caucedo (both included) by tracked vessels. The number beside each bar shows the longest wait and number of calls.</p>
       <div class="chart" id="cc-cong-chart" data-source="port_wait_cc" style="min-height: 160px"></div>
     </section>
 

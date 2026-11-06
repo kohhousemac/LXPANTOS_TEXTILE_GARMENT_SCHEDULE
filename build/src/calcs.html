@@ -26,12 +26,23 @@ dash.calc('summary', {
 <script>
 dash.calc('port_wait', {
   title: 'Port berthing wait',
-  description: 'Average, max, and count of ETA-to-ETB wait days at actual (ACTUAL) port calls, aggregated by port (ports with 3+ calls, top 10 by average, descending).',
+  description: 'Average, max, and count of ETA-to-ETB wait days at actual (ACTUAL) port calls between Shanghai/Ningbo and Puerto Quetzal.',
   inputs: ['port_calls'],
   fn: (port_calls) => {
     const t = (s) => new Date(s.replace(' ', 'T') + ':00Z').getTime();
+    const POL = ['SHANGHAI', 'NINGBO'], POD = 'PUERTO QUETZAL';
+    const byV = {}, leg = [];
+    port_calls.forEach((r) => { if (r.eta || r.etd) (byV[r.vessel] = byV[r.vessel] || []).push(r); });
+    Object.values(byV).forEach((cs) => {
+      cs.sort((a, b) => t(a.eta || a.etd) - t(b.eta || b.etd));
+      let start = -1;
+      cs.forEach((r, i) => {
+        if (POL.includes(r.port) && start < 0) start = i;
+        else if (r.port === POD && start >= 0) { for (let k = start; k <= i; k++) leg.push(cs[k]); start = -1; }
+      });
+    });
     const by = {};
-    port_calls.filter((r) => r.status === 'ACTUAL' && r.eta && r.etb && r.port !== 'CALLAO' && r.port !== 'GUAYAQUIL').forEach((r) => {
+    leg.filter((r) => r.status === 'ACTUAL' && r.eta && r.etb).forEach((r) => {
       const d = (t(r.etb) - t(r.eta)) / 864e5;
       (by[r.port] = by[r.port] || []).push(Math.max(0, d));
     });
@@ -48,12 +59,23 @@ dash.calc('port_wait', {
 <script>
 dash.calc('port_wait_cc', {
   title: 'Port berthing wait (Caucedo)',
-  description: 'Average, max, and count of ETA-to-ETB wait days at actual (ACTUAL) port calls on the Caucedo lane, aggregated by port (ports with 3+ calls, top 10 by average, descending). Empty until actual port calls with both ETA and ETB are collected.',
+  description: 'Average, max, and count of ETA-to-ETB wait days at actual (ACTUAL) port calls between Shanghai/Shekou and Caucedo.',
   inputs: ['port_calls_cc'],
   fn: (port_calls_cc) => {
     const t = (s) => new Date(s.replace(' ', 'T') + ':00Z').getTime();
+    const POL = ['SHANGHAI', 'SHEKOU'], POD = 'CAUCEDO';
+    const byV = {}, leg = [];
+    port_calls_cc.forEach((r) => { if (r.eta || r.etd) (byV[r.vessel] = byV[r.vessel] || []).push(r); });
+    Object.values(byV).forEach((cs) => {
+      cs.sort((a, b) => t(a.eta || a.etd) - t(b.eta || b.etd));
+      let start = -1;
+      cs.forEach((r, i) => {
+        if (POL.includes(r.port) && start < 0) start = i;
+        else if (r.port === POD && start >= 0) { for (let k = start; k <= i; k++) leg.push(cs[k]); start = -1; }
+      });
+    });
     const by = {};
-    port_calls_cc.filter((r) => r.status === 'ACTUAL' && r.eta && r.etb).forEach((r) => {
+    leg.filter((r) => r.status === 'ACTUAL' && r.eta && r.etb).forEach((r) => {
       const d = (t(r.etb) - t(r.eta)) / 864e5;
       (by[r.port] = by[r.port] || []).push(Math.max(0, d));
     });

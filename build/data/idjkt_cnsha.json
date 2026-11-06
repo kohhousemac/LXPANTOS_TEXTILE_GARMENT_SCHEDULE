@@ -26,7 +26,7 @@
   "changedFields": []
  },
  {
-  "carrier": "HEUNG-A / SINOKOR",
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2608N",
   "etd": "11-09 (Mon)",
@@ -39,17 +39,8 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
- },
- {
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2608N",
-  "etd": "11-09 (Mon)",
-  "eta": "11-24 (Tue)",
-  "tt": 15,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
+  ],
+  "altDates": "NAMSUNG 11-09 (Mon)→11-24 (Tue)"
  },
  {
   "vessel": "SHANGHAI VOYAGER",
@@ -92,7 +83,7 @@
   "carrier": "HEUNG-A / SINOKOR"
  },
  {
-  "carrier": "HEUNG-A / SINOKOR",
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "etd": "11-20 (Fri)",
@@ -102,17 +93,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609N",
-  "etd": "11-20 (Fri)",
-  "eta": "12-06 (Sun)",
-  "tt": 16,
-  "status": "unchanged",
   "changedFields": [],
-  "carrier": "NAMSUNG"
+  "altDates": "NAMSUNG 11-20 (Fri)→12-06 (Sun)"
  },
  {
   "vessel": "CHENNAI VOYAGER",
@@ -135,7 +117,7 @@
   "carrier": "HEUNG-A / SINOKOR"
  },
  {
-  "carrier": "HEUNG-A / SINOKOR",
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
   "etd": "11-26 (Thu)",
@@ -148,17 +130,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
- },
- {
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2609N",
-  "etd": "11-26 (Thu)",
-  "eta": "12-10 (Thu)",
-  "tt": 14,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
+  ],
+  "altDates": "NAMSUNG 11-26 (Thu)→12-10 (Thu)"
  },
  {
   "vessel": "INCHEON VOYAGER",

@@ -13,20 +13,6 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "SKY ORION",
-  "voyage": "2613S",
-  "etd": "11-08 (Sun)",
-  "eta": "11-10 (Tue)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
- },
- {
   "vessel": "SKY ORION",
   "voyage": "2613S",
   "etd": "11-08 (Sun)",
@@ -34,21 +20,9 @@
   "tt": 3,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "CA MANILA",
-  "voyage": "2616S",
-  "etd": "11-11 (Wed)",
-  "eta": "11-13 (Fri)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "altDates": "KMTC 11-08 (Sun)→11-10 (Tue)",
+  "closedCarriers": "KMTC"
  },
  {
   "vessel": "CA MANILA",
@@ -58,7 +32,9 @@
   "tt": 3,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "altDates": "KMTC 11-11 (Wed)→11-13 (Fri)",
+  "closedCarriers": "KMTC"
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -72,7 +48,8 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "KMTC / NAMSUNG"
  },
  {
   "vessel": "SAWASDEE VEGA",
@@ -82,21 +59,9 @@
   "tt": 2,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SAWASDEE VEGA",
-  "voyage": "2614S",
-  "etd": "11-15 (Sun)",
-  "eta": "11-17 (Tue)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "bookingClosed": true
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "altDates": "KMTC 11-15 (Sun)→11-17 (Tue)",
+  "closedCarriers": "KMTC"
  },
  {
   "carrier": "KMTC",
@@ -110,10 +75,11 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "KMTC"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STARSHIP URSA",
   "voyage": "2615S",
   "etd": "11-18 (Wed)",
@@ -124,7 +90,9 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "altDates": "NAMSUNG 11-19 (Thu)→11-21 (Sat)",
+  "closedCarriers": "KMTC / NAMSUNG"
  },
  {
   "carrier": "KMTC",
@@ -138,18 +106,8 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
- },
- {
-  "vessel": "STARSHIP URSA",
-  "voyage": "2615S",
-  "etd": "11-19 (Thu)",
-  "eta": "11-21 (Sat)",
-  "tt": 2,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG",
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "KMTC"
  },
  {
   "vessel": "SAWASDEE ATLANTIC",
@@ -159,7 +117,8 @@
   "tt": 2,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "altDates": "KMTC 11-24 (Tue)→11-27 (Fri)"
  },
  {
   "carrier": "KMTC",
@@ -176,7 +135,8 @@
    "etd",
    "eta"
   ],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "KMTC"
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
@@ -192,7 +152,7 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "PANCON BRIDGE",
   "voyage": "2615S",
   "etd": "11-23 (Mon)",
@@ -202,34 +162,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "vessel": "PANCON BRIDGE",
-  "voyage": "2615S",
-  "etd": "11-23 (Mon)",
-  "eta": "11-26 (Thu)",
-  "tt": 3,
-  "status": "unchanged",
   "changedFields": [],
-  "carrier": "NAMSUNG"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SAWASDEE ATLANTIC",
-  "voyage": "2612S",
-  "etd": "11-24 (Tue)",
-  "eta": "11-27 (Fri)",
-  "tt": 3,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "altDates": "NAMSUNG 11-23 (Mon)→11-26 (Thu)"
  },
  {
   "vessel": "KMTC JAKARTA",
@@ -239,7 +173,8 @@
   "tt": 2,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "altDates": "KMTC 11-30 (Mon)→12-02 (Wed)"
  },
  {
   "vessel": "SKY ORION",
@@ -249,37 +184,8 @@
   "tt": 3,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SKY ORION",
-  "voyage": "2614S",
-  "etd": "11-29 (Sun)",
-  "eta": "12-01 (Tue)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC JAKARTA",
-  "voyage": "2613S",
-  "etd": "11-30 (Mon)",
-  "eta": "12-02 (Wed)",
-  "tt": 2,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "altDates": "KMTC 11-29 (Sun)→12-01 (Tue)"
  },
  {
   "vessel": "KMTC PUSAN",
@@ -289,49 +195,7 @@
   "tt": 3,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "NAMSUNG"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC PUSAN",
-  "voyage": "2614S",
-  "etd": "12-03 (Thu)",
-  "eta": "12-06 (Sun)",
-  "tt": 3,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC TAIPEIS",
-  "voyage": "2613S",
-  "etd": "11-02 (Mon)",
-  "eta": "11-05 (Thu)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "PANCON BRIDGE",
-  "voyage": "2614S",
-  "etd": "11-02 (Mon)",
-  "eta": "11-05 (Thu)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
+  "carrier": "KMTC / NAMSUNG",
+  "altDates": "KMTC 12-03 (Thu)→12-06 (Sun)"
  }
 ]

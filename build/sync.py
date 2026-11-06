@@ -39,7 +39,14 @@ def _mmdd_date(s, today):
 RETAIN_DAYS = 14
 NO_RETAIN = {'krpus_trist', 'krpus_egdam', 'krpus_egsok', 'krpus_egaly', 'krpus_egpsd'}
 
+# 2026-11-06: the homepage mirrors the dashboard exactly, so departed rows the
+# dashboard has dropped are no longer kept here (the collectors keep them
+# themselves until arrival + 14 days).
+RETAIN_ENABLED = False
+
 def is_lane(ds):
+    if not RETAIN_ENABLED:
+        return False
     a, _, b = ds.partition('_')
     return len(a) == 5 and len(b) == 5 and ds not in NO_RETAIN
 

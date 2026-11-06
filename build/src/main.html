@@ -29,7 +29,7 @@
       item.appendChild(dot);
       item.appendChild(document.createTextNode(c));
       return item;
-    }).concat([(function () { var k = document.createElement('span'); k.className = 'lx-legend-item lx-legend-bkg'; k.textContent = '⛔ = 부킹 불가'; return k; })()]));
+    }));
   })();
 
   var parseKey = function (s) {
@@ -247,6 +247,8 @@
     return td;
   }
 
+  var CALLING_ORDER_ROUTES = ['krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'];
+
   function rotationCell(v) {
     var td = document.createElement('td');
     td.className = 'lx-rot';
@@ -274,16 +276,34 @@
     if (v.status === 'new') tdCarrier.appendChild(statusCheck('new'));
     var tag = document.createElement('span');
     tag.className = 'lx-tag';
-    tag.textContent = v.carrier;
+    // Joint-service rows: ⛔ goes right after each carrier whose own schedule shows no space (closedCarriers).
+    var closedList = typeof v.closedCarriers === 'string' && v.closedCarriers ? v.closedCarriers.split(/\s*\/\s*/) : null;
+    if (closedList) {
+      String(v.carrier).split(/\s*\/\s*/).forEach(function (c, i) {
+        if (i) tag.appendChild(document.createTextNode(' / '));
+        tag.appendChild(document.createTextNode(c));
+        if (closedList.indexOf(c) !== -1) {
+          var cb = document.createElement('span');
+          cb.className = 'lx-bkg-closed lx-bkg-closed--inline';
+          cb.textContent = '⛔';
+          cb.setAttribute('aria-label', c + ' 부킹 불가');
+          cb.title = c + ' 스케줄에서 부킹 불가(빨간색)';
+          tag.appendChild(cb);
+        }
+      });
+    } else {
+      tag.textContent = v.carrier;
+    }
+    // Joint-service row: carriers that publish a slightly different date for the same vessel/voyage.
+    if (v.altDates) tag.title = '선사별 일정 차이: ' + v.altDates;
     tdCarrier.appendChild(tag);
-    if (v.bookingClosed) {
+    if (v.bookingClosed === true && !closedList) {
       var bk = document.createElement('span');
       bk.className = 'lx-bkg-closed';
       bk.textContent = '⛔';
-      bk.title = '부킹 불가';
+      bk.title = '선사 스케줄에서 부킹 불가(빨간색)로 표시된 모선';
       bk.setAttribute('aria-label', '부킹 불가');
       tdCarrier.appendChild(bk);
-      tr.classList.add('is-bkg-closed');
     }
 
     var tdVessel = document.createElement('td');
@@ -318,7 +338,7 @@
     tr.appendChild(tdEta);
     tr.appendChild(tdTt);
     tr.appendChild(stageCell(rowStage(v)));
-    if (routeId && routeId.indexOf('krpus_') === 0) tr.appendChild(rotationCell(v));
+    if (CALLING_ORDER_ROUTES.indexOf(routeId) !== -1) tr.appendChild(rotationCell(v));
     return tr;
   }
 
@@ -336,7 +356,7 @@
         var tr = document.createElement('tr');
         tr.className = 'lx-empty-row';
         var td = document.createElement('td');
-        td.colSpan = id.indexOf('krpus_') === 0 ? 8 : 7;
+        td.colSpan = CALLING_ORDER_ROUTES.indexOf(id) !== -1 ? 8 : 7;
         td.textContent = 'No sailings to display.';
         tr.appendChild(td);
         el.replaceChildren(tr);
@@ -569,6 +589,23 @@
       copyText(tsvForRoute(btn.dataset.route), btn);
     });
   });
+  // ---- copy all (Asia network) ----
+  var copyAllAsiaBtn = document.getElementById('lx-copy-all-asia');
+  if (copyAllAsiaBtn) copyAllAsiaBtn.addEventListener('click', function () {
+    var lines = ['Lane\tCarrier\tVessel\tVoyage\tETD\tETA\tTT'];
+    Array.prototype.slice.call(document.querySelectorAll('#net-asia tbody[data-draw^="rows-"]')).forEach(function (tb) {
+      var id = tb.getAttribute('data-draw').slice(5);
+      var h2 = document.getElementById('lane-' + id + '-h');
+      var lane = h2 ? h2.textContent.replace(/[\u{1F1E6}-\u{1F1FF}]/gu, '').replace(/\s*→\s*/g, ' → ').replace(/\s+/g, ' ').trim() : id;
+      var rows = lastRendered[id];
+      if (!rows) rows = (dash.data(id).data || []).slice().sort(function (a, b) { return parseKey(a.etd) - parseKey(b.etd); });
+      rows.forEach(function (v) {
+        lines.push([lane, v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : ''].join('\t'));
+      });
+    });
+    copyText(lines.join('\n'), copyAllAsiaBtn);
+  });
+
   // ---- download all Asia-network schedules as .xlsx (same file as the dashboard's 다운로드) ----
   function xlsxCrc32(bytes) {
     var c, table = xlsxCrc32.table;
@@ -624,14 +661,11 @@
     ]);
   }
   function asiaRowsForXlsx() {
-    var rows = [['POL', 'POD', 'Carrier', 'Vessel', 'Voyage', 'ETD', 'ETA', 'T/T (days)', 'Stage', 'Calling Order', 'Booking']];
+    var rows = [['POL', 'POD', 'Carrier', 'Vessel', 'Voyage', 'ETD', 'ETA', 'T/T (days)', 'Stage', 'Calling Order']];
     Array.prototype.slice.call(document.querySelectorAll('#net-asia tbody[data-draw^="rows-"]')).forEach(function (tb) {
       var id = tb.getAttribute('data-draw').slice(5);
       var h2 = document.getElementById('lane-' + id + '-h');
       var lane = h2 ? h2.textContent.replace(/[\u{1F1E6}-\u{1F1FF}]/gu, '').replace(/\s*→\s*/g, ' → ').replace(/\s+/g, ' ').trim() : id;
-      // POL / POD as separate columns instead of one "Lane" column.
-      var ends = lane.split(' → ');
-      var pol = ends.length >= 2 ? ends[0] : lane, pod = ends.length >= 2 ? ends[ends.length - 1] : '';
       var data = lastRendered[id];
       if (!data) {
         var g = dash.data(id);
@@ -640,8 +674,9 @@
       data.forEach(function (v) {
         var rot = v.rotation; if (Array.isArray(rot)) rot = rot.join(' → ');
         var co = String(rot || '').split(/\s*(?:→|->|>|,)\s*/).filter(Boolean).join(' → ');
-        rows.push([pol, pod, v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : '',
-          STAGE_LABEL[rowStage(v)] || '', co, v.bookingClosed ? '부킹 불가' : '']);
+        var pp = lane.split(' → ');
+        rows.push([pp[0] || lane, pp[1] || '', v.carrier, v.vessel, v.voyage, v.etd || '', v.eta || '', (typeof v.tt === 'number') ? v.tt : '',
+          STAGE_LABEL[rowStage(v)] || '', co]);
       });
     });
     return rows;

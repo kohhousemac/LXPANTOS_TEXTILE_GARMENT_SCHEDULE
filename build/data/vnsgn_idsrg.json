@@ -50,18 +50,5 @@
   "prevTt": 7,
   "status": "unchanged",
   "changedFields": []
- },
- {
-  "carrier": "EMC",
-  "vessel": "EVER CONSIST",
-  "voyage": "0560-071S",
-  "etd": "10-29 (Thu)",
-  "eta": "11-06 (Fri)",
-  "tt": 8,
-  "prevEtd": "10-26 (Mon)",
-  "prevEta": "11-05 (Thu)",
-  "prevTt": 7,
-  "status": "departed",
-  "changedFields": []
  }
 ]

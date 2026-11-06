@@ -356,17 +356,56 @@
     if (!pick) return;
     const body = document.getElementById('cc-rot-table').tBodies[0];
     let chosen = '';
-    pick.addEventListener('change', () => { chosen = pick.value; draw(); });
+    let chosenVoy = '';
+    // Same as the other lanes: the port-call card sits right under the sailings table,
+    // and clicking a sailing row shows that vessel/voyage's calls.
+    (function () {
+      const sail = document.getElementById('cc-sailings'), rot = document.getElementById('cc-rotation');
+      if (sail && rot) {
+        sail.parentNode.insertBefore(rot, sail.nextSibling);
+        const note = rot.querySelector('.note');
+        if (note) note.textContent = 'Click a sailing above to see its port calls (or pick a vessel).';
+        // Keep the Asia-lane order: schedule → port calls → market rate.
+        const mkt = sail.querySelector('.lx-mkt-wrap');
+        if (mkt) rot.appendChild(mkt);
+      }
+    })();
+    pick.addEventListener('change', () => { chosen = pick.value; chosenVoy = ''; draw(); markSail(); });
+    const sailBody = document.getElementById('cc-sail-table').tBodies[0];
+    function markSail() {
+      Array.prototype.slice.call(sailBody.rows).forEach((tr) => {
+        tr.classList.add('lx-pc-clickable');
+        tr.tabIndex = 0;
+        const on = !!chosen && tr.cells[0] && tr.cells[0].textContent.trim() === chosen && (!chosenVoy || tr.cells[1].textContent.trim() === chosenVoy);
+        tr.classList.toggle('lx-row-selected', on);
+      });
+    }
+    function chooseSail(tr) {
+      if (!tr || !tr.cells || tr.cells.length < 2) return;
+      chosen = tr.cells[0].textContent.trim();
+      chosenVoy = tr.cells[1].textContent.trim();
+      draw();
+      markSail();
+      const rot = document.getElementById('cc-rotation');
+      if (rot && rot.scrollIntoView) rot.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+    sailBody.addEventListener('click', (ev) => chooseSail(ev.target.closest('tr')));
+    sailBody.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); chooseSail(ev.target.closest('tr')); } });
+    new MutationObserver(markSail).observe(sailBody, { childList: true });
     function draw() {
       const d = dash.data('port_calls_cc');
       body.replaceChildren();
       if (d.status !== 'ok') return;
       const names = [...new Set(d.data.map((r) => r.vessel))].sort();
-      if (!chosen || !names.includes(chosen)) chosen = names[0] || '';
+      if (!chosen || !names.includes(chosen)) { chosen = names[0] || ''; chosenVoy = ''; }
       pick.replaceChildren(...names.map((n) => new Option(n, n)));
       pick.value = chosen;
       const t = (r) => r.eta || r.etd;
-      const rows = d.data.filter((r) => r.vessel === chosen).slice().sort((a, b) => t(a) < t(b) ? -1 : 1);
+      let rows = d.data.filter((r) => r.vessel === chosen).slice().sort((a, b) => t(a) < t(b) ? -1 : 1);
+      if (chosenVoy) {
+        const voyRows = rows.filter((r) => r.out_voy === chosenVoy || r.in_voy === chosenVoy);
+        if (voyRows.length) rows = voyRows;
+      }
       rows.forEach((r) => {
         const tr = body.insertRow();
         tr.dataset.key = r.key;

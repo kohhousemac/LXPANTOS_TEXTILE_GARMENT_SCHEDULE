@@ -1,6 +1,6 @@
 [
  {
-  "carrier": "DONGJIN / PANOCEAN / SINOKOR",
+  "carrier": "DONGJIN / HEUNG-A / KMTC / PANOCEAN / SINOKOR",
   "vessel": "SAWASDEE ALTAIR",
   "voyage": "2610S",
   "etd": "11-03 (Tue)",
@@ -11,10 +11,11 @@
   "prevTt": null,
   "status": "departed",
   "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
+  "rotation": "Busan → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR"
  },
  {
-  "carrier": "DONGJIN / SINOKOR",
+  "carrier": "DONGJIN / HEUNG-A / KMTC / SINOKOR",
   "vessel": "SKY ORION",
   "voyage": "2613S",
   "etd": "11-03 (Tue)",
@@ -25,10 +26,11 @@
   "prevTt": null,
   "status": "departed",
   "changedFields": [],
-  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh"
+  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR"
  },
  {
-  "carrier": "SINOKOR",
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "SAWASDEE VEGA",
   "voyage": "2614S",
   "etd": "11-10 (Tue)",
@@ -39,10 +41,11 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh"
+  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh",
+  "closedCarriers": "KMTC"
  },
  {
-  "carrier": "DONGJIN",
+  "carrier": "DONGJIN / HEUNG-A / SINOKOR",
   "vessel": "DONGJIN CONFIDENT",
   "voyage": "0154S",
   "etd": "11-15 (Sun)",
@@ -53,10 +56,11 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
+  "rotation": "Busan → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / SINOKOR"
  },
  {
-  "carrier": "PANOCEAN",
+  "carrier": "HEUNG-A / KMTC / PANOCEAN / SINOKOR",
   "vessel": "PANCON CHAMPION",
   "voyage": "2612S",
   "etd": "11-15 (Sun)",
@@ -67,10 +71,11 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
+  "rotation": "Busan → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR"
  },
  {
-  "carrier": "SINOKOR",
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "SAWASDEE ATLANTIC",
   "voyage": "2612S",
   "etd": "11-17 (Tue)",
@@ -81,10 +86,12 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Busan → Ulsan → Hong Kong → Ho Chi Minh"
+  "rotation": "Busan → Ulsan → Hong Kong → Ho Chi Minh",
+  "bookingClosed": true,
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR"
  },
  {
-  "carrier": "PANOCEAN",
+  "carrier": "HEUNG-A / KMTC / PANOCEAN / SINOKOR",
   "vessel": "SAWASDEE SPICA",
   "voyage": "2612S",
   "etd": "11-21 (Sat)",
@@ -95,10 +102,11 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
+  "rotation": "Busan → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / KMTC"
  },
  {
-  "carrier": "SINOKOR",
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "SKY ORION",
   "voyage": "2614S",
   "etd": "11-24 (Tue)",
@@ -109,10 +117,11 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh"
+  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / KMTC"
  },
  {
-  "carrier": "PANOCEAN",
+  "carrier": "HEUNG-A / KMTC / PANOCEAN / SINOKOR",
   "vessel": "PANCON CHAMPION",
   "voyage": "2613S",
   "etd": "11-29 (Sun)",
@@ -123,48 +132,7 @@
   "prevTt": null,
   "status": "new",
   "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
- },
- {
-  "carrier": "DONGJIN / PANOCEAN / SINOKOR",
-  "vessel": "KMTC ULSAN",
-  "voyage": "2617S",
-  "etd": "11-01 (Sun)",
-  "eta": "11-05 (Thu)",
-  "tt": 4,
-  "prevEtd": "11-01 (Sun)",
-  "prevEta": "11-05 (Thu)",
-  "prevTt": 4,
-  "status": "departed",
-  "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
- },
- {
-  "carrier": "DONGJIN / SINOKOR",
-  "vessel": "SAWASDEE BALTIC",
-  "voyage": "2618S",
-  "etd": "11-02 (Mon)",
-  "eta": "11-07 (Sat)",
-  "tt": 5,
-  "prevEtd": "11-02 (Mon)",
-  "prevEta": "11-07 (Sat)",
-  "prevTt": 5,
-  "status": "departed",
-  "changedFields": [],
-  "rotation": "Busan → Ho Chi Minh"
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "KMTC JAKARTA",
-  "voyage": "2612S",
-  "etd": "11-02 (Mon)",
-  "eta": "11-07 (Sat)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": [],
-  "rotation": "Busan → Ulsan → Ho Chi Minh"
+  "rotation": "Busan → Ho Chi Minh",
+  "closedCarriers": "HEUNG-A / KMTC"
  }
 ]

@@ -1,6 +1,6 @@
 [
  {
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2608N",
   "etd": "11-04 (Wed)",
@@ -10,20 +10,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "KMTC",
-  "vessel": "STARSHIP JUPITER",
-  "voyage": "2608N",
-  "etd": "11-04 (Wed)",
-  "eta": "11-15 (Sun)",
-  "tt": 11,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "altDates": "KMTC 11-04 (Wed)→11-15 (Sun)"
  },
  {
   "carrier": "NAMSUNG",
@@ -37,26 +25,11 @@
   "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
-  "bookingClosed": true
+  "bookingClosed": true,
+  "closedCarriers": "NAMSUNG"
  },
  {
-  "carrier": "KMTC",
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2608N",
-  "etd": "11-08 (Sun)",
-  "eta": "11-19 (Thu)",
-  "tt": 11,
-  "prevEtd": "11-08 (Sun)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "carrier"
-  ],
-  "bookingClosed": true
- },
- {
-  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2608N",
   "etd": "11-09 (Mon)",
@@ -68,7 +41,9 @@
   "status": "changed",
   "changedFields": [
    "carrier"
-  ]
+  ],
+  "altDates": "KMTC 11-08 (Sun)→11-19 (Thu)",
+  "closedCarriers": "KMTC"
  },
  {
   "carrier": "NAMSUNG",
@@ -101,19 +76,6 @@
   ]
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609N",
-  "etd": "11-20 (Fri)",
-  "eta": "12-02 (Wed)",
-  "tt": 12,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "etd": "11-20 (Fri)",
@@ -121,7 +83,8 @@
   "tt": 13,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "altDates": "NAMSUNG 11-20 (Fri)→12-02 (Wed); KMTC 11-23 (Mon)→12-06 (Sun)"
  },
  {
   "carrier": "NAMSUNG",
@@ -137,24 +100,7 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609N",
-  "etd": "11-23 (Mon)",
-  "eta": "12-06 (Sun)",
-  "tt": 13,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "carrier"
-  ]
- },
- {
-  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
   "etd": "11-26 (Thu)",
@@ -168,28 +114,11 @@
    "etd",
    "eta",
    "carrier"
-  ]
+  ],
+  "altDates": "KMTC 11-26 (Thu)→12-07 (Mon)"
  },
  {
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2609N",
-  "etd": "11-26 (Thu)",
-  "eta": "12-07 (Mon)",
-  "tt": 11,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 10,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt",
-   "carrier"
-  ]
- },
- {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
   "etd": "12-01 (Tue)",
@@ -203,16 +132,7 @@
    "etd",
    "eta",
    "carrier"
-  ]
- },
- {
-  "vessel": "STARSHIP JUPITER",
-  "voyage": "2609N",
-  "etd": "12-02 (Wed)",
-  "eta": "12-12 (Sat)",
-  "tt": 10,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "HEUNG-A / SINOKOR"
+  ],
+  "altDates": "HEUNG-A/SINOKOR 12-02 (Wed)→12-12 (Sat)"
  }
 ]

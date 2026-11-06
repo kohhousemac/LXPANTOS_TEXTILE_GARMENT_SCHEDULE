@@ -23,21 +23,22 @@ PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semar
         'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
         'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
-ASIA = [  # (pol code, [(pod code, route id), ...])
-    ('hcm', [('jkt', 'vnsgn_idjkt'), ('srg', 'vnsgn_idsrg'), ('pus', 'vnsgn_krpus'), ('inc', 'vnsgn_krinc'), ('sha', 'vnsgn_cnsha')]),
-    ('hph', [('jkt', 'vnhph_idjkt'), ('pus', 'vnhph_krpus'), ('inc', 'vnhph_krinc'), ('sha', 'vnhph_cnsha')]),
-    ('jkt', [('hph', 'idjkt_vnhph'), ('sha', 'idjkt_cnsha'), ('inc', 'idjkt_krinc')]),
+ASIA = [  # (pol code, [(pod code, route id), ...]) — same order as the dashboard
+    ('hcm', [('jkt', 'vnsgn_idjkt'), ('srg', 'vnsgn_idsrg'), ('pus', 'vnsgn_krpus'), ('inc', 'vnsgn_krinc'), ('sha', 'vnsgn_cnsha'), ('lgb', 'vnsgn_uslgb'), ('nyc', 'vnsgn_usnyc')]),
+    ('hph', [('jkt', 'vnhph_idjkt'), ('pus', 'vnhph_krpus'), ('inc', 'vnhph_krinc'), ('sha', 'vnhph_cnsha'), ('lax', 'vnhph_uslax'), ('nyc', 'vnhph_usnyc')]),
+    ('jkt', [('hph', 'idjkt_vnhph'), ('sha', 'idjkt_cnsha'), ('inc', 'idjkt_krinc'), ('pus', 'idjkt_krpus')]),
     ('sha', [('hph', 'cnsha_vnhph'), ('hcm', 'cnsha_vnsgn'), ('pus', 'cnsha_krpus'), ('inc', 'cnsha_krinc')]),
-    ('skk', [('hcm', 'cnshk_vnsgn')]),
+    ('skk', [('hcm', 'cnshk_vnsgn'), ('inc', 'cnshk_krinc'), ('pus', 'cnshk_krpus')]),
     ('kel', [('hcm', 'twkel_vnsgn'), ('hph', 'twkel_vnhph')]),
     ('hkg', [('hph', 'hkhkg_vnhph'), ('hcm', 'hkhkg_vnsgn'), ('jkt', 'hkhkg_idjkt')]),
     ('pus', [('hcm', 'krpus_vnsgn'), ('jkt', 'krpus_idjkt')]),
+    ('inc', [('hph', 'krinc_vnhph')]),
 ]
 
 PC_IDS = {'cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'idjkt_vnhph', 'vnsgn_idjkt'}
 PC_PANEL = '''        <div class="lx-pc-wrap"><p class="lx-mkt-title">Port call schedule<span class="lx-mkt-sub">모선별 기항 일정 · 위 스케줄 행을 누르면 바뀝니다</span></p><div class="lx-pc dash-skeleton" data-draw="pc-{route}" data-source="port_calls_asia"></div></div>'''
 
-MKT_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Market rate<span class="lx-mkt-sub">시장가 추이 · USD / 40ft</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-{route}" data-source="market_rate_40"></div></div>'''
+MKT_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Market rate<span class="lx-mkt-sub">40ft · USD · CY-CY · LX판토스 시장가</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-{route}" data-source="market_rate_40"></div></div>'''
 def _mkt_ids():
     try: return {r.get('routeId') for r in json.loads((DATA / 'market_rate_40.json').read_text(encoding='utf-8'))}
     except Exception: return set()
@@ -50,6 +51,18 @@ LANE_NOTES = {
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항 · 도착 Port Newark',
     'krinc_vnhph': 'PANOCEAN · 흥아 · 동진 · SM상선 · SITC 직항 · 출항 토~화만 · 상해·닝보 기항 항차 제외 · ⛔ = 선사 스케줄에서 부킹 불가(빨간색)',
 }
+
+CALLING_ORDER = {'krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'}
+BW_SUB = {
+    'cnshk_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 서커우~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
+    'twkel_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 가오슝~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
+    'twkel_vnhph': '완하이 모선 실측 입항(ETA)→접안(ETB) · 가오슝~하이퐁 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
+}
+for _r in ('vnsgn_idjkt', 'vnsgn_cnsha', 'vnhph_idjkt', 'vnhph_cnsha', 'idjkt_vnhph', 'cnsha_vnhph', 'cnsha_vnsgn'):
+    BW_SUB[_r] = 'SITC 모선 실측 입항(ATA)→접안(ATB) · 이 구간 출발항~도착항 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수'
+BW_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Port berthing wait<span class="lx-mkt-sub">{sub}</span></p><div class="lx-bw dash-skeleton" data-draw="bw-{route}" data-source="{log} {route}"></div></div>'''
+BERTH_MINI = {'vnsgn_idsrg', 'vnsgn_krpus', 'vnsgn_krinc', 'vnhph_krpus', 'vnhph_krinc', 'idjkt_cnsha', 'idjkt_krinc', 'idjkt_krpus',
+              'cnsha_krpus', 'cnsha_krinc', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'krpus_trist'}
 
 def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     h = ' hidden' if hidden else ''
@@ -73,13 +86,14 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
 {('        <p class="lx-lane-note">' + LANE_NOTES[route] + '</p>') if route in LANE_NOTES else ''}
         <div class="lx-table-wrap">
           <table class="lx-table" aria-label="{pol_name} to {pod_name} sailing schedule">
-            <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th>{'<th>Calling order</th>' if route.startswith('krpus_') else ''}</tr></thead>
+            <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th>{'<th>Calling Order</th>' if route in CALLING_ORDER else ''}</tr></thead>
             <tbody class="dash-skeleton" data-draw="rows-{route}" data-source="{route}"></tbody>
           </table>
         </div>
 {PC_PANEL.format(route=route) if not route.startswith(('krpus_trist', 'krpus_eg')) else ''}
 {MKT_PANEL.format(route=route) if route in MKT_IDS else ''}
-{'' if route.split('_')[1].startswith('us') or route == 'krinc_vnhph' else '        <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-' + route + '" data-source="berthing_wait"></div>'}
+{BW_PANEL.format(route=route, sub=BW_SUB[route], log=('whl_berth_log' if 'WHL' in BW_SUB[route] or '완하이' in BW_SUB[route] else 'sitc_berth_log')) if route in BW_SUB else ''}
+{('        <div class="lx-berth-mini dash-skeleton" data-draw="berthmini-' + route + '" data-source="berthing_wait"></div>') if route in BERTH_MINI else ''}
       </section>
     </section>
 '''
@@ -121,9 +135,12 @@ BUSAN_NOTE = '''
 
 def asia_markup():
     # POD order inside each POL: Vietnam → Indonesia → China → Korea
-    pols = [(pol, sorted(pods, key=lambda p: (COUNTRY.get(p[0], 9), KR_ORDER.get(p[0], 0)))) for pol, pods in ASIA]
+    pols = ASIA  # dashboard order (no re-sorting)
     out = ['''
   <section class="lx-group" id="net-asia" data-net="asia" role="tabpanel" aria-labelledby="tab-net-asia">
+  <div class="lx-group">
+    <button type="button" class="lx-btn lx-btn-sm" id="lx-copy-all-asia" style="align-self: flex-start;">Copy all (Asia network)</button>
+  </div>
   <div class="lx-infostrip">
   <div class="lx-group" id="lx-holidays-group">
     <p class="lx-group-label">Upcoming holidays (ID · VN · KR · TW · CN)</p>
@@ -131,7 +148,7 @@ def asia_markup():
   </div>
 
   <div class="lx-group">
-    <p class="lx-group-label">Carrier colors</p>
+    <p class="lx-group-label">Carrier colors · ⛔ = 선사 스케줄에서 부킹 불가(빨간색) 모선</p>
     <div class="lx-legend" id="lx-legend" aria-label="Carrier color key"></div>
   </div>
   </div>
@@ -229,9 +246,11 @@ NI_PAGE = '''
         </table>
       </div>
       <p class="empty" id="ni-sail-empty" hidden>No sailings to display.</p>
+      <div class="lx-mkt-wrap">
+        <p class="lx-mkt-title">Market rate<span class="lx-mkt-sub">Shanghai → Corinto · 40ft · USD · CY-CY · LX판토스 시장가</span></p>
+        <div class="lx-mkt dash-skeleton" data-draw="mkt-cnsha_nicto" data-source="market_rate_40"></div>
+      </div>
     </section>
-
-    <section class="card" id="ni-market"><div class="lx-mkt-wrap lx-mkt-card"><p class="lx-mkt-title">Shanghai → Corinto Market rate<span class="lx-mkt-sub">시장가 추이 · USD / 40ft</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-cnsha_nicto" data-source="market_rate_40"></div></div></section>
 
     <section class="card" id="ni-transit">
       <h2>Transit time by origin</h2>
