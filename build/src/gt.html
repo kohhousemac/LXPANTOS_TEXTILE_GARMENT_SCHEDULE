@@ -130,8 +130,7 @@
       var kfmt = function (v) { return '$' + (v >= 1000 ? (Math.round(v / 100) / 10) + 'k' : v); };
       var t = function (r) { return new Date(r.date + 'T00:00:00').getTime(); };
       var r40 = rows.filter(function (r) { return Number(r.ft40) > 0; });
-      var r20 = rows.filter(function (r) { return Number(r.ft20) > 0; });
-      var first = r40[0], last = r40[r40.length - 1], prev = r40[r40.length - 2];
+        var first = r40[0], last = r40[r40.length - 1], prev = r40[r40.length - 2];
 
       c.fillStyle = '#ffffff'; c.fillRect(0, 0, W, H);
       c.fillStyle = RED; c.fillRect(0, 0, W, 6);
@@ -139,7 +138,7 @@
       c.fillStyle = TEXT; c.font = '700 28px ' + F;
       c.fillText('상해 → 과테말라(Puerto Quetzal) 해상운임 추이', 40, 56);
       c.fillStyle = SUB; c.font = '15px ' + F;
-      c.fillText('40FT · 20FT  |  USD  |  CY-CY  |  LX판토스 시장가  |  ' + first.date + ' ~ ' + last.date, 40, 84);
+      c.fillText('40FT  |  USD  |  CY-CY  |  LX판토스 시장가  |  ' + first.date + ' ~ ' + last.date, 40, 84);
       c.textAlign = 'right';
       c.fillText('생성 ' + new Date().toISOString().slice(0, 10), W - 40, 56);
       c.textAlign = 'left';
@@ -152,7 +151,7 @@
       var peak = r40.reduce(function (m, r) { return Number(r.ft40) > Number(m.ft40) ? r : m; }, r40[0]);
       var dv = prev ? Number(last.ft40) - Number(prev.ft40) : 0;
       var cards = [
-        ['최신 40FT 운임', money(last.ft40), last.date + (Number(last.ft20) > 0 ? '  ·  20FT ' + money(last.ft20) : ''), TEXT],
+        ['최신 40FT 운임', money(last.ft40), last.date, TEXT],
         ['직전 대비', (dv > 0 ? '▲ ' : dv < 0 ? '▼ ' : '') + money(Math.abs(dv)), prev ? (dv >= 0 ? '+' : '') + (dv / Number(prev.ft40) * 100).toFixed(1) + '%  vs ' + prev.date : '', dv > 0 ? UP : dv < 0 ? DOWN : TEXT],
         ['기간 최고 40FT', money(peak.ft40), peak.date, TEXT],
         [yr + '년 평균 40FT', avgY ? money(avgY) : '—', avgP ? (avgY >= avgP ? '▲ ' : '▼ ') + Math.abs((avgY - avgP) / avgP * 100).toFixed(1) + '%  vs ' + pyr + '년 ' + money(avgP) : '', TEXT]
@@ -170,7 +169,7 @@
 
       // Main chart: 40FT and 20FT over time
       var L = 90, R = W - 40, T = 250, B = 600;
-      c.fillStyle = TEXT; c.font = '700 17px ' + F; c.fillText('운임 변동 추이', 40, 238);
+      c.fillStyle = TEXT; c.font = '700 17px ' + F; c.fillText('40FT 운임 변동 추이', 40, 238);
       var tMin = t(rows[0]), tMax = t(rows[rows.length - 1]);
       var vMax = Math.max.apply(null, r40.map(function (r) { return Number(r.ft40); }));
       var yTop = Math.ceil(vMax * 1.1 / 1000) * 1000;
@@ -207,16 +206,15 @@
         c.stroke(); c.lineWidth = 1;
         list.forEach(function (r) { c.fillStyle = '#fff'; c.beginPath(); c.arc(X(t(r)), Y(Number(r[key])), 3.2, 0, 7); c.fill(); c.strokeStyle = color; c.lineWidth = 1.6; c.stroke(); c.lineWidth = 1; });
       }
-      line(r20, 'ft20', BLUE, false);
-      line(r40, 'ft40', RED, true);
+        line(r40, 'ft40', RED, true);
       // labels: peak and latest
       c.font = '700 13px ' + F; c.fillStyle = RED;
       c.fillText(money(peak.ft40), X(t(peak)), Y(Number(peak.ft40)) - 12);
-      c.textAlign = 'right'; c.fillText(money(last.ft40), X(t(last)) - 10, Y(Number(last.ft40)) + 22);
+      c.textAlign = 'right'; (function () { var lbl = '최신 ' + money(last.ft40), lx = X(t(last)) - 2, ly = Y(Number(last.ft40)) - 16, lw = c.measureText(lbl).width; c.fillStyle = 'rgba(255,255,255,.92)'; c.strokeStyle = RED; c.lineWidth = 1; c.beginPath(); c.roundRect ? c.roundRect(lx - lw - 8, ly - 15, lw + 16, 21, 5) : c.rect(lx - lw - 8, ly - 15, lw + 16, 21); c.fill(); c.stroke(); c.fillStyle = RED; c.fillText(lbl, lx, ly); })();
       // legend
       c.textAlign = 'left'; c.font = '13px ' + F;
-      [[RED, '40FT'], [BLUE, '20FT']].forEach(function (lg, i) {
-        var lx = R - 150 + i * 75, ly = 232;
+      [[RED, '40FT']].forEach(function (lg, i) {
+        var lx = R - 75 + i * 75, ly = 232;
         c.strokeStyle = lg[0]; c.lineWidth = 3; c.beginPath(); c.moveTo(lx, ly - 4); c.lineTo(lx + 22, ly - 4); c.stroke(); c.lineWidth = 1;
         c.fillStyle = TEXT; c.fillText(lg[1], lx + 28, ly);
       });
