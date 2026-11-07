@@ -278,11 +278,15 @@
     tag.className = 'lx-tag';
     // Joint-service rows: ⛔ goes right after each carrier whose own schedule shows no space (closedCarriers).
     var closedList = typeof v.closedCarriers === 'string' && v.closedCarriers ? v.closedCarriers.split(/\s*\/\s*/) : null;
-    if (closedList) {
+    {
+      // Two carriers per line: a 3rd/4th carrier on a joint-service row wraps to the next line.
       String(v.carrier).split(/\s*\/\s*/).forEach(function (c, i) {
-        if (i) tag.appendChild(document.createTextNode(' / '));
+        if (i) {
+          tag.appendChild(document.createTextNode(i % 2 === 0 ? ' /' : ' / '));
+          if (i % 2 === 0) tag.appendChild(document.createElement('br'));
+        }
         tag.appendChild(document.createTextNode(c));
-        if (closedList.indexOf(c) !== -1) {
+        if (closedList && closedList.indexOf(c) !== -1) {
           var cb = document.createElement('span');
           cb.className = 'lx-bkg-closed lx-bkg-closed--inline';
           cb.textContent = '⛔';
@@ -291,8 +295,6 @@
           tag.appendChild(cb);
         }
       });
-    } else {
-      tag.textContent = v.carrier;
     }
     // Joint-service row: carriers that publish a slightly different date for the same vessel/voyage.
     if (v.altDates) tag.title = '선사별 일정 차이: ' + v.altDates;

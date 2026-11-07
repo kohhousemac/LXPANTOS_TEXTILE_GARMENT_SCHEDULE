@@ -201,4 +201,10 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 <style>
 .lx-pol-note { margin: 0; padding: .7rem 1rem; border-radius: var(--cds-radius); background: color-mix(in srgb, var(--lx-red) 6%, var(--color-panel)); border: 1px solid color-mix(in srgb, var(--lx-red) 22%, transparent); font-size: .88rem; color: var(--color-fg); }
 .lx-pol-note b { color: var(--lx-red); }
+/* schedule tables one size smaller (dashboard parity); joint-service carriers wrap two per line */
+.lx-table td { font-size: calc(var(--cds-font-size-body) - 1px); }
+.lx-table thead th { font-size: calc(.72rem - 1px); }
+.lx-row-carrier .lx-tag { font-size: calc(.72rem - 1px); line-height: 1.45; }
+.lx-table .lx-chip { font-size: calc(.72rem - 1px); }
+.lx-lane--split .lx-table th, .lx-lane--split .lx-table td { padding-left: .55rem; padding-right: .55rem; }
 </style>
