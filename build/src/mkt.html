@@ -18,7 +18,23 @@
       return;
     }
     var color = (dash.colors && dash.colors[1]) || '#2563eb';
-    var W = el.clientWidth || 600, H = 150, top = 18, bottom = 22, left = 46, right = 12;
+    // Headline: latest rate and its change from the previous figure.
+    var lastR = rows[rows.length - 1], prevR = rows.length > 1 ? rows[rows.length - 2] : null;
+    var big = document.createElement('div'); big.className = 'lx-mkt-big';
+    var bv = document.createElement('span'); bv.className = 'lx-mkt-big-v'; bv.textContent = '$' + lastR.v.toLocaleString();
+    big.appendChild(bv);
+    var bn = document.createElement('span'); bn.className = 'lx-mkt-big-d';
+    bn.textContent = (lastR.note ? lastR.note + ' · ' : '') + lastR.date.slice(5).replace('-', '/');
+    if (prevR) {
+      var dv = lastR.v - prevR.v;
+      var bd = document.createElement('span');
+      bd.className = 'lx-mkt-big-d' + (dv < 0 ? ' is-down' : dv > 0 ? ' is-up' : '');
+      bd.textContent = (dv < 0 ? '▼ $' : dv > 0 ? '▲ $' : '— $') + Math.abs(dv).toLocaleString() + ' vs ' + (prevR.note || prevR.date.slice(5).replace('-', '/'));
+      big.appendChild(bd);
+    }
+    big.appendChild(bn);
+    el.appendChild(big);
+    var W = el.clientWidth || 600, H = 150, top = 10, bottom = 22, left = 46, right = 12;
     var svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', '0 0 ' + W + ' ' + H)
       .attr('role', 'img').attr('aria-label', 'Market rate 40ft over time');
     var tMin = rows[0].t, tMax = rows[rows.length - 1].t;
@@ -37,13 +53,12 @@
     gg.selectAll('text.xt').data(years).join('text').attr('x', function (yr) { return x(new Date(yr, 0, 1).getTime()); })
       .attr('y', H - 6).attr('text-anchor', 'middle').attr('font-size', 10).attr('fill', 'var(--color-fg-muted)')
       .text(function (yr) { return String(yr); });
+    gg.append('path').datum(rows).attr('fill', color).attr('fill-opacity', 0.1).attr('stroke', 'none')
+      .attr('d', d3.area().x(function (r) { return x(r.t); }).y0(H - bottom).y1(function (r) { return y(r.v); }));
     gg.append('path').datum(rows).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 1.8)
       .attr('d', d3.line().x(function (r) { return x(r.t); }).y(function (r) { return y(r.v); }));
     var last = rows[rows.length - 1];
     gg.append('circle').attr('cx', x(last.t)).attr('cy', y(last.v)).attr('r', 3.2).attr('fill', color);
-    gg.append('text').attr('x', W - right).attr('y', 12).attr('text-anchor', 'end').attr('font-size', 11)
-      .attr('fill', 'var(--color-fg)').attr('font-weight', 600)
-      .text('$' + last.v.toLocaleString() + ' (' + (last.note ? last.note + ' · ' : '') + last.date.slice(5).replace('-', '/') + ')');
     var tip = document.createElement('div'); tip.className = 'lx-mkt-tip'; tip.style.display = 'none'; el.appendChild(tip);
     var dot = gg.append('circle').attr('r', 3.5).attr('fill', color).attr('display', 'none');
     svg.append('rect').attr('x', left).attr('y', top).attr('width', Math.max(1, W - left - right)).attr('height', H - top - bottom)
@@ -62,7 +77,8 @@
         var px = x(best.t) * scale, py = y(best.v) * scale;
         var tw = tip.offsetWidth;
         tip.style.left = Math.max(0, Math.min(px + 10, el.clientWidth - tw - 2)) + 'px';
-        tip.style.top = Math.max(0, py - 40) + 'px';
+        var oy = svg.node().getBoundingClientRect().top - el.getBoundingClientRect().top;
+        tip.style.top = Math.max(0, oy + py - 40) + 'px';
       })
       .on('mouseleave', function () { tip.style.display = 'none'; dot.attr('display', 'none'); });
   }

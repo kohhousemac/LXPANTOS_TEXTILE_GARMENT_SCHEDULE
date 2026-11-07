@@ -36,7 +36,7 @@ ASIA = [  # (pol code, [(pod code, route id), ...]) — same order as the dashbo
 ]
 
 PC_IDS = {'cnsha_vnhph', 'cnsha_vnsgn', 'cnshk_vnsgn', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'idjkt_vnhph', 'vnsgn_idjkt'}
-PC_PANEL = '''        <div class="lx-pc-wrap"><p class="lx-mkt-title">Port call schedule<span class="lx-mkt-sub">모선별 기항 일정 · 위 스케줄 행을 누르면 바뀝니다</span></p><div class="lx-pc dash-skeleton" data-draw="pc-{route}" data-source="port_calls_asia"></div></div>'''
+PC_PANEL = '''        <div class="lx-pc-wrap"><p class="lx-mkt-title">Port call schedule<span class="lx-mkt-sub">모선별 기항 일정 · 표의 행을 누르면 바뀝니다</span></p><div class="lx-pc dash-skeleton" data-draw="pc-{route}" data-source="port_calls_asia"></div></div>'''
 
 MKT_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Market rate<span class="lx-mkt-sub">40ft · USD · CY-CY · LX판토스 시장가</span></p><div class="lx-mkt dash-skeleton" data-draw="mkt-{route}" data-source="market_rate_40"></div></div>'''
 def _mkt_ids():

@@ -8,6 +8,31 @@
   var KEEP_AFTER_ARRIVAL_MS = 14 * 864e5;
   var sel = {};
 
+  // Side layout (same as the dashboard): the schedule table stays on the left; port calls,
+  // market rate and berthing wait become cards stacked on the right (stacked under the table on narrow screens).
+  Array.prototype.slice.call(document.querySelectorAll('.lx-lane')).forEach(function (lane) {
+    if (lane.classList.contains('lx-lane--split')) return;
+    var kids = Array.prototype.slice.call(lane.children);
+    var side = kids.filter(function (c) { return c.classList.contains('lx-pc-wrap') || c.classList.contains('lx-mkt-wrap'); });
+    if (!side.length) return;
+    var main = document.createElement('div'); main.className = 'lx-lane-main';
+    var aside = document.createElement('aside'); aside.className = 'lx-lane-side'; aside.setAttribute('aria-label', 'Lane details');
+    kids.forEach(function (c) { if (side.indexOf(c) === -1) main.appendChild(c); });
+    side.forEach(function (c) { c.classList.add('lx-side-card'); aside.appendChild(c); });
+    lane.classList.add('lx-lane--split');
+    lane.appendChild(main);
+    lane.appendChild(aside);
+  });
+  // Charts drawn while their tab was hidden measured zero width: redraw the side cards once a tab opens.
+  document.addEventListener('click', function (ev) {
+    if (!ev.target || !ev.target.closest || !ev.target.closest('.lx-nav-btn, .lx-subnav-btn')) return;
+    (window.requestAnimationFrame || setTimeout)(function () {
+      Array.prototype.slice.call(document.querySelectorAll('.lx-lane-side [data-draw]')).forEach(function (e) {
+        if (e.offsetParent !== null) dash.draw(e.getAttribute('data-draw'));
+      });
+    });
+  });
+
   function t(s) { return s ? new Date(String(s).replace(' ', 'T') + (String(s).length <= 10 ? 'T00:00' : '')).getTime() : NaN; }
   function fmt(s) { if (!s) return '—'; var x = String(s); return x.slice(5, 10).replace('-', '/') + (x.length > 10 ? ' ' + x.slice(11, 16) : ''); }
   function key(v, voy) { return String(v || '').trim().toUpperCase() + '|' + String(voy || '').trim().toUpperCase(); }
@@ -98,42 +123,39 @@
       return;
     }
     var st = stageOf(calls);
-    var chip = el('span', 'lx-chip lx-pc-stage lx-pc-stage--' + st[0], st[1]);
-    head.appendChild(chip);
     var steps = el('div', 'lx-pc-steps');
     [['pre', '선적 전'], ['sea', '항해 중'], ['arr', '도착']].forEach(function (p, i) {
       if (i) steps.appendChild(el('span', 'lx-pc-step-line'));
-      var d = el('span', 'lx-pc-step' + (p[0] === st[0] ? ' is-on' : ''), p[1]);
-      steps.appendChild(d);
+      steps.appendChild(el('span', 'lx-pc-step' + (p[0] === st[0] ? ' is-on' : ''), p[1]));
     });
-    head.appendChild(steps);
     box.appendChild(head);
+    box.appendChild(steps);
 
-    var wrap = el('div', 'lx-table-wrap');
-    var tbl = el('table', 'lx-table lx-pc-table');
-    tbl.setAttribute('aria-label', s.vessel + ' ' + s.voyage + ' port calls');
-    var th = tbl.createTHead().insertRow();
-    ['Port', '', 'ETA', 'ETD', 'Status'].forEach(function (h) { var c = document.createElement('th'); c.textContent = h; th.appendChild(c); });
-    var tb = tbl.createTBody();
+    // Compact timeline: one entry per call, POL filled dot, POD ring, calls in between hollow.
+    var list = el('ol', 'lx-pc-list');
+    list.setAttribute('aria-label', s.vessel + ' ' + s.voyage + ' port calls');
     var now = Date.now();
     calls.forEach(function (r) {
-      var tr = tb.insertRow();
-      var passed = r.status === 'ACTUAL' || now > t(r.etd || r.eta);
-      if (passed) tr.className = 'lx-pc-past';
-      var p = tr.insertCell(); p.textContent = r.port; if (r.role === 'POL' || r.role === 'POD') p.className = 'lx-vessel';
+      var li = el('li', 'lx-pc-item is-' + (r.role === 'POL' ? 'pol' : r.role === 'POD' ? 'pod' : 'call'));
+      if (r.status === 'ACTUAL' || now > t(r.etd || r.eta)) li.classList.add('is-past');
+      var p = el('span', 'lx-pc-port', r.port);
       if (r.status === 'SKIP') p.classList.add('lx-pc-skip');
-      var role = tr.insertCell(); role.className = 'lx-pc-role';
-      role.textContent = r.role === 'POL' ? '선적항' : r.role === 'POD' ? '도착항' : '경유';
-      var a = tr.insertCell(); a.className = 'lx-date'; a.textContent = fmt(r.eta);
-      var d = tr.insertCell(); d.className = 'lx-date'; d.textContent = fmt(r.etd);
-      var sc = tr.insertCell(); sc.className = 'lx-pc-st';
-      sc.textContent = r.status === 'ACTUAL' ? (r.role === 'POD' ? 'Arrived' : 'Departed') : r.status === 'SKIP' ? 'Skip' : 'Est.';
-      if (r.status === 'ACTUAL') sc.classList.add('is-act');
+      li.appendChild(p);
+      var bits = [r.role === 'POL' ? '선적항' : r.role === 'POD' ? '도착항' : '경유'];
+      if (r.eta) bits.push('ETA ' + fmt(r.eta));
+      if (r.etd) bits.push('ETD ' + fmt(r.etd));
+      var meta = el('span', 'lx-pc-meta', bits.join(' · '));
+      if (r.status === 'ACTUAL' || r.status === 'SKIP') {
+        meta.appendChild(document.createTextNode(' · '));
+        meta.appendChild(el('span', 'lx-pc-st' + (r.status === 'ACTUAL' ? ' is-act' : ''), r.status === 'ACTUAL' ? (r.role === 'POD' ? 'Arrived' : 'Departed') : 'Skip'));
+      }
+      li.appendChild(meta);
+      list.appendChild(li);
     });
-    wrap.appendChild(tbl);
-    box.appendChild(wrap);
+    box.appendChild(list);
     var upd = calls.reduce(function (m, r) { return (r.collectedAt || '') > m ? r.collectedAt : m; }, '');
-    if (upd) box.appendChild(el('p', 'lx-lane-note', '선사 모선별 스케줄 기준 · 수집 ' + fmt(upd)));
+    var p2p = calls.some(function (r) { return r.source === 'p2p'; });
+    if (upd) box.appendChild(el('p', 'lx-lane-note', (p2p ? '선사가 아직 모선별 기항 일정을 공표하지 않은 항차 — 구간 스케줄의 출발·도착만 표시 (중간 기항은 공표되면 갱신)' : '선사 모선별 스케줄 기준') + ' · 수집 ' + fmt(upd)));
   }
 
   PC_IDS.forEach(function (id) {
@@ -150,5 +172,7 @@
     tb.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); choose(ev.target.closest('tr')); } });
     new MutationObserver(function () { highlight(id); }).observe(tb, { childList: true });
   });
+  // The default selection depends on the lane's own sailings too, so redraw once any dataset arrives.
+  dash.onData(function () { PC_IDS.forEach(function (id) { dash.draw('pc-' + id); }); });
 })();
 </script>

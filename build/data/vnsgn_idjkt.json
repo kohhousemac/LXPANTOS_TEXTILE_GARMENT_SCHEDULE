@@ -146,19 +146,6 @@
   "altDates": "KMTC 11-21 (Sat)→11-23 (Mon)"
  },
  {
-  "carrier": "SITC",
-  "vessel": "GREEN PACIFIC",
-  "voyage": "2631N",
-  "etd": "11-20 (Fri)",
-  "eta": "11-30 (Mon)",
-  "tt": 10,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 10,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
   "carrier": "GSL",
   "vessel": "NATTHA BHUM",
   "voyage": "NB3/43/069S",
@@ -249,19 +236,6 @@
   "prevEta": "12-08 (Tue)",
   "prevTt": 6,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "SINAR BANGKA",
-  "voyage": "2631N",
-  "etd": "12-04 (Fri)",
-  "eta": "12-14 (Mon)",
-  "tt": 10,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
   "changedFields": []
  },
  {
