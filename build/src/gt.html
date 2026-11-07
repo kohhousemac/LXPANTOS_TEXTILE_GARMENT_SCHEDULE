@@ -115,6 +115,203 @@
     dash.onData(draw);
   })();
 
+  // ---- Shanghai → Guatemala freight-rate report image (PNG), rebuilt from the latest data on every click ----
+  (function () {
+    function freightPng(rows) {
+      var S = 2, W = 1400, H = 1000;
+      var cv = document.createElement('canvas');
+      cv.width = W * S; cv.height = H * S;
+      var c = cv.getContext('2d');
+      c.scale(S, S);
+      var F = '"Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", sans-serif';
+      var RED = '#a72b2a', BLUE = '#2563eb', TEXT = '#1f2937', SUB = '#6b7280', GRID = '#e5e7eb', PANEL = '#f9fafb', UP = '#d1453b', DOWN = '#1f8a5b';
+      var QC = ['#60a5fa', '#a72b2a', '#f59e0b', '#10b981'];
+      var money = function (v) { return '$' + Math.round(v).toLocaleString('en-US'); };
+      var kfmt = function (v) { return '$' + (v >= 1000 ? (Math.round(v / 100) / 10) + 'k' : v); };
+      var t = function (r) { return new Date(r.date + 'T00:00:00').getTime(); };
+      var r40 = rows.filter(function (r) { return Number(r.ft40) > 0; });
+      var r20 = rows.filter(function (r) { return Number(r.ft20) > 0; });
+      var first = r40[0], last = r40[r40.length - 1], prev = r40[r40.length - 2];
+
+      c.fillStyle = '#ffffff'; c.fillRect(0, 0, W, H);
+      c.fillStyle = RED; c.fillRect(0, 0, W, 6);
+      c.textBaseline = 'alphabetic';
+      c.fillStyle = TEXT; c.font = '700 28px ' + F;
+      c.fillText('상해 → 과테말라(Puerto Quetzal) 해상운임 추이', 40, 56);
+      c.fillStyle = SUB; c.font = '15px ' + F;
+      c.fillText('40FT · 20FT  |  USD  |  CY-CY  |  LX판토스 시장가  |  ' + first.date + ' ~ ' + last.date, 40, 84);
+      c.textAlign = 'right';
+      c.fillText('생성 ' + new Date().toISOString().slice(0, 10), W - 40, 56);
+      c.textAlign = 'left';
+
+      // KPI cards
+      var yr = last.date.slice(0, 4), pyr = String(Number(yr) - 1);
+      var avgOf = function (list) { return list.length ? list.reduce(function (s, r) { return s + Number(r.ft40); }, 0) / list.length : null; };
+      var avgY = avgOf(r40.filter(function (r) { return r.date.slice(0, 4) === yr; }));
+      var avgP = avgOf(r40.filter(function (r) { return r.date.slice(0, 4) === pyr; }));
+      var peak = r40.reduce(function (m, r) { return Number(r.ft40) > Number(m.ft40) ? r : m; }, r40[0]);
+      var dv = prev ? Number(last.ft40) - Number(prev.ft40) : 0;
+      var cards = [
+        ['최신 40FT 운임', money(last.ft40), last.date + (Number(last.ft20) > 0 ? '  ·  20FT ' + money(last.ft20) : ''), TEXT],
+        ['직전 대비', (dv > 0 ? '▲ ' : dv < 0 ? '▼ ' : '') + money(Math.abs(dv)), prev ? (dv >= 0 ? '+' : '') + (dv / Number(prev.ft40) * 100).toFixed(1) + '%  vs ' + prev.date : '', dv > 0 ? UP : dv < 0 ? DOWN : TEXT],
+        ['기간 최고 40FT', money(peak.ft40), peak.date, TEXT],
+        [yr + '년 평균 40FT', avgY ? money(avgY) : '—', avgP ? (avgY >= avgP ? '▲ ' : '▼ ') + Math.abs((avgY - avgP) / avgP * 100).toFixed(1) + '%  vs ' + pyr + '년 ' + money(avgP) : '', TEXT]
+      ];
+      var cw = (W - 80 - 3 * 20) / 4;
+      cards.forEach(function (k, i) {
+        var x = 40 + i * (cw + 20), y = 108;
+        c.fillStyle = PANEL; c.strokeStyle = GRID; c.lineWidth = 1;
+        c.beginPath(); c.roundRect ? c.roundRect(x, y, cw, 96, 10) : c.rect(x, y, cw, 96); c.fill(); c.stroke();
+        c.fillStyle = RED; c.fillRect(x, y + 14, 3, 68);
+        c.fillStyle = SUB; c.font = '600 14px ' + F; c.fillText(k[0], x + 18, y + 30);
+        c.fillStyle = k[3]; c.font = '700 30px ' + F; c.fillText(k[1], x + 18, y + 66);
+        c.fillStyle = SUB; c.font = '13px ' + F; c.fillText(k[2], x + 18, y + 86);
+      });
+
+      // Main chart: 40FT and 20FT over time
+      var L = 90, R = W - 40, T = 250, B = 600;
+      c.fillStyle = TEXT; c.font = '700 17px ' + F; c.fillText('운임 변동 추이', 40, 238);
+      var tMin = t(rows[0]), tMax = t(rows[rows.length - 1]);
+      var vMax = Math.max.apply(null, r40.map(function (r) { return Number(r.ft40); }));
+      var yTop = Math.ceil(vMax * 1.1 / 1000) * 1000;
+      var X = function (tt) { return L + (tt - tMin) / Math.max(1, tMax - tMin) * (R - L); };
+      var Y = function (v) { return B - v / yTop * (B - T); };
+      c.font = '12px ' + F; c.textAlign = 'right';
+      for (var g = 0; g <= yTop; g += yTop <= 6000 ? 1000 : 2000) {
+        c.strokeStyle = GRID; c.setLineDash([4, 4]); c.beginPath(); c.moveTo(L, Y(g)); c.lineTo(R, Y(g)); c.stroke(); c.setLineDash([]);
+        c.fillStyle = SUB; c.fillText(kfmt(g), L - 10, Y(g) + 4);
+      }
+      c.textAlign = 'center';
+      var y0 = new Date(tMin).getFullYear(), y1 = new Date(tMax).getFullYear();
+      for (var yy = y0; yy <= y1; yy++) {
+        [0, 3, 6, 9].forEach(function (m) {
+          var tt = new Date(yy, m, 1).getTime();
+          if (tt < tMin || tt > tMax) return;
+          c.strokeStyle = m === 0 ? '#d1d5db' : GRID; c.beginPath(); c.moveTo(X(tt), B); c.lineTo(X(tt), B + (m === 0 ? 8 : 4)); c.stroke();
+          c.fillStyle = m === 0 ? TEXT : SUB; c.font = (m === 0 ? '700 13px ' : '12px ') + F;
+          c.fillText(m === 0 ? String(yy) : (m + 1) + '월', X(tt), B + 24);
+        });
+      }
+      c.strokeStyle = '#d1d5db'; c.beginPath(); c.moveTo(L, B); c.lineTo(R, B); c.stroke();
+      function line(list, key, color, area) {
+        if (!list.length) return;
+        if (area) {
+          var grad = c.createLinearGradient(0, T, 0, B);
+          grad.addColorStop(0, color + '33'); grad.addColorStop(1, color + '00');
+          c.fillStyle = grad; c.beginPath(); c.moveTo(X(t(list[0])), B);
+          list.forEach(function (r) { c.lineTo(X(t(r)), Y(Number(r[key]))); });
+          c.lineTo(X(t(list[list.length - 1])), B); c.closePath(); c.fill();
+        }
+        c.strokeStyle = color; c.lineWidth = 2.4; c.beginPath();
+        list.forEach(function (r, i) { var px = X(t(r)), py = Y(Number(r[key])); if (i) c.lineTo(px, py); else c.moveTo(px, py); });
+        c.stroke(); c.lineWidth = 1;
+        list.forEach(function (r) { c.fillStyle = '#fff'; c.beginPath(); c.arc(X(t(r)), Y(Number(r[key])), 3.2, 0, 7); c.fill(); c.strokeStyle = color; c.lineWidth = 1.6; c.stroke(); c.lineWidth = 1; });
+      }
+      line(r20, 'ft20', BLUE, false);
+      line(r40, 'ft40', RED, true);
+      // labels: peak and latest
+      c.font = '700 13px ' + F; c.fillStyle = RED;
+      c.fillText(money(peak.ft40), X(t(peak)), Y(Number(peak.ft40)) - 12);
+      c.textAlign = 'right'; c.fillText(money(last.ft40), X(t(last)) - 10, Y(Number(last.ft40)) + 22);
+      // legend
+      c.textAlign = 'left'; c.font = '13px ' + F;
+      [[RED, '40FT'], [BLUE, '20FT']].forEach(function (lg, i) {
+        var lx = R - 150 + i * 75, ly = 232;
+        c.strokeStyle = lg[0]; c.lineWidth = 3; c.beginPath(); c.moveTo(lx, ly - 4); c.lineTo(lx + 22, ly - 4); c.stroke(); c.lineWidth = 1;
+        c.fillStyle = TEXT; c.fillText(lg[1], lx + 28, ly);
+      });
+
+      // Bottom left: yearly average 40FT (bars) with change
+      var years = []; for (var y2 = y0; y2 <= y1; y2++) years.push(String(y2));
+      var yAvg = years.map(function (y) { return avgOf(r40.filter(function (r) { return r.date.slice(0, 4) === y; })); });
+      var BT = 690, BB = 940, BL = 70, BR = 640;
+      c.fillStyle = TEXT; c.font = '700 17px ' + F; c.fillText('연도별 40FT 평균 운임', 40, 668);
+      var bMax = Math.max.apply(null, yAvg.filter(Boolean)) * 1.25;
+      var slot = (BR - BL) / years.length;
+      c.strokeStyle = '#d1d5db'; c.beginPath(); c.moveTo(BL, BB); c.lineTo(BR, BB); c.stroke();
+      years.forEach(function (y, i) {
+        var v = yAvg[i]; if (!v) return;
+        var bx = BL + i * slot + slot * 0.22, bw = slot * 0.56, bh = v / bMax * (BB - BT);
+        c.fillStyle = y === yr ? RED : '#e7b3b2'; c.fillRect(bx, BB - bh, bw, bh);
+        c.textAlign = 'center'; c.fillStyle = TEXT; c.font = '700 14px ' + F; c.fillText(money(v), bx + bw / 2, BB - bh - 10);
+        if (i && yAvg[i - 1]) {
+          var ch = (v - yAvg[i - 1]) / yAvg[i - 1] * 100;
+          c.fillStyle = ch >= 0 ? UP : DOWN; c.font = '600 12px ' + F; c.fillText((ch >= 0 ? '▲ ' : '▼ ') + Math.abs(ch).toFixed(1) + '%', bx + bw / 2, BB - bh - 28);
+        }
+        c.fillStyle = TEXT; c.font = '700 13px ' + F; c.fillText(y, bx + bw / 2, BB + 20);
+      });
+      c.textAlign = 'left';
+
+      // Bottom right: quarterly average 40FT by year (grouped bars)
+      var QL = 720, QR = W - 40;
+      c.fillStyle = TEXT; c.font = '700 17px ' + F; c.fillText('분기별 40FT 평균 운임 (연도별)', QL - 20, 668);
+      var qAvg = years.map(function (y) {
+        return [0, 1, 2, 3].map(function (q) {
+          return avgOf(r40.filter(function (r) { var m = Number(r.date.slice(5, 7)); return r.date.slice(0, 4) === y && Math.floor((m - 1) / 3) === q; }));
+        });
+      });
+      var qMax = Math.max.apply(null, [].concat.apply([], qAvg).filter(Boolean)) * 1.15;
+      var qslot = (QR - QL) / years.length;
+      c.strokeStyle = '#d1d5db'; c.beginPath(); c.moveTo(QL, BB); c.lineTo(QR, BB); c.stroke();
+      years.forEach(function (y, i) {
+        var gx = QL + i * qslot + qslot * 0.1, gw = qslot * 0.8, bw = gw / 4 - 4;
+        qAvg[i].forEach(function (v, q) {
+          if (!v) return;
+          var bx = gx + q * (bw + 4), bh = v / qMax * (BB - BT);
+          c.fillStyle = QC[q]; c.fillRect(bx, BB - bh, bw, bh);
+          c.save(); c.translate(bx + bw / 2 + 4, BB - bh - 6); c.rotate(-Math.PI / 2);
+          c.fillStyle = SUB; c.font = '11px ' + F; c.textAlign = 'left'; c.fillText(kfmt(v), 0, 0); c.restore();
+        });
+        c.textAlign = 'center'; c.fillStyle = TEXT; c.font = '700 13px ' + F; c.fillText(y, gx + gw / 2, BB + 20);
+      });
+      c.textAlign = 'left'; c.font = '12px ' + F;
+      ['1Q', '2Q', '3Q', '4Q'].forEach(function (q, i) {
+        var lx = QR - 4 * 52 + i * 52, ly = 668;
+        c.fillStyle = QC[i]; c.fillRect(lx, ly - 10, 12, 12);
+        c.fillStyle = TEXT; c.fillText(q, lx + 17, ly);
+      });
+      c.fillStyle = SUB; c.font = '12px ' + F;
+      c.fillText('POL: CN SHANGHAI  ·  POD: GT PUERTO QUETZAL  ·  출처: LX판토스 시장가', 40, H - 18);
+      return cv;
+    }
+
+    function save(blob, filename, btn) {
+      var done = function (ok) {
+        if (!btn) return;
+        btn.dataset.dlState = ok ? 'ok' : 'err';
+        setTimeout(function () { delete btn.dataset.dlState; }, 1800);
+      };
+      var anchor = function () {
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob); a.download = filename;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+        done(true);
+      };
+      if (window.claude && window.claude.use) {
+        Promise.resolve(window.claude.use('downloads')).then(function (dl) {
+          if (!dl) { anchor(); return; }
+          dl.save({ filename: filename, data: blob }).then(function () { done(true); }, function (err) { if (!err || err.code !== 'declined') done(false); });
+        }, anchor);
+      } else {
+        anchor();
+      }
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('#gt-freight-dl')).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var d = dash.data('freight_rate');
+        if (d.status !== 'ok' || !d.data || !d.data.length) { btn.dataset.dlState = 'err'; setTimeout(function () { delete btn.dataset.dlState; }, 1800); return; }
+        var rows = d.data.filter(function (r) { return r && r.date; }).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+        var cv = freightPng(rows);
+        cv.toBlob(function (blob) {
+          if (!blob) { btn.dataset.dlState = 'err'; return; }
+          save(blob, 'Shanghai_Guatemala_freight_' + rows[rows.length - 1].date.replace(/-/g, '') + '.png', btn);
+        }, 'image/png');
+      });
+    });
+  })();
+
   // ---- tiles + lede
   dash.onData(() => {
     const s = dash.data('summary');
