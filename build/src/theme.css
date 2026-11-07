@@ -207,4 +207,8 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 .lx-row-carrier .lx-tag { font-size: calc(.72rem - 1px); line-height: 1.45; }
 .lx-table .lx-chip { font-size: calc(.72rem - 1px); }
 .lx-lane--split .lx-table th, .lx-lane--split .lx-table td { padding-left: .55rem; padding-right: .55rem; }
+/* lane header: Copy stays on the title row (right); only the badges wrap */
+.lx-lane-head { flex-wrap: nowrap; align-items: flex-start; }
+.lx-lane-head-left { flex: 1 1 auto; min-width: 0; }
+.lx-lane-head > .lx-copy-table { flex: none; margin-left: auto; }
 </style>

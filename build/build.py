@@ -176,7 +176,7 @@ def asia_markup():
     out.append('  </section>')
     return '\n'.join(out)
 
-MED = [('pus', [('ist', 'krpus_trist'), ('dam', 'krpus_egdam'), ('sok', 'krpus_egsok'), ('aly', 'krpus_egaly'), ('psd', 'krpus_egpsd')])]
+MED = [('pus', [('ist', 'krpus_trist'), ('sok', 'krpus_egsok'), ('aly', 'krpus_egaly'), ('psd', 'krpus_egpsd')])]
 PORT.update({'dam': 'Damietta', 'sok': 'Ain Sokhna', 'aly': 'Alexandria', 'psd': 'Port Said'})
 
 def med_routes():
