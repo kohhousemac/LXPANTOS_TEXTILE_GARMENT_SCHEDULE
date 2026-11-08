@@ -23,8 +23,8 @@ ALLOWED_DOMAIN = "lxpantos.com"
 DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/lxpantos_textile_garment_schedule/main/build/data"
 PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
 # Cloudflare Zero Trust > Access > the application for this Worker
-ACCESS_TEAM_DOMAIN = "REPLACE.cloudflareaccess.com"
-ACCESS_AUD = "REPLACE_WITH_ACCESS_AUD_TAG"
+ACCESS_TEAM_DOMAIN = "twilight-haze-678b.cloudflareaccess.com"
+ACCESS_AUD = "498240eb782dbd57ec6b36c59edabb24535294bc963d9d96dc47c0b3a3734193"
 # "log" = print only. Switch to "graph" once IT has set up the Entra app.
 MAIL_MODE = "log"
 MAIL_SENDER = "REPLACE@lxpantos.com"
