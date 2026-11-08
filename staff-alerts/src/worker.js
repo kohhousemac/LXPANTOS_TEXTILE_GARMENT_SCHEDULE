@@ -341,8 +341,23 @@ async function handle(request, env, ctx) {
 
   if (url.pathname === '/api/test-mail' && request.method === 'POST') {
     if (!user) return json({ error: 'Pick your e-mail on the opening screen first.' }, 400);
-    await sendMail(env, [user], '[LX Pantos] Vessel alert test mail',
-      '<p>Vessel change alerts are being delivered correctly.</p>');
+    const body = await request.json().catch(() => ({}));
+    if (body.sample) {
+      // A real-looking alert built from live data, without saving any booking.
+      const rows = await getData(env, 'vnsgn_idjkt');
+      const today = todayKST();
+      const pick = rows.find((r) => evaluate({ vessel: r.vessel, voyage: r.voyage, origEtd: '0000', origEta: '9999' }, rows, today).candidates.length);
+      if (!pick) return json({ error: 'No sample sailing available right now.' }, 400);
+      const ev0 = evaluate({ vessel: pick.vessel, voyage: pick.voyage }, rows, today);
+      const b = { customer: 'SAMPLE', bookingNo: 'SAMPLE-0001', memo: 'test only', carrier: pick.carrier,
+        vessel: pick.vessel, voyage: pick.voyage, origEtd: ev0.etd, origEta: ev0.eta };
+      const ev = evaluate(b, rows, today);
+      const { subject, html } = alertMail(b, ev, 'Ho Chi Minh → Jakarta', env.PAGE_URL);
+      await sendMail(env, [user], subject, html);
+    } else {
+      await sendMail(env, [user], '[LX Pantos] Vessel alert test mail',
+        '<p>Vessel change alerts are being delivered correctly.</p>');
+    }
     return json({ ok: true, to: user, mode: env.MAIL_MODE || 'log' });
   }
 
