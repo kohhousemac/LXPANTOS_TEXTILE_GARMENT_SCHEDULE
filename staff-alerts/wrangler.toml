@@ -7,7 +7,7 @@ workers_dev = true
 # then paste the printed id here.
 [[kv_namespaces]]
 binding = "BOOKINGS"
-id = "REPLACE_WITH_KV_ID"
+id = "2329f0c72d144f8a9266e2bdc814877c"
 
 # Check schedules every 3 hours (UTC). Same alert is mailed only once.
 [triggers]
@@ -21,7 +21,7 @@ fallthrough = true
 [vars]
 ALLOWED_DOMAIN = "lxpantos.com"
 DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/lxpantos_textile_garment_schedule/main/build/data"
-PAGE_URL = "https://lxpantosfashionstaff.REPLACE.workers.dev/"
+PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
 # Cloudflare Zero Trust > Access > the application for this Worker
 ACCESS_TEAM_DOMAIN = "REPLACE.cloudflareaccess.com"
 ACCESS_AUD = "REPLACE_WITH_ACCESS_AUD_TAG"
