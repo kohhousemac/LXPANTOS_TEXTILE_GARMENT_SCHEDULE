@@ -20,7 +20,7 @@ fallthrough = true
 
 [vars]
 ALLOWED_DOMAIN = "lxpantos.com"
-DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/lxpantos_textile_garment_schedule/main/build/data"
+DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/LXPANTOS_TEXTILE_GARMENT_SCHEDULE/main/build/data"
 PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
 # Cloudflare Zero Trust > Access > the application for this Worker
 ACCESS_TEAM_DOMAIN = "twilight-haze-678b.cloudflareaccess.com"
