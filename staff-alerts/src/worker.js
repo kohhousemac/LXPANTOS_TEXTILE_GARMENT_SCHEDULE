@@ -130,7 +130,7 @@ const DEFAULT_BOOKERS = {
   cn: ['cong.ma', 'meitong.su'],
   hk: ['hang.lee'],
   tw: ['may.yang'],
-  kr: [],
+  kr: ['sanghyun.koh'],
 };
 
 async function getBookers(env) {
