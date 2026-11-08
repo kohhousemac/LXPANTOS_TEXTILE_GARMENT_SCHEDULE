@@ -384,7 +384,8 @@ function polList() {
   for (const r of routes) {
     const [pol] = r.label.split(' → ');
     const cc = r.routeId.slice(0, 2);
-    if (cc === country && !seen.has(pol)) seen.set(pol, cc);
+    // Korea (HQ) runs every lane, so it sees every POL.
+    if ((country === 'kr' || cc === country) && !seen.has(pol)) seen.set(pol, cc);
   }
   return [...seen].map(([name, cc]) => [name, `${flag(cc)} ${esc(name)}`]);
 }

@@ -4,7 +4,7 @@ Operations staff register a new booking (customer → route → vessel → booki
 
 Recipients: the booker who registered it + that customer's HQ PIC (set once per customer in the HQ PIC section at the bottom of the page, auto-copied on every alert). All must be `@lxpantos.com`.
 
-- Opening screen: the booker picks their country (Vietnam, Indonesia, China, Hong Kong, Taiwan, Korea), then their e-mail from that country's list (editable on the same screen). The chosen e-mail is the booker who gets the alerts. Only that country's POLs are offered. For **Korea** the list is Korean staff plus every HQ PIC. Remembered in the browser, changeable from the header.
+- Opening screen: the booker picks their country (Vietnam, Indonesia, China, Hong Kong, Taiwan, Korea), then their e-mail from that country's list (editable on the same screen). The chosen e-mail is the booker who gets the alerts. Only that country's POLs are offered. For **Korea** (HQ, oversees everything) the list is Korean staff plus every HQ PIC, and every POL is offered. Remembered in the browser, changeable from the header.
 - Customers: SAE-A, HANSOLL, YAKJIN, SHINWON, HANSAE, SSTS, NOBRAND (`CUSTOMERS` in `src/worker.js`)
 - Schedules: the homepage's own data, `build/data/<route>.json` (lxpantosfashion.co.kr)
 - Access: opening screen is country → booker e-mail → **shared staff password** (secret `STAFF_PASSWORD`). A signed cookie keeps the browser in for a year; changing the password signs everyone out. 5 wrong tries from one IP lock it for an hour. The country/e-mail lists are visible before the password; bookings are not.
