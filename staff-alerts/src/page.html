@@ -118,19 +118,25 @@ a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
   <div class="lbox">
     <p class="brand">LX Pantos · Staff only</p>
     <h1>Booking Vessel Alerts</h1>
-    <p class="who muted">Verified as <b id="loginMe">…</b></p>
+    <div id="pickWrap">
     <p class="label">Select your country</p>
     <div class="cgrid" id="countries"></div>
     <div id="bookerWrap" hidden>
       <p class="label">Select your e-mail</p>
       <div class="blist" id="bookerList"></div>
-      <p class="small" id="bookerHint" style="color:var(--warn);margin:6px 0 0" hidden>No e-mail list for this country yet, so you continue as yourself. Add the team below.</p>
-      <details class="bedit"><summary class="small muted" id="bookerEditLabel">Edit e-mail list</summary>
+      <p class="small" id="bookerHint" style="color:var(--warn);margin:6px 0 0" hidden>No e-mail list for this country yet. Add the team's e-mails below first.</p>
+      <details class="bedit" id="bookerEdit"><summary class="small muted" id="bookerEditLabel">Edit e-mail list</summary>
         <div class="search" style="margin-top:8px"><input id="bookerInput" placeholder="name@lxpantos.com, name2@lxpantos.com"><button id="bookerSave" class="small">Save</button></div>
       </details>
     </div>
+    <div id="pwRow" hidden style="margin-top:18px">
+      <p class="label">Staff password</p>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Password">
+    </div>
+    <p class="msg err small" id="pwMsg" style="margin:8px 0 0"></p>
     <button class="primary" id="enter" disabled>Continue</button>
-    <p class="small muted" style="margin:14px 0 0;text-align:center">Not you? <a href="/cdn-cgi/access/logout">Sign out</a></p>
+    <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="signOut">Sign out</a></p>
+    </div>
   </div>
 </div>
 <main id="app" hidden>
@@ -234,8 +240,9 @@ const pick = { customer: '', pol: '', routeId: '', row: null };
 let listFilter = 'ALL';
 
 async function api(path, opts = {}) {
-  const res = await fetch(path, { headers: { 'content-type': 'application/json' }, ...opts });
+  const res = await fetch(path, { headers: { 'content-type': 'application/json', 'x-booker': booker || '' }, ...opts });
   const data = await res.json().catch(() => ({}));
+  if (res.status === 401 && data.error === 'login') { showPassword(); throw new Error('Please enter the staff password.'); }
   if (!res.ok) throw new Error(data.error || res.status);
   return data;
 }
@@ -243,7 +250,7 @@ async function api(path, opts = {}) {
 const pills = (items, active, cls = '') => items.map(([val, text]) =>
   `<button type="button" class="pill ${cls}" data-v="${esc(val)}" aria-pressed="${val === active}">${text}</button>`).join('');
 
-let countries = {}, country = '', bookers = {}, booker = '', authEmail = '';
+let countries = {}, country = '', bookers = {}, booker = '', choices = {}, signedIn = false, appLoaded = false;
 const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } },
                 set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
 
@@ -254,11 +261,9 @@ function drawCountries() {
 }
 
 // E-mails to pick from: the country's own list (Korea: its staff plus every
-// HQ PIC). With no list yet, the signed-in user.
+// HQ PIC).
 function bookerGroups() {
-  let list = bookers[country] || [];
-  if (country === 'kr') list = [...new Set([...list, ...Object.values(teams).flat()])];
-  return [[null, list.length ? list : [authEmail]]];
+  return [[null, choices[country] || []]];
 }
 
 function drawBookers() {
@@ -272,7 +277,10 @@ function drawBookers() {
     list.map((e) => `<button type="button" class="bkr" data-e="${esc(e)}" aria-pressed="${e === booker}">${esc(e)}</button>`).join('')).join('');
   $('bookerEditLabel').textContent = `Edit ${countries[country]} e-mail list`;
   $('bookerInput').value = (bookers[country] || []).join(', ');
-  $('bookerHint').hidden = (bookers[country] || []).length > 0 || country === 'kr';
+  $('bookerHint').hidden = all.length > 0;
+  $('bookerEdit').hidden = !signedIn;
+  $('pwRow').hidden = signedIn;
+  if (!all.length) $('bookerList').innerHTML = '';
   $('enter').disabled = !booker;
 }
 
@@ -288,12 +296,23 @@ $('bookerList').ondblclick = (e) => { if (e.target.closest('[data-e]')) $('enter
 $('bookerSave').onclick = async () => {
   try {
     const r = await api('/api/bookers/' + country, { method: 'PUT', body: JSON.stringify({ emails: $('bookerInput').value.split(/[,;\s]+/).filter(Boolean) }) });
-    bookers[country] = r.emails; drawBookers();
+    bookers[country] = r.emails;
+    choices = (await api('/api/login-info')).choices; drawBookers();
     $('bookerSave').textContent = 'Saved'; setTimeout(() => { $('bookerSave').textContent = 'Save'; }, 1500);
   } catch (err) { alert(err.message); }
 };
 
-$('enter').onclick = () => {
+$('enter').onclick = async () => {
+  $('pwMsg').textContent = '';
+  if (!signedIn) {
+    $('enter').disabled = true;
+    try {
+      await api('/api/login', { method: 'POST', body: JSON.stringify({ password: $('pw').value }) });
+      signedIn = true; $('pw').value = '';
+    } catch (err) { $('pwMsg').textContent = err.message; $('enter').disabled = false; return; }
+    $('enter').disabled = false;
+  }
+  if (!appLoaded) { await loadApp(); appLoaded = true; }
   store.set('lxCountry', country); store.set('lxBooker', booker);
   me = booker;
   $('myCountry').textContent = `${flag(country)} ${countries[country]}`;
@@ -305,15 +324,33 @@ $('enter').onclick = () => {
 };
 $('changeCountry').onclick = () => { $('app').hidden = true; $('login').hidden = false; drawCountries(); };
 
-async function init() {
-  const info = await api('/api/me');
-  authEmail = me = info.email; customers = info.customers; countries = info.countries;
-  $('loginMe').textContent = authEmail;
-  [routes, teams, bookers] = await Promise.all([api('/api/routes'), api('/api/teams'), api('/api/bookers')]);
-  labels = Object.fromEntries(routes.map((r) => [r.routeId, r.label]));
+function showPassword() {
+  signedIn = false;
+  $('app').hidden = true; $('login').hidden = false;
+  drawCountries();
+}
+$('pw').onkeydown = (e) => { if (e.key === 'Enter' && !$('enter').disabled) $('enter').click(); };
+$('signOut').onclick = async (e) => {
+  e.preventDefault();
+  await fetch('/api/logout', { method: 'POST' }).catch(() => {});
+  showPassword();
+};
+
+// Opening screen: country and e-mail lists are public, the rest needs the password.
+async function boot() {
+  const li = await (await fetch('/api/login-info')).json();
+  countries = li.countries; choices = li.choices;
+  signedIn = (await fetch('/api/me')).ok;
   country = countries[store.get('lxCountry')] ? store.get('lxCountry') : '';
   booker = store.get('lxBooker');
   drawCountries();
+}
+
+async function loadApp() {
+  const info = await api('/api/me');
+  customers = info.customers;
+  [routes, teams, bookers] = await Promise.all([api('/api/routes'), api('/api/teams'), api('/api/bookers')]);
+  labels = Object.fromEntries(routes.map((r) => [r.routeId, r.label]));
   drawCustomers(); drawFilter(); drawTeams();
   loadList();
 }
@@ -600,7 +637,7 @@ $('testMail').onclick = async () => {
   catch (e) { alert('Mail failed: ' + e.message); }
 };
 
-init().catch((e) => { $('login').hidden = true; $('app').hidden = false; $('list').innerHTML = `<tr><td colspan="9" class="msg err">${esc(e.message)}</td></tr>`; });
+boot().catch((e) => { $('pwMsg').textContent = e.message; $('list').innerHTML = `<tr><td colspan="9" class="msg err">${esc(e.message)}</td></tr>`; });
 </script>
 </body>
 </html>

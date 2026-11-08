@@ -22,12 +22,12 @@ fallthrough = true
 ALLOWED_DOMAIN = "lxpantos.com"
 DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/LXPANTOS_TEXTILE_GARMENT_SCHEDULE/main/build/data"
 PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
-# Cloudflare Zero Trust > Access > the application for this Worker
-ACCESS_TEAM_DOMAIN = "twilight-haze-678b.cloudflareaccess.com"
-ACCESS_AUD = "498240eb782dbd57ec6b36c59edabb24535294bc963d9d96dc47c0b3a3734193"
 # "log" = print only. Switch to "graph" once IT has set up the Entra app.
 MAIL_MODE = "log"
 MAIL_SENDER = "REPLACE@lxpantos.com"
 MS_TENANT_ID = "REPLACE"
 MS_CLIENT_ID = "REPLACE"
 # MS_CLIENT_SECRET is a secret:  npx wrangler secret put MS_CLIENT_SECRET
+# Secrets (not in this file):
+#   STAFF_PASSWORD   shared staff password   ->  npx wrangler secret put STAFF_PASSWORD
+#   SESSION_SECRET   random signing key       ->  npx wrangler secret put SESSION_SECRET

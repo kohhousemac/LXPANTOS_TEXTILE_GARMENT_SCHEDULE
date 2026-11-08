@@ -1,6 +1,5 @@
 // Staff-only booking page + scheduled "faster vessel" check.
-// - Page and /api/* sit behind Cloudflare Access (company e-mail login);
-//   every request's Access JWT is verified here as well.
+// - /api/* needs the shared staff password (signed cookie, 1 year).
 // - Bookings live in KV (never in the public GitHub repo).
 // - The cron trigger compares each booking with the homepage's schedule data.
 
@@ -16,33 +15,56 @@ const ROUTE_RE = /^[a-z]{5}_[a-z]{5}$/;
 export const COUNTRIES = { vn: 'Vietnam', id: 'Indonesia', cn: 'China', hk: 'Hong Kong', tw: 'Taiwan', kr: 'Korea' };
 export const CUSTOMERS = ['SAE-A', 'HANSOLL', 'YAKJIN', 'SHINWON', 'HANSAE', 'SSTS', 'NOBRAND'];
 
-// ---------- auth ----------
-const b64url = (s) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+// ---------- auth: one shared staff password ----------
+// Signing in sets an HMAC-signed cookie valid for a year. The password is
+// part of what is signed, so changing STAFF_PASSWORD logs everyone out.
+const COOKIE = 'lxstaff';
+const YEAR = 365 * 86400;
+const enc = new TextEncoder();
 
-async function accessEmail(request, env) {
-  const host = new URL(request.url).hostname;
-  // Local `wrangler dev` only (DEV_USER_EMAIL lives in .dev.vars, never deployed).
-  if (env.DEV_USER_EMAIL && (host === 'localhost' || host === '127.0.0.1')) return env.DEV_USER_EMAIL.toLowerCase();
-
-  const jwt = request.headers.get('cf-access-jwt-assertion');
-  if (!jwt || !env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) return null;
-  const [h, p, s] = jwt.split('.');
-  try {
-    const header = JSON.parse(new TextDecoder().decode(b64url(h)));
-    const payload = JSON.parse(new TextDecoder().decode(b64url(p)));
-    const certs = await (await fetch(`https://${env.ACCESS_TEAM_DOMAIN}/cdn-cgi/access/certs`, { cf: { cacheTtl: 3600 } })).json();
-    const jwk = (certs.keys || []).find((k) => k.kid === header.kid);
-    if (!jwk) return null;
-    const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
-    const ok = await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64url(s), new TextEncoder().encode(h + '.' + p));
-    const aud = [].concat(payload.aud || []);
-    if (!ok || !aud.includes(env.ACCESS_AUD) || payload.exp * 1000 < Date.now()) return null;
-    if (payload.iss !== `https://${env.ACCESS_TEAM_DOMAIN}`) return null;
-    return String(payload.email || '').toLowerCase() || null;
-  } catch {
-    return null;
-  }
+async function hmac(env, msg) {
+  const key = await crypto.subtle.importKey('raw', enc.encode(env.SESSION_SECRET), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const sig = new Uint8Array(await crypto.subtle.sign('HMAC', key, enc.encode(msg)));
+  return btoa(String.fromCharCode(...sig)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
+
+function safeEqual(a, b) {
+  if (a.length !== b.length) return false;
+  let d = 0;
+  for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return d === 0;
+}
+
+const sessionSig = (env, exp) => hmac(env, `v1.${exp}.${env.STAFF_PASSWORD}`);
+
+async function signedIn(request, env) {
+  if (!env.STAFF_PASSWORD || !env.SESSION_SECRET) return false;
+  const m = new RegExp(`(?:^|;\\s*)${COOKIE}=(\\d+)\\.([\\w-]+)`).exec(request.headers.get('cookie') || '');
+  if (!m || Number(m[1]) * 1000 < Date.now()) return false;
+  return safeEqual(m[2], await sessionSig(env, m[1]));
+}
+
+async function login(request, env) {
+  // 5 wrong passwords from one IP -> locked for an hour.
+  const rlKey = 'rl:' + (request.headers.get('cf-connecting-ip') || 'local');
+  const fails = Number(await env.BOOKINGS.get(rlKey)) || 0;
+  if (fails >= 5) return json({ error: 'Too many attempts. Please try again in an hour.' }, 429);
+  const body = await request.json().catch(() => ({}));
+  if (!env.STAFF_PASSWORD || !safeEqual(String(body.password || ''), env.STAFF_PASSWORD)) {
+    await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
+    return json({ error: 'Wrong password.' }, 401);
+  }
+  const exp = Math.floor(Date.now() / 1000) + YEAR;
+  return new Response(JSON.stringify({ ok: true }), { headers: {
+    'content-type': 'application/json; charset=utf-8',
+    'set-cookie': `${COOKIE}=${exp}.${await sessionSig(env, exp)}; Max-Age=${YEAR}; Path=/; HttpOnly; Secure; SameSite=Lax`,
+  } });
+}
+
+const logout = () => new Response(JSON.stringify({ ok: true }), { headers: {
+  'content-type': 'application/json; charset=utf-8',
+  'set-cookie': `${COOKIE}=; Max-Age=0; Path=/; HttpOnly; Secure; SameSite=Lax`,
+} });
 
 const inDomain = (email, env) => email.endsWith('@' + env.ALLOWED_DOMAIN.toLowerCase());
 
@@ -168,17 +190,26 @@ async function runCheck(env, { onlyId } = {}) {
 // ---------- HTTP ----------
 async function handle(request, env, ctx) {
   const url = new URL(request.url);
-  const user = await accessEmail(request, env);
-  if (!user || !inDomain(user, env)) {
-    return new Response('LX Pantos staff only. Please sign in with your company e-mail (@' + env.ALLOWED_DOMAIN + ').', {
-      status: 403, headers: { 'content-type': 'text/plain; charset=utf-8' },
-    });
-  }
-
   if (url.pathname === '/' && request.method === 'GET') {
     return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
   }
-  if (url.pathname === '/api/me') return json({ email: user, domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
+  if (url.pathname === '/api/login' && request.method === 'POST') return login(request, env);
+  if (url.pathname === '/api/logout' && request.method === 'POST') return logout();
+  // Public: what the opening screen needs before the password (countries and
+  // the e-mails to pick from; Korea = its own list plus every HQ PIC).
+  if (url.pathname === '/api/login-info') {
+    const bookers = await getBookers(env);
+    const teams = await getTeams(env);
+    bookers.kr = [...new Set([...bookers.kr, ...Object.values(teams).flat()])];
+    return json({ countries: COUNTRIES, choices: bookers });
+  }
+  if (!(await signedIn(request, env))) return json({ error: 'login' }, 401);
+
+  // Who is acting: the booker e-mail picked on the opening screen.
+  const actor = String(request.headers.get('x-booker') || '').toLowerCase();
+  const user = /^[^@\s]+@[^@\s]+$/.test(actor) && inDomain(actor, env) ? actor : null;
+
+  if (url.pathname === '/api/me') return json({ domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
 
   if (url.pathname === '/api/teams' && request.method === 'GET') return json(await getTeams(env));
   if (url.pathname === '/api/bookers' && request.method === 'GET') return json(await getBookers(env));
@@ -189,7 +220,7 @@ async function handle(request, env, ctx) {
     const body = await request.json().catch(() => ({}));
     const { emails, bad } = cleanEmails(body.emails, null, env);
     if (bad.length) return json({ error: `Only @${env.ALLOWED_DOMAIN} addresses are allowed: ${bad.join(', ')}` }, 400);
-    await env.BOOKINGS.put('bookers:' + bk[1], JSON.stringify({ emails, updatedBy: user, updatedAt: new Date().toISOString() }));
+    await env.BOOKINGS.put('bookers:' + bk[1], JSON.stringify({ emails, updatedBy: user || 'staff', updatedAt: new Date().toISOString() }));
     return json({ country: bk[1], emails });
   }
 
@@ -199,7 +230,7 @@ async function handle(request, env, ctx) {
     const body = await request.json().catch(() => ({}));
     const { emails, bad } = cleanEmails(body.emails, null, env);
     if (bad.length) return json({ error: `Only @${env.ALLOWED_DOMAIN} addresses can receive alerts: ${bad.join(', ')}` }, 400);
-    await env.BOOKINGS.put('team:' + team[1], JSON.stringify({ emails, updatedBy: user, updatedAt: new Date().toISOString() }));
+    await env.BOOKINGS.put('team:' + team[1], JSON.stringify({ emails, updatedBy: user || 'staff', updatedAt: new Date().toISOString() }));
     return json({ customer: team[1], emails });
   }
 
@@ -221,10 +252,10 @@ async function handle(request, env, ctx) {
     if (!CUSTOMERS.includes(body.customer)) return json({ error: 'Please select a customer.' }, 400);
     if (!COUNTRIES[body.country]) return json({ error: 'Please select your country.' }, 400);
     // The booker picked on the opening screen gets the alerts. It must be on
-    // that country's list; with no list yet, the signed-in user is the booker.
+    // that country's list (any company e-mail while the list is still empty).
     const allowed = await allowedBookers(env, body.country);
     const booker = String(body.booker || '').toLowerCase();
-    if (allowed.length ? !allowed.includes(booker) : booker !== user) {
+    if (allowed.length ? !allowed.includes(booker) : !inDomain(booker, env)) {
       return json({ error: 'Please pick your e-mail on the opening screen.' }, 400);
     }
     const bookingNo = String(body.bookingNo || '').trim().slice(0, 40);
@@ -253,7 +284,7 @@ async function handle(request, env, ctx) {
       origEta: ev.eta,
       notify: [booker],  // the booker; the customer's HQ PIC is added at send time
       booker,
-      createdBy: user,
+      createdBy: booker,
       createdAt: new Date().toISOString(),
       state: 'ok',
       currentEta: ev.eta,
@@ -274,12 +305,13 @@ async function handle(request, env, ctx) {
     if (!b) return json({ error: 'Booking not found.' }, 404);
     if (b.state === 'cancelled') return json({ error: 'This booking is already cancelled.' }, 400);
     const now = new Date().toISOString();
+    const by = user || 'staff';
     b.history = b.history || [];
 
     if (action === 'cancel') {
-      b.history.push({ at: now, by: user, action: 'cancelled', from: `${b.vessel} ${b.voyage}` });
+      b.history.push({ at: now, by, action: 'cancelled', from: `${b.vessel} ${b.voyage}` });
       b.state = 'cancelled';
-      b.cancelledBy = user;
+      b.cancelledBy = by;
       b.cancelledAt = now;
       b.candidates = [];
       await putBooking(env, b, 30); // kept 30 days for reference, then expires
@@ -292,7 +324,7 @@ async function handle(request, env, ctx) {
     const ev = evaluate({ vessel: body.vessel, voyage: body.voyage }, rows, todayKST());
     if (ev.state === 'missing') return json({ error: 'The selected vessel is not in the current schedule.' }, 400);
     if (ev.state === 'departed') return json({ error: 'This vessel has already departed.' }, 400);
-    b.history.push({ at: now, by: user, action: 'vessel changed', from: `${b.vessel} ${b.voyage}`, to: `${body.vessel} ${body.voyage || ''}`.trim() });
+    b.history.push({ at: now, by, action: 'vessel changed', from: `${b.vessel} ${b.voyage}`, to: `${body.vessel} ${body.voyage || ''}`.trim() });
     Object.assign(b, {
       carrier: ev.carrier,
       vessel: String(body.vessel).trim(),
@@ -301,13 +333,14 @@ async function handle(request, env, ctx) {
       currentEtd: ev.etd, currentEta: ev.eta,
       state: 'ok', delayDays: 0, candidates: [],
       lastAlertKey: null, lastAlertAt: null,
-      updatedBy: user, updatedAt: now,
+      updatedBy: by, updatedAt: now,
     });
     await putBooking(env, b);
     return json(b);
   }
 
   if (url.pathname === '/api/test-mail' && request.method === 'POST') {
+    if (!user) return json({ error: 'Pick your e-mail on the opening screen first.' }, 400);
     await sendMail(env, [user], '[LX Pantos] Vessel alert test mail',
       '<p>Vessel change alerts are being delivered correctly.</p>');
     return json({ ok: true, to: user, mode: env.MAIL_MODE || 'log' });

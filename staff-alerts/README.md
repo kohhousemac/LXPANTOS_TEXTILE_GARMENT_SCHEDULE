@@ -7,7 +7,7 @@ Recipients: the booker who registered it + that customer's HQ PIC (set once per 
 - Opening screen: the booker picks their country (Vietnam, Indonesia, China, Hong Kong, Taiwan, Korea), then their e-mail from that country's list (editable on the same screen). The chosen e-mail is the booker who gets the alerts. Only that country's POLs are offered. For **Korea** the list is Korean staff plus every HQ PIC. Remembered in the browser, changeable from the header.
 - Customers: SAE-A, HANSOLL, YAKJIN, SHINWON, HANSAE, SSTS, NOBRAND (`CUSTOMERS` in `src/worker.js`)
 - Schedules: the homepage's own data, `build/data/<route>.json` (lxpantosfashion.co.kr)
-- Access: Cloudflare Access — only people who verify an `@lxpantos.com` address with a one-time code can open the page
+- Access: opening screen is country → booker e-mail → **shared staff password** (secret `STAFF_PASSWORD`). A signed cookie keeps the browser in for a year; changing the password signs everyone out. 5 wrong tries from one IP lock it for an hour. The country/e-mail lists are visible before the password; bookings are not.
 - Storage: bookings live only in Cloudflare KV. This GitHub repo is public, so booking numbers never go into it.
 - Mail: sent from the company shared mailbox through Microsoft Graph
 
@@ -38,13 +38,12 @@ npx wrangler kv namespace create BOOKINGS   # put the printed id in wrangler.tom
 npx wrangler deploy                         # put the printed https://....workers.dev URL in PAGE_URL
 ```
 
-### 2. Company e-mail login (Cloudflare Zero Trust, free up to 50 users)
-1. Cloudflare dashboard → Zero Trust → create a team name (e.g. `lxpantos` → `lxpantos.cloudflareaccess.com`)
-2. Settings → Authentication → enable **One-time PIN**
-3. Access → Applications → Add → Self-hosted
-   - Domain: the workers.dev URL above
-   - Policy: Allow, Include → **Emails ending in** `@lxpantos.com`
-4. Put the application's **Application Audience (AUD) Tag** in `ACCESS_AUD` and the team domain in `ACCESS_TEAM_DOMAIN`, then `npx wrangler deploy` again
+### 2. Staff password
+```bash
+npx wrangler secret put STAFF_PASSWORD    # the shared password
+openssl rand -base64 48 | npx wrangler secret put SESSION_SECRET
+```
+To change the password later, run the first line again; everyone has to enter the new one.
 
 ### 3. Sending mail (request to IT)
 Microsoft disables password-based SMTP by default from the end of December 2026, so this uses the Graph API. Ask IT for:
@@ -62,8 +61,8 @@ Fill `MS_TENANT_ID`, `MS_CLIENT_ID`, `MAIL_SENDER` in `wrangler.toml`, set `MAIL
 ## Local testing
 ```bash
 npm test                       # comparison logic tests (includes every real lane file)
-printf 'DEV_USER_EMAIL=me@lxpantos.com\n' > .dev.vars
+printf 'STAFF_PASSWORD=test\nSESSION_SECRET=dev\n' > .dev.vars
 npx wrangler dev --test-scheduled
 # browser: http://localhost:8787   run a check: curl "http://localhost:8787/__scheduled?cron=15+*/3+*+*+*"
 ```
-`DEV_USER_EMAIL` skips login on localhost only. `.dev.vars` is not committed.
+`.dev.vars` is not committed.
