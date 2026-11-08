@@ -9,7 +9,7 @@ Recipients: the booker who registered it + that customer's HQ PIC (set once per 
 - Schedules: the homepage's own data, `build/data/<route>.json` (lxpantosfashion.co.kr)
 - Access: opening screen is country → booker e-mail → **shared staff password** (secret `STAFF_PASSWORD`). A signed cookie keeps the browser in for a year; changing the password signs everyone out. 5 wrong tries from one IP lock it for an hour. The country/e-mail lists are visible before the password; bookings are not.
 - Storage: bookings live only in Cloudflare KV. This GitHub repo is public, so booking numbers never go into it.
-- Mail: sent from the company shared mailbox through Microsoft Graph
+- Mail: sent from Gmail (kohhousemac@gmail.com, shown as "LX Pantos Vessel Alerts") over SMTP with an app password
 
 ## Alert rule
 
@@ -45,18 +45,12 @@ openssl rand -base64 48 | npx wrangler secret put SESSION_SECRET
 ```
 To change the password later, run the first line again; everyone has to enter the new one.
 
-### 3. Sending mail (request to IT)
-Microsoft disables password-based SMTP by default from the end of December 2026, so this uses the Graph API. Ask IT for:
+### 3. Sending mail (Gmail)
+1. On the Google account (2-Step Verification on), create an **app password**: https://myaccount.google.com/apppasswords
+2. Cloudflare dashboard → Workers & Pages → lxpantosfashionstaff → Settings → Variables and Secrets → Add → type **Secret**, name `SMTP_PASS`, value = the 16-letter app password.
+3. Set `MAIL_MODE = "gmail"` in `wrangler.toml` and `npx wrangler deploy`. Use **Send test mail** on the page to confirm.
 
-> Register an app in Entra ID → API permission: Microsoft Graph **Mail.Send (Application)** + admin consent → create a client secret.
-> Please limit the app to sending from one shared mailbox only (Exchange RBAC for Applications or ApplicationAccessPolicy).
-> Please send me: tenant ID, client ID, client secret, sender address.
-
-Then:
-```bash
-npx wrangler secret put MS_CLIENT_SECRET    # enter the secret here only, never in a file
-```
-Fill `MS_TENANT_ID`, `MS_CLIENT_ID`, `MAIL_SENDER` in `wrangler.toml`, set `MAIL_MODE = "graph"`, and `npx wrangler deploy`. Use the **Send test mail** button at the top right of the page to confirm.
+Gmail allows about 500 recipients a day, far more than this needs.
 
 ## Local testing
 ```bash

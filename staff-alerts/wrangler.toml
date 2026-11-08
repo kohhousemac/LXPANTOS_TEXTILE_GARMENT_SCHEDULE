@@ -22,12 +22,11 @@ fallthrough = true
 ALLOWED_DOMAIN = "lxpantos.com"
 DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/LXPANTOS_TEXTILE_GARMENT_SCHEDULE/main/build/data"
 PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
-# "log" = print only. Switch to "graph" once IT has set up the Entra app.
+# "log" = print only, "gmail" = send from SMTP_USER via Gmail.
 MAIL_MODE = "log"
-MAIL_SENDER = "REPLACE@lxpantos.com"
-MS_TENANT_ID = "REPLACE"
-MS_CLIENT_ID = "REPLACE"
-# MS_CLIENT_SECRET is a secret:  npx wrangler secret put MS_CLIENT_SECRET
+SMTP_USER = "kohhousemac@gmail.com"
+MAIL_FROM_NAME = "LX Pantos Vessel Alerts"
+# SMTP_PASS (Gmail app password) is a secret: set it in the Cloudflare dashboard.
 # Secrets (not in this file):
 #   STAFF_PASSWORD   shared staff password   ->  npx wrangler secret put STAFF_PASSWORD
 #   SESSION_SECRET   random signing key       ->  npx wrangler secret put SESSION_SECRET

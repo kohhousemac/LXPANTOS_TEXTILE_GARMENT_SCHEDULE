@@ -1,6 +1,6 @@
-// Sends mail from the company shared mailbox through Microsoft Graph
-// (app-only / client credentials). MAIL_MODE=log only prints the mail, for
-// local testing before IT has set up the app registration.
+// Builds the alert mail and sends it from Gmail (see sendMail below).
+
+import { connect } from 'cloudflare:sockets';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -42,40 +42,86 @@ export function alertMail(booking, ev, routeLabel, pageUrl) {
   return { subject, html };
 }
 
-async function graphToken(env) {
-  const res = await fetch(`https://login.microsoftonline.com/${env.MS_TENANT_ID}/oauth2/v2.0/token`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      client_id: env.MS_CLIENT_ID,
-      client_secret: env.MS_CLIENT_SECRET,
-      scope: 'https://graph.microsoft.com/.default',
-      grant_type: 'client_credentials',
-    }),
-  });
-  const j = await res.json();
-  if (!res.ok) throw new Error('Graph token error: ' + (j.error_description || res.status));
-  return j.access_token;
+// ---------- sending: Gmail over SMTP (app password) ----------
+// SMTP_USER / SMTP_PASS are a Gmail address and its 16-letter app password.
+// MAIL_MODE=log only prints, for local testing.
+
+const b64 = (str) => {
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+};
+const encWord = (str) => `=?UTF-8?B?${b64(str)}?=`;
+
+function buildMessage(from, fromName, to, subject, html) {
+  const body = b64(html).replace(/.{76}/g, '$&\r\n');
+  return [
+    `From: ${encWord(fromName)} <${from}>`,
+    `To: ${to.join(', ')}`,
+    `Subject: ${encWord(subject)}`,
+    `Date: ${new Date().toUTCString()}`,
+    `Message-ID: <${crypto.randomUUID()}@lxpantosfashionstaff>`,
+    'MIME-Version: 1.0',
+    'Content-Type: text/html; charset=UTF-8',
+    'Content-Transfer-Encoding: base64',
+    '',
+    body,
+  ].join('\r\n');
+}
+
+async function smtpSend(env, to, subject, html) {
+  const host = env.SMTP_HOST || 'smtp.gmail.com';
+  const port = Number(env.SMTP_PORT || 465);
+  const socket = connect({ hostname: host, port }, { secureTransport: env.SMTP_TLS === 'off' ? 'off' : 'on' });
+  const writer = socket.writable.getWriter();
+  const reader = socket.readable.getReader();
+  const dec = new TextDecoder();
+  let buf = '';
+
+  // Read one full SMTP reply (last line is "NNN text") and check its code.
+  async function reply(expect) {
+    for (;;) {
+      const lines = buf.split('\r\n');
+      const done = lines.slice(0, -1).find((l) => /^\d{3} /.test(l));
+      if (done) {
+        const end = buf.indexOf(done) + done.length + 2;
+        const text = buf.slice(0, end); buf = buf.slice(end);
+        if (!String(expect).split('|').includes(done.slice(0, 3))) throw new Error('SMTP: ' + text.trim().slice(0, 200));
+        return text;
+      }
+      const { value, done: eof } = await reader.read();
+      if (eof) throw new Error('SMTP: connection closed');
+      buf += dec.decode(value, { stream: true });
+    }
+  }
+  const send = (line) => writer.write(new TextEncoder().encode(line + '\r\n'));
+
+  try {
+    await reply(220);
+    await send('EHLO lxpantosfashionstaff'); await reply(250);
+    if (env.SMTP_PASS) {
+      await send('AUTH LOGIN'); await reply(334);
+      await send(btoa(env.SMTP_USER)); await reply(334);
+      await send(btoa(env.SMTP_PASS)); await reply(235);
+    }
+    await send(`MAIL FROM:<${env.SMTP_USER}>`); await reply(250);
+    for (const r of to) { await send(`RCPT TO:<${r}>`); await reply('250|251'); }
+    await send('DATA'); await reply(354);
+    await send(buildMessage(env.SMTP_USER, env.MAIL_FROM_NAME || 'LX Pantos Vessel Alerts', to, subject, html) + '\r\n.');
+    await reply(250);
+    await send('QUIT');
+  } finally {
+    socket.close().catch(() => {});
+  }
 }
 
 export async function sendMail(env, to, subject, html) {
-  if (env.MAIL_MODE !== 'graph') {
+  if (env.MAIL_MODE !== 'gmail') {
     console.log(`[MAIL:log] to=${to.join(',')} subject=${subject}`);
     return { logged: true };
   }
-  const token = await graphToken(env);
-  const res = await fetch(`https://graph.microsoft.com/v1.0/users/${encodeURIComponent(env.MAIL_SENDER)}/sendMail`, {
-    method: 'POST',
-    headers: { authorization: 'Bearer ' + token, 'content-type': 'application/json' },
-    body: JSON.stringify({
-      message: {
-        subject,
-        body: { contentType: 'HTML', content: html },
-        toRecipients: to.map((address) => ({ emailAddress: { address } })),
-      },
-      saveToSentItems: true,
-    }),
-  });
-  if (res.status !== 202) throw new Error('Graph sendMail ' + res.status + ': ' + (await res.text()).slice(0, 300));
+  if (!env.SMTP_USER || !env.SMTP_PASS) throw new Error('Gmail is not set up (SMTP_USER / SMTP_PASS).');
+  await smtpSend(env, to, subject, html);
   return { sent: true };
 }
