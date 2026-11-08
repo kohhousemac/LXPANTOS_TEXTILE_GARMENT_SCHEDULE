@@ -150,12 +150,17 @@ async function allowedBookers(env, country) {
 
 const recipients = (b, teams) => [...new Set([...(b.notify || []), ...(teams[b.customer] || [])])];
 
-// Korea side (every HQ PIC and the Korea booker list) gets the Korean mail.
-async function koreanSet(env, teams) {
+// Mail language per address: Korea side (every HQ PIC and the Korea list) gets
+// Korean; overseas bookers get their own language with English underneath.
+const COUNTRY_LANG = { vn: 'vi', id: 'id', cn: 'zh', tw: 'zht', hk: 'zht' };
+async function langMap(env, teams) {
   const bookers = await getBookers(env);
-  return new Set([...Object.values(teams).flat(), ...bookers.kr]);
+  const m = new Map();
+  for (const [cc, list] of Object.entries(bookers)) for (const e of list) m.set(e, COUNTRY_LANG[cc] || 'en');
+  for (const e of [...Object.values(teams).flat(), ...bookers.kr]) m.set(e, 'ko');
+  return m;
 }
-const langOf = (email, ko) => (ko.has(email) ? 'ko' : 'en');
+const langOf = (email, m) => m.get(email) || 'en';
 
 // ---------- checker ----------
 async function runCheck(env, { onlyId } = {}) {
@@ -163,7 +168,7 @@ async function runCheck(env, { onlyId } = {}) {
   const bookings = (await listBookings(env)).filter((b) => b.state !== 'departed' && b.state !== 'cancelled' && (!onlyId || b.id === onlyId));
   const labels = await routeLabels(env);
   const teams = await getTeams(env);
-  const ko = await koreanSet(env, teams);
+  const langs = await langMap(env, teams);
   const lanes = {};
   const log = [];
   for (const b of bookings) {
@@ -184,9 +189,9 @@ async function runCheck(env, { onlyId } = {}) {
       b.lastCheckedAt = new Date().toISOString();
       if (ev.state === 'alert' && ev.alertKey !== b.lastAlertKey) {
         const to = recipients(b, teams);
-        for (const lang of ['ko', 'en']) {
-          const group = to.filter((e) => langOf(e, ko) === lang);
-          if (!group.length) continue;
+        const groups = {};
+        for (const e of to) (groups[langOf(e, langs)] ??= []).push(e);
+        for (const [lang, group] of Object.entries(groups)) {
           const { subject, html } = alertMail(b, ev, labels[b.routeId] || b.routeId, env.PAGE_URL, lang);
           await sendMail(env, group, subject, html);
         }
@@ -369,7 +374,7 @@ async function handle(request, env, ctx) {
       const b = { customer: 'SAMPLE', bookingNo: 'SAMPLE-0001', memo: 'test only', carrier: pick.carrier,
         vessel: pick.vessel, voyage: pick.voyage, origEtd: ev0.etd, origEta: ev0.eta };
       const ev = evaluate(b, rows, today);
-      const lang = body.lang || langOf(user, await koreanSet(env, await getTeams(env)));
+      const lang = body.lang || langOf(user, await langMap(env, await getTeams(env)));
       const { subject, html } = alertMail(b, ev, 'Ho Chi Minh → Jakarta', env.PAGE_URL, lang);
       await sendMail(env, [user], subject, html);
     } else {

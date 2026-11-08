@@ -40,8 +40,50 @@ const TEXT = {
   },
 };
 
+// Overseas bookers: their own language first, English underneath. Field
+// labels and table columns stay in English (shipping terms).
+const LOCAL = {
+  vi: {
+    subject: 'Đổi tàu', switch: 'Đổi tàu', open: 'Mở booking', table: 'Các chuyến đến sớm hơn',
+    lead: (delayed) => `${delayed ? 'Tàu trong booking của bạn đã bị trễ, và ' : ''}<b>${delayed ? 'có' : 'Có'} chuyến khác cùng tuyến đến sớm hơn</b> tàu đã book. Vui lòng xem xét đổi sang tàu khác.`,
+    foot: 'Nút "Đổi tàu" sẽ mở trang nội bộ để bạn xác nhận việc thay đổi. Hợp đồng, giá cước và chỗ trống của hãng tàu chưa được kiểm tra. Vui lòng xác nhận với hãng tàu trước khi đổi.',
+  },
+  id: {
+    subject: 'Ganti kapal', switch: 'Ganti kapal', open: 'Buka booking', table: 'Pelayaran yang tiba lebih awal',
+    lead: (delayed) => `${delayed ? 'Kapal pada booking Anda mengalami keterlambatan, dan ' : ''}<b>${delayed ? 'ada' : 'Ada'} pelayaran lain di rute yang sama yang tiba lebih awal</b> dari kapal yang Anda booking. Mohon pertimbangkan untuk ganti kapal.`,
+    foot: 'Tombol "Ganti kapal" akan membuka halaman staf untuk konfirmasi perubahan. Kontrak, tarif, dan ruang muat dari pelayaran belum dicek. Mohon konfirmasi ke pihak pelayaran sebelum mengganti.',
+  },
+  zh: {
+    subject: '换船', switch: '换到此船', open: '打开订舱', table: '更早到达的船期',
+    lead: (delayed) => `${delayed ? '您订舱的船舶已延误，' : ''}<b>同航线有其他船期比您订舱的船更早到达</b>，请考虑更换船舶。`,
+    foot: '点击"换到此船"会打开员工页面，确认后才会更换。船公司合同、运价及舱位未经核实，更换前请与船公司确认。',
+  },
+  zht: {
+    subject: '換船', switch: '換到此船', open: '開啟訂艙', table: '更早抵達的船期',
+    lead: (delayed) => `${delayed ? '您訂艙的船舶已延誤，' : ''}<b>同航線有其他船期比您訂艙的船更早抵達</b>，請考慮更換船舶。`,
+    foot: '點擊「換到此船」會開啟員工頁面，確認後才會更換。船公司合約、運價及艙位未經核實，更換前請與船公司確認。',
+  },
+};
+
+function textFor(lang) {
+  if (TEXT[lang]) return TEXT[lang];
+  const l = LOCAL[lang];
+  const en = TEXT.en;
+  if (!l) return en;
+  const grey = (s) => `<span style="color:#726d64">${s}</span>`;
+  return {
+    ...en,
+    subject: `${l.subject} / ${en.subject}`,
+    switch: `${l.switch} / ${en.switch}`,
+    open: `${l.open} / ${en.open}`,
+    table: `${l.table} / ${en.table}`,
+    lead: (d) => `${l.lead(d)}<br>${grey(en.lead(d))}`,
+    foot: `${l.foot}<br>${en.foot}`,
+  };
+}
+
 export function alertMail(booking, ev, routeLabel, pageUrl, lang = 'en') {
-  const t = TEXT[lang] || TEXT.en;
+  const t = textFor(lang);
   const delayed = ev.delayDays > 0;
   const subject = `[${t.subject}] ${booking.customer ? booking.customer + ' · ' : ''}${booking.bookingNo}`;
   const rows = ev.candidates.map((c) => `
