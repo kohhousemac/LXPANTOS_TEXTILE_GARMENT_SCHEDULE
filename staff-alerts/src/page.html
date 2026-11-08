@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Vessel Alerts</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--bg:#faf9f6;--panel:#fff;--fg:#1c1a17;--muted:#726d64;--line:#e6e1d8;--ok:#2f9e44;--warn:#c2760c;--bad:#c0392b;--accent:#a72b2a;--ink:#16171b;--ink-fg:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#181715;--panel:#221f1c;--fg:#efece6;--muted:#a39b8e;--line:#38352f;--ok:#4ade80;--warn:#f0a93d;--bad:#f1685a;--accent:#e2615f;--ink:#f2f2f4;--ink-fg:#111}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 "Pretendard Variable",Pretendard,system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:28px 16px 60px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+h1{font-size:22px;margin:0}h1 span{color:var(--accent)}
+h2{font-size:16px;margin:0 0 14px}
+.muted{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:18px}
+.step{margin-bottom:18px;scroll-margin-top:16px}
+.step[hidden]{display:none}
+.label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.label b{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;margin-right:6px;letter-spacing:0}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:7px 16px;font:inherit;font-weight:650;cursor:pointer;white-space:nowrap}
+.pill:hover{border-color:var(--muted)}
+.pill[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ink-fg)}
+.pill.cust[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.sub{margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);font:inherit}
+button{white-space:nowrap;font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:6px;padding:7px 12px;cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+button:disabled{opacity:.5;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+.msg{font-size:13px}.msg.err{color:var(--bad)}.msg.ok{color:var(--ok)}
+.tbl{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+th{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;background:color-mix(in srgb,var(--fg) 4%,var(--panel))}
+#vessels tr{cursor:pointer}
+#vessels tr:hover td{background:color-mix(in srgb,var(--fg) 4%,transparent)}
+#vessels tr.sel td{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+#vessels tr.closed td{color:var(--muted)}
+#vessels td:first-child{width:28px}
+.radio{width:14px;height:14px;border:2px solid var(--line);border-radius:50%;display:inline-block;vertical-align:middle}
+tr.sel .radio{border-color:var(--accent);background:radial-gradient(var(--accent) 45%,transparent 50%)}
+.list table{min-width:860px}
+.badge{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap}
+.b-ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.b-delayed{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.b-alert{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.b-missing,.b-departed{background:color-mix(in srgb,var(--muted) 15%,transparent);color:var(--muted)}
+.cand{font-size:12px;margin-top:2px}.cand b{color:var(--ok)}
+.small{font-size:12px}
+.acts{display:flex;gap:6px}
+#vesselList{display:grid;grid-template-rows:1fr;transition:grid-template-rows .35s ease}
+#vesselList>div{overflow:hidden;min-height:0}
+#vesselList.collapsed{grid-template-rows:0fr}
+.picked{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:10px 14px;border:1px solid var(--accent);border-radius:8px;background:color-mix(in srgb,var(--accent) 8%,var(--panel));cursor:pointer;margin-bottom:8px;flex-wrap:wrap}
+.picked .muted{font-size:12px}
+.picked .arrow{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.picked .arrow svg{transition:transform .25s}
+.picked[aria-expanded="true"] .arrow svg{transform:rotate(180deg)}
+#teamsBox summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none}
+#teamsBox summary::-webkit-details-marker{display:none}
+#teamsBox summary h2{margin:0}
+#teamsBox .arrow{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+#teamsBox .arrow .lbl::before{content:"Show"}
+#teamsBox[open] .arrow .lbl::before{content:"Hide"}
+#teamsBox .arrow svg{transition:transform .25s}
+#teamsBox[open] .arrow svg{transform:rotate(180deg)}
+.team{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.team:last-child{border-bottom:none}
+@media (max-width:560px){.team{grid-template-columns:1fr auto}.team b{grid-column:1/-1}}
+.search{display:flex;gap:8px}.search input{max-width:360px}
+.bk{border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-top:12px}
+.bk.cancelled{opacity:.7}
+.bkhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.bkhead .no{font-size:18px;font-weight:700}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;font-size:13px}
+.kv dt{color:var(--muted)}.kv dd{margin:0}
+@media (max-width:560px){.kv{grid-template-columns:1fr}.kv dd{margin-bottom:6px}}
+.chg{margin-top:12px}
+.chg tr[data-v]{cursor:pointer}.chg tr[data-v]:hover td{background:color-mix(in srgb,var(--fg) 4%,transparent)}
+button.danger{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line))}
+a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
+.listhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.listhead .pill{padding:4px 12px;font-size:12px}
+/* opening screen */
+.login{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:16px;overflow:auto;
+  background:radial-gradient(900px 420px at 85% -10%,rgba(214,20,90,.30),transparent 60%),radial-gradient(700px 380px at 0% 110%,rgba(165,0,52,.28),transparent 60%),#121318}
+.login[hidden]{display:none}
+.lbox{width:100%;max-width:520px;background:var(--panel);border-radius:14px;padding:30px 28px;box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
+.lbox .brand{font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin:0}
+.lbox h1{font-size:24px;margin:4px 0 6px}
+.lbox .who{margin:0 0 22px;font-size:13px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+@media (max-width:420px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+.ctry{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 8px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);font:inherit;font-weight:650;cursor:pointer}
+.ctry .f{font-size:28px;line-height:1}
+.ctry:hover{border-color:var(--muted)}
+.ctry[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--panel));color:var(--accent)}
+#enter{width:100%;padding:11px;font-size:15px;margin-top:20px}
+.cgrid{margin-bottom:18px}
+.blist{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow:auto}
+.blist .grp{font-size:11px;font-weight:700;color:var(--muted);margin:8px 0 0;letter-spacing:.05em}
+.bkr{text-align:left;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:inherit;cursor:pointer}
+.bkr:hover{border-color:var(--muted)}
+.bkr[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--panel));color:var(--accent);font-weight:650}
+.bedit{margin-top:10px}.bedit summary{cursor:pointer}
+.whereami{display:inline-flex;align-items:center;gap:6px}
+</style>
+</head>
+<body>
+<div class="login" id="login">
+  <div class="lbox">
+    <p class="brand">LX Pantos · Staff only</p>
+    <h1>Booking Vessel Alerts</h1>
+    <p class="who muted">Verified as <b id="loginMe">…</b></p>
+    <p class="label">Select your country</p>
+    <div class="cgrid" id="countries"></div>
+    <div id="bookerWrap" hidden>
+      <p class="label">Select your e-mail</p>
+      <div class="blist" id="bookerList"></div>
+      <p class="small" id="bookerHint" style="color:var(--warn);margin:6px 0 0" hidden>No e-mail list for this country yet, so you continue as yourself. Add the team below.</p>
+      <details class="bedit"><summary class="small muted" id="bookerEditLabel">Edit e-mail list</summary>
+        <div class="search" style="margin-top:8px"><input id="bookerInput" placeholder="name@lxpantos.com, name2@lxpantos.com"><button id="bookerSave" class="small">Save</button></div>
+      </details>
+    </div>
+    <button class="primary" id="enter" disabled>Continue</button>
+    <p class="small muted" style="margin:14px 0 0;text-align:center">Not you? <a href="/cdn-cgi/access/logout">Sign out</a></p>
+  </div>
+</div>
+<main id="app" hidden>
+  <header>
+    <h1><span>LX Pantos</span> Booking Vessel Alerts</h1>
+    <div class="muted small whereami"><span id="myCountry"></span> <button id="changeCountry" class="small">Change</button> · <b id="me">…</b> · <button id="testMail" class="small">Send test mail</button></div>
+  </header>
+  <p class="muted" style="margin:0 0 20px">Register a new booking here. If another sailing on the same route will arrive earlier than the booked vessel (for example after a delay), you get an e-mail suggesting a vessel change. Schedules come from lxpantosfashion.co.kr and are rechecked every few hours.</p>
+
+  <section class="card">
+    <h2>Find booking</h2>
+    <form class="search" id="findForm">
+      <input id="q" placeholder="Booking No. (e.g. SITC2611001)" autocomplete="off">
+      <button class="primary" type="submit">Search</button>
+    </form>
+    <div id="found"></div>
+  </section>
+
+  <section class="card">
+    <h2>New booking</h2>
+
+    <div class="step">
+      <p class="label"><b>1</b>Customer</p>
+      <div class="pills" id="customers"></div>
+      <p class="small" id="teamLine" style="margin:8px 0 0" hidden></p>
+    </div>
+
+    <div class="step" id="stepRoute" hidden>
+      <p class="label"><b>2</b>Route</p>
+      <p class="label" style="font-size:10px">POL</p>
+      <div class="pills" id="pols"></div>
+      <div class="sub" id="podWrap" hidden>
+        <p class="label" style="font-size:10px">POD</p>
+        <div class="pills" id="pods"></div>
+      </div>
+    </div>
+
+    <div class="step" id="stepVessel" hidden>
+      <p class="label"><b>3</b>Vessel <span id="routeName" style="text-transform:none;letter-spacing:0;font-weight:600;color:var(--fg)"></span></p>
+      <button type="button" class="picked" id="vesselPicked" hidden aria-expanded="false" aria-controls="vesselList"></button>
+      <div id="vesselList"><div>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th></tr></thead>
+        <tbody id="vessels"></tbody>
+      </table></div>
+      <p class="small muted" style="margin:6px 0 0">⛔ = booking closed on the carrier's schedule</p>
+      </div></div>
+    </div>
+
+    <div class="step" id="stepDetails" hidden>
+      <p class="label"><b>4</b>Booking details</p>
+      <div class="grid">
+        <div><label for="bookingNo">Booking No. *</label><input id="bookingNo" maxlength="40" placeholder="e.g. SITC2611001"></div>
+        <div><label for="memo">Memo</label><input id="memo" maxlength="80" placeholder="PO, style, etc."></div>
+      </div>
+      <p class="small muted" id="recipients" style="margin:10px 0 0"></p>
+      <div class="row">
+        <button class="primary" id="save">Register booking</button>
+        <span class="msg" id="summary"></span>
+      </div>
+    </div>
+    <p class="msg" id="formMsg" style="margin:0"></p>
+  </section>
+
+  <section class="card list">
+    <div class="listhead">
+      <h2 style="margin:0">Registered bookings</h2>
+      <div class="pills" id="filter"></div>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Status</th><th>Customer</th><th>Booking No.</th><th>Route</th><th>Booked vessel</th><th>ETA (booked → now)</th><th>Earlier sailings</th><th>Notify</th><th></th></tr></thead>
+      <tbody id="list"><tr><td colspan="9" class="muted">Loading…</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <details id="teamsBox">
+      <summary><h2>HQ PIC</h2><span class="arrow"><span class="lbl"></span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+      <p class="muted small" style="margin:12px 0 14px">HQ person in charge for each customer. They are copied on every alert for that customer's bookings, together with the booker who registered it. Changes apply to existing bookings too.</p>
+      <div id="teams"></div>
+    </details>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const md = (iso) => iso ? iso.slice(5).replace('-', '/') : '-';
+const flag = (cc) => cc.toUpperCase().replace(/./g, (c) => String.fromCodePoint(127397 + c.charCodeAt(0)));
+// "11-05 (Thu)" has no year: take the year that puts it nearest to today (KST).
+const todayKST = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
+function sailed(etd) {
+  const m = /^(\d{2})-(\d{2})/.exec(etd || ''); if (!m) return false;
+  const t = Date.parse(todayKST), y = +todayKST.slice(0, 4);
+  const d = [y - 1, y, y + 1].map((yy) => Date.UTC(yy, m[1] - 1, +m[2])).sort((a, b) => Math.abs(a - t) - Math.abs(b - t))[0];
+  return d < t;
+}
+const STATE = { ok: ['On schedule', 'b-ok'], delayed: ['Delayed', 'b-delayed'], alert: ['Review change', 'b-alert'], missing: ['Not in schedule', 'b-missing'], departed: ['Departed', 'b-departed'], cancelled: ['Cancelled', 'b-departed'] };
+
+let me = '', customers = [], routes = [], labels = {}, laneRows = [], bookings = [], teams = {};
+const pick = { customer: '', pol: '', routeId: '', row: null };
+let listFilter = 'ALL';
+
+async function api(path, opts = {}) {
+  const res = await fetch(path, { headers: { 'content-type': 'application/json' }, ...opts });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || res.status);
+  return data;
+}
+
+const pills = (items, active, cls = '') => items.map(([val, text]) =>
+  `<button type="button" class="pill ${cls}" data-v="${esc(val)}" aria-pressed="${val === active}">${text}</button>`).join('');
+
+let countries = {}, country = '', bookers = {}, booker = '', authEmail = '';
+const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } },
+                set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
+
+function drawCountries() {
+  $('countries').innerHTML = Object.entries(countries).map(([cc, name]) =>
+    `<button type="button" class="ctry" data-cc="${cc}" aria-pressed="${cc === country}"><span class="f">${flag(cc)}</span>${esc(name)}</button>`).join('');
+  drawBookers();
+}
+
+// E-mails to pick from: the country's own list (Korea: its staff plus every
+// HQ PIC). With no list yet, the signed-in user.
+function bookerGroups() {
+  let list = bookers[country] || [];
+  if (country === 'kr') list = [...new Set([...list, ...Object.values(teams).flat()])];
+  return [[null, list.length ? list : [authEmail]]];
+}
+
+function drawBookers() {
+  $('bookerWrap').hidden = !country;
+  if (!country) { $('enter').disabled = true; return; }
+  const groups = bookerGroups();
+  const all = groups.flatMap(([, l]) => l);
+  if (!all.includes(booker)) booker = all.length === 1 ? all[0] : '';
+  $('bookerList').innerHTML = groups.map(([title, list]) =>
+    (title ? `<p class="grp">${esc(title)}</p>` : '') +
+    list.map((e) => `<button type="button" class="bkr" data-e="${esc(e)}" aria-pressed="${e === booker}">${esc(e)}</button>`).join('')).join('');
+  $('bookerEditLabel').textContent = `Edit ${countries[country]} e-mail list`;
+  $('bookerInput').value = (bookers[country] || []).join(', ');
+  $('bookerHint').hidden = (bookers[country] || []).length > 0 || country === 'kr';
+  $('enter').disabled = !booker;
+}
+
+$('countries').onclick = (e) => {
+  const b = e.target.closest('[data-cc]'); if (!b) return;
+  country = b.dataset.cc; booker = ''; drawCountries();
+};
+$('bookerList').onclick = (e) => {
+  const b = e.target.closest('[data-e]'); if (!b) return;
+  booker = b.dataset.e; drawBookers();
+};
+$('bookerList').ondblclick = (e) => { if (e.target.closest('[data-e]')) $('enter').click(); };
+$('bookerSave').onclick = async () => {
+  try {
+    const r = await api('/api/bookers/' + country, { method: 'PUT', body: JSON.stringify({ emails: $('bookerInput').value.split(/[,;\s]+/).filter(Boolean) }) });
+    bookers[country] = r.emails; drawBookers();
+    $('bookerSave').textContent = 'Saved'; setTimeout(() => { $('bookerSave').textContent = 'Save'; }, 1500);
+  } catch (err) { alert(err.message); }
+};
+
+$('enter').onclick = () => {
+  store.set('lxCountry', country); store.set('lxBooker', booker);
+  me = booker;
+  $('myCountry').textContent = `${flag(country)} ${countries[country]}`;
+  $('me').textContent = booker;
+  $('login').hidden = true; $('app').hidden = false;
+  resetFrom(2); drawPols(); show('stepRoute', !!pick.customer); drawPicked();
+  if (pick.customer) drawTeamLine();
+  render();
+};
+$('changeCountry').onclick = () => { $('app').hidden = true; $('login').hidden = false; drawCountries(); };
+
+async function init() {
+  const info = await api('/api/me');
+  authEmail = me = info.email; customers = info.customers; countries = info.countries;
+  $('loginMe').textContent = authEmail;
+  [routes, teams, bookers] = await Promise.all([api('/api/routes'), api('/api/teams'), api('/api/bookers')]);
+  labels = Object.fromEntries(routes.map((r) => [r.routeId, r.label]));
+  country = countries[store.get('lxCountry')] ? store.get('lxCountry') : '';
+  booker = store.get('lxBooker');
+  drawCountries();
+  drawCustomers(); drawFilter(); drawTeams();
+  loadList();
+}
+
+function drawCustomers() { $('customers').innerHTML = pills(customers.map((c) => [c, esc(c)]), pick.customer, 'cust'); }
+
+// POL list in dashboard order; port name and country flag come from route_meta / routeId.
+function polList() {
+  const seen = new Map();
+  for (const r of routes) {
+    const [pol] = r.label.split(' → ');
+    const cc = r.routeId.slice(0, 2);
+    if (cc === country && !seen.has(pol)) seen.set(pol, cc);
+  }
+  return [...seen].map(([name, cc]) => [name, `${flag(cc)} ${esc(name)}`]);
+}
+function drawPols() { $('pols').innerHTML = pills(polList(), pick.pol); }
+function drawPods() {
+  const items = routes.filter((r) => r.label.split(' → ')[0] === pick.pol)
+    .map((r) => [r.routeId, `${flag(r.routeId.slice(6, 8))} ${esc(r.label.split(' → ')[1])}`]);
+  $('pods').innerHTML = pills(items, pick.routeId);
+}
+
+function show(id, on) { $(id).hidden = !on; }
+function resetFrom(step) {
+  if (step <= 2) { pick.pol = ''; pick.routeId = ''; show('podWrap', false); }
+  if (step <= 3) { pick.row = null; drawPicked(); setVesselsOpen(true); show('stepVessel', step > 2 && !!pick.routeId); }
+  show('stepDetails', false);
+  $('formMsg').textContent = '';
+}
+
+$('customers').onclick = (e) => {
+  const v = e.target.closest('.pill')?.dataset.v; if (!v) return;
+  pick.customer = v; drawCustomers(); drawTeamLine();
+  if (!pick.routeId) { resetFrom(2); drawPols(); }
+  show('stepRoute', true); updateSummary();
+};
+
+$('pols').onclick = (e) => {
+  const v = e.target.closest('.pill')?.dataset.v; if (!v) return;
+  resetFrom(2); pick.pol = v; drawPols(); drawPods();
+  show('podWrap', true); show('stepVessel', false);
+};
+
+$('pods').onclick = async (e) => {
+  const v = e.target.closest('.pill')?.dataset.v; if (!v) return;
+  pick.routeId = v; pick.row = null; drawPods();
+  show('stepDetails', false); drawPicked(); setVesselsOpen(true);
+  $('routeName').textContent = '· ' + labels[v];
+  $('vessels').innerHTML = '<tr><td colspan="7" class="muted">Loading…</td></tr>';
+  show('stepVessel', true);
+  try {
+    laneRows = (await api('/api/lane/' + v)).filter((r) => r.status !== 'departed' && !sailed(r.etd));
+    drawVessels();
+  } catch (err) { $('vessels').innerHTML = `<tr><td colspan="7" class="msg err">${esc(err.message)}</td></tr>`; }
+};
+
+function drawVessels() {
+  if (!laneRows.length) { $('vessels').innerHTML = '<tr><td colspan="7" class="muted">No upcoming sailings on this route.</td></tr>'; return; }
+  $('vessels').innerHTML = laneRows.map((r, i) => `
+    <tr data-i="${i}" class="${pick.row === r ? 'sel' : ''} ${r.bookingClosed ? 'closed' : ''}">
+      <td><span class="radio"></span></td>
+      <td class="small">${esc(r.carrier)}</td>
+      <td><b>${r.bookingClosed ? '⛔ ' : ''}${esc(r.vessel)}</b></td>
+      <td>${esc(r.voyage)}</td>
+      <td>${esc(r.etd)}</td>
+      <td>${esc(r.eta)}</td>
+      <td>${r.tt != null ? esc(r.tt) + 'd' : ''}</td>
+    </tr>`).join('');
+}
+
+$('vessels').onclick = (e) => {
+  const tr = e.target.closest('tr[data-i]'); if (!tr) return;
+  pick.row = laneRows[tr.dataset.i]; drawVessels(); drawPicked();
+  setVesselsOpen(false);  // roll the list up and move on to the details
+  show('stepDetails', true); updateSummary();
+  setTimeout(() => {
+    $('stepVessel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    $('bookingNo').focus({ preventScroll: true });
+  }, 200);
+};
+
+function setVesselsOpen(open) {
+  $('vesselList').classList.toggle('collapsed', !open);
+  $('vesselPicked').setAttribute('aria-expanded', String(open));
+}
+function drawPicked() {
+  const r = pick.row, el = $('vesselPicked');
+  el.hidden = !r;
+  if (!r) return;
+  el.innerHTML = `<span class="radio" style="border-color:var(--accent);background:radial-gradient(var(--accent) 45%,transparent 50%)"></span>
+    <span><b>${r.bookingClosed ? '⛔ ' : ''}${esc(r.vessel)}</b> ${esc(r.voyage)} <span class="muted">· ${esc(r.carrier)}</span></span>
+    <span>ETD <b>${esc(r.etd)}</b> → ETA <b>${esc(r.eta)}</b>${r.tt != null ? ` <span class="muted">· ${esc(r.tt)}d</span>` : ''}</span>
+    <span class="arrow"><span class="lbl">Change</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
+}
+$('vesselPicked').onclick = () => {
+  const open = $('vesselPicked').getAttribute('aria-expanded') !== 'true';
+  setVesselsOpen(open);
+  $('vesselPicked').querySelector('.lbl').textContent = open ? 'Hide' : 'Change';
+};
+
+function drawTeamLine() {
+  const t = teams[pick.customer] || [];
+  $('teamLine').hidden = !pick.customer;
+  $('teamLine').innerHTML = t.length
+    ? `<span class="muted">${esc(pick.customer)} HQ PIC (auto-copied):</span> ${t.map(esc).join(', ')}`
+    : `<span style="color:var(--warn)">No HQ PIC set for ${esc(pick.customer)} yet.</span> <a href="#teamsBox" onclick="$('teamsBox').open=true">Add one below</a>`;
+  drawRecipients();
+}
+function drawRecipients() {
+  const all = [...new Set([me, ...(teams[pick.customer] || [])])];
+  $('recipients').textContent = 'Alerts go to: ' + all.join(', ');
+}
+
+function drawTeams() {
+  $('teams').innerHTML = customers.map((c) => `
+    <div class="team">
+      <b>${esc(c)}</b>
+      <input data-team="${esc(c)}" value="${esc((teams[c] || []).join(', '))}" placeholder="name@lxpantos.com, name2@lxpantos.com">
+      <button class="small" data-save-team="${esc(c)}">Save</button>
+    </div>`).join('');
+}
+$('teams').onclick = async (e) => {
+  const c = e.target.dataset.saveTeam; if (!c) return;
+  const input = document.querySelector(`input[data-team="${c}"]`);
+  e.target.disabled = true;
+  try {
+    const r = await api('/api/teams/' + c, { method: 'PUT', body: JSON.stringify({ emails: input.value.split(/[,;\s]+/).filter(Boolean) }) });
+    teams[c] = r.emails; input.value = r.emails.join(', ');
+    e.target.textContent = 'Saved'; setTimeout(() => { e.target.textContent = 'Save'; }, 1500);
+    if (pick.customer === c) drawTeamLine();
+    render();
+  } catch (err) { alert(err.message); }
+  e.target.disabled = false;
+};
+
+function updateSummary() {
+  $('summary').innerHTML = pick.row
+    ? `<span class="muted">${esc(pick.customer)} · ${esc(labels[pick.routeId])} · ${esc(pick.row.vessel)} ${esc(pick.row.voyage)} (ETA ${esc(pick.row.eta)})</span>` : '';
+}
+
+$('save').onclick = async () => {
+  const msg = $('formMsg'); msg.className = 'msg'; msg.textContent = '';
+  $('save').disabled = true;
+  try {
+    const b = await api('/api/bookings', { method: 'POST', body: JSON.stringify({
+      customer: pick.customer, country, booker, routeId: pick.routeId, vessel: pick.row.vessel, voyage: pick.row.voyage,
+      bookingNo: $('bookingNo').value, memo: $('memo').value }) });
+    msg.className = 'msg ok'; msg.textContent = `Registered ${b.bookingNo}. You will be e-mailed if a faster sailing appears.`;
+    $('bookingNo').value = ''; $('memo').value = '';
+    pick.row = null; drawVessels(); drawPicked(); setVesselsOpen(true); show('stepDetails', false);
+    loadList();
+  } catch (e) { msg.className = 'msg err'; msg.textContent = e.message; }
+  $('save').disabled = false;
+};
+
+function drawFilter() {
+  $('filter').innerHTML = pills([['ALL', 'All'], ['MINE', 'Mine'], ...customers.map((c) => [c, esc(c)])], listFilter);
+}
+$('filter').onclick = (e) => {
+  const v = e.target.closest('.pill')?.dataset.v; if (!v) return;
+  listFilter = v; drawFilter(); render();
+};
+
+async function loadList() {
+  try { bookings = await api('/api/bookings'); } catch (e) { $('list').innerHTML = `<tr><td colspan="9" class="msg err">${esc(e.message)}</td></tr>`; return; }
+  render(); drawFound();
+}
+
+function render() {
+  const rows = bookings.filter((b) => listFilter === 'ALL' ? true
+    : listFilter === 'MINE' ? (b.createdBy === me || b.notify.includes(me))
+    : b.customer === listFilter);
+  if (!rows.length) { $('list').innerHTML = '<tr><td colspan="9" class="muted">No bookings yet.</td></tr>'; return; }
+  $('list').innerHTML = rows.map((b) => {
+    const [txt, cls] = STATE[b.state] || STATE.ok;
+    const delay = b.delayDays > 0 ? ` <span style="color:var(--bad)">(+${b.delayDays}d)</span>` : '';
+    const cands = (b.candidates || []).slice(0, 3).map((c) =>
+      `<div class="cand">${esc(c.vessel)} ${esc(c.voyage)} · ${md(c.etd)}→${md(c.eta)} <b>${c.daysEarlier}d earlier</b></div>`).join('') || '<span class="muted">-</span>';
+    return `<tr>
+      <td><span class="badge ${cls}">${txt}</span>${b.lastAlertAt ? `<div class="small muted">Mailed ${md(b.lastAlertAt.slice(0, 10))}</div>` : ''}</td>
+      <td>${b.country ? flag(b.country) + ' ' : ''}<b>${esc(b.customer || '-')}</b></td>
+      <td><a class="bkno" data-open="${esc(b.bookingNo)}"><b>${esc(b.bookingNo)}</b></a>${b.memo ? `<div class="small muted">${esc(b.memo)}</div>` : ''}</td>
+      <td>${esc(labels[b.routeId] || b.routeId)}</td>
+      <td>${esc(b.vessel)} ${esc(b.voyage)}<div class="small muted">${esc(b.carrier)}</div></td>
+      <td>${md(b.origEta)} → <b>${md(b.currentEta)}</b>${delay}</td>
+      <td>${cands}</td>
+      <td class="small">${b.notify.map(esc).join('<br>')}${(teams[b.customer] || []).length ? `<div class="muted">+ ${esc(b.customer)} HQ PIC (${teams[b.customer].length})</div>` : ''}</td>
+      <td><div class="acts">${b.state === 'cancelled' ? '' : `<button class="small" data-act="check" data-id="${b.id}">Check</button><button class="small danger" data-act="cancel" data-id="${b.id}">Cancel</button>`}</div></td>
+    </tr>`;
+  }).join('');
+}
+
+// ---- booking actions (shared by the list and the search result) ----
+async function act(btn) {
+  const { act: action, id } = btn.dataset;
+  const b = bookings.find((x) => x.id === id);
+  if (action === 'cancel' && !confirm(`Cancel booking ${b.bookingNo}? Alerts will stop.`)) return;
+  btn.disabled = true;
+  try {
+    await api(`/api/bookings/${id}/${action}`, { method: 'POST' });
+    await loadList();
+  } catch (err) { alert(err.message); btn.disabled = false; }
+}
+
+$('list').onclick = (e) => {
+  const open = e.target.closest('[data-open]');
+  if (open) { $('q').value = open.dataset.open; find(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  const btn = e.target.closest('button[data-act]'); if (btn) act(btn);
+};
+
+// ---- find booking ----
+let lastQuery = '';
+function find() { lastQuery = $('q').value.trim().toUpperCase(); drawFound(); }
+$('findForm').onsubmit = (e) => { e.preventDefault(); find(); };
+
+function drawFound() {
+  if (!lastQuery) { $('found').innerHTML = ''; return; }
+  const hits = bookings.filter((b) => b.bookingNo.toUpperCase().includes(lastQuery));
+  if (!hits.length) { $('found').innerHTML = `<p class="muted" style="margin:12px 0 0">No booking matches "${esc(lastQuery)}".</p>`; return; }
+  $('found').innerHTML = hits.map((b) => {
+    const [txt, cls] = STATE[b.state] || STATE.ok;
+    const live = b.state !== 'cancelled' && b.state !== 'departed';
+    const pic = teams[b.customer] || [];
+    const delay = b.delayDays > 0 ? ` <span style="color:var(--bad)">(+${b.delayDays}d)</span>` : '';
+    const cands = (b.candidates || []).map((c) =>
+      `<div>${esc(c.vessel)} ${esc(c.voyage)} · ${esc(c.carrier)} · ${md(c.etd)}→${md(c.eta)} <b style="color:var(--ok)">${c.daysEarlier}d earlier</b></div>`).join('') || '-';
+    const hist = (b.history || []).map((h) =>
+      `<div>${md(h.at.slice(0, 10))} · ${esc(h.action)}${h.to ? `: ${esc(h.from)} → ${esc(h.to)}` : ''} <span class="muted">(${esc(h.by)})</span></div>`).join('');
+    return `<div class="bk ${b.state === 'cancelled' ? 'cancelled' : ''}" data-bk="${b.id}">
+      <div class="bkhead"><span class="badge ${cls}">${txt}</span><span class="no">${esc(b.bookingNo)}</span><b>${esc(b.customer || '')}</b>${b.memo ? `<span class="muted">${esc(b.memo)}</span>` : ''}</div>
+      <dl class="kv">
+        <dt>Route</dt><dd>${esc(labels[b.routeId] || b.routeId)}</dd>
+        <dt>Vessel</dt><dd><b>${esc(b.vessel)}</b> ${esc(b.voyage)} <span class="muted">· ${esc(b.carrier)}</span></dd>
+        <dt>ETD (booked → now)</dt><dd>${md(b.origEtd)} → <b>${md(b.currentEtd)}</b></dd>
+        <dt>ETA (booked → now)</dt><dd>${md(b.origEta)} → <b>${md(b.currentEta)}</b>${delay}</dd>
+        <dt>Earlier sailings</dt><dd>${cands}</dd>
+        <dt>Alerts go to</dt><dd>${[...new Set([...b.notify, ...pic])].map(esc).join(', ')}</dd>
+        <dt>Registered</dt><dd>${md(b.createdAt.slice(0, 10))} by ${esc(b.createdBy)}${b.lastAlertAt ? ` · last mail ${md(b.lastAlertAt.slice(0, 10))}` : ''}</dd>
+        ${hist ? `<dt>History</dt><dd>${hist}</dd>` : ''}
+      </dl>
+      ${live ? `<div class="row">
+        <button class="small" data-change="${b.id}">Change vessel</button>
+        <button class="small" data-act="check" data-id="${b.id}">Check now</button>
+        <button class="small danger" data-act="cancel" data-id="${b.id}">Cancel booking</button>
+      </div><div class="chg" hidden></div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+$('found').onclick = async (e) => {
+  const btn = e.target.closest('button[data-act]'); if (btn) return act(btn);
+
+  const chg = e.target.closest('button[data-change]');
+  if (chg) {
+    const box = chg.closest('.bk').querySelector('.chg');
+    if (!box.hidden) { box.hidden = true; return; }
+    const b = bookings.find((x) => x.id === chg.dataset.change);
+    box.hidden = false; box.innerHTML = '<p class="muted small">Loading…</p>';
+    const rows = (await api('/api/lane/' + b.routeId)).filter((r) => r.status !== 'departed' && !sailed(r.etd)
+      && !(r.vessel === b.vessel && r.voyage === b.voyage));
+    box.innerHTML = `<p class="small muted" style="margin:0 0 6px">Pick the new vessel for ${esc(b.bookingNo)} (${esc(labels[b.routeId])}):</p>
+      <div class="tbl"><table><thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th></tr></thead><tbody>
+      ${rows.map((r) => `<tr data-v="${esc(r.vessel)}" data-voy="${esc(r.voyage)}" data-id="${b.id}" class="${r.bookingClosed ? 'closed' : ''}">
+        <td class="small">${esc(r.carrier)}</td><td><b>${r.bookingClosed ? '⛔ ' : ''}${esc(r.vessel)}</b></td><td>${esc(r.voyage)}</td>
+        <td>${esc(r.etd)}</td><td>${esc(r.eta)}</td><td>${r.tt != null ? esc(r.tt) + 'd' : ''}</td></tr>`).join('')}
+      </tbody></table></div>`;
+    return;
+  }
+
+  const tr = e.target.closest('.chg tr[data-v]');
+  if (tr) {
+    const b = bookings.find((x) => x.id === tr.dataset.id);
+    if (!confirm(`Change ${b.bookingNo} from ${b.vessel} ${b.voyage} to ${tr.dataset.v} ${tr.dataset.voy}?`)) return;
+    try {
+      await api(`/api/bookings/${b.id}/vessel`, { method: 'POST', body: JSON.stringify({ vessel: tr.dataset.v, voyage: tr.dataset.voy }) });
+      await loadList();
+    } catch (err) { alert(err.message); }
+  }
+};
+
+$('testMail').onclick = async () => {
+  try { const r = await api('/api/test-mail', { method: 'POST' }); alert(`Test mail sent to ${r.to} (mode: ${r.mode}).`); }
+  catch (e) { alert('Mail failed: ' + e.message); }
+};
+
+init().catch((e) => { $('login').hidden = true; $('app').hidden = false; $('list').innerHTML = `<tr><td colspan="9" class="msg err">${esc(e.message)}</td></tr>`; });
+</script>
+</body>
+</html>

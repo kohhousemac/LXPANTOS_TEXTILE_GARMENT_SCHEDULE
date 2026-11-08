@@ -1,0 +1,33 @@
+name = "lxpantos-staff-alerts"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# Bookings store. Create once with:  npx wrangler kv namespace create BOOKINGS
+# then paste the printed id here.
+[[kv_namespaces]]
+binding = "BOOKINGS"
+id = "REPLACE_WITH_KV_ID"
+
+# Check schedules every 3 hours (UTC). Same alert is mailed only once.
+[triggers]
+crons = ["15 */3 * * *"]
+
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true
+
+[vars]
+ALLOWED_DOMAIN = "lxpantos.com"
+DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/lxpantos_textile_garment_schedule/main/build/data"
+PAGE_URL = "https://lxpantos-staff-alerts.REPLACE.workers.dev/"
+# Cloudflare Zero Trust > Access > the application for this Worker
+ACCESS_TEAM_DOMAIN = "REPLACE.cloudflareaccess.com"
+ACCESS_AUD = "REPLACE_WITH_ACCESS_AUD_TAG"
+# "log" = print only. Switch to "graph" once IT has set up the Entra app.
+MAIL_MODE = "log"
+MAIL_SENDER = "REPLACE@lxpantos.com"
+MS_TENANT_ID = "REPLACE"
+MS_CLIENT_ID = "REPLACE"
+# MS_CLIENT_SECRET is a secret:  npx wrangler secret put MS_CLIENT_SECRET
