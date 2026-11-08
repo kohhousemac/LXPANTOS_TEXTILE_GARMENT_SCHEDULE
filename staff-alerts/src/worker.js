@@ -150,18 +150,32 @@ async function allowedBookers(env, country) {
 
 const recipients = (b, teams) => [...new Set([...(b.notify || []), ...(teams[b.customer] || [])])];
 
+// Korea side (every HQ PIC and the Korea booker list) gets the Korean mail.
+async function koreanSet(env, teams) {
+  const bookers = await getBookers(env);
+  return new Set([...Object.values(teams).flat(), ...bookers.kr]);
+}
+const langOf = (email, ko) => (ko.has(email) ? 'ko' : 'en');
+
 // ---------- checker ----------
 async function runCheck(env, { onlyId } = {}) {
   const today = todayKST();
   const bookings = (await listBookings(env)).filter((b) => b.state !== 'departed' && b.state !== 'cancelled' && (!onlyId || b.id === onlyId));
   const labels = await routeLabels(env);
   const teams = await getTeams(env);
+  const ko = await koreanSet(env, teams);
   const lanes = {};
   const log = [];
   for (const b of bookings) {
     try {
       lanes[b.routeId] ??= await getData(env, b.routeId);
       const ev = evaluate(b, lanes[b.routeId], today);
+      if (ev.state === 'departed') {
+        // Vessel has sailed: stop alerting and remove the booking.
+        await env.BOOKINGS.delete('b:' + b.id);
+        log.push(`departed ${b.bookingNo}: deleted`);
+        continue;
+      }
       b.state = ev.state;
       b.currentEta = ev.eta || null;
       b.currentEtd = ev.etd || null;
@@ -169,16 +183,19 @@ async function runCheck(env, { onlyId } = {}) {
       b.candidates = ev.candidates.slice(0, 5);
       b.lastCheckedAt = new Date().toISOString();
       if (ev.state === 'alert' && ev.alertKey !== b.lastAlertKey) {
-        const { subject, html } = alertMail(b, ev, labels[b.routeId] || b.routeId, env.PAGE_URL);
         const to = recipients(b, teams);
-        await sendMail(env, to, subject, html);
+        for (const lang of ['ko', 'en']) {
+          const group = to.filter((e) => langOf(e, ko) === lang);
+          if (!group.length) continue;
+          const { subject, html } = alertMail(b, ev, labels[b.routeId] || b.routeId, env.PAGE_URL, lang);
+          await sendMail(env, group, subject, html);
+        }
         b.lastAlertKey = ev.alertKey;
         b.lastAlertAt = new Date().toISOString();
         b.lastAlertTo = to;
         log.push(`mail ${b.bookingNo} -> ${to.join(',')}`);
       }
-      // departed bookings are kept 30 days for reference, then expire
-      await putBooking(env, b, b.state === 'departed' ? 30 : 0);
+      await putBooking(env, b);
     } catch (e) {
       log.push(`error ${b.bookingNo}: ${e.message}`);
       console.error(e);
@@ -352,7 +369,8 @@ async function handle(request, env, ctx) {
       const b = { customer: 'SAMPLE', bookingNo: 'SAMPLE-0001', memo: 'test only', carrier: pick.carrier,
         vessel: pick.vessel, voyage: pick.voyage, origEtd: ev0.etd, origEta: ev0.eta };
       const ev = evaluate(b, rows, today);
-      const { subject, html } = alertMail(b, ev, 'Ho Chi Minh → Jakarta', env.PAGE_URL);
+      const lang = body.lang || langOf(user, await koreanSet(env, await getTeams(env)));
+      const { subject, html } = alertMail(b, ev, 'Ho Chi Minh → Jakarta', env.PAGE_URL, lang);
       await sendMail(env, [user], subject, html);
     } else {
       await sendMail(env, [user], '[LX Pantos] Vessel alert test mail',

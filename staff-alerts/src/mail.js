@@ -21,40 +21,59 @@ function deepLink(pageUrl, booking, c) {
 
 const button = (href, label, small) => `<a href="${esc(href)}" style="display:inline-block;background:${RED};color:#ffffff;text-decoration:none;font-weight:600;border-radius:6px;${small ? 'padding:5px 12px;font-size:12px' : 'padding:11px 22px;font-size:14px'}">${label}</a>`;
 
-export function alertMail(booking, ev, routeLabel, pageUrl) {
+const TEXT = {
+  en: {
+    subject: 'Vessel change', earlier: (d) => `${d}d earlier`, closed: 'closed', switch: 'Switch', open: 'Open booking',
+    lead: (delayed) => `${delayed ? 'The vessel on your booking has been delayed, and ' : ''}<b>${delayed ? 'another' : 'Another'} sailing on the same route arrives earlier</b> than your booked vessel. Please review switching to a different vessel.`,
+    customer: 'Customer', bookingNo: 'Booking No.', route: 'Route', booked: 'Booked vessel', eta: 'ETA',
+    slipped: (o, n, d) => `At booking ${o} → now <b style="color:#c0392b">${n} (+${d} days)</b>`,
+    table: 'Sailings arriving earlier', cols: ['Carrier', 'Vessel / Voyage', 'ETD', 'ETA', 'Gain'],
+    foot: '"Switch" opens the staff page and asks you to confirm the change there. Carrier contracts, rates and space are not checked. Please confirm with the carrier before switching.',
+  },
+  ko: {
+    subject: '모선 변경', earlier: (d) => `${d}일 빠름`, closed: '부킹 불가', switch: '이 배로 변경', open: '부킹 열기',
+    lead: (delayed) => `${delayed ? '부킹하신 모선의 도착이 늦어졌고, ' : ''}<b>같은 구간에 더 빨리 도착하는 스케쥴</b>이 있습니다. 타 모선으로 변경을 검토해 주세요.`,
+    customer: '고객사', bookingNo: '부킹번호', route: '구간', booked: '부킹 모선', eta: '도착 예정(ETA)',
+    slipped: (o, n, d) => `부킹 시 ${o} → 현재 <b style="color:#c0392b">${n} (${d}일 지연)</b>`,
+    table: '더 빨리 도착하는 스케쥴', cols: ['선사', '모선 / 항차', 'ETD', 'ETA', '차이'],
+    foot: '"이 배로 변경"을 누르면 직원 페이지에서 확인 후 변경됩니다. 선사 계약·운임·잔여 선복은 확인되지 않은 정보이니 변경 전 선사에 확인해 주세요.',
+  },
+};
+
+export function alertMail(booking, ev, routeLabel, pageUrl, lang = 'en') {
+  const t = TEXT[lang] || TEXT.en;
   const delayed = ev.delayDays > 0;
-  const subject = `[Vessel change] ${booking.customer ? booking.customer + ' · ' : ''}${booking.bookingNo}`;
+  const subject = `[${t.subject}] ${booking.customer ? booking.customer + ' · ' : ''}${booking.bookingNo}`;
   const rows = ev.candidates.map((c) => `
     <tr>
       <td style="${cell}">${esc(c.carrier)}</td>
-      <td style="${cell}"><b>${esc(c.vessel)}</b> ${esc(c.voyage)}${c.closedCarriers ? `<br><span style="color:#726d64;font-size:11px">${esc(c.closedCarriers)} closed</span>` : ''}</td>
+      <td style="${cell}"><b>${esc(c.vessel)}</b> ${esc(c.voyage)}${c.closedCarriers ? `<br><span style="color:#726d64;font-size:11px">${esc(c.closedCarriers)} ${t.closed}</span>` : ''}</td>
       <td style="${cell}">${md(c.etd)}</td>
       <td style="${cell}">${md(c.eta)}</td>
-      <td style="${cell};color:#2f9e44"><b>${c.daysEarlier}d earlier</b></td>
-      <td style="${cell}">${button(deepLink(pageUrl, booking, c), 'Switch', true)}</td>
+      <td style="${cell};color:#2f9e44"><b>${t.earlier(c.daysEarlier)}</b></td>
+      <td style="${cell}">${button(deepLink(pageUrl, booking, c), t.switch, true)}</td>
     </tr>`).join('');
+  const label = 'padding:3px 14px 3px 0;color:#726d64';
 
-  const html = `<div style="font-family:'Segoe UI',Pretendard,Arial,sans-serif;font-size:14px;color:#1c1a17;max-width:680px">
+  const html = `<div style="font-family:'Segoe UI','Malgun Gothic',Pretendard,Arial,sans-serif;font-size:14px;color:#1c1a17;max-width:680px">
   <table role="presentation" width="100%" style="border-collapse:collapse;border-bottom:3px solid ${RED};margin-bottom:18px"><tr>
     <td style="padding:6px 0 12px"><img src="${LOGO}" alt="LX Pantos" width="132" height="27" style="display:block;border:0"></td>
     <td style="padding:6px 0 12px;text-align:right;color:#726d64;font-size:12px">Booking Vessel Alerts</td>
   </tr></table>
-  <p style="margin:0 0 14px">${delayed ? 'The vessel on your booking has been delayed, and ' : ''}<b>${delayed ? 'another' : 'Another'} sailing on the same route arrives earlier</b> than your booked vessel. Please review switching to a different vessel.</p>
+  <p style="margin:0 0 14px">${t.lead(delayed)}</p>
   <table style="border-collapse:collapse;margin:0 0 18px">
-    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Customer</td><td><b>${esc(booking.customer || '-')}</b></td></tr>
-    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Booking No.</td><td><b>${esc(booking.bookingNo)}</b>${booking.memo ? ' · ' + esc(booking.memo) : ''}</td></tr>
-    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Route</td><td>${esc(routeLabel)}</td></tr>
-    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Booked vessel</td><td>${esc(booking.carrier)} · <b>${esc(booking.vessel)}</b> ${esc(booking.voyage)}</td></tr>
-    <tr><td style="padding:3px 14px 3px 0;color:#726d64">ETA</td><td>${delayed ? `At booking ${md(booking.origEta)} → now <b style="color:#c0392b">${md(ev.eta)} (+${ev.delayDays} days)</b>` : `<b>${md(ev.eta)}</b>`}</td></tr>
+    <tr><td style="${label}">${t.customer}</td><td><b>${esc(booking.customer || '-')}</b></td></tr>
+    <tr><td style="${label}">${t.bookingNo}</td><td><b>${esc(booking.bookingNo)}</b>${booking.memo ? ' · ' + esc(booking.memo) : ''}</td></tr>
+    <tr><td style="${label}">${t.route}</td><td>${esc(routeLabel)}</td></tr>
+    <tr><td style="${label}">${t.booked}</td><td>${esc(booking.carrier)} · <b>${esc(booking.vessel)}</b> ${esc(booking.voyage)}</td></tr>
+    <tr><td style="${label}">${t.eta}</td><td>${delayed ? t.slipped(md(booking.origEta), md(ev.eta), ev.delayDays) : `<b>${md(ev.eta)}</b>`}</td></tr>
   </table>
-  <p style="margin:0 0 6px"><b>Sailings arriving earlier</b></p>
+  <p style="margin:0 0 6px"><b>${t.table}</b></p>
   <table style="border-collapse:collapse;font-size:13px;margin-bottom:22px">
-    <tr style="background:#faf9f6;text-align:left">
-      <th style="padding:8px 10px">Carrier</th><th style="padding:8px 10px">Vessel / Voyage</th><th style="padding:8px 10px">ETD</th><th style="padding:8px 10px">ETA</th><th style="padding:8px 10px">Gain</th><th style="padding:8px 10px"></th>
-    </tr>${rows}
+    <tr style="background:#faf9f6;text-align:left">${t.cols.map((c) => `<th style="padding:8px 10px">${c}</th>`).join('')}<th style="padding:8px 10px"></th></tr>${rows}
   </table>
-  ${button(deepLink(pageUrl, booking), 'Open booking')}
-  <p style="color:#726d64;font-size:12px;margin-top:22px">"Switch" opens the staff page and asks you to confirm the change there. Carrier contracts, rates and space are not checked. Please confirm with the carrier before switching.</p>
+  ${button(deepLink(pageUrl, booking), t.open)}
+  <p style="color:#726d64;font-size:12px;margin-top:22px">${t.foot}</p>
 </div>`;
   return { subject, html };
 }

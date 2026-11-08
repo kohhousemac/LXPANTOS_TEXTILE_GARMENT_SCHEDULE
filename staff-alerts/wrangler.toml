@@ -9,9 +9,9 @@ workers_dev = true
 binding = "BOOKINGS"
 id = "2329f0c72d144f8a9266e2bdc814877c"
 
-# Check schedules every 3 hours (UTC). Same alert is mailed only once.
+# Check schedules once a day at 09:00 KST (00:00 UTC). Same alert is mailed only once.
 [triggers]
-crons = ["15 */3 * * *"]
+crons = ["0 0 * * *"]
 
 [[rules]]
 type = "Text"

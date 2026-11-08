@@ -13,7 +13,7 @@ Recipients: the booker who registered it + that customer's HQ PIC (set once per 
 
 ## Alert rule
 
-Every 3 hours each active booking is checked. A mail is sent when the same route has a sailing that
+Every day at 09:00 KST each active booking is checked. A mail is sent when the same route has a sailing that
 
 - arrives before the booked vessel's current ETA,
 - departs on or after the booked ETD (an earlier ship may leave before the cargo is ready), and
@@ -21,7 +21,7 @@ Every 3 hours each active booking is checked. A mail is sent when the same route
 
 This applies whether or not the booked vessel itself has been delayed; the mail says so when it has.
 
-The same situation is mailed only once. A new mail goes out when the ETA slips further or the list of faster sailings changes. Once the booked vessel sails, checks stop and the booking disappears from the list after 30 days.
+The same situation is mailed only once. A new mail goes out when the ETA slips further or the list of faster sailings changes. Once the booked vessel sails, the booking is deleted and no more alerts go out. HQ PICs and Korea bookers get the mail in Korean; overseas bookers in English.
 
 **Find booking** (top of the page): search by booking number to see everything registered, then
 - **Change vessel** — rebook onto another sailing on the same route; alerts restart from the new vessel's ETA, and the change is kept in the booking's history.
