@@ -321,6 +321,7 @@ $('enter').onclick = async () => {
   resetFrom(2); drawPols(); show('stepRoute', !!pick.customer); drawPicked();
   if (pick.customer) drawTeamLine();
   render();
+  handleDeepLink();
 };
 $('changeCountry').onclick = () => { $('app').hidden = true; $('login').hidden = false; drawCountries(); };
 
@@ -352,7 +353,27 @@ async function loadApp() {
   [routes, teams, bookers] = await Promise.all([api('/api/routes'), api('/api/teams'), api('/api/bookers')]);
   labels = Object.fromEntries(routes.map((r) => [r.routeId, r.label]));
   drawCustomers(); drawFilter(); drawTeams();
-  loadList();
+  await loadList();
+}
+
+// Links from alert mails: ?find=<booking no>[&to=<vessel>|<voyage>]
+async function handleDeepLink() {
+  const p = new URLSearchParams(location.search);
+  const no = p.get('find');
+  if (!no) return;
+  history.replaceState(null, '', location.pathname);
+  $('q').value = no; find();
+  $('findForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const to = p.get('to');
+  const b = bookings.find((x) => x.bookingNo === no && x.state !== 'cancelled' && x.state !== 'departed');
+  if (!to || !b) return;
+  const [vessel, voyage = ''] = to.split('|');
+  if (b.vessel === vessel && b.voyage === voyage) return;
+  if (!confirm(`Change booking ${b.bookingNo} from ${b.vessel} ${b.voyage} to ${vessel} ${voyage}?`)) return;
+  try {
+    await api(`/api/bookings/${b.id}/vessel`, { method: 'POST', body: JSON.stringify({ vessel, voyage }) });
+    await loadList();
+  } catch (err) { alert(err.message); }
 }
 
 function drawCustomers() { $('customers').innerHTML = pills(customers.map((c) => [c, esc(c)]), pick.customer, 'cust'); }

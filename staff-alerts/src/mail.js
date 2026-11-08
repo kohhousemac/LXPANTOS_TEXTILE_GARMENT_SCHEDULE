@@ -7,37 +7,54 @@ export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) =>
 
 const md = (iso) => (iso ? iso.slice(5).replace('-', '/') : '-');
 
+const LOGO = 'https://lxpantosfashion.co.kr/mail-logo.png';
+const RED = '#a50034';
+const cell = 'padding:8px 10px;border-bottom:1px solid #e6e1d8';
+
+// Link that opens the staff page on this booking; with `to`, it also offers
+// to switch the booking onto that sailing.
+function deepLink(pageUrl, booking, c) {
+  const q = new URLSearchParams({ find: booking.bookingNo });
+  if (c) q.set('to', `${c.vessel}|${c.voyage}`);
+  return `${pageUrl}?${q}`;
+}
+
+const button = (href, label, small) => `<a href="${esc(href)}" style="display:inline-block;background:${RED};color:#ffffff;text-decoration:none;font-weight:600;border-radius:6px;${small ? 'padding:5px 12px;font-size:12px' : 'padding:11px 22px;font-size:14px'}">${label}</a>`;
+
 export function alertMail(booking, ev, routeLabel, pageUrl) {
-  const first = ev.candidates[0];
   const delayed = ev.delayDays > 0;
-  const subject = `[Vessel change review] ${booking.customer ? booking.customer + ' · ' : ''}${booking.bookingNo} · ${booking.vessel}${delayed ? ` ETA +${ev.delayDays}d` : ''} → ${first.vessel} arrives ${first.daysEarlier}d earlier`;
+  const subject = `[Vessel change] ${booking.customer ? booking.customer + ' · ' : ''}${booking.bookingNo}`;
   const rows = ev.candidates.map((c) => `
     <tr>
-      <td style="padding:6px 10px;border-bottom:1px solid #e6e1d8">${esc(c.carrier)}</td>
-      <td style="padding:6px 10px;border-bottom:1px solid #e6e1d8"><b>${esc(c.vessel)}</b> ${esc(c.voyage)}</td>
-      <td style="padding:6px 10px;border-bottom:1px solid #e6e1d8">${md(c.etd)}</td>
-      <td style="padding:6px 10px;border-bottom:1px solid #e6e1d8">${md(c.eta)}</td>
-      <td style="padding:6px 10px;border-bottom:1px solid #e6e1d8;color:#2f9e44"><b>${c.daysEarlier}d earlier</b></td>
-      <td style="padding:6px 10px;border-bottom:1px solid #e6e1d8;color:#726d64">${c.closedCarriers ? esc(c.closedCarriers) + ' closed' : ''}</td>
+      <td style="${cell}">${esc(c.carrier)}</td>
+      <td style="${cell}"><b>${esc(c.vessel)}</b> ${esc(c.voyage)}${c.closedCarriers ? `<br><span style="color:#726d64;font-size:11px">${esc(c.closedCarriers)} closed</span>` : ''}</td>
+      <td style="${cell}">${md(c.etd)}</td>
+      <td style="${cell}">${md(c.eta)}</td>
+      <td style="${cell};color:#2f9e44"><b>${c.daysEarlier}d earlier</b></td>
+      <td style="${cell}">${button(deepLink(pageUrl, booking, c), 'Switch', true)}</td>
     </tr>`).join('');
 
-  const html = `<div style="font-family:'Segoe UI',Pretendard,Arial,sans-serif;font-size:14px;color:#1c1a17">
-  <p>${delayed ? 'The vessel on your booking has been delayed, and ' : ''}<b>${delayed ? 'another' : 'Another'} sailing on the same route arrives earlier</b> than your booked vessel. Please review switching to a different vessel.</p>
-  <table style="border-collapse:collapse;margin:12px 0">
-    <tr><td style="padding:3px 12px 3px 0;color:#726d64">Customer</td><td><b>${esc(booking.customer || '-')}</b></td></tr>
-    <tr><td style="padding:3px 12px 3px 0;color:#726d64">Booking No.</td><td><b>${esc(booking.bookingNo)}</b>${booking.memo ? ' · ' + esc(booking.memo) : ''}</td></tr>
-    <tr><td style="padding:3px 12px 3px 0;color:#726d64">Route</td><td>${esc(routeLabel)}</td></tr>
-    <tr><td style="padding:3px 12px 3px 0;color:#726d64">Booked vessel</td><td>${esc(booking.carrier)} · <b>${esc(booking.vessel)}</b> ${esc(booking.voyage)}</td></tr>
-    <tr><td style="padding:3px 12px 3px 0;color:#726d64">ETA</td><td>${delayed ? `At booking ${md(booking.origEta)} → now <b style="color:#c0392b">${md(ev.eta)} (+${ev.delayDays} days)</b>` : `<b>${md(ev.eta)}</b>`}</td></tr>
+  const html = `<div style="font-family:'Segoe UI',Pretendard,Arial,sans-serif;font-size:14px;color:#1c1a17;max-width:680px">
+  <table role="presentation" width="100%" style="border-collapse:collapse;border-bottom:3px solid ${RED};margin-bottom:18px"><tr>
+    <td style="padding:6px 0 12px"><img src="${LOGO}" alt="LX Pantos" width="132" height="27" style="display:block;border:0"></td>
+    <td style="padding:6px 0 12px;text-align:right;color:#726d64;font-size:12px">Booking Vessel Alerts</td>
+  </tr></table>
+  <p style="margin:0 0 14px">${delayed ? 'The vessel on your booking has been delayed, and ' : ''}<b>${delayed ? 'another' : 'Another'} sailing on the same route arrives earlier</b> than your booked vessel. Please review switching to a different vessel.</p>
+  <table style="border-collapse:collapse;margin:0 0 18px">
+    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Customer</td><td><b>${esc(booking.customer || '-')}</b></td></tr>
+    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Booking No.</td><td><b>${esc(booking.bookingNo)}</b>${booking.memo ? ' · ' + esc(booking.memo) : ''}</td></tr>
+    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Route</td><td>${esc(routeLabel)}</td></tr>
+    <tr><td style="padding:3px 14px 3px 0;color:#726d64">Booked vessel</td><td>${esc(booking.carrier)} · <b>${esc(booking.vessel)}</b> ${esc(booking.voyage)}</td></tr>
+    <tr><td style="padding:3px 14px 3px 0;color:#726d64">ETA</td><td>${delayed ? `At booking ${md(booking.origEta)} → now <b style="color:#c0392b">${md(ev.eta)} (+${ev.delayDays} days)</b>` : `<b>${md(ev.eta)}</b>`}</td></tr>
   </table>
-  <p style="margin:16px 0 4px"><b>Sailings arriving earlier</b></p>
-  <table style="border-collapse:collapse;font-size:13px">
+  <p style="margin:0 0 6px"><b>Sailings arriving earlier</b></p>
+  <table style="border-collapse:collapse;font-size:13px;margin-bottom:22px">
     <tr style="background:#faf9f6;text-align:left">
-      <th style="padding:6px 10px">Carrier</th><th style="padding:6px 10px">Vessel / Voyage</th><th style="padding:6px 10px">ETD</th><th style="padding:6px 10px">ETA</th><th style="padding:6px 10px">Gain</th><th style="padding:6px 10px"></th>
+      <th style="padding:8px 10px">Carrier</th><th style="padding:8px 10px">Vessel / Voyage</th><th style="padding:8px 10px">ETD</th><th style="padding:8px 10px">ETA</th><th style="padding:8px 10px">Gain</th><th style="padding:8px 10px"></th>
     </tr>${rows}
   </table>
-  <p style="color:#726d64;font-size:12px;margin-top:16px">Carrier contracts, rates and space are not checked. Please confirm with the carrier before switching.<br>
-  Bookings: <a href="${esc(pageUrl)}">${esc(pageUrl)}</a></p>
+  ${button(deepLink(pageUrl, booking), 'Open booking')}
+  <p style="color:#726d64;font-size:12px;margin-top:22px">"Switch" opens the staff page and asks you to confirm the change there. Carrier contracts, rates and space are not checked. Please confirm with the carrier before switching.</p>
 </div>`;
   return { subject, html };
 }
