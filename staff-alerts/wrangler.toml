@@ -23,7 +23,7 @@ ALLOWED_DOMAIN = "lxpantos.com"
 DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/LXPANTOS_TEXTILE_GARMENT_SCHEDULE/main/build/data"
 PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
 # "log" = print only, "gmail" = send from SMTP_USER via Gmail.
-MAIL_MODE = "log"
+MAIL_MODE = "gmail"
 SMTP_USER = "kohhousemac@gmail.com"
 MAIL_FROM_NAME = "LX Pantos Vessel Alerts"
 # SMTP_PASS (Gmail app password) is a secret: set it in the Cloudflare dashboard.
