@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -17,39 +17,48 @@
   "vessel": "MSC RIFAYA",
   "voyage": "FV644N",
   "etd": "11-16 (Mon)",
-  "eta": "12-06 (Sun)",
-  "tt": 20,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "eta": "12-05 (Sat)",
+  "tt": 19,
+  "prevEtd": "11-16 (Mon)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 20,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "MSC",
   "vessel": "MSC DIANA",
   "voyage": "FV645N",
-  "etd": "11-17 (Tue)",
+  "etd": "11-18 (Wed)",
   "eta": "12-08 (Tue)",
-  "tt": 21,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "tt": 20,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 21,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "MSC",
   "vessel": "MSC ELOANE",
   "voyage": "FV646N",
-  "etd": "11-24 (Tue)",
-  "eta": "12-16 (Wed)",
+  "etd": "11-26 (Thu)",
+  "eta": "12-18 (Fri)",
   "tt": 22,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "12-16 (Wed)",
+  "prevTt": 22,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "MSC",
@@ -57,6 +66,19 @@
   "voyage": "FV647N",
   "etd": "11-30 (Mon)",
   "eta": "12-22 (Tue)",
+  "tt": 22,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC OSCAR",
+  "voyage": "FV648N",
+  "etd": "12-07 (Mon)",
+  "eta": "12-29 (Tue)",
   "tt": 22,
   "prevEtd": null,
   "prevEta": null,

@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "departed",
   "changedFields": []
  },
  {
@@ -22,7 +22,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "departed",
   "changedFields": []
  },
  {
@@ -35,7 +35,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -43,8 +43,24 @@
   "vessel": "EXPRESS ROME",
   "voyage": "GQ647N",
   "etd": "11-22 (Sun)",
-  "eta": "12-09 (Wed)",
-  "tt": 17,
+  "eta": "12-10 (Thu)",
+  "tt": 18,
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "12-09 (Wed)",
+  "prevTt": 17,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC CAROLE",
+  "voyage": "GQ648N",
+  "etd": "11-29 (Sun)",
+  "eta": "12-18 (Fri)",
+  "tt": 19,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,

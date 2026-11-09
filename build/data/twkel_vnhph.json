@@ -1,86 +1,18 @@
 [
  {
   "carrier": "CMA CGM",
-  "vessel": "SWAN RIVER BRIDGE",
-  "voyage": "0FXHXS1MA",
-  "etd": "10-29 (Thu)",
-  "eta": "11-01 (Sun)",
-  "tt": 4,
-  "prevEtd": "10-26 (Mon)",
-  "prevEta": "11-02 (Mon)",
-  "prevTt": 8,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "SMOOTH WIND",
-  "voyage": "0FXHVS1MA",
-  "etd": "10-29 (Thu)",
-  "eta": "11-01 (Sun)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S467",
-  "etd": "11-05 (Thu)",
-  "eta": "11-07 (Sat)",
-  "tt": 2,
-  "prevEtd": "11-04 (Wed)",
-  "prevEta": "11-07 (Sat)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S468",
-  "etd": "11-11 (Wed)",
-  "eta": "11-13 (Fri)",
-  "tt": 2,
-  "prevEtd": "11-11 (Wed)",
-  "prevEta": "11-13 (Fri)",
-  "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "CMA CGM",
   "vessel": "ONE PEARL RIVER",
   "voyage": "JVH000S19",
-  "etd": "11-11 (Wed)",
-  "eta": "11-14 (Sat)",
+  "etd": "11-10 (Tue)",
+  "eta": "11-13 (Fri)",
   "tt": 3,
   "prevEtd": "11-11 (Wed)",
   "prevEta": "11-14 (Sat)",
   "prevTt": 3,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S469",
-  "etd": "11-17 (Tue)",
-  "eta": "11-20 (Fri)",
-  "tt": 3,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 2,
   "status": "changed",
   "changedFields": [
-   "eta",
-   "tt"
+   "etd",
+   "eta"
   ]
  },
  {
@@ -110,43 +42,20 @@
   "changedFields": []
  },
  {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S470",
-  "etd": "11-24 (Tue)",
-  "eta": "11-26 (Thu)",
-  "tt": 2,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
   "carrier": "CMA CGM",
   "vessel": "ONE PEARL RIVER",
   "voyage": "JVH060S19",
-  "etd": "11-30 (Mon)",
-  "eta": "12-03 (Thu)",
+  "etd": "11-29 (Sun)",
+  "eta": "12-02 (Wed)",
   "tt": 3,
   "prevEtd": "11-30 (Mon)",
   "prevEta": "12-03 (Thu)",
   "prevTt": 3,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S471",
-  "etd": "12-01 (Tue)",
-  "eta": "12-03 (Thu)",
-  "tt": 2,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "CMA CGM",
@@ -159,19 +68,6 @@
   "prevEta": "12-10 (Thu)",
   "prevTt": 3,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S472",
-  "etd": "12-08 (Tue)",
-  "eta": "12-10 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
   "changedFields": []
  },
  {
@@ -188,43 +84,20 @@
   "changedFields": []
  },
  {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S473",
-  "etd": "12-15 (Tue)",
-  "eta": "12-17 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
   "carrier": "CMA CGM",
   "vessel": "ONE PEARL RIVER",
   "voyage": "JVH0C0S19",
-  "etd": "12-18 (Fri)",
-  "eta": "12-22 (Tue)",
+  "etd": "12-17 (Thu)",
+  "eta": "12-21 (Mon)",
   "tt": 4,
   "prevEtd": "12-18 (Fri)",
   "prevEta": "12-22 (Tue)",
   "prevTt": 4,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S474",
-  "etd": "12-22 (Tue)",
-  "eta": "12-24 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "CMA CGM",
@@ -237,19 +110,6 @@
   "prevEta": "12-28 (Mon)",
   "prevTt": 4,
   "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 105",
-  "voyage": "S475",
-  "etd": "12-29 (Tue)",
-  "eta": "12-31 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
   "changedFields": []
  },
  {
@@ -267,6 +127,32 @@
  },
  {
   "carrier": "CMA CGM",
+  "vessel": "SWAN RIVER BRIDGE",
+  "voyage": "0FXHXS1MA",
+  "etd": "10-29 (Thu)",
+  "eta": "11-01 (Sun)",
+  "tt": 4,
+  "prevEtd": "10-26 (Mon)",
+  "prevEta": "11-02 (Mon)",
+  "prevTt": 8,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "SMOOTH WIND",
+  "voyage": "0FXHVS1MA",
+  "etd": "10-29 (Thu)",
+  "eta": "11-01 (Sun)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
   "vessel": "ONE PEARL RIVER",
   "voyage": "JVH0I0S19",
   "etd": "01-07 (Thu)",
@@ -275,6 +161,123 @@
   "prevEtd": "01-07 (Thu)",
   "prevEta": "01-11 (Mon)",
   "prevTt": 4,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S467",
+  "etd": "11-05 (Thu)",
+  "eta": "11-07 (Sat)",
+  "tt": 2,
+  "prevEtd": "11-04 (Wed)",
+  "prevEta": "11-07 (Sat)",
+  "prevTt": 3,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S468",
+  "etd": "11-11 (Wed)",
+  "eta": "11-13 (Fri)",
+  "tt": 2,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-13 (Fri)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S469",
+  "etd": "11-17 (Tue)",
+  "eta": "11-20 (Fri)",
+  "tt": 3,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S470",
+  "etd": "11-24 (Tue)",
+  "eta": "11-26 (Thu)",
+  "tt": 2,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-26 (Thu)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S471",
+  "etd": "12-01 (Tue)",
+  "eta": "12-03 (Thu)",
+  "tt": 2,
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 2,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S472",
+  "etd": "12-08 (Tue)",
+  "eta": "12-10 (Thu)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S473",
+  "etd": "12-15 (Tue)",
+  "eta": "12-17 (Thu)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S474",
+  "etd": "12-22 (Tue)",
+  "eta": "12-24 (Thu)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 105",
+  "voyage": "S475",
+  "etd": "12-29 (Tue)",
+  "eta": "12-31 (Thu)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  }

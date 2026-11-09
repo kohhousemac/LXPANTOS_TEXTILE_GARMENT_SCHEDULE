@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -17,34 +17,57 @@
   "vessel": "MSC TOGO",
   "voyage": "GU645W",
   "etd": "11-19 (Thu)",
-  "eta": "12-19 (Sat)",
-  "tt": 30,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "eta": "12-20 (Sun)",
+  "tt": 31,
+  "prevEtd": "11-19 (Thu)",
+  "prevEta": "12-19 (Sat)",
+  "prevTt": 30,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "MSC",
   "vessel": "MSC UGANDA",
   "voyage": "GU646W",
-  "etd": "11-26 (Thu)",
-  "eta": "12-27 (Sun)",
-  "tt": 31,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "etd": "11-27 (Fri)",
+  "eta": "12-29 (Tue)",
+  "tt": 32,
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 31,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "MSC",
   "vessel": "MSC VANCOUVER",
   "voyage": "GU647W",
-  "etd": "11-28 (Sat)",
+  "etd": "11-29 (Sun)",
   "eta": "12-31 (Thu)",
-  "tt": 33,
+  "tt": 32,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-31 (Thu)",
+  "prevTt": 33,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC MAEVA",
+  "voyage": "GU648W",
+  "etd": "12-06 (Sun)",
+  "eta": "01-07 (Thu)",
+  "tt": 32,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,

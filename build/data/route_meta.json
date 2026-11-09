@@ -17,11 +17,11 @@
   "pol": "Ho Chi Minh",
   "pod": "Semarang",
   "group": "vn_id",
-  "updateDate": "11/06",
-  "newCount": 0,
-  "changedCount": 0,
+  "updateDate": "11/09",
+  "newCount": 1,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 4
+  "vesselCount": 5
  },
  {
   "routeId": "vnhph_idjkt",
@@ -65,10 +65,10 @@
   "pol": "Shanghai",
   "pod": "Ho Chi Minh",
   "group": "cn",
-  "updateDate": "11/06",
-  "newCount": 12,
-  "changedCount": 1,
-  "excludedCount": 0,
+  "updateDate": "11/09",
+  "newCount": 2,
+  "changedCount": 12,
+  "excludedCount": 2,
   "vesselCount": 50
  },
  {
@@ -101,9 +101,9 @@
   "pol": "Keelung",
   "pod": "Haiphong",
   "group": "tw",
-  "updateDate": "11/06",
+  "updateDate": "11/09",
   "newCount": 0,
-  "changedCount": 0,
+  "changedCount": 3,
   "excludedCount": 0,
   "vesselCount": 21
  },
@@ -233,7 +233,7 @@
   "pol": "Busan",
   "pod": "Istanbul",
   "group": "med",
-  "updateDate": "11/08",
+  "updateDate": "11/09",
   "newCount": 0,
   "changedCount": 0,
   "excludedCount": 0,
@@ -317,7 +317,7 @@
   "pol": "Busan",
   "pod": "Damietta",
   "group": "med",
-  "updateDate": "11/06",
+  "updateDate": "11/09",
   "newCount": 0,
   "changedCount": 0,
   "excludedCount": 2,
@@ -341,9 +341,9 @@
   "pol": "Busan",
   "pod": "Alexandria",
   "group": "med",
-  "updateDate": "11/06",
-  "newCount": 7,
-  "changedCount": 1,
+  "updateDate": "11/09",
+  "newCount": 0,
+  "changedCount": 4,
   "excludedCount": 0,
   "vesselCount": 10
  },
@@ -389,11 +389,11 @@
   "pol": "Haiphong",
   "pod": "Los Angeles",
   "group": "us",
-  "updateDate": "11/05",
-  "newCount": 4,
-  "changedCount": 0,
+  "updateDate": "11/09",
+  "newCount": 1,
+  "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 4
+  "vesselCount": 3
  },
  {
   "routeId": "vnsgn_uslgb",
@@ -401,11 +401,11 @@
   "pol": "Ho Chi Minh",
   "pod": "Long Beach",
   "group": "us",
-  "updateDate": "11/05",
-  "newCount": 5,
-  "changedCount": 0,
+  "updateDate": "11/09",
+  "newCount": 1,
+  "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 5
+  "vesselCount": 6
  },
  {
   "routeId": "vnhph_usnyc",
@@ -413,11 +413,11 @@
   "pol": "Haiphong",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/05",
-  "newCount": 4,
-  "changedCount": 0,
+  "updateDate": "11/09",
+  "newCount": 1,
+  "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 4
+  "vesselCount": 5
  },
  {
   "routeId": "vnsgn_usnyc",
@@ -425,9 +425,9 @@
   "pol": "Ho Chi Minh",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/05",
-  "newCount": 4,
-  "changedCount": 0,
+  "updateDate": "11/09",
+  "newCount": 0,
+  "changedCount": 2,
   "excludedCount": 0,
   "vesselCount": 4
  },

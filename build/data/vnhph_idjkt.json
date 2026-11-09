@@ -22,7 +22,7 @@
   "prevEtd": "10-28 (Wed)",
   "prevEta": "11-06 (Fri)",
   "prevTt": 9,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
  },
  {
@@ -32,9 +32,9 @@
   "etd": "11-05 (Thu)",
   "eta": "11-13 (Fri)",
   "tt": 8,
-  "prevEtd": "11-04 (Wed)",
+  "prevEtd": "11-05 (Thu)",
   "prevEta": "11-13 (Fri)",
-  "prevTt": 9,
+  "prevTt": 8,
   "status": "unchanged",
   "changedFields": []
  },
@@ -84,10 +84,23 @@
   "etd": "12-02 (Wed)",
   "eta": "12-11 (Fri)",
   "tt": 9,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 9,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC LIANYUNGANG",
+  "voyage": "2634S",
+  "etd": "12-09 (Wed)",
+  "eta": "12-18 (Fri)",
+  "tt": 9,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "new",
   "changedFields": []
  }
 ]

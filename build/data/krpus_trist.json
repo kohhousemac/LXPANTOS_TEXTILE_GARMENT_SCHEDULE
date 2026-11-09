@@ -1,19 +1,6 @@
 [
  {
   "carrier": "YANG MING",
-  "vessel": "MSC REEF",
-  "voyage": "MD32643W",
-  "etd": "11-08 (Sun)",
-  "eta": "12-11 (Fri)",
-  "tt": 33,
-  "prevEtd": "11-08 (Sun)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 33,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "YANG MING",
   "vessel": "MSC ISTANBUL",
   "voyage": "MD32644W",
   "etd": "11-18 (Wed)",
@@ -35,6 +22,19 @@
   "prevEtd": "11-20 (Fri)",
   "prevEta": "12-25 (Fri)",
   "prevTt": 35,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "MSC REEF",
+  "voyage": "MD32643W",
+  "etd": "11-08 (Sun)",
+  "eta": "12-11 (Fri)",
+  "tt": 33,
+  "prevEtd": "11-08 (Sun)",
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 33,
   "status": "unchanged",
   "changedFields": []
  },

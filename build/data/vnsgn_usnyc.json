@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -17,26 +17,33 @@
   "vessel": "MSC TOGO",
   "voyage": "GU645W",
   "etd": "11-22 (Sun)",
-  "eta": "12-19 (Sat)",
-  "tt": 27,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "eta": "12-20 (Sun)",
+  "tt": 28,
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "12-19 (Sat)",
+  "prevTt": 27,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "MSC",
   "vessel": "MSC UGANDA",
   "voyage": "GU646W",
-  "etd": "11-29 (Sun)",
-  "eta": "12-27 (Sun)",
-  "tt": 28,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": []
+  "etd": "11-30 (Mon)",
+  "eta": "12-29 (Tue)",
+  "tt": 29,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 28,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "MSC",
@@ -48,7 +55,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  }
 ]
