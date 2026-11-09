@@ -457,11 +457,11 @@
  },
  {
   "routeId": "cnngb_vnsgn",
-  "newCount": 8,
+  "newCount": 5,
   "changedCount": 0,
   "excludedCount": 0,
   "updateDate": "11/09",
-  "vesselCount": 10,
+  "vesselCount": 5,
   "label": "Ningbo → Ho Chi Minh",
   "pol": "Ningbo",
   "pod": "Ho Chi Minh",

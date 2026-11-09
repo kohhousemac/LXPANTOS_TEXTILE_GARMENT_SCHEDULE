@@ -1,28 +1,6 @@
 [
  {
   "carrier": "SITC",
-  "vessel": "SITC KEELUNG",
-  "voyage": "2624S",
-  "etd": "11-02 (Mon)",
-  "eta": "11-13 (Fri)",
-  "tt": 11,
-  "status": "departed",
-  "changedFields": [],
-  "service": "VTX6"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2626S",
-  "etd": "11-07 (Sat)",
-  "eta": "11-18 (Wed)",
-  "tt": 11,
-  "status": "departed",
-  "changedFields": [],
-  "service": "VTX6"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC MINGDE",
   "voyage": "2622S",
   "etd": "11-10 (Tue)",
@@ -45,28 +23,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC XIN",
-  "voyage": "2626S",
-  "etd": "11-23 (Mon)",
-  "eta": "12-04 (Fri)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX6"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC KEELUNG",
-  "voyage": "2626S",
-  "etd": "11-29 (Sun)",
-  "eta": "12-10 (Thu)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX6"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC RUIDE",
   "voyage": "2624S",
   "etd": "11-30 (Mon)",
@@ -75,17 +31,6 @@
   "status": "new",
   "changedFields": [],
   "service": "VTX2"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC DALIAN",
-  "voyage": "2636S",
-  "etd": "12-03 (Thu)",
-  "eta": "12-14 (Mon)",
-  "tt": 11,
-  "status": "new",
-  "changedFields": [],
-  "service": "VTX8"
  },
  {
   "carrier": "SITC",
