@@ -6,7 +6,7 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-07T11:10:00Z"
+  "updatedAt": "2026-11-08T11:10:00Z"
  },
  {
   "country": "니카라과",
@@ -14,8 +14,8 @@
   "hasIssue": true,
   "headline": "",
   "url": "",
-  "holiday": "카를로스 폰세카 아마도르의 날 (11/08, 대체휴일 11/09)",
-  "updatedAt": "2026-11-07T11:10:00Z"
+  "holiday": "카를로스 폰세카 아만도르 서거일 (11/08, 11/09 대체휴무)",
+  "updatedAt": "2026-11-08T11:10:00Z"
  },
  {
   "country": "파나마",
@@ -23,8 +23,8 @@
   "hasIssue": true,
   "headline": "",
   "url": "",
-  "holiday": "로스산토스 독립 봉기의 날 (11/10)",
-  "updatedAt": "2026-11-07T11:10:00Z"
+  "holiday": "로스 산토스 봉기의 날 (11/10)",
+  "updatedAt": "2026-11-08T11:10:00Z"
  },
  {
   "country": "엘살바도르",
@@ -33,6 +33,6 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-07T11:10:00Z"
+  "updatedAt": "2026-11-08T11:10:00Z"
  }
 ]

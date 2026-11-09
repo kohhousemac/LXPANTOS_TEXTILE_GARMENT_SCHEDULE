@@ -1,19 +1,6 @@
 [
  {
   "carrier": "YANG MING",
-  "vessel": "MSC THAIS",
-  "voyage": "MD32642W",
-  "etd": "11-06 (Fri)",
-  "eta": "12-06 (Sun)",
-  "tt": 30,
-  "prevEtd": "11-06 (Fri)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 30,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "YANG MING",
   "vessel": "MSC REEF",
   "voyage": "MD32643W",
   "etd": "11-08 (Sun)",

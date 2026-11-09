@@ -233,11 +233,11 @@
   "pol": "Busan",
   "pod": "Istanbul",
   "group": "med",
-  "updateDate": "11/06",
+  "updateDate": "11/08",
   "newCount": 0,
   "changedCount": 0,
   "excludedCount": 0,
-  "vesselCount": 9
+  "vesselCount": 8
  },
  {
   "routeId": "vnsgn_cnsha",
