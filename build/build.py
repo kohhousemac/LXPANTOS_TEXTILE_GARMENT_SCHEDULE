@@ -19,7 +19,7 @@ def rd(name):
 
 # ---------------------------------------------------------------- lanes
 PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang',
-        'pus': 'Busan', 'inc': 'Incheon', 'sha': 'Shanghai', 'skk': 'Shekou',
+        'pus': 'Busan', 'inc': 'Incheon', 'sha': 'Shanghai', 'skk': 'Shekou', 'ngb': 'Ningbo',
         'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
         'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
@@ -28,6 +28,7 @@ ASIA = [  # (pol code, [(pod code, route id), ...]) — same order as the dashbo
     ('hph', [('jkt', 'vnhph_idjkt'), ('pus', 'vnhph_krpus'), ('inc', 'vnhph_krinc'), ('sha', 'vnhph_cnsha'), ('lax', 'vnhph_uslax'), ('nyc', 'vnhph_usnyc')]),
     ('jkt', [('hph', 'idjkt_vnhph'), ('sha', 'idjkt_cnsha'), ('inc', 'idjkt_krinc'), ('pus', 'idjkt_krpus')]),
     ('sha', [('hph', 'cnsha_vnhph'), ('hcm', 'cnsha_vnsgn'), ('pus', 'cnsha_krpus'), ('inc', 'cnsha_krinc')]),
+    ('ngb', [('hph', 'cnngb_vnhph'), ('hcm', 'cnngb_vnsgn')]),
     ('skk', [('hcm', 'cnshk_vnsgn'), ('inc', 'cnshk_krinc'), ('pus', 'cnshk_krpus')]),
     ('kel', [('hcm', 'twkel_vnsgn'), ('hph', 'twkel_vnhph')]),
     ('hkg', [('hph', 'hkhkg_vnhph'), ('hcm', 'hkhkg_vnsgn'), ('jkt', 'hkhkg_idjkt')]),
@@ -49,6 +50,8 @@ LANE_NOTES = {
     'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항 · 선적항 Vung Tau(Cai Mep, SSIT 터미널) · 도착 Port Newark',
     'vnhph_uslax': 'MSC PEARL 서비스 직항 · 도착 West Basin Container Terminal',
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항 · 도착 Port Newark',
+    'cnngb_vnhph': 'SITC 직항 · SITC 확정 일정(CTD/CTA) 기준',
+    'cnngb_vnsgn': 'SITC 직항 · SITC 확정 일정(CTD/CTA) 기준',
     'krinc_vnhph': 'PANOCEAN · 흥아 · 동진 · SM상선 · SITC 직항 · 출항 토~화만 · 상해·닝보 기항 항차 제외 · ⛔ = 선사 스케줄에서 부킹 불가(빨간색)',
 }
 
@@ -99,10 +102,10 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
 '''
 
 LOCODE = {'egdam': 'dam', 'egsok': 'sok', 'egaly': 'aly', 'egpsd': 'psd', 'vnsgn': 'hcm', 'vnhph': 'hph', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
-          'cnsha': 'sha', 'cnshk': 'skk', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist',
+          'cnsha': 'sha', 'cnshk': 'skk', 'cnngb': 'ngb', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist',
           'uslax': 'lax', 'uslgb': 'lgb', 'usnyc': 'nyc'}
 PORT_LOCODE_NAME = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang', 'pus': 'Busan', 'inc': 'Incheon',
-                    'sha': 'Shanghai', 'skk': 'Shekou', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
+                    'sha': 'Shanghai', 'skk': 'Shekou', 'ngb': 'Ningbo', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
                     'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
 def merge_new_lanes():
@@ -127,7 +130,7 @@ def merge_new_lanes():
             ASIA.append((pol, [(pod, rid)]))
         print('auto-added lane', rid)
 
-COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3, 'lax': 4, 'lgb': 4, 'nyc': 5}
+COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'ngb': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3, 'lax': 4, 'lgb': 4, 'nyc': 5}
 KR_ORDER = {'pus': 0, 'inc': 1}
 
 BUSAN_NOTE = '''

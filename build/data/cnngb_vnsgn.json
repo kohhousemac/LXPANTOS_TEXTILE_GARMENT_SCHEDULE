@@ -1,0 +1,112 @@
+[
+ {
+  "carrier": "SITC",
+  "vessel": "SITC KEELUNG",
+  "voyage": "2624S",
+  "etd": "11-02 (Mon)",
+  "eta": "11-13 (Fri)",
+  "tt": 11,
+  "status": "departed",
+  "changedFields": [],
+  "service": "VTX6"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC KANTO",
+  "voyage": "2626S",
+  "etd": "11-07 (Sat)",
+  "eta": "11-18 (Wed)",
+  "tt": 11,
+  "status": "departed",
+  "changedFields": [],
+  "service": "VTX6"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC MINGDE",
+  "voyage": "2622S",
+  "etd": "11-10 (Tue)",
+  "eta": "11-15 (Sun)",
+  "tt": 5,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX2"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC RUNDE",
+  "voyage": "2624S",
+  "etd": "11-17 (Tue)",
+  "eta": "11-27 (Fri)",
+  "tt": 10,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX6"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC XIN",
+  "voyage": "2626S",
+  "etd": "11-23 (Mon)",
+  "eta": "12-04 (Fri)",
+  "tt": 11,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX6"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC KEELUNG",
+  "voyage": "2626S",
+  "etd": "11-29 (Sun)",
+  "eta": "12-10 (Thu)",
+  "tt": 11,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX6"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC RUIDE",
+  "voyage": "2624S",
+  "etd": "11-30 (Mon)",
+  "eta": "12-05 (Sat)",
+  "tt": 5,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX2"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC DALIAN",
+  "voyage": "2636S",
+  "etd": "12-03 (Thu)",
+  "eta": "12-14 (Mon)",
+  "tt": 11,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX8"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC KANTO",
+  "voyage": "2628S",
+  "etd": "12-06 (Sun)",
+  "eta": "12-15 (Tue)",
+  "tt": 9,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX6"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC MINGDE",
+  "voyage": "2624S",
+  "etd": "12-06 (Sun)",
+  "eta": "12-11 (Fri)",
+  "tt": 5,
+  "status": "new",
+  "changedFields": [],
+  "service": "VTX2"
+ }
+]
