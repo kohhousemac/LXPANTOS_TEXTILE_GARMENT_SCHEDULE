@@ -132,7 +132,7 @@ img.flag{width:18px;height:13.5px;vertical-align:-2px;border-radius:2px;box-shad
       </details>
     </div>
     <div id="pwRow" hidden style="margin-top:18px">
-      <p class="label">Staff password</p>
+      <p class="label">Password</p>
       <input id="pw" type="password" autocomplete="current-password" placeholder="Password">
     </div>
     <p class="msg err small" id="pwMsg" style="margin:8px 0 0"></p>
@@ -265,7 +265,7 @@ async function api(path, opts = {}) {
 const pills = (items, active, cls = '') => items.map(([val, text]) =>
   `<button type="button" class="pill ${cls}" data-v="${esc(val)}" aria-pressed="${val === active}">${text}</button>`).join('');
 
-let countries = {}, country = '', bookers = {}, booker = '', choices = {}, signedIn = false, appLoaded = false;
+let countries = {}, country = '', bookers = {}, booker = '', choices = {}, signedIn = '', appLoaded = false;
 const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } },
                 set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
 
@@ -294,7 +294,7 @@ function drawBookers() {
   $('bookerInput').value = (bookers[country] || []).join(', ');
   $('bookerHint').hidden = all.length > 0;
   $('bookerEdit').hidden = !signedIn;
-  $('pwRow').hidden = signedIn;
+  $('pwRow').hidden = !!booker && signedIn === booker;
   if (!all.length) $('bookerList').innerHTML = '';
   $('enter').disabled = !booker;
 }
@@ -319,11 +319,11 @@ $('bookerSave').onclick = async () => {
 
 $('enter').onclick = async () => {
   $('pwMsg').textContent = '';
-  if (!signedIn) {
+  if (signedIn !== booker) {
     $('enter').disabled = true;
     try {
-      await api('/api/login', { method: 'POST', body: JSON.stringify({ password: $('pw').value }) });
-      signedIn = true; $('pw').value = '';
+      await api('/api/login', { method: 'POST', body: JSON.stringify({ email: booker, password: $('pw').value }) });
+      signedIn = booker; $('pw').value = ''; appLoaded = false;
     } catch (err) { $('pwMsg').textContent = err.message; $('enter').disabled = false; return; }
     $('enter').disabled = false;
   }
@@ -341,7 +341,7 @@ $('enter').onclick = async () => {
 $('changeCountry').onclick = () => { $('app').hidden = true; $('login').hidden = false; drawCountries(); };
 
 function showPassword() {
-  signedIn = false;
+  signedIn = '';
   $('app').hidden = true; $('login').hidden = false;
   drawCountries();
 }
@@ -356,7 +356,7 @@ $('signOut').onclick = async (e) => {
 async function boot() {
   const li = await (await fetch('/api/login-info')).json();
   countries = li.countries; choices = li.choices;
-  signedIn = (await fetch('/api/me')).ok;
+  signedIn = await fetch('/api/me').then((r) => (r.ok ? r.json() : {})).then((d) => d.email || '', () => '');
   country = countries[store.get('lxCountry')] ? store.get('lxCountry') : '';
   booker = store.get('lxBooker');
   drawCountries();

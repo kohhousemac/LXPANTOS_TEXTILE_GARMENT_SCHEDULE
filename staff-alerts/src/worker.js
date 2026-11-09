@@ -1,5 +1,5 @@
 // Staff-only booking page + scheduled "faster vessel" check.
-// - /api/* needs the shared staff password (signed cookie, 1 year).
+// - /api/* needs a staff password (own or shared; signed cookie, 1 year).
 // - Bookings live in KV (never in the public GitHub repo).
 // - The cron trigger compares each booking with the homepage's schedule data.
 
@@ -15,9 +15,11 @@ const ROUTE_RE = /^[a-z]{5}_[a-z]{5}$/;
 export const COUNTRIES = { vn: 'Vietnam', id: 'Indonesia', cn: 'China', hk: 'Hong Kong', tw: 'Taiwan', kr: 'Korea' };
 export const CUSTOMERS = ['SAE-A', 'HANSOLL', 'YAKJIN', 'SHINWON', 'HANSAE', 'SSTS', 'NOBRAND'];
 
-// ---------- auth: one shared staff password ----------
-// Signing in sets an HMAC-signed cookie valid for a year. The password is
-// part of what is signed, so changing STAFF_PASSWORD logs everyone out.
+// ---------- auth: password per e-mail ----------
+// Staff listed in the STAFF_PASSWORDS secret ({"e-mail": "password"}) use their
+// own password; everyone else uses the shared STAFF_PASSWORD. Signing in sets
+// an HMAC-signed cookie valid for a year, tied to that e-mail. The password is
+// part of what is signed, so changing someone's password logs them out.
 const COOKIE = 'lxstaff';
 const YEAR = 365 * 86400;
 const enc = new TextEncoder();
@@ -35,13 +37,22 @@ function safeEqual(a, b) {
   return d === 0;
 }
 
-const sessionSig = (env, exp) => hmac(env, `v1.${exp}.${env.STAFF_PASSWORD}`);
+function passwordFor(env, email) {
+  let own = {};
+  try { own = JSON.parse(env.STAFF_PASSWORDS || '{}'); } catch {}
+  return own[email] || env.STAFF_PASSWORD || '';
+}
 
+const sessionSig = (env, exp, email) => hmac(env, `v2.${exp}.${email}.${passwordFor(env, email)}`);
+
+// Returns the signed-in e-mail, or null.
 async function signedIn(request, env) {
-  if (!env.STAFF_PASSWORD || !env.SESSION_SECRET) return false;
-  const m = new RegExp(`(?:^|;\\s*)${COOKIE}=(\\d+)\\.([\\w-]+)`).exec(request.headers.get('cookie') || '');
-  if (!m || Number(m[1]) * 1000 < Date.now()) return false;
-  return safeEqual(m[2], await sessionSig(env, m[1]));
+  if (!env.SESSION_SECRET) return null;
+  const m = new RegExp(`(?:^|;\\s*)${COOKIE}=(\\d+)\\.([\\w-]+)\\.([^;\\s]+)`).exec(request.headers.get('cookie') || '');
+  if (!m || Number(m[1]) * 1000 < Date.now()) return null;
+  const email = decodeURIComponent(m[3]);
+  if (!passwordFor(env, email)) return null;
+  return safeEqual(m[2], await sessionSig(env, m[1], email)) ? email : null;
 }
 
 async function login(request, env) {
@@ -50,14 +61,17 @@ async function login(request, env) {
   const fails = Number(await env.BOOKINGS.get(rlKey)) || 0;
   if (fails >= 5) return json({ error: 'Too many attempts. Please try again in an hour.' }, 429);
   const body = await request.json().catch(() => ({}));
-  if (!env.STAFF_PASSWORD || !safeEqual(String(body.password || ''), env.STAFF_PASSWORD)) {
+  const email = String(body.email || '').trim().toLowerCase();
+  if (!/^[^@\s]+@[^@\s]+$/.test(email) || !inDomain(email, env)) return json({ error: 'Pick your e-mail first.' }, 400);
+  const pw = passwordFor(env, email);
+  if (!pw || !safeEqual(String(body.password || ''), pw)) {
     await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
     return json({ error: 'Wrong password.' }, 401);
   }
   const exp = Math.floor(Date.now() / 1000) + YEAR;
-  return new Response(JSON.stringify({ ok: true }), { headers: {
+  return new Response(JSON.stringify({ ok: true, email }), { headers: {
     'content-type': 'application/json; charset=utf-8',
-    'set-cookie': `${COOKIE}=${exp}.${await sessionSig(env, exp)}; Max-Age=${YEAR}; Path=/; HttpOnly; Secure; SameSite=Lax`,
+    'set-cookie': `${COOKIE}=${exp}.${await sessionSig(env, exp, email)}.${encodeURIComponent(email)}; Max-Age=${YEAR}; Path=/; HttpOnly; Secure; SameSite=Lax`,
   } });
 }
 
@@ -225,13 +239,11 @@ async function handle(request, env, ctx) {
     bookers.kr = [...new Set([...bookers.kr, ...Object.values(teams).flat()])];
     return json({ countries: COUNTRIES, choices: bookers });
   }
-  if (!(await signedIn(request, env))) return json({ error: 'login' }, 401);
+  // Who is acting: the e-mail the session cookie was signed for.
+  const user = await signedIn(request, env);
+  if (!user) return json({ error: 'login' }, 401);
 
-  // Who is acting: the booker e-mail picked on the opening screen.
-  const actor = String(request.headers.get('x-booker') || '').toLowerCase();
-  const user = /^[^@\s]+@[^@\s]+$/.test(actor) && inDomain(actor, env) ? actor : null;
-
-  if (url.pathname === '/api/me') return json({ domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
+  if (url.pathname === '/api/me') return json({ email: user, domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
 
   if (url.pathname === '/api/teams' && request.method === 'GET') return json(await getTeams(env));
   if (url.pathname === '/api/bookers' && request.method === 'GET') return json(await getBookers(env));
