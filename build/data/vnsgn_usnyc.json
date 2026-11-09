@@ -10,7 +10,38 @@
   "prevEta": null,
   "prevTt": null,
   "status": "same",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Vung Tau → New York (직항)"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM INTEGRITY",
+  "voyage": "CBX0I0E19",
+  "etd": "11-15 (Sun)",
+  "eta": "12-26 (Sat)",
+  "tt": 41,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Vung Tau → New York (직항)",
+  "service": "CBX"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM A. LINCOLN",
+  "voyage": "CBX0K0E19",
+  "etd": "11-17 (Tue)",
+  "eta": "01-01 (Fri)",
+  "tt": 45,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Vung Tau → New York (직항)",
+  "service": "CBX"
  },
  {
   "carrier": "MSC",
@@ -26,7 +57,23 @@
   "changedFields": [
    "eta",
    "tt"
-  ]
+  ],
+  "rotation": "Vung Tau → New York (직항)"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM ALASKA",
+  "voyage": "CBX0M0E19",
+  "etd": "11-24 (Tue)",
+  "eta": "01-08 (Fri)",
+  "tt": 45,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Vung Tau → New York (직항)",
+  "service": "CBX"
  },
  {
   "carrier": "MSC",
@@ -43,7 +90,8 @@
    "etd",
    "eta",
    "tt"
-  ]
+  ],
+  "rotation": "Vung Tau → New York (직항)"
  },
  {
   "carrier": "MSC",
@@ -56,6 +104,22 @@
   "prevEta": null,
   "prevTt": null,
   "status": "same",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Vung Tau → New York (직항)"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "APL ESPLANADE",
+  "voyage": "CBX0O0E19",
+  "etd": "12-02 (Wed)",
+  "eta": "01-15 (Fri)",
+  "tt": 44,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Vung Tau → New York (직항)",
+  "service": "CBX"
  }
 ]

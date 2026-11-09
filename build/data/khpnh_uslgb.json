@@ -1,0 +1,62 @@
+[
+ {
+  "carrier": "MSC",
+  "vessel": "MSC RIFAYA",
+  "voyage": "FV644N",
+  "etd": "11-10 (Tue)",
+  "eta": "12-05 (Sat)",
+  "tt": 25,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "service": "Barge Connection"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC ELOANE",
+  "voyage": "FV646N",
+  "etd": "11-17 (Tue)",
+  "eta": "12-18 (Fri)",
+  "tt": 31,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "service": "Barge Connection"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC ERICA",
+  "voyage": "FV647N",
+  "etd": "11-24 (Tue)",
+  "eta": "12-22 (Tue)",
+  "tt": 28,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "service": "Barge Connection"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC OSCAR",
+  "voyage": "FV648N",
+  "etd": "12-01 (Tue)",
+  "eta": "12-29 (Tue)",
+  "tt": 28,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "service": "Barge Connection"
+ }
+]

@@ -24,8 +24,8 @@ PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semar
         'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
 ASIA = [  # (pol code, [(pod code, route id), ...]) — same order as the dashboard
-    ('hcm', [('jkt', 'vnsgn_idjkt'), ('srg', 'vnsgn_idsrg'), ('pus', 'vnsgn_krpus'), ('inc', 'vnsgn_krinc'), ('sha', 'vnsgn_cnsha'), ('lgb', 'vnsgn_uslgb'), ('nyc', 'vnsgn_usnyc')]),
-    ('hph', [('jkt', 'vnhph_idjkt'), ('pus', 'vnhph_krpus'), ('inc', 'vnhph_krinc'), ('sha', 'vnhph_cnsha'), ('lax', 'vnhph_uslax'), ('nyc', 'vnhph_usnyc')]),
+    ('hcm', [('jkt', 'vnsgn_idjkt'), ('srg', 'vnsgn_idsrg'), ('pus', 'vnsgn_krpus'), ('inc', 'vnsgn_krinc'), ('sha', 'vnsgn_cnsha')]),
+    ('hph', [('jkt', 'vnhph_idjkt'), ('pus', 'vnhph_krpus'), ('inc', 'vnhph_krinc'), ('sha', 'vnhph_cnsha')]),
     ('jkt', [('hph', 'idjkt_vnhph'), ('sha', 'idjkt_cnsha'), ('inc', 'idjkt_krinc'), ('pus', 'idjkt_krpus')]),
     ('sha', [('hph', 'cnsha_vnhph'), ('hcm', 'cnsha_vnsgn'), ('pus', 'cnsha_krpus'), ('inc', 'cnsha_krinc')]),
     ('ngb', [('hph', 'cnngb_vnhph'), ('hcm', 'cnngb_vnsgn')]),
@@ -46,16 +46,28 @@ def _mkt_ids():
 MKT_IDS = _mkt_ids()
 
 LANE_NOTES = {
-    'vnsgn_uslgb': 'MSC SENTOSA 서비스 직항 · 선적항 Vung Tau(Cai Mep, SSIT 터미널) · MSC에 호치민→LA 노선이 없어 인접 Long Beach(Pier T)로 대체',
-    'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항 · 선적항 Vung Tau(Cai Mep, SSIT 터미널) · 도착 Port Newark',
-    'vnhph_uslax': 'MSC PEARL 서비스 직항 · 도착 West Basin Container Terminal',
-    'vnhph_usnyc': 'MSC AMERICA SERVICE 직항 · 도착 Port Newark',
+    'vnhph_uslax': 'MSC PEARL 직항 · 도착 West Basin Container Terminal · WHL 스케줄은 Wan Hai 사이트 보안확인(CAPTCHA)으로 미수집',
+    'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM: TWS 직항(Maher) / CT8CNC→CBX 상해 환적(Bayonne) · WHL 미수집(CAPTCHA)',
+    'vnsgn_uslgb': 'MSC SENTOSA 직항 · 선적 Vung Tau(Cai Mep) · MSC에 호치민/붕따우→LA 노선이 없어 Long Beach(Pier T) · WHL 미수집(CAPTCHA)',
+    'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM CBX 직항(호치민 Binh Duong 바지 → Vung Tau Gemalink 선적, Bayonne) · WHL 미수집(CAPTCHA)',
+    'idjkt_uslgb': 'MSC만 · 환적: KOALA(상해 T/S) / PERTIWI(싱가포르 T/S) · 선명은 본선(모선) 기준, 피더는 Calling Order에 표시 · MSC에 자카르타→LA 노선 없음',
+    'idjkt_usnyc': 'MSC만 · 싱가포르 환적(PERTIWI·SEAHORSE·SEAGULL → AMERICA SERVICE) · 선명은 본선(모선) 기준',
+    'khpnh_uslgb': 'MSC만 · 프놈펜 바지 → Vung Tau 환적 → SENTOSA 본선 · 선명은 본선 기준',
+    'khpnh_usnyc': 'MSC만 · 프놈펜 바지 → Vung Tau 환적 → AMERICA SERVICE 본선 · ZIM EMERALD 공동운항편은 기존 호치민/하이퐁 기준과 동일하게 제외',
     'cnngb_vnhph': 'SITC 직항 · SITC 확정 일정(CTD/CTA) 기준',
     'cnngb_vnsgn': 'SITC 직항 · SITC 확정 일정(CTD/CTA) 기준',
     'krinc_vnhph': 'PANOCEAN · 흥아 · 동진 · SM상선 · SITC 직항 · 출항 토~화만 · 상해·닝보 기항 항차 제외 · ⛔ = 선사 스케줄에서 부킹 불가(빨간색)',
 }
 
-CALLING_ORDER = {'krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'}
+USA = [('ushph', 'Haiphong', [('la', 'vnhph_uslax'), ('nyc', 'vnhph_usnyc')]),
+       ('ushcm', 'Ho Chi Minh (Vung Tau)', [('la', 'vnsgn_uslgb'), ('nyc', 'vnsgn_usnyc')]),
+       ('usjkt', 'Jakarta', [('la', 'idjkt_uslgb'), ('nyc', 'idjkt_usnyc')]),
+       ('uspnh', 'Phnom Penh', [('la', 'khpnh_uslgb'), ('nyc', 'khpnh_usnyc')])]
+USA_IDS = [r for _, _, pods in USA for _, r in pods]
+USA_POD = {'la': 'LA / Long Beach', 'nyc': 'New York'}
+USA_PODNAME = {'uslax': 'Los Angeles', 'uslgb': 'Long Beach', 'usnyc': 'New York'}
+USA_POLNAME = {'vnhph': 'Haiphong', 'vnsgn': 'Ho Chi Minh', 'idjkt': 'Jakarta', 'khpnh': 'Phnom Penh'}
+CALLING_ORDER = {'krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'} | set(USA_IDS)
 BW_SUB = {
     'cnshk_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 서커우~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
     'twkel_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 가오슝~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
@@ -117,7 +129,7 @@ def merge_new_lanes():
     known = {r for _, pods in ASIA for _, r in pods} | {r for _, pods in MED for _, r in pods}
     for row in meta:
         rid = row.get('routeId', '')
-        if rid in known or row.get('group') == 'med' or not (DATA / f'{rid}.json').exists():
+        if rid in known or row.get('group') in ('med', 'us') or not (DATA / f'{rid}.json').exists():
             continue
         a, _, b = rid.partition('_')
         pol, pod = LOCODE.get(a), LOCODE.get(b)
@@ -181,6 +193,41 @@ def asia_markup():
 
 MED = [('pus', [('ist', 'krpus_trist'), ('sok', 'krpus_egsok'), ('aly', 'krpus_egaly'), ('psd', 'krpus_egpsd')])]
 PORT.update({'dam': 'Damietta', 'sok': 'Ain Sokhna', 'aly': 'Alexandria', 'psd': 'Port Said'})
+
+def usa_routes():
+    return [r for r in USA_IDS if (DATA / f'{r}.json').exists()]
+
+def usa_markup():
+    have = set(usa_routes())
+    out = ['''
+  <section class="lx-group" id="net-usa" data-net="usa" role="tabpanel" aria-labelledby="tab-net-usa" hidden>
+  <p class="lx-sub"><span class="lx-updated dash-skeleton" data-draw="last-updated-usa" data-source="route_meta">—</span></p>
+
+  <div class="lx-group">
+    <p class="lx-group-label">POL</p>
+    <nav class="lx-nav" role="tablist" aria-label="Departure port (USA)">''']
+    pols = [(pc, name, [p for p in pods if p[1] in have]) for pc, name, pods in USA]
+    pols = [x for x in pols if x[2]]
+    for i, (pc, name, _) in enumerate(pols):
+        sel = 'true' if i == 0 else 'false'
+        out.append(f'      <button class="lx-nav-btn" id="tab-{pc}" role="tab" aria-selected="{sel}" aria-controls="polgroup-{pc}" data-pol="{pc}">{name}</button>')
+    out.append('    </nav>\n  </div>')
+    for i, (pc, name, pods) in enumerate(pols):
+        h = ' hidden' if i else ''
+        out.append(f'''
+  <section class="lx-group" id="polgroup-{pc}" data-pol="{pc}" role="tabpanel" aria-labelledby="tab-{pc}"{h}>
+    <p class="lx-group-label">POD</p>
+    <nav class="lx-subnav" role="tablist" aria-label="Destination port (ex {name})">''')
+        for j, (pod, _) in enumerate(pods):
+            sel = 'true' if j == 0 else 'false'
+            out.append(f'      <button class="lx-subnav-btn" id="tab-pod-{pc}-{pod}" role="tab" aria-selected="{sel}" aria-controls="page-{pc}-{pod}" data-pod="{pod}">{USA_POD[pod]}</button>')
+        out.append('    </nav>')
+        for j, (pod, route) in enumerate(pods):
+            a, _, z = route.partition('_')
+            out.append(lane_page(f'page-{pc}-{pod}', f'tab-pod-{pc}-{pod}', pod, route, USA_POLNAME[a], USA_PODNAME[z], j > 0))
+        out.append('  </section>')
+    out.append('  </section>')
+    return '\n'.join(out)
 
 def med_routes():
     return [r for _, pods in MED for _, r in pods if (DATA / f'{r}.json').exists()]
@@ -328,7 +375,7 @@ def main():
     data_js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
     merge_new_lanes()
-    route_ids = [r for _, pods in ASIA for _, r in pods] + med_routes()
+    route_ids = [r for _, pods in ASIA for _, r in pods] + usa_routes() + med_routes()
     gt = rd('gt.html')
     marker = '  // ---- POL/POD port flags ----'
     assert marker in gt
@@ -347,7 +394,7 @@ def main():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LX Pantos Textile / Garment Schedule</title>
-<meta name="description" content="LX Pantos Textile / Garment 선적 스케줄 (Asia · C.America · Mediterranean)">
+<meta name="description" content="LX Pantos Textile / Garment 선적 스케줄 (Asia · USA · C.America · Mediterranean)">
 <link rel="icon" href="{logo}">
 {rd('base.css')}
 {rd('page.css')}
@@ -376,7 +423,7 @@ def main():
     <g><circle cx="700" cy="90" r="3"/></g><g><circle cx="180" cy="270" r="2.6"/></g><g><circle cx="620" cy="280" r="2.6"/></g>
   </svg>
   <div class="lx-hero-in">
-    <p class="lx-hero-eyebrow">Asia · Central America · Mediterranean</p>
+    <p class="lx-hero-eyebrow">Asia · USA · Central America · Mediterranean</p>
     <h1>LX Pantos <span class="thin">Textile &amp; Garment Schedule</span></h1>
     <p class="lx-hero-sub">주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
     <span class="lx-updated-pill" id="hero-updated" data-built="{built_short}">—</span>
@@ -387,6 +434,7 @@ def main():
     <p class="lx-group-label">Network</p>
     <nav class="lx-nav" role="tablist" aria-label="Network">
       <button class="lx-nav-btn" id="tab-net-asia" role="tab" aria-selected="true" aria-controls="net-asia" data-net="asia">Asia</button>
+      <button class="lx-nav-btn" id="tab-net-usa" role="tab" aria-selected="false" aria-controls="net-usa" data-net="usa">USA</button>
       <button class="lx-nav-btn" id="tab-net-ca" role="tab" aria-selected="false" aria-controls="net-ca" data-net="ca">C.America</button>
       <button class="lx-nav-btn" id="tab-net-med" role="tab" aria-selected="false" aria-controls="net-med" data-net="med">Mediterranean</button>
     </nav>
@@ -395,6 +443,7 @@ def main():
     <p class="lx-sub" id="lx-updated-row"><span class="lx-updated dash-skeleton" data-draw="last-updated" data-source="route_meta">—</span></p>
   </header>
 {asia_markup()}
+{usa_markup()}
 {ca_markup()}
 {med_markup()}
 </div>

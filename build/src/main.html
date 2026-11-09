@@ -170,7 +170,15 @@
 
   dash.draw('last-updated', function (el) {
     withState(el, 'route_meta', function (g) {
-      var rows = (g.data || []).filter(function (r) { return r.group !== 'med'; });
+      var rows = (g.data || []).filter(function (r) { return r.group !== 'med' && r.group !== 'us'; });
+      if (!rows.length) { el.textContent = ''; return; }
+      el.textContent = 'Update : ' + (latestUpdateDate(rows) || rows[0].updateDate);
+    });
+  });
+
+  dash.draw('last-updated-usa', function (el) {
+    withState(el, 'route_meta', function (g) {
+      var rows = (g.data || []).filter(function (r) { return r.group === 'us'; });
       if (!rows.length) { el.textContent = ''; return; }
       el.textContent = 'Update : ' + (latestUpdateDate(rows) || rows[0].updateDate);
     });
@@ -247,7 +255,8 @@
     return td;
   }
 
-  var CALLING_ORDER_ROUTES = ['krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'];
+  var USA_ROUTE_IDS = ['vnhph_uslax', 'vnhph_usnyc', 'vnsgn_uslgb', 'vnsgn_usnyc', 'idjkt_uslgb', 'idjkt_usnyc', 'khpnh_uslgb', 'khpnh_usnyc'];
+  var CALLING_ORDER_ROUTES = ['krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'].concat(USA_ROUTE_IDS);
 
   function rotationCell(v) {
     var td = document.createElement('td');
@@ -348,6 +357,7 @@
     withState(el, id, function (g) {
       var rows = (g.data || []).slice().sort(function (a, b) { return parseKey(a.etd) - parseKey(b.etd); });
       if (onlyChanges) rows = rows.filter(function (r) { return r.status !== 'unchanged' && r.status !== 'same' && r.status !== 'departed'; });
+      rows = rows.filter(function (r) { return cfPasses(el, r); });
       rows = rows.filter(function (r) {
         if (rowStage(r) !== 'arrived') return true;
         var eta = scheduleDate(r.eta);
@@ -371,6 +381,99 @@
   ROUTE_IDS.forEach(function (id) {
     dash.draw('rows-' + id, function (el) { renderTable(el, id); });
   });
+
+  // ---- Carrier filter (Asia POL groups): checkboxes under the POD tabs ----
+  // Off-carriers are remembered per POL in this browser only; a joint-service
+  // row stays visible while any one of its carriers is still checked.
+  var CF_KEY = 'lx-cf-off-v1';
+  // Lazily initialised: rows can be drawn before this block runs.
+  var cfOff;
+  function cfState() {
+    if (!cfOff) {
+      try { cfOff = JSON.parse(localStorage.getItem('lx-cf-off-v1') || '{}') || {}; } catch (e) { cfOff = {}; }
+    }
+    return cfOff;
+  }
+  function cfSave() { try { localStorage.setItem(CF_KEY, JSON.stringify(cfState())); } catch (e) {} }
+  function cfSplit(c) { return String(c || '').split(/\s*\/\s*/).filter(Boolean); }
+  function cfPolOf(el) {
+    var g = el && el.closest ? el.closest('#net-asia .lx-group[data-pol]') : null;
+    return g ? g.dataset.pol : null;
+  }
+  function cfPasses(el, r) {
+    var pol = cfPolOf(el);
+    var off = pol && cfState()[pol];
+    if (!off || !off.length) return true;
+    return cfSplit(r.carrier).some(function (c) { return off.indexOf(c) === -1; });
+  }
+  function cfRedraw(groupEl) {
+    Array.prototype.slice.call(groupEl.querySelectorAll('tbody[data-draw^="rows-"]')).forEach(function (tb) {
+      dash.draw(tb.getAttribute('data-draw'));
+    });
+  }
+  function cfBuild() {
+    Array.prototype.slice.call(document.querySelectorAll('#net-asia .lx-group[data-pol] > .lx-subnav')).forEach(function (nav) {
+      var g = nav.parentNode;
+      if (g.querySelector(':scope > .lx-carrier-filter')) return;
+      var box = document.createElement('div');
+      box.className = 'lx-carrier-filter';
+      box.dataset.cfPol = g.dataset.pol;
+      box.setAttribute('aria-label', 'Carrier filter');
+      nav.insertAdjacentElement('afterend', box);
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.lx-carrier-filter[data-cf-pol]')).forEach(function (box) {
+      var pol = box.dataset.cfPol;
+      var groupEl = box.closest('.lx-group[data-pol]');
+      if (!groupEl) return;
+      var seen = {};
+      Array.prototype.slice.call(groupEl.querySelectorAll('tbody[data-draw^="rows-"]')).forEach(function (tb) {
+        var g = dash.data(tb.getAttribute('data-draw').slice(5));
+        ((g && g.data) || []).forEach(function (r) { cfSplit(r.carrier).forEach(function (c) { seen[c] = 1; }); });
+      });
+      var list = Object.keys(seen).sort(function (a, b) {
+        var ia = CARRIER_ORDER.indexOf(a), ib = CARRIER_ORDER.indexOf(b);
+        if (ia === -1) ia = 99; if (ib === -1) ib = 99;
+        return ia - ib || a.localeCompare(b);
+      });
+      if (!list.length) { box.replaceChildren(); return; }
+      var off = cfState()[pol] || [];
+      var nodes = [];
+      var lab = document.createElement('span');
+      lab.className = 'lx-cf-label';
+      lab.textContent = 'Carrier';
+      nodes.push(lab);
+      list.forEach(function (c) {
+        var item = document.createElement('label');
+        item.className = 'lx-cf-item' + (off.indexOf(c) !== -1 ? ' is-off' : '');
+        item.style.setProperty('--cf-c', carrierColor(c));
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = off.indexOf(c) === -1;
+        cb.addEventListener('change', function () {
+          var cur = (cfState()[pol] || []).filter(function (x) { return x !== c; });
+          if (!cb.checked) cur.push(c);
+          cfState()[pol] = cur;
+          item.classList.toggle('is-off', !cb.checked);
+          cfSave();
+          cfRedraw(groupEl);
+        });
+        var dot = document.createElement('i');
+        dot.className = 'lx-legend-dot';
+        item.appendChild(cb);
+        item.appendChild(dot);
+        item.appendChild(document.createTextNode(c));
+        nodes.push(item);
+      });
+      var all = document.createElement('button');
+      all.type = 'button';
+      all.className = 'lx-cf-all';
+      all.textContent = '전체 선택';
+      all.addEventListener('click', function () { cfState()[pol] = []; cfSave(); cfBuild(); cfRedraw(groupEl); });
+      nodes.push(all);
+      box.replaceChildren.apply(box, nodes);
+    });
+  }
+  dash.onData(cfBuild);
 
   // ---- Port berthing wait, per lane ----
   var BERTH_WAIT_CAP_DAYS = 3;
@@ -446,11 +549,11 @@
     if (!fromHash && dash.setLink) {
       if (netCode === 'ca') {
         dash.setLink('ca');
-      } else if (netCode === 'med') {
-        var medGroup = netSections.filter(function (s) { return s.dataset.net === 'med'; })[0];
+      } else if (netCode === 'med' || netCode === 'usa') {
+        var medGroup = netSections.filter(function (s) { return s.dataset.net === netCode; })[0];
         var medPolGroup = medGroup ? Array.prototype.slice.call(medGroup.querySelectorAll('.lx-group[data-pol]')).filter(function (s) { return !s.hidden; })[0] : null;
         var medPodPage = medPolGroup ? medPolGroup.querySelector('.lx-page:not([hidden])') : null;
-        dash.setLink(medPolGroup && medPodPage ? medPolGroup.dataset.pol + '-' + medPodPage.dataset.pod : 'med');
+        dash.setLink(medPolGroup && medPodPage ? medPolGroup.dataset.pol + '-' + medPodPage.dataset.pod : netCode);
       } else {
         var activeGroup = polSections.filter(function (s) { return !s.hidden; })[0];
         var activePage = activeGroup ? activeGroup.querySelector('.lx-page:not([hidden])') : null;
@@ -526,6 +629,8 @@
     showNet('ca', true);
   } else if (initialHash === 'med') {
     showNet('med', true);
+  } else if (initialHash === 'usa') {
+    showNet('usa', true);
   } else if (initialHash && initialHash.indexOf('-') !== -1) {
     var parts = initialHash.split('-');
     var polCode = parts[0];

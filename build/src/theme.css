@@ -214,4 +214,12 @@ body { background: var(--color-bg); letter-spacing: -0.005em; word-break: keep-a
 .gt h2 .gt-dl-btn { margin-left: 8px; vertical-align: middle; font-size: .75rem; font-weight: 600; }
 .gt-dl-btn[data-dl-state="ok"] { color: var(--color-ok, #1f8a5b); border-color: currentColor; }
 .gt-dl-btn[data-dl-state="err"] { color: var(--color-bad, #d1453b); border-color: currentColor; }
+.lx-carrier-filter { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .5rem; margin-top: .55rem; padding: .5rem .65rem; border: 1px solid var(--color-border, rgba(127,127,127,.25)); border-radius: .5rem; }
+.lx-carrier-filter:empty { display: none; }
+.lx-cf-label { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-right: .25rem; }
+.lx-cf-item { display: inline-flex; align-items: center; gap: .3rem; padding: .15rem .5rem .15rem .35rem; border-radius: 999px; border: 1px solid var(--color-border, rgba(127,127,127,.3)); font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-caption); cursor: pointer; user-select: none; }
+.lx-cf-item input { margin: 0; accent-color: var(--cf-c); cursor: pointer; }
+.lx-cf-item .lx-legend-dot { background: var(--cf-c); }
+.lx-cf-item.is-off { opacity: .45; }
+.lx-cf-all { background: none; border: 0; padding: .15rem .35rem; font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-decoration: underline; cursor: pointer; }
 </style>

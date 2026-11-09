@@ -1,0 +1,62 @@
+[
+ {
+  "carrier": "MSC",
+  "vessel": "MSC VITTORIA",
+  "voyage": "GU644W",
+  "etd": "11-10 (Tue)",
+  "eta": "12-12 (Sat)",
+  "tt": 32,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "service": "Barge Connection"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC TOGO",
+  "voyage": "GU645W",
+  "etd": "11-17 (Tue)",
+  "eta": "12-20 (Sun)",
+  "tt": 33,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "service": "Barge Connection"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC UGANDA",
+  "voyage": "GU646W",
+  "etd": "11-24 (Tue)",
+  "eta": "12-29 (Tue)",
+  "tt": 35,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "service": "Barge Connection"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC MAEVA",
+  "voyage": "GU648W",
+  "etd": "12-01 (Tue)",
+  "eta": "01-07 (Thu)",
+  "tt": 37,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "service": "Barge Connection"
+ }
+]

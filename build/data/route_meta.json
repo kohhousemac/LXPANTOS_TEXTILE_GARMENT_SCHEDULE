@@ -393,7 +393,7 @@
   "newCount": 1,
   "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 3
+  "vesselCount": 5
  },
  {
   "routeId": "vnsgn_uslgb",
@@ -414,10 +414,10 @@
   "pod": "New York",
   "group": "us",
   "updateDate": "11/09",
-  "newCount": 1,
+  "newCount": 9,
   "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 5
+  "vesselCount": 13
  },
  {
   "routeId": "vnsgn_usnyc",
@@ -426,10 +426,10 @@
   "pod": "New York",
   "group": "us",
   "updateDate": "11/09",
-  "newCount": 0,
+  "newCount": 4,
   "changedCount": 2,
   "excludedCount": 0,
-  "vesselCount": 4
+  "vesselCount": 8
  },
  {
   "routeId": "krinc_vnhph",
@@ -466,5 +466,53 @@
   "pol": "Ningbo",
   "pod": "Ho Chi Minh",
   "group": "cn"
+ },
+ {
+  "routeId": "idjkt_uslgb",
+  "label": "Jakarta → Long Beach",
+  "pol": "Jakarta",
+  "pod": "Long Beach",
+  "group": "us",
+  "updateDate": "11/09",
+  "newCount": 9,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 9
+ },
+ {
+  "routeId": "idjkt_usnyc",
+  "label": "Jakarta → New York",
+  "pol": "Jakarta",
+  "pod": "New York",
+  "group": "us",
+  "updateDate": "11/09",
+  "newCount": 10,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 10
+ },
+ {
+  "routeId": "khpnh_uslgb",
+  "label": "Phnom Penh → Long Beach",
+  "pol": "Phnom Penh",
+  "pod": "Long Beach",
+  "group": "us",
+  "updateDate": "11/09",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "khpnh_usnyc",
+  "label": "Phnom Penh → New York",
+  "pol": "Phnom Penh",
+  "pod": "New York",
+  "group": "us",
+  "updateDate": "11/09",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
  }
 ]

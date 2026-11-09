@@ -10,7 +10,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "same",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
   "carrier": "MSC",
@@ -26,7 +27,8 @@
   "changedFields": [
    "eta",
    "tt"
-  ]
+  ],
+  "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
   "carrier": "MSC",
@@ -42,7 +44,8 @@
   "changedFields": [
    "etd",
    "tt"
-  ]
+  ],
+  "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
   "carrier": "MSC",
@@ -58,7 +61,8 @@
   "changedFields": [
    "etd",
    "eta"
-  ]
+  ],
+  "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
   "carrier": "MSC",
@@ -71,7 +75,8 @@
   "prevEta": null,
   "prevTt": null,
   "status": "same",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
   "carrier": "MSC",
@@ -84,6 +89,7 @@
   "prevEta": null,
   "prevTt": null,
   "status": "new",
-  "changedFields": []
+  "changedFields": [],
+  "rotation": "Vung Tau → Long Beach (직항)"
  }
 ]
