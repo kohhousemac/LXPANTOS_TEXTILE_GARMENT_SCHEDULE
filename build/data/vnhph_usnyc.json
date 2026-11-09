@@ -15,21 +15,6 @@
  },
  {
   "carrier": "CMA CGM",
-  "vessel": "CMA CGM INTEGRITY",
-  "voyage": "CBX0I0E19",
-  "etd": "11-13 (Fri)",
-  "eta": "12-26 (Sat)",
-  "tt": 43,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Haiphong (QINGDAO TOWER 0FQ51N1MA) → Shanghai (T/S) → New York",
-  "service": "CT8CNC → CBX"
- },
- {
-  "carrier": "CMA CGM",
   "vessel": "EVER MACRO",
   "voyage": "TWS0I0E19",
   "etd": "11-13 (Fri)",
@@ -59,21 +44,6 @@
    "tt"
   ],
   "rotation": "Haiphong → New York (직항)"
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM ALASKA",
-  "voyage": "CBX0M0E19",
-  "etd": "11-19 (Thu)",
-  "eta": "01-08 (Fri)",
-  "tt": 50,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Haiphong (XIN BIN HONG 0FQ53N1MA) → Shanghai (T/S) → New York",
-  "service": "CT8CNC → CBX"
  },
  {
   "carrier": "CMA CGM",
@@ -124,21 +94,6 @@
   "rotation": "Haiphong → New York (직항)"
  },
  {
-  "carrier": "CMA CGM",
-  "vessel": "APL ESPLANADE",
-  "voyage": "CBX0O0E19",
-  "etd": "11-27 (Fri)",
-  "eta": "01-15 (Fri)",
-  "tt": 49,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Haiphong (CMA CGM NANTONG 0FQ55N1MA) → Shanghai (T/S) → New York",
-  "service": "CT8CNC → CBX"
- },
- {
   "carrier": "MSC",
   "vessel": "MSC VANCOUVER",
   "voyage": "GU647W",
@@ -154,21 +109,6 @@
    "tt"
   ],
   "rotation": "Haiphong → New York (직항)"
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM T. ROOSEVELT",
-  "voyage": "CBX0Q0E19",
-  "etd": "12-02 (Wed)",
-  "eta": "01-22 (Fri)",
-  "tt": 51,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Haiphong (QINGDAO TOWER CT8010N19) → Shanghai (T/S) → New York",
-  "service": "CT8CNC → CBX"
  },
  {
   "carrier": "CMA CGM",

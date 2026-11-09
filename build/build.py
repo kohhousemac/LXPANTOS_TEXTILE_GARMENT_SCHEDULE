@@ -46,10 +46,10 @@ def _mkt_ids():
 MKT_IDS = _mkt_ids()
 
 LANE_NOTES = {
-    'vnhph_uslax': 'MSC PEARL 직항 · 도착 West Basin Container Terminal · WHL 스케줄은 Wan Hai 사이트 보안확인(CAPTCHA)으로 미수집',
-    'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM: TWS 직항(Maher) / CT8CNC→CBX 상해 환적(Bayonne) · WHL 미수집(CAPTCHA)',
-    'vnsgn_uslgb': 'MSC SENTOSA 직항 · 선적 Vung Tau(Cai Mep) · MSC에 호치민/붕따우→LA 노선이 없어 Long Beach(Pier T) · WHL 미수집(CAPTCHA)',
-    'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM CBX 직항(호치민 Binh Duong 바지 → Vung Tau Gemalink 선적, Bayonne) · WHL 미수집(CAPTCHA)',
+    'vnhph_uslax': 'MSC PEARL 직항(West Basin) + WHL AP1 직항',
+    'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM TWS 직항(Maher) · 환적편 제외 (WHL은 셔커우 환적만 있어 미포함)',
+    'vnsgn_uslgb': 'MSC SENTOSA 직항 → Long Beach(Pier T, 선적 Vung Tau) + WHL AP1 직항 → Los Angeles(선적 Cai Mep)',
+    'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM CBX 직항(호치민 Binh Duong 바지 → Vung Tau Gemalink 선적, Bayonne)',
     'idjkt_uslgb': 'MSC만 · 환적: KOALA(상해 T/S) / PERTIWI(싱가포르 T/S) · 선명은 본선(모선) 기준, 피더는 Calling Order에 표시 · MSC에 자카르타→LA 노선 없음',
     'idjkt_usnyc': 'MSC만 · 싱가포르 환적(PERTIWI·SEAHORSE·SEAGULL → AMERICA SERVICE) · 선명은 본선(모선) 기준',
     'khpnh_uslgb': 'MSC만 · 프놈펜 바지 → Vung Tau 환적 → SENTOSA 본선 · 선명은 본선 기준',
@@ -224,7 +224,7 @@ def usa_markup():
         out.append('    </nav>')
         for j, (pod, route) in enumerate(pods):
             a, _, z = route.partition('_')
-            out.append(lane_page(f'page-{pc}-{pod}', f'tab-pod-{pc}-{pod}', pod, route, USA_POLNAME[a], USA_PODNAME[z], j > 0))
+            out.append(lane_page(f'page-{pc}-{pod}', f'tab-pod-{pc}-{pod}', pod, route, USA_POLNAME[a], 'LA / Long Beach' if route == 'vnsgn_uslgb' else USA_PODNAME[z], j > 0))
         out.append('  </section>')
     out.append('  </section>')
     return '\n'.join(out)

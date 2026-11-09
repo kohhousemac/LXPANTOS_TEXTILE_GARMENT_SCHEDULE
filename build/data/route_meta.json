@@ -5,11 +5,11 @@
   "pol": "Ho Chi Minh",
   "pod": "Jakarta",
   "group": "vn_id",
-  "updateDate": "11/06",
-  "newCount": 8,
+  "updateDate": "11/09",
+  "newCount": 0,
   "changedCount": 0,
   "excludedCount": 13,
-  "vesselCount": 29
+  "vesselCount": 27
  },
  {
   "routeId": "vnsgn_idsrg",
@@ -390,22 +390,22 @@
   "pod": "Los Angeles",
   "group": "us",
   "updateDate": "11/09",
-  "newCount": 1,
+  "newCount": 4,
   "changedCount": 1,
   "excludedCount": 0,
-  "vesselCount": 5
+  "vesselCount": 8
  },
  {
   "routeId": "vnsgn_uslgb",
-  "label": "Ho Chi Minh → Long Beach",
+  "label": "Ho Chi Minh → LA / Long Beach",
   "pol": "Ho Chi Minh",
-  "pod": "Long Beach",
+  "pod": "LA / Long Beach",
   "group": "us",
   "updateDate": "11/09",
-  "newCount": 1,
+  "newCount": 5,
   "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 6
+  "vesselCount": 10
  },
  {
   "routeId": "vnhph_usnyc",
@@ -414,10 +414,10 @@
   "pod": "New York",
   "group": "us",
   "updateDate": "11/09",
-  "newCount": 9,
+  "newCount": 5,
   "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 13
+  "vesselCount": 9
  },
  {
   "routeId": "vnsgn_usnyc",

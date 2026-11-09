@@ -28,6 +28,21 @@
   "rotation": "Haiphong → Los Angeles (직항)"
  },
  {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A01",
+  "voyage": "E021",
+  "etd": "11-13 (Fri)",
+  "eta": "12-11 (Fri)",
+  "tt": 28,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Haiphong → Los Angeles (직항)",
+  "service": "AP1"
+ },
+ {
   "carrier": "MSC",
   "vessel": "GREENLAND",
   "voyage": "GQ646N",
@@ -59,6 +74,21 @@
   "rotation": "Haiphong → Los Angeles (직항)"
  },
  {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A05",
+  "voyage": "E019",
+  "etd": "11-26 (Thu)",
+  "eta": "12-21 (Mon)",
+  "tt": 25,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Haiphong → Los Angeles (직항)",
+  "service": "AP1"
+ },
+ {
   "carrier": "MSC",
   "vessel": "MSC CAROLE",
   "voyage": "GQ648N",
@@ -71,5 +101,20 @@
   "status": "new",
   "changedFields": [],
   "rotation": "Haiphong → Los Angeles (직항)"
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A03",
+  "voyage": "E019",
+  "etd": "12-03 (Thu)",
+  "eta": "12-28 (Mon)",
+  "tt": 25,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Haiphong → Los Angeles (직항)",
+  "service": "AP1"
  }
 ]

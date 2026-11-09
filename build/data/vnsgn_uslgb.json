@@ -14,6 +14,21 @@
   "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A09",
+  "voyage": "E019",
+  "etd": "11-13 (Fri)",
+  "eta": "12-05 (Sat)",
+  "tt": 22,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1"
+ },
+ {
   "carrier": "MSC",
   "vessel": "MSC RIFAYA",
   "voyage": "FV644N",
@@ -48,6 +63,21 @@
   "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A01",
+  "voyage": "E021",
+  "etd": "11-18 (Wed)",
+  "eta": "12-11 (Fri)",
+  "tt": 23,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1"
+ },
+ {
   "carrier": "MSC",
   "vessel": "MSC ELOANE",
   "voyage": "FV646N",
@@ -65,6 +95,21 @@
   "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A05",
+  "voyage": "E019",
+  "etd": "11-29 (Sun)",
+  "eta": "12-21 (Mon)",
+  "tt": 22,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1"
+ },
+ {
   "carrier": "MSC",
   "vessel": "MSC ERICA",
   "voyage": "FV647N",
@@ -77,6 +122,21 @@
   "status": "same",
   "changedFields": [],
   "rotation": "Vung Tau → Long Beach (직항)"
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI A03",
+  "voyage": "E019",
+  "etd": "12-05 (Sat)",
+  "eta": "12-28 (Mon)",
+  "tt": 23,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1"
  },
  {
   "carrier": "MSC",

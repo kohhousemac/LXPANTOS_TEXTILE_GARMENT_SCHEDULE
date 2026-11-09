@@ -383,14 +383,15 @@
   });
 
   // ---- Carrier filter (Asia POL groups): checkboxes under the POD tabs ----
-  // Off-carriers are remembered per POL in this browser only; a joint-service
-  // row stays visible while any one of its carriers is still checked.
-  var CF_KEY = 'lx-cf-off-v1';
+  // Include filter: nothing checked = every carrier shown; once carriers are
+  // checked, only rows sold by one of them stay (joint rows count if any
+  // carrier matches). Remembered per POL in this browser only.
+  var CF_KEY = 'lx-cf-on-v1';
   // Lazily initialised: rows can be drawn before this block runs.
   var cfOff;
   function cfState() {
     if (!cfOff) {
-      try { cfOff = JSON.parse(localStorage.getItem('lx-cf-off-v1') || '{}') || {}; } catch (e) { cfOff = {}; }
+      try { cfOff = JSON.parse(localStorage.getItem(CF_KEY) || '{}') || {}; } catch (e) { cfOff = {}; }
     }
     return cfOff;
   }
@@ -402,9 +403,9 @@
   }
   function cfPasses(el, r) {
     var pol = cfPolOf(el);
-    var off = pol && cfState()[pol];
-    if (!off || !off.length) return true;
-    return cfSplit(r.carrier).some(function (c) { return off.indexOf(c) === -1; });
+    var on = pol && cfState()[pol];
+    if (!on || !on.length) return true;
+    return cfSplit(r.carrier).some(function (c) { return on.indexOf(c) !== -1; });
   }
   function cfRedraw(groupEl) {
     Array.prototype.slice.call(groupEl.querySelectorAll('tbody[data-draw^="rows-"]')).forEach(function (tb) {
@@ -436,24 +437,25 @@
         return ia - ib || a.localeCompare(b);
       });
       if (!list.length) { box.replaceChildren(); return; }
-      var off = cfState()[pol] || [];
+      var on = (cfState()[pol] || []).filter(function (c) { return list.indexOf(c) !== -1; });
       var nodes = [];
       var lab = document.createElement('span');
       lab.className = 'lx-cf-label';
-      lab.textContent = 'Carrier';
+      lab.textContent = 'Carrier · 선택한 선사만 표시';
       nodes.push(lab);
       list.forEach(function (c) {
         var item = document.createElement('label');
-        item.className = 'lx-cf-item' + (off.indexOf(c) !== -1 ? ' is-off' : '');
+        item.className = 'lx-cf-item' + (on.indexOf(c) !== -1 ? ' is-on' : '');
         item.style.setProperty('--cf-c', carrierColor(c));
         var cb = document.createElement('input');
         cb.type = 'checkbox';
-        cb.checked = off.indexOf(c) === -1;
+        cb.checked = on.indexOf(c) !== -1;
         cb.addEventListener('change', function () {
           var cur = (cfState()[pol] || []).filter(function (x) { return x !== c; });
-          if (!cb.checked) cur.push(c);
+          if (cb.checked) cur.push(c);
           cfState()[pol] = cur;
-          item.classList.toggle('is-off', !cb.checked);
+          item.classList.toggle('is-on', cb.checked);
+          all.hidden = !cur.length;
           cfSave();
           cfRedraw(groupEl);
         });
@@ -467,7 +469,8 @@
       var all = document.createElement('button');
       all.type = 'button';
       all.className = 'lx-cf-all';
-      all.textContent = '전체 선택';
+      all.textContent = '선택 해제';
+      all.hidden = !on.length;
       all.addEventListener('click', function () { cfState()[pol] = []; cfSave(); cfBuild(); cfRedraw(groupEl); });
       nodes.push(all);
       box.replaceChildren.apply(box, nodes);
