@@ -35,7 +35,8 @@ cd staff-alerts
 npm install
 npx wrangler login
 npx wrangler kv namespace create BOOKINGS   # put the printed id in wrangler.toml (REPLACE_WITH_KV_ID)
-npx wrangler deploy                         # put the printed https://....workers.dev URL in PAGE_URL
+npx wrangler deploy                         # Worker (PAGE_URL = https://staff.lxpantosfashion.co.kr/)
+(cd proxy && npx wrangler pages deploy --branch main)   # front door on our own domain
 ```
 
 ### 2. Staff password
@@ -60,3 +61,10 @@ npx wrangler dev --test-scheduled
 # browser: http://localhost:8787   run a check: curl "http://localhost:8787/__scheduled?cron=15+*/3+*+*+*"
 ```
 `.dev.vars` is not committed.
+
+## Address: staff.lxpantosfashion.co.kr
+
+Company networks block `*.workers.dev`, so staff use https://staff.lxpantosfashion.co.kr/.
+`proxy/` is a Cloudflare Pages project (`lxpantosstaff`) that forwards every request to
+the Worker over a service binding. The custom domain is attached to that Pages project,
+and Gabia DNS has `staff CNAME lxpantosstaff.pages.dev.`.

@@ -21,7 +21,7 @@ fallthrough = true
 [vars]
 ALLOWED_DOMAIN = "lxpantos.com"
 DATA_BASE = "https://raw.githubusercontent.com/kohhousemac/LXPANTOS_TEXTILE_GARMENT_SCHEDULE/main/build/data"
-PAGE_URL = "https://lxpantosfashionstaff.lxpantos.workers.dev/"
+PAGE_URL = "https://staff.lxpantosfashion.co.kr/"
 # "log" = print only, "gmail" = send from SMTP_USER via Gmail.
 MAIL_MODE = "gmail"
 SMTP_USER = "kohhousemac@gmail.com"
