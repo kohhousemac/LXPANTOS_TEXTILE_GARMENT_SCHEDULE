@@ -4,15 +4,15 @@
   "vessel": "WAN HAI 286",
   "voyage": "S116",
   "etd": "11-06 (Fri)",
-  "eta": "11-09 (Mon)",
-  "tt": 4,
-  "prevEtd": "11-04 (Wed)",
-  "prevEta": "11-08 (Sun)",
+  "eta": "11-11 (Wed)",
+  "tt": 5,
+  "prevEtd": "11-06 (Fri)",
+  "prevEta": "11-09 (Mon)",
   "prevTt": 4,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "eta"
+   "eta",
+   "tt"
   ]
  },
  {
@@ -22,25 +22,21 @@
   "etd": "11-07 (Sat)",
   "eta": "11-13 (Fri)",
   "tt": 6,
-  "prevEtd": "11-06 (Fri)",
-  "prevEta": "11-11 (Wed)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": "11-07 (Sat)",
+  "prevEta": "11-13 (Fri)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 287",
   "voyage": "S080",
-  "etd": "11-12 (Thu)",
-  "eta": "11-16 (Mon)",
+  "etd": "11-13 (Fri)",
+  "eta": "11-17 (Tue)",
   "tt": 4,
-  "prevEtd": "11-11 (Wed)",
-  "prevEta": "11-15 (Sun)",
+  "prevEtd": "11-12 (Thu)",
+  "prevEta": "11-16 (Mon)",
   "prevTt": 4,
   "status": "changed",
   "changedFields": [
@@ -55,24 +51,21 @@
   "etd": "11-19 (Thu)",
   "eta": "11-24 (Tue)",
   "tt": 5,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "11-23 (Mon)",
+  "prevEtd": "11-19 (Thu)",
+  "prevEta": "11-24 (Tue)",
   "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "ABRAO COCHIN",
   "voyage": "S022",
-  "etd": "11-20 (Fri)",
-  "eta": "11-24 (Tue)",
+  "etd": "11-21 (Sat)",
+  "eta": "11-25 (Wed)",
   "tt": 4,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-25 (Wed)",
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "11-24 (Tue)",
   "prevTt": 4,
   "status": "changed",
   "changedFields": [
@@ -87,46 +80,27 @@
   "etd": "11-23 (Mon)",
   "eta": "11-27 (Fri)",
   "tt": 4,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-25 (Wed)",
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "11-27 (Fri)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 315",
-  "voyage": "S271",
-  "etd": "11-25 (Wed)",
-  "eta": "11-30 (Mon)",
-  "tt": 5,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 308",
   "voyage": "S064",
-  "etd": "11-25 (Wed)",
-  "eta": "11-30 (Mon)",
-  "tt": 5,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-01 (Tue)",
+  "etd": "11-27 (Fri)",
+  "eta": "12-01 (Tue)",
+  "tt": 4,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "11-30 (Mon)",
   "prevTt": 5,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta"
+   "eta",
+   "tt"
   ]
  },
  {
@@ -136,31 +110,39 @@
   "etd": "11-29 (Sun)",
   "eta": "12-04 (Fri)",
   "tt": 5,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 5,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 287",
   "voyage": "S081",
-  "etd": "12-06 (Sun)",
-  "eta": "12-10 (Thu)",
+  "etd": "12-05 (Sat)",
+  "eta": "12-09 (Wed)",
   "tt": 4,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 3,
+  "prevEtd": "12-06 (Sun)",
+  "prevEta": "12-10 (Thu)",
+  "prevTt": 4,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "tt"
+   "eta"
   ]
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 288",
+  "voyage": "S116",
+  "etd": "12-10 (Thu)",
+  "eta": "12-15 (Tue)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  }
 ]

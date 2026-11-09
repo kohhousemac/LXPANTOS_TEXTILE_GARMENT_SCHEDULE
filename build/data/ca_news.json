@@ -6,16 +6,16 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-08T11:10:00Z"
+  "updatedAt": "2026-11-09T11:15:00Z"
  },
  {
   "country": "니카라과",
   "flag": "🇳🇮",
   "hasIssue": true,
-  "headline": "",
-  "url": "",
-  "holiday": "카를로스 폰세카 아만도르 서거일 (11/08, 11/09 대체휴무)",
-  "updatedAt": "2026-11-08T11:10:00Z"
+  "headline": "CMA CGM, 니카라과·엘살바도르 혼잡 할증료 부과 (11/7 보도)",
+  "url": "https://indiaseatradenews.com/cma-cgm-applies-congestion-surcharge-in-nicaragua-and-el-salvador/",
+  "holiday": "",
+  "updatedAt": "2026-11-09T11:15:00Z"
  },
  {
   "country": "파나마",
@@ -23,16 +23,16 @@
   "hasIssue": true,
   "headline": "",
   "url": "",
-  "holiday": "로스 산토스 봉기의 날 (11/10)",
-  "updatedAt": "2026-11-08T11:10:00Z"
+  "holiday": "로스산토스 봉기 기념일 (11/10)",
+  "updatedAt": "2026-11-09T11:15:00Z"
  },
  {
   "country": "엘살바도르",
   "flag": "🇸🇻",
-  "hasIssue": false,
-  "headline": "",
-  "url": "",
+  "hasIssue": true,
+  "headline": "CMA CGM, 니카라과·엘살바도르 혼잡 할증료 부과 (11/7 보도)",
+  "url": "https://indiaseatradenews.com/cma-cgm-applies-congestion-surcharge-in-nicaragua-and-el-salvador/",
   "holiday": "",
-  "updatedAt": "2026-11-08T11:10:00Z"
+  "updatedAt": "2026-11-09T11:15:00Z"
  }
 ]
