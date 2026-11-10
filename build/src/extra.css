@@ -101,6 +101,7 @@
 .lx-pc-item::before { content: ""; position: absolute; left: .15rem; top: .32rem; width: .55rem; height: .55rem; border-radius: 50%; box-sizing: border-box; background: var(--lx-accent); }
 .lx-pc-item.is-call::before { background: var(--color-panel); border: 1.5px solid var(--color-fg-muted); }
 .lx-pc-item.is-pod::before { background: var(--color-panel); border: 2px solid var(--lx-accent); }
+.lx-pc-item.is-call.is-ts::before { background: var(--color-panel); border: 2px solid var(--lx-accent); border-radius: 2px; }
 .lx-pc-item::after { content: ""; position: absolute; left: .42rem; top: .95rem; bottom: .1rem; width: 1px; background: var(--color-border-line); }
 .lx-pc-item:last-child { padding-bottom: 0; }
 .lx-pc-item:last-child::after { display: none; }

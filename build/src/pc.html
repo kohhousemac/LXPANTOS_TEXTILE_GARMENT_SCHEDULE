@@ -136,12 +136,12 @@
     list.setAttribute('aria-label', s.vessel + ' ' + s.voyage + ' port calls');
     var now = Date.now();
     calls.forEach(function (r) {
-      var li = el('li', 'lx-pc-item is-' + (r.role === 'POL' ? 'pol' : r.role === 'POD' ? 'pod' : 'call'));
+      var li = el('li', 'lx-pc-item is-' + (r.role === 'POL' ? 'pol' : r.role === 'POD' ? 'pod' : 'call') + (r.ts ? ' is-ts' : ''));
       if (r.status === 'ACTUAL' || now > t(r.etd || r.eta)) li.classList.add('is-past');
       var p = el('span', 'lx-pc-port', r.port);
       if (r.status === 'SKIP') p.classList.add('lx-pc-skip');
       li.appendChild(p);
-      var bits = [r.role === 'POL' ? '선적항' : r.role === 'POD' ? '도착항' : '경유'];
+      var bits = [r.role === 'POL' ? '선적항' : r.role === 'POD' ? '도착항' : (r.ts ? '환적' : '경유')];
       if (r.eta) bits.push('ETA ' + fmt(r.eta));
       if (r.etd) bits.push('ETD ' + fmt(r.etd));
       var meta = el('span', 'lx-pc-meta', bits.join(' · '));

@@ -50,7 +50,7 @@ LANE_NOTES = {
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM TWS 직항(Maher) · 환적편 제외 (WHL은 셔커우 환적만 있어 미포함)',
     'vnsgn_uslgb': 'MSC SENTOSA 직항 → Long Beach(Pier T, 선적 Vung Tau) + WHL AP1 직항 → Los Angeles(선적 Cai Mep)',
     'vnsgn_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM CBX 직항(호치민 Binh Duong 바지 → Vung Tau Gemalink 선적, Bayonne)',
-    'idjkt_uslgb': 'MSC만 · 환적: KOALA(상해 T/S) / PERTIWI(싱가포르 T/S) · 선명은 본선(모선) 기준, 피더는 Calling Order에 표시 · MSC에 자카르타→LA 노선 없음',
+    'idjkt_uslgb': 'MSC만 · 환적: KOALA(상해 T/S) / PERTIWI(싱가포르 T/S) · 선명은 본선(모선) 기준, 환적항은 기항 일정에 「환적」으로 표시 · MSC에 자카르타→LA 노선 없음',
     'idjkt_usnyc': 'MSC만 · 싱가포르 환적(PERTIWI·SEAHORSE·SEAGULL → AMERICA SERVICE) · 선명은 본선(모선) 기준',
     'khpnh_uslgb': 'MSC만 · 프놈펜 바지 → Vung Tau 환적 → SENTOSA 본선 · 선명은 본선 기준',
     'khpnh_usnyc': 'MSC만 · 프놈펜 바지 → Vung Tau 환적 → AMERICA SERVICE 본선 · ZIM EMERALD 공동운항편은 기존 호치민/하이퐁 기준과 동일하게 제외',

@@ -23805,7 +23805,8 @@
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-09",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -23847,7 +23848,8 @@
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-09",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25009,7 +25011,8 @@
   "etd": "2026-12-02",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25065,7 +25068,8 @@
   "etd": "2026-12-07",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25121,7 +25125,8 @@
   "etd": "2026-12-20",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25177,7 +25182,8 @@
   "etd": "2026-11-18",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25289,7 +25295,8 @@
   "etd": "2026-11-25",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25331,7 +25338,8 @@
   "etd": "2026-12-09",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_uslgb",
@@ -25471,7 +25479,8 @@
   "etd": "2026-11-26",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_usnyc",
@@ -25527,7 +25536,8 @@
   "etd": "2026-12-02",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_usnyc",
@@ -25583,7 +25593,8 @@
   "etd": "2026-12-12",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_usnyc",
@@ -25625,7 +25636,8 @@
   "etd": "2026-11-17",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_usnyc",
@@ -25667,7 +25679,8 @@
   "etd": "2026-12-05",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "idjkt_usnyc",
@@ -25709,7 +25722,8 @@
   "etd": "2026-11-18",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_uslgb",
@@ -25779,7 +25793,8 @@
   "etd": "2026-11-30",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_uslgb",
@@ -25849,7 +25864,8 @@
   "etd": "2026-12-07",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_uslgb",
@@ -25919,7 +25935,8 @@
   "etd": "2026-11-14",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_usnyc",
@@ -25975,7 +25992,8 @@
   "etd": "2026-11-22",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_usnyc",
@@ -26031,7 +26049,8 @@
   "etd": "2026-11-28",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_usnyc",
@@ -26087,7 +26106,8 @@
   "etd": "2026-12-08",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-10",
-  "source": "p2p"
+  "source": "p2p",
+  "ts": true
  },
  {
   "routeId": "khpnh_usnyc",
