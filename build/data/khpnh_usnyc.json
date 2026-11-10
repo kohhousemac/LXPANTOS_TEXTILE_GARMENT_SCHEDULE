@@ -9,9 +9,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Singapore → New York",
   "service": "Barge Connection"
  },
  {
@@ -24,9 +24,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Singapore → New York",
   "service": "Barge Connection"
  },
  {
@@ -34,14 +34,17 @@
   "vessel": "MSC UGANDA",
   "voyage": "GU646W",
   "etd": "11-24 (Tue)",
-  "eta": "12-29 (Tue)",
-  "tt": 35,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "eta": "12-26 (Sat)",
+  "tt": 32,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 35,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Singapore → New York",
   "service": "Barge Connection"
  },
  {
@@ -54,9 +57,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → New York",
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Singapore → New York",
   "service": "Barge Connection"
  }
 ]

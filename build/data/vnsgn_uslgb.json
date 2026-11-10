@@ -11,7 +11,7 @@
   "prevTt": null,
   "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → Long Beach (직항)"
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
  },
  {
   "carrier": "WHL",
@@ -27,40 +27,6 @@
   "changedFields": [],
   "rotation": "Cai Mep → Los Angeles (직항)",
   "service": "AP1"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC RIFAYA",
-  "voyage": "FV644N",
-  "etd": "11-16 (Mon)",
-  "eta": "12-05 (Sat)",
-  "tt": 19,
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 20,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Long Beach (직항)"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC DIANA",
-  "voyage": "FV645N",
-  "etd": "11-18 (Wed)",
-  "eta": "12-08 (Tue)",
-  "tt": 20,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 21,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Long Beach (직항)"
  },
  {
   "carrier": "WHL",
@@ -79,20 +45,39 @@
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC ELOANE",
-  "voyage": "FV646N",
-  "etd": "11-26 (Thu)",
-  "eta": "12-18 (Fri)",
-  "tt": 22,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "12-16 (Wed)",
-  "prevTt": 22,
+  "vessel": "MSC RIFAYA",
+  "voyage": "FV644N",
+  "etd": "11-18 (Wed)",
+  "eta": "12-08 (Tue)",
+  "tt": 20,
+  "prevEtd": "11-16 (Mon)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 19,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta"
+   "eta",
+   "tt"
   ],
-  "rotation": "Vung Tau → Long Beach (직항)"
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC DIANA",
+  "voyage": "FV645N",
+  "etd": "11-20 (Fri)",
+  "eta": "12-09 (Wed)",
+  "tt": 19,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 20,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
  },
  {
   "carrier": "WHL",
@@ -121,7 +106,7 @@
   "prevTt": null,
   "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → Long Beach (직항)"
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
  },
  {
   "carrier": "WHL",
@@ -148,8 +133,8 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → Long Beach (직항)"
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
  }
 ]

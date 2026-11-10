@@ -11,7 +11,7 @@
   "prevTt": null,
   "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → New York (직항)"
+  "rotation": "Haiphong → Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",
@@ -38,12 +38,12 @@
   "prevEtd": "11-19 (Thu)",
   "prevEta": "12-19 (Sat)",
   "prevTt": 30,
-  "status": "changed",
+  "status": "same",
   "changedFields": [
    "eta",
    "tt"
   ],
-  "rotation": "Haiphong → New York (직항)"
+  "rotation": "Haiphong → Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",
@@ -59,6 +59,24 @@
   "changedFields": [],
   "rotation": "Haiphong → New York (직항)",
   "service": "TWS"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC UGANDA",
+  "voyage": "GU646W",
+  "etd": "11-25 (Wed)",
+  "eta": "12-26 (Sat)",
+  "tt": 31,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 32,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "rotation": "Haiphong → Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",
@@ -77,24 +95,6 @@
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC UGANDA",
-  "voyage": "GU646W",
-  "etd": "11-27 (Fri)",
-  "eta": "12-29 (Tue)",
-  "tt": 32,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-27 (Sun)",
-  "prevTt": 31,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "rotation": "Haiphong → New York (직항)"
- },
- {
-  "carrier": "MSC",
   "vessel": "MSC VANCOUVER",
   "voyage": "GU647W",
   "etd": "11-29 (Sun)",
@@ -103,12 +103,12 @@
   "prevEtd": "11-28 (Sat)",
   "prevEta": "12-31 (Thu)",
   "prevTt": 33,
-  "status": "changed",
+  "status": "same",
   "changedFields": [
    "etd",
    "tt"
   ],
-  "rotation": "Haiphong → New York (직항)"
+  "rotation": "Haiphong → Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",
@@ -135,8 +135,8 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → New York (직항)"
+  "rotation": "Haiphong → Vung Tau → Singapore → New York"
  }
 ]

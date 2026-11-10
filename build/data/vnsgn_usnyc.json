@@ -11,7 +11,7 @@
   "prevTt": null,
   "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → New York (직항)"
+  "rotation": "Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",
@@ -53,12 +53,12 @@
   "prevEtd": "11-22 (Sun)",
   "prevEta": "12-19 (Sat)",
   "prevTt": 27,
-  "status": "changed",
+  "status": "same",
   "changedFields": [
    "eta",
    "tt"
   ],
-  "rotation": "Vung Tau → New York (직항)"
+  "rotation": "Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",
@@ -79,19 +79,19 @@
   "carrier": "MSC",
   "vessel": "MSC UGANDA",
   "voyage": "GU646W",
-  "etd": "11-30 (Mon)",
-  "eta": "12-29 (Tue)",
-  "tt": 29,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-27 (Sun)",
-  "prevTt": 28,
+  "etd": "11-28 (Sat)",
+  "eta": "12-26 (Sat)",
+  "tt": 28,
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 29,
   "status": "changed",
   "changedFields": [
    "etd",
    "eta",
    "tt"
   ],
-  "rotation": "Vung Tau → New York (직항)"
+  "rotation": "Vung Tau → Singapore → New York"
  },
  {
   "carrier": "MSC",
@@ -105,7 +105,7 @@
   "prevTt": null,
   "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → New York (직항)"
+  "rotation": "Vung Tau → Singapore → New York"
  },
  {
   "carrier": "CMA CGM",

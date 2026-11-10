@@ -16,33 +16,42 @@
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC ELOANE",
-  "voyage": "FV646N",
-  "etd": "11-11 (Wed)",
-  "eta": "12-20 (Sun)",
-  "tt": 39,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Jakarta (MSC BREMERHAVEN V HW644R) → Singapore (T/S) → Long Beach",
-  "service": "Pertiwi"
+  "vessel": "MSC CARMELITA",
+  "voyage": "GO647N",
+  "etd": "11-12 (Thu)",
+  "eta": "12-18 (Fri)",
+  "tt": 36,
+  "prevEtd": "11-12 (Thu)",
+  "prevEta": "12-07 (Mon)",
+  "prevTt": 25,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "rotation": "Jakarta (MSC BAY IV FP644R) → Shanghai (T/S) → Busan → Long Beach",
+  "service": "Koala",
+  "prevVessel": "MSC SIMONA GO646N"
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC SIMONA",
-  "voyage": "GO646N",
+  "vessel": "MSC ERICA",
+  "voyage": "FV647N",
   "etd": "11-12 (Thu)",
-  "eta": "12-07 (Mon)",
-  "tt": 25,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Jakarta (MSC BAY IV FP644R) → Shanghai (T/S) → Long Beach",
-  "service": "Koala"
+  "eta": "12-22 (Tue)",
+  "tt": 40,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 39,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "rotation": "Jakarta (MSC BREMERHAVEN V HW644R) → Singapore (T/S) → Port Klang → Laem Chabang → Vung Tau → Yantian → Xiamen → Long Beach",
+  "service": "Pertiwi",
+  "prevVessel": "MSC ELOANE FV646N"
  },
  {
   "carrier": "MSC",
@@ -54,7 +63,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
   "rotation": "Jakarta (MSC TAMARA IV HW645R) → Singapore (T/S) → Long Beach",
   "service": "Pertiwi"
@@ -69,9 +78,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Jakarta (MSC KUWAIT III FP643R) → Shanghai (T/S) → Long Beach",
+  "rotation": "Jakarta (MSC KUWAIT III FP643R) → Shanghai (T/S) → Busan → Long Beach",
   "service": "Koala"
  },
  {
@@ -79,14 +88,17 @@
   "vessel": "MSC LENI",
   "voyage": "FV649N",
   "etd": "11-25 (Wed)",
-  "eta": "01-05 (Tue)",
-  "tt": 41,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Jakarta (MSC VOYAGER III HW647R) → Singapore (T/S) → Long Beach",
+  "eta": "01-08 (Fri)",
+  "tt": 44,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "01-05 (Tue)",
+  "prevTt": 41,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "rotation": "Jakarta (MSC VOYAGER III HW647R) → Singapore (T/S) → Port Klang → Laem Chabang → Vung Tau → Yantian → Xiamen → Long Beach",
   "service": "Pertiwi"
  },
  {
@@ -99,39 +111,46 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Jakarta (MSC CAPETOWN III FP646R) → Shanghai (T/S) → Long Beach",
+  "rotation": "Jakarta (MSC CAPETOWN III FP646R) → Shanghai (T/S) → Busan → Long Beach",
   "service": "Koala"
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC HAMBURG",
-  "voyage": "FV650N",
+  "vessel": "MSC LENI",
+  "voyage": "FV649N",
   "etd": "12-02 (Wed)",
-  "eta": "01-13 (Wed)",
-  "tt": 42,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Jakarta (MSC JAPAN III HW648R) → Singapore (T/S) → Long Beach",
-  "service": "Pertiwi"
+  "eta": "01-08 (Fri)",
+  "tt": 37,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "01-13 (Wed)",
+  "prevTt": 42,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "rotation": "Jakarta (MSC JAPAN III HW648R) → Singapore (T/S) → Port Klang → Laem Chabang → Vung Tau → Yantian → Xiamen → Long Beach",
+  "service": "Pertiwi",
+  "prevVessel": "MSC HAMBURG FV650N"
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC SOFIA",
-  "voyage": "GO650N",
+  "vessel": "MSC BERANGERE",
+  "voyage": "GO649N",
   "etd": "12-03 (Thu)",
   "eta": "01-04 (Mon)",
   "tt": 32,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Jakarta (MSC NURYA G FP647R) → Shanghai (T/S) → Long Beach",
-  "service": "Koala"
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "01-04 (Mon)",
+  "prevTt": 32,
+  "status": "changed",
+  "changedFields": [
+   "vessel"
+  ],
+  "rotation": "Jakarta (MSC NURYA G FP647R) → Shanghai (T/S) → Busan → Long Beach",
+  "service": "Koala",
+  "prevVessel": "MSC SOFIA GO650N"
  }
 ]

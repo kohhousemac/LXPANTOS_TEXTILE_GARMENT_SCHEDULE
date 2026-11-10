@@ -54,7 +54,7 @@
   "prevTt": null,
   "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → Los Angeles (직항)"
+  "rotation": "Haiphong → Hong Kong → Yantian → Los Angeles"
  },
  {
   "carrier": "MSC",
@@ -66,12 +66,12 @@
   "prevEtd": "11-22 (Sun)",
   "prevEta": "12-09 (Wed)",
   "prevTt": 17,
-  "status": "changed",
+  "status": "same",
   "changedFields": [
    "eta",
    "tt"
   ],
-  "rotation": "Haiphong → Los Angeles (직항)"
+  "rotation": "Haiphong → Yantian → Los Angeles"
  },
  {
   "carrier": "WHL",
@@ -98,9 +98,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → Los Angeles (직항)"
+  "rotation": "Haiphong → Yantian → Los Angeles"
  },
  {
   "carrier": "WHL",

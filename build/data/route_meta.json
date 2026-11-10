@@ -389,9 +389,9 @@
   "pol": "Haiphong",
   "pod": "Los Angeles",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 4,
-  "changedCount": 1,
+  "updateDate": "11/10",
+  "newCount": 3,
+  "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 8
  },
@@ -401,11 +401,11 @@
   "pol": "Ho Chi Minh",
   "pod": "LA / Long Beach",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 5,
-  "changedCount": 3,
+  "updateDate": "11/10",
+  "newCount": 4,
+  "changedCount": 2,
   "excludedCount": 0,
-  "vesselCount": 10
+  "vesselCount": 9
  },
  {
   "routeId": "vnhph_usnyc",
@@ -413,9 +413,9 @@
   "pol": "Haiphong",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 5,
-  "changedCount": 3,
+  "updateDate": "11/10",
+  "newCount": 4,
+  "changedCount": 1,
   "excludedCount": 0,
   "vesselCount": 9
  },
@@ -425,9 +425,9 @@
   "pol": "Ho Chi Minh",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/09",
+  "updateDate": "11/10",
   "newCount": 4,
-  "changedCount": 2,
+  "changedCount": 1,
   "excludedCount": 0,
   "vesselCount": 8
  },
@@ -473,9 +473,9 @@
   "pol": "Jakarta",
   "pod": "Long Beach",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 9,
-  "changedCount": 0,
+  "updateDate": "11/10",
+  "newCount": 1,
+  "changedCount": 5,
   "excludedCount": 0,
   "vesselCount": 9
  },
@@ -485,11 +485,11 @@
   "pol": "Jakarta",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 10,
-  "changedCount": 0,
+  "updateDate": "11/10",
+  "newCount": 2,
+  "changedCount": 5,
   "excludedCount": 0,
-  "vesselCount": 10
+  "vesselCount": 12
  },
  {
   "routeId": "khpnh_uslgb",
@@ -497,9 +497,9 @@
   "pol": "Phnom Penh",
   "pod": "Long Beach",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 4,
-  "changedCount": 0,
+  "updateDate": "11/10",
+  "newCount": 0,
+  "changedCount": 2,
   "excludedCount": 0,
   "vesselCount": 4
  },
@@ -509,9 +509,9 @@
   "pol": "Phnom Penh",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/09",
-  "newCount": 4,
-  "changedCount": 0,
+  "updateDate": "11/10",
+  "newCount": 0,
+  "changedCount": 1,
   "excludedCount": 0,
   "vesselCount": 4
  }

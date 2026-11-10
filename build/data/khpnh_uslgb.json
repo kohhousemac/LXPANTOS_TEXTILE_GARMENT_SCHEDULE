@@ -4,30 +4,37 @@
   "vessel": "MSC RIFAYA",
   "voyage": "FV644N",
   "etd": "11-10 (Tue)",
-  "eta": "12-05 (Sat)",
-  "tt": 25,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "eta": "12-08 (Tue)",
+  "tt": 28,
+  "prevEtd": "11-10 (Tue)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 25,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Yantian → Xiamen → Long Beach",
   "service": "Barge Connection"
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC ELOANE",
-  "voyage": "FV646N",
+  "vessel": "MSC ERICA",
+  "voyage": "FV647N",
   "etd": "11-17 (Tue)",
-  "eta": "12-18 (Fri)",
-  "tt": 31,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
-  "service": "Barge Connection"
+  "eta": "12-22 (Tue)",
+  "tt": 35,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 31,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Yantian → Xiamen → Long Beach",
+  "service": "Barge Connection",
+  "prevVessel": "MSC ELOANE FV646N"
  },
  {
   "carrier": "MSC",
@@ -39,9 +46,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Yantian → Xiamen → Long Beach",
   "service": "Barge Connection"
  },
  {
@@ -54,9 +61,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Long Beach",
+  "rotation": "Phnom Penh (MSC Barge) → Vung Tau (T/S) → Yantian → Xiamen → Long Beach",
   "service": "Barge Connection"
  }
 ]

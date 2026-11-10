@@ -155,7 +155,7 @@
     box.appendChild(list);
     var upd = calls.reduce(function (m, r) { return (r.collectedAt || '') > m ? r.collectedAt : m; }, '');
     var p2p = calls.some(function (r) { return r.source === 'p2p'; });
-    if (upd) box.appendChild(el('p', 'lx-lane-note', (p2p ? '선사가 아직 모선별 기항 일정을 공표하지 않은 항차 — 구간 스케줄의 출발·도착만 표시 (중간 기항은 공표되면 갱신)' : '선사 모선별 스케줄 기준') + ' · 수집 ' + fmt(upd)));
+    if (upd) box.appendChild(el('p', 'lx-lane-note', (p2p ? (calls.some(function (r) { return r.role === 'CALL'; }) ? '선사 구간 스케줄(P2P) 기준 · 중간 기항지 포함, 날짜는 예정' : '선사가 아직 모선별 기항 일정을 공표하지 않은 항차 — 구간 스케줄의 출발·도착만 표시 (중간 기항은 공표되면 갱신)') : '선사 모선별 스케줄 기준') + ' · 수집 ' + fmt(upd)));
   }
 
   PC_IDS.forEach(function (id) {
