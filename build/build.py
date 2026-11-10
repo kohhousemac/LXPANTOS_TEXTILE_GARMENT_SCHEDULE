@@ -67,7 +67,7 @@ USA_IDS = [r for _, _, pods in USA for _, r in pods]
 USA_POD = {'la': 'LA / Long Beach', 'nyc': 'New York'}
 USA_PODNAME = {'uslax': 'Los Angeles', 'uslgb': 'Long Beach', 'usnyc': 'New York'}
 USA_POLNAME = {'vnhph': 'Haiphong', 'vnsgn': 'Ho Chi Minh', 'idjkt': 'Jakarta', 'khpnh': 'Phnom Penh'}
-CALLING_ORDER = {'krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'} | set(USA_IDS)
+CALLING_ORDER = set()  # Calling Order column removed 2026-11-10 (port-call panel shows every call)
 BW_SUB = {
     'cnshk_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 서커우~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
     'twkel_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 가오슝~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',

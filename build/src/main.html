@@ -256,7 +256,8 @@
   }
 
   var USA_ROUTE_IDS = ['vnhph_uslax', 'vnhph_usnyc', 'vnsgn_uslgb', 'vnsgn_usnyc', 'idjkt_uslgb', 'idjkt_usnyc', 'khpnh_uslgb', 'khpnh_usnyc'];
-  var CALLING_ORDER_ROUTES = ['krpus_vnsgn', 'krpus_idjkt', 'krinc_vnhph'].concat(USA_ROUTE_IDS);
+  // Calling Order column removed 2026-11-10 (user): the port-call panel beside each table lists every call.
+  var CALLING_ORDER_ROUTES = [];
 
   function rotationCell(v) {
     var td = document.createElement('td');
