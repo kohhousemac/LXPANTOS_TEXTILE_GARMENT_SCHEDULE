@@ -312,14 +312,23 @@ CC_NAMES = {'cnsha_docau': ('Shanghai', 'Caucedo'), 'cnshk_docau': ('Shekou', 'C
 
 def cc_page():
     lanes = []
-    for r in CC_IDS:
+    for i, r in enumerate(['cnshk_docau', 'cnsha_docau']):  # Shenzhen first (user order "심천/상해")
         if not (DATA / f'{r}.json').exists():
             continue
         html = lane_page('x', 'x', 'cc', r, CC_NAMES[r][0], CC_NAMES[r][1], False)
         m = re.search(r'(      <section class="lx-lane".*?\n      </section>\n)', html, re.S)
-        lanes.append(m.group(1).replace('40ft · USD · CY-CY · LX Pantos rate', '40ft · USD · CY-DOOR (incl. inland delivery) · LX Pantos rate'))
+        code = 'skk' if r == 'cnshk_docau' else 'sha'
+        lanes.append(f'    <div class="cc-pol" id="ccpol-{code}" data-cc-pol="{code}" role="tabpanel" aria-labelledby="tab-cc-{code}"{" hidden" if i else ""}>\n'
+                     + m.group(1).replace('40ft · USD · CY-CY · LX Pantos rate', '40ft · USD · CY-DOOR (incl. inland delivery) · LX Pantos rate') + '    </div>\n')
     return '''  <section class="lx-page" id="ca-page-cc" data-ca-pod="cc" role="tabpanel" aria-labelledby="tab-ca-pod-cc" hidden>
     <p class="lx-sub"><span class="lx-updated dash-skeleton" data-draw="last-updated-cc" data-source="route_meta">—</span></p>
+    <div class="lx-group">
+      <p class="lx-group-label">POL</p>
+      <nav class="lx-nav" role="tablist" aria-label="Departure port (Caucedo)">
+        <button class="lx-nav-btn" id="tab-cc-skk" role="tab" aria-selected="true" aria-controls="ccpol-skk" data-cc-pol="skk">Shenzhen (Shekou)</button>
+        <button class="lx-nav-btn" id="tab-cc-sha" role="tab" aria-selected="false" aria-controls="ccpol-sha" data-cc-pol="sha">Shanghai</button>
+      </nav>
+    </div>
       <div class="lx-toolbar">
         <label class="lx-toggle">
           <input type="checkbox" class="lx-only-changes">

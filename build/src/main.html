@@ -578,6 +578,17 @@
     btn.addEventListener('click', function () { showNet(btn.dataset.net); });
   });
 
+  // ---- Caucedo POL tabs (Shenzhen / Shanghai), 2026-11-10 ----
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.lx-nav-btn[data-cc-pol]'));
+    var panes = Array.prototype.slice.call(document.querySelectorAll('.cc-pol[data-cc-pol]'));
+    function show(code) {
+      panes.forEach(function (p) { p.hidden = p.dataset.ccPol !== code; });
+      btns.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.ccPol === code ? 'true' : 'false'); });
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.ccPol); }); });
+  })();
+
   // ---- C.America POD navigation ----
   var caPodPages = Array.prototype.slice.call(document.querySelectorAll('.lx-page[data-ca-pod]'));
   var caPodTabs = Array.prototype.slice.call(document.querySelectorAll('.lx-subnav-btn[data-ca-pod]'));

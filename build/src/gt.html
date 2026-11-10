@@ -768,6 +768,7 @@
       'Guatemala': '🇬🇹',
       'Caucedo (DO)': '🇩🇴',
       'Caucedo': '🇩🇴',
+      'Shenzhen (Shekou)': '🇨🇳',
       'Busan': '🇰🇷',
       'Incheon': '🇰🇷',
       'Istanbul': '🇹🇷',
@@ -795,7 +796,7 @@
       span.textContent = flag;
       el.insertBefore(span, el.firstChild);
     }
-    document.querySelectorAll('.lx-nav-btn[data-pol], .lx-subnav-btn[data-pod], .lx-subnav-btn[data-ca-pod]').forEach(addFlag);
+    document.querySelectorAll('.lx-nav-btn[data-pol], .lx-subnav-btn[data-pod], .lx-subnav-btn[data-ca-pod], .lx-nav-btn[data-cc-pol]').forEach(addFlag);
     document.querySelectorAll('h2[id^="lane-"] > span:first-child, h2[id^="lane-"] > span:last-child').forEach(addFlag);
   })();
 })();
