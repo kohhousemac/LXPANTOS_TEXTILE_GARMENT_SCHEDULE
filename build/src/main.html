@@ -170,7 +170,15 @@
 
   dash.draw('last-updated', function (el) {
     withState(el, 'route_meta', function (g) {
-      var rows = (g.data || []).filter(function (r) { return r.group !== 'med' && r.group !== 'us'; });
+      var rows = (g.data || []).filter(function (r) { return r.group !== 'med' && r.group !== 'us' && r.group !== 'ca'; });
+      if (!rows.length) { el.textContent = ''; return; }
+      el.textContent = 'Update : ' + (latestUpdateDate(rows) || rows[0].updateDate);
+    });
+  });
+
+  dash.draw('last-updated-cc', function (el) {
+    withState(el, 'route_meta', function (g) {
+      var rows = (g.data || []).filter(function (r) { return r.group === 'ca'; });
       if (!rows.length) { el.textContent = ''; return; }
       el.textContent = 'Update : ' + (latestUpdateDate(rows) || rows[0].updateDate);
     });

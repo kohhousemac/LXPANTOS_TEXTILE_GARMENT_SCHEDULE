@@ -1,0 +1,107 @@
+[
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM GALAPAGOS",
+  "voyage": "PEX030E19",
+  "etd": "11-03 (Tue)",
+  "eta": "12-14 (Mon)",
+  "tt": 41,
+  "prevEtd": "11-02 (Mon)",
+  "prevEta": "12-13 (Sun)",
+  "prevTt": 41,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "service": "PEX2"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM BIG SUR",
+  "voyage": "PEX050E19",
+  "etd": "11-05 (Thu)",
+  "eta": "12-20 (Sun)",
+  "tt": 45,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": [],
+  "service": "PEX2"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM TENERE",
+  "voyage": "PEX070E19",
+  "etd": "11-11 (Wed)",
+  "eta": "12-28 (Mon)",
+  "tt": 47,
+  "prevEtd": "11-09 (Mon)",
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 48,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "service": "PEX2"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM ESMERALDA",
+  "voyage": "PEX090E19",
+  "etd": "11-16 (Mon)",
+  "eta": "01-03 (Sun)",
+  "tt": 48,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": [],
+  "service": "PEX2"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CSCL LONG BEACH",
+  "voyage": "PEX0B0E19",
+  "etd": "11-23 (Mon)",
+  "eta": "01-11 (Mon)",
+  "tt": 49,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": [],
+  "service": "PEX2"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM CAPE COD",
+  "voyage": "PEX0D0E19",
+  "etd": "11-30 (Mon)",
+  "eta": "01-17 (Sun)",
+  "tt": 48,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": [],
+  "service": "PEX2"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM ANDROMAQUE",
+  "voyage": "PEX0F0E19",
+  "etd": "12-07 (Mon)",
+  "eta": "01-24 (Sun)",
+  "tt": 48,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": [],
+  "service": "PEX2"
+ }
+]

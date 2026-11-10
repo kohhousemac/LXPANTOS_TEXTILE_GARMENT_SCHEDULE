@@ -514,5 +514,29 @@
   "changedCount": 1,
   "excludedCount": 0,
   "vesselCount": 4
+ },
+ {
+  "routeId": "cnsha_docau",
+  "label": "Shanghai → Caucedo",
+  "pol": "Shanghai",
+  "pod": "Caucedo",
+  "group": "ca",
+  "updateDate": "11/10",
+  "newCount": 0,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "cnshk_docau",
+  "label": "Shekou → Caucedo",
+  "pol": "Shekou",
+  "pod": "Caucedo",
+  "group": "ca",
+  "updateDate": "11/10",
+  "newCount": 0,
+  "changedCount": 2,
+  "excludedCount": 0,
+  "vesselCount": 7
  }
 ]

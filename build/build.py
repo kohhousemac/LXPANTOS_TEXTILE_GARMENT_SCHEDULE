@@ -46,6 +46,8 @@ def _mkt_ids():
 MKT_IDS = _mkt_ids()
 
 LANE_NOTES = {
+    'cnsha_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 상해·셔커우 모두 기항, 태평양 → 파나마 운하(Balboa → Manzanillo PA) 경유',
+    'cnshk_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 셔커우 선적, 상해·부산 등 기항 후 파나마 운하 경유',
     'vnhph_uslax': 'MSC PEARL 직항(West Basin) + WHL AP1 직항',
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM TWS 직항(Maher) · 환적편 제외 (WHL은 셔커우 환적만 있어 미포함)',
     'vnsgn_uslgb': 'MSC SENTOSA 직항 → Long Beach(Pier T, 선적 Vung Tau) + WHL AP1 직항 → Los Angeles(선적 Cai Mep)',
@@ -129,7 +131,7 @@ def merge_new_lanes():
     known = {r for _, pods in ASIA for _, r in pods} | {r for _, pods in MED for _, r in pods}
     for row in meta:
         rid = row.get('routeId', '')
-        if rid in known or row.get('group') in ('med', 'us') or not (DATA / f'{rid}.json').exists():
+        if rid in known or row.get('group') in ('med', 'us', 'ca') or not (DATA / f'{rid}.json').exists():
             continue
         a, _, b = rid.partition('_')
         pol, pod = LOCODE.get(a), LOCODE.get(b)
@@ -305,8 +307,34 @@ NI_PAGE = '''
   </section>
 '''
 
+CC_IDS = ['cnsha_docau', 'cnshk_docau']
+CC_NAMES = {'cnsha_docau': ('Shanghai', 'Caucedo'), 'cnshk_docau': ('Shekou', 'Caucedo')}
+
+def cc_page():
+    lanes = []
+    for r in CC_IDS:
+        if not (DATA / f'{r}.json').exists():
+            continue
+        html = lane_page('x', 'x', 'cc', r, CC_NAMES[r][0], CC_NAMES[r][1], False)
+        m = re.search(r'(      <section class="lx-lane".*?\n      </section>\n)', html, re.S)
+        lanes.append(m.group(1).replace('40ft · USD · CY-CY · LX Pantos rate', '40ft · USD · CY-DOOR (incl. inland delivery) · LX Pantos rate'))
+    return '''  <section class="lx-page" id="ca-page-cc" data-ca-pod="cc" role="tabpanel" aria-labelledby="tab-ca-pod-cc" hidden>
+    <p class="lx-sub"><span class="lx-updated dash-skeleton" data-draw="last-updated-cc" data-source="route_meta">—</span></p>
+      <div class="lx-toolbar">
+        <label class="lx-toggle">
+          <input type="checkbox" class="lx-only-changes">
+          <span>Show only new &amp; changed sailings</span>
+        </label>
+      </div>
+''' + ''.join(lanes) + '''  </section>
+'''
+
 def ca_markup():
     old = rd('ca_section.html')
+    # Caucedo: Asia-lane layout (2026-11-10) instead of the old tracker cards
+    s = old.index('  <section class="lx-page" id="ca-page-cc"')
+    e = old.rindex('  </section>')
+    old = old[:s] + cc_page() + old[e:]
     anchor = 'data-ca-pod="cc">Caucedo (DO)</button>\n'
     assert anchor in old, 'Caucedo tab anchor missing'
     old = old.replace(anchor, anchor + NI_TAB, 1)
@@ -375,7 +403,7 @@ def main():
     data_js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
     merge_new_lanes()
-    route_ids = [r for _, pods in ASIA for _, r in pods] + usa_routes() + med_routes()
+    route_ids = [r for _, pods in ASIA for _, r in pods] + usa_routes() + med_routes() + [r for r in CC_IDS if (DATA / f'{r}.json').exists()]
     gt = rd('gt.html')
     marker = '  // ---- POL/POD port flags ----'
     assert marker in gt
