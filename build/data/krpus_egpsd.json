@@ -20,15 +20,12 @@
   "etd": "11-11 (Wed)",
   "eta": "12-22 (Tue)",
   "tt": 41,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
+  "status": "unchanged",
+  "changedFields": [],
   "rotation": "Busan → Ulsan → Ningbo → Shanghai → Tanjung Pelepas → Jeddah → Port Said East",
-  "prevEtd": "11-12 (Thu)",
+  "prevEtd": "11-11 (Wed)",
   "prevEta": "12-22 (Tue)",
-  "prevTt": 40
+  "prevTt": 41
  },
  {
   "carrier": "MSK",
@@ -36,7 +33,7 @@
   "voyage": "645S",
   "etd": "11-12 (Thu)",
   "eta": "12-04 (Fri)",
-  "tt": 22,
+  "tt": 23,
   "status": "changed",
   "changedFields": [
    "tt"
@@ -44,7 +41,7 @@
   "rotation": "Busan → Tanjung Pelepas (T/S) → Port Said East",
   "prevEtd": "11-12 (Thu)",
   "prevEta": "12-04 (Fri)",
-  "prevTt": 23
+  "prevTt": 22
  },
  {
   "carrier": "MSK",
@@ -53,12 +50,12 @@
   "etd": "11-12 (Thu)",
   "eta": "12-04 (Fri)",
   "tt": 22,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": [],
   "rotation": "Busan → Ningbo (T/S) → Port Said East",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null
+  "prevEtd": "11-12 (Thu)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 22
  },
  {
   "carrier": "MSK",
@@ -151,15 +148,12 @@
   "etd": "11-21 (Sat)",
   "eta": "12-19 (Sat)",
   "tt": 28,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
+  "status": "unchanged",
+  "changedFields": [],
   "rotation": "Busan → Ulsan → Ningbo → Shanghai → Tanjung Pelepas → Jeddah → Port Said East",
-  "prevEtd": "11-20 (Fri)",
+  "prevEtd": "11-21 (Sat)",
   "prevEta": "12-19 (Sat)",
-  "prevTt": 29
+  "prevTt": 28
  },
  {
   "carrier": "MSK",
@@ -308,11 +302,11 @@
   "etd": "01-02 (Sat)",
   "eta": "01-28 (Thu)",
   "tt": 26,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": [],
   "rotation": "Busan → Tanjung Pelepas (T/S) → Port Said East",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null
+  "prevEtd": "01-02 (Sat)",
+  "prevEta": "01-28 (Thu)",
+  "prevTt": 26
  }
 ]

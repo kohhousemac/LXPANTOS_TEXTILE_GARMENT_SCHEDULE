@@ -1,6 +1,19 @@
 [
  {
   "carrier": "YANG MING",
+  "vessel": "MSC REEF",
+  "voyage": "MD32643W",
+  "etd": "11-08 (Sun)",
+  "eta": "12-11 (Fri)",
+  "tt": 33,
+  "prevEtd": "11-08 (Sun)",
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 33,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "YANG MING",
   "vessel": "MSC ISTANBUL",
   "voyage": "MD32644W",
   "etd": "11-18 (Wed)",
@@ -16,53 +29,49 @@
   "carrier": "YANG MING",
   "vessel": "MSC INGY",
   "voyage": "MD32645W",
-  "etd": "11-20 (Fri)",
-  "eta": "12-25 (Fri)",
+  "etd": "11-21 (Sat)",
+  "eta": "12-26 (Sat)",
   "tt": 35,
   "prevEtd": "11-20 (Fri)",
   "prevEta": "12-25 (Fri)",
   "prevTt": 35,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "YANG MING",
-  "vessel": "MSC REEF",
-  "voyage": "MD32643W",
-  "etd": "11-08 (Sun)",
-  "eta": "12-11 (Fri)",
-  "tt": 33,
-  "prevEtd": "11-08 (Sun)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 33,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "YANG MING",
   "vessel": "MSC SIXIN",
   "voyage": "MD32647W",
-  "etd": "12-04 (Fri)",
-  "eta": "01-08 (Fri)",
+  "etd": "12-03 (Thu)",
+  "eta": "01-07 (Thu)",
   "tt": 35,
   "prevEtd": "12-04 (Fri)",
   "prevEta": "01-08 (Fri)",
   "prevTt": 35,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "YANG MING",
   "vessel": "MSC VIVIANA",
   "voyage": "MD32649W",
-  "etd": "12-20 (Sun)",
+  "etd": "12-19 (Sat)",
   "eta": "01-25 (Mon)",
-  "tt": 36,
+  "tt": 37,
   "prevEtd": "12-20 (Sun)",
   "prevEta": "01-25 (Mon)",
   "prevTt": 36,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "YANG MING",
