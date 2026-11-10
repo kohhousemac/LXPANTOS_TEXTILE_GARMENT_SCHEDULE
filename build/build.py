@@ -51,7 +51,7 @@ LANE_NOTES = {
     'krpus_ussea': 'SM: PNS',
     'krpus_usnyc': 'HMM·YML: EC1·EC2 / ZIM: ZNS(ZIM North Star) · 공동운항은 운항선사 일정 기준',
     'krpus_ussav': 'HMM·YML: EC1·EC2 / ZIM: ZCP · 공동운항은 운항선사 일정 기준',
-    'krpus_usbal': 'ZIM: ZCP',
+    'krpus_usbal': 'ZIM: ZCP·ZNS(ZIM North Star) · 현재 부산발 ZCP 볼티모어 기항 없음',
     'cnsha_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 상해·셔커우 모두 기항, 태평양 → 파나마 운하(Balboa → Manzanillo PA) 경유',
     'cnsha_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준',
     'cnngb_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준 · 닝보 SKIP 항차는 제외',
