@@ -46,6 +46,12 @@ def _mkt_ids():
 MKT_IDS = _mkt_ids()
 
 LANE_NOTES = {
+    'krpus_uslgb': 'HMM·YML: PS6(→Los Angeles)·MP2(→Long Beach) / SM: CPX(→Long Beach) · 공동운항은 운항선사 일정 기준, 다른 선사 일정은 선사 태그에 마우스',
+    'krpus_usoak': 'HMM·YML: PS6·MP2 · 공동운항은 운항선사 일정 기준',
+    'krpus_ussea': 'SM: PNS',
+    'krpus_usnyc': 'HMM·YML: EC1·EC2 / ZIM: ZNS(ZIM North Star) · 공동운항은 운항선사 일정 기준',
+    'krpus_ussav': 'HMM·YML: EC1·EC2 / ZIM: ZCP · 공동운항은 운항선사 일정 기준',
+    'krpus_usbal': 'ZIM: ZCP',
     'cnsha_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 상해·셔커우 모두 기항, 태평양 → 파나마 운하(Balboa → Manzanillo PA) 경유',
     'cnsha_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준',
     'cnngb_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준 · 닝보 SKIP 항차는 제외',
@@ -66,11 +72,12 @@ LANE_NOTES = {
 USA = [('ushph', 'Haiphong', [('la', 'vnhph_uslax'), ('nyc', 'vnhph_usnyc')]),
        ('ushcm', 'Ho Chi Minh (Vung Tau)', [('la', 'vnsgn_uslgb'), ('nyc', 'vnsgn_usnyc')]),
        ('usjkt', 'Jakarta', [('la', 'idjkt_uslgb'), ('nyc', 'idjkt_usnyc')]),
-       ('uspnh', 'Phnom Penh', [('la', 'khpnh_uslgb'), ('nyc', 'khpnh_usnyc')])]
+       ('uspnh', 'Phnom Penh', [('la', 'khpnh_uslgb'), ('nyc', 'khpnh_usnyc')]),
+       ('uspus', 'Busan', [('la', 'krpus_uslgb'), ('oak', 'krpus_usoak'), ('sea', 'krpus_ussea'), ('nyc', 'krpus_usnyc'), ('sav', 'krpus_ussav'), ('bal', 'krpus_usbal')])]
 USA_IDS = [r for _, _, pods in USA for _, r in pods]
-USA_POD = {'la': 'LA / Long Beach', 'nyc': 'New York'}
-USA_PODNAME = {'uslax': 'Los Angeles', 'uslgb': 'Long Beach', 'usnyc': 'New York'}
-USA_POLNAME = {'vnhph': 'Haiphong', 'vnsgn': 'Ho Chi Minh', 'idjkt': 'Jakarta', 'khpnh': 'Phnom Penh'}
+USA_POD = {'la': 'LA / Long Beach', 'nyc': 'New York', 'oak': 'Oakland', 'sea': 'Seattle', 'sav': 'Savannah', 'bal': 'Baltimore'}
+USA_PODNAME = {'uslax': 'Los Angeles', 'uslgb': 'Long Beach', 'usnyc': 'New York', 'usoak': 'Oakland', 'ussea': 'Seattle', 'ussav': 'Savannah', 'usbal': 'Baltimore'}
+USA_POLNAME = {'vnhph': 'Haiphong', 'vnsgn': 'Ho Chi Minh', 'idjkt': 'Jakarta', 'khpnh': 'Phnom Penh', 'krpus': 'Busan'}
 CALLING_ORDER = set()  # Calling Order column removed 2026-11-10 (port-call panel shows every call)
 BW_SUB = {
     'cnshk_vnsgn': '완하이 모선 실측 입항(ETA)→접안(ETB) · 서커우~호치민 사이 기항만 · 최근 60일 · 막대 옆: 최대 대기·기항 수',
@@ -228,7 +235,7 @@ def usa_markup():
         out.append('    </nav>')
         for j, (pod, route) in enumerate(pods):
             a, _, z = route.partition('_')
-            out.append(lane_page(f'page-{pc}-{pod}', f'tab-pod-{pc}-{pod}', pod, route, USA_POLNAME[a], 'LA / Long Beach' if route == 'vnsgn_uslgb' else USA_PODNAME[z], j > 0))
+            out.append(lane_page(f'page-{pc}-{pod}', f'tab-pod-{pc}-{pod}', pod, route, USA_POLNAME[a], 'LA / Long Beach' if route in ('vnsgn_uslgb', 'krpus_uslgb') else USA_PODNAME[z], j > 0))
         out.append('  </section>')
     out.append('  </section>')
     return '\n'.join(out)

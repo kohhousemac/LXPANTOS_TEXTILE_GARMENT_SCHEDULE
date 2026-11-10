@@ -1,0 +1,72 @@
+[
+ {
+  "carrier": "SM",
+  "vessel": "SM QINGDAO",
+  "voyage": "2608E",
+  "etd": "11-12 (Thu)",
+  "eta": "11-25 (Wed)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "service": "PNS"
+ },
+ {
+  "carrier": "SM",
+  "vessel": "SM PORTLAND",
+  "voyage": "2608E",
+  "etd": "11-16 (Mon)",
+  "eta": "11-29 (Sun)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "service": "PNS"
+ },
+ {
+  "carrier": "SM",
+  "vessel": "SM TIANJIN",
+  "voyage": "2608E",
+  "etd": "11-22 (Sun)",
+  "eta": "12-04 (Fri)",
+  "tt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "service": "PNS"
+ },
+ {
+  "carrier": "SM",
+  "vessel": "SM MUMBAI",
+  "voyage": "2608E",
+  "etd": "11-28 (Sat)",
+  "eta": "12-11 (Fri)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "service": "PNS"
+ },
+ {
+  "carrier": "SM",
+  "vessel": "SM SEOUL",
+  "voyage": "2609E",
+  "etd": "12-03 (Thu)",
+  "eta": "12-16 (Wed)",
+  "tt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "service": "PNS"
+ }
+]

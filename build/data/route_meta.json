@@ -538,5 +538,77 @@
   "changedCount": 2,
   "excludedCount": 0,
   "vesselCount": 7
+ },
+ {
+  "routeId": "krpus_uslgb",
+  "label": "Busan → LA / Long Beach",
+  "pol": "Busan",
+  "pod": "LA / Long Beach",
+  "group": "us",
+  "updateDate": "11/10",
+  "newCount": 13,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 13
+ },
+ {
+  "routeId": "krpus_usoak",
+  "label": "Busan → Oakland",
+  "pol": "Busan",
+  "pod": "Oakland",
+  "group": "us",
+  "updateDate": "11/10",
+  "newCount": 9,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 9
+ },
+ {
+  "routeId": "krpus_ussea",
+  "label": "Busan → Seattle",
+  "pol": "Busan",
+  "pod": "Seattle",
+  "group": "us",
+  "updateDate": "11/10",
+  "newCount": 5,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 5
+ },
+ {
+  "routeId": "krpus_usnyc",
+  "label": "Busan → New York",
+  "pol": "Busan",
+  "pod": "New York",
+  "group": "us",
+  "updateDate": "11/10",
+  "newCount": 16,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 16
+ },
+ {
+  "routeId": "krpus_ussav",
+  "label": "Busan → Savannah",
+  "pol": "Busan",
+  "pod": "Savannah",
+  "group": "us",
+  "updateDate": "11/10",
+  "newCount": 16,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 16
+ },
+ {
+  "routeId": "krpus_usbal",
+  "label": "Busan → Baltimore",
+  "pol": "Busan",
+  "pod": "Baltimore",
+  "group": "us",
+  "updateDate": "11/10",
+  "newCount": 1,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 1
  }
 ]

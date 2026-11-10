@@ -1,0 +1,16 @@
+[
+ {
+  "carrier": "ZIM",
+  "vessel": "ZIM CORAL",
+  "voyage": "13E",
+  "etd": "11-14 (Sat)",
+  "eta": "12-08 (Tue)",
+  "tt": 24,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "service": "ZCP"
+ }
+]
