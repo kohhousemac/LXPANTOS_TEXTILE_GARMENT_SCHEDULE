@@ -17,30 +17,36 @@
   "carrier": "CMA CGM",
   "vessel": "CMA CGM INTEGRITY",
   "voyage": "CBX0I0E19",
-  "etd": "11-15 (Sun)",
+  "etd": "11-16 (Mon)",
   "eta": "12-26 (Sat)",
-  "tt": 41,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Vung Tau → New York (직항)",
+  "tt": 40,
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 41,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
   "service": "CBX"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "CMA CGM A. LINCOLN",
   "voyage": "CBX0K0E19",
-  "etd": "11-17 (Tue)",
-  "eta": "01-01 (Fri)",
+  "etd": "11-18 (Wed)",
+  "eta": "01-02 (Sat)",
   "tt": 45,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Vung Tau → New York (직항)",
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "01-01 (Fri)",
+  "prevTt": 45,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
   "service": "CBX"
  },
  {
@@ -70,9 +76,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → New York (직항)",
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
   "service": "CBX"
  },
  {
@@ -117,9 +123,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Vung Tau → New York (직항)",
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
   "service": "CBX"
  }
 ]

@@ -17,15 +17,19 @@
   "carrier": "CMA CGM",
   "vessel": "EVER MACRO",
   "voyage": "TWS0I0E19",
-  "etd": "11-13 (Fri)",
-  "eta": "12-26 (Sat)",
-  "tt": 43,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Haiphong → New York (직항)",
+  "etd": "11-16 (Mon)",
+  "eta": "12-25 (Fri)",
+  "tt": 39,
+  "prevEtd": "11-13 (Fri)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 43,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "rotation": "Haiphong → Hong Kong → Kaohsiung → Yantian → Colon → Savannah → New York",
   "service": "TWS"
  },
  {
@@ -55,9 +59,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → New York (직항)",
+  "rotation": "Haiphong → Hong Kong → Kaohsiung → Yantian → Colon → Savannah → New York",
   "service": "TWS"
  },
  {
@@ -88,9 +92,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → New York (직항)",
+  "rotation": "Haiphong → Hong Kong → Kaohsiung → Yantian → Colon → Savannah → New York",
   "service": "TWS"
  },
  {
@@ -120,9 +124,9 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": [],
-  "rotation": "Haiphong → New York (직항)",
+  "rotation": "Haiphong → Hong Kong → Kaohsiung → Yantian → Colon → Savannah → New York",
   "service": "TWS"
  },
  {
