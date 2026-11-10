@@ -51,8 +51,10 @@
     });
   }
 
+  // Guatemala lanes read their calls from the calc built off the daily Wan Hai collection.
+  var PC_SRC = { cnsha_gtpqz: 'port_calls_gt', cnngb_gtpqz: 'port_calls_gt' };
   function groupsFor(id) {
-    var g = dash.data('port_calls_asia');
+    var g = dash.data(PC_SRC[id] || 'port_calls_asia');
     var by = {};
     if (g.status !== 'ok') return { status: g.status, by: by };
     (g.data || []).forEach(function (r) {

@@ -47,6 +47,8 @@ MKT_IDS = _mkt_ids()
 
 LANE_NOTES = {
     'cnsha_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 상해·셔커우 모두 기항, 태평양 → 파나마 운하(Balboa → Manzanillo PA) 경유',
+    'cnsha_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준',
+    'cnngb_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준 · 닝보 SKIP 항차는 제외',
     'cnshk_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 셔커우 선적, 상해·부산 등 기항 후 파나마 운하 경유',
     'vnhph_uslax': 'MSC PEARL 직항(West Basin) + WHL AP1 직항',
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM TWS 직항(Maher) · 환적편 제외 (WHL은 셔커우 환적만 있어 미포함)',
@@ -318,15 +320,16 @@ def cc_page():
         html = lane_page('x', 'x', 'cc', r, CC_NAMES[r][0], CC_NAMES[r][1], False)
         m = re.search(r'(      <section class="lx-lane".*?\n      </section>\n)', html, re.S)
         code = 'skk' if r == 'cnshk_docau' else 'sha'
-        lanes.append(f'    <div class="cc-pol" id="ccpol-{code}" data-cc-pol="{code}" role="tabpanel" aria-labelledby="tab-cc-{code}"{" hidden" if i else ""}>\n'
+        lanes.append(f'    <div class="xpol" id="ccpol-{code}" data-xpol="{code}" role="tabpanel" aria-labelledby="tab-cc-{code}">\n'
                      + m.group(1).replace('40ft · USD · CY-CY · LX Pantos rate', '40ft · USD · CY-DOOR (incl. inland delivery) · LX Pantos rate') + '    </div>\n')
     return '''  <section class="lx-page" id="ca-page-cc" data-ca-pod="cc" role="tabpanel" aria-labelledby="tab-ca-pod-cc" hidden>
     <p class="lx-sub"><span class="lx-updated dash-skeleton" data-draw="last-updated-cc" data-source="route_meta">—</span></p>
     <div class="lx-group">
       <p class="lx-group-label">POL</p>
       <nav class="lx-nav" role="tablist" aria-label="Departure port (Caucedo)">
-        <button class="lx-nav-btn" id="tab-cc-skk" role="tab" aria-selected="true" aria-controls="ccpol-skk" data-cc-pol="skk">Shenzhen (Shekou)</button>
-        <button class="lx-nav-btn" id="tab-cc-sha" role="tab" aria-selected="false" aria-controls="ccpol-sha" data-cc-pol="sha">Shanghai</button>
+        <button class="lx-nav-btn" id="tab-cc-all" role="tab" aria-selected="true" data-xpol="all">ALL</button>
+        <button class="lx-nav-btn" id="tab-cc-skk" role="tab" aria-selected="false" aria-controls="ccpol-skk" data-xpol="skk">Shenzhen (Shekou)</button>
+        <button class="lx-nav-btn" id="tab-cc-sha" role="tab" aria-selected="false" aria-controls="ccpol-sha" data-xpol="sha">Shanghai</button>
       </nav>
     </div>
       <div class="lx-toolbar">
@@ -338,12 +341,49 @@ def cc_page():
 ''' + ''.join(lanes) + '''  </section>
 '''
 
+GT_IDS = ['cnsha_gtpqz', 'cnngb_gtpqz']
+
+def gt_lane(route, pol):
+    html = lane_page('x', 'x', 'gt', route, pol, 'Puerto Quetzal', False)
+    m = re.search(r'(      <section class="lx-lane".*?\n      </section>\n)', html, re.S)
+    s = m.group(1)
+    s = re.sub(r'\n\s*<div class="lx-badges[^\n]*</div>', '', s)
+    s = s.replace('data-source="' + route + '"', 'data-source="sailings"').replace('data-source="port_calls_asia"', 'data-source="port_calls sailings"')
+    s = s.replace('<span class="lx-code">' + route.split('_')[0].upper() + ' <i>→</i> GTPQZ</span>', '<span class="lx-code">' + route.split('_')[0].upper() + ' <i>→</i> GTPRQ</span>')
+    return s
+
+def gt_page_head():
+    return """    <p class="lx-sub"><span class="lx-updated dash-skeleton" data-draw="last-updated-gt" data-source="sailings">—</span></p>
+    <div class="lx-group">
+      <p class="lx-group-label">POL</p>
+      <nav class="lx-nav" role="tablist" aria-label="Departure port (Guatemala)">
+        <button class="lx-nav-btn" id="tab-gt-all" role="tab" aria-selected="true" data-xpol="all">ALL</button>
+        <button class="lx-nav-btn" id="tab-gt-sha" role="tab" aria-selected="false" aria-controls="gtpol-sha" data-xpol="sha">Shanghai</button>
+        <button class="lx-nav-btn" id="tab-gt-ngb" role="tab" aria-selected="false" aria-controls="gtpol-ngb" data-xpol="ngb">Ningbo</button>
+      </nav>
+    </div>
+      <div class="lx-toolbar">
+        <label class="lx-toggle">
+          <input type="checkbox" class="lx-only-changes">
+          <span>Show only new &amp; changed sailings</span>
+        </label>
+      </div>
+    <div class="xpol" id="gtpol-sha" data-xpol="sha" role="tabpanel" aria-labelledby="tab-gt-sha">
+""" + gt_lane('cnsha_gtpqz', 'Shanghai') + """    </div>
+    <div class="xpol" id="gtpol-ngb" data-xpol="ngb" role="tabpanel" aria-labelledby="tab-gt-ngb">
+""" + gt_lane('cnngb_gtpqz', 'Ningbo') + """    </div>
+"""
+
 def ca_markup():
     old = rd('ca_section.html')
     # Caucedo: Asia-lane layout (2026-11-10) instead of the old tracker cards
     s = old.index('  <section class="lx-page" id="ca-page-cc"')
     e = old.rindex('  </section>')
     old = old[:s] + cc_page() + old[e:]
+    # Guatemala: POL tabs + Asia-style lanes; keep market rate / berthing wait / change history cards below
+    gs = old.index('    <header id="gt-top">')
+    ge = old.index('    <section class="card" id="gt-freight">')
+    old = old[:gs].replace('  <div class="gt">\n', '') + gt_page_head() + '  <div class="gt">\n' + old[ge:]
     anchor = 'data-ca-pod="cc">Caucedo (DO)</button>\n'
     assert anchor in old, 'Caucedo tab anchor missing'
     old = old.replace(anchor, anchor + NI_TAB, 1)
@@ -412,7 +452,7 @@ def main():
     data_js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
     merge_new_lanes()
-    route_ids = [r for _, pods in ASIA for _, r in pods] + usa_routes() + med_routes() + [r for r in CC_IDS if (DATA / f'{r}.json').exists()]
+    route_ids = [r for _, pods in ASIA for _, r in pods] + usa_routes() + med_routes() + [r for r in CC_IDS if (DATA / f'{r}.json').exists()] + GT_IDS
     gt = rd('gt.html')
     marker = '  // ---- POL/POD port flags ----'
     assert marker in gt

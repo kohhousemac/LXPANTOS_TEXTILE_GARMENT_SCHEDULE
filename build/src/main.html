@@ -578,16 +578,27 @@
     btn.addEventListener('click', function () { showNet(btn.dataset.net); });
   });
 
-  // ---- Caucedo POL tabs (Shenzhen / Shanghai), 2026-11-10 ----
+  // ---- POL tabs inside a C.America POD page: ALL (both lanes) / one port, 2026-11-10 ----
   (function () {
-    var btns = Array.prototype.slice.call(document.querySelectorAll('.lx-nav-btn[data-cc-pol]'));
-    var panes = Array.prototype.slice.call(document.querySelectorAll('.cc-pol[data-cc-pol]'));
-    function show(code) {
-      panes.forEach(function (p) { p.hidden = p.dataset.ccPol !== code; });
-      btns.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.ccPol === code ? 'true' : 'false'); });
-    }
-    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.ccPol); }); });
+    Array.prototype.slice.call(document.querySelectorAll('.lx-page[data-ca-pod]')).forEach(function (page) {
+      var btns = Array.prototype.slice.call(page.querySelectorAll('.lx-nav-btn[data-xpol]'));
+      var panes = Array.prototype.slice.call(page.querySelectorAll('.xpol[data-xpol]'));
+      if (!btns.length) return;
+      function show(code) {
+        panes.forEach(function (p) { p.hidden = code !== 'all' && p.dataset.xpol !== code; });
+        btns.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.xpol === code ? 'true' : 'false'); });
+      }
+      btns.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.xpol); }); });
+    });
   })();
+
+  dash.draw('last-updated-gt', function (el) {
+    var g = dash.data('sailings');
+    if (g.status !== 'ok') return;
+    el.classList.remove('dash-skeleton');
+    var m = (g.data || []).reduce(function (x, r) { return r.collected_at > x ? r.collected_at : x; }, '');
+    el.textContent = m ? 'Update : ' + m.slice(5, 10).replace('-', '/') + ' ' + m.slice(11, 16) : '';
+  });
 
   // ---- C.America POD navigation ----
   var caPodPages = Array.prototype.slice.call(document.querySelectorAll('.lx-page[data-ca-pod]'));

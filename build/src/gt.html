@@ -328,6 +328,7 @@
   // ---- sailings table
   (() => {
     const table = document.getElementById('gt-sail-table');
+    if (!table) return;
     const body = table.tBodies[0];
     const q = document.getElementById('gt-sail-q');
     let stage = '', sortKey = 'pq_eta', dir = 1;
@@ -455,6 +456,7 @@
   // ---- rotation
   (() => {
     const pick = document.getElementById('gt-vsl-pick');
+    if (!pick) return;
     const body = document.getElementById('gt-rot-table').tBodies[0];
     let chosen = '', chosenVoy = '';
     pick.addEventListener('change', () => { chosen = pick.value; chosenVoy = ''; draw(); });
@@ -796,7 +798,7 @@
       span.textContent = flag;
       el.insertBefore(span, el.firstChild);
     }
-    document.querySelectorAll('.lx-nav-btn[data-pol], .lx-subnav-btn[data-pod], .lx-subnav-btn[data-ca-pod], .lx-nav-btn[data-cc-pol]').forEach(addFlag);
+    document.querySelectorAll('.lx-nav-btn[data-pol], .lx-subnav-btn[data-pod], .lx-subnav-btn[data-ca-pod], .lx-nav-btn[data-xpol]').forEach(addFlag);
     document.querySelectorAll('h2[id^="lane-"] > span:first-child, h2[id^="lane-"] > span:last-child').forEach(addFlag);
   })();
 })();

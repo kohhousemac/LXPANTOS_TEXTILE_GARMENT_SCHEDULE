@@ -131,3 +131,71 @@ dash.calc('sailings_cc', {
   },
 });
 </script>
+
+<script>
+// Guatemala lanes (2026-11-10): Shanghai / Ningbo → Puerto Quetzal in the Asia-lane row shape,
+// derived from the daily Wan Hai collection (sailings, port_calls) so they never drift from it.
+(function () {
+  var DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  function T(s) { return s ? new Date(String(s).replace(' ', 'T') + (String(s).length <= 10 ? 'T00:00' : '')).getTime() : NaN; }
+  function md(ms) { var d = new Date(ms); return ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + ' (' + DOW[d.getDay()] + ')'; }
+  function day(ms) { var d = new Date(ms); return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function lane(sailings, pol) {
+    var now = Date.now();
+    var latest = sailings.reduce(function (m, r) { return r.collected_at > m ? r.collected_at : m; }, '').slice(0, 10);
+    return sailings.filter(function (r) {
+      var e = r[pol + '_etd'], st = r[pol + '_status'];
+      if (!e || st === 'SKIP' || !r.pq_eta) return false;
+      return T(r.pq_eta) >= now - 14 * 864e5 && T(e) <= now + 28 * 864e5;
+    }).map(function (r) {
+      var e = T(r[pol + '_etd']), a = T(r.pq_eta);
+      var row = { carrier: 'WHL', vessel: r.vessel, voyage: r.voyage, service: r.service, etd: md(e), eta: md(a),
+        tt: Math.round((day(a) - day(e)) / 864e5), prevEtd: null, prevEta: null, prevTt: null, status: 'same', changedFields: [] };
+      var sh = Number(r.eta_shift_days);
+      if (r.eta_shift_days != null && Math.abs(sh) >= 0.25) {
+        var pa = a - sh * 864e5;
+        row.status = 'changed'; row.changedFields = ['eta', 'tt'];
+        row.prevEta = md(pa); row.prevEtd = row.etd; row.prevTt = Math.round((day(pa) - day(e)) / 864e5);
+      } else if (r.first_seen && r.first_seen === latest) row.status = 'new';
+      return row;
+    });
+  }
+  function sorted(rows, sailings, pol) {
+    var key = {}; sailings.forEach(function (r) { key[r.vessel + '|' + r.voyage] = T(r[pol + '_etd']); });
+    return rows.sort(function (a, b) { return key[a.vessel + '|' + a.voyage] - key[b.vessel + '|' + b.voyage]; });
+  }
+  dash.calc('cnsha_gtpqz', { title: 'Shanghai → Puerto Quetzal', description: 'WHL sailings from the daily Wan Hai collection (sailings), Asia-lane shape.', inputs: ['sailings'],
+    fn: function (s) { return sorted(lane(s, 'sha'), s, 'sha'); } });
+  dash.calc('cnngb_gtpqz', { title: 'Ningbo → Puerto Quetzal', description: 'WHL sailings from the daily Wan Hai collection (sailings), Asia-lane shape.', inputs: ['sailings'],
+    fn: function (s) { return sorted(lane(s, 'ngb'), s, 'ngb'); } });
+  function title(p) { return String(p || '').toLowerCase().replace(/(^|[\s(])\w/g, function (m) { return m.toUpperCase(); }); }
+  dash.calc('port_calls_gt', { title: 'Port calls (Guatemala lanes)', description: 'POL → Puerto Quetzal calls per sailing from port_calls, port_calls_asia row shape.', inputs: ['sailings', 'port_calls'],
+    fn: function (sailings, pcs) {
+      var byV = {};
+      pcs.forEach(function (c) { (byV[c.vessel] = byV[c.vessel] || []).push(c); });
+      Object.keys(byV).forEach(function (v) { byV[v].sort(function (a, b) { return T(a.eta || a.etd) - T(b.eta || b.etd); }); });
+      var out = [];
+      [['cnsha_gtpqz', 'SHANGHAI', 'sha'], ['cnngb_gtpqz', 'NINGBO', 'ngb']].forEach(function (L) {
+        sailings.forEach(function (r) {
+          if (!r[L[2] + '_etd'] || r[L[2] + '_status'] === 'SKIP') return;
+          var cs = byV[r.vessel] || [];
+          var i0 = -1;
+          for (var i = 0; i < cs.length; i++) if (cs[i].port === L[1] && cs[i].out_voy === r.voyage && cs[i].status !== 'SKIP') { i0 = i; break; }
+          if (i0 < 0) return;
+          var seg = [];
+          for (var k = i0; k < cs.length; k++) { seg.push(cs[k]); if (cs[k].port === 'PUERTO QUETZAL' && cs[k].status !== 'SKIP') break; }
+          if (seg[seg.length - 1].port !== 'PUERTO QUETZAL') return;
+          seg.forEach(function (c, j) {
+            out.push({ routeId: L[0], carrier: 'WHL', vessel: r.vessel, voyage: r.voyage, seq: j + 1, port: title(c.port),
+              role: j === 0 ? 'POL' : (j === seg.length - 1 ? 'POD' : 'CALL'),
+              eta: j === 0 ? '' : (c.status === 'SKIP' ? '' : c.eta), etd: j === seg.length - 1 ? '' : (c.status === 'SKIP' ? '' : c.etd),
+              status: c.status === 'LONGTERM' ? 'ESTIMATED' : c.status, collectedAt: (r.collected_at || '').slice(0, 10) });
+          });
+        });
+      });
+      return out;
+    } });
+  // Tables/panels may have drawn before these calcs existed: draw them again now.
+  ['rows-cnsha_gtpqz', 'rows-cnngb_gtpqz', 'pc-cnsha_gtpqz', 'pc-cnngb_gtpqz', 'last-updated-gt'].forEach(function (n) { try { dash.draw(n); } catch (e) {} });
+})();
+</script>
