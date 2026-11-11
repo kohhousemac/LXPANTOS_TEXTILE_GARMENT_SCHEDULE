@@ -1,131 +1,171 @@
 [
  {
+  "rotation": "Vung Tau → Singapore → New York",
   "carrier": "MSC",
   "vessel": "MSC VITTORIA",
   "voyage": "GU644W",
-  "etd": "11-14 (Sat)",
-  "eta": "12-12 (Sat)",
-  "tt": 28,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": [],
-  "rotation": "Vung Tau → Singapore → New York"
+  "etd": "11-12 (Thu)",
+  "eta": "12-14 (Mon)",
+  "tt": 32,
+  "service": "AMERICA SERVICE",
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "12-12 (Sat)",
+  "prevTt": 28,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
  },
  {
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
+  "service": "CBX",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM INTEGRITY",
   "voyage": "CBX0I0E19",
   "etd": "11-16 (Mon)",
   "eta": "12-26 (Sat)",
   "tt": 40,
-  "prevEtd": "11-15 (Sun)",
+  "prevEtd": "11-16 (Mon)",
   "prevEta": "12-26 (Sat)",
-  "prevTt": 41,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
-  "service": "CBX"
+  "prevTt": 40,
+  "status": "same",
+  "changedFields": []
  },
  {
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
+  "service": "CBX",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM A. LINCOLN",
   "voyage": "CBX0K0E19",
   "etd": "11-18 (Wed)",
-  "eta": "01-02 (Sat)",
-  "tt": 45,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "01-01 (Fri)",
+  "eta": "01-03 (Sun)",
+  "tt": 46,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "01-02 (Sat)",
   "prevTt": 45,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
-  "service": "CBX"
+   "eta",
+   "tt"
+  ]
  },
  {
+  "rotation": "Vung Tau → Singapore → New York",
   "carrier": "MSC",
   "vessel": "MSC TOGO",
   "voyage": "GU645W",
   "etd": "11-22 (Sun)",
   "eta": "12-20 (Sun)",
   "tt": 28,
+  "service": "AMERICA SERVICE",
   "prevEtd": "11-22 (Sun)",
-  "prevEta": "12-19 (Sat)",
-  "prevTt": 27,
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 28,
   "status": "same",
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Singapore → New York"
+  "changedFields": []
  },
  {
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
+  "service": "CBX",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ALASKA",
   "voyage": "CBX0M0E19",
   "etd": "11-24 (Tue)",
-  "eta": "01-08 (Fri)",
-  "tt": 45,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": [],
-  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
-  "service": "CBX"
+  "eta": "01-09 (Sat)",
+  "tt": 46,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "01-08 (Fri)",
+  "prevTt": 45,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
+  "rotation": "Vung Tau → Singapore → New York",
   "carrier": "MSC",
   "vessel": "MSC UGANDA",
   "voyage": "GU646W",
-  "etd": "11-28 (Sat)",
-  "eta": "12-26 (Sat)",
+  "etd": "11-30 (Mon)",
+  "eta": "12-28 (Mon)",
   "tt": 28,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-29 (Tue)",
-  "prevTt": 29,
+  "service": "AMERICA SERVICE",
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 28,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Singapore → New York"
+   "eta"
+  ]
  },
  {
-  "carrier": "MSC",
-  "vessel": "MSC VANCOUVER",
-  "voyage": "GU647W",
-  "etd": "12-01 (Tue)",
-  "eta": "12-31 (Thu)",
-  "tt": 30,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": [],
-  "rotation": "Vung Tau → Singapore → New York"
- },
- {
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
+  "service": "CBX",
   "carrier": "CMA CGM",
   "vessel": "APL ESPLANADE",
   "voyage": "CBX0O0E19",
-  "etd": "12-02 (Wed)",
-  "eta": "01-15 (Fri)",
+  "etd": "12-03 (Thu)",
+  "eta": "01-16 (Sat)",
   "tt": 44,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "01-15 (Fri)",
+  "prevTt": 44,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "rotation": "Vung Tau → Singapore → New York",
+  "carrier": "MSC",
+  "vessel": "MSC VANCOUVER",
+  "voyage": "GU647W",
+  "etd": "12-04 (Fri)",
+  "eta": "12-31 (Thu)",
+  "tt": 27,
+  "service": "AMERICA SERVICE",
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-31 (Thu)",
+  "prevTt": 30,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC MAEVA",
+  "voyage": "GU648W",
+  "etd": "12-08 (Tue)",
+  "eta": "01-07 (Thu)",
+  "tt": 30,
+  "service": "AMERICA SERVICE",
+  "rotation": "Vung Tau → Singapore → New York",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "same",
-  "changedFields": [],
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM T. ROOSEVELT",
+  "voyage": "CBX0Q0E19",
+  "etd": "12-09 (Wed)",
+  "eta": "01-23 (Sat)",
+  "tt": 45,
+  "service": "CBX",
   "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
-  "service": "CBX"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  }
 ]

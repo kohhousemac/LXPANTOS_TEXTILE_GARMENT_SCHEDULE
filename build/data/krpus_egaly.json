@@ -14,31 +14,27 @@
   "changedFields": []
  },
  {
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM MONTE CRISTO",
   "voyage": "PHX080W19",
   "etd": "11-16 (Mon)",
   "eta": "12-10 (Thu)",
   "tt": 24,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 26,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": "11-16 (Mon)",
+  "prevEta": "12-10 (Thu)",
+  "prevTt": 24,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM D'ARTAGNAN",
   "voyage": "PHX0C0W19",
   "etd": "11-22 (Sun)",
   "eta": "12-17 (Thu)",
   "tt": 25,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "prevEtd": "11-22 (Sun)",
   "prevEta": "12-17 (Thu)",
   "prevTt": 25,
@@ -46,115 +42,17 @@
   "changedFields": []
  },
  {
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ADONIS",
   "voyage": "PHX0E0W19",
   "etd": "11-27 (Fri)",
   "eta": "12-24 (Thu)",
   "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "prevEtd": "11-27 (Fri)",
   "prevEta": "12-24 (Thu)",
   "prevTt": 27,
   "status": "unchanged",
   "changedFields": []
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM APOLLON",
-  "voyage": "PHX0I0W19",
-  "etd": "12-10 (Thu)",
-  "eta": "01-06 (Wed)",
-  "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "01-06 (Wed)",
-  "prevTt": 27,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM PLATINUM",
-  "voyage": "PHX0K0W19",
-  "etd": "12-17 (Thu)",
-  "eta": "01-13 (Wed)",
-  "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "12-17 (Thu)",
-  "prevEta": "01-13 (Wed)",
-  "prevTt": 27,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM SAO PAULO",
-  "voyage": "PHX0M0W19",
-  "etd": "12-27 (Sun)",
-  "eta": "01-23 (Sat)",
-  "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "12-26 (Sat)",
-  "prevEta": "01-22 (Fri)",
-  "prevTt": 27,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM ALCESTE",
-  "voyage": "PHX0Q0W19",
-  "etd": "01-01 (Fri)",
-  "eta": "01-28 (Thu)",
-  "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "01-02 (Sat)",
-  "prevEta": "01-30 (Sat)",
-  "prevTt": 28,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM ANTIGONE",
-  "voyage": "PHX0O0W19",
-  "etd": "01-01 (Fri)",
-  "eta": "01-28 (Thu)",
-  "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "01-04 (Mon)",
-  "prevEta": "01-31 (Sun)",
-  "prevTt": 27,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM CARMEN",
-  "voyage": "PHX0S0W19",
-  "etd": "01-17 (Sun)",
-  "eta": "02-13 (Sat)",
-  "tt": 27,
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "prevEtd": "01-15 (Fri)",
-  "prevEta": "02-12 (Fri)",
-  "prevTt": 28,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
  }
 ]

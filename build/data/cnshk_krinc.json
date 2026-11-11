@@ -9,10 +9,8 @@
   "prevEtd": "11-05 (Thu)",
   "prevEta": "11-08 (Sun)",
   "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "carrier"
-  ],
+  "status": "departed",
+  "changedFields": [],
   "closedCarriers": "HEUNG-A / NAMSUNG / SINOKOR"
  },
  {
@@ -21,7 +19,7 @@
   "etd": "11-07 (Sat)",
   "eta": "11-10 (Tue)",
   "tt": 3,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": [],
   "carrier": "KMTC / NAMSUNG",
   "bookingClosed": true,
@@ -34,7 +32,7 @@
   "etd": "11-07 (Sat)",
   "eta": "11-11 (Wed)",
   "tt": 4,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": [],
   "carrier": "KMTC / PANOCEAN",
   "bookingClosed": true,
@@ -51,23 +49,10 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": [],
   "bookingClosed": true,
   "closedCarriers": "KMTC"
- },
- {
-  "vessel": "KMTC OSAKA",
-  "voyage": "2611N",
-  "etd": "11-09 (Mon)",
-  "eta": "11-12 (Thu)",
-  "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "KMTC / NAMSUNG",
-  "bookingClosed": true,
-  "altDates": "KMTC 11-11 (Wed)→11-14 (Sat)",
-  "closedCarriers": "KMTC / NAMSUNG"
  },
  {
   "vessel": "POS QINGDAO",
@@ -75,148 +60,197 @@
   "etd": "11-10 (Tue)",
   "eta": "11-13 (Fri)",
   "tt": 3,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": [],
   "carrier": "PANOCEAN"
  },
  {
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC OSAKA",
+  "voyage": "2611N",
+  "etd": "11-12 (Thu)",
+  "eta": "11-15 (Sun)",
+  "tt": 3,
+  "prevEtd": "11-09 (Mon)",
+  "prevEta": "11-12 (Thu)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "closedCarriers": "KMTC"
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2608N",
-  "etd": "11-11 (Wed)",
-  "eta": "11-14 (Sat)",
+  "etd": "11-12 (Thu)",
+  "eta": "11-15 (Sun)",
   "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
-  "bookingClosed": true,
-  "altDates": "NAMSUNG 11-12 (Thu)→11-15 (Sun); KMTC 11-13 (Fri)→11-16 (Mon)",
-  "closedCarriers": "HEUNG-A / KMTC / NAMSUNG / SINOKOR"
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-14 (Sat)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "altDates": "KMTC 11-14 (Sat)→11-16 (Mon); NAMSUNG 11-13 (Fri)→11-16 (Mon)",
+  "closedCarriers": "KMTC / NAMSUNG / SINOKOR"
  },
  {
   "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2621N",
-  "etd": "11-12 (Thu)",
-  "eta": "11-16 (Mon)",
+  "etd": "11-13 (Fri)",
+  "eta": "11-17 (Tue)",
   "tt": 4,
   "prevEtd": "11-12 (Thu)",
   "prevEta": "11-16 (Mon)",
   "prevTt": 4,
   "status": "changed",
   "changedFields": [
-   "carrier"
+   "etd",
+   "eta"
   ],
-  "bookingClosed": true,
-  "closedCarriers": "KMTC / NAMSUNG"
+  "closedCarriers": "KMTC / NAMSUNG",
+  "bookingClosed": true
  },
  {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
-  "vessel": "POS GUANGZHOU",
-  "voyage": "1076N",
-  "etd": "11-15 (Sun)",
-  "eta": "11-19 (Thu)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "altDates": "PANOCEAN 11-15 (Sun)→11-18 (Wed); NAMSUNG 11-15 (Sun)→11-20 (Fri)",
-  "closedCarriers": "KMTC"
- },
- {
+  "carrier": "NAMSUNG",
   "vessel": "STARSHIP VENUS",
   "voyage": "2609N",
   "etd": "11-15 (Sun)",
   "eta": "11-20 (Fri)",
   "tt": 5,
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-20 (Fri)",
+  "prevTt": 5,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "NAMSUNG"
+  "closedCarriers": "NAMSUNG",
+  "bookingClosed": true
  },
  {
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2608N",
-  "etd": "11-17 (Tue)",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "POS GUANGZHOU",
+  "voyage": "1076N",
+  "etd": "11-16 (Mon)",
   "eta": "11-20 (Fri)",
-  "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
-  "altDates": "KMTC 11-16 (Mon)→11-19 (Thu)",
-  "closedCarriers": "HEUNG-A / SINOKOR"
- },
- {
-  "vessel": "SKY HOPE",
-  "voyage": "2620N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-20 (Fri)",
-  "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "PANOCEAN"
- },
- {
-  "vessel": "STARSHIP DRACO",
-  "voyage": "2611N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-21 (Sat)",
   "tt": 4,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "KMTC / NAMSUNG",
-  "altDates": "KMTC 11-23 (Mon)→11-26 (Thu)",
-  "closedCarriers": "NAMSUNG"
- },
- {
-  "vessel": "STARSHIP MERCURY",
-  "voyage": "2609N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-22 (Sun)",
-  "tt": 5,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "KMTC / NAMSUNG",
-  "altDates": "KMTC 11-19 (Thu)→11-25 (Wed)"
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "altDates": "KMTC 11-15 (Sun)→11-19 (Thu)",
+  "closedCarriers": "KMTC / NAMSUNG",
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
   "vessel": "KMTC DALIAN",
   "voyage": "2609N",
-  "etd": "11-18 (Wed)",
-  "eta": "11-23 (Mon)",
+  "etd": "11-17 (Tue)",
+  "eta": "11-22 (Sun)",
   "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
-  "vessel": "KMTC POHANG",
-  "voyage": "2616N",
-  "etd": "11-20 (Fri)",
-  "eta": "11-24 (Tue)",
-  "tt": 4,
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2608N",
+  "etd": "11-17 (Tue)",
+  "eta": "11-20 (Fri)",
+  "tt": 3,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-20 (Fri)",
+  "prevTt": 3,
   "status": "unchanged",
   "changedFields": [],
+  "altDates": "KMTC 11-18 (Wed)→11-21 (Sat)"
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "SKY HOPE",
+  "voyage": "2620N",
+  "etd": "11-17 (Tue)",
+  "eta": "11-21 (Sat)",
+  "tt": 4,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-20 (Fri)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
+ },
+ {
   "carrier": "KMTC / NAMSUNG",
-  "altDates": "KMTC 11-23 (Mon)→11-26 (Thu)"
+  "vessel": "STARSHIP DRACO",
+  "voyage": "2611N",
+  "etd": "11-18 (Wed)",
+  "eta": "11-21 (Sat)",
+  "tt": 3,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-21 (Sat)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "altDates": "KMTC 11-21 (Sat)→11-24 (Tue)",
+  "closedCarriers": "NAMSUNG"
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "STARSHIP MERCURY",
+  "voyage": "2609N",
+  "etd": "11-18 (Wed)",
+  "eta": "11-24 (Tue)",
+  "tt": 6,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-22 (Sun)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "altDates": "NAMSUNG 11-18 (Wed)→11-23 (Mon)"
  },
  {
   "carrier": "KMTC / PANOCEAN",
   "vessel": "POS YOKOHAMA",
   "voyage": "1601N",
   "etd": "11-20 (Fri)",
-  "eta": "11-24 (Tue)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "altDates": "PANOCEAN 11-21 (Sat)→11-26 (Thu)",
-  "closedCarriers": "KMTC"
+  "eta": "11-25 (Wed)",
+  "tt": 5,
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "11-24 (Tue)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "altDates": "PANOCEAN 11-22 (Sun)→11-26 (Thu)",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -228,234 +262,417 @@
   "prevEtd": "11-21 (Sat)",
   "prevEta": "11-25 (Wed)",
   "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "carrier"
-  ],
-  "closedCarriers": "KMTC"
+  "status": "unchanged",
+  "changedFields": [],
+  "altDates": "NAMSUNG 11-22 (Sun)→11-26 (Thu)"
  },
  {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC POHANG",
+  "voyage": "2616N",
+  "etd": "11-22 (Sun)",
+  "eta": "11-25 (Wed)",
+  "tt": 3,
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "11-24 (Tue)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "closedCarriers": "KMTC / NAMSUNG",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "LOS ANDES BRIDGE",
+  "voyage": "0247N",
+  "etd": "11-22 (Sun)",
+  "eta": "11-28 (Sat)",
+  "tt": 6,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-29 (Sun)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "altDates": "KMTC 11-27 (Fri)→12-03 (Thu)"
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "POS QINGDAO",
+  "voyage": "1079N",
+  "etd": "11-24 (Tue)",
+  "eta": "11-27 (Fri)",
+  "tt": 3,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-27 (Fri)",
+  "prevTt": 3,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
   "vessel": "SUNNY LILAC",
   "voyage": "2623N",
-  "etd": "11-23 (Mon)",
-  "eta": "11-27 (Fri)",
+  "etd": "11-25 (Wed)",
+  "eta": "11-29 (Sun)",
   "tt": 4,
   "prevEtd": "11-23 (Mon)",
   "prevEta": "11-27 (Fri)",
   "prevTt": 4,
   "status": "changed",
   "changedFields": [
-   "carrier"
-  ],
-  "altDates": "NAMSUNG 11-25 (Wed)→11-29 (Sun)"
+   "etd",
+   "eta"
+  ]
  },
  {
-  "carrier": "KMTC",
-  "vessel": "YM CONTINENT",
-  "voyage": "2610N",
-  "etd": "11-23 (Mon)",
-  "eta": "11-25 (Wed)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "vessel": "LOS ANDES BRIDGE",
-  "voyage": "0247N",
-  "etd": "11-24 (Tue)",
-  "eta": "11-29 (Sun)",
-  "tt": 5,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "KMTC / NAMSUNG",
-  "altDates": "KMTC 11-28 (Sat)→12-04 (Fri)"
- },
- {
-  "vessel": "POS QINGDAO",
-  "voyage": "1079N",
-  "etd": "11-24 (Tue)",
-  "eta": "11-27 (Fri)",
-  "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "PANOCEAN"
- },
- {
-  "vessel": "TS NAGOYA",
-  "voyage": "2634N",
-  "etd": "11-24 (Tue)",
-  "eta": "11-29 (Sun)",
-  "tt": 5,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
- },
- {
+  "carrier": "PANOCEAN",
   "vessel": "ASL QINGDAO",
   "voyage": "2614N",
-  "etd": "11-25 (Wed)",
-  "eta": "11-28 (Sat)",
+  "etd": "11-26 (Thu)",
+  "eta": "11-29 (Sun)",
   "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "PANOCEAN"
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2622N",
-  "etd": "11-25 (Wed)",
-  "eta": "11-30 (Mon)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "KMTC"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SITC DECHENG",
-  "voyage": "2622N",
   "etd": "11-26 (Thu)",
   "eta": "12-01 (Tue)",
   "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "11-30 (Mon)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "closedCarriers": "KMTC"
  },
  {
-  "carrier": "KMTC",
-  "vessel": "URU BHUM",
-  "voyage": "177N",
-  "etd": "11-26 (Thu)",
-  "eta": "11-29 (Sun)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
+  "carrier": "NAMSUNG",
   "vessel": "AS CASPRIA",
   "voyage": "0382N",
   "etd": "11-27 (Fri)",
   "eta": "12-02 (Wed)",
   "tt": 5,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 5,
   "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
+  "changedFields": []
  },
  {
-  "vessel": "POS GUANGZHOU",
-  "voyage": "1077N",
-  "etd": "11-27 (Fri)",
-  "eta": "12-02 (Wed)",
-  "tt": 5,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
-  "altDates": "KMTC 11-28 (Sat)→12-02 (Wed); NAMSUNG 11-29 (Sun)→12-04 (Fri)"
- },
- {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC LAEM CHABANG",
   "voyage": "2611N",
   "etd": "11-28 (Sat)",
   "eta": "12-01 (Tue)",
   "tt": 3,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-01 (Tue)",
+  "prevTt": 3,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "KMTC / NAMSUNG",
-  "altDates": "KMTC 11-30 (Mon)→12-04 (Fri)"
+  "altDates": "KMTC 12-01 (Tue)→12-05 (Sat)"
  },
  {
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "POS GUANGZHOU",
+  "voyage": "1077N",
+  "etd": "11-28 (Sat)",
+  "eta": "12-02 (Wed)",
+  "tt": 4,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "altDates": "NAMSUNG 11-29 (Sun)→12-04 (Fri); PANOCEAN 11-29 (Sun)→12-02 (Wed)"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SITC DECHENG",
+  "voyage": "2622N",
+  "etd": "11-28 (Sat)",
+  "eta": "12-04 (Fri)",
+  "tt": 6,
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "12-01 (Tue)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "TS NAGOYA",
+  "voyage": "2634N",
+  "etd": "11-28 (Sat)",
+  "eta": "12-03 (Thu)",
+  "tt": 5,
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-29 (Sun)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "SYMEON P",
   "voyage": "0038N",
   "etd": "11-29 (Sun)",
   "eta": "12-02 (Wed)",
   "tt": 3,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 3,
   "status": "unchanged",
   "changedFields": [],
-  "carrier": "KMTC / NAMSUNG",
-  "altDates": "KMTC 11-30 (Mon)→12-03 (Thu)"
+  "altDates": "KMTC 12-01 (Tue)→12-05 (Sat)"
  },
  {
+  "carrier": "NAMSUNG",
   "vessel": "INTERASIA ENGAGE",
   "voyage": "0046N",
-  "etd": "11-30 (Mon)",
-  "eta": "12-03 (Thu)",
+  "etd": "12-01 (Tue)",
+  "eta": "12-04 (Fri)",
   "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609N",
-  "etd": "11-30 (Mon)",
-  "eta": "12-03 (Thu)",
-  "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
-  "altDates": "NAMSUNG 11-29 (Sun)→12-02 (Wed); KMTC 12-03 (Thu)→12-06 (Sun)"
- },
- {
+  "carrier": "PANOCEAN",
   "vessel": "SKY HOPE",
   "voyage": "2621N",
   "etd": "12-01 (Tue)",
   "eta": "12-04 (Fri)",
   "tt": 3,
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 3,
   "status": "unchanged",
-  "changedFields": [],
-  "carrier": "PANOCEAN"
+  "changedFields": []
  },
  {
-  "vessel": "STARSHIP TAURUS",
-  "voyage": "2621N",
-  "etd": "12-03 (Thu)",
-  "eta": "12-06 (Sun)",
-  "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "NAMSUNG"
- },
- {
-  "vessel": "YEOSU VOYAGER",
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
-  "etd": "12-03 (Thu)",
-  "eta": "12-06 (Sun)",
+  "etd": "12-02 (Wed)",
+  "eta": "12-05 (Sat)",
   "tt": 3,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "HEUNG-A / NAMSUNG / SINOKOR"
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "altDates": "KMTC 12-03 (Thu)→12-06 (Sun)"
  },
  {
-  "vessel": "KMTC POHANG",
-  "voyage": "2617N",
+  "carrier": "KMTC / PANOCEAN",
+  "vessel": "POS YOKOHAMA",
+  "voyage": "1602N",
   "etd": "12-04 (Fri)",
-  "eta": "12-08 (Tue)",
-  "tt": 4,
-  "status": "unchanged",
+  "eta": "12-09 (Wed)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
   "changedFields": [],
-  "carrier": "NAMSUNG"
+  "altDates": "PANOCEAN 12-06 (Sun)→12-10 (Thu)"
  },
  {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STAR FRONTIER",
   "voyage": "2623N",
   "etd": "12-04 (Fri)",
+  "eta": "12-09 (Wed)",
+  "tt": 5,
+  "prevEtd": "12-04 (Fri)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "altDates": "NAMSUNG 12-05 (Sat)→12-09 (Wed)"
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC POHANG",
+  "voyage": "2617N",
+  "etd": "12-05 (Sat)",
   "eta": "12-08 (Tue)",
+  "tt": 3,
+  "prevEtd": "12-04 (Fri)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 4,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "REN JIAN 6",
+  "voyage": "2615N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-08 (Tue)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "STARSHIP TAURUS",
+  "voyage": "2621N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-08 (Tue)",
+  "tt": 3,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "altDates": "KMTC 12-06 (Sun)→12-09 (Wed)"
+ },
+ {
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "SUNNY LILAC",
+  "voyage": "2624N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-09 (Wed)",
   "tt": 4,
-  "status": "unchanged",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
   "changedFields": [],
-  "carrier": "NAMSUNG"
+  "altDates": "NAMSUNG 12-09 (Wed)→12-13 (Sun); PANOCEAN 12-06 (Sun)→12-11 (Fri)"
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-08 (Tue)",
+  "tt": 3,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 3,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "altDates": "NAMSUNG 12-04 (Fri)→12-07 (Mon)"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC OSAKA",
+  "voyage": "2612N",
+  "etd": "12-08 (Tue)",
+  "eta": "12-12 (Sat)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "POS QINGDAO",
+  "voyage": "1080N",
+  "etd": "12-08 (Tue)",
+  "eta": "12-11 (Fri)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP DRACO",
+  "voyage": "2612N",
+  "etd": "12-08 (Tue)",
+  "eta": "12-12 (Sat)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "YM CONTINENT",
+  "voyage": "2611N",
+  "etd": "12-08 (Tue)",
+  "eta": "12-11 (Fri)",
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SUNNY KALMIA",
+  "voyage": "2623N",
+  "etd": "12-09 (Wed)",
+  "eta": "12-14 (Mon)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  }
 ]

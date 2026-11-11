@@ -1,90 +1,138 @@
 [
  {
   "carrier": "SITC",
-  "vessel": "SITC RENHE",
-  "voyage": "2630S",
-  "etd": "11-09 (Mon)",
-  "eta": "11-14 (Sat)",
-  "tt": 5,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV4"
+  "vessel": "NOVA STAR",
+  "voyage": "2642S",
+  "etd": "11-04 (Wed)",
+  "eta": "11-08 (Sun)",
+  "tt": 4,
+  "service": "CJV4",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
  },
  {
+  "service": "CJV4",
+  "carrier": "SITC",
+  "vessel": "SITC RENHE",
+  "voyage": "2630S",
+  "etd": "11-10 (Tue)",
+  "eta": "11-14 (Sat)",
+  "tt": 4,
+  "prevEtd": "11-09 (Mon)",
+  "prevEta": "11-14 (Sat)",
+  "prevTt": 5,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "service": "CJV4",
   "carrier": "SITC",
   "vessel": "SITC ANHE",
   "voyage": "2632S",
   "etd": "11-19 (Thu)",
   "eta": "11-23 (Mon)",
   "tt": 4,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV4"
+  "prevEtd": "11-19 (Thu)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 4,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
+  "service": "CJV5(SNL)",
   "carrier": "SITC",
   "vessel": "SINOTRANS DALIAN",
   "voyage": "2639S",
   "etd": "11-20 (Fri)",
   "eta": "11-26 (Thu)",
   "tt": 6,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV5(SNL)"
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "11-26 (Thu)",
+  "prevTt": 6,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
+  "service": "CJV4",
   "carrier": "SITC",
   "vessel": "SITC YUANHE",
   "voyage": "2632S",
   "etd": "11-24 (Tue)",
   "eta": "11-28 (Sat)",
   "tt": 4,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV4"
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 4,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
+  "service": "CJV5(SNL)",
   "carrier": "SITC",
   "vessel": "SIRI BHUM",
   "voyage": "2647S",
-  "etd": "11-25 (Wed)",
+  "etd": "11-26 (Thu)",
   "eta": "12-02 (Wed)",
-  "tt": 7,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV5(SNL)"
+  "tt": 6,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 7,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "service": "CJV4",
   "carrier": "SITC",
   "vessel": "NOVA STAR",
   "voyage": "2644S",
-  "etd": "11-30 (Mon)",
-  "eta": "12-05 (Sat)",
-  "tt": 5,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV4"
+  "etd": "12-02 (Wed)",
+  "eta": "12-06 (Sun)",
+  "tt": 4,
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
  },
  {
+  "service": "CJV5(SNL)",
   "carrier": "SITC",
   "vessel": "SINOTRANS DALIAN",
   "voyage": "2641S",
   "etd": "12-03 (Thu)",
-  "eta": "12-08 (Tue)",
-  "tt": 5,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV5(SNL)"
+  "eta": "12-10 (Thu)",
+  "tt": 7,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
+  "service": "CJV4",
   "carrier": "SITC",
   "vessel": "SITC RENHE",
   "voyage": "2632S",
   "etd": "12-07 (Mon)",
   "eta": "12-12 (Sat)",
   "tt": 5,
-  "status": "new",
-  "changedFields": [],
-  "service": "CJV4"
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-12 (Sat)",
+  "prevTt": 5,
+  "status": "unchanged",
+  "changedFields": []
  }
 ]

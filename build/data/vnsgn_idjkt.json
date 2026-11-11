@@ -32,11 +32,13 @@
   "etd": "10-31 (Sat)",
   "eta": "11-06 (Fri)",
   "tt": 6,
-  "prevEtd": null,
-  "prevEta": "11-08 (Sun)",
-  "prevTt": 8,
+  "prevEtd": "10-31 (Sat)",
+  "prevEta": "11-06 (Fri)",
+  "prevTt": 6,
   "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "closedCarriers": "SINOKOR",
+  "bookingClosed": true
  },
  {
   "carrier": "GSL",
@@ -58,9 +60,10 @@
   "etd": "11-01 (Sun)",
   "eta": "11-03 (Tue)",
   "tt": 2,
+  "service": "CMI2",
   "prevEtd": "11-01 (Sun)",
-  "prevEta": "11-04 (Wed)",
-  "prevTt": 3,
+  "prevEta": "11-03 (Tue)",
+  "prevTt": 2,
   "status": "departed",
   "changedFields": []
  },
@@ -71,10 +74,11 @@
   "etd": "11-07 (Sat)",
   "eta": "11-10 (Tue)",
   "tt": 3,
+  "service": "CMI2",
   "prevEtd": "11-07 (Sat)",
   "prevEta": "11-10 (Tue)",
   "prevTt": 3,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
  },
  {
@@ -87,62 +91,75 @@
   "prevEtd": "11-06 (Fri)",
   "prevEta": "11-11 (Wed)",
   "prevTt": 5,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609S",
-  "etd": "11-12 (Thu)",
-  "eta": "11-18 (Wed)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "SINOKOR",
-  "bookingClosed": true
  },
  {
   "carrier": "SITC",
   "vessel": "SITC YUHE",
   "voyage": "2630S",
-  "etd": "11-14 (Sat)",
+  "etd": "11-13 (Fri)",
   "eta": "11-16 (Mon)",
-  "tt": 2,
+  "tt": 3,
+  "service": "CMI2",
   "prevEtd": "11-14 (Sat)",
   "prevEta": "11-16 (Mon)",
   "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "GSL",
   "vessel": "SAN PEDRO",
   "voyage": "UFM/118",
   "etd": "11-14 (Sat)",
-  "eta": "11-19 (Thu)",
-  "tt": 5,
+  "eta": "11-20 (Fri)",
+  "tt": 6,
   "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 6,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEta": "11-19 (Thu)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "SINOKOR",
-  "vessel": "YEOSU VOYAGER",
+  "vessel": "KMTC XIAMEN",
   "voyage": "2609S",
-  "etd": "11-18 (Wed)",
-  "eta": "11-24 (Tue)",
+  "etd": "11-15 (Sun)",
+  "eta": "11-21 (Sat)",
   "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "11-12 (Thu)",
+  "prevEta": "11-18 (Wed)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "closedCarriers": "SINOKOR",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "NATTHA BHUM",
+  "voyage": "NB3/43/069S",
+  "etd": "11-21 (Sat)",
+  "eta": "11-27 (Fri)",
+  "tt": 6,
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "11-26 (Thu)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "SITC",
@@ -151,6 +168,7 @@
   "etd": "11-21 (Sat)",
   "eta": "11-23 (Mon)",
   "tt": 2,
+  "service": "CMI2",
   "prevEtd": "11-21 (Sat)",
   "prevEta": "11-23 (Mon)",
   "prevTt": 2,
@@ -158,43 +176,37 @@
   "changedFields": []
  },
  {
-  "carrier": "GSL",
-  "vessel": "NATTHA BHUM",
-  "voyage": "NB3/43/069S",
+  "carrier": "SINOKOR",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609S",
   "etd": "11-21 (Sat)",
   "eta": "11-26 (Thu)",
   "tt": 5,
-  "prevEtd": "11-19 (Thu)",
+  "prevEtd": "11-18 (Wed)",
   "prevEta": "11-24 (Tue)",
-  "prevTt": 5,
-  "status": "unchanged",
-  "changedFields": []
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609S",
-  "etd": "11-24 (Tue)",
-  "eta": "11-30 (Mon)",
+  "etd": "11-25 (Wed)",
+  "eta": "12-01 (Tue)",
   "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "GSL",
-  "vessel": "SAN PEDRO",
-  "voyage": "UFM/119",
-  "etd": "11-27 (Fri)",
-  "eta": "12-03 (Thu)",
-  "tt": 6,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-04 (Fri)",
+  "prevEtd": "11-24 (Tue)",
+  "prevEta": "11-30 (Mon)",
   "prevTt": 6,
-  "status": "unchanged",
-  "changedFields": []
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "SITC",
@@ -203,6 +215,7 @@
   "etd": "11-28 (Sat)",
   "eta": "11-30 (Mon)",
   "tt": 2,
+  "service": "CMI2",
   "prevEtd": "11-28 (Sat)",
   "prevEta": "11-30 (Mon)",
   "prevTt": 2,
@@ -210,30 +223,52 @@
   "changedFields": []
  },
  {
+  "carrier": "GSL",
+  "vessel": "SAN PEDRO",
+  "voyage": "UFM/119",
+  "etd": "11-28 (Sat)",
+  "eta": "12-04 (Fri)",
+  "tt": 6,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
   "carrier": "SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2609S",
-  "etd": "11-30 (Mon)",
-  "eta": "12-06 (Sun)",
+  "etd": "12-01 (Tue)",
+  "eta": "12-07 (Mon)",
   "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "GSL",
   "vessel": "NATTHA BHUM",
   "voyage": "NB3/44/070S",
-  "etd": "12-04 (Fri)",
-  "eta": "12-09 (Wed)",
+  "etd": "12-05 (Sat)",
+  "eta": "12-10 (Thu)",
   "tt": 5,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 6,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "12-04 (Fri)",
+  "prevEta": "12-09 (Wed)",
+  "prevTt": 5,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "SITC",
@@ -242,113 +277,10 @@
   "etd": "12-05 (Sat)",
   "eta": "12-07 (Mon)",
   "tt": 2,
+  "service": "CMI2",
   "prevEtd": "12-05 (Sat)",
   "prevEta": "12-07 (Mon)",
   "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "GSL",
-  "vessel": "SAN PEDRO",
-  "voyage": "UFM/120",
-  "etd": "12-11 (Fri)",
-  "eta": "12-17 (Thu)",
-  "tt": 6,
-  "prevEtd": "12-12 (Sat)",
-  "prevEta": "12-18 (Fri)",
-  "prevTt": 6,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "SINAR BANGKA",
-  "voyage": "2632S",
-  "etd": "12-12 (Sat)",
-  "eta": "12-14 (Mon)",
-  "tt": 2,
-  "prevEtd": "12-12 (Sat)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 2,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2610S",
-  "etd": "12-13 (Sun)",
-  "eta": "12-19 (Sat)",
-  "tt": 6,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 5,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "GSL",
-  "vessel": "NATTHA BHUM",
-  "voyage": "NB3/45",
-  "etd": "12-16 (Wed)",
-  "eta": "12-23 (Wed)",
-  "tt": 7,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2610S",
-  "etd": "12-16 (Wed)",
-  "eta": "12-22 (Tue)",
-  "tt": 6,
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-21 (Mon)",
-  "prevTt": 5,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SITC",
-  "vessel": "GREEN PACIFIC",
-  "voyage": "2634S",
-  "etd": "12-19 (Sat)",
-  "eta": "12-21 (Mon)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "STARSHIP JUPITER",
-  "voyage": "2610S",
-  "etd": "12-22 (Tue)",
-  "eta": "12-28 (Mon)",
-  "tt": 6,
-  "prevEtd": "12-22 (Tue)",
-  "prevEta": "12-28 (Mon)",
-  "prevTt": 6,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "SINOKOR",
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2610S",
-  "etd": "12-30 (Wed)",
-  "eta": "01-05 (Tue)",
-  "tt": 6,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  }

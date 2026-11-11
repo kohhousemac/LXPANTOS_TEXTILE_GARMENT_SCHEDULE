@@ -23,7 +23,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": [],
   "bookingClosed": true,
   "closedCarriers": "NAMSUNG"
@@ -38,25 +38,10 @@
   "prevEtd": "11-09 (Mon)",
   "prevEta": "11-20 (Fri)",
   "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "carrier"
-  ],
+  "status": "departed",
+  "changedFields": [],
   "altDates": "KMTC 11-08 (Sun)→11-19 (Thu)",
   "closedCarriers": "KMTC"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "TS NAGOYA",
-  "voyage": "2634N",
-  "etd": "11-17 (Tue)",
-  "eta": "11-29 (Sun)",
-  "tt": 12,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
  },
  {
   "carrier": "NAMSUNG",
@@ -65,9 +50,22 @@
   "etd": "11-18 (Wed)",
   "eta": "12-02 (Wed)",
   "tt": 14,
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 13,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 14,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "TS NAGOYA",
+  "voyage": "2634N",
+  "etd": "11-20 (Fri)",
+  "eta": "12-03 (Thu)",
+  "tt": 13,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-29 (Sun)",
+  "prevTt": 12,
   "status": "changed",
   "changedFields": [
    "etd",
@@ -76,63 +74,98 @@
   ]
  },
  {
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609N",
-  "etd": "11-20 (Fri)",
-  "eta": "12-03 (Thu)",
-  "tt": 13,
-  "status": "unchanged",
-  "changedFields": [],
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
-  "altDates": "NAMSUNG 11-20 (Fri)→12-02 (Wed); KMTC 11-23 (Mon)→12-06 (Sun)"
- },
- {
   "carrier": "NAMSUNG",
   "vessel": "INTERASIA ENGAGE",
   "voyage": "0046N",
-  "etd": "11-21 (Sat)",
-  "eta": "12-03 (Thu)",
+  "etd": "11-22 (Sun)",
+  "eta": "12-04 (Fri)",
   "tt": 12,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 12,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "etd": "11-23 (Mon)",
+  "eta": "12-05 (Sat)",
+  "tt": 12,
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 13,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "altDates": "KMTC 11-24 (Tue)→12-06 (Sun)"
  },
  {
   "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
-  "etd": "11-26 (Thu)",
-  "eta": "12-06 (Sun)",
+  "etd": "11-28 (Sat)",
+  "eta": "12-08 (Tue)",
   "tt": 10,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "12-07 (Mon)",
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "12-06 (Sun)",
   "prevTt": 10,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "carrier"
+   "eta"
   ],
-  "altDates": "KMTC 11-26 (Thu)→12-07 (Mon)"
+  "altDates": "KMTC 11-27 (Fri)→12-08 (Tue); NAMSUNG 11-26 (Thu)→12-07 (Mon)"
  },
  {
   "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
-  "etd": "12-01 (Tue)",
-  "eta": "12-11 (Fri)",
+  "etd": "12-03 (Thu)",
+  "eta": "12-13 (Sun)",
   "tt": 10,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-10 (Thu)",
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-11 (Fri)",
   "prevTt": 10,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "carrier"
+   "eta"
   ],
-  "altDates": "HEUNG-A/SINOKOR 12-02 (Wed)→12-12 (Sat)"
+  "altDates": "NAMSUNG 12-04 (Fri)→12-14 (Mon)"
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP VENUS",
+  "voyage": "2610N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-19 (Sat)",
+  "tt": 14,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "etd": "12-09 (Wed)",
+  "eta": "12-21 (Mon)",
+  "tt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "altDates": "NAMSUNG 12-08 (Tue)→12-18 (Fri)"
  }
 ]

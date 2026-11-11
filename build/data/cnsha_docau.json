@@ -1,58 +1,67 @@
 [
  {
+  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM BIG SUR",
   "voyage": "PEX050E19",
-  "etd": "11-10 (Tue)",
+  "etd": "11-13 (Fri)",
   "eta": "12-20 (Sun)",
-  "tt": 40,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": [],
-  "service": "PEX2"
+  "tt": 37,
+  "prevEtd": "11-10 (Tue)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 40,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ESMERALDA",
   "voyage": "PEX090E19",
   "etd": "11-22 (Sun)",
   "eta": "01-03 (Sun)",
   "tt": 42,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "01-03 (Sun)",
+  "prevTt": 42,
   "status": "same",
-  "changedFields": [],
-  "service": "PEX2"
+  "changedFields": []
  },
  {
+  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CSCL LONG BEACH",
   "voyage": "PEX0B0E19",
-  "etd": "11-29 (Sun)",
+  "etd": "12-02 (Wed)",
   "eta": "01-11 (Mon)",
-  "tt": 43,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": [],
-  "service": "PEX2"
+  "tt": 40,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "01-11 (Mon)",
+  "prevTt": 43,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM CAPE COD",
   "voyage": "PEX0D0E19",
-  "etd": "12-06 (Sun)",
+  "etd": "12-09 (Wed)",
   "eta": "01-17 (Sun)",
-  "tt": 42,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": [],
-  "service": "PEX2"
+  "tt": 39,
+  "prevEtd": "12-06 (Sun)",
+  "prevEta": "01-17 (Sun)",
+  "prevTt": 42,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  }
 ]

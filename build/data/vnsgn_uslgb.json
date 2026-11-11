@@ -9,132 +9,146 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "same",
+  "status": "departed",
   "changedFields": [],
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
  },
  {
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1",
   "carrier": "WHL",
   "vessel": "WAN HAI A09",
   "voyage": "E019",
-  "etd": "11-13 (Fri)",
+  "etd": "11-12 (Thu)",
   "eta": "12-05 (Sat)",
-  "tt": 22,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Cai Mep → Los Angeles (직항)",
-  "service": "AP1"
+  "tt": 23,
+  "prevEtd": "11-13 (Fri)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 22,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1",
   "carrier": "WHL",
   "vessel": "WAN HAI A01",
   "voyage": "E021",
-  "etd": "11-18 (Wed)",
+  "etd": "11-15 (Sun)",
   "eta": "12-11 (Fri)",
-  "tt": 23,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Cai Mep → Los Angeles (직항)",
-  "service": "AP1"
+  "tt": 26,
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 23,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "rotation": "Vung Tau → Xiamen → Yantian → Long Beach",
   "carrier": "MSC",
   "vessel": "MSC RIFAYA",
   "voyage": "FV644N",
   "etd": "11-18 (Wed)",
   "eta": "12-08 (Tue)",
   "tt": 20,
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "12-05 (Sat)",
+  "service": "SENTOSA",
+  "prevEtd": "11-18 (Wed)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 20,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
+  "carrier": "MSC",
+  "vessel": "MSC DIANA",
+  "voyage": "FV645N",
+  "etd": "11-19 (Thu)",
+  "eta": "12-08 (Tue)",
+  "tt": 19,
+  "service": "SENTOSA",
+  "prevEtd": "11-20 (Fri)",
+  "prevEta": "12-09 (Wed)",
   "prevTt": 19,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
+   "eta"
+  ]
  },
  {
-  "carrier": "MSC",
-  "vessel": "MSC DIANA",
-  "voyage": "FV645N",
-  "etd": "11-20 (Fri)",
-  "eta": "12-09 (Wed)",
-  "tt": 19,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 20,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
- },
- {
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1",
   "carrier": "WHL",
   "vessel": "WAN HAI A05",
   "voyage": "E019",
-  "etd": "11-29 (Sun)",
+  "etd": "11-28 (Sat)",
   "eta": "12-21 (Mon)",
-  "tt": 22,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Cai Mep → Los Angeles (직항)",
-  "service": "AP1"
+  "tt": 23,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-21 (Mon)",
+  "prevTt": 22,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "carrier": "MSC",
   "vessel": "MSC ERICA",
   "voyage": "FV647N",
-  "etd": "11-30 (Mon)",
+  "etd": "12-01 (Tue)",
   "eta": "12-22 (Tue)",
-  "tt": 22,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": [],
-  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
+  "tt": 21,
+  "service": "SENTOSA",
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-22 (Tue)",
+  "prevTt": 22,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
+  "rotation": "Cai Mep → Los Angeles (직항)",
+  "service": "AP1",
   "carrier": "WHL",
   "vessel": "WAN HAI A03",
   "voyage": "E019",
   "etd": "12-05 (Sat)",
-  "eta": "12-28 (Mon)",
-  "tt": 23,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "rotation": "Cai Mep → Los Angeles (직항)",
-  "service": "AP1"
+  "eta": "12-30 (Wed)",
+  "tt": 25,
+  "prevEtd": "12-05 (Sat)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 23,
+  "status": "changed",
+  "changedFields": [
+   "eta",
+   "tt"
+  ]
  },
  {
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "carrier": "MSC",
   "vessel": "MSC OSCAR",
   "voyage": "FV648N",
   "etd": "12-07 (Mon)",
   "eta": "12-29 (Tue)",
   "tt": 22,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "service": "SENTOSA",
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 22,
   "status": "same",
-  "changedFields": [],
-  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach"
+  "changedFields": []
  }
 ]
