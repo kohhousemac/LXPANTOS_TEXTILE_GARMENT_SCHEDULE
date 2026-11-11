@@ -7,14 +7,11 @@
   "etd": "11-13 (Fri)",
   "eta": "12-20 (Sun)",
   "tt": 37,
-  "prevEtd": "11-10 (Tue)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 40,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "service": "PEX2",
@@ -24,9 +21,9 @@
   "etd": "11-22 (Sun)",
   "eta": "01-03 (Sun)",
   "tt": 42,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "01-03 (Sun)",
-  "prevTt": 42,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "same",
   "changedFields": []
  },
@@ -38,14 +35,11 @@
   "etd": "12-02 (Wed)",
   "eta": "01-11 (Mon)",
   "tt": 40,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "01-11 (Mon)",
-  "prevTt": 43,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "service": "PEX2",
@@ -55,13 +49,10 @@
   "etd": "12-09 (Wed)",
   "eta": "01-17 (Sun)",
   "tt": 39,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "01-17 (Sun)",
-  "prevTt": 42,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  }
 ]

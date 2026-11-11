@@ -32,15 +32,11 @@
   "etd": "11-15 (Sun)",
   "eta": "11-23 (Mon)",
   "tt": 8,
-  "prevEtd": "11-13 (Fri)",
-  "prevEta": "11-22 (Sun)",
-  "prevTt": 9,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",
@@ -49,9 +45,9 @@
   "etd": "11-21 (Sat)",
   "eta": "11-28 (Sat)",
   "tt": 7,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -62,14 +58,11 @@
   "etd": "11-27 (Fri)",
   "eta": "12-05 (Sat)",
   "tt": 8,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",
@@ -78,9 +71,9 @@
   "etd": "12-06 (Sun)",
   "eta": "12-14 (Mon)",
   "tt": 8,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -94,7 +87,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  }
 ]

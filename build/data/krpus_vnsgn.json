@@ -12,7 +12,8 @@
   "status": "departed",
   "changedFields": [],
   "rotation": "Busan → Ho Chi Minh",
-  "closedCarriers": "HEUNG-A / KMTC / SINOKOR"
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "bookingClosed": true
  },
  {
   "carrier": "DONGJIN / HEUNG-A / KMTC / SINOKOR",
@@ -27,7 +28,8 @@
   "status": "departed",
   "changedFields": [],
   "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh",
-  "closedCarriers": "HEUNG-A / KMTC / SINOKOR"
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "bookingClosed": true
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
@@ -48,27 +50,10 @@
   "carrier": "DONGJIN / KMTC",
   "vessel": "STARSHIP URSA",
   "voyage": "2615S",
-  "etd": "11-15 (Sun)",
-  "eta": "11-21 (Sat)",
-  "tt": 6,
-  "rotation": "Busan → Hong Kong → Ho Chi Minh",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "KMTC 11-16 (Mon)→11-21 (Sat)",
-  "closedCarriers": "KMTC",
-  "bookingClosed": true
- },
- {
-  "rotation": "Busan → Ho Chi Minh",
-  "carrier": "DONGJIN / HEUNG-A / KMTC / PANOCEAN / SINOKOR",
-  "vessel": "PANCON CHAMPION",
-  "voyage": "2612S",
   "etd": "11-16 (Mon)",
   "eta": "11-22 (Sun)",
   "tt": 6,
+  "rotation": "Busan → Hong Kong → Ho Chi Minh",
   "prevEtd": "11-15 (Sun)",
   "prevEta": "11-21 (Sat)",
   "prevTt": 6,
@@ -77,8 +62,7 @@
    "etd",
    "eta"
   ],
-  "altDates": "KMTC 11-17 (Tue)→11-22 (Sun)",
-  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "closedCarriers": "KMTC",
   "bookingClosed": true
  },
  {
@@ -89,16 +73,47 @@
   "etd": "11-17 (Tue)",
   "eta": "11-22 (Sun)",
   "tt": 5,
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "HEUNG-A / SINOKOR",
   "bookingClosed": true
+ },
+ {
+  "rotation": "Busan → Ho Chi Minh",
+  "carrier": "DONGJIN / HEUNG-A / KMTC / PANOCEAN / SINOKOR",
+  "vessel": "PANCON CHAMPION",
+  "voyage": "2612S",
+  "etd": "11-17 (Tue)",
+  "eta": "11-22 (Sun)",
+  "tt": 5,
+  "prevEtd": "11-16 (Mon)",
+  "prevEta": "11-22 (Sun)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd"
+  ],
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC ULSAN",
+  "voyage": "2618S",
+  "etd": "11-21 (Sat)",
+  "eta": "11-25 (Wed)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "rotation": "Busan → Ho Chi Minh"
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
@@ -111,7 +126,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": [],
   "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
   "bookingClosed": true
@@ -124,9 +139,9 @@
   "etd": "11-21 (Sat)",
   "eta": "11-26 (Thu)",
   "tt": 5,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
   "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
@@ -136,16 +151,18 @@
   "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "KMTC JAKARTA",
   "voyage": "2613S",
-  "etd": "11-22 (Sun)",
-  "eta": "11-28 (Sat)",
+  "etd": "11-23 (Mon)",
+  "eta": "11-29 (Sun)",
   "tt": 6,
   "rotation": "Busan → Ulsan → Hong Kong → Ho Chi Minh",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "KMTC 11-23 (Mon)→11-29 (Sun)",
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
   "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
   "bookingClosed": true
  },
@@ -160,7 +177,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": [],
   "closedCarriers": "HEUNG-A / SINOKOR",
   "bookingClosed": true
@@ -170,47 +187,17 @@
   "vessel": "KMTC BANGKOK",
   "voyage": "2614S",
   "etd": "11-28 (Sat)",
-  "eta": "12-04 (Fri)",
-  "tt": 6,
-  "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "KMTC 11-28 (Sat)→12-05 (Sat)",
-  "closedCarriers": "KMTC"
- },
- {
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "vessel": "CA MANILA",
-  "voyage": "2617S",
-  "etd": "11-29 (Sun)",
-  "eta": "12-06 (Sun)",
-  "tt": 7,
-  "rotation": "Busan → Ulsan → Hong Kong → Ho Chi Minh",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "KMTC 11-30 (Mon)→12-07 (Mon)",
-  "closedCarriers": "KMTC"
- },
- {
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "vessel": "HEUNG-A HOCHIMINH",
-  "voyage": "2614S",
-  "etd": "11-29 (Sun)",
-  "eta": "12-06 (Sun)",
+  "eta": "12-05 (Sat)",
   "tt": 7,
   "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "KMTC 11-30 (Mon)→12-06 (Sun)"
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "eta"
+  ],
+  "closedCarriers": "KMTC"
  },
  {
   "carrier": "DONGJIN / KMTC",
@@ -223,10 +210,44 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": [],
   "closedCarriers": "KMTC",
   "bookingClosed": true
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "vessel": "CA MANILA",
+  "voyage": "2617S",
+  "etd": "11-30 (Mon)",
+  "eta": "12-07 (Mon)",
+  "tt": 7,
+  "rotation": "Busan → Ulsan → Hong Kong → Ho Chi Minh",
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 7,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "closedCarriers": "KMTC"
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "vessel": "HEUNG-A HOCHIMINH",
+  "voyage": "2614S",
+  "etd": "11-30 (Mon)",
+  "eta": "12-06 (Sun)",
+  "tt": 6,
+  "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 7,
+  "status": "changed",
+  "changedFields": [
+   "etd"
+  ]
  },
  {
   "rotation": "Busan → Ho Chi Minh",
@@ -236,31 +257,29 @@
   "etd": "11-30 (Mon)",
   "eta": "12-05 (Sat)",
   "tt": 5,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "altDates": "HEUNG-A 11-30 (Mon)→12-06 (Sun); SINOKOR 11-30 (Mon)→12-06 (Sun)",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "HEUNG-A / KMTC"
  },
  {
   "carrier": "DONGJIN / KMTC",
   "vessel": "STARSHIP URSA",
   "voyage": "2616S",
-  "etd": "12-05 (Sat)",
-  "eta": "12-11 (Fri)",
+  "etd": "12-06 (Sun)",
+  "eta": "12-12 (Sat)",
   "tt": 6,
   "rotation": "Busan → Hong Kong → Ho Chi Minh",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "KMTC 12-06 (Sun)→12-11 (Fri)"
+  "prevEtd": "12-05 (Sat)",
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "DONGJIN / HEUNG-A / SINOKOR",
@@ -273,7 +292,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -287,7 +306,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  }
 ]

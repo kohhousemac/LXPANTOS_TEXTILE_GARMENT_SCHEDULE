@@ -85,9 +85,9 @@
   "eta": "11-15 (Sun)",
   "tt": 12,
   "service": "VTX8",
-  "prevEtd": "11-03 (Tue)",
-  "prevEta": "11-16 (Mon)",
-  "prevTt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -99,9 +99,9 @@
   "eta": "11-09 (Mon)",
   "tt": 6,
   "service": "VTX2",
-  "prevEtd": "11-03 (Tue)",
-  "prevEta": "11-09 (Mon)",
-  "prevTt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -113,9 +113,9 @@
   "eta": "11-09 (Mon)",
   "tt": 5,
   "service": "CBX2",
-  "prevEtd": "11-04 (Wed)",
-  "prevEta": "11-09 (Mon)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -127,9 +127,9 @@
   "eta": "11-10 (Tue)",
   "tt": 5,
   "service": "VTX1",
-  "prevEtd": "11-05 (Thu)",
-  "prevEta": "11-09 (Mon)",
-  "prevTt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -141,9 +141,9 @@
   "eta": "11-16 (Mon)",
   "tt": 10,
   "service": "VTX3",
-  "prevEtd": "11-06 (Fri)",
-  "prevEta": "11-15 (Sun)",
-  "prevTt": 9,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -168,9 +168,9 @@
   "eta": "11-15 (Sun)",
   "tt": 8,
   "service": "VTX2",
-  "prevEtd": "11-07 (Sat)",
-  "prevEta": "11-15 (Sun)",
-  "prevTt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -182,9 +182,9 @@
   "eta": "11-13 (Fri)",
   "tt": 5,
   "service": "CVS2",
-  "prevEtd": "11-08 (Sun)",
-  "prevEta": "11-13 (Fri)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -196,9 +196,9 @@
   "eta": "11-14 (Sat)",
   "tt": 5,
   "service": "CBX2",
-  "prevEtd": "11-09 (Mon)",
-  "prevEta": "11-14 (Sat)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -210,23 +210,10 @@
   "eta": "11-16 (Mon)",
   "tt": 6,
   "service": "VTX3",
-  "prevEtd": "11-11 (Wed)",
-  "prevEta": "11-21 (Sat)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "EMC",
-  "vessel": "EVER CENTER",
-  "voyage": "0396-090S",
-  "etd": "11-11 (Wed)",
-  "eta": "11-17 (Tue)",
-  "tt": 6,
-  "prevEtd": "11-11 (Wed)",
-  "prevEta": "11-17 (Tue)",
-  "prevTt": 6,
-  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -237,14 +224,11 @@
   "eta": "11-23 (Mon)",
   "tt": 12,
   "service": "VTX8",
-  "prevEtd": "11-10 (Tue)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -254,13 +238,25 @@
   "eta": "11-15 (Sun)",
   "tt": 4,
   "service": "VTX1",
-  "prevEtd": "11-10 (Tue)",
-  "prevEta": "11-15 (Sun)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "EVER CENTER",
+  "voyage": "0396-090S",
+  "etd": "11-12 (Thu)",
+  "eta": "11-17 (Tue)",
+  "tt": 5,
+  "prevEtd": "11-11 (Wed)",
+  "prevEta": "11-17 (Tue)",
+  "prevTt": 6,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "tt"
+   "etd"
   ]
  },
  {
@@ -271,9 +267,9 @@
   "eta": "11-19 (Thu)",
   "tt": 6,
   "service": "VTX2",
-  "prevEtd": "11-13 (Fri)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -285,9 +281,9 @@
   "eta": "11-19 (Thu)",
   "tt": 5,
   "service": "CVS2",
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -299,9 +295,9 @@
   "eta": "11-21 (Sat)",
   "tt": 5,
   "service": "CBX2",
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "11-21 (Sat)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -313,9 +309,9 @@
   "eta": "11-20 (Fri)",
   "tt": 4,
   "service": "VTX1",
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "11-20 (Fri)",
-  "prevTt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -327,27 +323,11 @@
   "eta": "11-24 (Tue)",
   "tt": 5,
   "service": "CVS2",
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
- },
- {
-  "carrier": "EMC",
-  "vessel": "UNI-PREMIER",
-  "voyage": "0397-457S",
-  "etd": "11-19 (Thu)",
-  "eta": "11-25 (Wed)",
-  "tt": 6,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
  },
  {
   "carrier": "SITC",
@@ -360,8 +340,24 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "UNI-PREMIER",
+  "voyage": "0397-457S",
+  "etd": "11-20 (Fri)",
+  "eta": "11-26 (Thu)",
+  "tt": 6,
+  "prevEtd": "11-19 (Thu)",
+  "prevEta": "11-25 (Wed)",
+  "prevTt": 6,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "SITC",
@@ -371,14 +367,11 @@
   "eta": "11-30 (Mon)",
   "tt": 8,
   "service": "VTX3",
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "12-01 (Tue)",
-  "prevTt": 9,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -391,7 +384,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -405,7 +398,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -416,9 +409,9 @@
   "eta": "12-07 (Mon)",
   "tt": 13,
   "service": "VTX8",
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -430,14 +423,11 @@
   "eta": "11-29 (Sun)",
   "tt": 5,
   "service": "CBX2",
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -447,14 +437,11 @@
   "eta": "11-30 (Mon)",
   "tt": 5,
   "service": "VTX2",
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-29 (Sun)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",
@@ -463,9 +450,9 @@
   "etd": "11-25 (Wed)",
   "eta": "12-01 (Tue)",
   "tt": 6,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "12-01 (Tue)",
-  "prevTt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -477,9 +464,9 @@
   "eta": "12-05 (Sat)",
   "tt": 7,
   "service": "VTX2",
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -491,14 +478,11 @@
   "eta": "12-05 (Sat)",
   "tt": 5,
   "service": "CVS2",
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -508,14 +492,11 @@
   "eta": "12-05 (Sat)",
   "tt": 5,
   "service": "CBX2",
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",
@@ -524,9 +505,9 @@
   "etd": "12-01 (Tue)",
   "eta": "12-09 (Wed)",
   "tt": 8,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-09 (Wed)",
-  "prevTt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -538,9 +519,9 @@
   "eta": "12-14 (Mon)",
   "tt": 13,
   "service": "VTX8",
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -555,7 +536,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -566,14 +547,11 @@
   "eta": "12-06 (Sun)",
   "tt": 4,
   "service": "VTX1",
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -583,14 +561,11 @@
   "eta": "12-10 (Thu)",
   "tt": 5,
   "service": "VTX2",
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -600,9 +575,9 @@
   "eta": "12-12 (Sat)",
   "tt": 5,
   "service": "CVS2",
-  "prevEtd": "12-07 (Mon)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -614,9 +589,9 @@
   "eta": "12-12 (Sat)",
   "tt": 5,
   "service": "CBX2",
-  "prevEtd": "12-07 (Mon)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -631,7 +606,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -642,9 +617,9 @@
   "eta": "12-21 (Mon)",
   "tt": 13,
   "service": "VTX8",
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-21 (Mon)",
-  "prevTt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -656,14 +631,11 @@
   "eta": "12-19 (Sat)",
   "tt": 11,
   "service": "VTX3",
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "EMC",
@@ -672,9 +644,9 @@
   "etd": "12-09 (Wed)",
   "eta": "12-15 (Tue)",
   "tt": 6,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-15 (Tue)",
-  "prevTt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  }

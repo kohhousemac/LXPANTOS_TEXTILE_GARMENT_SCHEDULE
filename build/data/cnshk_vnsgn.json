@@ -57,15 +57,12 @@
   "voyage": "S123",
   "etd": "11-11 (Wed)",
   "eta": "11-13 (Fri)",
-  "tt": 3,
-  "prevEtd": "11-10 (Tue)",
-  "prevEta": "11-13 (Fri)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "CNC",
@@ -74,14 +71,11 @@
   "etd": "11-15 (Sun)",
   "eta": "11-17 (Tue)",
   "tt": 3,
-  "prevEtd": "11-12 (Thu)",
-  "prevEta": "11-14 (Sat)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -89,15 +83,12 @@
   "voyage": "S072",
   "etd": "11-15 (Sun)",
   "eta": "11-17 (Tue)",
-  "tt": 3,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-17 (Tue)",
-  "prevTt": 4,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "CNC",
@@ -106,13 +97,11 @@
   "etd": "11-19 (Thu)",
   "eta": "11-21 (Sat)",
   "tt": 3,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "11-22 (Sun)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -120,15 +109,12 @@
   "voyage": "S124",
   "etd": "11-23 (Mon)",
   "eta": "11-25 (Wed)",
-  "tt": 3,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -136,15 +122,12 @@
   "voyage": "S030",
   "etd": "11-23 (Mon)",
   "eta": "11-27 (Fri)",
-  "tt": 5,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "CNC",
@@ -153,14 +136,11 @@
   "etd": "11-27 (Fri)",
   "eta": "11-30 (Mon)",
   "tt": 3,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -168,15 +148,12 @@
   "voyage": "N089",
   "etd": "11-28 (Sat)",
   "eta": "12-06 (Sun)",
-  "tt": 9,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 10,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -184,7 +161,7 @@
   "voyage": "S092",
   "etd": "11-28 (Sat)",
   "eta": "12-01 (Tue)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -197,15 +174,12 @@
   "voyage": "S193",
   "etd": "12-01 (Tue)",
   "eta": "12-05 (Sat)",
-  "tt": 5,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "CNC",
@@ -214,14 +188,11 @@
   "etd": "12-04 (Fri)",
   "eta": "12-07 (Mon)",
   "tt": 3,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -229,15 +200,12 @@
   "voyage": "S125",
   "etd": "12-06 (Sun)",
   "eta": "12-09 (Wed)",
-  "tt": 4,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "tt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "CNC",
@@ -258,7 +226,7 @@
   "voyage": "S093",
   "etd": "12-12 (Sat)",
   "eta": "12-15 (Tue)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -271,7 +239,7 @@
   "voyage": "S031",
   "etd": "12-14 (Mon)",
   "eta": "12-18 (Fri)",
-  "tt": 5,
+  "tt": 4,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -285,14 +253,11 @@
   "etd": "12-16 (Wed)",
   "eta": "12-19 (Sat)",
   "tt": 3,
-  "prevEtd": "12-14 (Mon)",
-  "prevEta": "12-17 (Thu)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "WHL",
@@ -300,11 +265,11 @@
   "voyage": "S126",
   "etd": "12-19 (Sat)",
   "eta": "12-22 (Tue)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -313,11 +278,11 @@
   "voyage": "S194",
   "etd": "12-22 (Tue)",
   "eta": "12-26 (Sat)",
-  "tt": 5,
+  "tt": 4,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -330,7 +295,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -339,11 +304,11 @@
   "voyage": "S094",
   "etd": "12-26 (Sat)",
   "eta": "12-29 (Tue)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -352,11 +317,11 @@
   "voyage": "S001",
   "etd": "12-28 (Mon)",
   "eta": "01-01 (Fri)",
-  "tt": 5,
+  "tt": 4,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -369,7 +334,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -378,24 +343,11 @@
   "voyage": "S127",
   "etd": "01-02 (Sat)",
   "eta": "01-05 (Tue)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
-  "changedFields": []
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 377",
-  "voyage": "S032",
-  "etd": "01-04 (Mon)",
-  "eta": "01-08 (Fri)",
-  "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -408,7 +360,20 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 377",
+  "voyage": "S032",
+  "etd": "01-04 (Mon)",
+  "eta": "01-08 (Fri)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -421,7 +386,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -434,7 +399,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  }
 ]

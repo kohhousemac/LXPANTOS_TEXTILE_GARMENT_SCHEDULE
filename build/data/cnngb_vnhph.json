@@ -1,6 +1,20 @@
 [
  {
   "carrier": "SITC",
+  "vessel": "SINOTRANS DALIAN",
+  "voyage": "2637S",
+  "etd": "10-27 (Tue)",
+  "eta": "11-08 (Sun)",
+  "tt": 12,
+  "service": "CJV5(SNL)",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "SITC",
   "vessel": "NOVA STAR",
   "voyage": "2642S",
   "etd": "11-04 (Wed)",
@@ -21,9 +35,9 @@
   "etd": "11-10 (Tue)",
   "eta": "11-14 (Sat)",
   "tt": 4,
-  "prevEtd": "11-09 (Mon)",
-  "prevEta": "11-14 (Sat)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -35,9 +49,9 @@
   "etd": "11-19 (Thu)",
   "eta": "11-23 (Mon)",
   "tt": 4,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -49,9 +63,9 @@
   "etd": "11-20 (Fri)",
   "eta": "11-26 (Thu)",
   "tt": 6,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 6,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -63,9 +77,9 @@
   "etd": "11-24 (Tue)",
   "eta": "11-28 (Sat)",
   "tt": 4,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -77,14 +91,11 @@
   "etd": "11-26 (Thu)",
   "eta": "12-02 (Wed)",
   "tt": 6,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 7,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "service": "CJV4",
@@ -94,15 +105,11 @@
   "etd": "12-02 (Wed)",
   "eta": "12-06 (Sun)",
   "tt": 4,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "service": "CJV5(SNL)",
@@ -112,14 +119,11 @@
   "etd": "12-03 (Thu)",
   "eta": "12-10 (Thu)",
   "tt": 7,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "service": "CJV4",
@@ -129,9 +133,9 @@
   "etd": "12-07 (Mon)",
   "eta": "12-12 (Sat)",
   "tt": 5,
-  "prevEtd": "12-07 (Mon)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  }

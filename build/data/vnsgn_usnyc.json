@@ -1,24 +1,5 @@
 [
  {
-  "rotation": "Vung Tau → Singapore → New York",
-  "carrier": "MSC",
-  "vessel": "MSC VITTORIA",
-  "voyage": "GU644W",
-  "etd": "11-12 (Thu)",
-  "eta": "12-14 (Mon)",
-  "tt": 32,
-  "service": "AMERICA SERVICE",
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 28,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
- },
- {
   "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
   "service": "CBX",
   "carrier": "CMA CGM",
@@ -27,9 +8,9 @@
   "etd": "11-16 (Mon)",
   "eta": "12-26 (Sat)",
   "tt": 40,
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "12-26 (Sat)",
-  "prevTt": 40,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "same",
   "changedFields": []
  },
@@ -42,14 +23,11 @@
   "etd": "11-18 (Wed)",
   "eta": "01-03 (Sun)",
   "tt": 46,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "01-02 (Sat)",
-  "prevTt": 45,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "rotation": "Vung Tau → Singapore → New York",
@@ -60,9 +38,9 @@
   "eta": "12-20 (Sun)",
   "tt": 28,
   "service": "AMERICA SERVICE",
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 28,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "same",
   "changedFields": []
  },
@@ -75,14 +53,11 @@
   "etd": "11-24 (Tue)",
   "eta": "01-09 (Sat)",
   "tt": 46,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "01-08 (Fri)",
-  "prevTt": 45,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "rotation": "Vung Tau → Singapore → New York",
@@ -93,14 +68,11 @@
   "eta": "12-28 (Mon)",
   "tt": 28,
   "service": "AMERICA SERVICE",
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-26 (Sat)",
-  "prevTt": 28,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
@@ -111,14 +83,11 @@
   "etd": "12-03 (Thu)",
   "eta": "01-16 (Sat)",
   "tt": 44,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "01-15 (Fri)",
-  "prevTt": 44,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "rotation": "Vung Tau → Singapore → New York",
@@ -129,14 +98,11 @@
   "eta": "12-31 (Thu)",
   "tt": 27,
   "service": "AMERICA SERVICE",
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-31 (Thu)",
-  "prevTt": 30,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "MSC",
@@ -150,7 +116,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -165,7 +131,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  }
 ]

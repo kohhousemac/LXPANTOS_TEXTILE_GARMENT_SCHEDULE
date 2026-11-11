@@ -19,9 +19,9 @@
   "etd": "11-18 (Wed)",
   "eta": "12-20 (Sun)",
   "tt": 32,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 32,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -35,7 +35,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -45,9 +45,9 @@
   "etd": "12-03 (Thu)",
   "eta": "01-07 (Thu)",
   "tt": 35,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "01-07 (Thu)",
-  "prevTt": 35,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  }

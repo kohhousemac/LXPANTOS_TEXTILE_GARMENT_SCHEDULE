@@ -28,40 +28,49 @@
   "closedCarriers": "KMTC / NAMSUNG"
  },
  {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
-  "vessel": "STAR EXPLORER",
-  "voyage": "2622S",
-  "etd": "11-17 (Tue)",
-  "eta": "11-19 (Thu)",
-  "tt": 2,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "11-18 (Wed)",
-  "prevTt": 1,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "closedCarriers": "KMTC / NAMSUNG",
-  "bookingClosed": true
- },
- {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STAR FRONTIER",
   "voyage": "2622S",
   "etd": "11-17 (Tue)",
   "eta": "11-18 (Wed)",
   "tt": 1,
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "11-18 (Wed)",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
+  "closedCarriers": "KMTC",
+  "bookingClosed": true
+ },
+ {
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "vessel": "STAR EXPLORER",
+  "voyage": "2622S",
+  "etd": "11-18 (Wed)",
+  "eta": "11-19 (Thu)",
+  "tt": 1,
+  "prevEtd": "11-17 (Tue)",
+  "prevEta": "11-19 (Thu)",
   "prevTt": 2,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "tt"
+   "etd"
   ],
-  "altDates": "NAMSUNG 11-18 (Wed)→11-19 (Thu)",
-  "closedCarriers": "KMTC / NAMSUNG",
+  "closedCarriers": "KMTC / NAMSUNG"
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STAR FRONTIER",
+  "voyage": "2622S",
+  "etd": "11-18 (Wed)",
+  "eta": "11-19 (Thu)",
+  "tt": 1,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": [],
+  "closedCarriers": "NAMSUNG",
   "bookingClosed": true
  },
  {
@@ -71,14 +80,11 @@
   "etd": "11-20 (Fri)",
   "eta": "11-22 (Sun)",
   "tt": 2,
-  "prevEtd": "11-16 (Mon)",
-  "prevEta": "11-18 (Wed)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "KMTC / NAMSUNG / PANOCEAN",
   "bookingClosed": true
  },
@@ -89,14 +95,11 @@
   "etd": "11-22 (Sun)",
   "eta": "11-23 (Mon)",
   "tt": 1,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-22 (Sun)",
-  "prevTt": 1,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "KMTC / NAMSUNG",
   "bookingClosed": true
  },
@@ -107,30 +110,25 @@
   "etd": "11-30 (Mon)",
   "eta": "12-01 (Tue)",
   "tt": 1,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-01 (Tue)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "altDates": "NAMSUNG 11-30 (Mon)→12-02 (Wed)"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2623S",
-  "etd": "12-01 (Tue)",
+  "etd": "12-02 (Wed)",
   "eta": "12-03 (Thu)",
-  "tt": 2,
+  "tt": 1,
   "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 1,
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 2,
   "status": "changed",
   "changedFields": [
-   "eta",
-   "tt"
+   "etd"
   ]
  },
  {
@@ -143,9 +141,8 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "NAMSUNG 12-05 (Sat)→12-07 (Mon)"
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN",
@@ -157,7 +154,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  }
 ]

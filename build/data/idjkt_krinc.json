@@ -50,9 +50,9 @@
   "etd": "11-18 (Wed)",
   "eta": "12-02 (Wed)",
   "tt": 14,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 14,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -63,15 +63,11 @@
   "etd": "11-20 (Fri)",
   "eta": "12-03 (Thu)",
   "tt": 13,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "11-29 (Sun)",
-  "prevTt": 12,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "NAMSUNG",
@@ -80,8 +76,34 @@
   "etd": "11-22 (Sun)",
   "eta": "12-04 (Fri)",
   "tt": 12,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "12-03 (Thu)",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "etd": "11-23 (Mon)",
+  "eta": "12-05 (Sat)",
+  "tt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "etd": "11-24 (Tue)",
+  "eta": "12-06 (Sun)",
+  "tt": 12,
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "12-05 (Sat)",
   "prevTt": 12,
   "status": "changed",
   "changedFields": [
@@ -90,56 +112,58 @@
   ]
  },
  {
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
-  "vessel": "KMTC XIAMEN",
+  "carrier": "NAMSUNG",
+  "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
-  "etd": "11-23 (Mon)",
-  "eta": "12-05 (Sat)",
-  "tt": 12,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "altDates": "KMTC 11-24 (Tue)→12-06 (Sun)"
+  "etd": "11-26 (Thu)",
+  "eta": "12-07 (Mon)",
+  "tt": 11,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  },
  {
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
   "etd": "11-28 (Sat)",
-  "eta": "12-08 (Tue)",
-  "tt": 10,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-06 (Sun)",
+  "eta": "12-09 (Wed)",
+  "tt": 11,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-08 (Tue)",
   "prevTt": 10,
   "status": "changed",
   "changedFields": [
-   "etd",
    "eta"
-  ],
-  "altDates": "KMTC 11-27 (Fri)→12-08 (Tue); NAMSUNG 11-26 (Thu)→12-07 (Mon)"
+  ]
  },
  {
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
   "etd": "12-03 (Thu)",
   "eta": "12-13 (Sun)",
   "tt": 10,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 10,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "altDates": "NAMSUNG 12-04 (Fri)→12-14 (Mon)"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609N",
+  "etd": "12-04 (Fri)",
+  "eta": "12-14 (Mon)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  },
  {
   "carrier": "NAMSUNG",
@@ -151,21 +175,23 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
   "vessel": "KMTC SURABAYA",
   "voyage": "2609N",
-  "etd": "12-09 (Wed)",
-  "eta": "12-21 (Mon)",
-  "tt": 12,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "NAMSUNG 12-08 (Tue)→12-18 (Fri)"
+  "etd": "12-08 (Tue)",
+  "eta": "12-18 (Fri)",
+  "tt": 10,
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "12-21 (Mon)",
+  "prevTt": 12,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  }
 ]

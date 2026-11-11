@@ -46,14 +46,11 @@
   "etd": "11-15 (Sun)",
   "eta": "11-26 (Thu)",
   "tt": 11,
-  "prevEtd": "11-13 (Fri)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -62,15 +59,11 @@
   "etd": "11-15 (Sun)",
   "eta": "11-25 (Wed)",
   "tt": 10,
-  "prevEtd": "11-12 (Thu)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -79,15 +72,11 @@
   "etd": "11-16 (Mon)",
   "eta": "12-01 (Tue)",
   "tt": 15,
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-29 (Sun)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -96,14 +85,11 @@
   "etd": "11-20 (Fri)",
   "eta": "12-03 (Thu)",
   "tt": 13,
-  "prevEtd": "11-19 (Thu)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
@@ -112,15 +98,11 @@
   "etd": "11-23 (Mon)",
   "eta": "12-09 (Wed)",
   "tt": 16,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 17,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -129,9 +111,22 @@
   "etd": "11-25 (Wed)",
   "eta": "12-08 (Tue)",
   "tt": 13,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
+  "vessel": "YEOSU VOYAGER",
+  "voyage": "2609N",
+  "etd": "11-26 (Thu)",
+  "eta": "12-11 (Fri)",
+  "tt": 15,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-13 (Sun)",
+  "prevTt": 15,
   "status": "changed",
   "changedFields": [
    "etd",
@@ -148,25 +143,8 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
- },
- {
-  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2609N",
-  "etd": "11-28 (Sat)",
-  "eta": "12-13 (Sun)",
-  "tt": 15,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "altDates": "NAMSUNG 11-26 (Thu)→12-11 (Fri)"
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -175,9 +153,9 @@
   "etd": "11-29 (Sun)",
   "eta": "12-12 (Sat)",
   "tt": 13,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 13,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -188,9 +166,22 @@
   "etd": "12-02 (Wed)",
   "eta": "12-14 (Mon)",
   "tt": 12,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-13 (Sun)",
-  "prevTt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
+ },
+ {
+  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609N",
+  "etd": "12-04 (Fri)",
+  "eta": "12-19 (Sat)",
+  "tt": 15,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 15,
   "status": "changed",
   "changedFields": [
    "etd",
@@ -199,33 +190,18 @@
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
-  "vessel": "STARSHIP JUPITER",
+  "vessel": "KMTC SURABAYA",
   "voyage": "2609N",
-  "etd": "12-03 (Thu)",
-  "eta": "12-18 (Fri)",
+  "etd": "12-08 (Tue)",
+  "eta": "12-23 (Wed)",
   "tt": 15,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-17 (Thu)",
-  "prevTt": 15,
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "12-25 (Fri)",
+  "prevTt": 16,
   "status": "changed",
   "changedFields": [
    "etd",
    "eta"
-  ],
-  "altDates": "NAMSUNG 12-04 (Fri)→12-18 (Fri)"
- },
- {
-  "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
-  "vessel": "KMTC SURABAYA",
-  "voyage": "2609N",
-  "etd": "12-09 (Wed)",
-  "eta": "12-25 (Fri)",
-  "tt": 16,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "altDates": "NAMSUNG 12-08 (Tue)→12-23 (Wed)"
+  ]
  }
 ]

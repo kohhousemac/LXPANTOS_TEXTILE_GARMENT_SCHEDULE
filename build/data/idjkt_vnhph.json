@@ -20,9 +20,9 @@
   "eta": "11-11 (Wed)",
   "tt": 11,
   "service": "JTH",
-  "prevEtd": "10-31 (Sat)",
-  "prevEta": "11-10 (Tue)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -47,9 +47,9 @@
   "eta": "11-17 (Tue)",
   "tt": 10,
   "service": "JTH",
-  "prevEtd": "11-07 (Sat)",
-  "prevEta": "11-17 (Tue)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -74,9 +74,9 @@
   "eta": "11-24 (Tue)",
   "tt": 10,
   "service": "JTH",
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -87,14 +87,11 @@
   "etd": "11-16 (Mon)",
   "eta": "11-24 (Tue)",
   "tt": 8,
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -104,9 +101,9 @@
   "eta": "12-01 (Tue)",
   "tt": 10,
   "service": "JTH",
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "12-01 (Tue)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -117,14 +114,11 @@
   "etd": "11-25 (Wed)",
   "eta": "12-02 (Wed)",
   "tt": 7,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -134,9 +128,9 @@
   "eta": "12-08 (Tue)",
   "tt": 10,
   "service": "JTH",
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -147,9 +141,9 @@
   "etd": "12-01 (Tue)",
   "eta": "12-05 (Sat)",
   "tt": 4,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -161,9 +155,9 @@
   "eta": "12-15 (Tue)",
   "tt": 10,
   "service": "JTH",
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-15 (Tue)",
-  "prevTt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -174,13 +168,10 @@
   "etd": "12-07 (Mon)",
   "eta": "12-15 (Tue)",
   "tt": 8,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  }
 ]

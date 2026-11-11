@@ -61,9 +61,9 @@
   "eta": "11-03 (Tue)",
   "tt": 2,
   "service": "CMI2",
-  "prevEtd": "11-01 (Sun)",
-  "prevEta": "11-03 (Tue)",
-  "prevTt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -75,9 +75,9 @@
   "eta": "11-10 (Tue)",
   "tt": 3,
   "service": "CMI2",
-  "prevEtd": "11-07 (Sat)",
-  "prevEta": "11-10 (Tue)",
-  "prevTt": 3,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "departed",
   "changedFields": []
  },
@@ -102,14 +102,11 @@
   "eta": "11-16 (Mon)",
   "tt": 3,
   "service": "CMI2",
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-16 (Mon)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "GSL",
@@ -118,14 +115,11 @@
   "etd": "11-14 (Sat)",
   "eta": "11-20 (Fri)",
   "tt": 6,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-19 (Thu)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SINOKOR",
@@ -134,14 +128,11 @@
   "etd": "11-15 (Sun)",
   "eta": "11-21 (Sat)",
   "tt": 6,
-  "prevEtd": "11-12 (Thu)",
-  "prevEta": "11-18 (Wed)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "SINOKOR",
   "bookingClosed": true
  },
@@ -152,14 +143,11 @@
   "etd": "11-21 (Sat)",
   "eta": "11-27 (Fri)",
   "tt": 6,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -169,9 +157,9 @@
   "eta": "11-23 (Mon)",
   "tt": 2,
   "service": "CMI2",
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-23 (Mon)",
-  "prevTt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -182,25 +170,21 @@
   "etd": "11-21 (Sat)",
   "eta": "11-26 (Thu)",
   "tt": 5,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "11-24 (Tue)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SINOKOR",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609S",
-  "etd": "11-25 (Wed)",
-  "eta": "12-01 (Tue)",
-  "tt": 6,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "11-30 (Mon)",
+  "etd": "11-27 (Fri)",
+  "eta": "12-02 (Wed)",
+  "tt": 5,
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "12-01 (Tue)",
   "prevTt": 6,
   "status": "changed",
   "changedFields": [
@@ -216,9 +200,9 @@
   "eta": "11-30 (Mon)",
   "tt": 2,
   "service": "CMI2",
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -229,14 +213,11 @@
   "etd": "11-28 (Sat)",
   "eta": "12-04 (Fri)",
   "tt": 6,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SINOKOR",
@@ -245,14 +226,11 @@
   "etd": "12-01 (Tue)",
   "eta": "12-07 (Mon)",
   "tt": 6,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "GSL",
@@ -261,14 +239,11 @@
   "etd": "12-05 (Sat)",
   "eta": "12-10 (Thu)",
   "tt": 5,
-  "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-09 (Wed)",
-  "prevTt": 5,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "SITC",
@@ -278,9 +253,9 @@
   "eta": "12-07 (Mon)",
   "tt": 2,
   "service": "CMI2",
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  }

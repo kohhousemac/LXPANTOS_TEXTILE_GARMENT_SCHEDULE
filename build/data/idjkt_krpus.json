@@ -65,14 +65,11 @@
   "etd": "11-13 (Fri)",
   "eta": "11-28 (Sat)",
   "tt": 15,
-  "prevEtd": "11-12 (Thu)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 16,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "KMTC",
   "bookingClosed": true
  },
@@ -83,15 +80,11 @@
   "etd": "11-17 (Tue)",
   "eta": "12-01 (Tue)",
   "tt": 14,
-  "prevEtd": "11-15 (Sun)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "KMTC",
   "bookingClosed": true
  },
@@ -102,9 +95,9 @@
   "etd": "11-18 (Wed)",
   "eta": "11-30 (Mon)",
   "tt": 12,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": []
  },
@@ -115,9 +108,9 @@
   "etd": "11-18 (Wed)",
   "eta": "12-04 (Fri)",
   "tt": 16,
-  "prevEtd": "11-18 (Wed)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 16,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "status": "unchanged",
   "changedFields": [],
   "closedCarriers": "KMTC",
@@ -130,14 +123,11 @@
   "etd": "11-20 (Fri)",
   "eta": "12-01 (Tue)",
   "tt": 11,
-  "prevEtd": "11-17 (Tue)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "NAMSUNG",
@@ -146,14 +136,11 @@
   "etd": "11-22 (Sun)",
   "eta": "12-02 (Wed)",
   "tt": 10,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 11,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -162,15 +149,11 @@
   "etd": "11-22 (Sun)",
   "eta": "12-09 (Wed)",
   "tt": 17,
-  "prevEtd": "11-23 (Mon)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
@@ -179,15 +162,11 @@
   "etd": "11-23 (Mon)",
   "eta": "12-06 (Sun)",
   "tt": 13,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -196,14 +175,11 @@
   "etd": "11-23 (Mon)",
   "eta": "12-08 (Tue)",
   "tt": 15,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
@@ -212,15 +188,11 @@
   "etd": "11-24 (Tue)",
   "eta": "12-07 (Mon)",
   "tt": 13,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": [],
   "closedCarriers": "KMTC",
   "bookingClosed": true
  },
@@ -231,27 +203,29 @@
   "etd": "11-26 (Thu)",
   "eta": "12-08 (Tue)",
   "tt": 12,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 12,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-10 (Thu)",
+  "prevTt": 13,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta"
+  ]
  },
  {
   "carrier": "KMTC",
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
-  "etd": "11-27 (Fri)",
+  "etd": "11-28 (Sat)",
   "eta": "12-10 (Thu)",
-  "tt": 13,
+  "tt": 12,
   "prevEtd": "11-26 (Thu)",
   "prevEta": "12-08 (Tue)",
   "prevTt": 12,
   "status": "changed",
   "changedFields": [
    "etd",
-   "eta",
-   "tt"
+   "eta"
   ]
  },
  {
@@ -261,29 +235,25 @@
   "etd": "11-29 (Sun)",
   "eta": "12-13 (Sun)",
   "tt": 14,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 14,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "KMTC",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
   "etd": "12-03 (Thu)",
-  "eta": "12-14 (Mon)",
-  "tt": 11,
-  "prevEtd": "12-02 (Wed)",
+  "eta": "12-15 (Tue)",
+  "tt": 12,
+  "prevEtd": "12-03 (Thu)",
   "prevEta": "12-14 (Mon)",
-  "prevTt": 12,
+  "prevTt": 11,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "tt"
+   "eta"
   ]
  },
  {
@@ -291,16 +261,14 @@
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
   "etd": "12-04 (Fri)",
-  "eta": "12-15 (Tue)",
-  "tt": 11,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 12,
+  "eta": "12-16 (Wed)",
+  "tt": 12,
+  "prevEtd": "12-04 (Fri)",
+  "prevEta": "12-15 (Tue)",
+  "prevTt": 11,
   "status": "changed",
   "changedFields": [
-   "etd",
-   "eta",
-   "tt"
+   "eta"
   ]
  },
  {
@@ -313,7 +281,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  },
  {
@@ -323,14 +291,11 @@
   "etd": "12-06 (Sun)",
   "eta": "12-21 (Mon)",
   "tt": 15,
-  "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-19 (Sat)",
-  "prevTt": 15,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "unchanged",
+  "changedFields": []
  },
  {
   "carrier": "NAMSUNG",
@@ -342,7 +307,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "unchanged",
   "changedFields": []
  }
 ]
