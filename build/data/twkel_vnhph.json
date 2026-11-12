@@ -48,19 +48,19 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "departed",
   "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 105",
   "voyage": "S468",
-  "etd": "11-11 (Wed)",
+  "etd": "11-12 (Thu)",
   "eta": "11-14 (Sat)",
-  "tt": 3,
-  "prevEtd": "11-12 (Thu)",
+  "tt": 2,
+  "prevEtd": "11-11 (Wed)",
   "prevEta": "11-14 (Sat)",
-  "prevTt": 2,
+  "prevTt": 3,
   "status": "changed",
   "changedFields": [
    "etd"
@@ -76,7 +76,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -89,7 +89,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -97,12 +97,12 @@
   "vessel": "SWAN RIVER BRIDGE",
   "voyage": "JVH040S19",
   "etd": "11-22 (Sun)",
-  "eta": "11-25 (Wed)",
-  "tt": 3,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
+  "eta": "11-26 (Thu)",
+  "tt": 4,
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "11-25 (Wed)",
+  "prevTt": 3,
+  "status": "same",
   "changedFields": []
  },
  {
@@ -115,22 +115,20 @@
   "prevEtd": "11-25 (Wed)",
   "prevEta": "11-27 (Fri)",
   "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd"
-  ]
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
   "vessel": "ONE PEARL RIVER",
   "voyage": "JVH060S19",
-  "etd": "11-29 (Sun)",
+  "etd": "11-30 (Mon)",
   "eta": "12-03 (Thu)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
+  "tt": 3,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 4,
+  "status": "same",
   "changedFields": []
  },
  {
@@ -143,20 +141,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "SMOOTH WIND",
-  "voyage": "JVH080S19",
-  "etd": "12-08 (Tue)",
-  "eta": "12-12 (Sat)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -169,7 +154,33 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "SMOOTH WIND",
+  "voyage": "JVH080S19",
+  "etd": "12-08 (Tue)",
+  "eta": "12-12 (Sat)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "SWAN RIVER BRIDGE",
+  "voyage": "JVH0A0S19",
+  "etd": "12-10 (Thu)",
+  "eta": "12-15 (Tue)",
+  "tt": 5,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
   "changedFields": []
  }
 ]

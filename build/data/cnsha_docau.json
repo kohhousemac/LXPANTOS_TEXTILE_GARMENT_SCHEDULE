@@ -1,9 +1,9 @@
 [
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM BIG SUR",
   "voyage": "PEX050E19",
+  "service": "PEX2",
   "etd": "11-13 (Fri)",
   "eta": "12-20 (Sun)",
   "tt": 37,
@@ -14,10 +14,10 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ESMERALDA",
   "voyage": "PEX090E19",
+  "service": "PEX2",
   "etd": "11-22 (Sun)",
   "eta": "01-03 (Sun)",
   "tt": 42,
@@ -28,10 +28,10 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CSCL LONG BEACH",
   "voyage": "PEX0B0E19",
+  "service": "PEX2",
   "etd": "12-02 (Wed)",
   "eta": "01-11 (Mon)",
   "tt": 40,
@@ -42,10 +42,10 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM CAPE COD",
   "voyage": "PEX0D0E19",
+  "service": "PEX2",
   "etd": "12-09 (Wed)",
   "eta": "01-17 (Sun)",
   "tt": 39,

@@ -28,24 +28,24 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM TENERE",
   "voyage": "PEX070E19",
+  "service": "PEX2",
   "etd": "11-11 (Wed)",
   "eta": "12-28 (Mon)",
   "tt": 47,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "same",
+  "status": "departed",
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ESMERALDA",
   "voyage": "PEX090E19",
+  "service": "PEX2",
   "etd": "11-16 (Mon)",
   "eta": "01-03 (Sun)",
   "tt": 48,
@@ -56,10 +56,10 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CSCL LONG BEACH",
   "voyage": "PEX0B0E19",
+  "service": "PEX2",
   "etd": "11-23 (Mon)",
   "eta": "01-11 (Mon)",
   "tt": 49,
@@ -70,10 +70,10 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM CAPE COD",
   "voyage": "PEX0D0E19",
+  "service": "PEX2",
   "etd": "11-30 (Mon)",
   "eta": "01-17 (Sun)",
   "tt": 48,
@@ -84,10 +84,10 @@
   "changedFields": []
  },
  {
-  "service": "PEX2",
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ANDROMAQUE",
   "voyage": "PEX0F0E19",
+  "service": "PEX2",
   "etd": "12-07 (Mon)",
   "eta": "01-24 (Sun)",
   "tt": 48,

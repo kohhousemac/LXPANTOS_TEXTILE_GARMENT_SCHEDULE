@@ -35,7 +35,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -48,33 +48,33 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "ABRAO COCHIN",
   "voyage": "S022",
-  "etd": "11-22 (Sun)",
+  "etd": "11-23 (Mon)",
   "eta": "11-26 (Thu)",
-  "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
+  "tt": 3,
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "11-26 (Thu)",
+  "prevTt": 4,
+  "status": "same",
   "changedFields": []
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 286",
   "voyage": "S117",
-  "etd": "11-23 (Mon)",
-  "eta": "11-27 (Fri)",
+  "etd": "11-24 (Tue)",
+  "eta": "11-28 (Sat)",
   "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "11-27 (Fri)",
+  "prevTt": 4,
+  "status": "same",
   "changedFields": []
  },
  {
@@ -87,7 +87,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -100,7 +100,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -113,7 +113,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  }
 ]

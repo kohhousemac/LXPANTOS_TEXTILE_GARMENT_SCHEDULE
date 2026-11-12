@@ -17,11 +17,11 @@
   "vessel": "EVER CANDID",
   "voyage": "0561-092S",
   "etd": "11-04 (Wed)",
-  "eta": "11-14 (Sat)",
-  "tt": 10,
+  "eta": "11-13 (Fri)",
+  "tt": 9,
   "prevEtd": "11-04 (Wed)",
-  "prevEta": "11-12 (Thu)",
-  "prevTt": 8,
+  "prevEta": "11-14 (Sat)",
+  "prevTt": 10,
   "status": "departed",
   "changedFields": []
  },
@@ -35,7 +35,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -48,7 +48,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -61,7 +61,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -74,7 +74,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -87,7 +87,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  }
 ]

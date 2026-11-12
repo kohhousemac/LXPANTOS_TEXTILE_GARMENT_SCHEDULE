@@ -1,62 +1,59 @@
 [
  {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2610S",
+  "closedCarriers": "KMTC",
   "etd": "11-07 (Sat)",
-  "eta": "11-13 (Fri)",
-  "tt": 6,
+  "eta": "11-15 (Sun)",
+  "tt": 8,
+  "prevEtd": "11-07 (Sat)",
+  "prevEta": "11-13 (Fri)",
+  "prevTt": 6,
   "status": "departed",
-  "changedFields": [],
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "altDates": "KMTC 11-07 (Sat)→11-12 (Thu)",
-  "closedCarriers": "KMTC"
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
+  "closedCarriers": "KMTC",
   "etd": "11-13 (Fri)",
   "eta": "11-20 (Fri)",
   "tt": 7,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "KMTC"
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "KMTC HOCHIMINH",
   "voyage": "2611S",
+  "closedCarriers": "KMTC",
   "etd": "11-18 (Wed)",
   "eta": "11-26 (Thu)",
   "tt": 8,
   "prevEtd": "11-18 (Wed)",
   "prevEta": "11-27 (Fri)",
   "prevTt": 9,
-  "status": "changed",
-  "changedFields": [
-   "eta"
-  ],
-  "closedCarriers": "KMTC"
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "BELAWAN",
   "voyage": "2611S",
+  "closedCarriers": "KMTC",
   "etd": "11-25 (Wed)",
   "eta": "12-04 (Fri)",
   "tt": 9,
   "prevEtd": "11-24 (Tue)",
   "prevEta": "12-02 (Wed)",
   "prevTt": 8,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "closedCarriers": "KMTC"
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / KMTC / SINOKOR",
@@ -68,10 +65,7 @@
   "prevEtd": "12-04 (Fri)",
   "prevEta": "12-10 (Thu)",
   "prevTt": 6,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "status": "same",
+  "changedFields": []
  }
 ]

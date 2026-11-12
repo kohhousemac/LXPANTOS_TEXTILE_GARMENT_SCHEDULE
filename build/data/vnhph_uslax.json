@@ -28,31 +28,29 @@
   "rotation": "Haiphong → Los Angeles (직항)"
  },
  {
-  "rotation": "Haiphong → Los Angeles (직항)",
-  "service": "AP1",
   "carrier": "WHL",
   "vessel": "WAN HAI A01",
   "voyage": "E021",
+  "service": "AP1",
   "etd": "11-14 (Sat)",
   "eta": "12-11 (Fri)",
   "tt": 27,
+  "rotation": "Haiphong → Los Angeles (직항)",
   "prevEtd": "11-12 (Thu)",
   "prevEta": "12-11 (Fri)",
   "prevTt": 29,
-  "status": "changed",
-  "changedFields": [
-   "etd"
-  ]
+  "status": "same",
+  "changedFields": []
  },
  {
-  "rotation": "Haiphong → Hong Kong → Yantian → Los Angeles",
   "carrier": "MSC",
   "vessel": "GREENLAND",
   "voyage": "GQ646N",
+  "service": "PEARL",
+  "rotation": "Haiphong → Hong Kong → Yantian → Los Angeles",
   "etd": "11-19 (Thu)",
   "eta": "12-10 (Thu)",
   "tt": 21,
-  "service": "PEARL",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -60,14 +58,14 @@
   "changedFields": []
  },
  {
-  "rotation": "Haiphong → Yantian → Los Angeles",
   "carrier": "MSC",
   "vessel": "EXPRESS ROME",
   "voyage": "GQ647N",
+  "service": "PEARL",
+  "rotation": "Haiphong → Yantian → Los Angeles",
   "etd": "11-24 (Tue)",
   "eta": "12-12 (Sat)",
   "tt": 18,
-  "service": "PEARL",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -75,31 +73,29 @@
   "changedFields": []
  },
  {
-  "rotation": "Haiphong → Los Angeles (직항)",
-  "service": "AP1",
   "carrier": "WHL",
   "vessel": "WAN HAI A05",
   "voyage": "E019",
+  "service": "AP1",
   "etd": "11-26 (Thu)",
   "eta": "12-21 (Mon)",
   "tt": 25,
+  "rotation": "Haiphong → Los Angeles (직항)",
   "prevEtd": "11-23 (Mon)",
   "prevEta": "12-21 (Mon)",
   "prevTt": 28,
-  "status": "changed",
-  "changedFields": [
-   "etd"
-  ]
+  "status": "same",
+  "changedFields": []
  },
  {
-  "rotation": "Haiphong → Yantian → Los Angeles",
   "carrier": "MSC",
   "vessel": "MSC CAROLE",
   "voyage": "GQ648N",
+  "service": "PEARL",
+  "rotation": "Haiphong → Yantian → Los Angeles",
   "etd": "11-28 (Sat)",
   "eta": "12-16 (Wed)",
   "tt": 18,
-  "service": "PEARL",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -107,31 +103,58 @@
   "changedFields": []
  },
  {
-  "rotation": "Haiphong → Los Angeles (직항)",
-  "service": "AP1",
+  "carrier": "MSC",
+  "vessel": "MSC VANESSA",
+  "voyage": "GQ649N",
+  "service": "PEARL",
+  "rotation": "Haiphong → Yantian → Los Angeles",
+  "etd": "12-03 (Thu)",
+  "eta": "12-21 (Mon)",
+  "tt": 18,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
   "carrier": "WHL",
   "vessel": "WAN HAI A03",
   "voyage": "E019",
+  "service": "AP1",
   "etd": "12-04 (Fri)",
   "eta": "12-30 (Wed)",
   "tt": 26,
+  "rotation": "Haiphong → Los Angeles (직항)",
   "prevEtd": "12-01 (Tue)",
   "prevEta": "12-30 (Wed)",
   "prevTt": 29,
-  "status": "changed",
-  "changedFields": [
-   "etd"
-  ]
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "MSC",
   "vessel": "CONTI CHIVALRY",
   "voyage": "GQ649N",
+  "service": "PEARL",
   "etd": "12-09 (Wed)",
   "eta": "12-27 (Sun)",
   "tt": 18,
-  "service": "PEARL",
   "rotation": "Haiphong → Yantian → Los Angeles",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "HYUNDAI NEPTUNE",
+  "voyage": "E047",
+  "service": "AP1",
+  "etd": "12-10 (Thu)",
+  "eta": "01-04 (Mon)",
+  "tt": 25,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,

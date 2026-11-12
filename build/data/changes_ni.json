@@ -1132,5 +1132,68 @@
   "change": "Removed",
   "old": "12-31 (Thu)",
   "new": ""
+ },
+ {
+  "id": "2026-11-12-0-Shanghai|OEL RUDRA",
+  "date": "2026-11-12",
+  "pol": "Shanghai",
+  "vessel": "OEL RUDRA",
+  "change": "ETD changed",
+  "old": "11-13 (Fri)",
+  "new": "11-14 (Sat)"
+ },
+ {
+  "id": "2026-11-12-1-Shanghai|CLIFFORD MAERSK",
+  "date": "2026-11-12",
+  "pol": "Shanghai",
+  "vessel": "CLIFFORD MAERSK",
+  "change": "ETD changed",
+  "old": "11-19 (Thu)",
+  "new": "11-20 (Fri)"
+ },
+ {
+  "id": "2026-11-12-2-Shanghai|GUNVOR MAERSK",
+  "date": "2026-11-12",
+  "pol": "Shanghai",
+  "vessel": "GUNVOR MAERSK",
+  "change": "ETD changed",
+  "old": "11-20 (Fri)",
+  "new": "11-22 (Sun)"
+ },
+ {
+  "id": "2026-11-12-3-Shanghai|MAERSK TOKYO",
+  "date": "2026-11-12",
+  "pol": "Shanghai",
+  "vessel": "MAERSK TOKYO",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-11 (Fri)"
+ },
+ {
+  "id": "2026-11-12-4-Yantian|MAERSK TUNIS",
+  "date": "2026-11-12",
+  "pol": "Yantian",
+  "vessel": "MAERSK TUNIS",
+  "change": "ETD changed",
+  "old": "11-13 (Fri)",
+  "new": "11-14 (Sat)"
+ },
+ {
+  "id": "2026-11-12-5-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-12",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "ETD changed",
+  "old": "11-28 (Sat)",
+  "new": "12-11 (Fri)"
+ },
+ {
+  "id": "2026-11-12-6-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-12",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "ETA changed",
+  "old": "01-07 (Thu)",
+  "new": "01-21 (Thu)"
  }
 ]

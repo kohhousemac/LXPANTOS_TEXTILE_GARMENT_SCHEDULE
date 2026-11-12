@@ -6,7 +6,7 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-10T11:10:00Z"
+  "updatedAt": "2026-11-11T11:14:19Z"
  },
  {
   "country": "니카라과",
@@ -15,16 +15,16 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-10T11:10:00Z"
+  "updatedAt": "2026-11-11T11:14:19Z"
  },
  {
   "country": "파나마",
   "flag": "🇵🇦",
   "hasIssue": true,
-  "headline": "",
-  "url": "",
-  "holiday": "로스 산토스 봉기 기념일 (11/10)",
-  "updatedAt": "2026-11-10T11:10:00Z"
+  "headline": "파나마 운하, 일일 통항 34회로 확대·네오파나막스 최대 흘수 50ft(15.24m) 상향",
+  "url": "https://www.infobae.com/panama/2026/11/10/canal-de-panama-aumenta-a-34-los-transitos-diarios-y-eleva-el-calado-autorizado-en-las-esclusas-neopanamax/",
+  "holiday": "",
+  "updatedAt": "2026-11-11T11:14:19Z"
  },
  {
   "country": "엘살바도르",
@@ -33,6 +33,6 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-10T11:10:00Z"
+  "updatedAt": "2026-11-11T11:14:19Z"
  }
 ]

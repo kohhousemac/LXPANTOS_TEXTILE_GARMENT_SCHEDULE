@@ -1,8 +1,71 @@
 [
  {
+  "carrier": "KMTC",
+  "vessel": "PEGASUS TERA",
+  "voyage": "2621E",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "etd": "10-31 (Sat)",
+  "eta": "11-02 (Mon)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SUNNY LAUREL",
+  "voyage": "2623N",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "etd": "10-31 (Sat)",
+  "eta": "11-02 (Mon)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "PANCON GLORY",
+  "voyage": "2632E",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "etd": "11-01 (Sun)",
+  "eta": "11-03 (Tue)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SKY RAINBOW",
+  "voyage": "2613S",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "etd": "11-06 (Fri)",
+  "eta": "11-18 (Wed)",
+  "tt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "departed",
+  "changedFields": []
+ },
+ {
   "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY LAUREL",
   "voyage": "2624N",
+  "closedCarriers": "KMTC / NAMSUNG",
+  "bookingClosed": true,
+  "altDates": "KMTC 11-09→11-11",
   "etd": "11-09 (Mon)",
   "eta": "11-10 (Tue)",
   "tt": 1,
@@ -10,53 +73,37 @@
   "prevEta": "11-08 (Sun)",
   "prevTt": 1,
   "status": "departed",
-  "changedFields": [],
-  "closedCarriers": "KMTC"
+  "changedFields": []
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN / SINOKOR",
   "vessel": "PEGASUS TERA",
   "voyage": "2622E",
+  "closedCarriers": "KMTC / NAMSUNG / PANOCEAN",
   "etd": "11-12 (Thu)",
   "eta": "11-13 (Fri)",
   "tt": 1,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "KMTC / PANOCEAN"
+  "status": "same",
+  "changedFields": []
  },
  {
-  "carrier": "HEUNG-A / KMTC",
+  "carrier": "HEUNG-A / KMTC / PANOCEAN",
   "vessel": "PANCON GLORY",
   "voyage": "2633E",
-  "etd": "11-13 (Fri)",
-  "eta": "11-16 (Mon)",
-  "tt": 3,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-16 (Mon)",
-  "prevTt": 2,
-  "status": "changed",
-  "changedFields": [
-   "etd"
-  ],
-  "closedCarriers": "KMTC"
- },
- {
-  "carrier": "PANOCEAN",
-  "vessel": "PANCON GLORY",
-  "voyage": "2633E",
+  "closedCarriers": "KMTC / PANOCEAN",
   "etd": "11-14 (Sat)",
   "eta": "11-16 (Mon)",
   "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "new",
-  "changedFields": [],
-  "closedCarriers": "PANOCEAN",
-  "bookingClosed": true
+  "prevEtd": "11-14 (Sat)",
+  "prevEta": "11-15 (Sun)",
+  "prevTt": 1,
+  "status": "changed",
+  "changedFields": [
+   "eta"
+  ]
  },
  {
   "carrier": "NAMSUNG",
@@ -68,71 +115,51 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
   "carrier": "KMTC",
   "vessel": "SUNNY LAUREL",
   "voyage": "2625N",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
   "etd": "11-16 (Mon)",
   "eta": "11-17 (Tue)",
   "tt": 1,
   "prevEtd": "11-15 (Sun)",
   "prevEta": "11-16 (Mon)",
   "prevTt": 1,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "closedCarriers": "KMTC",
-  "bookingClosed": true
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN / SINOKOR",
   "vessel": "PEGASUS TERA",
   "voyage": "2623E",
+  "closedCarriers": "KMTC / PANOCEAN",
   "etd": "11-17 (Tue)",
   "eta": "11-20 (Fri)",
   "tt": 3,
   "prevEtd": "11-19 (Thu)",
   "prevEta": "11-20 (Fri)",
   "prevTt": 1,
-  "status": "changed",
-  "changedFields": [
-   "etd"
-  ],
-  "closedCarriers": "KMTC / PANOCEAN"
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "HEUNG-A / KMTC / PANOCEAN",
   "vessel": "PANCON GLORY",
   "voyage": "2634E",
+  "closedCarriers": "KMTC",
   "etd": "11-20 (Fri)",
   "eta": "11-22 (Sun)",
   "tt": 2,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "KMTC"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "POS SINGAPORE",
-  "voyage": "1043S",
-  "etd": "11-20 (Fri)",
-  "eta": "12-01 (Tue)",
-  "tt": 11,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "KMTC",
-  "bookingClosed": true
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "NAMSUNG",
@@ -144,62 +171,86 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
   "carrier": "HEUNG-A",
   "vessel": "SAWASDEE DENEB",
   "voyage": "2612S",
-  "etd": "11-22 (Sun)",
-  "eta": "12-08 (Tue)",
-  "tt": 16,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": [],
   "closedCarriers": "HEUNG-A",
-  "bookingClosed": true
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SUNNY LAUREL",
-  "voyage": "2626N",
+  "bookingClosed": true,
   "etd": "11-22 (Sun)",
-  "eta": "11-23 (Mon)",
-  "tt": 1,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "11-22 (Sun)",
-  "prevTt": 1,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "closedCarriers": "KMTC",
-  "bookingClosed": true
+  "eta": "12-08 (Tue)",
+  "tt": 16
  },
  {
   "carrier": "KMTC / NAMSUNG / SINOKOR",
   "vessel": "PEGASUS TERA",
   "voyage": "2624E",
+  "closedCarriers": "KMTC",
   "etd": "11-25 (Wed)",
   "eta": "11-27 (Fri)",
   "tt": 2,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
-  "carrier": "PANOCEAN",
+  "carrier": "KMTC",
+  "vessel": "SUNNY LAUREL",
+  "voyage": "2626N",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "etd": "11-25 (Wed)",
+  "eta": "11-27 (Fri)",
+  "tt": 2,
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 1,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "PANOCEAN / SINOKOR",
   "vessel": "PEGASUS TERA",
   "voyage": "2624E",
   "etd": "11-26 (Thu)",
   "eta": "11-27 (Fri)",
   "tt": 1,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "HEUNG-A / KMTC",
+  "vessel": "PANCON GLORY",
+  "voyage": "2635E",
+  "etd": "11-26 (Thu)",
+  "eta": "11-28 (Sat)",
+  "tt": 2,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "11-28 (Sat)",
+  "prevTt": 1,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SKY RAINBOW",
+  "voyage": "2614N",
+  "etd": "11-26 (Thu)",
+  "eta": "12-07 (Mon)",
+  "tt": 11,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -207,38 +258,20 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "SKY RAINBOW",
-  "voyage": "2614S",
-  "etd": "11-26 (Thu)",
-  "eta": "12-07 (Mon)",
-  "tt": 11,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": [],
-  "closedCarriers": "KMTC",
-  "bookingClosed": true
- },
- {
-  "carrier": "HEUNG-A / KMTC / PANOCEAN",
+  "carrier": "HEUNG-A / PANOCEAN",
   "vessel": "PANCON GLORY",
   "voyage": "2635E",
   "etd": "11-27 (Fri)",
-  "eta": "11-28 (Sat)",
-  "tt": 1,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "11-29 (Sun)",
-  "prevTt": 3,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
+  "eta": "11-29 (Sun)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
+  "changedFields": []
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "NAMSUNG",
   "vessel": "SUNNY LAUREL",
   "voyage": "2627N",
   "etd": "11-27 (Fri)",
@@ -247,11 +280,11 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
-  "carrier": "NAMSUNG",
+  "carrier": "NAMSUNG / SINOKOR",
   "vessel": "PEGASUS TERA",
   "voyage": "2625E",
   "etd": "12-01 (Tue)",
@@ -260,7 +293,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -268,29 +301,31 @@
   "vessel": "PANCON GLORY",
   "voyage": "2636E",
   "etd": "12-02 (Wed)",
-  "eta": "12-04 (Fri)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
+  "eta": "12-03 (Thu)",
+  "tt": 1,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 2,
+  "status": "same",
   "changedFields": []
  },
  {
-  "carrier": "KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "PEGASUS TERA",
   "voyage": "2625E",
   "etd": "12-02 (Wed)",
   "eta": "12-04 (Fri)",
   "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-04 (Fri)",
+  "prevTt": 1,
+  "status": "changed",
+  "changedFields": [
+   "etd"
+  ]
  },
  {
-  "carrier": "PANOCEAN",
+  "carrier": "PANOCEAN / SINOKOR",
   "vessel": "PEGASUS TERA",
   "voyage": "2625E",
   "etd": "12-03 (Thu)",
@@ -303,20 +338,7 @@
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "SUNNY LAUREL",
-  "voyage": "2628N",
-  "etd": "12-03 (Thu)",
-  "eta": "12-05 (Sat)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "unchanged",
-  "changedFields": []
- },
- {
-  "carrier": "PANOCEAN",
+  "carrier": "HEUNG-A / PANOCEAN",
   "vessel": "PANCON GLORY",
   "voyage": "2636E",
   "etd": "12-04 (Fri)",
@@ -325,7 +347,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -338,7 +360,20 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SUNNY LAUREL",
+  "voyage": "2627N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-07 (Mon)",
+  "tt": 2,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "same",
   "changedFields": []
  },
  {
@@ -351,7 +386,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
@@ -364,20 +399,20 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  },
  {
-  "carrier": "KMTC",
-  "vessel": "SUNNY LAUREL",
-  "voyage": "2629N",
-  "etd": "12-09 (Wed)",
-  "eta": "12-10 (Thu)",
+  "carrier": "PANOCEAN / SINOKOR",
+  "vessel": "PEGASUS TERA",
+  "voyage": "2626E",
+  "etd": "12-10 (Thu)",
+  "eta": "12-11 (Fri)",
   "tt": 1,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": []
  }
 ]

@@ -3,79 +3,77 @@
   "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
+  "closedCarriers": "KMTC",
   "etd": "11-09 (Mon)",
   "eta": "11-20 (Fri)",
   "tt": 11,
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "status": "departed",
-  "changedFields": [],
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
-  "closedCarriers": "KMTC"
+  "changedFields": []
  },
  {
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
   "carrier": "HEUNG-A / KMTC / SINOKOR",
   "vessel": "KMTC HOCHIMINH",
   "voyage": "2611S",
-  "etd": "11-15 (Sun)",
+  "etd": "11-14 (Sat)",
   "eta": "11-26 (Thu)",
-  "tt": 11,
-  "prevEtd": "11-14 (Sat)",
-  "prevEta": "11-27 (Fri)",
-  "prevTt": 13,
-  "status": "changed",
-  "changedFields": [
-   "etd",
-   "eta"
-  ]
- },
- {
+  "tt": 12,
   "rotation": "Busan → Hong Kong → Singapore → Jakarta",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "vessel": "BELAWAN",
-  "voyage": "2611S",
-  "etd": "11-21 (Sat)",
-  "eta": "12-04 (Fri)",
-  "tt": 13,
-  "prevEtd": "11-21 (Sat)",
-  "prevEta": "12-02 (Wed)",
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-26 (Thu)",
   "prevTt": 11,
   "status": "changed",
   "changedFields": [
-   "eta"
+   "etd"
   ],
-  "closedCarriers": "HEUNG-A / KMTC"
+  "closedCarriers": "KMTC"
+ },
+ {
+  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "vessel": "BELAWAN",
+  "voyage": "2611S",
+  "closedCarriers": "HEUNG-A / KMTC",
+  "etd": "11-21 (Sat)",
+  "eta": "12-04 (Fri)",
+  "tt": 13,
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
+  "prevEtd": "11-21 (Sat)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 11,
+  "status": "same",
+  "changedFields": []
  },
  {
   "rotation": "Busan → Hong Kong → Singapore → Jakarta",
   "carrier": "HEUNG-A / SINOKOR",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611S",
-  "etd": "12-01 (Tue)",
-  "eta": "12-10 (Thu)",
-  "tt": 9,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": [],
-  "altDates": "KMTC 12-01 (Tue)→12-12 (Sat)"
+  "altDates": "KMTC 12-01 (Tue)→12-12 (Sat)",
+  "etd": "12-01 (Tue)",
+  "eta": "12-10 (Thu)",
+  "tt": 9
  },
  {
   "rotation": "Busan → Hong Kong → Singapore → Jakarta",
   "carrier": "HEUNG-A / SINOKOR",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2611S",
-  "etd": "12-07 (Mon)",
-  "eta": "12-18 (Fri)",
-  "tt": 11,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "unchanged",
+  "status": "same",
   "changedFields": [],
-  "altDates": "KMTC 12-08 (Tue)→12-17 (Thu)"
+  "altDates": "KMTC 12-08 (Tue)→12-17 (Thu)",
+  "etd": "12-07 (Mon)",
+  "eta": "12-18 (Fri)",
+  "tt": 11
  }
 ]
