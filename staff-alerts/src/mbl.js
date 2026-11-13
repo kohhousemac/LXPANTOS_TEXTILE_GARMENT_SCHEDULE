@@ -36,6 +36,7 @@ export const CARRIERS = {
 const ACTIVE_LIMIT = 300;          // all active requests together
 const PER_EMAIL_LIMIT = 30;        // active requests per person
 const PER_IP_DAY = 20;             // new requests per IP per day
+const MAX_CC = 5;                  // extra @lxpantos.com addresses in Cc
 const NOT_FOUND_STOP = 5;          // stop after this many daily "not found" in a row
 const MAX_DAYS = 90;               // stop tracking after 90 days in any case
 const KEEP_DONE_DAYS = 30;         // finished requests stay visible this long
@@ -112,11 +113,11 @@ const row = (k, v) => `<tr><td style="${cell};color:#6b6560;white-space:nowrap">
 export async function confirmMail(env, t) {
   const stop = await stopUrl(env, t);
   const html = frame(`MBL ${esc(t.mbl)} 도착 추적을 시작합니다`, `
-<table style="border-collapse:collapse;width:100%">${row('MBL', esc(t.mbl))}${row('선사 Carrier', esc(CARRIERS[t.carrier] || t.carrier))}${row('받는 사람 To', esc(t.email))}</table>
+<table style="border-collapse:collapse;width:100%">${row('MBL', esc(t.mbl))}${row('선사 Carrier', esc(CARRIERS[t.carrier] || t.carrier))}${row('받는 사람 To', esc(t.email))}${(t.cc || []).length ? row('참조 Cc', esc(t.cc.join(', '))) : ''}</table>
 <p style="font-size:13px;line-height:1.6">매일 오전(한국 시간) 선사 화물추적 화면을 확인해 이 주소로 보고 메일을 보내 드리고, POD 도착이 확인되면 마지막 메일을 보내고 자동으로 끝납니다.<br>
 We will check the carrier's tracking page every morning (KST) and mail you until arrival at POD is confirmed.</p>
 <p><a href="${esc(stop)}" style="color:${RED};font-size:12px">추적 중지 Stop tracking</a></p>`);
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} 도착 추적 시작 (${t.carrier})`, html);
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} 도착 추적 시작 (${t.carrier})`, html, t.cc || []);
 }
 
 const STATUS_KO = {
@@ -151,7 +152,7 @@ ${final ? '<p style="font-size:13px">POD 도착이 확인되어 이 MBL 추적�
     : stopped ? '<p style="font-size:13px">계속 조회되지 않아 추적을 마칩니다. 번호와 선사를 확인해 다시 등록해 주세요.</p>'
       : `<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">추적 중지 Stop tracking</a></p>`}`;
   const tag = final ? '도착 Arrived' : r.status === 'not_found' ? '조회 안 됨' : r.status === 'blocked' ? '조회 불가' : `ETA ${r.eta || '-'}`;
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`MBL ${esc(t.mbl)} 일일 추적 보고`, body));
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`MBL ${esc(t.mbl)} 일일 추적 보고`, body), t.cc || []);
 }
 
 // ---------- handlers ----------
@@ -171,6 +172,12 @@ export async function handleMbl(request, env, url) {
     if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return json({ error: 'MBL 번호를 확인해 주세요 (영문·숫자 6~25자).' }, 400, c);
     if (!CARRIERS[carrier]) return json({ error: '선사를 선택해 주세요.' }, 400, c);
     if (!/^[a-z0-9._%+-]+@lxpantos\.com$/.test(email)) return json({ error: '메일은 @lxpantos.com 주소만 가능합니다.' }, 400, c);
+    const ccIn = (Array.isArray(body.cc) ? body.cc : String(body.cc || '').split(/[,;\s]+/))
+      .map((e) => String(e).trim().toLowerCase()).filter(Boolean);
+    const cc = [...new Set(ccIn)].filter((e) => e !== email);
+    const badCc = cc.filter((e) => !/^[a-z0-9._%+-]+@lxpantos\.com$/.test(e));
+    if (badCc.length) return json({ error: `CC도 @lxpantos.com 주소만 가능합니다: ${badCc.join(', ')}` }, 400, c);
+    if (cc.length > MAX_CC) return json({ error: `CC는 ${MAX_CC}명까지 넣을 수 있습니다.` }, 400, c);
 
     const ipKey = 'mrl:' + kstDate() + ':' + (request.headers.get('cf-connecting-ip') || 'local');
     const n = Number(await env.BOOKINGS.get(ipKey)) || 0;
@@ -178,12 +185,16 @@ export async function handleMbl(request, env, url) {
 
     const all = (await listAll(env)).filter((t) => t.state === 'active');
     const dup = all.find((t) => t.mbl === mbl && t.email === email);
-    if (dup) return json({ ok: true, already: true, id: dup.id, message: '이미 추적 중인 MBL입니다.' }, 200, c);
+    if (dup) {
+      const merged = [...new Set([...(dup.cc || []), ...cc])].slice(0, MAX_CC);
+      if (merged.length !== (dup.cc || []).length) { dup.cc = merged; await put(env, dup); }
+      return json({ ok: true, already: true, id: dup.id, cc: dup.cc || [], message: '이미 추적 중인 MBL입니다.' }, 200, c);
+    }
     if (all.length >= ACTIVE_LIMIT) return json({ error: '현재 추적 건수가 많아 잠시 후 다시 시도해 주세요.' }, 429, c);
     if (all.filter((t) => t.email === email).length >= PER_EMAIL_LIMIT) return json({ error: `한 사람당 ${PER_EMAIL_LIMIT}건까지 추적할 수 있습니다.` }, 429, c);
 
     const t = {
-      id: crypto.randomUUID(), mbl, carrier, email, state: 'active',
+      id: crypto.randomUUID(), mbl, carrier, email, cc, state: 'active',
       createdAt: new Date().toISOString(), lastReport: null, notFound: 0, reports: 0,
     };
     await put(env, t);

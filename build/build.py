@@ -454,7 +454,7 @@ MBL_JS = """<script>
   if (!f) return;
   var API = 'https://vessel-alert.pages.dev/api/mbl';
   function say(t, ok) { msg.textContent = t; msg.className = 'lx-mbl-msg ' + (ok ? 'is-ok' : 'is-err'); }
-  try { var saved = localStorage.getItem('lxMblEmail'); if (saved) f.email.value = saved; } catch (e) {}
+  try { var saved = localStorage.getItem('lxMblEmail'); if (saved) f.email.value = saved; var savedCc = localStorage.getItem('lxMblCc'); if (savedCc) f.cc.value = savedCc; } catch (e) {}
   // The tracking server answers with CORS only once it is deployed; until then say so.
   fetch(API + '/carriers').then(function (r) { if (!r.ok) throw 0; }).catch(function () {
     f.querySelector('button').disabled = true; say('추적 서버 준비 중입니다. 곧 사용할 수 있습니다.');
@@ -465,13 +465,17 @@ MBL_JS = """<script>
     if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return say('MBL 번호를 확인해 주세요 (영문·숫자 6~25자).');
     if (!carrier) return say('선사를 선택해 주세요.');
     if (!/^[a-z0-9._%+-]+@lxpantos\\.com$/.test(email)) return say('메일은 @lxpantos.com 주소만 가능합니다.');
+    var cc = f.cc.value.toLowerCase().split(/[,;\\s]+/).filter(Boolean).filter(function (e, i, a) { return a.indexOf(e) === i && e !== email; });
+    var badCc = cc.filter(function (e) { return !/^[a-z0-9._%+-]+@lxpantos\\.com$/.test(e); });
+    if (badCc.length) return say('CC도 @lxpantos.com 주소만 가능합니다: ' + badCc.join(', '));
+    if (cc.length > 5) return say('CC는 5명까지 넣을 수 있습니다.');
     var btn = f.querySelector('button'); btn.disabled = true; say('등록 중…', true);
-    fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email }) })
+    fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email, cc: cc }) })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (x) {
         if (!x.ok) return say(x.j.error || '등록하지 못했습니다.');
-        try { localStorage.setItem('lxMblEmail', email); } catch (e) {}
-        say(x.j.already ? 'MBL ' + mbl + '은(는) 이미 추적 중입니다.' : 'MBL ' + mbl + ' 추적을 시작했습니다. 확인 메일을 보냈고, 내일 오전부터 매일 보고 메일이 갑니다.', true);
+        try { localStorage.setItem('lxMblEmail', email); localStorage.setItem('lxMblCc', cc.join(', ')); } catch (e) {}
+        say(x.j.already ? 'MBL ' + mbl + '은(는) 이미 추적 중입니다.' : 'MBL ' + mbl + ' 추적을 시작했습니다. 확인 메일을 보냈고(' + (cc.length ? 'CC ' + cc.length + '명 포함' : 'CC 없음') + '), 내일 오전부터 매일 보고 메일이 갑니다.', true);
         f.mbl.value = '';
       })
       .catch(function () { say('서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.'); })
@@ -578,6 +582,7 @@ def main():
           {mbl_carrier_options}
         </select></label>
         <label><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
+        <label class="lx-mbl-cc"><span>참조 CC (선택 · 최대 5명, 쉼표로 구분)</span><input name="cc" maxlength="400" autocomplete="off" spellcheck="false" placeholder="a@lxpantos.com, b@lxpantos.com"></label>
         <button type="submit">추적 시작</button>
       </form>
       <p class="lx-mbl-msg" id="lx-mbl-msg" role="status" aria-live="polite"></p>

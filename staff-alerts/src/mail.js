@@ -132,11 +132,12 @@ const b64 = (str) => {
 };
 const encWord = (str) => `=?UTF-8?B?${b64(str)}?=`;
 
-function buildMessage(from, fromName, to, subject, html) {
+function buildMessage(from, fromName, to, subject, html, cc = []) {
   const body = b64(html).replace(/.{76}/g, '$&\r\n');
   return [
     `From: ${encWord(fromName)} <${from}>`,
     `To: ${to.join(', ')}`,
+    ...(cc.length ? [`Cc: ${cc.join(', ')}`] : []),
     `Subject: ${encWord(subject)}`,
     `Date: ${new Date().toUTCString()}`,
     `Message-ID: <${crypto.randomUUID()}@lxpantosfashionstaff>`,
@@ -148,7 +149,7 @@ function buildMessage(from, fromName, to, subject, html) {
   ].join('\r\n');
 }
 
-async function smtpSend(env, to, subject, html) {
+async function smtpSend(env, to, subject, html, cc = []) {
   const host = env.SMTP_HOST || 'smtp.gmail.com';
   const port = Number(env.SMTP_PORT || 465);
   const socket = connect({ hostname: host, port }, { secureTransport: env.SMTP_TLS === 'off' ? 'off' : 'on' });
@@ -184,9 +185,9 @@ async function smtpSend(env, to, subject, html) {
       await send(btoa(env.SMTP_PASS)); await reply(235);
     }
     await send(`MAIL FROM:<${env.SMTP_USER}>`); await reply(250);
-    for (const r of to) { await send(`RCPT TO:<${r}>`); await reply('250|251'); }
+    for (const r of [...to, ...cc]) { await send(`RCPT TO:<${r}>`); await reply('250|251'); }
     await send('DATA'); await reply(354);
-    await send(buildMessage(env.SMTP_USER, env.MAIL_FROM_NAME || 'LX Pantos Vessel Alerts', to, subject, html) + '\r\n.');
+    await send(buildMessage(env.SMTP_USER, env.MAIL_FROM_NAME || 'LX Pantos Vessel Alerts', to, subject, html, cc) + '\r\n.');
     await reply(250);
     await send('QUIT');
   } finally {
@@ -194,12 +195,12 @@ async function smtpSend(env, to, subject, html) {
   }
 }
 
-export async function sendMail(env, to, subject, html) {
+export async function sendMail(env, to, subject, html, cc = []) {
   if (env.MAIL_MODE !== 'gmail') {
-    console.log(`[MAIL:log] to=${to.join(',')} subject=${subject}`);
+    console.log(`[MAIL:log] to=${to.join(',')}${cc.length ? ' cc=' + cc.join(',') : ''} subject=${subject}`);
     return { logged: true };
   }
   if (!env.SMTP_USER || !env.SMTP_PASS) throw new Error('Gmail is not set up (SMTP_USER / SMTP_PASS).');
-  await smtpSend(env, to, subject, html);
+  await smtpSend(env, to, subject, html, cc);
   return { sent: true };
 }

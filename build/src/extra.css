@@ -123,6 +123,8 @@
 .lx-mbl h3 span { font-weight: 400; color: #9a9ca3; margin-left: .35rem; font-size: .78rem; }
 .lx-mbl-lead { color: #a9abb2; margin: 0 0 .8rem !important; }
 .lx-mbl-form { display: grid; grid-template-columns: 1.1fr 1.1fr 1.3fr auto; gap: .6rem; align-items: end; }
+.lx-mbl-form .lx-mbl-cc { grid-column: 1 / 4; }
+@media (max-width: 900px) { .lx-mbl-form .lx-mbl-cc { grid-column: 1 / -1; } }
 @media (max-width: 900px) { .lx-mbl-form { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .lx-mbl-form { grid-template-columns: 1fr; } }
 .lx-mbl-form label { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
