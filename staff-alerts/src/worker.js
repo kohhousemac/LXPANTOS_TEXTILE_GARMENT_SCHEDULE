@@ -1,5 +1,5 @@
 // Staff-only booking page + scheduled "faster vessel" check.
-// - /api/* needs a staff password (own or shared; signed cookie, 1 year).
+// - /api/* needs an employee number (signed cookie, 1 year).
 // - Bookings live in KV (never in the public GitHub repo).
 // - The cron trigger compares each booking with the homepage's schedule data.
 
@@ -16,12 +16,11 @@ const ROUTE_RE = /^[a-z]{5}_[a-z]{5}$/;
 export const COUNTRIES = { vn: 'Vietnam', id: 'Indonesia', cn: 'China', hk: 'Hong Kong', tw: 'Taiwan', kr: 'Korea' };
 export const CUSTOMERS = ['SAE-A', 'HANSOLL', 'YAKJIN', 'SHINWON', 'HANSAE', 'SSTS', 'NOBRAND'];
 
-// ---------- auth: employee number (Korea) or e-mail + shared password ----------
-// Korea staff are in the STAFF_PASSWORDS secret ({"e-mail": "employee no."}) and
-// sign in with the number alone; everyone else picks their e-mail and uses the
-// shared STAFF_PASSWORD. Signing in sets
-// an HMAC-signed cookie valid for a year, tied to that e-mail. The password is
-// part of what is signed, so changing someone's password logs them out.
+// ---------- auth: employee number ----------
+// Everyone signs in with their employee number alone. The STAFF_PASSWORDS secret
+// is {"e-mail": "employee no."}; the number picks the e-mail. Signing in sets
+// an HMAC-signed cookie valid for a year, tied to that e-mail. The number is
+// part of what is signed, so changing someone's number logs them out.
 const COOKIE = 'lxstaff';
 const YEAR = 365 * 86400;
 const enc = new TextEncoder();
@@ -43,7 +42,7 @@ function employeeNos(env) {
   try { return JSON.parse(env.STAFF_PASSWORDS || '{}'); } catch { return {}; }
 }
 
-const passwordFor = (env, email) => employeeNos(env)[email] || env.STAFF_PASSWORD || '';
+const passwordFor = (env, email) => String(employeeNos(env)[email] || '');
 
 const sessionSig = (env, exp, email) => hmac(env, `v2.${exp}.${email}.${passwordFor(env, email)}`);
 
@@ -64,14 +63,11 @@ async function login(request, env) {
   if (fails >= 5) return json({ error: 'Too many attempts. Please try again in an hour.' }, 429);
   const body = await request.json().catch(() => ({}));
   const given = String(body.password || '').trim();
-  let email = String(body.email || '').trim().toLowerCase();
-  // No e-mail: Korea staff signing in with their employee number.
-  if (!email) email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
-  else if (!/^[^@\s]+@[^@\s]+$/.test(email) || !inDomain(email, env)) return json({ error: 'Pick your e-mail first.' }, 400);
+  const email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
   const pw = email && passwordFor(env, email);
   if (!pw || !safeEqual(given, pw)) {
     await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
-    return json({ error: body.email ? 'Wrong password.' : 'Wrong employee number.' }, 401);
+    return json({ error: 'Wrong employee number.' }, 401);
   }
   const exp = Math.floor(Date.now() / 1000) + YEAR;
   return new Response(JSON.stringify({ ok: true, email }), { headers: {
@@ -159,12 +155,10 @@ async function getBookers(env) {
     vals[i]?.emails ?? (DEFAULT_BOOKERS[c] || []).map((id) => `${id}@${env.ALLOWED_DOMAIN}`)]));
 }
 
-// Korea's list is its own staff plus every HQ PIC.
-async function allowedBookers(env, country) {
+// Office country of an e-mail: an overseas booker list it is on, else Korea (HQ).
+async function countryOf(env, email) {
   const bookers = await getBookers(env);
-  if (country !== 'kr') return bookers[country];
-  const teams = await getTeams(env);
-  return [...new Set([...bookers.kr, ...Object.values(teams).flat()])];
+  return Object.keys(COUNTRIES).find((cc) => cc !== 'kr' && bookers[cc].includes(email)) || 'kr';
 }
 
 const recipients = (b, teams) => [...new Set([...(b.notify || []), ...(teams[b.customer] || [])])];
@@ -239,19 +233,11 @@ async function handle(request, env, ctx) {
   if (mblRes) return mblRes;
   if (url.pathname === '/api/login' && request.method === 'POST') return login(request, env);
   if (url.pathname === '/api/logout' && request.method === 'POST') return logout();
-  // Public: what the opening screen needs before the password (countries and
-  // the e-mails to pick from, overseas only).
-  if (url.pathname === '/api/login-info') {
-    const bookers = await getBookers(env);
-    // Korea signs in with an employee number, so its names are not listed.
-    delete bookers.kr;
-    return json({ countries: COUNTRIES, choices: bookers });
-  }
   // Who is acting: the e-mail the session cookie was signed for.
   const user = await signedIn(request, env);
   if (!user) return json({ error: 'login' }, 401);
 
-  if (url.pathname === '/api/me') return json({ email: user, employee: !!employeeNos(env)[user], domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
+  if (url.pathname === '/api/me') return json({ email: user, country: await countryOf(env, user), domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
 
   if (url.pathname === '/api/teams' && request.method === 'GET') return json(await getTeams(env));
   if (url.pathname === '/api/bookers' && request.method === 'GET') return json(await getBookers(env));
@@ -292,14 +278,9 @@ async function handle(request, env, ctx) {
   if (url.pathname === '/api/bookings' && request.method === 'POST') {
     const body = await request.json().catch(() => ({}));
     if (!CUSTOMERS.includes(body.customer)) return json({ error: 'Please select a customer.' }, 400);
-    if (!COUNTRIES[body.country]) return json({ error: 'Please select your country.' }, 400);
-    // The booker picked on the opening screen gets the alerts. It must be on
-    // that country's list (any company e-mail while the list is still empty).
-    const allowed = await allowedBookers(env, body.country);
-    const booker = String(body.booker || '').toLowerCase();
-    if (allowed.length ? !allowed.includes(booker) : !inDomain(booker, env)) {
-      return json({ error: 'Please pick your e-mail on the opening screen.' }, 400);
-    }
+    // The signed-in person is the booker and gets the alerts.
+    const booker = user;
+    const country = await countryOf(env, user);
     const bookingNo = String(body.bookingNo || '').trim().slice(0, 40);
     if (!bookingNo) return json({ error: 'Please enter a booking number.' }, 400);
     if (!ROUTE_RE.test(body.routeId || '')) return json({ error: 'Please select a route.' }, 400);
@@ -315,7 +296,7 @@ async function handle(request, env, ctx) {
     const b = {
       id: crypto.randomUUID(),
       customer: body.customer,
-      country: body.country,
+      country,
       bookingNo,
       memo: String(body.memo || '').trim().slice(0, 80),
       routeId: body.routeId,
