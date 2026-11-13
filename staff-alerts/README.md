@@ -7,7 +7,7 @@ Recipients: the booker who registered it + that customer's HQ PIC (set once per 
 - Opening screen: the booker picks their country (Vietnam, Indonesia, China, Hong Kong, Taiwan, Korea), then their e-mail from that country's list (editable on the same screen). The chosen e-mail is the booker who gets the alerts. Only that country's POLs are offered. For **Korea** (HQ, oversees everything) the list is Korean staff plus every HQ PIC, and every POL is offered. Remembered in the browser, changeable from the header.
 - Customers: SAE-A, HANSOLL, YAKJIN, SHINWON, HANSAE, SSTS, NOBRAND (`CUSTOMERS` in `src/worker.js`)
 - Schedules: the homepage's own data, `build/data/<route>.json` (lxpantosfashion.co.kr)
-- Access: opening screen is country → booker e-mail → password. Staff listed in the secret `STAFF_PASSWORDS` (JSON `{"e-mail": "password"}`, currently the Korea HQ staff) use their own; everyone else uses the shared `STAFF_PASSWORD`. A signed cookie, tied to that e-mail, keeps the browser in for a year; picking a different e-mail asks for that person's password. Changing a password signs that person out. 5 wrong tries from one IP lock it for an hour. The country/e-mail lists are visible before the password; bookings are not.
+- Access: opening screen is country → booker e-mail → shared password (`STAFF_PASSWORD`). Korea staff skip that and sign in with their employee number alone (secret `STAFF_PASSWORDS`, JSON `{"e-mail": "employee no."}`); Korea names are not listed on the opening screen. A signed cookie, tied to that e-mail, keeps the browser in for a year. Changing someone's number signs them out. 5 wrong tries from one IP lock it for an hour. The country/e-mail lists are visible before the password; bookings are not.
 - Storage: bookings live only in Cloudflare KV. This GitHub repo is public, so booking numbers never go into it.
 - Mail: sent from Gmail (kohhousemac@gmail.com, shown as "LX Pantos Vessel Alerts") over SMTP with an app password
 
@@ -46,7 +46,7 @@ openssl rand -base64 48 | npx wrangler secret put SESSION_SECRET
 ```
 To change the password later, run the first line again; everyone has to enter the new one.
 
-Personal passwords (replaces the whole list each time, so include everyone):
+Korea employee numbers (replaces the whole list each time, so include everyone):
 ```bash
 printf '%s' '{"name@lxpantos.com":"1234"}' | npx wrangler secret put STAFF_PASSWORDS
 ```

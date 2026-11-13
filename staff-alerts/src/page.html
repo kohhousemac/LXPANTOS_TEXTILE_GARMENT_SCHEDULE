@@ -132,7 +132,7 @@ img.flag{width:18px;height:13.5px;vertical-align:-2px;border-radius:2px;box-shad
       </details>
     </div>
     <div id="pwRow" hidden style="margin-top:18px">
-      <p class="label">Password</p>
+      <p class="label" id="pwLabel">Password</p>
       <input id="pw" type="password" autocomplete="current-password" placeholder="Password">
     </div>
     <p class="msg err small" id="pwMsg" style="margin:8px 0 0"></p>
@@ -265,7 +265,7 @@ async function api(path, opts = {}) {
 const pills = (items, active, cls = '') => items.map(([val, text]) =>
   `<button type="button" class="pill ${cls}" data-v="${esc(val)}" aria-pressed="${val === active}">${text}</button>`).join('');
 
-let countries = {}, country = '', bookers = {}, booker = '', choices = {}, signedIn = '', appLoaded = false;
+let countries = {}, country = '', bookers = {}, booker = '', choices = {}, signedIn = '', signedEmployee = false, appLoaded = false;
 const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch { return ''; } },
                 set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
 
@@ -282,8 +282,19 @@ function bookerGroups() {
 }
 
 function drawBookers() {
-  $('bookerWrap').hidden = !country;
+  const kr = country === 'kr';
+  $('bookerWrap').hidden = !country || kr;
+  $('pwLabel').textContent = kr ? 'Employee No.' : 'Password';
+  $('pw').placeholder = kr ? 'Employee No.' : 'Password';
+  $('pw').inputMode = kr ? 'numeric' : '';
   if (!country) { $('enter').disabled = true; return; }
+  // Korea: the employee number alone signs you in; no names are listed.
+  if (kr) {
+    booker = signedEmployee ? signedIn : '';
+    $('pwRow').hidden = !!booker;
+    $('enter').disabled = false;
+    return;
+  }
   const groups = bookerGroups();
   const all = groups.flatMap(([, l]) => l);
   if (!all.includes(booker)) booker = all.length === 1 ? all[0] : '';
@@ -319,11 +330,11 @@ $('bookerSave').onclick = async () => {
 
 $('enter').onclick = async () => {
   $('pwMsg').textContent = '';
-  if (signedIn !== booker) {
+  if (!booker || signedIn !== booker) {
     $('enter').disabled = true;
     try {
-      await api('/api/login', { method: 'POST', body: JSON.stringify({ email: booker, password: $('pw').value }) });
-      signedIn = booker; $('pw').value = ''; appLoaded = false;
+      const r = await api('/api/login', { method: 'POST', body: JSON.stringify(country === 'kr' ? { password: $('pw').value } : { email: booker, password: $('pw').value }) });
+      booker = signedIn = r.email; signedEmployee = country === 'kr'; $('pw').value = ''; appLoaded = false;
     } catch (err) { $('pwMsg').textContent = err.message; $('enter').disabled = false; return; }
     $('enter').disabled = false;
   }
@@ -341,7 +352,7 @@ $('enter').onclick = async () => {
 $('changeCountry').onclick = () => { $('app').hidden = true; $('login').hidden = false; drawCountries(); };
 
 function showPassword() {
-  signedIn = '';
+  signedIn = ''; signedEmployee = false;
   $('app').hidden = true; $('login').hidden = false;
   drawCountries();
 }
@@ -356,7 +367,8 @@ $('signOut').onclick = async (e) => {
 async function boot() {
   const li = await (await fetch('/api/login-info')).json();
   countries = li.countries; choices = li.choices;
-  signedIn = await fetch('/api/me').then((r) => (r.ok ? r.json() : {})).then((d) => d.email || '', () => '');
+  const meInfo = await fetch('/api/me').then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+  signedIn = meInfo.email || ''; signedEmployee = !!meInfo.employee;
   country = countries[store.get('lxCountry')] ? store.get('lxCountry') : '';
   booker = store.get('lxBooker');
   drawCountries();

@@ -16,9 +16,10 @@ const ROUTE_RE = /^[a-z]{5}_[a-z]{5}$/;
 export const COUNTRIES = { vn: 'Vietnam', id: 'Indonesia', cn: 'China', hk: 'Hong Kong', tw: 'Taiwan', kr: 'Korea' };
 export const CUSTOMERS = ['SAE-A', 'HANSOLL', 'YAKJIN', 'SHINWON', 'HANSAE', 'SSTS', 'NOBRAND'];
 
-// ---------- auth: password per e-mail ----------
-// Staff listed in the STAFF_PASSWORDS secret ({"e-mail": "password"}) use their
-// own password; everyone else uses the shared STAFF_PASSWORD. Signing in sets
+// ---------- auth: employee number (Korea) or e-mail + shared password ----------
+// Korea staff are in the STAFF_PASSWORDS secret ({"e-mail": "employee no."}) and
+// sign in with the number alone; everyone else picks their e-mail and uses the
+// shared STAFF_PASSWORD. Signing in sets
 // an HMAC-signed cookie valid for a year, tied to that e-mail. The password is
 // part of what is signed, so changing someone's password logs them out.
 const COOKIE = 'lxstaff';
@@ -38,11 +39,11 @@ function safeEqual(a, b) {
   return d === 0;
 }
 
-function passwordFor(env, email) {
-  let own = {};
-  try { own = JSON.parse(env.STAFF_PASSWORDS || '{}'); } catch {}
-  return own[email] || env.STAFF_PASSWORD || '';
+function employeeNos(env) {
+  try { return JSON.parse(env.STAFF_PASSWORDS || '{}'); } catch { return {}; }
 }
+
+const passwordFor = (env, email) => employeeNos(env)[email] || env.STAFF_PASSWORD || '';
 
 const sessionSig = (env, exp, email) => hmac(env, `v2.${exp}.${email}.${passwordFor(env, email)}`);
 
@@ -62,12 +63,15 @@ async function login(request, env) {
   const fails = Number(await env.BOOKINGS.get(rlKey)) || 0;
   if (fails >= 5) return json({ error: 'Too many attempts. Please try again in an hour.' }, 429);
   const body = await request.json().catch(() => ({}));
-  const email = String(body.email || '').trim().toLowerCase();
-  if (!/^[^@\s]+@[^@\s]+$/.test(email) || !inDomain(email, env)) return json({ error: 'Pick your e-mail first.' }, 400);
-  const pw = passwordFor(env, email);
-  if (!pw || !safeEqual(String(body.password || ''), pw)) {
+  const given = String(body.password || '').trim();
+  let email = String(body.email || '').trim().toLowerCase();
+  // No e-mail: Korea staff signing in with their employee number.
+  if (!email) email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
+  else if (!/^[^@\s]+@[^@\s]+$/.test(email) || !inDomain(email, env)) return json({ error: 'Pick your e-mail first.' }, 400);
+  const pw = email && passwordFor(env, email);
+  if (!pw || !safeEqual(given, pw)) {
     await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
-    return json({ error: 'Wrong password.' }, 401);
+    return json({ error: body.email ? 'Wrong password.' : 'Wrong employee number.' }, 401);
   }
   const exp = Math.floor(Date.now() / 1000) + YEAR;
   return new Response(JSON.stringify({ ok: true, email }), { headers: {
@@ -236,18 +240,18 @@ async function handle(request, env, ctx) {
   if (url.pathname === '/api/login' && request.method === 'POST') return login(request, env);
   if (url.pathname === '/api/logout' && request.method === 'POST') return logout();
   // Public: what the opening screen needs before the password (countries and
-  // the e-mails to pick from; Korea = its own list plus every HQ PIC).
+  // the e-mails to pick from, overseas only).
   if (url.pathname === '/api/login-info') {
     const bookers = await getBookers(env);
-    const teams = await getTeams(env);
-    bookers.kr = [...new Set([...bookers.kr, ...Object.values(teams).flat()])];
+    // Korea signs in with an employee number, so its names are not listed.
+    delete bookers.kr;
     return json({ countries: COUNTRIES, choices: bookers });
   }
   // Who is acting: the e-mail the session cookie was signed for.
   const user = await signedIn(request, env);
   if (!user) return json({ error: 'login' }, 401);
 
-  if (url.pathname === '/api/me') return json({ email: user, domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
+  if (url.pathname === '/api/me') return json({ email: user, employee: !!employeeNos(env)[user], domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
 
   if (url.pathname === '/api/teams' && request.method === 'GET') return json(await getTeams(env));
   if (url.pathname === '/api/bookers' && request.method === 'GET') return json(await getBookers(env));
