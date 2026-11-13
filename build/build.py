@@ -452,7 +452,7 @@ MBL_JS = """<script>
 (function () {
   var f = document.getElementById('lx-mbl-form'), msg = document.getElementById('lx-mbl-msg');
   if (!f) return;
-  var API = 'https://staff.lxpantosfashion.co.kr/api/mbl';
+  var API = 'https://vessel-alert.pages.dev/api/mbl';
   function say(t, ok) { msg.textContent = t; msg.className = 'lx-mbl-msg ' + (ok ? 'is-ok' : 'is-err'); }
   try { var saved = localStorage.getItem('lxMblEmail'); if (saved) f.email.value = saved; } catch (e) {}
   // The tracking server answers with CORS only once it is deployed; until then say so.

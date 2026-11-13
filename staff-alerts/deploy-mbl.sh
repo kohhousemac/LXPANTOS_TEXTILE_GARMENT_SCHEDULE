@@ -8,5 +8,5 @@ git pull -q
 npm install --silent --no-audit --no-fund
 printf '%s' "$1" | npx wrangler secret put TRACKER_TOKEN
 npx wrangler deploy
-curl -s https://staff.lxpantosfashion.co.kr/api/mbl/carriers | head -c 120; echo
+curl -s https://vessel-alert.pages.dev/api/mbl/carriers | head -c 120; echo
 echo "OK — MBL tracking is live."
