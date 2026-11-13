@@ -126,11 +126,28 @@ const STATUS_KO = {
 };
 
 function fmtDate(s) { return s ? esc(String(s)) : '-'; }
+function dayDiff(a, b) {
+  const x = Date.parse(String(a).slice(0, 10)), y = Date.parse(String(b).slice(0, 10));
+  return isNaN(x) || isNaN(y) ? null : Math.round((y - x) / 864e5);
+}
 
 export async function reportMail(env, t, r, prev) {
   const stop = await stopUrl(env, t);
-  const etaChange = prev && prev.eta && r.eta && prev.eta !== r.eta
-    ? ` <span style="color:#c0392b;font-weight:600">(어제 ${esc(prev.eta)} → 변경)</span>` : '';
+  // Original (first reported) date struck through, new date beside it with the day difference.
+  const first = t.first || {};
+  const dateCell = (key, actual) => {
+    const now = r[key], orig = first[key], before = prev && prev.status !== 'blocked' ? prev[key] : '';
+    let html = fmtDate(now);
+    if (orig && now && orig !== now) {
+      const d = dayDiff(orig, now);
+      const tagTxt = d == null ? '변경' : d > 0 ? `+${d}일 지연` : `${d}일 당김`;
+      html = `<s style="color:#8a8580">${esc(orig)}</s> → <b style="color:#c0392b">${esc(now)}</b> <span style="color:#c0392b;font-size:12px">(${tagTxt})</span>`;
+    }
+    if (before && now && before !== now && before !== orig) html += ` <span style="color:#8a8580;font-size:12px">· 어제 ${esc(before)}</span>`;
+    else if (before && now && before !== now && !(orig && orig !== now)) html += ` <span style="color:#c0392b;font-size:12px">(어제 ${esc(before)} → 변경)</span>`;
+    if (r[actual]) html += ` / <b>${esc(r[actual])}</b> (실제 actual)`;
+    return html;
+  };
   const events = (r.events || []).slice(-10).reverse().map((e) =>
     `<tr><td style="${cell};white-space:nowrap">${fmtDate(e.date)}</td><td style="${cell}">${esc(e.location || '')}</td><td style="${cell}">${esc(e.event || '')}</td><td style="${cell}">${esc([e.vessel, e.voyage].filter(Boolean).join(' / '))}</td></tr>`).join('');
   const final = r.status === 'arrived';
@@ -141,8 +158,8 @@ export async function reportMail(env, t, r, prev) {
 ${row('MBL', esc(t.mbl))}${row('선사 Carrier', esc(CARRIERS[t.carrier] || t.carrier))}
 ${row('모선 Vessel / Voyage', esc([r.vessel, r.voyage].filter(Boolean).join(' / ') || '-'))}
 ${row('구간 POL → POD', esc([r.pol, r.pod].filter(Boolean).join(' → ') || '-'))}
-${row('출항 ETD / ATD', `${fmtDate(r.etd)}${r.atd ? ' / <b>' + esc(r.atd) + '</b> (실제 actual)' : ''}`)}
-${row('도착 ETA / ATA', `${fmtDate(r.eta)}${etaChange}${r.ata ? ' / <b>' + esc(r.ata) + '</b> (실제 actual)' : ''}`)}
+${row('출항 ETD / ATD', dateCell('etd', 'atd'))}
+${row('도착 ETA / ATA', dateCell('eta', 'ata'))}
 ${r.transshipment ? row('환적 T/S', esc(r.transshipment)) : ''}
 </table>
 ${events ? `<h3 style="font-size:13px;margin:18px 0 6px">최근 이벤트 Latest events</h3>
@@ -151,7 +168,9 @@ ${events ? `<h3 style="font-size:13px;margin:18px 0 6px">최근 이벤트 Latest
 ${final ? '<p style="font-size:13px">POD 도착이 확인되어 이 MBL 추적을 마칩니다. Tracking for this MBL is now finished.</p>'
     : stopped ? '<p style="font-size:13px">계속 조회되지 않아 추적을 마칩니다. 번호와 선사를 확인해 다시 등록해 주세요.</p>'
       : `<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">추적 중지 Stop tracking</a></p>`}`;
-  const tag = final ? '도착 Arrived' : r.status === 'not_found' ? '조회 안 됨' : r.status === 'blocked' ? '조회 불가' : `ETA ${r.eta || '-'}`;
+  const etaMoved = first.eta && r.eta && first.eta !== r.eta;
+  const tag = final ? '도착 Arrived' : r.status === 'not_found' ? '조회 안 됨' : r.status === 'blocked' ? '조회 불가'
+    : etaMoved ? `ETA 변경 ${first.eta.slice(5, 10)}→${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
   await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`MBL ${esc(t.mbl)} 일일 추적 보고`, body), t.cc || []);
 }
 
@@ -257,6 +276,10 @@ export async function handleMbl(request, env, url) {
     t.notFound = status === 'not_found' ? (t.notFound || 0) + 1 : 0;
     if (status === 'arrived') { t.state = 'arrived'; t.arrivedAt = new Date().toISOString(); }
     else if (t.notFound >= NOT_FOUND_STOP) { t.state = 'not_found'; }
+    // Remember the first published ETD/ETA so later mails can show "original → new".
+    t.first = t.first || {};
+    if (!t.first.etd && r.etd) t.first.etd = r.etd;
+    if (!t.first.eta && r.eta) t.first.eta = r.eta;
     t.lastReport = r; t.lastReportDate = kstDate(); t.reports = (t.reports || 0) + 1;
     // "blocked" means we could not look today: tell the person only once in a row.
     const quiet = status === 'blocked' && prev && prev.status === 'blocked';
