@@ -35,7 +35,7 @@ cd staff-alerts
 npm install
 npx wrangler login
 npx wrangler kv namespace create BOOKINGS   # put the printed id in wrangler.toml (REPLACE_WITH_KV_ID)
-npx wrangler deploy                         # Worker (PAGE_URL = https://staff.lxpantosfashion.co.kr/)
+npx wrangler deploy                         # Worker (PAGE_URL = https://vessel-alert.pages.dev/)
 (cd proxy && npx wrangler pages deploy --branch main)   # front door on our own domain
 ```
 
@@ -67,12 +67,15 @@ npx wrangler dev --test-scheduled
 ```
 `.dev.vars` is not committed.
 
-## Address: staff.lxpantosfashion.co.kr
+## Address: vessel-alert.pages.dev
 
-Company networks block `*.workers.dev`, so staff use https://staff.lxpantosfashion.co.kr/.
-`proxy/` is a Cloudflare Pages project (`lxpantosstaff`) that forwards every request to
-the Worker over a service binding. The custom domain is attached to that Pages project,
-and Gabia DNS has `staff CNAME lxpantosstaff.pages.dev.`.
+Company networks block `*.workers.dev`, and the user wanted no company name in the
+address, so staff use https://vessel-alert.pages.dev/. `proxy/` is a Cloudflare Pages
+project (`vessel-alert`) that forwards every request to the Worker over a service binding.
+Deploy it with `cd proxy && npx wrangler pages deploy --branch main`.
+
+The older front door, Pages project `lxpantosstaff` on staff.lxpantosfashion.co.kr
+(Gabia `staff CNAME lxpantosstaff.pages.dev.`), still works but is no longer linked.
 
 ## MBL arrival tracking (homepage footer)
 

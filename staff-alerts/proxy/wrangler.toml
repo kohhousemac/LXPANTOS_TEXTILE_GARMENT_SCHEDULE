@@ -1,7 +1,7 @@
-# Cloudflare Pages front door for staff.lxpantosfashion.co.kr.
+# Cloudflare Pages front door: vessel-alert.pages.dev (no company name in the address).
 # Company networks block *.workers.dev, so the page is served on our own
 # subdomain and every request is passed straight to the Worker.
-name = "lxpantosstaff"
+name = "vessel-alert"
 pages_build_output_dir = "public"
 compatibility_date = "2025-01-01"
 

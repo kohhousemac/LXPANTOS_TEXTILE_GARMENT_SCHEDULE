@@ -525,7 +525,7 @@ def main():
   <div class="lx-topbar-in">
     <a class="lx-brand" href="./"><img src="{logo}" alt="LX Pantos"><span class="lx-brand-div"></span><span class="lx-brand-name">Textile / Garment Schedule</span></a>
     <button type="button" class="lx-dl-link" id="lx-download-xlsx" aria-label="아시아 전체 스케쥴 엑셀 다운로드" title="아시아 전체 스케쥴 엑셀 다운로드">다운로드</button>
-    <a class="lx-staff-link" href="https://staff.lxpantosfashion.co.kr/" target="_blank" rel="noopener" title="LX Pantos staff only">Staff login</a>
+    <a class="lx-staff-link" href="https://vessel-alert.pages.dev/" target="_blank" rel="noopener" title="LX Pantos staff only">Staff login</a>
   </div>
 </header>
 <section class="lx-hero">
