@@ -139,8 +139,8 @@ function buildMessage(from, fromName, to, subject, html, cc = [], inline = []) {
   const parts = inline.length ? (() => {
     const bnd = 'lx-' + crypto.randomUUID();
     const out = [`--${bnd}`, 'Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: base64', '', body];
-    inline.forEach((a) => out.push(`--${bnd}`, `Content-Type: ${a.mime}; name="${a.cid}.png"`, 'Content-Transfer-Encoding: base64',
-      `Content-ID: <${a.cid}>`, `Content-Disposition: inline; filename="${a.cid}.png"`, '', wrap(a.data)));
+    inline.forEach((a) => out.push(`--${bnd}`, `Content-Type: ${a.mime}; name="${a.cid}.${a.mime === 'image/jpeg' ? 'jpg' : 'png'}"`, 'Content-Transfer-Encoding: base64',
+      `Content-ID: <${a.cid}>`, `Content-Disposition: inline; filename="${a.cid}.${a.mime === 'image/jpeg' ? 'jpg' : 'png'}"`, '', wrap(a.data)));
     out.push(`--${bnd}--`);
     return { type: `multipart/related; boundary="${bnd}"`, body: out.join('\r\n') };
   })() : null;

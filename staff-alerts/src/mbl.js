@@ -137,7 +137,7 @@ function posSection(r) {
   if (!p) return '';
   const bits = [p.area, p.status, p.speed ? p.speed + ' kn' : '', p.course ? p.course + '°' : ''].filter(Boolean).join(' · ');
   return `<h3 style="font-size:13px;margin:18px 0 6px">모선 위치 Vessel position <span style="font-weight:400;color:#8a8580">(VesselFinder${p.received ? ', ' + esc(p.received) : ''}${p.approx ? ' · 무료 정보라 대략 위치' : ''})</span></h3>
-${r.hasMap ? '<img src="cid:vesselmap" alt="Vessel position map" width="600" style="display:block;width:100%;max-width:600px;height:auto;border:1px solid #e6e1d8;border-radius:6px">' : ''}
+${r.hasMap ? '<img src="cid:vesselmap" alt="Vessel position map" width="600" height="300" style="display:block;width:100%;max-width:600px;height:auto;border:1px solid #e6e1d8;border-radius:6px">' : ''}
 <table style="border-collapse:collapse;width:100%;margin-top:6px">
 ${bits ? row('현재 Now', esc(bits)) : ''}${p.destination ? row('목적지 Destination', esc(p.destination)) : ''}${p.lastPort ? row('직전 항구 Last port', esc(p.lastPort)) : ''}
 </table>
@@ -301,8 +301,8 @@ export async function handleMbl(request, env, url) {
     }
     // Map image: PNG data URL drawn by /mbl/map.js in the tracker's browser (kept out of KV; mailed inline only).
     const inline = [];
-    const m = /^data:image\/png;base64,([A-Za-z0-9+/=]+)$/.exec(String(b.mapImage || ''));
-    if (m && m[1].length < 900000) { inline.push({ cid: 'vesselmap', mime: 'image/png', data: m[1] }); r.hasMap = true; }
+    const m = /^data:image\/(png|jpeg);base64,([A-Za-z0-9+/=]+)$/.exec(String(b.mapImage || ''));
+    if (m && m[2].length < 900000) { inline.push({ cid: 'vesselmap', mime: 'image/' + m[1], data: m[2] }); r.hasMap = true; }
     const prev = t.lastReport;
     t.notFound = status === 'not_found' ? (t.notFound || 0) + 1 : 0;
     if (status === 'arrived') { t.state = 'arrived'; t.arrivedAt = new Date().toISOString(); }
@@ -325,29 +325,43 @@ export async function handleMbl(request, env, url) {
 // window.lxVesselMap({lat, lon, cog, name, zoom}) -> Promise<"data:image/png;base64,...">
 // Draws OpenStreetMap tiles around the vessel position on a canvas with a heading marker.
 const MAP_JS = `window.lxVesselMap = async function (o) {
-  var W = 600, H = 300, z = o.zoom || 5, lat = +o.lat, lon = +o.lon;
+  // 600x300 map drawn at 2x (tiles of zoom+1) - Esri Ocean basemap + English reference labels; JPEG to keep mail small.
+  var S = 2, W = 600 * S, H = 300 * S, T = 256, z = (o.approx ? Math.min(o.zoom || 5, 5) : (o.zoom || 6)) + 1, lat = +o.lat, lon = +o.lon;
   var n = Math.pow(2, z), xt = (lon + 180) / 360 * n;
   var yt = (1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * n;
-  var px = xt * 256, py = yt * 256, x0 = px - W / 2, y0 = py - H / 2;
+  var x0 = xt * T - W / 2, y0 = yt * T - H / 2;
   var c = document.createElement('canvas'); c.width = W; c.height = H; var g = c.getContext('2d');
-  g.fillStyle = '#aad3df'; g.fillRect(0, 0, W, H);
-  var jobs = [];
-  for (var tx = Math.floor(x0 / 256); tx <= Math.floor((x0 + W) / 256); tx++) for (var ty = Math.floor(y0 / 256); ty <= Math.floor((y0 + H) / 256); ty++) {
-    if (ty < 0 || ty >= n) continue;
-    (function (tx, ty) { jobs.push(new Promise(function (res) {
-      var im = new Image(); im.crossOrigin = 'anonymous';
-      im.onload = function () { g.drawImage(im, tx * 256 - x0, ty * 256 - y0); res(); }; im.onerror = function () { res(); };
-      im.src = 'https://tile.openstreetmap.org/' + z + '/' + (((tx % n) + n) % n) + '/' + ty + '.png';
-    })); })(tx, ty);
+  g.fillStyle = '#c7dbe8'; g.fillRect(0, 0, W, H);
+  async function layer(svc) {
+    var jobs = [];
+    for (var tx = Math.floor(x0 / T); tx <= Math.floor((x0 + W) / T); tx++) for (var ty = Math.floor(y0 / T); ty <= Math.floor((y0 + H) / T); ty++) {
+      if (ty < 0 || ty >= n) continue;
+      (function (tx, ty) { jobs.push(new Promise(function (res) {
+        var im = new Image(); im.crossOrigin = 'anonymous';
+        im.onload = function () { g.drawImage(im, tx * T - x0, ty * T - y0, T, T); res(); }; im.onerror = function () { res(); };
+        im.src = 'https://server.arcgisonline.com/ArcGIS/rest/services/' + svc + '/MapServer/tile/' + z + '/' + ty + '/' + (((tx % n) + n) % n);
+      })); })(tx, ty);
+    }
+    await Promise.all(jobs);
   }
-  await Promise.all(jobs);
+  await layer('Ocean/World_Ocean_Base');
+  await layer('Ocean/World_Ocean_Reference');
   var cx = W / 2, cy = H / 2;
-  if (o.approx) { g.beginPath(); g.arc(cx, cy, 26, 0, 2 * Math.PI); g.fillStyle = 'rgba(165,0,52,.15)'; g.fill(); g.strokeStyle = 'rgba(165,0,52,.6)'; g.setLineDash([4, 3]); g.stroke(); g.setLineDash([]); }
-  g.save(); g.translate(cx, cy); g.rotate(((+o.cog || 0) * Math.PI) / 180);
-  g.beginPath(); g.moveTo(0, -13); g.lineTo(8, 9); g.lineTo(0, 5); g.lineTo(-8, 9); g.closePath();
-  g.fillStyle = '#a50034'; g.fill(); g.lineWidth = 2; g.strokeStyle = '#fff'; g.stroke(); g.restore();
-  if (o.name) { g.font = 'bold 13px Arial'; var tw = g.measureText(o.name).width; g.fillStyle = 'rgba(255,255,255,.9)'; g.fillRect(cx + 14, cy - 22, tw + 10, 20); g.fillStyle = '#1d1d1f'; g.fillText(o.name, cx + 19, cy - 7); }
-  g.font = '10px Arial'; var at = '\\u00a9 OpenStreetMap contributors · position: VesselFinder'; var aw = g.measureText(at).width;
-  g.fillStyle = 'rgba(255,255,255,.85)'; g.fillRect(W - aw - 8, H - 15, aw + 8, 15); g.fillStyle = '#555'; g.fillText(at, W - aw - 4, H - 4);
-  return c.toDataURL('image/png');
+  if (o.approx) {
+    g.beginPath(); g.arc(cx, cy, 34 * S, 0, 2 * Math.PI); g.fillStyle = 'rgba(165,0,52,.12)'; g.fill();
+    g.lineWidth = 1.5 * S; g.strokeStyle = 'rgba(165,0,52,.6)'; g.setLineDash([5 * S, 4 * S]); g.stroke(); g.setLineDash([]);
+  }
+  g.save(); g.translate(cx, cy); g.rotate(((+o.cog || 0) * Math.PI) / 180); g.scale(S, S);
+  g.shadowColor = 'rgba(0,0,0,.35)'; g.shadowBlur = 4;
+  g.beginPath(); g.moveTo(0, -14); g.lineTo(9, 10); g.lineTo(0, 5); g.lineTo(-9, 10); g.closePath();
+  g.fillStyle = '#a50034'; g.fill(); g.shadowBlur = 0; g.lineWidth = 2; g.strokeStyle = '#fff'; g.stroke(); g.restore();
+  if (o.name) {
+    g.font = 'bold ' + 13 * S + 'px Arial, sans-serif'; var tw = g.measureText(o.name).width, bx = cx + 18 * S, by = cy - 26 * S;
+    g.fillStyle = 'rgba(255,255,255,.95)'; g.strokeStyle = 'rgba(0,0,0,.15)'; g.lineWidth = S;
+    g.beginPath(); g.rect(bx, by, tw + 14 * S, 22 * S); g.fill(); g.stroke();
+    g.fillStyle = '#1d1d1f'; g.fillText(o.name, bx + 7 * S, by + 16 * S);
+  }
+  g.font = 10 * S + 'px Arial, sans-serif'; var at = 'Esri, GEBCO, NOAA · position: VesselFinder'; var aw = g.measureText(at).width;
+  g.fillStyle = 'rgba(255,255,255,.85)'; g.fillRect(W - aw - 10 * S, H - 16 * S, aw + 10 * S, 16 * S); g.fillStyle = '#555'; g.fillText(at, W - aw - 5 * S, H - 5 * S);
+  return c.toDataURL('image/jpeg', 0.85);
 };`;
