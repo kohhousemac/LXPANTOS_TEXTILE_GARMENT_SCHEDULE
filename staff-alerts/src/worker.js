@@ -66,6 +66,8 @@ async function login(request, env) {
   const body = await request.json().catch(() => ({}));
   const given = String(body.password || '').trim();
   let email = String(body.email || '').trim().toLowerCase();
+  // Overseas staff type just their name (the part before @).
+  if (email && !email.includes('@')) email += '@' + env.ALLOWED_DOMAIN.toLowerCase();
   if (email) {
     // Overseas (temporary): the e-mail must be on an overseas booker list.
     if (employeeNos(env)[email] || (await countryOf(env, email)) === 'kr') email = '';
@@ -75,7 +77,7 @@ async function login(request, env) {
   const pw = email && passwordFor(env, email);
   if (!pw || !safeEqual(given, pw)) {
     await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
-    return json({ error: body.email ? 'Wrong e-mail or password.' : 'Wrong employee number.' }, 401);
+    return json({ error: body.email ? 'Wrong name or password.' : 'Wrong employee number.' }, 401);
   }
   const exp = Math.floor(Date.now() / 1000) + YEAR;
   return new Response(JSON.stringify({ ok: true, email }), { headers: {

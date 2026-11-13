@@ -107,8 +107,8 @@ a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
     <h1>Booking Vessel Alerts</h1>
     <div id="pickWrap">
     <div id="ovsRow" hidden style="margin-top:18px">
-      <p class="label">E-mail</p>
-      <input id="ovsEmail" type="email" autocomplete="username" placeholder="name@lxpantos.com">
+      <p class="label">Name</p>
+      <input id="ovsEmail" autocomplete="username" autocapitalize="none" placeholder="firstname.lastname">
     </div>
     <div id="pwRow" style="margin-top:18px">
       <p class="label" id="pwLabel">Employee No.</p>
@@ -116,7 +116,7 @@ a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
     </div>
     <p class="msg err small" id="pwMsg" style="margin:8px 0 0"></p>
     <button class="primary" id="enter">Continue</button>
-    <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="ovsLink">Overseas office? Sign in with e-mail</a></p>
+    <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="ovsLink">Overseas office? Sign in with name</a></p>
     </div>
   </div>
 </div>
@@ -247,13 +247,13 @@ $('enter').onclick = async () => {
   await enterApp();
 };
 
-// shortcut: overseas staff sign in with e-mail + shared password until they have employee numbers.
+// shortcut: overseas staff sign in with name (e-mail ID) + shared password until they have employee numbers.
 $('ovsLink').onclick = (e) => {
   e.preventDefault();
   const ovs = $('ovsRow').hidden;
   $('ovsRow').hidden = !ovs;
   $('pwLabel').textContent = $('pw').placeholder = ovs ? 'Password' : 'Employee No.';
-  $('ovsLink').textContent = ovs ? 'Korea HQ? Sign in with employee number' : 'Overseas office? Sign in with e-mail';
+  $('ovsLink').textContent = ovs ? 'Korea HQ? Sign in with employee number' : 'Overseas office? Sign in with name';
   $('pwMsg').textContent = '';
 };
 
