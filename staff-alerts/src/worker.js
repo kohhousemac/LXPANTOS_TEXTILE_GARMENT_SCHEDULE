@@ -6,6 +6,7 @@
 import page from './page.html';
 import { evaluate, todayKST } from './logic.js';
 import { alertMail, sendMail } from './mail.js';
+import { handleMbl } from './mbl.js';
 
 const json = (data, status = 200) => new Response(JSON.stringify(data), {
   status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
@@ -229,6 +230,9 @@ async function handle(request, env, ctx) {
   if (url.pathname === '/' && request.method === 'GET') {
     return new Response(page, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
   }
+  // MBL arrival tracking (homepage footer form, mail stop link, Claude tracker).
+  const mblRes = await handleMbl(request, env, url);
+  if (mblRes) return mblRes;
   if (url.pathname === '/api/login' && request.method === 'POST') return login(request, env);
   if (url.pathname === '/api/logout' && request.method === 'POST') return logout();
   // Public: what the opening screen needs before the password (countries and

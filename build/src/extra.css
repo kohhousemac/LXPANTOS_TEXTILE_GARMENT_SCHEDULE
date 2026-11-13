@@ -117,4 +117,24 @@
 .lx-staff-link { margin-left: auto; font-size: .8rem; font-weight: 600; color: inherit; text-decoration: none; padding: .35rem .85rem; border: 1px solid var(--color-border-line); border-radius: 999px; white-space: nowrap; }
 .lx-staff-link:hover { border-color: #a50034; color: #a50034; }
 .lx-staff-link:focus-visible { outline: 2px solid #a50034; outline-offset: 2px; }
+/* ---- footer: MBL arrival tracking form ---- */
+.lx-footer-in { grid-template-columns: minmax(14rem, 1fr) minmax(0, 2.2fr); }
+@media (max-width: 760px) { .lx-footer-in { grid-template-columns: 1fr; } }
+.lx-mbl h3 span { font-weight: 400; color: #9a9ca3; margin-left: .35rem; font-size: .78rem; }
+.lx-mbl-lead { color: #a9abb2; margin: 0 0 .8rem !important; }
+.lx-mbl-form { display: grid; grid-template-columns: 1.1fr 1.1fr 1.3fr auto; gap: .6rem; align-items: end; }
+@media (max-width: 900px) { .lx-mbl-form { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .lx-mbl-form { grid-template-columns: 1fr; } }
+.lx-mbl-form label { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
+.lx-mbl-form label span { font-size: .72rem; color: #9a9ca3; }
+.lx-mbl-form input, .lx-mbl-form select { font: inherit; font-size: .85rem; color: #fff; background: #2a2a2d; border: 1px solid #44454a; border-radius: 6px; padding: .5rem .6rem; min-width: 0; width: 100%; box-sizing: border-box; }
+.lx-mbl-form input::placeholder { color: #75777e; }
+.lx-mbl-form input:focus, .lx-mbl-form select:focus { outline: 2px solid #e2615f; outline-offset: 1px; border-color: transparent; }
+.lx-mbl-form button { font: inherit; font-size: .85rem; font-weight: 700; color: #fff; background: #a50034; border: 0; border-radius: 6px; padding: .55rem 1.1rem; cursor: pointer; white-space: nowrap; }
+.lx-mbl-form button:hover { background: #c0103f; }
+.lx-mbl-form button:disabled { opacity: .6; cursor: wait; }
+.lx-mbl-form button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.lx-mbl-msg { min-height: 1.3em; margin: .55rem 0 0 !important; font-size: .8rem; }
+.lx-mbl-msg.is-ok { color: #7fd1a6; }
+.lx-mbl-msg.is-err { color: #ff8a80; }
 </style>

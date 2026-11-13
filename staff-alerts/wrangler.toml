@@ -30,3 +30,4 @@ MAIL_FROM_NAME = "LX Pantos Vessel Alerts"
 # Secrets (not in this file):
 #   STAFF_PASSWORD   shared staff password   ->  npx wrangler secret put STAFF_PASSWORD
 #   SESSION_SECRET   random signing key       ->  npx wrangler secret put SESSION_SECRET
+#   TRACKER_TOKEN    MBL tracker task key     ->  npx wrangler secret put TRACKER_TOKEN

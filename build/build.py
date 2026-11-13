@@ -447,6 +447,39 @@ SHIM = r'''<script>
 })();
 </script>'''
 
+MBL_CARRIERS = [('KMTC','KMTC (고려해운)'),('SINOKOR','SINOKOR (장금상선)'),('HEUNG-A','HEUNG-A (흥아라인)'),('NAMSUNG','NAMSUNG (남성해운)'),('PANOCEAN','PAN OCEAN (팬오션)'),('DONGJIN','DONGJIN (동진상선)'),('SM LINE','SM LINE (SM상선)'),('HMM','HMM'),('SITC','SITC'),('EMC','EVERGREEN (EMC)'),('WHL','WAN HAI (WHL)'),('YML','YANG MING (YML)'),('GSL','GOLD STAR LINE (GSL)'),('CNC','CNC'),('CMA CGM','CMA CGM'),('MSC','MSC'),('MSK','MAERSK (MSK)'),('ZIM','ZIM')]
+MBL_JS = """<script>
+(function () {
+  var f = document.getElementById('lx-mbl-form'), msg = document.getElementById('lx-mbl-msg');
+  if (!f) return;
+  var API = 'https://staff.lxpantosfashion.co.kr/api/mbl';
+  function say(t, ok) { msg.textContent = t; msg.className = 'lx-mbl-msg ' + (ok ? 'is-ok' : 'is-err'); }
+  try { var saved = localStorage.getItem('lxMblEmail'); if (saved) f.email.value = saved; } catch (e) {}
+  // The tracking server answers with CORS only once it is deployed; until then say so.
+  fetch(API + '/carriers').then(function (r) { if (!r.ok) throw 0; }).catch(function () {
+    f.querySelector('button').disabled = true; say('추적 서버 준비 중입니다. 곧 사용할 수 있습니다.');
+  });
+  f.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var mbl = f.mbl.value.toUpperCase().replace(/[\\s-]+/g, ''), carrier = f.carrier.value, email = f.email.value.trim().toLowerCase();
+    if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return say('MBL 번호를 확인해 주세요 (영문·숫자 6~25자).');
+    if (!carrier) return say('선사를 선택해 주세요.');
+    if (!/^[a-z0-9._%+-]+@lxpantos\\.com$/.test(email)) return say('메일은 @lxpantos.com 주소만 가능합니다.');
+    var btn = f.querySelector('button'); btn.disabled = true; say('등록 중…', true);
+    fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email }) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (x) {
+        if (!x.ok) return say(x.j.error || '등록하지 못했습니다.');
+        try { localStorage.setItem('lxMblEmail', email); } catch (e) {}
+        say(x.j.already ? 'MBL ' + mbl + '은(는) 이미 추적 중입니다.' : 'MBL ' + mbl + ' 추적을 시작했습니다. 확인 메일을 보냈고, 내일 오전부터 매일 보고 메일이 갑니다.', true);
+        f.mbl.value = '';
+      })
+      .catch(function () { say('서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.'); })
+      .then(function () { btn.disabled = false; });
+  });
+})();
+</script>"""
+
 def main():
     data = {}
     for p in sorted(DATA.glob('*.json')):
@@ -471,6 +504,7 @@ def main():
     now_kst = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
     built_short = now_kst.strftime('%m/%d %H:%M')
     logo = rd('logo.txt').strip()
+    mbl_carrier_options = ''.join(f'<option value="{k}">{v}</option>' for k, v in MBL_CARRIERS)
 
     page = f'''<!doctype html>
 <html lang="ko">
@@ -534,8 +568,20 @@ def main():
 <footer class="lx-footer">
   <div class="lx-footer-in">
     <div><img src="{logo}" alt="LX Pantos"><p>Textile / Garment Schedule</p><p>사이트 생성 {built}</p></div>
-    <div><h3>업데이트</h3><p>평일 매일 오전, 각 선사 공개 스케줄 조회 결과를 반영합니다. 노선별 업데이트 날짜는 각 노선 상단 배지와 상단 업데이트 표시를 참고하세요.</p></div>
-    <div><h3>안내</h3><p>표시된 일정은 선사 사정에 따라 변경될 수 있으며, 실제 부킹 시 선사 확정 스케줄을 확인해 주세요.</p></div>
+    <div class="lx-mbl">
+      <h3>MBL 도착 추적 메일 <span>MBL arrival tracking</span></h3>
+      <p class="lx-mbl-lead">MBL 번호와 선사를 넣으면 매일 오전 선사 화물추적 결과를 메일로 보내 드리고, POD 도착이 확인되면 자동으로 끝납니다.</p>
+      <form id="lx-mbl-form" class="lx-mbl-form" novalidate>
+        <label><span>MBL No.</span><input name="mbl" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="예) MEDU1234567"></label>
+        <label><span>선사 Carrier</span><select name="carrier" required>
+          <option value="">선택하세요</option>
+          {mbl_carrier_options}
+        </select></label>
+        <label><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
+        <button type="submit">추적 시작</button>
+      </form>
+      <p class="lx-mbl-msg" id="lx-mbl-msg" role="status" aria-live="polite"></p>
+    </div>
   </div>
 </footer>
 </div>
@@ -548,6 +594,7 @@ def main():
 {rd('pc.html')}
 {rd('mkt.html')}
 {rd('summary.html')}
+{MBL_JS}
 </body>
 </html>
 '''

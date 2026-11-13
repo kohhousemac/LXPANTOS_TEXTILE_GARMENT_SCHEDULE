@@ -73,3 +73,13 @@ Company networks block `*.workers.dev`, so staff use https://staff.lxpantosfashi
 `proxy/` is a Cloudflare Pages project (`lxpantosstaff`) that forwards every request to
 the Worker over a service binding. The custom domain is attached to that Pages project,
 and Gabia DNS has `staff CNAME lxpantosstaff.pages.dev.`.
+
+## MBL arrival tracking (homepage footer)
+
+The footer of lxpantosfashion.co.kr has a form: **MBL No. + carrier + @lxpantos.com e-mail**. The person gets a confirmation mail, then a report mail every morning until the carrier shows the cargo arrived at POD (then a final mail and tracking ends). Every mail has a "Stop tracking" link.
+
+- Code: `src/mbl.js` (wired into `src/worker.js`). Requests live in KV under `t:<id>`, never in this public repo.
+- Carriers offered: every carrier the schedule pages collect (`CARRIERS` in `src/mbl.js`, `MBL_CARRIERS` in `build/build.py` — keep both lists the same).
+- Limits: 30 active per e-mail, 20 new per IP per day, 300 active in total; stops after 5 days in a row "not found" or 90 days.
+- Who reads the carrier sites: a Claude scheduled task on the Mac mini ("MBL 도착 추적 데일리"), every morning. It opens https://staff.lxpantosfashion.co.kr/ in the browser, reads `GET /api/mbl/queue` (header `x-tracker-token`), looks each MBL up on the carrier's own tracking page with the site-safety rules, and posts `POST /api/mbl/<id>/report` `{status: in_transit|not_departed|arrived|not_found|blocked, vessel, voyage, pol, pod, etd, atd, eta, ata, transshipment, events[{date,location,event,vessel,voyage}], summary, sourceUrl}`. The Worker sends the mail (once per day per MBL; a repeated "blocked" is not re-mailed).
+- One-time setup: `./deploy-mbl.sh <TRACKER_TOKEN>` (sets the `TRACKER_TOKEN` secret and deploys). The same token is in the scheduled task's prompt.
