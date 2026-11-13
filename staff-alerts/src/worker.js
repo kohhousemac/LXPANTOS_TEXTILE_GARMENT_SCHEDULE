@@ -69,8 +69,9 @@ async function login(request, env) {
   // Overseas staff type just their name (the part before @).
   if (email && !email.includes('@')) email += '@' + env.ALLOWED_DOMAIN.toLowerCase();
   if (email) {
-    // Overseas (temporary): the e-mail must be on an overseas booker list.
-    if (employeeNos(env)[email] || (await countryOf(env, email)) === 'kr') email = '';
+    // Name + password: Korea staff use their employee number as the password;
+    // overseas (temporary) must be on an overseas list and use the shared one.
+    if (!employeeNos(env)[email] && (await countryOf(env, email)) === 'kr') email = '';
   } else {
     email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
   }
