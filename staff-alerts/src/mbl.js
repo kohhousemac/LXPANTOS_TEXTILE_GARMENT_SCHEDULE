@@ -99,30 +99,31 @@ const put = (env, t, ttlDays) => env.BOOKINGS.put('t:' + t.id, JSON.stringify(t)
 
 const stopUrl = async (env, t) => `${env.PAGE_URL.replace(/\/$/, '')}/mbl/stop?id=${t.id}&sig=${await sign(env, t.id)}`;
 
-// ---------- mails ----------
+// ---------- mails (English) ----------
+const carrierEn = (k) => String(CARRIERS[k] || k).replace(/\s*\([^)]*[가-힣][^)]*\)/, '').trim();
+
 function frame(title, body) {
-  return `<div style="font-family:Arial,'Malgun Gothic',sans-serif;max-width:680px;color:#1d1d1f">
+  return `<div style="font-family:Arial,Helvetica,sans-serif;max-width:680px;color:#1d1d1f">
 <div style="border-bottom:2px solid ${RED};padding:0 0 10px;margin-bottom:16px"><img src="${LOGO}" alt="LX Pantos" height="22"></div>
 <h2 style="font-size:17px;margin:0 0 12px">${title}</h2>${body}
-<p style="font-size:11px;color:#8a8580;margin-top:22px">LX Pantos Textile / Garment Schedule · MBL 도착 추적 (MBL arrival tracking)<br>
-선사 공개 화물추적 화면에서 읽은 값이며 선사 사정에 따라 바뀔 수 있습니다. Values read from the carrier's public tracking page.</p></div>`;
+<p style="font-size:11px;color:#8a8580;margin-top:22px">LX Pantos Textile / Garment Schedule · MBL arrival tracking<br>
+Values are read from the carrier's public tracking page and may change at the carrier's discretion.</p></div>`;
 }
 
-const row = (k, v) => `<tr><td style="${cell};color:#6b6560;white-space:nowrap">${k}</td><td style="${cell}">${v}</td></tr>`;
+const row = (k, v) => `<tr><td style="${cell};color:#6b6560;white-space:nowrap;width:150px">${k}</td><td style="${cell}">${v}</td></tr>`;
 
 export async function confirmMail(env, t) {
   const stop = await stopUrl(env, t);
-  const html = frame(`MBL ${esc(t.mbl)} 도착 추적을 시작합니다`, `
-<table style="border-collapse:collapse;width:100%">${row('MBL', esc(t.mbl))}${row('선사 Carrier', esc(CARRIERS[t.carrier] || t.carrier))}${row('받는 사람 To', esc(t.email))}${(t.cc || []).length ? row('참조 Cc', esc(t.cc.join(', '))) : ''}</table>
-<p style="font-size:13px;line-height:1.6">매일 오전(한국 시간) 선사 화물추적 화면을 확인해 이 주소로 보고 메일을 보내 드리고, POD 도착이 확인되면 마지막 메일을 보내고 자동으로 끝납니다.<br>
-We will check the carrier's tracking page every morning (KST) and mail you until arrival at POD is confirmed.</p>
-<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">추적 중지 Stop tracking</a></p>`);
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} 도착 추적 시작 (${t.carrier})`, html, t.cc || []);
+  const html = frame(`Arrival tracking started — MBL ${esc(t.mbl)}`, `
+<table style="border-collapse:collapse;width:100%">${row('MBL', esc(t.mbl))}${row('Carrier', esc(carrierEn(t.carrier)))}${row('To', esc(t.email))}${(t.cc || []).length ? row('Cc', esc(t.cc.join(', '))) : ''}</table>
+<p style="font-size:13px;line-height:1.6">We will check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.</p>
+<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">Stop tracking</a></p>`);
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — arrival tracking started (${carrierEn(t.carrier)})`, html, t.cc || []);
 }
 
-const STATUS_KO = {
-  in_transit: '운송 중 In transit', arrived: 'POD 도착 Arrived', not_found: '조회 결과 없음 Not found',
-  blocked: '선사 사이트 조회 불가 Carrier site unavailable', not_departed: '선적 전 Not yet departed',
+const STATUS_EN = {
+  in_transit: 'In transit', arrived: 'Arrived at POD', not_found: 'Not found',
+  blocked: 'Carrier site unavailable today', not_departed: 'Not yet departed',
 };
 
 function fmtDate(s) { return s ? esc(String(s)) : '-'; }
@@ -130,18 +131,19 @@ function dayDiff(a, b) {
   const x = Date.parse(String(a).slice(0, 10)), y = Date.parse(String(b).slice(0, 10));
   return isNaN(x) || isNaN(y) ? null : Math.round((y - x) / 864e5);
 }
+const plural = (n, w) => `${n} ${w}${Math.abs(n) === 1 ? '' : 's'}`;
 
-// Vessel position block: map image (inline, cid:vesselmap) + what VesselFinder shows.
+// Vessel position block: map image (inline, cid:vesselmap) + what VesselFinder shows. No raw coordinates/speed/course.
 function posSection(r) {
   const p = r.position;
   if (!p) return '';
-  const bits = [p.area, p.status, p.speed ? p.speed + ' kn' : '', p.course ? p.course + '°' : ''].filter(Boolean).join(' · ');
-  return `<h3 style="font-size:13px;margin:18px 0 6px">모선 위치 Vessel position <span style="font-weight:400;color:#8a8580">(VesselFinder${p.received ? ', ' + esc(p.received) : ''}${p.approx ? ' · 무료 정보라 대략 위치' : ''})</span></h3>
+  const now = [p.area, p.status].filter(Boolean).join(' · ');
+  return `<h3 style="font-size:13px;margin:18px 0 6px">Vessel position <span style="font-weight:400;color:#8a8580">(VesselFinder${p.received ? ', ' + esc(p.received) : ''}${p.approx ? ' · approximate area' : ''})</span></h3>
 ${r.hasMap ? '<img src="cid:vesselmap" alt="Vessel position map" width="600" height="300" style="display:block;width:100%;max-width:600px;height:auto;border:1px solid #e6e1d8;border-radius:6px">' : ''}
 <table style="border-collapse:collapse;width:100%;margin-top:6px">
-${bits ? row('현재 Now', esc(bits)) : ''}${p.destination ? row('목적지 Destination', esc(p.destination)) : ''}${p.lastPort ? row('직전 항구 Last port', esc(p.lastPort)) : ''}
+${now ? row('Now', esc(now)) : ''}${p.destination ? row('Next destination', esc(p.destination)) : ''}${p.lastPort ? row('Last port', esc(p.lastPort)) : ''}
 </table>
-${p.url ? `<p style="font-size:12px;margin:6px 0 0"><a href="${esc(p.url)}" style="color:${RED}">VesselFinder에서 보기 View on VesselFinder</a></p>` : ''}`;
+${p.url ? `<p style="font-size:12px;margin:6px 0 0"><a href="${esc(p.url)}" style="color:${RED}">View on VesselFinder</a></p>` : ''}`;
 }
 
 export async function reportMail(env, t, r, prev, inline = []) {
@@ -153,12 +155,12 @@ export async function reportMail(env, t, r, prev, inline = []) {
     let html = fmtDate(now);
     if (orig && now && orig !== now) {
       const d = dayDiff(orig, now);
-      const tagTxt = d == null ? '변경' : d > 0 ? `+${d}일 지연` : `${d}일 당김`;
+      const tagTxt = d == null ? 'changed' : d > 0 ? `delayed ${plural(d, 'day')}` : `${plural(-d, 'day')} earlier`;
       html = `<s style="color:#8a8580">${esc(orig)}</s> → <b style="color:#c0392b">${esc(now)}</b> <span style="color:#c0392b;font-size:12px">(${tagTxt})</span>`;
     }
-    if (before && now && before !== now && before !== orig) html += ` <span style="color:#8a8580;font-size:12px">· 어제 ${esc(before)}</span>`;
-    else if (before && now && before !== now && !(orig && orig !== now)) html += ` <span style="color:#c0392b;font-size:12px">(어제 ${esc(before)} → 변경)</span>`;
-    if (r[actual]) html += ` / <b>${esc(r[actual])}</b> (실제 actual)`;
+    if (before && now && before !== now && before !== orig) html += ` <span style="color:#8a8580;font-size:12px">· yesterday ${esc(before)}</span>`;
+    else if (before && now && before !== now && !(orig && orig !== now)) html += ` <span style="color:#c0392b;font-size:12px">(changed from ${esc(before)} yesterday)</span>`;
+    if (r[actual]) html += ` / <b>${esc(r[actual])}</b> (actual)`;
     return html;
   };
   const events = (r.events || []).slice(-10).reverse().map((e) =>
@@ -166,26 +168,26 @@ export async function reportMail(env, t, r, prev, inline = []) {
   const final = r.status === 'arrived';
   const stopped = !final && t.state !== 'active';
   const body = `
-<p style="font-size:14px;margin:0 0 10px"><b style="color:${final ? '#1f8a5b' : RED}">${esc(STATUS_KO[r.status] || r.status)}</b>${r.summary ? ' — ' + esc(r.summary) : ''}</p>
+<p style="font-size:14px;margin:0 0 10px"><b style="color:${final ? '#1f8a5b' : RED}">${esc(STATUS_EN[r.status] || r.status)}</b>${r.summary ? ' — ' + esc(r.summary) : ''}</p>
 <table style="border-collapse:collapse;width:100%">
-${row('MBL', esc(t.mbl))}${row('선사 Carrier', esc(CARRIERS[t.carrier] || t.carrier))}
-${row('모선 Vessel / Voyage', esc([r.vessel, r.voyage].filter(Boolean).join(' / ') || '-'))}
-${row('구간 POL → POD', esc([r.pol, r.pod].filter(Boolean).join(' → ') || '-'))}
-${row('출항 ETD / ATD', dateCell('etd', 'atd'))}
-${row('도착 ETA / ATA', dateCell('eta', 'ata'))}
-${r.transshipment ? row('환적 T/S', esc(r.transshipment)) : ''}
+${row('MBL', esc(t.mbl))}${row('Carrier', esc(carrierEn(t.carrier)))}
+${row('Vessel / Voyage', esc([r.vessel, r.voyage].filter(Boolean).join(' / ') || '-'))}
+${row('POL → POD', esc([r.pol, r.pod].filter(Boolean).join(' → ') || '-'))}
+${row('ETD / ATD', dateCell('etd', 'atd'))}
+${row('ETA / ATA', dateCell('eta', 'ata'))}
+${r.transshipment ? row('Transshipment', esc(r.transshipment)) : ''}
 </table>
 ${posSection(r)}
-${events ? `<h3 style="font-size:13px;margin:18px 0 6px">최근 이벤트 Latest events</h3>
-<table style="border-collapse:collapse;width:100%"><tr>${['일시 Date', '장소 Location', '이벤트 Event', '모선 Vessel'].map((h) => `<td style="${cell};font-weight:600;background:#f6f3ee">${h}</td>`).join('')}</tr>${events}</table>` : ''}
-<p style="font-size:12px;color:#6b6560;margin-top:14px">조회 ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:#6b6560">선사 화면 carrier page</a>` : ''}</p>
-${final ? '<p style="font-size:13px">POD 도착이 확인되어 이 MBL 추적을 마칩니다. Tracking for this MBL is now finished.</p>'
-    : stopped ? '<p style="font-size:13px">계속 조회되지 않아 추적을 마칩니다. 번호와 선사를 확인해 다시 등록해 주세요.</p>'
-      : `<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">추적 중지 Stop tracking</a></p>`}`;
+${events ? `<h3 style="font-size:13px;margin:18px 0 6px">Latest events</h3>
+<table style="border-collapse:collapse;width:100%"><tr>${['Date', 'Location', 'Event', 'Vessel'].map((h) => `<td style="${cell};font-weight:600;background:#f6f3ee">${h}</td>`).join('')}</tr>${events}</table>` : ''}
+<p style="font-size:12px;color:#6b6560;margin-top:14px">Checked ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:#6b6560">carrier page</a>` : ''}</p>
+${final ? '<p style="font-size:13px">Arrival at the port of discharge is confirmed. Tracking for this MBL is now finished.</p>'
+    : stopped ? '<p style="font-size:13px">The carrier has not shown this number for several days, so tracking has ended. Please check the MBL number and carrier and register again.</p>'
+      : `<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">Stop tracking</a></p>`}`;
   const etaMoved = first.eta && r.eta && first.eta !== r.eta;
-  const tag = final ? '도착 Arrived' : r.status === 'not_found' ? '조회 안 됨' : r.status === 'blocked' ? '조회 불가'
-    : etaMoved ? `ETA 변경 ${first.eta.slice(5, 10)}→${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`MBL ${esc(t.mbl)} 일일 추적 보고`, body), t.cc || [], inline);
+  const tag = final ? 'Arrived' : r.status === 'not_found' ? 'Not found' : r.status === 'blocked' ? 'Carrier site unavailable'
+    : etaMoved ? `ETA changed ${first.eta.slice(5, 10)} → ${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`Daily tracking report — MBL ${esc(t.mbl)}`, body), t.cc || [], inline);
 }
 
 // ---------- handlers ----------
@@ -250,7 +252,7 @@ export async function handleMbl(request, env, url) {
       t.state = 'stopped'; t.stoppedAt = new Date().toISOString();
       await put(env, t, KEEP_DONE_DAYS);
     }
-    const msg = t ? `MBL ${esc(t.mbl)} 추적을 중지했습니다. Tracking stopped.` : '링크가 올바르지 않습니다. Invalid link.';
+    const msg = t ? `Tracking stopped for MBL ${esc(t.mbl)}.` : 'Invalid link.';
     return new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LX Pantos</title><body style="font-family:Arial,sans-serif;padding:40px 20px;color:#1d1d1f"><p>${msg}</p><p><a href="https://lxpantosfashion.co.kr/" style="color:${RED}">lxpantosfashion.co.kr</a></p>`,
       { headers: { 'content-type': 'text/html; charset=utf-8' } });
   }
@@ -280,7 +282,7 @@ export async function handleMbl(request, env, url) {
     if (t.lastReportDate === kstDate()) return json({ ok: true, skipped: 'already reported today' });
     const b = await request.json().catch(() => ({}));
     const status = String(b.status || '');
-    if (!STATUS_KO[status]) return json({ error: 'status must be one of ' + Object.keys(STATUS_KO).join(', ') }, 400);
+    if (!STATUS_EN[status]) return json({ error: 'status must be one of ' + Object.keys(STATUS_EN).join(', ') }, 400);
     const s = (v, n = 80) => (v == null ? '' : String(v).slice(0, n));
     const r = {
       status, summary: s(b.summary, 200), vessel: s(b.vessel), voyage: s(b.voyage), pol: s(b.pol), pod: s(b.pod),
