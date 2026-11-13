@@ -132,8 +132,18 @@ const b64 = (str) => {
 };
 const encWord = (str) => `=?UTF-8?B?${b64(str)}?=`;
 
-function buildMessage(from, fromName, to, subject, html, cc = []) {
-  const body = b64(html).replace(/.{76}/g, '$&\r\n');
+function buildMessage(from, fromName, to, subject, html, cc = [], inline = []) {
+  const wrap = (x) => x.replace(/.{76}/g, '$&\r\n');
+  const body = wrap(b64(html));
+  // Inline images (e.g. the vessel position map) go in a multipart/related body, referenced as cid:...
+  const parts = inline.length ? (() => {
+    const bnd = 'lx-' + crypto.randomUUID();
+    const out = [`--${bnd}`, 'Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: base64', '', body];
+    inline.forEach((a) => out.push(`--${bnd}`, `Content-Type: ${a.mime}; name="${a.cid}.png"`, 'Content-Transfer-Encoding: base64',
+      `Content-ID: <${a.cid}>`, `Content-Disposition: inline; filename="${a.cid}.png"`, '', wrap(a.data)));
+    out.push(`--${bnd}--`);
+    return { type: `multipart/related; boundary="${bnd}"`, body: out.join('\r\n') };
+  })() : null;
   return [
     `From: ${encWord(fromName)} <${from}>`,
     `To: ${to.join(', ')}`,
@@ -142,14 +152,11 @@ function buildMessage(from, fromName, to, subject, html, cc = []) {
     `Date: ${new Date().toUTCString()}`,
     `Message-ID: <${crypto.randomUUID()}@lxpantosfashionstaff>`,
     'MIME-Version: 1.0',
-    'Content-Type: text/html; charset=UTF-8',
-    'Content-Transfer-Encoding: base64',
-    '',
-    body,
+    ...(parts ? [`Content-Type: ${parts.type}`, '', parts.body] : ['Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: base64', '', body]),
   ].join('\r\n');
 }
 
-async function smtpSend(env, to, subject, html, cc = []) {
+async function smtpSend(env, to, subject, html, cc = [], inline = []) {
   const host = env.SMTP_HOST || 'smtp.gmail.com';
   const port = Number(env.SMTP_PORT || 465);
   const socket = connect({ hostname: host, port }, { secureTransport: env.SMTP_TLS === 'off' ? 'off' : 'on' });
@@ -187,7 +194,7 @@ async function smtpSend(env, to, subject, html, cc = []) {
     await send(`MAIL FROM:<${env.SMTP_USER}>`); await reply(250);
     for (const r of [...to, ...cc]) { await send(`RCPT TO:<${r}>`); await reply('250|251'); }
     await send('DATA'); await reply(354);
-    await send(buildMessage(env.SMTP_USER, env.MAIL_FROM_NAME || 'LX Pantos Vessel Alerts', to, subject, html, cc) + '\r\n.');
+    await send(buildMessage(env.SMTP_USER, env.MAIL_FROM_NAME || 'LX Pantos Vessel Alerts', to, subject, html, cc, inline) + '\r\n.');
     await reply(250);
     await send('QUIT');
   } finally {
@@ -195,12 +202,12 @@ async function smtpSend(env, to, subject, html, cc = []) {
   }
 }
 
-export async function sendMail(env, to, subject, html, cc = []) {
+export async function sendMail(env, to, subject, html, cc = [], inline = []) {
   if (env.MAIL_MODE !== 'gmail') {
     console.log(`[MAIL:log] to=${to.join(',')}${cc.length ? ' cc=' + cc.join(',') : ''} subject=${subject}`);
     return { logged: true };
   }
   if (!env.SMTP_USER || !env.SMTP_PASS) throw new Error('Gmail is not set up (SMTP_USER / SMTP_PASS).');
-  await smtpSend(env, to, subject, html, cc);
+  await smtpSend(env, to, subject, html, cc, inline);
   return { sent: true };
 }

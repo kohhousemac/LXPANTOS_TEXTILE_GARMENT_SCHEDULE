@@ -131,7 +131,20 @@ function dayDiff(a, b) {
   return isNaN(x) || isNaN(y) ? null : Math.round((y - x) / 864e5);
 }
 
-export async function reportMail(env, t, r, prev) {
+// Vessel position block: map image (inline, cid:vesselmap) + what VesselFinder shows.
+function posSection(r) {
+  const p = r.position;
+  if (!p) return '';
+  const bits = [p.area, p.status, p.speed ? p.speed + ' kn' : '', p.course ? p.course + '°' : ''].filter(Boolean).join(' · ');
+  return `<h3 style="font-size:13px;margin:18px 0 6px">모선 위치 Vessel position <span style="font-weight:400;color:#8a8580">(VesselFinder${p.received ? ', ' + esc(p.received) : ''}${p.approx ? ' · 무료 정보라 대략 위치' : ''})</span></h3>
+${r.hasMap ? '<img src="cid:vesselmap" alt="Vessel position map" width="600" style="display:block;width:100%;max-width:600px;height:auto;border:1px solid #e6e1d8;border-radius:6px">' : ''}
+<table style="border-collapse:collapse;width:100%;margin-top:6px">
+${bits ? row('현재 Now', esc(bits)) : ''}${p.destination ? row('목적지 Destination', esc(p.destination)) : ''}${p.lastPort ? row('직전 항구 Last port', esc(p.lastPort)) : ''}
+</table>
+${p.url ? `<p style="font-size:12px;margin:6px 0 0"><a href="${esc(p.url)}" style="color:${RED}">VesselFinder에서 보기 View on VesselFinder</a></p>` : ''}`;
+}
+
+export async function reportMail(env, t, r, prev, inline = []) {
   const stop = await stopUrl(env, t);
   // Original (first reported) date struck through, new date beside it with the day difference.
   const first = t.first || {};
@@ -162,6 +175,7 @@ ${row('출항 ETD / ATD', dateCell('etd', 'atd'))}
 ${row('도착 ETA / ATA', dateCell('eta', 'ata'))}
 ${r.transshipment ? row('환적 T/S', esc(r.transshipment)) : ''}
 </table>
+${posSection(r)}
 ${events ? `<h3 style="font-size:13px;margin:18px 0 6px">최근 이벤트 Latest events</h3>
 <table style="border-collapse:collapse;width:100%"><tr>${['일시 Date', '장소 Location', '이벤트 Event', '모선 Vessel'].map((h) => `<td style="${cell};font-weight:600;background:#f6f3ee">${h}</td>`).join('')}</tr>${events}</table>` : ''}
 <p style="font-size:12px;color:#6b6560;margin-top:14px">조회 ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:#6b6560">선사 화면 carrier page</a>` : ''}</p>
@@ -171,7 +185,7 @@ ${final ? '<p style="font-size:13px">POD 도착이 확인되어 이 MBL 추적�
   const etaMoved = first.eta && r.eta && first.eta !== r.eta;
   const tag = final ? '도착 Arrived' : r.status === 'not_found' ? '조회 안 됨' : r.status === 'blocked' ? '조회 불가'
     : etaMoved ? `ETA 변경 ${first.eta.slice(5, 10)}→${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`MBL ${esc(t.mbl)} 일일 추적 보고`, body), t.cc || []);
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`MBL ${esc(t.mbl)} 일일 추적 보고`, body), t.cc || [], inline);
 }
 
 // ---------- handlers ----------
@@ -220,6 +234,11 @@ export async function handleMbl(request, env, url) {
     await env.BOOKINGS.put(ipKey, String(n + 1), { expirationTtl: 2 * 86400 });
     try { await confirmMail(env, t); } catch (e) { console.error('confirm mail', e); }
     return json({ ok: true, id: t.id }, 201, c);
+  }
+
+  // Map drawing helper for the tracker task (public, no data).
+  if (url.pathname === '/mbl/map.js' && request.method === 'GET') {
+    return new Response(MAP_JS, { headers: { 'content-type': 'text/javascript; charset=utf-8', 'cache-control': 'max-age=300' } });
   }
 
   // Stop link in every mail.
@@ -272,6 +291,18 @@ export async function handleMbl(request, env, url) {
       })),
       checkedAt: new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 16).replace('T', ' '),
     };
+    const pos = b.position && typeof b.position === 'object' ? b.position : null;
+    if (pos) {
+      r.position = {
+        area: s(pos.area), status: s(pos.status), speed: s(pos.speed, 10), course: s(pos.course, 10), destination: s(pos.destination),
+        lastPort: s(pos.lastPort, 120), received: s(pos.received, 40), approx: !!pos.approx,
+        url: /^https:\/\/www\.vesselfinder\.com\//.test(pos.url || '') ? s(pos.url, 200) : '',
+      };
+    }
+    // Map image: PNG data URL drawn by /mbl/map.js in the tracker's browser (kept out of KV; mailed inline only).
+    const inline = [];
+    const m = /^data:image\/png;base64,([A-Za-z0-9+/=]+)$/.exec(String(b.mapImage || ''));
+    if (m && m[1].length < 900000) { inline.push({ cid: 'vesselmap', mime: 'image/png', data: m[1] }); r.hasMap = true; }
     const prev = t.lastReport;
     t.notFound = status === 'not_found' ? (t.notFound || 0) + 1 : 0;
     if (status === 'arrived') { t.state = 'arrived'; t.arrivedAt = new Date().toISOString(); }
@@ -283,10 +314,40 @@ export async function handleMbl(request, env, url) {
     t.lastReport = r; t.lastReportDate = kstDate(); t.reports = (t.reports || 0) + 1;
     // "blocked" means we could not look today: tell the person only once in a row.
     const quiet = status === 'blocked' && prev && prev.status === 'blocked';
-    if (!quiet) await reportMail(env, t, r, prev);
+    if (!quiet) await reportMail(env, t, r, prev, inline);
     await put(env, t, t.state === 'active' ? undefined : KEEP_DONE_DAYS);
     return json({ ok: true, mailed: !quiet, state: t.state });
   }
 
   return null;
 }
+
+// window.lxVesselMap({lat, lon, cog, name, zoom}) -> Promise<"data:image/png;base64,...">
+// Draws OpenStreetMap tiles around the vessel position on a canvas with a heading marker.
+const MAP_JS = `window.lxVesselMap = async function (o) {
+  var W = 600, H = 300, z = o.zoom || 5, lat = +o.lat, lon = +o.lon;
+  var n = Math.pow(2, z), xt = (lon + 180) / 360 * n;
+  var yt = (1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * n;
+  var px = xt * 256, py = yt * 256, x0 = px - W / 2, y0 = py - H / 2;
+  var c = document.createElement('canvas'); c.width = W; c.height = H; var g = c.getContext('2d');
+  g.fillStyle = '#aad3df'; g.fillRect(0, 0, W, H);
+  var jobs = [];
+  for (var tx = Math.floor(x0 / 256); tx <= Math.floor((x0 + W) / 256); tx++) for (var ty = Math.floor(y0 / 256); ty <= Math.floor((y0 + H) / 256); ty++) {
+    if (ty < 0 || ty >= n) continue;
+    (function (tx, ty) { jobs.push(new Promise(function (res) {
+      var im = new Image(); im.crossOrigin = 'anonymous';
+      im.onload = function () { g.drawImage(im, tx * 256 - x0, ty * 256 - y0); res(); }; im.onerror = function () { res(); };
+      im.src = 'https://tile.openstreetmap.org/' + z + '/' + (((tx % n) + n) % n) + '/' + ty + '.png';
+    })); })(tx, ty);
+  }
+  await Promise.all(jobs);
+  var cx = W / 2, cy = H / 2;
+  if (o.approx) { g.beginPath(); g.arc(cx, cy, 26, 0, 2 * Math.PI); g.fillStyle = 'rgba(165,0,52,.15)'; g.fill(); g.strokeStyle = 'rgba(165,0,52,.6)'; g.setLineDash([4, 3]); g.stroke(); g.setLineDash([]); }
+  g.save(); g.translate(cx, cy); g.rotate(((+o.cog || 0) * Math.PI) / 180);
+  g.beginPath(); g.moveTo(0, -13); g.lineTo(8, 9); g.lineTo(0, 5); g.lineTo(-8, 9); g.closePath();
+  g.fillStyle = '#a50034'; g.fill(); g.lineWidth = 2; g.strokeStyle = '#fff'; g.stroke(); g.restore();
+  if (o.name) { g.font = 'bold 13px Arial'; var tw = g.measureText(o.name).width; g.fillStyle = 'rgba(255,255,255,.9)'; g.fillRect(cx + 14, cy - 22, tw + 10, 20); g.fillStyle = '#1d1d1f'; g.fillText(o.name, cx + 19, cy - 7); }
+  g.font = '10px Arial'; var at = '\\u00a9 OpenStreetMap contributors · position: VesselFinder'; var aw = g.measureText(at).width;
+  g.fillStyle = 'rgba(255,255,255,.85)'; g.fillRect(W - aw - 8, H - 15, aw + 8, 15); g.fillStyle = '#555'; g.fillText(at, W - aw - 4, H - 4);
+  return c.toDataURL('image/png');
+};`;
