@@ -549,6 +549,23 @@ def main():
     <h1>LX Pantos <span class="thin">Textile &amp; Garment Schedule</span></h1>
     <p class="lx-hero-sub">주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
     <span class="lx-updated-pill" id="hero-updated" data-built="{built_short}">—</span>
+    <div class="lx-mbl" id="mbl-track">
+      <div class="lx-mbl-head">
+        <h3>MBL 도착 추적 메일</h3>
+        <p class="lx-mbl-lead">MBL 번호·선사를 넣으면 매일 오전 선사 화물추적 결과를 메일로 보내 드리고, POD 도착이 확인되면 자동으로 끝납니다.</p>
+      </div>
+      <form id="lx-mbl-form" class="lx-mbl-form" novalidate>
+        <label><span>MBL No.</span><input name="mbl" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="예) MEDU1234567"></label>
+        <label><span>선사 Carrier</span><select name="carrier" required>
+          <option value="">선택하세요</option>
+          {mbl_carrier_options}
+        </select></label>
+        <label><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
+        <label class="lx-mbl-cc"><span>참조 CC <em>선택 · 최대 5명, 쉼표 구분</em></span><input name="cc" maxlength="400" autocomplete="off" spellcheck="false" placeholder="a@lxpantos.com, b@lxpantos.com"></label>
+        <button type="submit">추적 시작</button>
+      </form>
+      <p class="lx-mbl-msg" id="lx-mbl-msg" role="status" aria-live="polite"></p>
+    </div>
   </div>
 </section>
 <div class="lx-dash">
@@ -572,21 +589,6 @@ def main():
 <footer class="lx-footer">
   <div class="lx-footer-in">
     <div><img src="{logo}" alt="LX Pantos"><p>Textile / Garment Schedule</p><p>사이트 생성 {built}</p></div>
-    <div class="lx-mbl">
-      <h3>MBL 도착 추적 메일 <span>MBL arrival tracking</span></h3>
-      <p class="lx-mbl-lead">MBL 번호와 선사를 넣으면 매일 오전 선사 화물추적 결과를 메일로 보내 드리고, POD 도착이 확인되면 자동으로 끝납니다.</p>
-      <form id="lx-mbl-form" class="lx-mbl-form" novalidate>
-        <label><span>MBL No.</span><input name="mbl" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="예) MEDU1234567"></label>
-        <label><span>선사 Carrier</span><select name="carrier" required>
-          <option value="">선택하세요</option>
-          {mbl_carrier_options}
-        </select></label>
-        <label><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
-        <label class="lx-mbl-cc"><span>참조 CC (선택 · 최대 5명, 쉼표로 구분)</span><input name="cc" maxlength="400" autocomplete="off" spellcheck="false" placeholder="a@lxpantos.com, b@lxpantos.com"></label>
-        <button type="submit">추적 시작</button>
-      </form>
-      <p class="lx-mbl-msg" id="lx-mbl-msg" role="status" aria-live="polite"></p>
-    </div>
   </div>
 </footer>
 </div>
