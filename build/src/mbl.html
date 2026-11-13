@@ -1,0 +1,102 @@
+<script>
+// MBL arrival tracking: top-bar button opens a panel with the form.
+// CC is a chip input: Enter / comma / space adds the typed address as a chip
+// (remembered in this browser), Backspace on an empty box removes the last one.
+(function () {
+  var f = document.getElementById('lx-mbl-form'), msg = document.getElementById('lx-mbl-msg');
+  var pop = document.getElementById('mbl-track'), tog = document.getElementById('lx-mbl-toggle');
+  if (!f || !pop || !tog) return;
+  var API = 'https://vessel-alert.pages.dev/api/mbl';
+  var RE = /^[a-z0-9._%+-]+@lxpantos\.com$/;
+  var MAX_CC = 5;
+  var box = document.getElementById('lx-cc-box'), ccIn = document.getElementById('lx-cc-input');
+  var cc = [];
+
+  function say(t, ok) { msg.textContent = t || ''; msg.className = 'lx-mbl-msg' + (t ? (ok ? ' is-ok' : ' is-err') : ''); }
+  function store() { try { localStorage.setItem('lxMblCc', JSON.stringify(cc)); } catch (e) {} }
+
+  // ---- open / close ----
+  function open(on) {
+    pop.hidden = !on;
+    tog.setAttribute('aria-expanded', on ? 'true' : 'false');
+    if (on) setTimeout(function () { (f.email.value ? f.mbl : f.email).focus(); }, 30);
+  }
+  tog.addEventListener('click', function () { open(pop.hidden); });
+  pop.querySelector('.lx-mbl-close').addEventListener('click', function () { open(false); tog.focus(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !pop.hidden) { open(false); tog.focus(); } });
+  document.addEventListener('mousedown', function (e) { if (!pop.hidden && !pop.contains(e.target) && !tog.contains(e.target)) open(false); });
+  if (location.hash === '#mbl') open(true);
+
+  // ---- CC chips ----
+  function render() {
+    Array.prototype.slice.call(box.querySelectorAll('.lx-cc-chip')).forEach(function (c) { c.remove(); });
+    cc.forEach(function (addr, i) {
+      var chip = document.createElement('span');
+      chip.className = 'lx-cc-chip';
+      chip.appendChild(document.createTextNode(addr));
+      var x = document.createElement('button');
+      x.type = 'button'; x.textContent = '×'; x.setAttribute('aria-label', addr + ' 삭제');
+      x.addEventListener('click', function () { cc.splice(i, 1); store(); render(); ccIn.focus(); });
+      chip.appendChild(x);
+      box.insertBefore(chip, ccIn);
+    });
+    ccIn.placeholder = cc.length ? (cc.length < MAX_CC ? '추가 입력 후 Enter' : '') : '주소 입력 후 Enter (최대 5명)';
+    ccIn.disabled = cc.length >= MAX_CC;
+  }
+  // Adds whatever is typed. Returns false (and says why) when something is wrong.
+  function commit() {
+    var parts = ccIn.value.toLowerCase().split(/[,;\s]+/).filter(Boolean);
+    if (!parts.length) return true;
+    var bad = parts.filter(function (e) { return !RE.test(e); });
+    if (bad.length) { say('CC는 @lxpantos.com 주소만 가능합니다: ' + bad.join(', ')); return false; }
+    var email = f.email.value.trim().toLowerCase();
+    parts.forEach(function (e) { if (cc.indexOf(e) === -1 && e !== email && cc.length < MAX_CC) cc.push(e); });
+    if (parts.some(function (e) { return cc.indexOf(e) === -1 && e !== email; })) say('CC는 ' + MAX_CC + '명까지 넣을 수 있습니다.');
+    else say('');
+    ccIn.value = '';
+    store(); render();
+    return true;
+  }
+  ccIn.addEventListener('keydown', function (e) {
+    if (e.isComposing) return;
+    if (e.key === 'Enter' || e.key === ',' || e.key === ';' || (e.key === ' ' && ccIn.value.trim())) { e.preventDefault(); commit(); }
+    else if (e.key === 'Backspace' && !ccIn.value && cc.length) { cc.pop(); store(); render(); }
+  });
+  ccIn.addEventListener('blur', function () { if (ccIn.value.trim()) commit(); });
+  ccIn.addEventListener('paste', function () { setTimeout(commit, 0); });
+  box.addEventListener('click', function (e) { if (e.target === box) ccIn.focus(); });
+
+  try {
+    var saved = localStorage.getItem('lxMblEmail'); if (saved) f.email.value = saved;
+    var sc = localStorage.getItem('lxMblCc');
+    if (sc) cc = (sc.charAt(0) === '[' ? JSON.parse(sc) : sc.split(/[,;\s]+/)).filter(function (e) { return RE.test(e); }).slice(0, MAX_CC);
+  } catch (e) {}
+  render();
+
+  // The tracking server answers with CORS only once it is deployed; until then say so.
+  fetch(API + '/carriers').then(function (r) { if (!r.ok) throw 0; }).catch(function () {
+    f.querySelector('.lx-mbl-submit').disabled = true; say('추적 서버 준비 중입니다. 곧 사용할 수 있습니다.');
+  });
+
+  f.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (!commit()) return;
+    var mbl = f.mbl.value.toUpperCase().replace(/[\s-]+/g, ''), carrier = f.carrier.value, email = f.email.value.trim().toLowerCase();
+    if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return say('MBL 번호를 확인해 주세요 (영문·숫자 6~25자).');
+    if (!carrier) return say('선사를 선택해 주세요.');
+    if (!RE.test(email)) return say('메일은 @lxpantos.com 주소만 가능합니다.');
+    var list = cc.filter(function (e) { return e !== email; });
+    var btn = f.querySelector('.lx-mbl-submit'); btn.disabled = true; say('등록 중…', true);
+    fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email, cc: list }) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (x) {
+        if (!x.ok) return say(x.j.error || '등록하지 못했습니다.');
+        try { localStorage.setItem('lxMblEmail', email); } catch (e) {}
+        say(x.j.already ? 'MBL ' + mbl + '은(는) 이미 추적 중입니다' + (list.length ? ' (CC 추가 반영).' : '.') : 'MBL ' + mbl + ' 추적을 시작했습니다. 확인 메일을 보냈고(' + (list.length ? 'CC ' + list.length + '명 포함' : 'CC 없음') + '), 내일 오전부터 매일 보고 메일이 갑니다.', true);
+        f.mbl.value = '';
+      })
+      .catch(function () { say('서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.'); })
+      .then(function () { btn.disabled = false; });
+  });
+})();
+</script>

@@ -448,41 +448,7 @@ SHIM = r'''<script>
 </script>'''
 
 MBL_CARRIERS = [('KMTC','KMTC (고려해운)'),('SINOKOR','SINOKOR (장금상선)'),('HEUNG-A','HEUNG-A (흥아라인)'),('NAMSUNG','NAMSUNG (남성해운)'),('PANOCEAN','PAN OCEAN (팬오션)'),('DONGJIN','DONGJIN (동진상선)'),('SM LINE','SM LINE (SM상선)'),('HMM','HMM'),('SITC','SITC'),('EMC','EVERGREEN (EMC)'),('WHL','WAN HAI (WHL)'),('YML','YANG MING (YML)'),('GSL','GOLD STAR LINE (GSL)'),('CNC','CNC'),('CMA CGM','CMA CGM'),('MSC','MSC'),('MSK','MAERSK (MSK)'),('ZIM','ZIM')]
-MBL_JS = """<script>
-(function () {
-  var f = document.getElementById('lx-mbl-form'), msg = document.getElementById('lx-mbl-msg');
-  if (!f) return;
-  var API = 'https://vessel-alert.pages.dev/api/mbl';
-  function say(t, ok) { msg.textContent = t; msg.className = 'lx-mbl-msg ' + (ok ? 'is-ok' : 'is-err'); }
-  try { var saved = localStorage.getItem('lxMblEmail'); if (saved) f.email.value = saved; var savedCc = localStorage.getItem('lxMblCc'); if (savedCc) f.cc.value = savedCc; } catch (e) {}
-  // The tracking server answers with CORS only once it is deployed; until then say so.
-  fetch(API + '/carriers').then(function (r) { if (!r.ok) throw 0; }).catch(function () {
-    f.querySelector('button').disabled = true; say('추적 서버 준비 중입니다. 곧 사용할 수 있습니다.');
-  });
-  f.addEventListener('submit', function (ev) {
-    ev.preventDefault();
-    var mbl = f.mbl.value.toUpperCase().replace(/[\\s-]+/g, ''), carrier = f.carrier.value, email = f.email.value.trim().toLowerCase();
-    if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return say('MBL 번호를 확인해 주세요 (영문·숫자 6~25자).');
-    if (!carrier) return say('선사를 선택해 주세요.');
-    if (!/^[a-z0-9._%+-]+@lxpantos\\.com$/.test(email)) return say('메일은 @lxpantos.com 주소만 가능합니다.');
-    var cc = f.cc.value.toLowerCase().split(/[,;\\s]+/).filter(Boolean).filter(function (e, i, a) { return a.indexOf(e) === i && e !== email; });
-    var badCc = cc.filter(function (e) { return !/^[a-z0-9._%+-]+@lxpantos\\.com$/.test(e); });
-    if (badCc.length) return say('CC도 @lxpantos.com 주소만 가능합니다: ' + badCc.join(', '));
-    if (cc.length > 5) return say('CC는 5명까지 넣을 수 있습니다.');
-    var btn = f.querySelector('button'); btn.disabled = true; say('등록 중…', true);
-    fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email, cc: cc }) })
-      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
-      .then(function (x) {
-        if (!x.ok) return say(x.j.error || '등록하지 못했습니다.');
-        try { localStorage.setItem('lxMblEmail', email); localStorage.setItem('lxMblCc', cc.join(', ')); } catch (e) {}
-        say(x.j.already ? 'MBL ' + mbl + '은(는) 이미 추적 중입니다.' : 'MBL ' + mbl + ' 추적을 시작했습니다. 확인 메일을 보냈고(' + (cc.length ? 'CC ' + cc.length + '명 포함' : 'CC 없음') + '), 내일 오전부터 매일 보고 메일이 갑니다.', true);
-        f.mbl.value = '';
-      })
-      .catch(function () { say('서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.'); })
-      .then(function () { btn.disabled = false; });
-  });
-})();
-</script>"""
+
 
 def main():
     data = {}
@@ -529,7 +495,27 @@ def main():
   <div class="lx-topbar-in">
     <a class="lx-brand" href="./"><img src="{logo}" alt="LX Pantos"><span class="lx-brand-div"></span><span class="lx-brand-name">Textile / Garment Schedule</span></a>
     <button type="button" class="lx-dl-link" id="lx-download-xlsx" aria-label="아시아 전체 스케쥴 엑셀 다운로드" title="아시아 전체 스케쥴 엑셀 다운로드">다운로드</button>
+    <button type="button" class="lx-mbl-toggle" id="lx-mbl-toggle" aria-expanded="false" aria-controls="mbl-track"><span class="lx-mbl-dot" aria-hidden="true"></span>MBL<span class="lx-mbl-long"> 도착</span> 추적</button>
     <a class="lx-staff-link" href="https://vessel-alert.pages.dev/" target="_blank" rel="noopener" title="LX Pantos staff only">Staff login</a>
+    <div class="lx-mbl-pop" id="mbl-track" role="dialog" aria-label="MBL 도착 추적 메일" hidden>
+      <div class="lx-mbl-head">
+        <h3>MBL 도착 추적 메일</h3>
+        <button type="button" class="lx-mbl-close" aria-label="닫기">×</button>
+      </div>
+      <p class="lx-mbl-lead">MBL 번호·선사를 넣으면 매일 오전 선사 화물추적 결과를 메일로 보내 드리고, POD 도착이 확인되면 자동으로 끝납니다.</p>
+      <form id="lx-mbl-form" class="lx-mbl-form" novalidate>
+        <label><span>MBL No.</span><input name="mbl" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="예) MEDU1234567"></label>
+        <label><span>선사 Carrier</span><select name="carrier" required>
+          <option value="">선택하세요</option>
+          {mbl_carrier_options}
+        </select></label>
+        <label class="lx-mbl-wide"><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
+        <div class="lx-mbl-wide lx-mbl-ccwrap"><label for="lx-cc-input"><span>참조 CC <em>선택 · Enter로 추가 · 이 브라우저에 저장</em></span></label>
+          <div class="lx-cc-box" id="lx-cc-box"><input id="lx-cc-input" autocomplete="off" spellcheck="false" inputmode="email"></div></div>
+        <button type="submit" class="lx-mbl-submit lx-mbl-wide">추적 시작</button>
+      </form>
+      <p class="lx-mbl-msg" id="lx-mbl-msg" role="status" aria-live="polite"></p>
+    </div>
   </div>
 </header>
 <section class="lx-hero">
@@ -549,23 +535,6 @@ def main():
     <h1>LX Pantos <span class="thin">Textile &amp; Garment Schedule</span></h1>
     <p class="lx-hero-sub">주요 노선의 직항 선박 스케줄을 선사별로 모아 평일 매일 업데이트합니다.</p>
     <span class="lx-updated-pill" id="hero-updated" data-built="{built_short}">—</span>
-    <div class="lx-mbl" id="mbl-track">
-      <div class="lx-mbl-head">
-        <h3>MBL 도착 추적 메일</h3>
-        <p class="lx-mbl-lead">MBL 번호·선사를 넣으면 매일 오전 선사 화물추적 결과를 메일로 보내 드리고, POD 도착이 확인되면 자동으로 끝납니다.</p>
-      </div>
-      <form id="lx-mbl-form" class="lx-mbl-form" novalidate>
-        <label><span>MBL No.</span><input name="mbl" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="예) MEDU1234567"></label>
-        <label><span>선사 Carrier</span><select name="carrier" required>
-          <option value="">선택하세요</option>
-          {mbl_carrier_options}
-        </select></label>
-        <label><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
-        <label class="lx-mbl-cc"><span>참조 CC <em>선택 · 최대 5명, 쉼표 구분</em></span><input name="cc" maxlength="400" autocomplete="off" spellcheck="false" placeholder="a@lxpantos.com, b@lxpantos.com"></label>
-        <button type="submit">추적 시작</button>
-      </form>
-      <p class="lx-mbl-msg" id="lx-mbl-msg" role="status" aria-live="polite"></p>
-    </div>
   </div>
 </section>
 <div class="lx-dash">
@@ -601,7 +570,7 @@ def main():
 {rd('pc.html')}
 {rd('mkt.html')}
 {rd('summary.html')}
-{MBL_JS}
+{rd('mbl.html')}
 </body>
 </html>
 '''
