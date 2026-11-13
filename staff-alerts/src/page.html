@@ -105,12 +105,17 @@ a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
     <p class="brand">LX Pantos · Staff only</p>
     <h1>Booking Vessel Alerts</h1>
     <div id="pickWrap">
+    <div id="ovsRow" hidden style="margin-top:18px">
+      <p class="label">E-mail</p>
+      <input id="ovsEmail" type="email" autocomplete="username" placeholder="name@lxpantos.com">
+    </div>
     <div id="pwRow" style="margin-top:18px">
-      <p class="label">Employee No.</p>
+      <p class="label" id="pwLabel">Employee No.</p>
       <input id="pw" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Employee No.">
     </div>
     <p class="msg err small" id="pwMsg" style="margin:8px 0 0"></p>
     <button class="primary" id="enter">Continue</button>
+    <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="ovsLink">Overseas office? Sign in with e-mail</a></p>
     </div>
   </div>
 </div>
@@ -232,12 +237,23 @@ $('enter').onclick = async () => {
   if (!me) {
     $('enter').disabled = true;
     try {
-      await api('/api/login', { method: 'POST', body: JSON.stringify({ password: $('pw').value }) });
+      const ovs = !$('ovsRow').hidden;
+      await api('/api/login', { method: 'POST', body: JSON.stringify(ovs ? { email: $('ovsEmail').value, password: $('pw').value } : { password: $('pw').value }) });
       $('pw').value = '';
     } catch (err) { $('pwMsg').textContent = err.message; $('enter').disabled = false; return; }
     $('enter').disabled = false;
   }
   await enterApp();
+};
+
+// shortcut: overseas staff sign in with e-mail + shared password until they have employee numbers.
+$('ovsLink').onclick = (e) => {
+  e.preventDefault();
+  const ovs = $('ovsRow').hidden;
+  $('ovsRow').hidden = !ovs;
+  $('pwLabel').textContent = $('pw').placeholder = ovs ? 'Password' : 'Employee No.';
+  $('ovsLink').textContent = ovs ? 'Korea HQ? Sign in with employee number' : 'Overseas office? Sign in with e-mail';
+  $('pwMsg').textContent = '';
 };
 
 async function enterApp() {

@@ -42,7 +42,9 @@ function employeeNos(env) {
   try { return JSON.parse(env.STAFF_PASSWORDS || '{}'); } catch { return {}; }
 }
 
-const passwordFor = (env, email) => String(employeeNos(env)[email] || '');
+// shortcut: overseas staff have no employee number yet, so they type their
+// e-mail plus the shared STAFF_PASSWORD; drop this once their numbers are in.
+const passwordFor = (env, email) => String(employeeNos(env)[email] || env.STAFF_PASSWORD || '');
 
 const sessionSig = (env, exp, email) => hmac(env, `v2.${exp}.${email}.${passwordFor(env, email)}`);
 
@@ -63,11 +65,17 @@ async function login(request, env) {
   if (fails >= 5) return json({ error: 'Too many attempts. Please try again in an hour.' }, 429);
   const body = await request.json().catch(() => ({}));
   const given = String(body.password || '').trim();
-  const email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
+  let email = String(body.email || '').trim().toLowerCase();
+  if (email) {
+    // Overseas (temporary): the e-mail must be on an overseas booker list.
+    if (employeeNos(env)[email] || (await countryOf(env, email)) === 'kr') email = '';
+  } else {
+    email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
+  }
   const pw = email && passwordFor(env, email);
   if (!pw || !safeEqual(given, pw)) {
     await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
-    return json({ error: 'Wrong employee number.' }, 401);
+    return json({ error: body.email ? 'Wrong e-mail or password.' : 'Wrong employee number.' }, 401);
   }
   const exp = Math.floor(Date.now() / 1000) + YEAR;
   return new Response(JSON.stringify({ ok: true, email }), { headers: {
