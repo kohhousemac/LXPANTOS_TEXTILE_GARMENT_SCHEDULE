@@ -495,7 +495,10 @@ def main():
   <div class="lx-topbar-in">
     <a class="lx-brand" href="./"><img src="{logo}" alt="LX Pantos"><span class="lx-brand-div"></span><span class="lx-brand-name">Textile / Garment Schedule</span></a>
     <button type="button" class="lx-dl-link" id="lx-download-xlsx" aria-label="아시아 전체 스케쥴 엑셀 다운로드" title="아시아 전체 스케쥴 엑셀 다운로드">다운로드</button>
+    <span class="lx-tb-break" aria-hidden="true"></span>
     <button type="button" class="lx-mbl-toggle" id="lx-mbl-toggle" aria-expanded="false" aria-controls="mbl-track"><span class="lx-mbl-dot" aria-hidden="true"></span>MBL<span class="lx-mbl-long"> 도착</span> 추적</button>
+    <a class="lx-tool-link" href="https://www.tradlinx.com/ko/container-terminal-schedule" target="_blank" rel="noopener" title="한국 컨테이너 터미널 선석 스케줄 조회 (트레드링스)" aria-label="한국 터미널 조회 (새 창)"><svg class="lx-tool-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5h12"/><path d="M4 9h16"/><path d="M14 9v4"/><rect x="11.5" y="13" width="5" height="3.5" rx=".5"/><path d="M2 21h20"/><path d="M8 5 4 9"/></svg><span class="lx-tool-txt">한국 터미널 조회</span></a>
+    <a class="lx-tool-link" href="https://www.forwarder.kr/tariff/" target="_blank" rel="noopener" title="2026년 화물자동차 안전운임(컨테이너) 요율 확인" aria-label="한국 안전운임제 확인 (새 창)"><svg class="lx-tool-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 6.5h12v10h-12z"/><path d="M13.5 10h4l3 3.2v3.3h-7"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/><path d="m5 11.3 1.8 1.8 3.4-3.6"/></svg><span class="lx-tool-txt">한국 안전운임제 확인</span></a>
     <a class="lx-staff-link" href="https://vessel-alert.pages.dev/" target="_blank" rel="noopener" title="LX Pantos staff only">Staff login</a>
     <div class="lx-mbl-pop" id="mbl-track" role="dialog" aria-label="MBL 도착 추적 메일" hidden>
       <div class="lx-mbl-head">
