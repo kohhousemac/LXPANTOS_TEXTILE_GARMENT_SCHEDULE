@@ -1,5 +1,5 @@
 // Staff-only booking page + scheduled "faster vessel" check.
-// - /api/* needs an employee number (signed cookie, 1 year).
+// - /api/* needs a signed-in, admin-approved account: employee no. + password (see auth.js).
 // - Bookings live in KV (never in the public GitHub repo).
 // - The cron trigger compares each booking with the homepage's schedule data.
 
@@ -7,6 +7,7 @@ import page from './page.html';
 import { evaluate, todayKST } from './logic.js';
 import { alertMail, sendMail } from './mail.js';
 import { handleMbl } from './mbl.js';
+import { handleAuth, loginWithEmpno, accountSession, isAdmin } from './auth.js';
 
 const json = (data, status = 200) => new Response(JSON.stringify(data), {
   status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
@@ -44,13 +45,15 @@ function employeeNos(env) {
 
 // shortcut: overseas staff have no employee number yet, so they type their
 // e-mail plus the shared STAFF_PASSWORD; drop this once their numbers are in.
-const passwordFor = (env, email) => String(employeeNos(env)[email] || env.STAFF_PASSWORD || '');
+const passwordFor = (env, email) => (employeeNos(env)[email] ? '' : String(env.STAFF_PASSWORD || ''));
 
 const sessionSig = (env, exp, email) => hmac(env, `v2.${exp}.${email}.${passwordFor(env, email)}`);
 
 // Returns the signed-in e-mail, or null.
 async function signedIn(request, env) {
   if (!env.SESSION_SECRET) return null;
+  const acct = await accountSession(request, env);
+  if (acct) return acct.email;
   const m = new RegExp(`(?:^|;\\s*)${COOKIE}=(\\d+)\\.([\\w-]+)\\.([^;\\s]+)`).exec(request.headers.get('cookie') || '');
   if (!m || Number(m[1]) * 1000 < Date.now()) return null;
   const email = decodeURIComponent(m[3]);
@@ -68,13 +71,10 @@ async function login(request, env) {
   let email = String(body.email || '').trim().toLowerCase();
   // Overseas staff type just their name (the part before @).
   if (email && !email.includes('@')) email += '@' + env.ALLOWED_DOMAIN.toLowerCase();
-  if (email) {
-    // Name + password: Korea staff use their employee number as the password;
-    // overseas (temporary) must be on an overseas list and use the shared one.
-    if (!employeeNos(env)[email] && (await countryOf(env, email)) === 'kr') email = '';
-  } else {
-    email = Object.entries(employeeNos(env)).find(([, no]) => safeEqual(given, String(no)))?.[0] || '';
-  }
+  // Employee no. + password (approved accounts, see auth.js).
+  if (body.empno) return loginWithEmpno(request, env, body);
+  // Overseas (temporary): name on an overseas booker list + the shared password.
+  if (!email || employeeNos(env)[email] || (await countryOf(env, email)) === 'kr') email = '';
   const pw = email && passwordFor(env, email);
   if (!pw || !safeEqual(given, pw)) {
     await env.BOOKINGS.put(rlKey, String(fails + 1), { expirationTtl: 3600 });
@@ -242,13 +242,15 @@ async function handle(request, env, ctx) {
   // MBL arrival tracking (homepage footer form, mail stop link, Claude tracker).
   const mblRes = await handleMbl(request, env, url);
   if (mblRes) return mblRes;
+  const authRes = await handleAuth(request, env, url);
+  if (authRes) return authRes;
   if (url.pathname === '/api/login' && request.method === 'POST') return login(request, env);
   if (url.pathname === '/api/logout' && request.method === 'POST') return logout();
   // Who is acting: the e-mail the session cookie was signed for.
   const user = await signedIn(request, env);
   if (!user) return json({ error: 'login' }, 401);
 
-  if (url.pathname === '/api/me') return json({ email: user, country: await countryOf(env, user), domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
+  if (url.pathname === '/api/me') return json({ admin: isAdmin(env, (await accountSession(request, env))?.empno || ''), email: user, country: await countryOf(env, user), domain: env.ALLOWED_DOMAIN, customers: CUSTOMERS, countries: COUNTRIES });
 
   if (url.pathname === '/api/teams' && request.method === 'GET') return json(await getTeams(env));
   if (url.pathname === '/api/bookers' && request.method === 'GET') return json(await getBookers(env));

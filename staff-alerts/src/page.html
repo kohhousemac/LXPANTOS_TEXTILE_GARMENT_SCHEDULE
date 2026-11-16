@@ -110,13 +110,35 @@ a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
       <p class="label">Name</p>
       <input id="ovsEmail" autocomplete="username" autocapitalize="none" placeholder="firstname.lastname">
     </div>
-    <div id="pwRow" style="margin-top:18px">
-      <p class="label" id="pwLabel">Employee No.</p>
-      <input id="pw" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Employee No.">
+    <div id="empRow" style="margin-top:18px">
+      <p class="label">Employee No.</p>
+      <input id="empno" autocomplete="username" autocapitalize="characters" inputmode="numeric" placeholder="Employee No.">
+    </div>
+    <div id="pwRow" style="margin-top:14px">
+      <p class="label" id="pwLabel">Password</p>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Password">
+    </div>
+    <div id="chgRow" hidden style="margin-top:14px">
+      <p class="small" style="margin:0 0 10px">First sign-in: set your own password (6+ characters).</p>
+      <div id="chgEmailRow" hidden style="margin-bottom:10px"><p class="label">Work e-mail</p>
+        <input id="chgEmail" type="email" autocomplete="email" autocapitalize="none" placeholder="name@lxpantos.com"></div>
+      <p class="label">New password</p>
+      <input id="pw1" type="password" autocomplete="new-password" placeholder="New password">
+      <p class="label" style="margin-top:10px">New password again</p>
+      <input id="pw2" type="password" autocomplete="new-password" placeholder="New password again">
     </div>
     <p class="msg err small" id="pwMsg" style="margin:8px 0 0"></p>
-    <button class="primary" id="enter">Continue</button>
-    <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="ovsLink">Overseas office? Sign in with name</a></p>
+    <button class="primary" id="enter">Sign in</button>
+    <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="reqLink">Request access</a> · <a href="#" id="ovsLink">Overseas office? Sign in with name</a></p>
+    </div>
+    <div id="reqWrap" hidden>
+      <p class="small" style="margin:18px 0 0">Only approved staff can sign in. Send a request; you will get an e-mail once it is approved.</p>
+      <p class="label" style="margin-top:14px">Employee No.</p><input id="rqEmp" inputmode="numeric" autocapitalize="characters">
+      <p class="label" style="margin-top:10px">Name</p><input id="rqName" autocomplete="name">
+      <p class="label" style="margin-top:10px">Work e-mail</p><input id="rqEmail" type="email" autocapitalize="none" placeholder="name@lxpantos.com">
+      <p class="msg small" id="rqMsg" style="margin:8px 0 0"></p>
+      <button class="primary" id="rqSend" style="width:100%;padding:11px;font-size:15px;margin-top:16px">Send request</button>
+      <p class="small muted" style="margin:14px 0 0;text-align:center"><a href="#" id="reqBack">Back to sign in</a></p>
     </div>
   </div>
 </div>
@@ -200,6 +222,26 @@ a.bkno{color:inherit;text-decoration:underline dotted;cursor:pointer}
       <div id="teams"></div>
     </details>
   </section>
+
+  <section class="card" id="adminCard" hidden>
+    <details id="adminBox">
+      <summary><h2>Staff access</h2><span class="arrow"><span class="lbl"></span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+      <p class="muted small" style="margin:12px 0 14px">Only people listed here can sign in. New accounts start with password <b id="adInit">0000</b> and must set their own at the first sign-in. "Reset" puts it back to the initial password.</p>
+      <div id="adReqs"></div>
+      <div class="tbl"><table>
+        <thead><tr><th>Employee No.</th><th>Name</th><th>E-mail</th><th>Status</th><th></th></tr></thead>
+        <tbody id="adList"></tbody>
+      </table></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center">
+        <input id="adEmp" placeholder="Employee No." style="width:130px" inputmode="numeric">
+        <input id="adName" placeholder="Name" style="width:140px">
+        <input id="adEmail" placeholder="name@lxpantos.com" style="width:220px" autocapitalize="none">
+        <label class="small"><input type="checkbox" id="adNotify" checked> E-mail them</label>
+        <button id="adAdd">Add</button>
+      </div>
+      <p class="msg small" id="adMsg" style="margin:8px 0 0"></p>
+    </details>
+  </section>
 </main>
 <script>
 const $ = (id) => document.getElementById(id);
@@ -222,7 +264,7 @@ let listFilter = 'ALL';
 async function api(path, opts = {}) {
   const res = await fetch(path, { headers: { 'content-type': 'application/json' }, ...opts });
   const data = await res.json().catch(() => ({}));
-  if (res.status === 401 && data.error === 'login') { showPassword(); throw new Error('Please enter your employee number.'); }
+  if (res.status === 401 && data.error === 'login') { showPassword(); throw new Error('Please sign in.'); }
   if (!res.ok && !data.error) throw new Error(`Blocked before reaching the server (${res.status}). Your network may be blocking this site.`);
   if (!res.ok) throw new Error(data.error || res.status);
   return data;
@@ -233,28 +275,59 @@ const pills = (items, active, cls = '') => items.map(([val, text]) =>
 
 let country = '', appLoaded = false;
 
+let chgFor = null;   // first sign-in: {empno, password, needEmail}
 $('enter').onclick = async () => {
   $('pwMsg').textContent = '';
   if (!me) {
     $('enter').disabled = true;
     try {
       const ovs = !$('ovsRow').hidden;
-      await api('/api/login', { method: 'POST', body: JSON.stringify(ovs ? { email: $('ovsEmail').value, password: $('pw').value } : { password: $('pw').value }) });
+      if (chgFor) {
+        if ($('pw1').value !== $('pw2').value) throw new Error('The two new passwords do not match.');
+        await api('/api/password', { method: 'POST', body: JSON.stringify({ empno: chgFor.empno, password: chgFor.password, newPassword: $('pw1').value, email: $('chgEmail').value }) });
+        chgFor = null; $('chgRow').hidden = true; $('pw1').value = $('pw2').value = '';
+      } else {
+        const r = await api('/api/login', { method: 'POST', body: JSON.stringify(ovs ? { email: $('ovsEmail').value, password: $('pw').value } : { empno: $('empno').value, password: $('pw').value }) });
+        if (r.mustChange) {
+          chgFor = { empno: r.empno, password: $('pw').value };
+          $('pw').value = ''; $('empRow').hidden = $('pwRow').hidden = true;
+          $('chgRow').hidden = false; $('chgEmailRow').hidden = !r.needEmail;
+          $('enter').textContent = 'Save password and continue';
+          $('enter').disabled = false; (r.needEmail ? $('chgEmail') : $('pw1')).focus();
+          return;
+        }
+      }
       $('pw').value = '';
     } catch (err) { $('pwMsg').textContent = err.message; $('enter').disabled = false; return; }
     $('enter').disabled = false;
+    resetLogin();
   }
   await enterApp();
 };
+function resetLogin() {
+  chgFor = null; $('chgRow').hidden = true; $('pwRow').hidden = false;
+  $('empRow').hidden = !$('ovsRow').hidden; $('enter').textContent = 'Sign in';
+}
 
 // shortcut: overseas staff sign in with name (e-mail ID) + shared password until they have employee numbers.
 $('ovsLink').onclick = (e) => {
   e.preventDefault();
   const ovs = $('ovsRow').hidden;
   $('ovsRow').hidden = !ovs;
-  $('pwLabel').textContent = $('pw').placeholder = ovs ? 'Password' : 'Employee No.';
+  resetLogin();
   $('ovsLink').textContent = ovs ? 'Korea HQ? Sign in with employee number' : 'Overseas office? Sign in with name';
   $('pwMsg').textContent = '';
+};
+$('reqLink').onclick = (e) => { e.preventDefault(); $('pickWrap').hidden = true; $('reqWrap').hidden = false; $('rqMsg').textContent = ''; $('rqEmp').value = $('empno').value; $('rqEmp').focus(); };
+$('reqBack').onclick = (e) => { e.preventDefault(); $('reqWrap').hidden = true; $('pickWrap').hidden = false; };
+$('rqSend').onclick = async () => {
+  const msg = $('rqMsg'); msg.className = 'msg small'; msg.textContent = '';
+  $('rqSend').disabled = true;
+  try {
+    await api('/api/access-request', { method: 'POST', body: JSON.stringify({ empno: $('rqEmp').value, name: $('rqName').value, email: $('rqEmail').value }) });
+    msg.className = 'msg ok small'; msg.textContent = 'Request sent. You will get an e-mail with your initial password once it is approved.';
+  } catch (err) { msg.className = 'msg err small'; msg.textContent = err.message; }
+  $('rqSend').disabled = false;
 };
 
 async function enterApp() {
@@ -270,7 +343,7 @@ function showPassword() {
   me = ''; appLoaded = false;
   $('app').hidden = true; $('login').hidden = false;
 }
-$('pw').onkeydown = (e) => { if (e.key === 'Enter' && !$('enter').disabled) $('enter').click(); };
+for (const id of ['empno', 'pw', 'pw2', 'chgEmail', 'pw1']) $(id).onkeydown = (e) => { if (e.key === 'Enter' && !$('enter').disabled) $('enter').click(); };
 $('signOut2').onclick = async (e) => {
   e.preventDefault();
   await fetch('/api/logout', { method: 'POST' }).catch(() => {});
@@ -288,6 +361,8 @@ async function loadApp() {
   [routes, teams] = await Promise.all([api('/api/routes'), api('/api/teams')]);
   labels = Object.fromEntries(routes.map((r) => [r.routeId, r.label]));
   drawCustomers(); drawFilter(); drawTeams();
+  $('adminCard').hidden = !info.admin;
+  if (info.admin) loadAccess();
   await loadList();
 }
 
@@ -421,6 +496,38 @@ function drawRecipients() {
   const all = [...new Set([me, ...(teams[pick.customer] || [])])];
   $('recipients').textContent = 'Alerts go to: ' + all.join(', ');
 }
+
+// ---------- staff access (admins only) ----------
+async function loadAccess() {
+  const d = await api('/api/admin/access');
+  $('adInit').textContent = d.initial;
+  $('adReqs').innerHTML = d.requests.length ? '<p class="label">Waiting for approval</p>' + d.requests.map((r) =>
+    `<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0"><b>${esc(r.empno)}</b> ${esc(r.name)} <span class="muted">${esc(r.email)}</span>
+     <button class="small" data-ad="approve" data-e="${esc(r.empno)}">Approve</button><button class="small danger" data-ad="reject" data-e="${esc(r.empno)}">Reject</button></div>`).join('') + '<br>' : '';
+  $('adList').innerHTML = d.accounts.map((a) => `<tr><td><b>${esc(a.empno)}</b>${d.admins.includes(a.empno) ? ' <span class="muted small">admin</span>' : ''}</td><td>${esc(a.name || '-')}</td><td>${esc(a.email || '-')}</td>
+    <td class="small">${a.mustChange ? 'Initial password (not signed in yet)' : 'Active'}</td>
+    <td style="white-space:nowrap"><button class="small" data-ad="reset" data-e="${esc(a.empno)}">Reset</button> <button class="small danger" data-ad="remove" data-e="${esc(a.empno)}">Remove</button></td></tr>`).join('')
+    || '<tr><td colspan="5" class="muted">No accounts yet.</td></tr>';
+}
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-ad]');
+  if (!b) return;
+  const act = b.dataset.ad, no = b.dataset.e;
+  if (act === 'remove' && !confirm(`Remove access for ${no}?`)) return;
+  if (act === 'reset' && !confirm(`Reset ${no} to the initial password?`)) return;
+  $('adMsg').className = 'msg small'; $('adMsg').textContent = '';
+  try { await api(`/api/admin/access/${encodeURIComponent(no)}/${act}`, { method: 'POST' }); await loadAccess(); }
+  catch (err) { $('adMsg').className = 'msg err small'; $('adMsg').textContent = err.message; }
+});
+$('adAdd').onclick = async () => {
+  $('adMsg').className = 'msg small'; $('adMsg').textContent = '';
+  try {
+    await api('/api/admin/access', { method: 'POST', body: JSON.stringify({ empno: $('adEmp').value, name: $('adName').value, email: $('adEmail').value, notify: $('adNotify').checked }) });
+    $('adEmp').value = $('adName').value = $('adEmail').value = '';
+    $('adMsg').className = 'msg ok small'; $('adMsg').textContent = 'Added.';
+    await loadAccess();
+  } catch (err) { $('adMsg').className = 'msg err small'; $('adMsg').textContent = err.message; }
+};
 
 function drawTeams() {
   $('teams').innerHTML = customers.map((c) => `
