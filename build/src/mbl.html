@@ -6,7 +6,19 @@
   var f = document.getElementById('lx-mbl-form'), msg = document.getElementById('lx-mbl-msg');
   var pop = document.getElementById('mbl-track'), tog = document.getElementById('lx-mbl-toggle');
   if (!f || !pop || !tog) return;
-  var API = 'https://vessel-alert.pages.dev/api/mbl';
+  // Same server under two addresses: some company networks block *.pages.dev, so fall back to our own domain.
+  var APIS = ['https://vessel-alert.pages.dev/api/mbl', 'https://staff.lxpantosfashion.co.kr/api/mbl'];
+  var API = APIS[0];
+  function call(path, opt) {
+    var list = [API].concat(APIS.filter(function (a) { return a !== API; }));
+    function attempt(i) {
+      return fetch(list[i] + path, opt).then(function (r) { API = list[i]; return r; }, function (e) {
+        if (i + 1 < list.length) return attempt(i + 1);
+        throw e;
+      });
+    }
+    return attempt(0);
+  }
   var RE = /^[a-z0-9._%+-]+@lxpantos\.com$/;
   var MAX_CC = 5;
   var box = document.getElementById('lx-cc-box'), ccIn = document.getElementById('lx-cc-input');
@@ -74,7 +86,7 @@
   render();
 
   // The tracking server answers with CORS only once it is deployed; until then say so.
-  fetch(API + '/carriers').then(function (r) { if (!r.ok) throw 0; }).catch(function () {
+  call('/carriers').then(function (r) { if (!r.ok) throw 0; }).catch(function () {
     f.querySelector('.lx-mbl-submit').disabled = true; say('추적 서버 준비 중입니다. 곧 사용할 수 있습니다.');
   });
 
@@ -87,7 +99,7 @@
     if (!RE.test(email)) return say('메일은 @lxpantos.com 주소만 가능합니다.');
     var list = cc.filter(function (e) { return e !== email; });
     var btn = f.querySelector('.lx-mbl-submit'); btn.disabled = true; say('등록 중…', true);
-    fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email, cc: list }) })
+    call('', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email, cc: list }) })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (x) {
         if (!x.ok) return say(x.j.error || '등록하지 못했습니다.');
