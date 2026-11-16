@@ -74,8 +74,9 @@ address, so staff use https://vessel-alert.pages.dev/. `proxy/` is a Cloudflare 
 project (`vessel-alert`) that forwards every request to the Worker over a service binding.
 Deploy it with `cd proxy && npx wrangler pages deploy --branch main`.
 
-The older front door, Pages project `lxpantosstaff` on staff.lxpantosfashion.co.kr
-(Gabia `staff CNAME lxpantosstaff.pages.dev.`), still works but is no longer linked.
+vessel-alert.pages.dev is the only address. The old staff.lxpantosfashion.co.kr front door
+(Pages project `lxpantosstaff`) is retired: remove its custom domain / delete the project in
+Cloudflare, and delete the Gabia `staff` CNAME record.
 
 ## MBL arrival tracking (homepage footer)
 

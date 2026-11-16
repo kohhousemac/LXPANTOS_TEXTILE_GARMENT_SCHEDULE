@@ -18,4 +18,4 @@ read ADMINS
 printf '%s' "$ADMINS" | npx wrangler secret put ADMIN_EMPNOS
 
 npx wrangler deploy
-echo "Done: https://staff.lxpantosfashion.co.kr"
+echo "Done: https://vessel-alert.pages.dev/"
