@@ -92,47 +92,51 @@ const put = (env, t, ttlDays) => env.BOOKINGS.put('t:' + t.id, JSON.stringify(t)
   ttlDays ? { expirationTtl: ttlDays * 86400 } : undefined);
 
 // ---------- mails (English) ----------
-// Email-safe layout: nested tables, inline styles, system font stack (web fonts are unreliable in mail).
+// Outlook-safe layout (Outlook desktop renders with Word): fixed-width tables, bgcolor attributes,
+// no div backgrounds / border-radius-dependent shapes / max-width; Malgun Gothic first (Windows), then Mac fonts.
 const carrierEn = (k) => String(CARRIERS[k] || k).replace(/\s*\([^)]*[가-힣][^)]*\)/, '').trim();
 
-const FONT = "'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";
-const INK = '#16171b', MUTED = '#7a756d', LINE = '#ece8e1', SOFT = '#f7f5f1';
-const label = (t) => `<div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:${MUTED};font-weight:600;margin:0 0 4px">${t}</div>`;
-const section = (title, inner) => `<tr><td style="padding:22px 28px 0">
-<div style="font-size:13px;font-weight:700;color:${INK};margin:0 0 10px">${title}</div>${inner}</td></tr>`;
+const FONT = "'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',Arial,sans-serif";
+const INK = '#16171b', MUTED = '#77716a', LINE = '#e6e1d8', SOFT = '#f6f4f0', PAGE = '#efebe4';
+const f = (size, color = INK, bold = false, extra = '') => `font-family:${FONT};font-size:${size}px;line-height:1.45;color:${color};${bold ? 'font-weight:bold;' : ''}${extra}`;
+const label = (t) => `<div style="${f(11, MUTED, true, 'letter-spacing:1px;margin:0 0 4px')}">${t.toUpperCase()}</div>`;
+const gap = (h) => `<tr><td height="${h}" style="font-size:0;line-height:0">&nbsp;</td></tr>`;
+const section = (title, inner) => `${gap(22)}<tr><td style="padding:0 28px">
+<div style="${f(13, INK, true, 'margin:0 0 8px')}">${title}</div>${inner}</td></tr>`;
 
 function frame(heading, sub, body) {
-  return `<div style="margin:0;padding:24px 12px;background:#f1eee8;font-family:${FONT};color:${INK}">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid ${LINE};border-collapse:separate">
-<tr><td style="height:5px;background:${RED};font-size:0;line-height:0">&nbsp;</td></tr>
-<tr><td style="padding:20px 28px 16px;border-bottom:1px solid ${LINE}">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-<td><img src="${LOGO}" alt="LX Pantos" height="24" style="display:block;border:0"></td>
-<td align="right" style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:${MUTED};font-weight:600">MBL Arrival Tracking</td>
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${PAGE}" style="background:${PAGE}">
+<tr><td align="center" style="padding:24px 10px">
+<table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:640px;background:#ffffff;border:1px solid ${LINE}">
+<tr><td height="6" bgcolor="${RED}" style="background:${RED};font-size:0;line-height:0">&nbsp;</td></tr>
+<tr><td style="padding:18px 28px 16px;border-bottom:1px solid ${LINE}">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="middle"><img src="${LOGO}" alt="LX Pantos" height="24" style="display:block;border:0;height:24px"></td>
+<td valign="middle" align="right" style="${f(11, MUTED, true, 'letter-spacing:1px')}">MBL ARRIVAL TRACKING</td>
 </tr></table></td></tr>
-<tr><td style="padding:24px 28px 0">
-<div style="font-size:21px;line-height:1.3;font-weight:800;color:${INK};margin:0">${heading}</div>
-${sub ? `<div style="font-size:14px;line-height:1.55;color:#4a463f;margin:8px 0 0">${sub}</div>` : ''}
+${gap(24)}<tr><td style="padding:0 28px">
+<div style="${f(22, INK, true, 'line-height:1.3')}">${heading}</div>
+${sub ? `<div style="${f(14, '#4a463f', false, 'margin:8px 0 0;line-height:1.55')}">${sub}</div>` : ''}
 </td></tr>
 ${body}
-<tr><td style="padding:26px 28px 24px">
-<div style="border-top:1px solid ${LINE};padding-top:14px;font-size:11px;line-height:1.6;color:#9a948a">
+${gap(26)}<tr><td style="padding:0 28px 24px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid ${LINE};padding-top:14px;${f(11, '#9a948a', false, 'line-height:1.6')}">
 LX Pantos Textile / Garment Schedule · MBL arrival tracking<br>
-Values are read from the carrier's public tracking page and may change at the carrier's discretion.</div>
-</td></tr></table></div>`;
+Values are read from the carrier's public tracking page and may change at the carrier's discretion.</td></tr></table>
+</td></tr></table></td></tr></table>`;
 }
 
-// Key/value rows inside a soft card.
-const kv = (rows) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${SOFT};border-radius:10px;border-collapse:separate">
-${rows.filter(Boolean).map(([k, v], i) => `<tr><td style="padding:11px 16px;${i ? `border-top:1px solid ${LINE};` : ''}font-size:12px;color:${MUTED};white-space:nowrap;width:130px;vertical-align:top">${k}</td><td style="padding:11px 16px;${i ? `border-top:1px solid ${LINE};` : ''}font-size:14px;color:${INK};font-weight:600">${v}</td></tr>`).join('')}
+// Key/value rows on a soft background.
+const kv = (rows) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${SOFT}" style="background:${SOFT}">
+${rows.filter(Boolean).map(([k, v], i) => `<tr><td width="130" valign="top" style="padding:11px 16px;${i ? `border-top:1px solid ${LINE};` : ''}${f(12, MUTED)}">${k}</td><td valign="top" style="padding:11px 16px;${i ? `border-top:1px solid ${LINE};` : ''}${f(14, INK, true)}">${v}</td></tr>`).join('')}
 </table>`;
 
-const pill = (text, color, bg) => `<span style="display:inline-block;padding:5px 12px;border-radius:999px;background:${bg};color:${color};font-size:12px;font-weight:700;letter-spacing:.02em">${text}</span>`;
+const pill = (text, color, bg) => `<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${bg}" style="background:${bg};padding:5px 14px;border-radius:12px;${f(12, color, true)}">${text}</td></tr></table>`;
 
 export async function confirmMail(env, t) {
-  const html = frame(`Tracking started`, `We'll check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.`,
+  const html = frame('Tracking started', `We'll check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.`,
     section('Registration', kv([
-      ['MBL', `<span style="font-size:16px;letter-spacing:.02em">${esc(t.mbl)}</span>`],
+      ['MBL', esc(t.mbl)],
       ['Carrier', esc(carrierEn(t.carrier))],
       ['To', esc(t.email)],
       (t.cc || []).length ? ['Cc', esc(t.cc.join(', '))] : null,
@@ -144,8 +148,8 @@ const STATUS_EN = {
   in_transit: 'In transit', arrived: 'Arrived at POD', not_found: 'Not found',
   blocked: 'Carrier site unavailable today', not_departed: 'Not yet departed',
 };
-const STATUS_COLOR = { in_transit: '#1d6fd8', arrived: '#1f8a5b', not_departed: '#b7791f', not_found: '#c0392b', blocked: '#7a756d' };
-const STATUS_BG = { in_transit: '#e6effb', arrived: '#e4f4ec', not_departed: '#fbf1df', not_found: '#fbe7e4', blocked: '#efede9' };
+const STATUS_COLOR = { in_transit: '#1d5fc2', arrived: '#1f7a50', not_departed: '#a8650f', not_found: '#b8322a', blocked: '#6b665f' };
+const STATUS_BG = { in_transit: '#e3edfb', arrived: '#e2f3ea', not_departed: '#fbf0dc', not_found: '#fbe6e3', blocked: '#eeebe6' };
 
 function fmtDate(s) { return s ? esc(String(s)) : '-'; }
 function dayDiff(a, b) {
@@ -160,10 +164,10 @@ function posSection(r) {
   if (!p) return '';
   const now = [p.area, p.status].filter(Boolean).join(' · ');
   const note = `VesselFinder${p.received ? ' · ' + esc(p.received) : ''}${p.approx ? ' · approximate area' : ''}`;
-  return section(`Vessel position <span style="font-weight:400;color:${MUTED};font-size:12px">&nbsp;${note}</span>`,
-    `${r.hasMap ? `<img src="cid:vesselmap" alt="Vessel position map" width="584" height="292" style="display:block;width:100%;max-width:584px;height:auto;border-radius:10px;border:1px solid ${LINE};margin:0 0 10px">` : ''}
+  return section(`Vessel position&nbsp;&nbsp;<span style="${f(12, MUTED)}">${note}</span>`,
+    `${r.hasMap ? `<img src="cid:vesselmap" alt="Vessel position map" width="584" style="display:block;width:584px;max-width:100%;height:auto;border:1px solid ${LINE}"><div style="font-size:0;line-height:0;height:10px">&nbsp;</div>` : ''}
 ${kv([now ? ['Now', esc(now)] : null, p.destination ? ['Next port', esc(p.destination)] : null, p.lastPort ? ['Last port', esc(p.lastPort)] : null])}
-${p.url ? `<div style="margin:10px 0 0;font-size:12px"><a href="${esc(p.url)}" style="color:${RED};text-decoration:none;font-weight:600">View on VesselFinder →</a></div>` : ''}`);
+${p.url ? `<div style="${f(12, RED, true, 'margin:10px 0 0')}"><a href="${esc(p.url)}" style="color:${RED};text-decoration:none">View on VesselFinder &rarr;</a></div>` : ''}`);
 }
 
 export async function reportMail(env, t, r, prev, inline = []) {
@@ -171,32 +175,29 @@ export async function reportMail(env, t, r, prev, inline = []) {
   const first = t.first || {};
   const dateBlock = (key, actual) => {
     const now = r[key], orig = first[key], before = prev && prev.status !== 'blocked' ? prev[key] : '';
-    let main = `<div style="font-size:20px;font-weight:800;color:${INK};line-height:1.2">${fmtDate(r[actual] || now)}</div>`;
-    let note = r[actual] ? `<span style="color:#1f8a5b;font-weight:700">Actual</span>` : 'Estimated';
+    let dateColor = INK;
+    let note = r[actual] ? `<span style="color:#1f7a50;font-weight:bold">Actual</span>` : 'Estimated';
     if (orig && now && orig !== now) {
       const d = dayDiff(orig, now);
       const tagTxt = d == null ? 'changed' : d > 0 ? `delayed ${plural(d, 'day')}` : `${plural(-d, 'day')} earlier`;
-      if (!r[actual]) main = `<div style="font-size:20px;font-weight:800;color:#c0392b;line-height:1.2">${esc(now)}</div>`;
-      note += ` · <s style="color:#a59f95">${esc(orig)}</s> <span style="color:#c0392b;font-weight:700">${tagTxt}</span>`;
+      if (!r[actual]) dateColor = '#c0392b';
+      note += ` · <s style="color:#a59f95">${esc(orig)}</s> <span style="color:#c0392b;font-weight:bold">${tagTxt}</span>`;
     }
-    if (before && now && before !== now && before !== orig) note += ` · yesterday ${esc(before)}`;
+    if (before && now && before !== now && before !== orig) note += `<br>yesterday ${esc(before)}`;
     else if (before && now && before !== now && !(orig && orig !== now)) note += ` · <span style="color:#c0392b">changed from ${esc(before)}</span>`;
-    return `${main}<div style="font-size:12px;color:${MUTED};margin-top:4px;line-height:1.5">${note}</div>`;
+    return `<div style="${f(22, dateColor, true, 'line-height:1.2')}">${fmtDate(r[actual] || now)}</div><div style="${f(12, MUTED, false, 'margin-top:4px;line-height:1.5')}">${note}</div>`;
   };
   const final = r.status === 'arrived';
   const stopped = !final && t.state !== 'active';
   const color = STATUS_COLOR[r.status] || RED;
 
-  const route = `<tr><td style="padding:20px 28px 0">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid ${LINE};border-radius:12px;border-collapse:separate">
-<tr>
-<td width="46%" style="padding:18px 18px 16px;vertical-align:top">${label('From · POL')}
-<div style="font-size:15px;font-weight:700;color:${INK};line-height:1.35;margin:0 0 12px">${esc(r.pol || '-')}</div>
-${label(r.atd ? 'Departed' : 'ETD')}${dateBlock('etd', 'atd')}</td>
-<td width="8%" align="center" style="vertical-align:middle;font-size:22px;color:${RED};font-weight:700">→</td>
-<td width="46%" style="padding:18px 18px 16px;vertical-align:top">${label('To · POD')}
-<div style="font-size:15px;font-weight:700;color:${INK};line-height:1.35;margin:0 0 12px">${esc(r.pod || '-')}</div>
-${label(r.ata ? 'Arrived' : 'ETA')}${dateBlock('eta', 'ata')}</td>
+  const leg = (title, port, dlabel, block) => `<td width="262" valign="top" style="padding:18px 18px 16px">${label(title)}
+<div style="${f(15, INK, true, 'line-height:1.35;margin:0 0 12px')}">${esc(port || '-')}</div>${label(dlabel)}${block}</td>`;
+  const route = `${gap(18)}<tr><td style="padding:0 28px">
+<table role="presentation" width="584" cellpadding="0" cellspacing="0" border="0" style="width:584px;border:1px solid ${LINE}"><tr>
+${leg('From · POL', r.pol, r.atd ? 'Departed' : 'ETD', dateBlock('etd', 'atd'))}
+<td width="24" align="center" valign="middle" style="${f(22, RED, true)}">&rarr;</td>
+${leg('To · POD', r.pod, r.ata ? 'Arrived' : 'ETA', dateBlock('eta', 'ata'))}
 </tr></table></td></tr>`;
 
   const details = section('Shipment', kv([
@@ -207,20 +208,20 @@ ${label(r.ata ? 'Arrived' : 'ETA')}${dateBlock('eta', 'ata')}</td>
   ]));
 
   const evs = (r.events || []).slice(-10).reverse();
-  const events = evs.length ? section('Latest events', `<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+  const events = evs.length ? section('Latest events', `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 ${evs.map((e, i) => `<tr>
-<td width="22" style="vertical-align:top;padding:3px 0 0"><div style="width:10px;height:10px;border-radius:50%;background:${i ? '#d6d0c6' : color};margin:3px 0 0 1px"></div></td>
-<td style="vertical-align:top;padding:0 0 14px">
-<div style="font-size:14px;font-weight:${i ? 600 : 700};color:${INK}">${esc(e.event || '')}</div>
-<div style="font-size:12px;color:${MUTED};margin-top:2px">${fmtDate(e.date)}${e.location ? ' · ' + esc(e.location) : ''}${e.vessel ? ' · ' + esc([e.vessel, e.voyage].filter(Boolean).join(' / ')) : ''}</div>
+<td width="22" valign="top" style="${f(14, i ? '#cfc8bd' : color, true)};padding:0 0 12px">&#9679;</td>
+<td valign="top" style="padding:0 0 12px">
+<div style="${f(14, INK, !i)}">${esc(e.event || '')}</div>
+<div style="${f(12, MUTED, false, 'margin-top:2px')}">${fmtDate(e.date)}${e.location ? ' · ' + esc(e.location) : ''}${e.vessel ? ' · ' + esc([e.vessel, e.voyage].filter(Boolean).join(' / ')) : ''}</div>
 </td></tr>`).join('')}</table>`) : '';
 
   const endNote = final ? 'Arrival at the port of discharge is confirmed. Tracking for this MBL is now finished.'
     : stopped ? 'The carrier has not shown this number for several days, so tracking has ended. Please check the MBL number and carrier and register again.' : '';
-  const body = `<tr><td style="padding:14px 28px 0">${pill(esc(STATUS_EN[r.status] || r.status), color, STATUS_BG[r.status] || '#fbe7e4')}</td></tr>
+  const body = `${gap(14)}<tr><td style="padding:0 28px">${pill(esc(STATUS_EN[r.status] || r.status), color, STATUS_BG[r.status] || '#fbe6e3')}</td></tr>
 ${route}${details}${posSection(r)}${events}
-<tr><td style="padding:18px 28px 0;font-size:12px;color:${MUTED}">Checked ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:${RED};text-decoration:none;font-weight:600">Carrier page →</a>` : ''}</td></tr>
-${endNote ? `<tr><td style="padding:14px 28px 0"><div style="background:${final ? '#e8f5ee' : SOFT};border-radius:10px;padding:12px 16px;font-size:13px;color:${final ? '#1f6b47' : INK}">${endNote}</div></td></tr>` : ''}`;
+${gap(8)}<tr><td style="padding:0 28px;${f(12, MUTED)}">Checked ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:${RED};text-decoration:none;font-weight:bold">Carrier page &rarr;</a>` : ''}</td></tr>
+${endNote ? `${gap(14)}<tr><td style="padding:0 28px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${final ? '#e2f3ea' : SOFT}" style="padding:12px 16px;${f(13, final ? '#1f6b47' : INK)}">${endNote}</td></tr></table></td></tr>` : ''}`;
 
   const etaMoved = first.eta && r.eta && first.eta !== r.eta;
   const tag = final ? 'Arrived' : r.status === 'not_found' ? 'Not found' : r.status === 'blocked' ? 'Carrier site unavailable'
