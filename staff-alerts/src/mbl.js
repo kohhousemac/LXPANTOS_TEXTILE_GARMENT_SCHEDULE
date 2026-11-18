@@ -43,7 +43,6 @@ const MAX_DAYS = 90;               // stop tracking after 90 days in any case
 const KEEP_DONE_DAYS = 30;         // finished requests stay visible this long
 
 const RED = '#a50034';
-const cell = 'padding:7px 10px;border-bottom:1px solid #e6e1d8;font-size:13px';
 const LOGO = 'https://lxpantosfashion.co.kr/mail-logo.png';
 
 const json = (data, status = 200, extra = {}) => new Response(JSON.stringify(data), {
@@ -93,22 +92,51 @@ const put = (env, t, ttlDays) => env.BOOKINGS.put('t:' + t.id, JSON.stringify(t)
   ttlDays ? { expirationTtl: ttlDays * 86400 } : undefined);
 
 // ---------- mails (English) ----------
+// Email-safe layout: nested tables, inline styles, system font stack (web fonts are unreliable in mail).
 const carrierEn = (k) => String(CARRIERS[k] || k).replace(/\s*\([^)]*[가-힣][^)]*\)/, '').trim();
 
-function frame(title, body) {
-  return `<div style="font-family:Arial,Helvetica,sans-serif;max-width:680px;color:#1d1d1f">
-<div style="border-bottom:2px solid ${RED};padding:0 0 10px;margin-bottom:16px"><img src="${LOGO}" alt="LX Pantos" height="22"></div>
-<h2 style="font-size:17px;margin:0 0 12px">${title}</h2>${body}
-<p style="font-size:11px;color:#8a8580;margin-top:22px">LX Pantos Textile / Garment Schedule · MBL arrival tracking<br>
-Values are read from the carrier's public tracking page and may change at the carrier's discretion.</p></div>`;
+const FONT = "'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";
+const INK = '#16171b', MUTED = '#7a756d', LINE = '#ece8e1', SOFT = '#f7f5f1';
+const label = (t) => `<div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:${MUTED};font-weight:600;margin:0 0 4px">${t}</div>`;
+const section = (title, inner) => `<tr><td style="padding:22px 28px 0">
+<div style="font-size:13px;font-weight:700;color:${INK};margin:0 0 10px">${title}</div>${inner}</td></tr>`;
+
+function frame(heading, sub, body) {
+  return `<div style="margin:0;padding:24px 12px;background:#f1eee8;font-family:${FONT};color:${INK}">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid ${LINE};border-collapse:separate">
+<tr><td style="height:5px;background:${RED};font-size:0;line-height:0">&nbsp;</td></tr>
+<tr><td style="padding:20px 28px 16px;border-bottom:1px solid ${LINE}">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td><img src="${LOGO}" alt="LX Pantos" height="24" style="display:block;border:0"></td>
+<td align="right" style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:${MUTED};font-weight:600">MBL Arrival Tracking</td>
+</tr></table></td></tr>
+<tr><td style="padding:24px 28px 0">
+<div style="font-size:21px;line-height:1.3;font-weight:800;color:${INK};margin:0">${heading}</div>
+${sub ? `<div style="font-size:14px;line-height:1.55;color:#4a463f;margin:8px 0 0">${sub}</div>` : ''}
+</td></tr>
+${body}
+<tr><td style="padding:26px 28px 24px">
+<div style="border-top:1px solid ${LINE};padding-top:14px;font-size:11px;line-height:1.6;color:#9a948a">
+LX Pantos Textile / Garment Schedule · MBL arrival tracking<br>
+Values are read from the carrier's public tracking page and may change at the carrier's discretion.</div>
+</td></tr></table></div>`;
 }
 
-const row = (k, v) => `<tr><td style="${cell};color:#6b6560;white-space:nowrap;width:150px">${k}</td><td style="${cell}">${v}</td></tr>`;
+// Key/value rows inside a soft card.
+const kv = (rows) => `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${SOFT};border-radius:10px;border-collapse:separate">
+${rows.filter(Boolean).map(([k, v], i) => `<tr><td style="padding:11px 16px;${i ? `border-top:1px solid ${LINE};` : ''}font-size:12px;color:${MUTED};white-space:nowrap;width:130px;vertical-align:top">${k}</td><td style="padding:11px 16px;${i ? `border-top:1px solid ${LINE};` : ''}font-size:14px;color:${INK};font-weight:600">${v}</td></tr>`).join('')}
+</table>`;
+
+const pill = (text, color, bg) => `<span style="display:inline-block;padding:5px 12px;border-radius:999px;background:${bg};color:${color};font-size:12px;font-weight:700;letter-spacing:.02em">${text}</span>`;
 
 export async function confirmMail(env, t) {
-  const html = frame(`Arrival tracking started — MBL ${esc(t.mbl)}`, `
-<table style="border-collapse:collapse;width:100%">${row('MBL', esc(t.mbl))}${row('Carrier', esc(carrierEn(t.carrier)))}${row('To', esc(t.email))}${(t.cc || []).length ? row('Cc', esc(t.cc.join(', '))) : ''}</table>
-<p style="font-size:13px;line-height:1.6">We will check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.</p>`);
+  const html = frame(`Tracking started`, `We'll check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.`,
+    section('Registration', kv([
+      ['MBL', `<span style="font-size:16px;letter-spacing:.02em">${esc(t.mbl)}</span>`],
+      ['Carrier', esc(carrierEn(t.carrier))],
+      ['To', esc(t.email)],
+      (t.cc || []).length ? ['Cc', esc(t.cc.join(', '))] : null,
+    ])));
   await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — arrival tracking started (${carrierEn(t.carrier)})`, html, t.cc || []);
 }
 
@@ -116,6 +144,8 @@ const STATUS_EN = {
   in_transit: 'In transit', arrived: 'Arrived at POD', not_found: 'Not found',
   blocked: 'Carrier site unavailable today', not_departed: 'Not yet departed',
 };
+const STATUS_COLOR = { in_transit: '#1d6fd8', arrived: '#1f8a5b', not_departed: '#b7791f', not_found: '#c0392b', blocked: '#7a756d' };
+const STATUS_BG = { in_transit: '#e6effb', arrived: '#e4f4ec', not_departed: '#fbf1df', not_found: '#fbe7e4', blocked: '#efede9' };
 
 function fmtDate(s) { return s ? esc(String(s)) : '-'; }
 function dayDiff(a, b) {
@@ -129,55 +159,74 @@ function posSection(r) {
   const p = r.position;
   if (!p) return '';
   const now = [p.area, p.status].filter(Boolean).join(' · ');
-  return `<h3 style="font-size:13px;margin:18px 0 6px">Vessel position <span style="font-weight:400;color:#8a8580">(VesselFinder${p.received ? ', ' + esc(p.received) : ''}${p.approx ? ' · approximate area' : ''})</span></h3>
-${r.hasMap ? '<img src="cid:vesselmap" alt="Vessel position map" width="600" height="300" style="display:block;width:100%;max-width:600px;height:auto;border:1px solid #e6e1d8;border-radius:6px">' : ''}
-<table style="border-collapse:collapse;width:100%;margin-top:6px">
-${now ? row('Now', esc(now)) : ''}${p.destination ? row('Next destination', esc(p.destination)) : ''}${p.lastPort ? row('Last port', esc(p.lastPort)) : ''}
-</table>
-${p.url ? `<p style="font-size:12px;margin:6px 0 0"><a href="${esc(p.url)}" style="color:${RED}">View on VesselFinder</a></p>` : ''}`;
+  const note = `VesselFinder${p.received ? ' · ' + esc(p.received) : ''}${p.approx ? ' · approximate area' : ''}`;
+  return section(`Vessel position <span style="font-weight:400;color:${MUTED};font-size:12px">&nbsp;${note}</span>`,
+    `${r.hasMap ? `<img src="cid:vesselmap" alt="Vessel position map" width="584" height="292" style="display:block;width:100%;max-width:584px;height:auto;border-radius:10px;border:1px solid ${LINE};margin:0 0 10px">` : ''}
+${kv([now ? ['Now', esc(now)] : null, p.destination ? ['Next port', esc(p.destination)] : null, p.lastPort ? ['Last port', esc(p.lastPort)] : null])}
+${p.url ? `<div style="margin:10px 0 0;font-size:12px"><a href="${esc(p.url)}" style="color:${RED};text-decoration:none;font-weight:600">View on VesselFinder →</a></div>` : ''}`);
 }
 
 export async function reportMail(env, t, r, prev, inline = []) {
   // Original (first reported) date struck through, new date beside it with the day difference.
   const first = t.first || {};
-  const dateCell = (key, actual) => {
+  const dateBlock = (key, actual) => {
     const now = r[key], orig = first[key], before = prev && prev.status !== 'blocked' ? prev[key] : '';
-    let html = fmtDate(now);
+    let main = `<div style="font-size:20px;font-weight:800;color:${INK};line-height:1.2">${fmtDate(r[actual] || now)}</div>`;
+    let note = r[actual] ? `<span style="color:#1f8a5b;font-weight:700">Actual</span>` : 'Estimated';
     if (orig && now && orig !== now) {
       const d = dayDiff(orig, now);
       const tagTxt = d == null ? 'changed' : d > 0 ? `delayed ${plural(d, 'day')}` : `${plural(-d, 'day')} earlier`;
-      html = `<s style="color:#8a8580">${esc(orig)}</s> → <b style="color:#c0392b">${esc(now)}</b> <span style="color:#c0392b;font-size:12px">(${tagTxt})</span>`;
+      if (!r[actual]) main = `<div style="font-size:20px;font-weight:800;color:#c0392b;line-height:1.2">${esc(now)}</div>`;
+      note += ` · <s style="color:#a59f95">${esc(orig)}</s> <span style="color:#c0392b;font-weight:700">${tagTxt}</span>`;
     }
-    if (before && now && before !== now && before !== orig) html += ` <span style="color:#8a8580;font-size:12px">· yesterday ${esc(before)}</span>`;
-    else if (before && now && before !== now && !(orig && orig !== now)) html += ` <span style="color:#c0392b;font-size:12px">(changed from ${esc(before)} yesterday)</span>`;
-    if (r[actual]) html += ` / <b>${esc(r[actual])}</b> (actual)`;
-    return html;
+    if (before && now && before !== now && before !== orig) note += ` · yesterday ${esc(before)}`;
+    else if (before && now && before !== now && !(orig && orig !== now)) note += ` · <span style="color:#c0392b">changed from ${esc(before)}</span>`;
+    return `${main}<div style="font-size:12px;color:${MUTED};margin-top:4px;line-height:1.5">${note}</div>`;
   };
-  const events = (r.events || []).slice(-10).reverse().map((e) =>
-    `<tr><td style="${cell};white-space:nowrap">${fmtDate(e.date)}</td><td style="${cell}">${esc(e.location || '')}</td><td style="${cell}">${esc(e.event || '')}</td><td style="${cell}">${esc([e.vessel, e.voyage].filter(Boolean).join(' / '))}</td></tr>`).join('');
   const final = r.status === 'arrived';
   const stopped = !final && t.state !== 'active';
-  const body = `
-<p style="font-size:14px;margin:0 0 10px"><b style="color:${final ? '#1f8a5b' : RED}">${esc(STATUS_EN[r.status] || r.status)}</b>${r.summary ? ' — ' + esc(r.summary) : ''}</p>
-<table style="border-collapse:collapse;width:100%">
-${row('MBL', esc(t.mbl))}${row('Carrier', esc(carrierEn(t.carrier)))}
-${row('Vessel / Voyage', esc([r.vessel, r.voyage].filter(Boolean).join(' / ') || '-'))}
-${row('POL → POD', esc([r.pol, r.pod].filter(Boolean).join(' → ') || '-'))}
-${row('ETD / ATD', dateCell('etd', 'atd'))}
-${row('ETA / ATA', dateCell('eta', 'ata'))}
-${r.transshipment ? row('Transshipment', esc(r.transshipment)) : ''}
-</table>
-${posSection(r)}
-${events ? `<h3 style="font-size:13px;margin:18px 0 6px">Latest events</h3>
-<table style="border-collapse:collapse;width:100%"><tr>${['Date', 'Location', 'Event', 'Vessel'].map((h) => `<td style="${cell};font-weight:600;background:#f6f3ee">${h}</td>`).join('')}</tr>${events}</table>` : ''}
-<p style="font-size:12px;color:#6b6560;margin-top:14px">Checked ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:#6b6560">carrier page</a>` : ''}</p>
-${final ? '<p style="font-size:13px">Arrival at the port of discharge is confirmed. Tracking for this MBL is now finished.</p>'
-    : stopped ? '<p style="font-size:13px">The carrier has not shown this number for several days, so tracking has ended. Please check the MBL number and carrier and register again.</p>'
-      : ''}`;
+  const color = STATUS_COLOR[r.status] || RED;
+
+  const route = `<tr><td style="padding:20px 28px 0">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid ${LINE};border-radius:12px;border-collapse:separate">
+<tr>
+<td width="46%" style="padding:18px 18px 16px;vertical-align:top">${label('From · POL')}
+<div style="font-size:15px;font-weight:700;color:${INK};line-height:1.35;margin:0 0 12px">${esc(r.pol || '-')}</div>
+${label(r.atd ? 'Departed' : 'ETD')}${dateBlock('etd', 'atd')}</td>
+<td width="8%" align="center" style="vertical-align:middle;font-size:22px;color:${RED};font-weight:700">→</td>
+<td width="46%" style="padding:18px 18px 16px;vertical-align:top">${label('To · POD')}
+<div style="font-size:15px;font-weight:700;color:${INK};line-height:1.35;margin:0 0 12px">${esc(r.pod || '-')}</div>
+${label(r.ata ? 'Arrived' : 'ETA')}${dateBlock('eta', 'ata')}</td>
+</tr></table></td></tr>`;
+
+  const details = section('Shipment', kv([
+    ['MBL', esc(t.mbl)],
+    ['Carrier', esc(carrierEn(t.carrier))],
+    ['Vessel / Voyage', esc([r.vessel, r.voyage].filter(Boolean).join(' / ') || '-')],
+    r.transshipment ? ['Transshipment', esc(r.transshipment)] : null,
+  ]));
+
+  const evs = (r.events || []).slice(-10).reverse();
+  const events = evs.length ? section('Latest events', `<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+${evs.map((e, i) => `<tr>
+<td width="22" style="vertical-align:top;padding:3px 0 0"><div style="width:10px;height:10px;border-radius:50%;background:${i ? '#d6d0c6' : color};margin:3px 0 0 1px"></div></td>
+<td style="vertical-align:top;padding:0 0 14px">
+<div style="font-size:14px;font-weight:${i ? 600 : 700};color:${INK}">${esc(e.event || '')}</div>
+<div style="font-size:12px;color:${MUTED};margin-top:2px">${fmtDate(e.date)}${e.location ? ' · ' + esc(e.location) : ''}${e.vessel ? ' · ' + esc([e.vessel, e.voyage].filter(Boolean).join(' / ')) : ''}</div>
+</td></tr>`).join('')}</table>`) : '';
+
+  const endNote = final ? 'Arrival at the port of discharge is confirmed. Tracking for this MBL is now finished.'
+    : stopped ? 'The carrier has not shown this number for several days, so tracking has ended. Please check the MBL number and carrier and register again.' : '';
+  const body = `<tr><td style="padding:14px 28px 0">${pill(esc(STATUS_EN[r.status] || r.status), color, STATUS_BG[r.status] || '#fbe7e4')}</td></tr>
+${route}${details}${posSection(r)}${events}
+<tr><td style="padding:18px 28px 0;font-size:12px;color:${MUTED}">Checked ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:${RED};text-decoration:none;font-weight:600">Carrier page →</a>` : ''}</td></tr>
+${endNote ? `<tr><td style="padding:14px 28px 0"><div style="background:${final ? '#e8f5ee' : SOFT};border-radius:10px;padding:12px 16px;font-size:13px;color:${final ? '#1f6b47' : INK}">${endNote}</div></td></tr>` : ''}`;
+
   const etaMoved = first.eta && r.eta && first.eta !== r.eta;
   const tag = final ? 'Arrived' : r.status === 'not_found' ? 'Not found' : r.status === 'blocked' ? 'Carrier site unavailable'
     : etaMoved ? `ETA changed ${first.eta.slice(5, 10)} → ${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — ${tag} (${kstDate().slice(5).replace('-', '/')})`, frame(`Daily tracking report — MBL ${esc(t.mbl)}`, body), t.cc || [], inline);
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — ${tag} (${kstDate().slice(5).replace('-', '/')})`,
+    frame(`MBL ${esc(t.mbl)}`, r.summary ? esc(r.summary) : '', body), t.cc || [], inline);
 }
 
 // ---------- handlers ----------
