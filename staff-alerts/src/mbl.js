@@ -5,7 +5,8 @@
 //
 // Public (homepage, CORS):   POST /api/mbl              {mbl, carrier, email}
 //                            GET  /api/mbl/carriers
-// Mail link (signed):        GET  /mbl/stop?id=&sig=
+// No stop link in mails: tracking is stopped only by the admin (KV state).
+// GET /mbl/stop (links in older mails) no longer stops anything.
 // Tracker (x-tracker-token): GET  /api/mbl/queue
 //                            POST /api/mbl/<id>/report  {status, ...}
 
@@ -64,12 +65,6 @@ export function cors(request) {
 
 // ---------- helpers ----------
 const enc = new TextEncoder();
-async function sign(env, msg) {
-  const key = await crypto.subtle.importKey('raw', enc.encode(env.SESSION_SECRET || 'dev'), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
-  const s = new Uint8Array(await crypto.subtle.sign('HMAC', key, enc.encode('mbl-stop.' + msg)));
-  return btoa(String.fromCharCode(...s)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '').slice(0, 32);
-}
-
 function tokenOk(request, env) {
   const t = request.headers.get('x-tracker-token') || '';
   const want = env.TRACKER_TOKEN || '';
@@ -97,8 +92,6 @@ async function listAll(env) {
 const put = (env, t, ttlDays) => env.BOOKINGS.put('t:' + t.id, JSON.stringify(t),
   ttlDays ? { expirationTtl: ttlDays * 86400 } : undefined);
 
-const stopUrl = async (env, t) => `${env.PAGE_URL.replace(/\/$/, '')}/mbl/stop?id=${t.id}&sig=${await sign(env, t.id)}`;
-
 // ---------- mails (English) ----------
 const carrierEn = (k) => String(CARRIERS[k] || k).replace(/\s*\([^)]*[가-힣][^)]*\)/, '').trim();
 
@@ -113,11 +106,9 @@ Values are read from the carrier's public tracking page and may change at the ca
 const row = (k, v) => `<tr><td style="${cell};color:#6b6560;white-space:nowrap;width:150px">${k}</td><td style="${cell}">${v}</td></tr>`;
 
 export async function confirmMail(env, t) {
-  const stop = await stopUrl(env, t);
   const html = frame(`Arrival tracking started — MBL ${esc(t.mbl)}`, `
 <table style="border-collapse:collapse;width:100%">${row('MBL', esc(t.mbl))}${row('Carrier', esc(carrierEn(t.carrier)))}${row('To', esc(t.email))}${(t.cc || []).length ? row('Cc', esc(t.cc.join(', '))) : ''}</table>
-<p style="font-size:13px;line-height:1.6">We will check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.</p>
-<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">Stop tracking</a></p>`);
+<p style="font-size:13px;line-height:1.6">We will check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.</p>`);
   await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — arrival tracking started (${carrierEn(t.carrier)})`, html, t.cc || []);
 }
 
@@ -147,7 +138,6 @@ ${p.url ? `<p style="font-size:12px;margin:6px 0 0"><a href="${esc(p.url)}" styl
 }
 
 export async function reportMail(env, t, r, prev, inline = []) {
-  const stop = await stopUrl(env, t);
   // Original (first reported) date struck through, new date beside it with the day difference.
   const first = t.first || {};
   const dateCell = (key, actual) => {
@@ -183,7 +173,7 @@ ${events ? `<h3 style="font-size:13px;margin:18px 0 6px">Latest events</h3>
 <p style="font-size:12px;color:#6b6560;margin-top:14px">Checked ${esc(r.checkedAt || '')} KST${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" style="color:#6b6560">carrier page</a>` : ''}</p>
 ${final ? '<p style="font-size:13px">Arrival at the port of discharge is confirmed. Tracking for this MBL is now finished.</p>'
     : stopped ? '<p style="font-size:13px">The carrier has not shown this number for several days, so tracking has ended. Please check the MBL number and carrier and register again.</p>'
-      : `<p><a href="${esc(stop)}" style="color:${RED};font-size:12px">Stop tracking</a></p>`}`;
+      : ''}`;
   const etaMoved = first.eta && r.eta && first.eta !== r.eta;
   const tag = final ? 'Arrived' : r.status === 'not_found' ? 'Not found' : r.status === 'blocked' ? 'Carrier site unavailable'
     : etaMoved ? `ETA changed ${first.eta.slice(5, 10)} → ${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
@@ -243,16 +233,10 @@ export async function handleMbl(request, env, url) {
     return new Response(MAP_JS, { headers: { 'content-type': 'text/javascript; charset=utf-8', 'cache-control': 'max-age=300' } });
   }
 
-  // Stop link in every mail.
+  // Stop link in older mails: no longer stops anything (mail scanners were
+  // opening it and ending tracking within seconds of registration).
   if (url.pathname === '/mbl/stop' && request.method === 'GET') {
-    const id = url.searchParams.get('id') || '';
-    const ok = /^[0-9a-f-]{36}$/.test(id) && (url.searchParams.get('sig') || '') === await sign(env, id);
-    const t = ok ? await env.BOOKINGS.get('t:' + id, 'json') : null;
-    if (t && t.state === 'active') {
-      t.state = 'stopped'; t.stoppedAt = new Date().toISOString();
-      await put(env, t, KEEP_DONE_DAYS);
-    }
-    const msg = t ? `Tracking stopped for MBL ${esc(t.mbl)}.` : 'Invalid link.';
+    const msg = 'Tracking can no longer be stopped from a mail link. It ends automatically on arrival at the port of discharge.';
     return new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LX Pantos</title><body style="font-family:Arial,sans-serif;padding:40px 20px;color:#1d1d1f"><p>${msg}</p><p><a href="https://lxpantosfashion.co.kr/" style="color:${RED}">lxpantosfashion.co.kr</a></p>`,
       { headers: { 'content-type': 'text/html; charset=utf-8' } });
   }

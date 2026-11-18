@@ -79,7 +79,7 @@ The older front door, Pages project `lxpantosstaff` on staff.lxpantosfashion.co.
 
 ## MBL arrival tracking (homepage footer)
 
-The footer of lxpantosfashion.co.kr has a form: **MBL No. + carrier + @lxpantos.com e-mail + optional CC (up to 5 @lxpantos.com addresses)**. CC people get every mail too (real Cc header); registering the same MBL + e-mail again adds the new CC addresses. The person gets a confirmation mail, then a report mail every morning until the carrier shows the cargo arrived at POD (then a final mail and tracking ends). Every mail has a "Stop tracking" link.
+The footer of lxpantosfashion.co.kr has a form: **MBL No. + carrier + @lxpantos.com e-mail + optional CC (up to 5 @lxpantos.com addresses)**. CC people get every mail too (real Cc header); registering the same MBL + e-mail again adds the new CC addresses. The person gets a confirmation mail, then a report mail every morning until the carrier shows the cargo arrived at POD (then a final mail and tracking ends). Mails have no "Stop tracking" link (mail scanners kept opening it and stopping tracking seconds after registration); the admin stops a tracking by setting its KV record `t:<id>` to `state: "stopped"`. `/mbl/stop` links in older mails no longer stop anything.
 
 - Code: `src/mbl.js` (wired into `src/worker.js`). Requests live in KV under `t:<id>`, never in this public repo.
 - Carriers offered: every carrier the schedule pages collect (`CARRIERS` in `src/mbl.js`, `MBL_CARRIERS` in `build/build.py` — keep both lists the same).
