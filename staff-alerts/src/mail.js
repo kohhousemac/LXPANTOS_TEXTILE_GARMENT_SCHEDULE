@@ -9,7 +9,6 @@ const md = (iso) => (iso ? iso.slice(5).replace('-', '/') : '-');
 
 const LOGO = 'https://lxpantosfashion.co.kr/mail-logo.png';
 const RED = '#a50034';
-const cell = 'padding:8px 10px;border-bottom:1px solid #e6e1d8';
 
 // Link that opens the staff page on this booking; with `to`, it also offers
 // to switch the booking onto that sailing.
@@ -86,36 +85,73 @@ export function alertMail(booking, ev, routeLabel, pageUrl, lang = 'en') {
   const t = textFor(lang);
   const delayed = ev.delayDays > 0;
   const subject = `[${t.subject}] ${booking.customer ? booking.customer + ' · ' : ''}${booking.bookingNo}`;
-  const rows = ev.candidates.map((c) => `
-    <tr>
-      <td style="${cell}">${esc(c.carrier)}</td>
-      <td style="${cell}"><b>${esc(c.vessel)}</b> ${esc(c.voyage)}${c.closedCarriers ? `<br><span style="color:#726d64;font-size:11px">${esc(c.closedCarriers)} ${t.closed}</span>` : ''}</td>
-      <td style="${cell}">${md(c.etd)}</td>
-      <td style="${cell}">${md(c.eta)}</td>
-      <td style="${cell};color:#2f9e44"><b>${t.earlier(c.daysEarlier)}</b></td>
-      <td style="${cell}">${button(deepLink(pageUrl, booking, c), t.switch, true)}</td>
-    </tr>`).join('');
-  const label = 'padding:3px 14px 3px 0;color:#726d64';
+  const best = Math.max(0, ...ev.candidates.map((c) => c.daysEarlier || 0));
+  const font = "font-family:'Segoe UI','Malgun Gothic','Apple SD Gothic Neo',Pretendard,Arial,sans-serif";
+  const muted = 'color:#8a847a';
+  const cap = `${muted};font-size:11px;letter-spacing:.06em;text-transform:uppercase`;
+  const pill = (txt, bg, fg) => `<span style="display:inline-block;background:${bg};color:${fg};font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap">${txt}</span>`;
 
-  const html = `<div style="font-family:'Segoe UI','Malgun Gothic',Pretendard,Arial,sans-serif;font-size:14px;color:#1c1a17;max-width:680px">
-  <table role="presentation" width="100%" style="border-collapse:collapse;border-bottom:3px solid ${RED};margin-bottom:18px"><tr>
-    <td style="padding:6px 0 12px"><img src="${LOGO}" alt="LX Pantos" width="132" height="27" style="display:block;border:0"></td>
-    <td style="padding:6px 0 12px;text-align:right;color:#726d64;font-size:12px">Booking Vessel Alerts</td>
-  </tr></table>
-  <p style="margin:0 0 14px">${t.lead(delayed)}</p>
-  <table style="border-collapse:collapse;margin:0 0 18px">
-    <tr><td style="${label}">${t.customer}</td><td><b>${esc(booking.customer || '-')}</b></td></tr>
-    <tr><td style="${label}">${t.bookingNo}</td><td><b>${esc(booking.bookingNo)}</b>${booking.memo ? ' · ' + esc(booking.memo) : ''}</td></tr>
-    <tr><td style="${label}">${t.route}</td><td>${esc(routeLabel)}</td></tr>
-    <tr><td style="${label}">${t.booked}</td><td>${esc(booking.carrier)} · <b>${esc(booking.vessel)}</b> ${esc(booking.voyage)}</td></tr>
-    <tr><td style="${label}">${t.eta}</td><td>${delayed ? t.slipped(md(booking.origEta), md(ev.eta), ev.delayDays) : `<b>${md(ev.eta)}</b>`}</td></tr>
-  </table>
-  <p style="margin:0 0 6px"><b>${t.table}</b></p>
-  <table style="border-collapse:collapse;font-size:13px;margin-bottom:22px">
-    <tr style="background:#faf9f6;text-align:left">${t.cols.map((c) => `<th style="padding:8px 10px">${c}</th>`).join('')}<th style="padding:8px 10px"></th></tr>${rows}
-  </table>
-  ${button(deepLink(pageUrl, booking), t.open)}
-  <p style="color:#726d64;font-size:12px;margin-top:22px">${t.foot}</p>
+  // One card per earlier sailing (cards read better than a wide table on phones).
+  const cards = ev.candidates.map((c) => `
+      <tr><td style="padding:0 0 10px">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;border:1px solid #e8e3da;border-radius:10px;background:#ffffff">
+          <tr>
+            <td style="padding:14px 16px;vertical-align:top">
+              <div style="${cap}">${esc(c.carrier)}</div>
+              <div style="font-size:16px;font-weight:700;color:#1c1a17;margin-top:3px">${esc(c.vessel)} <span style="font-weight:400;${muted}">${esc(c.voyage)}</span></div>
+              <div style="font-size:13px;color:#4a463f;margin-top:6px">ETD <b>${md(c.etd)}</b> &nbsp;→&nbsp; ETA <b style="color:#1f7a3a">${md(c.eta)}</b></div>
+              ${c.closedCarriers ? `<div style="font-size:11px;${muted};margin-top:4px">${esc(c.closedCarriers)} ${t.closed}</div>` : ''}
+            </td>
+            <td style="padding:14px 16px;vertical-align:middle;text-align:right;width:1%">
+              ${pill(t.earlier(c.daysEarlier), '#e6f4ea', '#1f7a3a')}<br>
+              <div style="height:10px;line-height:10px">&nbsp;</div>
+              ${button(deepLink(pageUrl, booking, c), t.switch, true)}
+            </td>
+          </tr>
+        </table>
+      </td></tr>`).join('');
+
+  const info = (k, v) => `<tr><td style="padding:7px 0;${muted};font-size:13px;width:38%;vertical-align:top">${k}</td><td style="padding:7px 0;font-size:13px;color:#1c1a17">${v}</td></tr>`;
+
+  const html = `<div style="background:#f4f1ec;padding:24px 12px;${font}">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;margin:0 auto;border-collapse:collapse">
+  <tr><td style="background:#ffffff;border-radius:14px 14px 0 0;border-top:5px solid ${RED};padding:20px 24px 16px">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td><img src="${LOGO}" alt="LX Pantos" width="120" height="25" style="display:block;border:0"></td>
+      <td style="text-align:right;${cap}">Vessel Alert</td>
+    </tr></table>
+  </td></tr>
+
+  <tr><td style="background:#ffffff;padding:4px 24px 20px">
+    <div style="font-size:22px;font-weight:800;color:#1c1a17;line-height:1.3">${esc(booking.customer || booking.bookingNo)}</div>
+    <div style="margin-top:8px">${best ? pill('▲ ' + t.earlier(best), '#e6f4ea', '#1f7a3a') : ''}${delayed ? ' ' + pill(lang === 'ko' ? ev.delayDays + '일 지연' : '+' + ev.delayDays + 'd delay', '#fdecee', '#b3261e') : ''}</div>
+    <p style="font-size:14px;line-height:1.6;color:#3a362f;margin:14px 0 0">${t.lead(delayed)}</p>
+  </td></tr>
+
+  <tr><td style="background:#ffffff;padding:0 24px 22px">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#faf8f4;border-radius:10px;border-left:4px solid ${RED}">
+      <tr><td style="padding:12px 16px">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          ${info(t.bookingNo, `<b>${esc(booking.bookingNo)}</b>${booking.memo ? ` <span style="${muted}">· ${esc(booking.memo)}</span>` : ''}`)}
+          ${info(t.route, esc(routeLabel))}
+          ${info(t.booked, `${esc(booking.carrier)} · <b>${esc(booking.vessel)}</b> ${esc(booking.voyage)}`)}
+          ${info(t.eta, delayed ? t.slipped(md(booking.origEta), md(ev.eta), ev.delayDays) : `<b>${md(ev.eta)}</b>`)}
+        </table>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td style="background:#ffffff;padding:0 24px 8px">
+    <div style="font-size:15px;font-weight:700;color:#1c1a17;margin:0 0 12px">${t.table}</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${cards}</table>
+  </td></tr>
+
+  <tr><td style="background:#ffffff;padding:10px 24px 26px;text-align:center;border-radius:0 0 14px 14px">
+    ${button(deepLink(pageUrl, booking), t.open)}
+  </td></tr>
+
+  <tr><td style="padding:16px 24px 0;font-size:11px;line-height:1.6;${muted};text-align:center">${t.foot}<br><br>LX Pantos Textile / Garment Schedule · Booking Vessel Alerts</td></tr>
+</table>
 </div>`;
   return { subject, html };
 }
