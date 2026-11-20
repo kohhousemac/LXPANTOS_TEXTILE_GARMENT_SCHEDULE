@@ -1,29 +1,5 @@
 [
  {
-  "key": "CSCL SPRING|NINGBO|W067|E068",
-  "vessel": "CSCL SPRING",
-  "service": "ASA",
-  "port": "NINGBO",
-  "in_voy": "W067",
-  "eta": "2026-09-09 02:00",
-  "etb": "",
-  "out_voy": "E068",
-  "etd": "2026-09-10 11:00",
-  "status": "SKIP"
- },
- {
-  "key": "CSCL SPRING|SHANGHAI|W067|E068",
-  "vessel": "CSCL SPRING",
-  "service": "ASA",
-  "port": "SHANGHAI",
-  "in_voy": "W067",
-  "eta": "2026-09-10 21:00",
-  "etb": "2026-09-17 07:29",
-  "out_voy": "E068",
-  "etd": "2026-09-18 16:49",
-  "status": "ACTUAL"
- },
- {
   "key": "CSCL SPRING|MANZANILLO|E068|E068",
   "vessel": "CSCL SPRING",
   "service": "ASA",
@@ -78,10 +54,10 @@
   "port": "LAZARO CARDENAS",
   "in_voy": "E068",
   "eta": "2026-11-08 01:00",
-  "etb": "2026-11-08 03:00",
+  "etb": "2026-11-09 23:46",
   "out_voy": "W068",
-  "etd": "2026-11-09 00:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-11 07:00",
+  "status": "ACTUAL"
  },
  {
   "key": "CSCL SPRING|MANZANILLO|W068|W068",
@@ -89,11 +65,11 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W068",
-  "eta": "2026-11-10 01:00",
-  "etb": "",
+  "eta": "2026-11-11 20:00",
+  "etb": "2026-11-12 17:00",
   "out_voy": "W068",
-  "etd": "2026-11-12 01:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-14 08:00",
+  "status": "ACTUAL"
  },
  {
   "key": "CSCL SPRING|BUSAN NEW PORT|W068|W068",
@@ -101,10 +77,10 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W068",
-  "eta": "2026-11-14 01:00",
+  "eta": "2026-11-16 01:00",
   "etb": "",
   "out_voy": "W068",
-  "etd": "2026-11-15 02:00",
+  "etd": "2026-11-16 02:00",
   "status": "SKIP"
  },
  {
@@ -113,10 +89,10 @@
   "service": "ASA",
   "port": "KAOHSIUNG",
   "in_voy": "W068",
-  "eta": "2026-11-25 12:00",
+  "eta": "2026-12-02 12:00",
   "etb": "",
   "out_voy": "E069",
-  "etd": "2026-11-26 18:00",
+  "etd": "2026-12-03 18:00",
   "status": "ESTIMATED"
  },
  {
@@ -125,10 +101,10 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W068",
-  "eta": "2026-11-27 17:00",
+  "eta": "2026-12-04 19:00",
   "etb": "",
   "out_voy": "E069",
-  "etd": "2026-11-29 12:00",
+  "etd": "2026-12-06 12:00",
   "status": "ESTIMATED"
  },
  {
@@ -137,10 +113,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W068",
-  "eta": "2026-11-29 16:00",
+  "eta": "2026-12-06 17:00",
   "etb": "",
   "out_voy": "E069",
-  "etd": "2026-11-30 07:00",
+  "etd": "2026-12-07 07:00",
   "status": "ESTIMATED"
  },
  {
@@ -149,10 +125,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W068",
-  "eta": "2026-12-02 02:00",
+  "eta": "2026-12-09 17:00",
   "etb": "",
   "out_voy": "E069",
-  "etd": "2026-12-03 11:00",
+  "etd": "2026-12-10 11:00",
   "status": "ESTIMATED"
  },
  {
@@ -161,10 +137,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W068",
-  "eta": "2026-12-03 21:00",
+  "eta": "2026-12-11 11:00",
   "etb": "",
   "out_voy": "E069",
-  "etd": "2026-12-05 07:00",
+  "etd": "2026-12-12 07:00",
   "status": "ESTIMATED"
  },
  {
@@ -173,7 +149,7 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E069",
-  "eta": "2026-12-21 07:00",
+  "eta": "2026-12-21 10:00",
   "etb": "",
   "out_voy": "E069",
   "etd": "2026-12-23 03:00",
@@ -250,18 +226,6 @@
   "out_voy": "W069",
   "etd": "2027-02-07 02:00",
   "status": "ESTIMATED"
- },
- {
-  "key": "EVER FORTUNE|SHANGHAI|W027|E028",
-  "vessel": "EVER FORTUNE",
-  "service": "ASA",
-  "port": "SHANGHAI",
-  "in_voy": "W027",
-  "eta": "2026-09-10 05:00",
-  "etb": "",
-  "out_voy": "E028",
-  "etd": "2026-09-10 07:00",
-  "status": "SKIP"
  },
  {
   "key": "EVER FORTUNE|MANZANILLO|E028|E028",
@@ -354,10 +318,10 @@
   "port": "KAOHSIUNG",
   "in_voy": "W028",
   "eta": "2026-11-10 05:00",
-  "etb": "",
+  "etb": "2026-11-10 07:00",
   "out_voy": "E029",
-  "etd": "2026-11-11 11:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-11 18:02",
+  "status": "ACTUAL"
  },
  {
   "key": "EVER FORTUNE|SHEKOU|W028|E029",
@@ -365,11 +329,11 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W028",
-  "eta": "2026-11-12 11:00",
-  "etb": "",
+  "eta": "2026-11-12 19:30",
+  "etb": "2026-11-13 08:00",
   "out_voy": "E029",
-  "etd": "2026-11-14 13:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-15 08:24",
+  "status": "ACTUAL"
  },
  {
   "key": "EVER FORTUNE|HONG KONG|W028|E029",
@@ -377,11 +341,11 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W028",
-  "eta": "2026-11-14 15:00",
-  "etb": "",
+  "eta": "2026-11-15 09:51",
+  "etb": "2026-11-15 10:35",
   "out_voy": "E029",
-  "etd": "2026-11-15 05:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-16 00:53",
+  "status": "ACTUAL"
  },
  {
   "key": "EVER FORTUNE|NINGBO|W028|E029",
@@ -389,10 +353,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W028",
-  "eta": "2026-11-17 14:00",
-  "etb": "",
+  "eta": "2026-11-18 02:54",
+  "etb": "2026-11-20 11:00",
   "out_voy": "E029",
-  "etd": "2026-11-18 12:00",
+  "etd": "2026-11-21 03:00",
   "status": "ESTIMATED"
  },
  {
@@ -401,10 +365,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W028",
-  "eta": "2026-11-18 22:00",
+  "eta": "2026-11-21 13:00",
   "etb": "",
   "out_voy": "E029",
-  "etd": "2026-11-20 00:01",
+  "etd": "2026-11-22 14:00",
   "status": "ESTIMATED"
  },
  {
@@ -413,10 +377,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E029",
-  "eta": "2026-12-04 03:00",
+  "eta": "2026-12-06 18:00",
   "etb": "",
   "out_voy": "E029",
-  "etd": "2026-12-05 23:00",
+  "etd": "2026-12-08 14:00",
   "status": "ESTIMATED"
  },
  {
@@ -425,10 +389,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E029",
-  "eta": "2026-12-06 14:00",
+  "eta": "2026-12-09 05:00",
   "etb": "",
   "out_voy": "W029",
-  "etd": "2026-12-07 10:00",
+  "etd": "2026-12-10 01:00",
   "status": "ESTIMATED"
  },
  {
@@ -437,10 +401,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E029",
-  "eta": "2026-12-09 06:00",
+  "eta": "2026-12-11 21:00",
   "etb": "",
   "out_voy": "W029",
-  "etd": "2026-12-10 14:00",
+  "etd": "2026-12-13 05:00",
   "status": "ESTIMATED"
  },
  {
@@ -449,10 +413,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E029",
-  "eta": "2026-12-15 20:00",
+  "eta": "2026-12-18 11:00",
   "etb": "",
   "out_voy": "W029",
-  "etd": "2026-12-16 21:00",
+  "etd": "2026-12-19 12:00",
   "status": "ESTIMATED"
  },
  {
@@ -461,10 +425,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E029",
-  "eta": "2026-12-18 22:00",
+  "eta": "2026-12-21 13:00",
   "etb": "",
   "out_voy": "W029",
-  "etd": "2026-12-21 19:00",
+  "etd": "2026-12-24 10:00",
   "status": "ESTIMATED"
  },
  {
@@ -473,10 +437,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W029",
-  "eta": "2026-12-28 08:00",
+  "eta": "2026-12-30 23:00",
   "etb": "",
   "out_voy": "W029",
-  "etd": "2026-12-30 14:00",
+  "etd": "2027-01-02 05:00",
   "status": "ESTIMATED"
  },
  {
@@ -489,6 +453,150 @@
   "etb": "",
   "out_voy": "W029",
   "etd": "2027-01-17 02:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|KAOHSIUNG|W029|E030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "KAOHSIUNG",
+  "in_voy": "W029",
+  "eta": "2027-01-19 14:00",
+  "etb": "",
+  "out_voy": "E030",
+  "etd": "2027-01-21 18:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|SHEKOU|W029|E030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "SHEKOU",
+  "in_voy": "W029",
+  "eta": "2027-01-22 17:00",
+  "etb": "",
+  "out_voy": "E030",
+  "etd": "2027-01-24 12:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|HONG KONG|W029|E030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "HONG KONG",
+  "in_voy": "W029",
+  "eta": "2027-01-24 16:00",
+  "etb": "",
+  "out_voy": "E030",
+  "etd": "2027-01-25 07:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|NINGBO|W029|E030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "NINGBO",
+  "in_voy": "W029",
+  "eta": "2027-01-27 02:00",
+  "etb": "",
+  "out_voy": "E030",
+  "etd": "2027-01-28 11:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|SHANGHAI|W029|E030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "SHANGHAI",
+  "in_voy": "W029",
+  "eta": "2027-01-28 21:00",
+  "etb": "",
+  "out_voy": "E030",
+  "etd": "2027-01-30 07:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|MANZANILLO|E030|E030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "MANZANILLO",
+  "in_voy": "E030",
+  "eta": "2027-02-15 07:00",
+  "etb": "",
+  "out_voy": "E030",
+  "etd": "2027-02-17 03:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|LAZARO CARDENAS|E030|W030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E030",
+  "eta": "2027-02-17 18:00",
+  "etb": "",
+  "out_voy": "W030",
+  "etd": "2027-02-18 14:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|PUERTO QUETZAL|E030|W030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E030",
+  "eta": "2027-02-20 10:00",
+  "etb": "",
+  "out_voy": "W030",
+  "etd": "2027-02-21 18:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|CALLAO|E030|W030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "CALLAO",
+  "in_voy": "E030",
+  "eta": "2027-02-27 00:00",
+  "etb": "",
+  "out_voy": "W030",
+  "etd": "2027-02-28 01:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|GUAYAQUIL|E030|W030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "GUAYAQUIL",
+  "in_voy": "E030",
+  "eta": "2027-03-02 02:00",
+  "etb": "",
+  "out_voy": "W030",
+  "etd": "2027-03-04 23:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|MANZANILLO|W030|W030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "MANZANILLO",
+  "in_voy": "W030",
+  "eta": "2027-03-11 12:00",
+  "etb": "",
+  "out_voy": "W030",
+  "etd": "2027-03-13 18:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "EVER FORTUNE|BUSAN NEW PORT|W030|W030",
+  "vessel": "EVER FORTUNE",
+  "service": "ASA",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W030",
+  "eta": "2027-04-03 01:00",
+  "etb": "",
+  "out_voy": "W030",
+  "etd": "2027-04-04 02:00",
   "status": "ESTIMATED"
  },
  {
@@ -510,10 +618,10 @@
   "port": "SHANGHAI",
   "in_voy": "W096",
   "eta": "2026-11-10 07:00",
-  "etb": "",
+  "etb": "2026-11-11 00:30",
   "out_voy": "E097",
-  "etd": "2026-11-11 23:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-12 13:00",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA CAHAYA|QINGDAO|W096|E097",
@@ -521,11 +629,11 @@
   "service": "AS2",
   "port": "QINGDAO",
   "in_voy": "W096",
-  "eta": "2026-11-13 16:00",
-  "etb": "",
+  "eta": "2026-11-13 20:00",
+  "etb": "2026-11-14 21:45",
   "out_voy": "E097",
-  "etd": "2026-11-15 01:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-15 17:48",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA CAHAYA|BUSAN NEW PORT|W096|E097",
@@ -533,11 +641,11 @@
   "service": "AS2",
   "port": "BUSAN NEW PORT",
   "in_voy": "W096",
-  "eta": "2026-11-16 08:00",
-  "etb": "",
+  "eta": "2026-11-17 02:00",
+  "etb": "2026-11-17 13:00",
   "out_voy": "E097",
-  "etd": "2026-11-17 17:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-18 08:30",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA CAHAYA|ENSENADA|E097|W097",
@@ -545,10 +653,10 @@
   "service": "AS2",
   "port": "ENSENADA",
   "in_voy": "E097",
-  "eta": "2026-11-29 13:00",
+  "eta": "2026-12-02 02:00",
   "etb": "",
   "out_voy": "W097",
-  "etd": "2026-11-30 12:00",
+  "etd": "2026-12-03 01:00",
   "status": "ESTIMATED"
  },
  {
@@ -557,10 +665,10 @@
   "service": "AS2",
   "port": "MANZANILLO",
   "in_voy": "E097",
-  "eta": "2026-12-03 06:00",
+  "eta": "2026-12-05 18:00",
   "etb": "",
   "out_voy": "W097",
-  "etd": "2026-12-04 17:00",
+  "etd": "2026-12-07 05:00",
   "status": "ESTIMATED"
  },
  {
@@ -569,10 +677,10 @@
   "service": "AS2",
   "port": "LAZARO CARDENAS",
   "in_voy": "E097",
-  "eta": "2026-12-06 01:00",
+  "eta": "2026-12-07 18:00",
   "etb": "",
   "out_voy": "W097",
-  "etd": "2026-12-06 21:00",
+  "etd": "2026-12-08 15:00",
   "status": "ESTIMATED"
  },
  {
@@ -581,7 +689,7 @@
   "service": "AS2",
   "port": "PUERTO QUETZAL",
   "in_voy": "E097",
-  "eta": "2026-12-09 12:00",
+  "eta": "2026-12-10 21:00",
   "etb": "",
   "out_voy": "W097",
   "etd": "2026-12-11 23:00",
@@ -756,30 +864,6 @@
   "status": "LONGTERM"
  },
  {
-  "key": "KOTA CANTIK|PUERTO QUETZAL|E102|W102",
-  "vessel": "KOTA CANTIK",
-  "service": "AS2",
-  "port": "PUERTO QUETZAL",
-  "in_voy": "E102",
-  "eta": "2026-09-09 12:30",
-  "etb": "2026-09-10 03:36",
-  "out_voy": "W102",
-  "etd": "2026-09-10 18:00",
-  "status": "ACTUAL"
- },
- {
-  "key": "KOTA CANTIK|BUENAVENTURA|E102|W102",
-  "vessel": "KOTA CANTIK",
-  "service": "AS2",
-  "port": "BUENAVENTURA",
-  "in_voy": "E102",
-  "eta": "2026-09-14 15:30",
-  "etb": "2026-09-14 18:00",
-  "out_voy": "W102",
-  "etd": "2026-09-16 04:36",
-  "status": "ACTUAL"
- },
- {
   "key": "KOTA CANTIK|CALLAO|E102|W102",
   "vessel": "KOTA CANTIK",
   "service": "AS2",
@@ -848,8 +932,8 @@
   "eta": "2026-11-05 16:00",
   "etb": "2026-11-05 17:00",
   "out_voy": "E103",
-  "etd": "2026-11-06 14:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-06 17:10",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA CANTIK|ENSENADA|E103|W103",
@@ -858,7 +942,7 @@
   "port": "ENSENADA",
   "in_voy": "E103",
   "eta": "2026-11-20 03:00",
-  "etb": "",
+  "etb": "2026-11-20 04:00",
   "out_voy": "W103",
   "etd": "2026-11-21 01:00",
   "status": "ESTIMATED"
@@ -1068,18 +1152,6 @@
   "status": "LONGTERM"
  },
  {
-  "key": "KOTA CEPAT|NINGBO|W086|E087",
-  "vessel": "KOTA CEPAT",
-  "service": "AS2",
-  "port": "NINGBO",
-  "in_voy": "W086",
-  "eta": "2026-09-16 08:00",
-  "etb": "",
-  "out_voy": "E087",
-  "etd": "2026-09-17 14:00",
-  "status": "SKIP"
- },
- {
   "key": "KOTA CEPAT|SHANGHAI|W086|E087",
   "vessel": "KOTA CEPAT",
   "service": "AS2",
@@ -1182,10 +1254,10 @@
   "port": "CALLAO",
   "in_voy": "E087",
   "eta": "2026-11-07 12:00",
-  "etb": "",
+  "etb": "2026-11-08 02:30",
   "out_voy": "W087",
-  "etd": "2026-11-08 11:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-08 19:30",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA CEPAT|SAN ANTONIO|E087|W087",
@@ -1194,10 +1266,10 @@
   "port": "SAN ANTONIO",
   "in_voy": "E087",
   "eta": "2026-11-12 03:00",
-  "etb": "",
+  "etb": "2026-11-12 03:30",
   "out_voy": "W087",
-  "etd": "2026-11-13 15:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-13 21:00",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA CEPAT|NINGBO|W087|E088",
@@ -1330,30 +1402,6 @@
   "out_voy": "W088",
   "etd": "2027-01-29 15:00",
   "status": "ESTIMATED"
- },
- {
-  "key": "KOTA EAGLE|GUAYAQUIL|E009|W009",
-  "vessel": "KOTA EAGLE",
-  "service": "ASA",
-  "port": "GUAYAQUIL",
-  "in_voy": "E009",
-  "eta": "2026-09-07 11:10",
-  "etb": "2026-09-07 15:36",
-  "out_voy": "W009",
-  "etd": "2026-09-10 09:02",
-  "status": "ACTUAL"
- },
- {
-  "key": "KOTA EAGLE|CALLAO|E009|W009",
-  "vessel": "KOTA EAGLE",
-  "service": "ASA",
-  "port": "CALLAO",
-  "in_voy": "E009",
-  "eta": "2026-09-12 05:45",
-  "etb": "2026-09-12 07:30",
-  "out_voy": "W009",
-  "etd": "2026-09-13 09:00",
-  "status": "ACTUAL"
  },
  {
   "key": "KOTA EAGLE|MANZANILLO|W009|W009",
@@ -1668,30 +1716,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "KOTA EMERALD|SHEKOU|W008|E009",
-  "vessel": "KOTA EMERALD",
-  "service": "ASA",
-  "port": "SHEKOU",
-  "in_voy": "W008",
-  "eta": "2026-09-14 23:00",
-  "etb": "2026-09-15 20:00",
-  "out_voy": "E009",
-  "etd": "2026-09-17 19:55",
-  "status": "ACTUAL"
- },
- {
-  "key": "KOTA EMERALD|HONG KONG|W008|E009",
-  "vessel": "KOTA EMERALD",
-  "service": "ASA",
-  "port": "HONG KONG",
-  "in_voy": "W008",
-  "eta": "2026-09-17 21:30",
-  "etb": "2026-09-17 22:55",
-  "out_voy": "E009",
-  "etd": "2026-09-19 05:45",
-  "status": "ACTUAL"
- },
- {
   "key": "KOTA EMERALD|KAOHSIUNG|W008|E009",
   "vessel": "KOTA EMERALD",
   "service": "ASA",
@@ -1772,8 +1796,8 @@
   "eta": "2026-11-05 12:00",
   "etb": "2026-11-07 06:00",
   "out_voy": "W009",
-  "etd": "2026-11-08 04:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-08 07:54",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA EMERALD|GUAYAQUIL|E009|W009",
@@ -1782,10 +1806,10 @@
   "port": "GUAYAQUIL",
   "in_voy": "E009",
   "eta": "2026-11-10 02:00",
-  "etb": "",
+  "etb": "2026-11-10 07:00",
   "out_voy": "W009",
   "etd": "2026-11-12 19:00",
-  "status": "ESTIMATED"
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA EMERALD|MANZANILLO|W009|W009",
@@ -1793,10 +1817,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W009",
-  "eta": "2026-11-17 18:00",
-  "etb": "",
+  "eta": "2026-11-18 12:00",
+  "etb": "2026-11-19 18:00",
   "out_voy": "W009",
-  "etd": "2026-11-19 20:00",
+  "etd": "2026-11-21 21:00",
   "status": "ESTIMATED"
  },
  {
@@ -1805,7 +1829,7 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W009",
-  "eta": "2026-11-21 01:00",
+  "eta": "2026-11-22 01:00",
   "etb": "",
   "out_voy": "W009",
   "etd": "2026-11-22 02:00",
@@ -1817,10 +1841,10 @@
   "service": "ASA",
   "port": "KAOHSIUNG",
   "in_voy": "W009",
-  "eta": "2026-12-06 19:30",
+  "eta": "2026-12-06 19:00",
   "etb": "",
   "out_voy": "E010",
-  "etd": "2026-12-08 02:30",
+  "etd": "2026-12-08 02:00",
   "status": "ESTIMATED"
  },
  {
@@ -1829,10 +1853,10 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W009",
-  "eta": "2026-12-09 00:30",
+  "eta": "2026-12-09 00:01",
   "etb": "",
   "out_voy": "E010",
-  "etd": "2026-12-10 19:30",
+  "etd": "2026-12-11 02:00",
   "status": "ESTIMATED"
  },
  {
@@ -1841,10 +1865,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W009",
-  "eta": "2026-12-10 22:30",
+  "eta": "2026-12-11 05:00",
   "etb": "",
   "out_voy": "E010",
-  "etd": "2026-12-11 14:30",
+  "etd": "2026-12-11 21:00",
   "status": "ESTIMATED"
  },
  {
@@ -1853,10 +1877,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W009",
-  "eta": "2026-12-13 11:00",
+  "eta": "2026-12-13 17:00",
   "etb": "",
   "out_voy": "E010",
-  "etd": "2026-12-14 07:00",
+  "etd": "2026-12-15 12:00",
   "status": "ESTIMATED"
  },
  {
@@ -1865,10 +1889,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W009",
-  "eta": "2026-12-14 17:00",
+  "eta": "2026-12-15 22:00",
   "etb": "",
   "out_voy": "E010",
-  "etd": "2026-12-15 15:00",
+  "etd": "2026-12-17 19:00",
   "status": "ESTIMATED"
  },
  {
@@ -1877,10 +1901,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E010",
-  "eta": "2026-12-31 22:00",
+  "eta": "2027-01-02 19:30",
   "etb": "",
   "out_voy": "E010",
-  "etd": "2027-01-02 17:00",
+  "etd": "2027-01-04 14:30",
   "status": "ESTIMATED"
  },
  {
@@ -1889,10 +1913,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E010",
-  "eta": "2027-01-03 08:00",
+  "eta": "2027-01-05 04:30",
   "etb": "",
   "out_voy": "W010",
-  "etd": "2027-01-04 04:00",
+  "etd": "2027-01-06 00:30",
   "status": "ESTIMATED"
  },
  {
@@ -1901,10 +1925,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E010",
-  "eta": "2027-01-06 00:00",
+  "eta": "2027-01-07 20:30",
   "etb": "",
   "out_voy": "W010",
-  "etd": "2027-01-07 08:00",
+  "etd": "2027-01-09 04:30",
   "status": "ESTIMATED"
  },
  {
@@ -1913,10 +1937,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E010",
-  "eta": "2027-01-12 14:00",
+  "eta": "2027-01-14 09:30",
   "etb": "",
   "out_voy": "W010",
-  "etd": "2027-01-13 15:00",
+  "etd": "2027-01-15 07:30",
   "status": "ESTIMATED"
  },
  {
@@ -1925,10 +1949,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E010",
-  "eta": "2027-01-15 16:00",
+  "eta": "2027-01-17 08:30",
   "etb": "",
   "out_voy": "W010",
-  "etd": "2027-01-18 13:00",
+  "etd": "2027-01-19 16:30",
   "status": "ESTIMATED"
  },
  {
@@ -1937,10 +1961,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W010",
-  "eta": "2027-01-25 02:00",
+  "eta": "2027-01-26 17:00",
   "etb": "",
   "out_voy": "W010",
-  "etd": "2027-01-27 08:00",
+  "etd": "2027-01-28 23:00",
   "status": "ESTIMATED"
  },
  {
@@ -2022,10 +2046,10 @@
   "port": "MANZANILLO",
   "in_voy": "E027",
   "eta": "2026-11-04 01:00",
-  "etb": "2026-11-04 12:00",
+  "etb": "2026-11-04 10:00",
   "out_voy": "W027",
   "etd": "2026-11-05 23:00",
-  "status": "ESTIMATED"
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA MANZANILLO|LAZARO CARDENAS|E027|W027",
@@ -2034,10 +2058,10 @@
   "port": "LAZARO CARDENAS",
   "in_voy": "E027",
   "eta": "2026-11-07 07:00",
-  "etb": "2026-11-08 08:00",
+  "etb": "2026-11-09 04:00",
   "out_voy": "W027",
-  "etd": "2026-11-08 21:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-09 22:00",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA MANZANILLO|PUERTO QUETZAL|E027|W027",
@@ -2045,11 +2069,11 @@
   "service": "AS2",
   "port": "PUERTO QUETZAL",
   "in_voy": "E027",
-  "eta": "2026-11-11 12:00",
-  "etb": "",
+  "eta": "2026-11-12 17:00",
+  "etb": "2026-11-13 05:24",
   "out_voy": "W027",
-  "etd": "2026-11-13 23:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-13 23:15",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA MANZANILLO|BUENAVENTURA|E027|W027",
@@ -2058,10 +2082,10 @@
   "port": "BUENAVENTURA",
   "in_voy": "E027",
   "eta": "2026-11-16 15:00",
-  "etb": "",
+  "etb": "2026-11-16 19:00",
   "out_voy": "W027",
-  "etd": "2026-11-17 20:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-18 05:00",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA MANZANILLO|CALLAO|E027|W027",
@@ -2220,30 +2244,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "KOTA PELANGI|PUERTO QUETZAL|E050|W050",
-  "vessel": "KOTA PELANGI",
-  "service": "ASA",
-  "port": "PUERTO QUETZAL",
-  "in_voy": "E050",
-  "eta": "2026-09-10 18:54",
-  "etb": "2026-09-10 20:30",
-  "out_voy": "W050",
-  "etd": "2026-09-11 22:41",
-  "status": "ACTUAL"
- },
- {
-  "key": "KOTA PELANGI|CALLAO|E050|W050",
-  "vessel": "KOTA PELANGI",
-  "service": "ASA",
-  "port": "CALLAO",
-  "in_voy": "E050",
-  "eta": "2026-09-17 05:00",
-  "etb": "2026-09-18 22:17",
-  "out_voy": "W050",
-  "etd": "2026-09-19 21:15",
-  "status": "ACTUAL"
- },
- {
   "key": "KOTA PELANGI|GUAYAQUIL|E050|W050",
   "vessel": "KOTA PELANGI",
   "service": "ASA",
@@ -2336,8 +2336,8 @@
   "eta": "2026-10-30 10:00",
   "etb": "2026-11-05 11:00",
   "out_voy": "E051",
-  "etd": "2026-11-06 22:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-07 00:54",
+  "status": "ACTUAL"
  },
  {
   "key": "KOTA PELANGI|MANZANILLO|E051|E051",
@@ -2568,30 +2568,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "WAN HAI 711|NANSHA NEW PORT|E003|E004",
-  "vessel": "WAN HAI 711",
-  "service": "AS2",
-  "port": "NANSHA NEW PORT",
-  "in_voy": "E003",
-  "eta": "2026-09-11 13:30",
-  "etb": "2026-09-11 17:42",
-  "out_voy": "E004",
-  "etd": "2026-09-12 12:06",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI 711|XIAMEN|E003|E004",
-  "vessel": "WAN HAI 711",
-  "service": "AS2",
-  "port": "XIAMEN",
-  "in_voy": "E003",
-  "eta": "2026-09-13 11:36",
-  "etb": "2026-09-14 05:42",
-  "out_voy": "E004",
-  "etd": "2026-09-15 01:42",
-  "status": "ACTUAL"
- },
- {
   "key": "WAN HAI 711|NINGBO|W003|E004",
   "vessel": "WAN HAI 711",
   "service": "AS2",
@@ -2693,11 +2669,11 @@
   "service": "AS2",
   "port": "BUENAVENTURA",
   "in_voy": "E004",
-  "eta": "2026-11-09 01:00",
-  "etb": "2026-11-09 04:00",
+  "eta": "2026-11-08 22:48",
+  "etb": "2026-11-09 03:00",
   "out_voy": "W004",
-  "etd": "2026-11-10 20:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-10 14:00",
+  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI 711|CALLAO|E004|W004",
@@ -2705,11 +2681,11 @@
   "service": "AS2",
   "port": "CALLAO",
   "in_voy": "E004",
-  "eta": "2026-11-14 12:00",
-  "etb": "",
+  "eta": "2026-11-13 09:24",
+  "etb": "2026-11-15 10:30",
   "out_voy": "W004",
-  "etd": "2026-11-15 11:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-16 00:06",
+  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI 711|SAN ANTONIO|E004|W004",
@@ -2717,8 +2693,8 @@
   "service": "AS2",
   "port": "SAN ANTONIO",
   "in_voy": "E004",
-  "eta": "2026-11-19 03:00",
-  "etb": "",
+  "eta": "2026-11-19 05:06",
+  "etb": "2026-11-19 07:36",
   "out_voy": "W004",
   "etd": "2026-11-20 15:00",
   "status": "ESTIMATED"
@@ -2856,30 +2832,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "WAN HAI A02|NINGBO|W017|E018",
-  "vessel": "WAN HAI A02",
-  "service": "ASA",
-  "port": "NINGBO",
-  "in_voy": "W017",
-  "eta": "2026-09-06 20:00",
-  "etb": "2026-09-12 00:30",
-  "out_voy": "E018",
-  "etd": "2026-09-13 07:36",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI A02|SHANGHAI|W017|E018",
-  "vessel": "WAN HAI A02",
-  "service": "ASA",
-  "port": "SHANGHAI",
-  "in_voy": "W017",
-  "eta": "2026-09-14 11:00",
-  "etb": "",
-  "out_voy": "E018",
-  "etd": "2026-09-14 15:00",
-  "status": "SKIP"
- },
- {
   "key": "WAN HAI A02|MANZANILLO|E018|E018",
   "vessel": "WAN HAI A02",
   "service": "ASA",
@@ -2970,9 +2922,9 @@
   "port": "KAOHSIUNG",
   "in_voy": "W018",
   "eta": "2026-11-20 17:00",
-  "etb": "",
+  "etb": "2026-11-21 02:00",
   "out_voy": "E019",
-  "etd": "2026-11-21 14:00",
+  "etd": "2026-11-21 22:00",
   "status": "ESTIMATED"
  },
  {
@@ -2981,10 +2933,10 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W018",
-  "eta": "2026-11-22 13:00",
+  "eta": "2026-11-22 21:00",
   "etb": "",
   "out_voy": "E019",
-  "etd": "2026-11-24 12:00",
+  "etd": "2026-11-24 16:00",
   "status": "ESTIMATED"
  },
  {
@@ -2993,10 +2945,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W018",
-  "eta": "2026-11-24 15:00",
+  "eta": "2026-11-24 19:00",
   "etb": "",
   "out_voy": "E019",
-  "etd": "2026-11-25 07:00",
+  "etd": "2026-11-25 11:00",
   "status": "ESTIMATED"
  },
  {
@@ -3005,10 +2957,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W018",
-  "eta": "2026-11-27 02:00",
+  "eta": "2026-11-27 06:00",
   "etb": "",
   "out_voy": "E019",
-  "etd": "2026-11-30 02:00",
+  "etd": "2026-11-30 06:00",
   "status": "ESTIMATED"
  },
  {
@@ -3017,10 +2969,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W018",
-  "eta": "2026-11-30 12:00",
+  "eta": "2026-11-30 16:00",
   "etb": "",
   "out_voy": "E019",
-  "etd": "2026-12-03 12:00",
+  "etd": "2026-12-01 16:00",
   "status": "ESTIMATED"
  },
  {
@@ -3029,10 +2981,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E019",
-  "eta": "2026-12-19 00:00",
+  "eta": "2026-12-17 04:00",
   "etb": "",
   "out_voy": "E019",
-  "etd": "2026-12-20 20:00",
+  "etd": "2026-12-19 00:00",
   "status": "ESTIMATED"
  },
  {
@@ -3041,10 +2993,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E019",
-  "eta": "2026-12-21 09:00",
+  "eta": "2026-12-19 13:00",
   "etb": "",
   "out_voy": "W019",
-  "etd": "2026-12-22 05:00",
+  "etd": "2026-12-20 09:00",
   "status": "ESTIMATED"
  },
  {
@@ -3053,10 +3005,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E019",
-  "eta": "2026-12-24 01:00",
+  "eta": "2026-12-22 05:00",
   "etb": "",
   "out_voy": "W019",
-  "etd": "2026-12-25 06:00",
+  "etd": "2026-12-23 10:00",
   "status": "ESTIMATED"
  },
  {
@@ -3065,10 +3017,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E019",
-  "eta": "2026-12-30 00:00",
+  "eta": "2026-12-28 04:00",
   "etb": "",
   "out_voy": "W019",
-  "etd": "2026-12-31 01:00",
+  "etd": "2026-12-29 05:00",
   "status": "ESTIMATED"
  },
  {
@@ -3077,10 +3029,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E019",
-  "eta": "2027-01-02 01:00",
+  "eta": "2026-12-31 05:00",
   "etb": "",
   "out_voy": "W019",
-  "etd": "2027-01-05 01:00",
+  "etd": "2027-01-03 05:00",
   "status": "ESTIMATED"
  },
  {
@@ -3089,10 +3041,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W019",
-  "eta": "2027-01-10 01:00",
+  "eta": "2027-01-08 05:00",
   "etb": "",
   "out_voy": "W019",
-  "etd": "2027-01-12 01:00",
+  "etd": "2027-01-10 05:00",
   "status": "ESTIMATED"
  },
  {
@@ -3101,47 +3053,11 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W019",
-  "eta": "2027-01-30 01:00",
+  "eta": "2027-01-28 05:00",
   "etb": "",
   "out_voy": "W019",
-  "etd": "2027-01-31 02:00",
+  "etd": "2027-01-29 06:00",
   "status": "ESTIMATED"
- },
- {
-  "key": "WAN HAI A06|MANZANILLO|E015|E015",
-  "vessel": "WAN HAI A06",
-  "service": "ASA",
-  "port": "MANZANILLO",
-  "in_voy": "E015",
-  "eta": "2026-09-06 16:12",
-  "etb": "2026-09-06 19:00",
-  "out_voy": "E015",
-  "etd": "2026-09-09 05:06",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI A06|LAZARO CARDENAS|E015|W015",
-  "vessel": "WAN HAI A06",
-  "service": "ASA",
-  "port": "LAZARO CARDENAS",
-  "in_voy": "E015",
-  "eta": "2026-09-09 16:36",
-  "etb": "2026-09-09 19:12",
-  "out_voy": "W015",
-  "etd": "2026-09-10 21:18",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI A06|PUERTO QUETZAL|E015|W015",
-  "vessel": "WAN HAI A06",
-  "service": "ASA",
-  "port": "PUERTO QUETZAL",
-  "in_voy": "E015",
-  "eta": "2026-09-12 17:00",
-  "etb": "2026-09-12 20:18",
-  "out_voy": "W015",
-  "etd": "2026-09-13 19:06",
-  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI A06|CALLAO|E015|W015",
@@ -3168,10 +3084,10 @@
   "status": "ACTUAL"
  },
  {
-  "key": "WAN HAI A06|BUSAN NEW PORT|W015|W015",
+  "key": "WAN HAI A06|MANZANILLO|W015|W015",
   "vessel": "WAN HAI A06",
   "service": "ASA",
-  "port": "BUSAN NEW PORT",
+  "port": "MANZANILLO",
   "in_voy": "W015",
   "eta": "2026-09-30 23:30",
   "etb": "",
@@ -3180,10 +3096,10 @@
   "status": "SKIP"
  },
  {
-  "key": "WAN HAI A06|MANZANILLO|W015|W015",
+  "key": "WAN HAI A06|BUSAN NEW PORT|W015|W015",
   "vessel": "WAN HAI A06",
   "service": "ASA",
-  "port": "MANZANILLO",
+  "port": "BUSAN NEW PORT",
   "in_voy": "W015",
   "eta": "2026-09-30 23:30",
   "etb": "",
@@ -3245,10 +3161,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W015",
-  "eta": "2026-11-07 13:00",
+  "eta": "2026-11-08 13:00",
   "etb": "",
   "out_voy": "E016",
-  "etd": "2026-11-07 13:00",
+  "etd": "2026-11-08 13:00",
   "status": "SKIP"
  },
  {
@@ -3257,10 +3173,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E016",
-  "eta": "2026-11-23 23:00",
-  "etb": "",
+  "eta": "2026-11-24 23:59",
+  "etb": "2026-11-26 04:30",
   "out_voy": "E016",
-  "etd": "2026-11-24 12:00",
+  "etd": "2026-11-27 17:30",
   "status": "ESTIMATED"
  },
  {
@@ -3269,10 +3185,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E016",
-  "eta": "2026-11-24 23:00",
+  "eta": "2026-11-28 04:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2026-11-25 19:00",
+  "etd": "2026-11-29 00:30",
   "status": "ESTIMATED"
  },
  {
@@ -3281,10 +3197,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E016",
-  "eta": "2026-11-27 15:00",
+  "eta": "2026-11-30 20:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2026-11-28 23:00",
+  "etd": "2026-12-02 04:30",
   "status": "ESTIMATED"
  },
  {
@@ -3293,10 +3209,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E016",
-  "eta": "2026-12-03 11:00",
+  "eta": "2026-12-06 16:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2026-12-04 12:00",
+  "etd": "2026-12-07 17:30",
   "status": "ESTIMATED"
  },
  {
@@ -3305,10 +3221,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E016",
-  "eta": "2026-12-06 07:00",
+  "eta": "2026-12-09 12:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2026-12-09 04:00",
+  "etd": "2026-12-12 09:30",
   "status": "ESTIMATED"
  },
  {
@@ -3317,10 +3233,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W016",
-  "eta": "2026-12-09 04:00",
+  "eta": "2026-12-12 09:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2026-12-09 04:00",
+  "etd": "2026-12-12 09:30",
   "status": "SKIP"
  },
  {
@@ -3329,10 +3245,10 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W016",
-  "eta": "2026-12-09 04:00",
+  "eta": "2026-12-12 09:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2026-12-09 04:00",
+  "etd": "2026-12-12 09:30",
   "status": "SKIP"
  },
  {
@@ -3341,10 +3257,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W016",
-  "eta": "2026-12-31 16:00",
+  "eta": "2027-01-04 14:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2027-01-02 16:00",
+  "etd": "2027-01-06 14:30",
   "status": "ESTIMATED"
  },
  {
@@ -3353,23 +3269,11 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W016",
-  "eta": "2027-01-04 12:00",
+  "eta": "2027-01-08 10:30",
   "etb": "",
   "out_voy": "W016",
-  "etd": "2027-01-06 12:00",
+  "etd": "2027-01-10 10:30",
   "status": "ESTIMATED"
- },
- {
-  "key": "WAN HAI A07|GUAYAQUIL|E022|W022",
-  "vessel": "WAN HAI A07",
-  "service": "ASA",
-  "port": "GUAYAQUIL",
-  "in_voy": "E022",
-  "eta": "2026-09-10 02:00",
-  "etb": "2026-09-10 11:06",
-  "out_voy": "W022",
-  "etd": "2026-09-13 14:12",
-  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI A07|MANZANILLO|W022|W022",
@@ -3461,11 +3365,11 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E023",
-  "eta": "2026-11-12 18:00",
-  "etb": "",
+  "eta": "2026-11-14 12:00",
+  "etb": "2026-11-15 20:06",
   "out_voy": "E023",
-  "etd": "2026-11-14 21:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-17 11:00",
+  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI A07|LAZARO CARDENAS|E023|W023",
@@ -3473,10 +3377,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E023",
-  "eta": "2026-11-15 12:00",
-  "etb": "",
+  "eta": "2026-11-18 05:00",
+  "etb": "2026-11-18 12:06",
   "out_voy": "W023",
-  "etd": "2026-11-16 08:00",
+  "etd": "2026-11-19 09:30",
   "status": "ESTIMATED"
  },
  {
@@ -3485,10 +3389,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E023",
-  "eta": "2026-11-18 04:00",
-  "etb": "",
+  "eta": "2026-11-21 10:00",
+  "etb": "2026-11-23 00:00",
   "out_voy": "W023",
-  "etd": "2026-11-22 12:00",
+  "etd": "2026-11-22 14:00",
   "status": "ESTIMATED"
  },
  {
@@ -3497,10 +3401,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E023",
-  "eta": "2026-11-27 18:00",
+  "eta": "2026-11-26 23:00",
   "etb": "",
   "out_voy": "W023",
-  "etd": "2026-11-28 19:00",
+  "etd": "2026-11-29 01:00",
   "status": "ESTIMATED"
  },
  {
@@ -3509,10 +3413,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E023",
-  "eta": "2026-11-30 20:00",
-  "etb": "",
+  "eta": "2026-12-01 02:00",
+  "etb": "2026-12-01 12:00",
   "out_voy": "W023",
-  "etd": "2026-12-03 17:00",
+  "etd": "2026-12-03 23:00",
   "status": "ESTIMATED"
  },
  {
@@ -3521,10 +3425,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W023",
-  "eta": "2026-12-04 17:00",
+  "eta": "2026-12-04 23:00",
   "etb": "",
   "out_voy": "W023",
-  "etd": "2026-12-04 17:00",
+  "etd": "2026-12-04 23:00",
   "status": "SKIP"
  },
  {
@@ -3533,10 +3437,10 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W023",
-  "eta": "2026-12-05 17:00",
+  "eta": "2026-12-05 23:00",
   "etb": "",
   "out_voy": "W023",
-  "etd": "2026-12-05 17:00",
+  "etd": "2026-12-05 23:00",
   "status": "SKIP"
  },
  {
@@ -3545,10 +3449,10 @@
   "service": "ASA",
   "port": "KAOHSIUNG",
   "in_voy": "W023",
-  "eta": "2026-12-27 10:00",
+  "eta": "2026-12-27 16:00",
   "etb": "",
   "out_voy": "E024",
-  "etd": "2026-12-28 22:00",
+  "etd": "2026-12-29 04:00",
   "status": "ESTIMATED"
  },
  {
@@ -3557,10 +3461,10 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W023",
-  "eta": "2026-12-29 21:00",
+  "eta": "2026-12-30 03:00",
   "etb": "",
   "out_voy": "E024",
-  "etd": "2026-12-31 16:00",
+  "etd": "2026-12-31 22:00",
   "status": "ESTIMATED"
  },
  {
@@ -3569,10 +3473,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W023",
-  "eta": "2026-12-31 19:00",
+  "eta": "2027-01-01 01:00",
   "etb": "",
   "out_voy": "E024",
-  "etd": "2027-01-01 10:00",
+  "etd": "2027-01-01 16:00",
   "status": "ESTIMATED"
  },
  {
@@ -3581,10 +3485,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W023",
-  "eta": "2027-01-03 05:00",
+  "eta": "2027-01-03 11:00",
   "etb": "",
   "out_voy": "E024",
-  "etd": "2027-01-06 05:00",
+  "etd": "2027-01-06 11:00",
   "status": "ESTIMATED"
  },
  {
@@ -3593,10 +3497,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W023",
-  "eta": "2027-01-06 15:00",
+  "eta": "2027-01-06 21:00",
   "etb": "",
   "out_voy": "E024",
-  "etd": "2027-01-09 15:00",
+  "etd": "2027-01-09 21:00",
   "status": "ESTIMATED"
  },
  {
@@ -3605,10 +3509,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E024",
-  "eta": "2027-01-25 15:00",
+  "eta": "2027-01-25 21:00",
   "etb": "",
   "out_voy": "E024",
-  "etd": "2027-01-27 11:00",
+  "etd": "2027-01-27 17:00",
   "status": "ESTIMATED"
  },
  {
@@ -3617,10 +3521,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E024",
-  "eta": "2027-01-28 02:00",
+  "eta": "2027-01-28 08:00",
   "etb": "",
   "out_voy": "W024",
-  "etd": "2027-01-28 22:00",
+  "etd": "2027-01-29 04:00",
   "status": "ESTIMATED"
  },
  {
@@ -3629,10 +3533,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E024",
-  "eta": "2027-01-30 18:00",
+  "eta": "2027-01-31 00:00",
   "etb": "",
   "out_voy": "W024",
-  "etd": "2027-02-01 02:00",
+  "etd": "2027-02-01 08:00",
   "status": "ESTIMATED"
  },
  {
@@ -3641,10 +3545,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E024",
-  "eta": "2027-02-06 08:00",
+  "eta": "2027-02-06 14:00",
   "etb": "",
   "out_voy": "W024",
-  "etd": "2027-02-07 09:00",
+  "etd": "2027-02-07 15:00",
   "status": "ESTIMATED"
  },
  {
@@ -3653,10 +3557,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E024",
-  "eta": "2027-02-09 10:00",
+  "eta": "2027-02-09 16:00",
   "etb": "",
   "out_voy": "W024",
-  "etd": "2027-02-12 07:00",
+  "etd": "2027-02-12 13:00",
   "status": "ESTIMATED"
  },
  {
@@ -3665,10 +3569,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W024",
-  "eta": "2027-02-17 07:00",
+  "eta": "2027-02-17 13:00",
   "etb": "",
   "out_voy": "W024",
-  "etd": "2027-02-19 13:00",
+  "etd": "2027-02-19 19:00",
   "status": "ESTIMATED"
  },
  {
@@ -3677,23 +3581,11 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W024",
-  "eta": "2027-03-01 13:00",
+  "eta": "2027-03-01 19:00",
   "etb": "",
   "out_voy": "W024",
-  "etd": "2027-03-02 13:00",
+  "etd": "2027-03-02 19:00",
   "status": "ESTIMATED"
- },
- {
-  "key": "WAN HAI A13|CRISTOBAL|W010|W010",
-  "vessel": "WAN HAI A13",
-  "service": "AS2",
-  "port": "CRISTOBAL",
-  "in_voy": "W010",
-  "eta": "2026-09-06 08:42",
-  "etb": "2026-09-10 06:02",
-  "out_voy": "W010",
-  "etd": "2026-09-10 19:24",
-  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI A13|NINGBO|W010|W010",
@@ -3713,10 +3605,10 @@
   "service": "AS2",
   "port": "NINGBO",
   "in_voy": "W011",
-  "eta": "2026-11-18 08:00",
+  "eta": "2026-11-25 08:00",
   "etb": "",
   "out_voy": "E012",
-  "etd": "2026-11-19 14:00",
+  "etd": "2026-11-26 18:00",
   "status": "ESTIMATED"
  },
  {
@@ -3725,11 +3617,11 @@
   "service": "AS2",
   "port": "SHANGHAI",
   "in_voy": "W011",
-  "eta": "2026-11-20 03:00",
+  "eta": "2026-11-26 18:00",
   "etb": "",
   "out_voy": "E012",
-  "etd": "2026-11-22 08:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-26 18:00",
+  "status": "SKIP"
  },
  {
   "key": "WAN HAI A13|QINGDAO|W011|E012",
@@ -3737,10 +3629,10 @@
   "service": "AS2",
   "port": "QINGDAO",
   "in_voy": "W011",
-  "eta": "2026-11-23 16:00",
+  "eta": "2026-11-27 23:00",
   "etb": "",
   "out_voy": "E012",
-  "etd": "2026-11-24 10:00",
+  "etd": "2026-11-30 01:00",
   "status": "ESTIMATED"
  },
  {
@@ -3749,10 +3641,10 @@
   "service": "AS2",
   "port": "BUSAN NEW PORT",
   "in_voy": "W011",
-  "eta": "2026-11-25 22:00",
+  "eta": "2026-12-01 13:00",
   "etb": "",
   "out_voy": "E012",
-  "etd": "2026-11-27 04:00",
+  "etd": "2026-12-02 19:00",
   "status": "ESTIMATED"
  },
  {
@@ -3761,10 +3653,10 @@
   "service": "AS2",
   "port": "ENSENADA",
   "in_voy": "E012",
-  "eta": "2026-12-09 01:00",
+  "eta": "2026-12-14 16:00",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2026-12-09 23:00",
+  "etd": "2026-12-15 14:00",
   "status": "ESTIMATED"
  },
  {
@@ -3773,10 +3665,10 @@
   "service": "AS2",
   "port": "MANZANILLO",
   "in_voy": "E012",
-  "eta": "2026-12-12 14:00",
+  "eta": "2026-12-18 05:00",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2026-12-14 03:00",
+  "etd": "2026-12-19 18:00",
   "status": "ESTIMATED"
  },
  {
@@ -3785,10 +3677,10 @@
   "service": "AS2",
   "port": "LAZARO CARDENAS",
   "in_voy": "E012",
-  "eta": "2026-12-14 12:00",
+  "eta": "2026-12-20 03:00",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2026-12-17 02:00",
+  "etd": "2026-12-22 17:00",
   "status": "ESTIMATED"
  },
  {
@@ -3797,10 +3689,10 @@
   "service": "AS2",
   "port": "PUERTO QUETZAL",
   "in_voy": "E012",
-  "eta": "2026-12-18 19:30",
+  "eta": "2026-12-24 10:30",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2026-12-21 06:30",
+  "etd": "2026-12-26 21:30",
   "status": "ESTIMATED"
  },
  {
@@ -3809,10 +3701,10 @@
   "service": "AS2",
   "port": "BUENAVENTURA",
   "in_voy": "E012",
-  "eta": "2026-12-23 16:30",
+  "eta": "2026-12-29 07:30",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2026-12-24 21:30",
+  "etd": "2026-12-30 12:30",
   "status": "ESTIMATED"
  },
  {
@@ -3821,10 +3713,10 @@
   "service": "AS2",
   "port": "CALLAO",
   "in_voy": "E012",
-  "eta": "2026-12-27 12:00",
+  "eta": "2027-01-02 03:00",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2026-12-28 11:00",
+  "etd": "2027-01-03 02:00",
   "status": "ESTIMATED"
  },
  {
@@ -3833,10 +3725,10 @@
   "service": "AS2",
   "port": "SAN ANTONIO",
   "in_voy": "E012",
-  "eta": "2026-12-31 14:30",
+  "eta": "2027-01-06 07:00",
   "etb": "",
   "out_voy": "W012",
-  "etd": "2027-01-02 02:30",
+  "etd": "2027-01-07 19:00",
   "status": "ESTIMATED"
  },
  {
@@ -4061,11 +3953,11 @@
   "service": "ASA",
   "port": "KAOHSIUNG",
   "in_voy": "W012",
-  "eta": "2026-11-14 18:00",
-  "etb": "",
+  "eta": "2026-11-14 23:54",
+  "etb": "2026-11-15 02:18",
   "out_voy": "E013",
-  "etd": "2026-11-15 18:30",
-  "status": "ESTIMATED"
+  "etd": "2026-11-16 10:36",
+  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI A16|SHEKOU|W012|E013",
@@ -4073,10 +3965,10 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W012",
-  "eta": "2026-11-16 17:30",
-  "etb": "",
+  "eta": "2026-11-17 08:00",
+  "etb": "2026-11-18 12:48",
   "out_voy": "E013",
-  "etd": "2026-11-18 12:30",
+  "etd": "2026-11-21 00:30",
   "status": "ESTIMATED"
  },
  {
@@ -4085,10 +3977,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W012",
-  "eta": "2026-11-18 16:30",
-  "etb": "",
+  "eta": "2026-11-21 01:30",
+  "etb": "2026-11-21 03:30",
   "out_voy": "E013",
-  "etd": "2026-11-19 07:30",
+  "etd": "2026-11-22 05:30",
   "status": "ESTIMATED"
  },
  {
@@ -4097,10 +3989,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W012",
-  "eta": "2026-11-21 02:30",
+  "eta": "2026-11-24 00:30",
   "etb": "",
   "out_voy": "E013",
-  "etd": "2026-11-24 02:30",
+  "etd": "2026-11-27 00:30",
   "status": "ESTIMATED"
  },
  {
@@ -4109,10 +4001,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W012",
-  "eta": "2026-11-24 02:30",
+  "eta": "2026-11-27 00:30",
   "etb": "",
   "out_voy": "E013",
-  "etd": "2026-11-24 02:30",
+  "etd": "2026-11-27 00:30",
   "status": "SKIP"
  },
  {
@@ -4121,10 +4013,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E013",
-  "eta": "2026-12-09 14:30",
+  "eta": "2026-12-12 12:30",
   "etb": "",
   "out_voy": "E013",
-  "etd": "2026-12-11 10:30",
+  "etd": "2026-12-14 08:30",
   "status": "ESTIMATED"
  },
  {
@@ -4133,10 +4025,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E013",
-  "eta": "2026-12-12 01:30",
+  "eta": "2026-12-14 23:30",
   "etb": "",
   "out_voy": "W013",
-  "etd": "2026-12-12 21:30",
+  "etd": "2026-12-15 19:30",
   "status": "ESTIMATED"
  },
  {
@@ -4145,10 +4037,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E013",
-  "eta": "2026-12-14 17:30",
+  "eta": "2026-12-17 15:30",
   "etb": "",
   "out_voy": "W013",
-  "etd": "2026-12-16 01:30",
+  "etd": "2026-12-18 23:30",
   "status": "ESTIMATED"
  },
  {
@@ -4157,10 +4049,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E013",
-  "eta": "2026-12-16 01:30",
+  "eta": "2026-12-18 23:30",
   "etb": "",
   "out_voy": "W013",
-  "etd": "2026-12-16 01:30",
+  "etd": "2026-12-18 23:30",
   "status": "SKIP"
  },
  {
@@ -4169,10 +4061,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E013",
-  "eta": "2026-12-19 01:30",
+  "eta": "2026-12-21 23:30",
   "etb": "",
   "out_voy": "W013",
-  "etd": "2026-12-21 22:30",
+  "etd": "2026-12-24 20:30",
   "status": "ESTIMATED"
  },
  {
@@ -4181,10 +4073,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W013",
-  "eta": "2026-12-26 22:30",
+  "eta": "2026-12-29 20:30",
   "etb": "",
   "out_voy": "W013",
-  "etd": "2026-12-29 04:30",
+  "etd": "2027-01-01 02:30",
   "status": "ESTIMATED"
  },
  {
@@ -4193,47 +4085,155 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W013",
-  "eta": "2026-12-29 04:30",
+  "eta": "2027-01-01 02:30",
   "etb": "",
   "out_voy": "W013",
-  "etd": "2026-12-29 04:30",
+  "etd": "2027-01-01 02:30",
   "status": "SKIP"
  },
  {
-  "key": "WAN HAI A17|NINGBO|W012|E013",
-  "vessel": "WAN HAI A17",
-  "service": "AS2",
-  "port": "NINGBO",
-  "in_voy": "W012",
-  "eta": "2026-09-10 18:00",
-  "etb": "2026-09-12 14:54",
-  "out_voy": "E013",
-  "etd": "2026-09-13 23:12",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI A17|SHANGHAI|W012|E013",
-  "vessel": "WAN HAI A17",
-  "service": "AS2",
-  "port": "SHANGHAI",
-  "in_voy": "W012",
-  "eta": "2026-09-15 01:00",
+  "key": "WAN HAI A16|KAOHSIUNG|W013|E014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "KAOHSIUNG",
+  "in_voy": "W013",
+  "eta": "2027-01-18 14:00",
   "etb": "",
-  "out_voy": "E013",
-  "etd": "2026-09-15 01:00",
-  "status": "SKIP"
+  "out_voy": "E014",
+  "etd": "2027-01-20 18:00",
+  "status": "ESTIMATED"
  },
  {
-  "key": "WAN HAI A17|QINGDAO|W012|E013",
-  "vessel": "WAN HAI A17",
-  "service": "AS2",
-  "port": "QINGDAO",
-  "in_voy": "W012",
-  "eta": "2026-09-16 07:48",
-  "etb": "2026-09-16 09:54",
-  "out_voy": "E013",
-  "etd": "2026-09-17 07:00",
-  "status": "ACTUAL"
+  "key": "WAN HAI A16|SHEKOU|W013|E014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "SHEKOU",
+  "in_voy": "W013",
+  "eta": "2027-01-21 17:00",
+  "etb": "",
+  "out_voy": "E014",
+  "etd": "2027-01-23 12:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|HONG KONG|W013|E014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "HONG KONG",
+  "in_voy": "W013",
+  "eta": "2027-01-23 16:00",
+  "etb": "",
+  "out_voy": "E014",
+  "etd": "2027-01-24 07:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|NINGBO|W013|E014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "NINGBO",
+  "in_voy": "W013",
+  "eta": "2027-01-26 02:00",
+  "etb": "",
+  "out_voy": "E014",
+  "etd": "2027-01-29 02:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|SHANGHAI|W013|E014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "SHANGHAI",
+  "in_voy": "W013",
+  "eta": "2027-01-29 12:00",
+  "etb": "",
+  "out_voy": "E014",
+  "etd": "2027-02-01 12:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|MANZANILLO|E014|E014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "MANZANILLO",
+  "in_voy": "E014",
+  "eta": "2027-02-17 00:00",
+  "etb": "",
+  "out_voy": "E014",
+  "etd": "2027-02-18 20:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|LAZARO CARDENAS|E014|W014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E014",
+  "eta": "2027-02-19 11:00",
+  "etb": "",
+  "out_voy": "W014",
+  "etd": "2027-02-20 07:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|PUERTO QUETZAL|E014|W014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E014",
+  "eta": "2027-02-22 03:00",
+  "etb": "",
+  "out_voy": "W014",
+  "etd": "2027-02-23 11:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|CALLAO|E014|W014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "CALLAO",
+  "in_voy": "E014",
+  "eta": "2027-02-28 17:00",
+  "etb": "",
+  "out_voy": "W014",
+  "etd": "2027-03-01 18:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|GUAYAQUIL|E014|W014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "GUAYAQUIL",
+  "in_voy": "E014",
+  "eta": "2027-03-03 19:00",
+  "etb": "",
+  "out_voy": "W014",
+  "etd": "2027-03-06 16:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|MANZANILLO|W014|W014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "MANZANILLO",
+  "in_voy": "W014",
+  "eta": "2027-03-11 16:00",
+  "etb": "",
+  "out_voy": "W014",
+  "etd": "2027-03-13 22:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "WAN HAI A16|BUSAN NEW PORT|W014|W014",
+  "vessel": "WAN HAI A16",
+  "service": "ASA",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W014",
+  "eta": "2027-03-29 23:00",
+  "etb": "",
+  "out_voy": "W014",
+  "etd": "2027-03-31 00:00",
+  "status": "ESTIMATED"
  },
  {
   "key": "WAN HAI A17|BUSAN NEW PORT|W012|E013",
@@ -4464,42 +4464,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "WAN HAI V01|SHANGHAI|W003|E004",
-  "vessel": "WAN HAI V01",
-  "service": "AS2",
-  "port": "SHANGHAI",
-  "in_voy": "W003",
-  "eta": "2026-08-28 18:30",
-  "etb": "2026-09-08 23:24",
-  "out_voy": "E004",
-  "etd": "2026-09-09 14:24",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI V01|QINGDAO|W003|E004",
-  "vessel": "WAN HAI V01",
-  "service": "AS2",
-  "port": "QINGDAO",
-  "in_voy": "W003",
-  "eta": "2026-09-12 03:00",
-  "etb": "2026-09-12 05:12",
-  "out_voy": "E004",
-  "etd": "2026-09-13 03:30",
-  "status": "ACTUAL"
- },
- {
-  "key": "WAN HAI V01|BUSAN NEW PORT|W003|E004",
-  "vessel": "WAN HAI V01",
-  "service": "AS2",
-  "port": "BUSAN NEW PORT",
-  "in_voy": "W003",
-  "eta": "2026-09-18 08:00",
-  "etb": "2026-09-18 11:00",
-  "out_voy": "E004",
-  "etd": "2026-09-19 04:48",
-  "status": "ACTUAL"
- },
- {
   "key": "WAN HAI V01|ENSENADA|E004|W004",
   "vessel": "WAN HAI V01",
   "service": "AS2",
@@ -4716,18 +4680,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "WAN HAI V02|BUSAN NEW PORT|W003|W003",
-  "vessel": "WAN HAI V02",
-  "service": "ASA",
-  "port": "BUSAN NEW PORT",
-  "in_voy": "W003",
-  "eta": "2026-09-14 01:00",
-  "etb": "",
-  "out_voy": "W003",
-  "etd": "2026-09-15 02:00",
-  "status": "SKIP"
- },
- {
   "key": "WAN HAI V02|KAOHSIUNG|W003|E004",
   "vessel": "WAN HAI V02",
   "service": "ASA",
@@ -4832,8 +4784,8 @@
   "eta": "2026-11-08 03:42",
   "etb": "2026-11-08 09:30",
   "out_voy": "W004",
-  "etd": "2026-11-09 01:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-10 00:18",
+  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI V02|GUAYAQUIL|E004|W004",
@@ -4841,11 +4793,11 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E004",
-  "eta": "2026-11-11 02:00",
-  "etb": "2026-11-14 09:00",
+  "eta": "2026-11-11 14:00",
+  "etb": "2026-11-13 08:54",
   "out_voy": "W004",
-  "etd": "2026-11-14 22:30",
-  "status": "ESTIMATED"
+  "etd": "2026-11-16 18:30",
+  "status": "ACTUAL"
  },
  {
   "key": "WAN HAI V02|MANZANILLO|W004|W004",
@@ -4853,10 +4805,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W004",
-  "eta": "2026-11-19 18:00",
-  "etb": "",
+  "eta": "2026-11-26 18:00",
+  "etb": "2026-11-26 18:00",
   "out_voy": "W004",
-  "etd": "2026-11-21 18:00",
+  "etd": "2026-11-28 22:00",
   "status": "ESTIMATED"
  },
  {
@@ -4865,10 +4817,10 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W004",
-  "eta": "2026-11-24 09:30",
+  "eta": "2026-11-28 22:00",
   "etb": "",
   "out_voy": "W004",
-  "etd": "2026-11-24 09:30",
+  "etd": "2026-11-28 22:00",
   "status": "SKIP"
  },
  {
@@ -4877,10 +4829,10 @@
   "service": "ASA",
   "port": "KAOHSIUNG",
   "in_voy": "W004",
-  "eta": "2026-12-09 00:00",
+  "eta": "2026-12-16 19:00",
   "etb": "",
   "out_voy": "E005",
-  "etd": "2026-12-11 04:00",
+  "etd": "2026-12-18 23:00",
   "status": "ESTIMATED"
  },
  {
@@ -4889,10 +4841,10 @@
   "service": "ASA",
   "port": "SHEKOU",
   "in_voy": "W004",
-  "eta": "2026-12-12 03:00",
+  "eta": "2026-12-19 22:00",
   "etb": "",
   "out_voy": "E005",
-  "etd": "2026-12-13 22:00",
+  "etd": "2026-12-21 17:00",
   "status": "ESTIMATED"
  },
  {
@@ -4901,10 +4853,10 @@
   "service": "ASA",
   "port": "HONG KONG",
   "in_voy": "W004",
-  "eta": "2026-12-14 02:00",
+  "eta": "2026-12-21 21:00",
   "etb": "",
   "out_voy": "E005",
-  "etd": "2026-12-14 17:00",
+  "etd": "2026-12-22 12:00",
   "status": "ESTIMATED"
  },
  {
@@ -4913,10 +4865,10 @@
   "service": "ASA",
   "port": "NINGBO",
   "in_voy": "W004",
-  "eta": "2026-12-16 12:00",
+  "eta": "2026-12-24 07:00",
   "etb": "",
   "out_voy": "E005",
-  "etd": "2026-12-17 21:00",
+  "etd": "2026-12-25 16:00",
   "status": "ESTIMATED"
  },
  {
@@ -4925,10 +4877,10 @@
   "service": "ASA",
   "port": "SHANGHAI",
   "in_voy": "W004",
-  "eta": "2026-12-18 07:00",
+  "eta": "2026-12-26 02:00",
   "etb": "",
   "out_voy": "E005",
-  "etd": "2026-12-19 17:00",
+  "etd": "2026-12-27 12:00",
   "status": "ESTIMATED"
  },
  {
@@ -4937,10 +4889,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "E005",
-  "eta": "2027-01-04 17:00",
+  "eta": "2027-01-12 17:00",
   "etb": "",
   "out_voy": "E005",
-  "etd": "2027-01-06 13:00",
+  "etd": "2027-01-14 13:00",
   "status": "ESTIMATED"
  },
  {
@@ -4949,10 +4901,10 @@
   "service": "ASA",
   "port": "LAZARO CARDENAS",
   "in_voy": "E005",
-  "eta": "2027-01-07 04:00",
+  "eta": "2027-01-15 04:00",
   "etb": "",
   "out_voy": "W005",
-  "etd": "2027-01-08 00:00",
+  "etd": "2027-01-16 00:00",
   "status": "ESTIMATED"
  },
  {
@@ -4961,10 +4913,10 @@
   "service": "ASA",
   "port": "PUERTO QUETZAL",
   "in_voy": "E005",
-  "eta": "2027-01-09 20:00",
+  "eta": "2027-01-18 00:00",
   "etb": "",
   "out_voy": "W005",
-  "etd": "2027-01-11 04:00",
+  "etd": "2027-01-19 08:00",
   "status": "ESTIMATED"
  },
  {
@@ -4973,10 +4925,10 @@
   "service": "ASA",
   "port": "CALLAO",
   "in_voy": "E005",
-  "eta": "2027-01-16 10:00",
+  "eta": "2027-01-24 14:00",
   "etb": "",
   "out_voy": "W005",
-  "etd": "2027-01-17 11:00",
+  "etd": "2027-01-25 15:00",
   "status": "ESTIMATED"
  },
  {
@@ -4985,10 +4937,10 @@
   "service": "ASA",
   "port": "GUAYAQUIL",
   "in_voy": "E005",
-  "eta": "2027-01-19 12:00",
+  "eta": "2027-01-27 16:00",
   "etb": "",
   "out_voy": "W005",
-  "etd": "2027-01-22 09:00",
+  "etd": "2027-01-30 13:00",
   "status": "ESTIMATED"
  },
  {
@@ -4997,10 +4949,10 @@
   "service": "ASA",
   "port": "MANZANILLO",
   "in_voy": "W005",
-  "eta": "2027-01-28 22:00",
+  "eta": "2027-02-06 02:00",
   "etb": "",
   "out_voy": "W005",
-  "etd": "2027-01-31 04:00",
+  "etd": "2027-02-08 08:00",
   "status": "ESTIMATED"
  },
  {
@@ -5009,23 +4961,719 @@
   "service": "ASA",
   "port": "BUSAN NEW PORT",
   "in_voy": "W005",
-  "eta": "2027-02-20 11:00",
+  "eta": "2027-02-25 16:00",
   "etb": "",
   "out_voy": "W005",
-  "etd": "2027-02-21 12:00",
+  "etd": "2027-02-26 17:00",
   "status": "ESTIMATED"
  },
  {
-  "key": "YM ORCHID|SHANGHAI|W198|E199",
-  "vessel": "YM ORCHID",
+  "key": "YM FOUNTAIN|NINGBO|W185|E186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "NINGBO",
+  "in_voy": "W185",
+  "eta": "2026-10-21 08:00",
+  "etb": "",
+  "out_voy": "E186",
+  "etd": "2026-10-22 14:00",
+  "status": "SKIP"
+ },
+ {
+  "key": "YM FOUNTAIN|SHANGHAI|W185|E186",
+  "vessel": "YM FOUNTAIN",
   "service": "AS2",
   "port": "SHANGHAI",
-  "in_voy": "W198",
-  "eta": "2026-08-31 16:00",
-  "etb": "2026-09-14 21:00",
-  "out_voy": "E199",
-  "etd": "2026-09-16 10:30",
+  "in_voy": "W185",
+  "eta": "2026-10-23 03:00",
+  "etb": "2026-10-23 10:00",
+  "out_voy": "E186",
+  "etd": "2026-10-24 10:00",
   "status": "ACTUAL"
+ },
+ {
+  "key": "YM FOUNTAIN|QINGDAO|W185|E186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "QINGDAO",
+  "in_voy": "W185",
+  "eta": "2026-10-26 16:00",
+  "etb": "2026-10-26 21:45",
+  "out_voy": "E186",
+  "etd": "2026-10-27 21:00",
+  "status": "ACTUAL"
+ },
+ {
+  "key": "YM FOUNTAIN|BUSAN NEW PORT|W185|E186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W185",
+  "eta": "2026-10-29 07:00",
+  "etb": "2026-10-30 00:40",
+  "out_voy": "E186",
+  "etd": "2026-10-31 03:58",
+  "status": "ACTUAL"
+ },
+ {
+  "key": "YM FOUNTAIN|ENSENADA|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "ENSENADA",
+  "in_voy": "E186",
+  "eta": "2026-11-13 03:00",
+  "etb": "2026-11-14 06:06",
+  "out_voy": "W186",
+  "etd": "2026-11-15 06:25",
+  "status": "ACTUAL"
+ },
+ {
+  "key": "YM FOUNTAIN|MANZANILLO|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "MANZANILLO",
+  "in_voy": "E186",
+  "eta": "2026-11-18 01:00",
+  "etb": "2026-11-18 06:00",
+  "out_voy": "W186",
+  "etd": "2026-11-19 14:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|LAZARO CARDENAS|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E186",
+  "eta": "2026-11-20 07:00",
+  "etb": "2026-11-22 16:00",
+  "out_voy": "W186",
+  "etd": "2026-11-23 01:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|PUERTO QUETZAL|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E186",
+  "eta": "2026-11-25 12:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2026-11-27 23:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|BUENAVENTURA|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "BUENAVENTURA",
+  "in_voy": "E186",
+  "eta": "2026-11-30 15:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2026-12-01 20:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|CALLAO|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "CALLAO",
+  "in_voy": "E186",
+  "eta": "2026-12-05 12:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2026-12-06 11:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|SAN ANTONIO|E186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "SAN ANTONIO",
+  "in_voy": "E186",
+  "eta": "2026-12-10 03:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2026-12-11 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|SHANGHAI|W186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "SHANGHAI",
+  "in_voy": "W186",
+  "eta": "2027-01-03 03:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2027-01-04 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|NINGBO|W186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "NINGBO",
+  "in_voy": "W186",
+  "eta": "2027-01-06 03:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2027-01-07 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|QINGDAO|W186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "QINGDAO",
+  "in_voy": "W186",
+  "eta": "2027-01-11 03:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2027-01-12 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM FOUNTAIN|BUSAN NEW PORT|W186|W186",
+  "vessel": "YM FOUNTAIN",
+  "service": "AS2",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W186",
+  "eta": "2027-01-14 03:00",
+  "etb": "",
+  "out_voy": "W186",
+  "etd": "2027-01-15 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|NINGBO|W110|E111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "NINGBO",
+  "in_voy": "W110",
+  "eta": "2027-01-06 08:00",
+  "etb": "",
+  "out_voy": "E111",
+  "etd": "2027-01-07 14:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|SHANGHAI|W110|E111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "SHANGHAI",
+  "in_voy": "W110",
+  "eta": "2027-01-08 03:00",
+  "etb": "",
+  "out_voy": "E111",
+  "etd": "2027-01-10 08:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|QINGDAO|W110|E111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "QINGDAO",
+  "in_voy": "W110",
+  "eta": "2027-01-11 16:00",
+  "etb": "",
+  "out_voy": "E111",
+  "etd": "2027-01-12 10:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|BUSAN NEW PORT|W110|E111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W110",
+  "eta": "2027-01-13 22:00",
+  "etb": "",
+  "out_voy": "E111",
+  "etd": "2027-01-15 04:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|ENSENADA|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "ENSENADA",
+  "in_voy": "E111",
+  "eta": "2027-01-29 03:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-01-30 01:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|MANZANILLO|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "MANZANILLO",
+  "in_voy": "E111",
+  "eta": "2027-02-03 01:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-02-04 14:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|LAZARO CARDENAS|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E111",
+  "eta": "2027-02-05 07:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-02-07 21:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|PUERTO QUETZAL|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E111",
+  "eta": "2027-02-10 12:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-02-12 23:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|BUENAVENTURA|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "BUENAVENTURA",
+  "in_voy": "E111",
+  "eta": "2027-02-15 15:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-02-16 20:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|CALLAO|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "CALLAO",
+  "in_voy": "E111",
+  "eta": "2027-02-20 12:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-02-21 11:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|SAN ANTONIO|E111|W111",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "SAN ANTONIO",
+  "in_voy": "E111",
+  "eta": "2027-02-25 03:00",
+  "etb": "",
+  "out_voy": "W111",
+  "etd": "2027-02-26 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MASCULINITY|NINGBO|W111|E112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "NINGBO",
+  "in_voy": "W111",
+  "eta": "2027-03-24 08:00",
+  "etb": "",
+  "out_voy": "E112",
+  "etd": "2027-03-25 14:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|SHANGHAI|W111|E112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "SHANGHAI",
+  "in_voy": "W111",
+  "eta": "2027-03-26 03:00",
+  "etb": "",
+  "out_voy": "E112",
+  "etd": "2027-03-28 08:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|QINGDAO|W111|E112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "QINGDAO",
+  "in_voy": "W111",
+  "eta": "2027-03-29 16:00",
+  "etb": "",
+  "out_voy": "E112",
+  "etd": "2027-03-30 10:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|BUSAN NEW PORT|W111|E112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W111",
+  "eta": "2027-03-31 22:00",
+  "etb": "",
+  "out_voy": "E112",
+  "etd": "2027-04-02 04:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|ENSENADA|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "ENSENADA",
+  "in_voy": "E112",
+  "eta": "2027-04-16 03:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-04-17 01:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|MANZANILLO|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "MANZANILLO",
+  "in_voy": "E112",
+  "eta": "2027-04-21 01:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-04-22 14:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|LAZARO CARDENAS|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E112",
+  "eta": "2027-04-23 07:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-04-25 21:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|PUERTO QUETZAL|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E112",
+  "eta": "2027-04-28 12:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-04-30 23:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|BUENAVENTURA|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "BUENAVENTURA",
+  "in_voy": "E112",
+  "eta": "2027-05-03 15:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-05-04 20:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|CALLAO|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "CALLAO",
+  "in_voy": "E112",
+  "eta": "2027-05-08 12:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-05-09 11:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MASCULINITY|SAN ANTONIO|E112|W112",
+  "vessel": "YM MASCULINITY",
+  "service": "AS2",
+  "port": "SAN ANTONIO",
+  "in_voy": "E112",
+  "eta": "2027-05-13 03:00",
+  "etb": "",
+  "out_voy": "W112",
+  "etd": "2027-05-14 15:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|NINGBO|W116|E117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "NINGBO",
+  "in_voy": "W116",
+  "eta": "2026-12-30 08:00",
+  "etb": "",
+  "out_voy": "E117",
+  "etd": "2026-12-31 14:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|SHANGHAI|W116|E117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "SHANGHAI",
+  "in_voy": "W116",
+  "eta": "2027-01-01 03:00",
+  "etb": "",
+  "out_voy": "E117",
+  "etd": "2027-01-03 08:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|QINGDAO|W116|E117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "QINGDAO",
+  "in_voy": "W116",
+  "eta": "2027-01-04 16:00",
+  "etb": "",
+  "out_voy": "E117",
+  "etd": "2027-01-05 10:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|BUSAN NEW PORT|W116|E117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W116",
+  "eta": "2027-01-06 22:00",
+  "etb": "",
+  "out_voy": "E117",
+  "etd": "2027-01-08 04:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|ENSENADA|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "ENSENADA",
+  "in_voy": "E117",
+  "eta": "2027-01-22 03:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-01-23 01:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|MANZANILLO|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "MANZANILLO",
+  "in_voy": "E117",
+  "eta": "2027-01-27 01:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-01-28 14:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|LAZARO CARDENAS|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E117",
+  "eta": "2027-01-29 07:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-01-31 21:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|PUERTO QUETZAL|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E117",
+  "eta": "2027-02-03 12:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-02-05 23:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|BUENAVENTURA|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "BUENAVENTURA",
+  "in_voy": "E117",
+  "eta": "2027-02-08 15:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-02-09 20:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|CALLAO|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "CALLAO",
+  "in_voy": "E117",
+  "eta": "2027-02-13 12:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-02-14 11:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|SAN ANTONIO|E117|W117",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "SAN ANTONIO",
+  "in_voy": "E117",
+  "eta": "2027-02-18 03:00",
+  "etb": "",
+  "out_voy": "W117",
+  "etd": "2027-02-19 15:00",
+  "status": "ESTIMATED"
+ },
+ {
+  "key": "YM MUTUALITY|NINGBO|W117|E118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "NINGBO",
+  "in_voy": "W117",
+  "eta": "2027-03-17 08:00",
+  "etb": "",
+  "out_voy": "E118",
+  "etd": "2027-03-18 14:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|SHANGHAI|W117|E118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "SHANGHAI",
+  "in_voy": "W117",
+  "eta": "2027-03-19 03:00",
+  "etb": "",
+  "out_voy": "E118",
+  "etd": "2027-03-21 08:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|QINGDAO|W117|E118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "QINGDAO",
+  "in_voy": "W117",
+  "eta": "2027-03-22 16:00",
+  "etb": "",
+  "out_voy": "E118",
+  "etd": "2027-03-23 10:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|BUSAN NEW PORT|W117|E118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "BUSAN NEW PORT",
+  "in_voy": "W117",
+  "eta": "2027-03-24 22:00",
+  "etb": "",
+  "out_voy": "E118",
+  "etd": "2027-03-26 04:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|ENSENADA|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "ENSENADA",
+  "in_voy": "E118",
+  "eta": "2027-04-09 03:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-04-10 01:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|MANZANILLO|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "MANZANILLO",
+  "in_voy": "E118",
+  "eta": "2027-04-14 01:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-04-15 14:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|LAZARO CARDENAS|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "LAZARO CARDENAS",
+  "in_voy": "E118",
+  "eta": "2027-04-16 07:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-04-18 21:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|PUERTO QUETZAL|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "PUERTO QUETZAL",
+  "in_voy": "E118",
+  "eta": "2027-04-21 12:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-04-23 23:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|BUENAVENTURA|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "BUENAVENTURA",
+  "in_voy": "E118",
+  "eta": "2027-04-26 15:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-04-27 20:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|CALLAO|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "CALLAO",
+  "in_voy": "E118",
+  "eta": "2027-05-01 12:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-05-02 11:00",
+  "status": "LONGTERM"
+ },
+ {
+  "key": "YM MUTUALITY|SAN ANTONIO|E118|W118",
+  "vessel": "YM MUTUALITY",
+  "service": "AS2",
+  "port": "SAN ANTONIO",
+  "in_voy": "E118",
+  "eta": "2027-05-06 03:00",
+  "etb": "",
+  "out_voy": "W118",
+  "etd": "2027-05-07 15:00",
+  "status": "LONGTERM"
  },
  {
   "key": "YM ORCHID|QINGDAO|W198|E199",
@@ -5141,7 +5789,7 @@
   "service": "AS2",
   "port": "NINGBO",
   "in_voy": "W199",
-  "eta": "2026-12-01 12:00",
+  "eta": "2026-12-02 08:00",
   "etb": "",
   "out_voy": "E200",
   "etd": "2026-12-03 14:00",
@@ -5268,18 +5916,6 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "YM SUCCESS|SAN ANTONIO|E188|W188",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "SAN ANTONIO",
-  "in_voy": "E188",
-  "eta": "2026-09-11 08:00",
-  "etb": "2026-09-11 23:24",
-  "out_voy": "W188",
-  "etd": "2026-09-15 07:24",
-  "status": "ACTUAL"
- },
- {
   "key": "YM SUCCESS|NINGBO|W188|E189",
   "vessel": "YM SUCCESS",
   "service": "AS2",
@@ -5334,10 +5970,10 @@
   "port": "ENSENADA",
   "in_voy": "E189",
   "eta": "2026-11-06 03:00",
-  "etb": "",
+  "etb": "2026-11-06 16:30",
   "out_voy": "W189",
-  "etd": "2026-11-07 01:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-07 04:47",
+  "status": "ACTUAL"
  },
  {
   "key": "YM SUCCESS|MANZANILLO|E189|W189",
@@ -5346,10 +5982,10 @@
   "port": "MANZANILLO",
   "in_voy": "E189",
   "eta": "2026-11-11 01:00",
-  "etb": "",
+  "etb": "2026-11-11 21:29",
   "out_voy": "W189",
-  "etd": "2026-11-12 14:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-12 18:40",
+  "status": "ACTUAL"
  },
  {
   "key": "YM SUCCESS|LAZARO CARDENAS|E189|W189",
@@ -5358,10 +5994,10 @@
   "port": "LAZARO CARDENAS",
   "in_voy": "E189",
   "eta": "2026-11-13 07:00",
-  "etb": "",
+  "etb": "2026-11-15 22:18",
   "out_voy": "W189",
-  "etd": "2026-11-15 21:00",
-  "status": "ESTIMATED"
+  "etd": "2026-11-16 21:42",
+  "status": "ACTUAL"
  },
  {
   "key": "YM SUCCESS|PUERTO QUETZAL|E189|W189",
@@ -5369,7 +6005,7 @@
   "service": "AS2",
   "port": "PUERTO QUETZAL",
   "in_voy": "E189",
-  "eta": "2026-11-18 12:00",
+  "eta": "2026-11-19 12:00",
   "etb": "",
   "out_voy": "W189",
   "etd": "2026-11-20 23:00",
@@ -5412,135 +6048,51 @@
   "status": "ESTIMATED"
  },
  {
-  "key": "YM SUCCESS|SHANGHAI|W189|E190",
+  "key": "YM SUCCESS|SHANGHAI|W189|W189",
   "vessel": "YM SUCCESS",
   "service": "AS2",
   "port": "SHANGHAI",
   "in_voy": "W189",
-  "eta": "2026-12-27 20:00",
+  "eta": "2026-12-27 03:00",
   "etb": "",
-  "out_voy": "E190",
-  "etd": "2026-12-28 21:00",
+  "out_voy": "W189",
+  "etd": "2026-12-28 15:00",
   "status": "ESTIMATED"
  },
  {
-  "key": "YM SUCCESS|NINGBO|W189|E190",
+  "key": "YM SUCCESS|NINGBO|W189|W189",
   "vessel": "YM SUCCESS",
   "service": "AS2",
   "port": "NINGBO",
   "in_voy": "W189",
-  "eta": "2026-12-30 08:00",
+  "eta": "2026-12-30 03:00",
   "etb": "",
-  "out_voy": "E190",
-  "etd": "2026-12-31 14:00",
+  "out_voy": "W189",
+  "etd": "2026-12-31 15:00",
   "status": "ESTIMATED"
  },
  {
-  "key": "YM SUCCESS|QINGDAO|W189|E190",
+  "key": "YM SUCCESS|QINGDAO|W189|W189",
   "vessel": "YM SUCCESS",
   "service": "AS2",
   "port": "QINGDAO",
   "in_voy": "W189",
-  "eta": "2027-01-04 16:00",
+  "eta": "2027-01-04 03:00",
   "etb": "",
-  "out_voy": "E190",
-  "etd": "2027-01-05 10:00",
+  "out_voy": "W189",
+  "etd": "2027-01-05 15:00",
   "status": "ESTIMATED"
  },
  {
-  "key": "YM SUCCESS|BUSAN NEW PORT|W189|E190",
+  "key": "YM SUCCESS|BUSAN NEW PORT|W189|W189",
   "vessel": "YM SUCCESS",
   "service": "AS2",
   "port": "BUSAN NEW PORT",
   "in_voy": "W189",
-  "eta": "2027-01-06 22:00",
+  "eta": "2027-01-07 03:00",
   "etb": "",
-  "out_voy": "E190",
-  "etd": "2027-01-08 04:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|ENSENADA|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "ENSENADA",
-  "in_voy": "E190",
-  "eta": "2027-01-22 03:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-01-23 01:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|MANZANILLO|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "MANZANILLO",
-  "in_voy": "E190",
-  "eta": "2027-01-27 01:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-01-28 14:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|LAZARO CARDENAS|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "LAZARO CARDENAS",
-  "in_voy": "E190",
-  "eta": "2027-01-29 07:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-01-31 21:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|PUERTO QUETZAL|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "PUERTO QUETZAL",
-  "in_voy": "E190",
-  "eta": "2027-02-03 12:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-02-05 23:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|BUENAVENTURA|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "BUENAVENTURA",
-  "in_voy": "E190",
-  "eta": "2027-02-08 15:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-02-09 20:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|CALLAO|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "CALLAO",
-  "in_voy": "E190",
-  "eta": "2027-02-13 12:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-02-14 11:00",
-  "status": "ESTIMATED"
- },
- {
-  "key": "YM SUCCESS|SAN ANTONIO|E190|W190",
-  "vessel": "YM SUCCESS",
-  "service": "AS2",
-  "port": "SAN ANTONIO",
-  "in_voy": "E190",
-  "eta": "2027-02-18 03:00",
-  "etb": "",
-  "out_voy": "W190",
-  "etd": "2027-02-19 15:00",
+  "out_voy": "W189",
+  "etd": "2027-01-08 15:00",
   "status": "ESTIMATED"
  }
 ]
