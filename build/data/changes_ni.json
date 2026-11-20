@@ -1447,5 +1447,32 @@
   "change": "Removed",
   "old": "12-03 (Thu)",
   "new": ""
+ },
+ {
+  "id": "2026-11-20-0-Busan|MAERSK EDINBURGH",
+  "date": "2026-11-20",
+  "pol": "Busan",
+  "vessel": "MAERSK EDINBURGH",
+  "change": "ETA changed",
+  "old": "12-24 (Thu)",
+  "new": "12-31 (Thu)"
+ },
+ {
+  "id": "2026-11-20-1-Shanghai|NAVIOS JASMINE",
+  "date": "2026-11-20",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS JASMINE",
+  "change": "ETD changed",
+  "old": "11-27 (Fri)",
+  "new": "11-28 (Sat)"
+ },
+ {
+  "id": "2026-11-20-2-Shanghai|NAVIOS DEVOTION",
+  "date": "2026-11-20",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS DEVOTION",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-19 (Sat)"
  }
 ]

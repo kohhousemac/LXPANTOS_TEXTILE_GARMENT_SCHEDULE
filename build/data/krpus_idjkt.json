@@ -86,13 +86,13 @@
   "voyage": "2611S",
   "etd": "11-22 (Sun)",
   "eta": "12-04 (Fri)",
+  "tt": 12,
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
   "closedCarriers": "KMTC",
   "bookingClosed": false,
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
-  "tt": 12,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "12-04 (Fri)",
-  "prevTt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -102,17 +102,14 @@
   "voyage": "2612S",
   "etd": "12-14 (Mon)",
   "eta": "12-24 (Thu)",
+  "tt": 10,
+  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
   "closedCarriers": "",
   "bookingClosed": false,
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
-  "tt": 10,
-  "prevEtd": "12-14 (Mon)",
-  "prevEta": "12-23 (Wed)",
-  "prevTt": 9,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  }
 ]

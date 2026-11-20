@@ -1,20 +1,6 @@
 [
  {
   "carrier": "SITC",
-  "vessel": "SITC FANGCHENG",
-  "voyage": "2623N",
-  "etd": "11-01 (Sun)",
-  "eta": "11-05 (Thu)",
-  "service": "CJV2",
-  "tt": 4,
-  "prevEtd": "11-01 (Sun)",
-  "prevEta": "11-05 (Thu)",
-  "prevTt": 4,
-  "changedFields": [],
-  "status": "departed"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC YOKKAICHI",
   "voyage": "2629N",
   "etd": "11-03 (Tue)",
@@ -109,7 +95,7 @@
   "prevEta": "11-22 (Sun)",
   "prevTt": 3,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "SITC",
@@ -117,11 +103,11 @@
   "voyage": "2646N",
   "etd": "11-20 (Fri)",
   "eta": "11-26 (Thu)",
-  "service": "CJV5(SNL)",
   "tt": 6,
-  "prevEtd": "11-20 (Fri)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 6,
+  "service": "CJV5",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -131,11 +117,11 @@
   "voyage": "2625N",
   "etd": "11-22 (Sun)",
   "eta": "11-26 (Thu)",
-  "service": "CJV2",
   "tt": 4,
-  "prevEtd": "11-22 (Sun)",
-  "prevEta": "11-26 (Thu)",
-  "prevTt": 4,
+  "service": "CJV2",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -145,31 +131,28 @@
   "voyage": "2631N",
   "etd": "11-25 (Wed)",
   "eta": "11-28 (Sat)",
-  "service": "CJV3",
   "tt": 3,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "11-29 (Sun)",
-  "prevTt": 4,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "service": "CJV3",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
   "vessel": "SITC QINGDAO",
   "voyage": "2629N",
-  "etd": "11-30 (Mon)",
-  "eta": "12-04 (Fri)",
-  "service": "CJV2",
+  "etd": "12-01 (Tue)",
+  "eta": "12-05 (Sat)",
   "tt": 4,
-  "prevEtd": "11-29 (Sun)",
+  "service": "CJV2",
+  "prevEtd": "11-30 (Mon)",
   "prevEta": "12-04 (Fri)",
-  "prevTt": 5,
+  "prevTt": 4,
   "changedFields": [
    "etd",
-   "tt"
+   "eta"
   ],
   "status": "changed"
  },
@@ -179,11 +162,11 @@
   "voyage": "2640N",
   "etd": "12-01 (Tue)",
   "eta": "12-07 (Mon)",
-  "service": "CJV5(SNL)",
   "tt": 6,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 6,
+  "service": "CJV5",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -193,16 +176,13 @@
   "voyage": "2629N",
   "etd": "12-02 (Wed)",
   "eta": "12-05 (Sat)",
-  "service": "CJV3",
   "tt": 3,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 4,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "service": "CJV3",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -210,11 +190,11 @@
   "voyage": "2648N",
   "etd": "12-04 (Fri)",
   "eta": "12-10 (Thu)",
-  "service": "CJV5(SNL)",
   "tt": 6,
-  "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-10 (Thu)",
-  "prevTt": 6,
+  "service": "CJV5",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -224,11 +204,11 @@
   "voyage": "2633N",
   "etd": "12-07 (Mon)",
   "eta": "12-11 (Fri)",
-  "service": "CJV2",
   "tt": 4,
-  "prevEtd": "12-07 (Mon)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 4,
+  "service": "CJV2",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -236,15 +216,18 @@
   "carrier": "SITC",
   "vessel": "SITC SHENZHEN",
   "voyage": "2629N",
-  "etd": "12-08 (Tue)",
+  "etd": "12-09 (Wed)",
   "eta": "12-12 (Sat)",
+  "tt": 3,
   "service": "CJV3",
-  "tt": 4,
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-12 (Sat)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -252,11 +235,11 @@
   "voyage": "2642N",
   "etd": "12-10 (Thu)",
   "eta": "12-17 (Thu)",
-  "service": "CJV5(SNL)",
   "tt": 7,
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "12-17 (Thu)",
-  "prevTt": 7,
+  "service": "CJV5",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -266,16 +249,13 @@
   "voyage": "2627N",
   "etd": "12-12 (Sat)",
   "eta": "12-16 (Wed)",
-  "service": "CJV2",
   "tt": 4,
-  "prevEtd": "12-11 (Fri)",
-  "prevEta": "12-16 (Wed)",
-  "prevTt": 5,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "service": "CJV2",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -283,15 +263,26 @@
   "voyage": "2633N",
   "etd": "12-16 (Wed)",
   "eta": "12-19 (Sat)",
-  "service": "CJV3",
   "tt": 3,
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 4,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "service": "CJV3",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SIRI BHUM",
+  "voyage": "2650N",
+  "etd": "12-18 (Fri)",
+  "eta": "12-24 (Thu)",
+  "tt": 6,
+  "service": "CJV5",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  }
 ]

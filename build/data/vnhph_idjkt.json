@@ -52,11 +52,8 @@
   "prevEtd": "11-19 (Thu)",
   "prevEta": "11-28 (Sat)",
   "prevTt": 9,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "departed"
  },
  {
   "carrier": "SITC",
@@ -64,16 +61,13 @@
   "voyage": "2654S",
   "etd": "11-25 (Wed)",
   "eta": "12-04 (Fri)",
-  "service": "JTH",
   "tt": 9,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 10,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "service": "JTH",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -81,11 +75,11 @@
   "voyage": "2634S",
   "etd": "12-02 (Wed)",
   "eta": "12-11 (Fri)",
-  "service": "JTH",
   "tt": 9,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-11 (Fri)",
-  "prevTt": 9,
+  "service": "JTH",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -95,11 +89,11 @@
   "voyage": "2634S",
   "etd": "12-09 (Wed)",
   "eta": "12-18 (Fri)",
-  "service": "JTH",
   "tt": 9,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-18 (Fri)",
-  "prevTt": 9,
+  "service": "JTH",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -109,11 +103,11 @@
   "voyage": "2656S",
   "etd": "12-16 (Wed)",
   "eta": "12-25 (Fri)",
-  "service": "JTH",
   "tt": 9,
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-25 (Fri)",
-  "prevTt": 9,
+  "service": "JTH",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  }

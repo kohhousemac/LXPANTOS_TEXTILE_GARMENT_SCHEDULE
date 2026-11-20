@@ -5,10 +5,10 @@
   "vessel": "MAERSK EDINBURGH",
   "voyage": "646E",
   "etd": "11-22 (Sun)",
-  "eta": "12-24 (Thu)",
-  "tt": "33d 11h",
+  "eta": "12-31 (Thu)",
+  "tt": "40d 11h",
   "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Busan\", \"dep\": \"11-22 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-10 16:00\", \"vessel\": \"MAERSK EDINBURGH / 646E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-22 05:00\", \"to\": \"Corinto\", \"arr\": \"12-24 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 652S\"}]"
+  "legs": "[{\"from\": \"Busan\", \"dep\": \"11-22 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-10 16:00\", \"vessel\": \"MAERSK EDINBURGH / 646E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
  },
  {
   "pol": "Busan",
@@ -70,11 +70,11 @@
   "carrier": "MSK",
   "vessel": "NAVIOS JASMINE",
   "voyage": "648E",
-  "etd": "11-27 (Fri)",
+  "etd": "11-28 (Sat)",
   "eta": "12-31 (Thu)",
-  "tt": "34d 17h",
+  "tt": "34d 7h",
   "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"11-27 20:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-19 13:16\", \"vessel\": \"NAVIOS JASMINE / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
+  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"11-28 06:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-19 13:16\", \"vessel\": \"NAVIOS JASMINE / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
  },
  {
   "pol": "Shanghai",
@@ -119,6 +119,17 @@
   "tt": "43d 18h",
   "ts": "Busan → Lazaro Cardenas",
   "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-16 19:00\", \"to\": \"Busan\", \"arr\": \"12-23 01:00\", \"vessel\": \"MAERSK TOKYO / 650E\"}, {\"from\": \"Busan\", \"dep\": \"01-02 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-20 04:00\", \"vessel\": \"MAERSK EL ALTO / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
+ },
+ {
+  "pol": "Shanghai",
+  "carrier": "MSK",
+  "vessel": "NAVIOS DEVOTION",
+  "voyage": "651E",
+  "etd": "12-19 (Sat)",
+  "eta": "01-14 (Thu)",
+  "tt": "27d 0h",
+  "ts": "Lazaro Cardenas",
+  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-19 13:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-08 07:00\", \"vessel\": \"NAVIOS DEVOTION / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
  },
  {
   "pol": "Yantian",
@@ -215,9 +226,9 @@
   "voyage": "050N",
   "etd": "11-28 (Sat)",
   "eta": "01-14 (Thu)",
-  "tt": "48d 0h",
+  "tt": "47d 22h",
   "ts": "Shanghai → Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-28 11:30\", \"to\": \"Shanghai\", \"arr\": \"12-04 06:00\", \"vessel\": \"SHIMANAMI BAY / 050N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-09 19:00\", \"to\": \"Busan\", \"arr\": \"12-16 03:00\", \"vessel\": \"MAERSK SALINA / 649E\"}, {\"from\": \"Busan\", \"dep\": \"12-20 06:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-28 13:30\", \"to\": \"Shanghai\", \"arr\": \"12-04 06:00\", \"vessel\": \"SHIMANAMI BAY / 050N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-09 19:00\", \"to\": \"Busan\", \"arr\": \"12-16 03:00\", \"vessel\": \"MAERSK SALINA / 649E\"}, {\"from\": \"Busan\", \"dep\": \"12-20 06:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
  },
  {
   "pol": "Ho Chi Minh",

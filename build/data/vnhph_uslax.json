@@ -57,7 +57,7 @@
   "prevEta": "12-10 (Thu)",
   "prevTt": 21,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "MSC",
@@ -65,17 +65,14 @@
   "voyage": "GQ647N",
   "etd": "11-24 (Tue)",
   "eta": "12-13 (Sun)",
+  "tt": 19,
   "service": "PEARL",
   "rotation": "Haiphong → Yantian → Los Angeles",
-  "tt": 19,
-  "prevEtd": "11-24 (Tue)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 18,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "WHL",
@@ -83,17 +80,14 @@
   "voyage": "E019",
   "etd": "11-28 (Sat)",
   "eta": "12-21 (Mon)",
+  "tt": 23,
   "service": "AP1",
   "rotation": "Haiphong → Los Angeles (직항)",
-  "tt": 23,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-21 (Mon)",
-  "prevTt": 25,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSC",
@@ -101,12 +95,12 @@
   "voyage": "GQ648N",
   "etd": "12-03 (Thu)",
   "eta": "12-22 (Tue)",
+  "tt": 19,
   "service": "PEARL",
   "rotation": "Haiphong → Yantian → Los Angeles",
-  "tt": 19,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 19,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -116,17 +110,14 @@
   "voyage": "GQ649N",
   "etd": "12-04 (Fri)",
   "eta": "12-22 (Tue)",
-  "service": "PEARL",
-  "rotation": "Haiphong → Yantian → Los Angeles",
   "tt": 18,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 17,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "service": "PEARL",
+  "rotation": "Haiphong → Los Angeles",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "WHL",
@@ -134,17 +125,14 @@
   "voyage": "E019",
   "etd": "12-04 (Fri)",
   "eta": "12-29 (Tue)",
+  "tt": 25,
   "service": "AP1",
   "rotation": "Haiphong → Los Angeles (직항)",
-  "tt": 25,
-  "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-30 (Wed)",
-  "prevTt": 26,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "WHL",
@@ -152,12 +140,12 @@
   "voyage": "E047",
   "etd": "12-10 (Thu)",
   "eta": "01-04 (Mon)",
+  "tt": 25,
   "service": "AP1",
   "rotation": "Haiphong → Los Angeles (직항)",
-  "tt": 25,
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "01-04 (Mon)",
-  "prevTt": 25,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
   "status": "same"
  },
@@ -167,29 +155,14 @@
   "voyage": "GQ650N",
   "etd": "12-10 (Thu)",
   "eta": "12-30 (Wed)",
+  "tt": 20,
   "service": "PEARL",
   "rotation": "Haiphong → Los Angeles",
-  "tt": 20,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "new"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC GIULIA",
-  "voyage": "GQ650N",
-  "etd": "12-14 (Mon)",
-  "eta": "12-31 (Thu)",
-  "service": "PEARL",
-  "rotation": "Haiphong → Yantian → Los Angeles",
-  "tt": 17,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
+  "status": "same"
  },
  {
   "carrier": "MSC",
@@ -197,13 +170,13 @@
   "voyage": "GQ651N",
   "etd": "12-17 (Thu)",
   "eta": "01-05 (Tue)",
+  "tt": 19,
   "service": "PEARL",
   "rotation": "Haiphong → Yantian → Los Angeles",
-  "tt": 19,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

@@ -59,13 +59,13 @@
   "carrier": "CMA CGM",
   "vessel": "CSCL LONG BEACH",
   "voyage": "PEX0B0E19",
-  "etd": "11-27 (Fri)",
+  "etd": "11-23 (Mon)",
   "eta": "01-11 (Mon)",
+  "tt": 49,
   "service": "PEX2",
-  "tt": 45,
-  "prevEtd": "11-23 (Mon)",
+  "prevEtd": "11-27 (Fri)",
   "prevEta": "01-11 (Mon)",
-  "prevTt": 49,
+  "prevTt": 45,
   "changedFields": [
    "etd",
    "tt"
@@ -77,41 +77,50 @@
   "vessel": "CMA CGM CAPE COD",
   "voyage": "PEX0D0E19",
   "etd": "11-30 (Mon)",
-  "eta": "01-17 (Sun)",
+  "eta": "01-18 (Mon)",
+  "tt": 49,
   "service": "PEX2",
-  "tt": 48,
   "prevEtd": "11-30 (Mon)",
   "prevEta": "01-17 (Sun)",
   "prevTt": 48,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ANDROMAQUE",
   "voyage": "PEX0F0E19",
   "etd": "12-07 (Mon)",
-  "eta": "01-24 (Sun)",
+  "eta": "01-25 (Mon)",
+  "tt": 49,
   "service": "PEX2",
-  "tt": 48,
   "prevEtd": "12-07 (Mon)",
   "prevEta": "01-24 (Sun)",
   "prevTt": 48,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "CMA CGM DIGNITY",
   "voyage": "PEX0H0E19",
   "etd": "12-14 (Mon)",
-  "eta": "01-31 (Sun)",
+  "eta": "02-01 (Mon)",
+  "tt": 49,
   "service": "PEX2",
-  "tt": 48,
   "prevEtd": "12-14 (Mon)",
   "prevEta": "01-31 (Sun)",
   "prevTt": 48,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]
