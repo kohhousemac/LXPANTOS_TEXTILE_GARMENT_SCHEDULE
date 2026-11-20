@@ -55,6 +55,8 @@ LANE_NOTES = {
     'cnsha_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 상해·셔커우 모두 기항, 태평양 → 파나마 운하(Balboa → Manzanillo PA) 경유',
     'cnsha_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준',
     'cnngb_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준 · 닝보 SKIP 항차는 제외',
+    'cnshk_gtpqz': 'WHL(완하이) ASA · 완하이 모선 추적 매일 수집 기준 · 셔커우 SKIP 항차는 제외',
+    'twkhh_gtpqz': 'WHL(완하이) ASA · 완하이 모선 추적 매일 수집 기준 · 카오슝 SKIP 항차는 제외',
     'cnshk_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 셔커우 선적, 상해·부산 등 기항 후 파나마 운하 경유',
     'vnhph_uslax': 'MSC PEARL 직항(West Basin) + WHL AP1 직항',
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM TWS 직항(Maher) · 환적편 제외 (WHL은 셔커우 환적만 있어 미포함)',
@@ -348,14 +350,14 @@ def cc_page():
 ''' + ''.join(lanes) + '''  </section>
 '''
 
-GT_IDS = ['cnsha_gtpqz', 'cnngb_gtpqz']
+GT_IDS = ['cnsha_gtpqz', 'cnngb_gtpqz', 'cnshk_gtpqz', 'twkhh_gtpqz']
 
 def gt_lane(route, pol):
     html = lane_page('x', 'x', 'gt', route, pol, 'Puerto Quetzal', False)
     m = re.search(r'(      <section class="lx-lane".*?\n      </section>\n)', html, re.S)
     s = m.group(1)
     s = re.sub(r'\n\s*<div class="lx-badges[^\n]*</div>', '', s)
-    s = s.replace('data-source="' + route + '"', 'data-source="sailings"').replace('data-source="port_calls_asia"', 'data-source="port_calls sailings"')
+    s = s.replace('data-source="' + route + '"', 'data-source="sailings port_calls"' if route in ('cnshk_gtpqz', 'twkhh_gtpqz') else 'data-source="sailings"').replace('data-source="port_calls_asia"', 'data-source="port_calls sailings"')
     s = s.replace('<span class="lx-code">' + route.split('_')[0].upper() + ' <i>→</i> GTPQZ</span>', '<span class="lx-code">' + route.split('_')[0].upper() + ' <i>→</i> GTPRQ</span>')
     return s
 
@@ -367,6 +369,8 @@ def gt_page_head():
         <button class="lx-nav-btn" id="tab-gt-all" role="tab" aria-selected="true" data-xpol="all">ALL</button>
         <button class="lx-nav-btn" id="tab-gt-sha" role="tab" aria-selected="false" aria-controls="gtpol-sha" data-xpol="sha">Shanghai</button>
         <button class="lx-nav-btn" id="tab-gt-ngb" role="tab" aria-selected="false" aria-controls="gtpol-ngb" data-xpol="ngb">Ningbo</button>
+        <button class="lx-nav-btn" id="tab-gt-skk" role="tab" aria-selected="false" aria-controls="gtpol-skk" data-xpol="skk">Shenzhen (Shekou)</button>
+        <button class="lx-nav-btn" id="tab-gt-khh" role="tab" aria-selected="false" aria-controls="gtpol-khh" data-xpol="khh">Kaohsiung</button>
       </nav>
     </div>
       <div class="lx-toolbar">
@@ -379,6 +383,10 @@ def gt_page_head():
 """ + gt_lane('cnsha_gtpqz', 'Shanghai') + """    </div>
     <div class="xpol" id="gtpol-ngb" data-xpol="ngb" role="tabpanel" aria-labelledby="tab-gt-ngb">
 """ + gt_lane('cnngb_gtpqz', 'Ningbo') + """    </div>
+    <div class="xpol" id="gtpol-skk" data-xpol="skk" role="tabpanel" aria-labelledby="tab-gt-skk">
+""" + gt_lane('cnshk_gtpqz', 'Shenzhen (Shekou)') + """    </div>
+    <div class="xpol" id="gtpol-khh" data-xpol="khh" role="tabpanel" aria-labelledby="tab-gt-khh">
+""" + gt_lane('twkhh_gtpqz', 'Kaohsiung') + """    </div>
 """
 
 def ca_markup():
