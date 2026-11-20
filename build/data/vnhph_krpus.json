@@ -350,7 +350,7 @@
   "status": "changed"
  },
  {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "KMTC",
   "vessel": "PANCON HARMONY",
   "voyage": "2621N",
   "etd": "11-24 (Tue)",
@@ -358,12 +358,27 @@
   "tt": 5,
   "altDates": "PANOCEAN 11-24→11-28",
   "closedCarriers": "KMTC",
-  "bookingClosed": false,
+  "bookingClosed": true,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "PANCON HARMONY",
+  "voyage": "2621N",
+  "etd": "11-24 (Tue)",
+  "eta": "11-28 (Sat)",
+  "tt": 4,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "KMTC / PANOCEAN",
@@ -426,25 +441,6 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
-  "vessel": "MARIA C",
-  "voyage": "0099N",
-  "etd": "12-02 (Wed)",
-  "eta": "12-07 (Mon)",
-  "tt": 5,
-  "altDates": "KMTC 12-02→12-08",
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 6,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
   "carrier": "HEUNG-A / SINOKOR",
   "vessel": "KOBE TRADER",
   "voyage": "2610N",
@@ -460,19 +456,42 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC POHANG",
   "voyage": "2617N",
   "etd": "12-04 (Fri)",
-  "eta": "12-11 (Fri)",
-  "tt": 7,
+  "eta": "12-12 (Sat)",
+  "tt": 8,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-04 (Fri)",
+  "prevEta": "12-11 (Fri)",
+  "prevTt": 7,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "MARIA C",
+  "voyage": "0099N",
+  "etd": "12-05 (Sat)",
+  "eta": "12-11 (Fri)",
+  "tt": 6,
+  "altDates": "KMTC 12-02→12-08",
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-07 (Mon)",
+  "prevTt": 5,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC / PANOCEAN",
@@ -539,28 +558,13 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG / PANOCEAN",
+  "carrier": "PANOCEAN",
   "vessel": "SM TOKYO",
   "voyage": "2622E",
   "etd": "12-07 (Mon)",
   "eta": "12-13 (Sun)",
   "tt": 6,
   "altDates": "NAMSUNG 12-07→12-16",
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "YM COOPERATION",
-  "voyage": "063N",
-  "etd": "12-07 (Mon)",
-  "eta": "12-14 (Mon)",
-  "tt": 7,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": null,
@@ -585,20 +589,23 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG / PANOCEAN",
+  "carrier": "PANOCEAN",
   "vessel": "STAR SKIPPER",
   "voyage": "2623N",
   "etd": "12-09 (Wed)",
-  "eta": "12-14 (Mon)",
-  "tt": 5,
+  "eta": "12-15 (Tue)",
+  "tt": 6,
   "altDates": "PANOCEAN 12-09→12-15",
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "12-14 (Mon)",
+  "prevTt": 5,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -616,7 +623,7 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / PANOCEAN",
+  "carrier": "PANOCEAN",
   "vessel": "SUNNY ACACIA",
   "voyage": "2619N",
   "etd": "12-10 (Thu)",
@@ -628,23 +635,62 @@
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "new"
  },
  {
-  "carrier": "NAMSUNG / PANOCEAN",
+  "carrier": "PANOCEAN",
   "vessel": "PEGASUS DREAM",
   "voyage": "2624E",
   "etd": "12-12 (Sat)",
-  "eta": "12-20 (Sun)",
-  "tt": 8,
+  "eta": "12-21 (Mon)",
+  "tt": 9,
   "altDates": "PANOCEAN 12-12→12-21",
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-12 (Sat)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 8,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "YM COOPERATION",
+  "voyage": "063N",
+  "etd": "12-12 (Sat)",
+  "eta": "12-19 (Sat)",
+  "tt": 7,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-14 (Mon)",
+  "prevTt": 7,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SUNNY ACACIA",
+  "voyage": "2619N",
+  "etd": "12-13 (Sun)",
+  "eta": "12-19 (Sat)",
+  "tt": 6,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-16 (Wed)",
+  "prevTt": 6,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -662,39 +708,6 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
-  "vessel": "STARSHIP AQUILA",
-  "voyage": "2614N",
-  "etd": "12-15 (Tue)",
-  "eta": "12-22 (Tue)",
-  "tt": 7,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-23 (Wed)",
-  "prevTt": 7,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC POHANG",
-  "voyage": "2618N",
-  "etd": "12-17 (Thu)",
-  "eta": "12-24 (Thu)",
-  "tt": 7,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "PANOCEAN",
   "vessel": "SM TOKYO",
   "voyage": "2623E",
@@ -705,6 +718,26 @@
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "new"
+  "status": "new",
+  "closedCarriers": "",
+  "bookingClosed": false
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "STARSHIP AQUILA",
+  "voyage": "2614N",
+  "etd": "12-18 (Fri)",
+  "eta": "12-25 (Fri)",
+  "tt": 7,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-15 (Tue)",
+  "prevEta": "12-22 (Tue)",
+  "prevTt": 7,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  }
 ]

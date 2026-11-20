@@ -1474,5 +1474,68 @@
   "change": "New sailing",
   "old": "",
   "new": "12-19 (Sat)"
+ },
+ {
+  "id": "2026-11-20-0-Busan|MAERSK EINDHOVEN",
+  "date": "2026-11-20",
+  "pol": "Busan",
+  "vessel": "MAERSK EINDHOVEN",
+  "change": "ETD changed",
+  "old": "12-06 (Sun)",
+  "new": "12-05 (Sat)"
+ },
+ {
+  "id": "2026-11-20-1-Busan|MAERSK ESSEN",
+  "date": "2026-11-20",
+  "pol": "Busan",
+  "vessel": "MAERSK ESSEN",
+  "change": "ETD changed",
+  "old": "12-13 (Sun)",
+  "new": "12-12 (Sat)"
+ },
+ {
+  "id": "2026-11-20-2-Busan|MAERSK ESMERALDAS",
+  "date": "2026-11-20",
+  "pol": "Busan",
+  "vessel": "MAERSK ESMERALDAS",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-19 (Sat)"
+ },
+ {
+  "id": "2026-11-20-3-Shanghai|MAERSK SALINA",
+  "date": "2026-11-20",
+  "pol": "Shanghai",
+  "vessel": "MAERSK SALINA",
+  "change": "ETD changed",
+  "old": "12-09 (Wed)",
+  "new": "12-04 (Fri)"
+ },
+ {
+  "id": "2026-11-20-4-Shanghai|MAERSK TOKYO",
+  "date": "2026-11-20",
+  "pol": "Shanghai",
+  "vessel": "MAERSK TOKYO",
+  "change": "ETD changed",
+  "old": "12-16 (Wed)",
+  "new": "12-11 (Fri)"
+ },
+ {
+  "id": "2026-11-20-5-Shanghai|MAERSK TOKYO",
+  "date": "2026-11-20",
+  "pol": "Shanghai",
+  "vessel": "MAERSK TOKYO",
+  "change": "ETA changed",
+  "old": "01-28 (Thu)",
+  "new": "01-21 (Thu)"
+ },
+ {
+  "id": "2026-11-20-6-Shanghai|NAVIOS DEVOTION",
+  "date": "2026-11-20",
+  "pol": "Shanghai",
+  "vessel": "NAVIOS DEVOTION",
+  "change": "ETD changed",
+  "old": "12-19 (Sat)",
+  "new": "12-17 (Thu)"
  }
 ]

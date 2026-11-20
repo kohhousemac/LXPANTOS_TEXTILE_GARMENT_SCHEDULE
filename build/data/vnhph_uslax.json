@@ -105,21 +105,6 @@
   "status": "same"
  },
  {
-  "carrier": "MSC",
-  "vessel": "MSC TRIESTE",
-  "voyage": "GQ649N",
-  "etd": "12-04 (Fri)",
-  "eta": "12-22 (Tue)",
-  "tt": 18,
-  "service": "PEARL",
-  "rotation": "Haiphong → Los Angeles",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "WHL",
   "vessel": "WAN HAI A03",
   "voyage": "E019",
@@ -139,15 +124,18 @@
   "vessel": "HYUNDAI NEPTUNE",
   "voyage": "E047",
   "etd": "12-10 (Thu)",
-  "eta": "01-04 (Mon)",
-  "tt": 25,
+  "eta": "01-06 (Wed)",
+  "tt": 27,
   "service": "AP1",
   "rotation": "Haiphong → Los Angeles (직항)",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "01-04 (Mon)",
+  "prevTt": 25,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSC",
@@ -163,6 +151,21 @@
   "prevTt": null,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC GIULIA",
+  "voyage": "GQ650N",
+  "etd": "12-13 (Sun)",
+  "eta": "12-31 (Thu)",
+  "tt": 18,
+  "service": "PEARL",
+  "rotation": "Haiphong → Yantian → Los Angeles",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "MSC",

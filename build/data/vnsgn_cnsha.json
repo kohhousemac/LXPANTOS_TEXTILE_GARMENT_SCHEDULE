@@ -273,21 +273,5 @@
   "prevTt": null,
   "changedFields": [],
   "status": "same"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2610N",
-  "etd": "12-16 (Wed)",
-  "eta": "12-21 (Mon)",
-  "tt": 5,
-  "service": "CKI",
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
  }
 ]

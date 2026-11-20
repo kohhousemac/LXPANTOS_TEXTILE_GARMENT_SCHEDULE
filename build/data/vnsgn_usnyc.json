@@ -146,15 +146,18 @@
   "vessel": "MSC MAEVA",
   "voyage": "GU648W",
   "etd": "12-12 (Sat)",
-  "eta": "01-08 (Fri)",
-  "tt": 27,
+  "eta": "01-09 (Sat)",
+  "tt": 28,
   "service": "AMERICA SERVICE",
   "rotation": "Vung Tau → Singapore → New York",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-12 (Sat)",
+  "prevEta": "01-08 (Fri)",
+  "prevTt": 27,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",

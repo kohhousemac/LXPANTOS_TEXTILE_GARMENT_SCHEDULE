@@ -153,30 +153,19 @@
   "carrier": "WHL",
   "vessel": "HYUNDAI NEPTUNE",
   "voyage": "E047",
-  "etd": "12-13 (Sun)",
-  "eta": "01-04 (Mon)",
-  "tt": 22,
+  "etd": "12-14 (Mon)",
+  "eta": "01-06 (Wed)",
+  "tt": 23,
   "service": "AP1",
   "rotation": "Cai Mep → Los Angeles (직항)",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC LENI",
-  "voyage": "FV649N",
-  "etd": "12-18 (Fri)",
-  "eta": "01-06 (Wed)",
-  "tt": 19,
-  "service": "SENTOSA",
-  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
+  "prevEtd": "12-13 (Sun)",
+  "prevEta": "01-04 (Mon)",
+  "prevTt": 22,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

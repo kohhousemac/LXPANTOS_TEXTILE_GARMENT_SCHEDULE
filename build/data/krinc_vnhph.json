@@ -68,11 +68,11 @@
   "vessel": "STAR EXPLORER",
   "voyage": "2622S",
   "etd": "11-14 (Sat)",
-  "eta": "11-19 (Thu)",
+  "eta": "11-20 (Fri)",
   "closedCarriers": "",
   "bookingClosed": false,
   "rotation": "Incheon → Hong Kong → Haiphong",
-  "tt": 5,
+  "tt": 6,
   "prevEtd": "11-14 (Sat)",
   "prevEta": "11-19 (Thu)",
   "prevTt": 5,
@@ -275,21 +275,40 @@
   "status": "same"
  },
  {
-  "carrier": "DONGJIN / PANOCEAN / SM LINE",
+  "carrier": "DONGJIN",
+  "vessel": "SM TOKYO",
+  "voyage": "2622W",
+  "etd": "11-30 (Mon)",
+  "eta": "12-07 (Mon)",
+  "tt": 7,
+  "altDates": "DONGJIN 11-30→12-07",
+  "rotation": "Incheon → Kwangyang → Busan → Haiphong",
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 6,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "PANOCEAN / SM LINE",
   "vessel": "SM TOKYO",
   "voyage": "2622W",
   "etd": "11-30 (Mon)",
   "eta": "12-06 (Sun)",
   "tt": 6,
-  "altDates": "DONGJIN 11-30→12-07",
-  "rotation": "Incheon → Kwangyang → Busan → Haiphong",
   "closedCarriers": "",
   "bookingClosed": false,
+  "rotation": "",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "new"
  },
  {
   "carrier": "HEUNG-A / SINOKOR",

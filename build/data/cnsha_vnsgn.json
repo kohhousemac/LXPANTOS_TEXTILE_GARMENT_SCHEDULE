@@ -638,20 +638,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC XINGDE",
-  "voyage": "2626S",
-  "etd": "12-13 (Sun)",
-  "eta": "12-18 (Fri)",
-  "tt": 5,
-  "service": "VTX1",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "SITC",
   "vessel": "KOTA NAZAR",
   "voyage": "2650S",
   "etd": "12-14 (Mon)",
@@ -663,6 +649,23 @@
   "prevTt": null,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC XINGDE",
+  "voyage": "2626S",
+  "etd": "12-14 (Mon)",
+  "eta": "12-18 (Fri)",
+  "tt": 4,
+  "service": "VTX1",
+  "prevEtd": "12-13 (Sun)",
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 5,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",

@@ -61,20 +61,23 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON HARMONY",
   "voyage": "2621S",
   "etd": "11-22 (Sun)",
-  "eta": "11-23 (Mon)",
-  "tt": 1,
+  "eta": "11-24 (Tue)",
+  "tt": 2,
   "altDates": "KMTC 11-22→11-24",
-  "closedCarriers": "KMTC / NAMSUNG",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-22 (Sun)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 1,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -92,14 +95,14 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STAR FRONTIER",
   "voyage": "2623S",
   "etd": "12-01 (Tue)",
   "eta": "12-02 (Wed)",
   "tt": 1,
   "altDates": "NAMSUNG 12-01→12-03",
-  "closedCarriers": "KMTC / NAMSUNG",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": null,
   "prevEta": null,
@@ -114,7 +117,7 @@
   "etd": "12-02 (Wed)",
   "eta": "12-04 (Fri)",
   "tt": 2,
-  "closedCarriers": "NAMSUNG",
+  "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": null,
   "prevEta": null,
@@ -138,16 +141,16 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2623S",
-  "etd": "12-10 (Thu)",
-  "eta": "12-11 (Fri)",
+  "etd": "12-08 (Tue)",
+  "eta": "12-09 (Wed)",
   "tt": 1,
   "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-10 (Thu)",
+  "bookingClosed": false,
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-11 (Fri)",
   "prevTt": 1,
   "changedFields": [
    "etd",
@@ -156,19 +159,22 @@
   "status": "changed"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STAR FRONTIER",
   "voyage": "2624S",
-  "etd": "12-14 (Mon)",
+  "etd": "12-15 (Tue)",
   "eta": "12-16 (Wed)",
-  "tt": 2,
-  "closedCarriers": "",
+  "tt": 1,
+  "closedCarriers": "NAMSUNG",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-14 (Mon)",
+  "prevEta": "12-16 (Wed)",
+  "prevTt": 2,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN",

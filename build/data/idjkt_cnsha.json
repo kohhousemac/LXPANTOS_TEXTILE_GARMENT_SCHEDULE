@@ -49,10 +49,10 @@
   "vessel": "STARSHIP VENUS",
   "voyage": "2609N",
   "etd": "11-07 (Sat)",
-  "eta": "11-24 (Tue)",
+  "eta": "11-25 (Wed)",
   "closedCarriers": "NAMSUNG",
   "bookingClosed": true,
-  "tt": 17,
+  "tt": 18,
   "prevEtd": "11-07 (Sat)",
   "prevEta": "11-24 (Tue)",
   "prevTt": 17,
@@ -270,6 +270,25 @@
   "status": "same"
  },
  {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP VENUS",
+  "voyage": "2610N",
+  "etd": "12-03 (Thu)",
+  "eta": "12-21 (Mon)",
+  "tt": 18,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-06 (Sun)",
+  "prevEta": "12-23 (Wed)",
+  "prevTt": 17,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "HEUNG-A / SINOKOR",
   "vessel": "HAPPY LUCKY",
   "voyage": "2646N",
@@ -301,21 +320,6 @@
    "tt"
   ],
   "status": "changed"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "STARSHIP VENUS",
-  "voyage": "2610N",
-  "etd": "12-06 (Sun)",
-  "eta": "12-23 (Wed)",
-  "tt": 17,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
  },
  {
   "carrier": "SINOKOR",

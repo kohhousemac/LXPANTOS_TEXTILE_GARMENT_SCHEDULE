@@ -124,13 +124,13 @@
   "vessel": "KMTC SHANGHAI",
   "voyage": "2609N",
   "etd": "11-13 (Fri)",
-  "eta": "11-29 (Sun)",
+  "eta": "11-28 (Sat)",
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "tt": 16,
+  "tt": 15,
   "prevEtd": "11-13 (Fri)",
-  "prevEta": "11-28 (Sat)",
-  "prevTt": 15,
+  "prevEta": "11-29 (Sun)",
+  "prevTt": 16,
   "changedFields": [],
   "status": "departed"
  },
@@ -154,10 +154,10 @@
   "vessel": "KMTC SHIMIZU",
   "voyage": "2610N",
   "etd": "11-18 (Wed)",
-  "eta": "12-01 (Tue)",
+  "eta": "11-30 (Mon)",
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "tt": 13,
+  "tt": 12,
   "prevEtd": "11-18 (Wed)",
   "prevEta": "12-01 (Tue)",
   "prevTt": 13,
@@ -214,15 +214,18 @@
   "vessel": "KMTC HAIPHONG",
   "voyage": "2609N",
   "etd": "11-25 (Wed)",
-  "eta": "12-10 (Thu)",
-  "tt": 15,
+  "eta": "12-12 (Sat)",
+  "tt": 17,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-25 (Wed)",
+  "prevEta": "12-10 (Thu)",
+  "prevTt": 15,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
@@ -244,15 +247,18 @@
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "etd": "11-26 (Thu)",
-  "eta": "12-09 (Wed)",
-  "tt": 13,
+  "eta": "12-10 (Thu)",
+  "tt": 14,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "12-09 (Wed)",
+  "prevTt": 13,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -310,15 +316,36 @@
   "vessel": "YEOSU VOYAGER",
   "voyage": "2609N",
   "etd": "12-02 (Wed)",
-  "eta": "12-16 (Wed)",
-  "tt": 14,
+  "eta": "12-18 (Fri)",
+  "tt": 16,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-16 (Wed)",
+  "prevTt": 14,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP VENUS",
+  "voyage": "2610N",
+  "etd": "12-03 (Thu)",
+  "eta": "12-15 (Tue)",
+  "tt": 12,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-06 (Sun)",
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 12,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -334,24 +361,6 @@
   "prevTt": null,
   "changedFields": [],
   "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "STARSHIP VENUS",
-  "voyage": "2610N",
-  "etd": "12-06 (Sun)",
-  "eta": "12-18 (Fri)",
-  "tt": 12,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-17 (Thu)",
-  "prevTt": 11,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -375,34 +384,60 @@
   "carrier": "KMTC",
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
-  "etd": "12-07 (Mon)",
-  "eta": "12-19 (Sat)",
-  "tt": 12,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2610N",
   "etd": "12-10 (Thu)",
   "eta": "12-23 (Wed)",
   "tt": 13,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-19 (Sat)",
+  "prevTt": 12,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
+  "vessel": "KMTC SHANGHAI",
+  "voyage": "2610N",
+  "etd": "12-11 (Fri)",
+  "eta": "12-27 (Sun)",
+  "tt": 16,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-23 (Wed)",
+  "prevTt": 13,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "etd": "12-12 (Sat)",
+  "eta": "12-26 (Sat)",
+  "tt": 14,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-13 (Sun)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 13,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "NAMSUNG",
   "vessel": "KMTC SURABAYA",
   "voyage": "2609N",
   "etd": "12-13 (Sun)",
@@ -414,22 +449,25 @@
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "new"
  },
  {
   "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611N",
-  "etd": "12-15 (Tue)",
-  "eta": "12-28 (Mon)",
+  "etd": "12-17 (Thu)",
+  "eta": "12-30 (Wed)",
   "tt": 13,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-15 (Tue)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 13,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",

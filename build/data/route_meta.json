@@ -67,7 +67,7 @@
   "group": "cn",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 9,
+  "changedCount": 10,
   "excludedCount": 0,
   "vesselCount": 28
  },
@@ -79,8 +79,8 @@
   "group": "cn",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 1,
-  "excludedCount": 1,
+  "changedCount": 3,
+  "excludedCount": 0,
   "vesselCount": 24
  },
  {
@@ -104,7 +104,7 @@
   "updateDate": "11/20",
   "newCount": 0,
   "changedCount": 3,
-  "excludedCount": 1,
+  "excludedCount": 0,
   "vesselCount": 8
  },
  {
@@ -115,7 +115,7 @@
   "group": "hk",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 1,
+  "changedCount": 3,
   "excludedCount": 0,
   "vesselCount": 9
  },
@@ -127,9 +127,9 @@
   "group": "hk",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 8,
-  "excludedCount": 0,
-  "vesselCount": 18
+  "changedCount": 15,
+  "excludedCount": 1,
+  "vesselCount": 19
  },
  {
   "routeId": "hkhkg_idjkt",
@@ -138,10 +138,10 @@
   "pod": "Jakarta",
   "group": "hk",
   "updateDate": "11/20",
-  "newCount": 1,
-  "changedCount": 1,
+  "newCount": 0,
+  "changedCount": 4,
   "excludedCount": 0,
-  "vesselCount": 5
+  "vesselCount": 6
  },
  {
   "routeId": "cnsha_krpus",
@@ -150,10 +150,10 @@
   "pod": "Busan",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 6,
-  "excludedCount": 1,
-  "vesselCount": 39
+  "newCount": 1,
+  "changedCount": 17,
+  "excludedCount": 0,
+  "vesselCount": 40
  },
  {
   "routeId": "vnsgn_krpus",
@@ -162,10 +162,10 @@
   "pod": "Busan",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 2,
-  "changedCount": 13,
-  "excludedCount": 0,
-  "vesselCount": 64
+  "newCount": 8,
+  "changedCount": 37,
+  "excludedCount": 5,
+  "vesselCount": 67
  },
  {
   "routeId": "vnsgn_krinc",
@@ -174,10 +174,10 @@
   "pod": "Incheon",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 2,
-  "changedCount": 7,
-  "excludedCount": 0,
-  "vesselCount": 41
+  "newCount": 7,
+  "changedCount": 22,
+  "excludedCount": 3,
+  "vesselCount": 46
  },
  {
   "routeId": "vnhph_krpus",
@@ -186,10 +186,10 @@
   "pod": "Busan",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 1,
-  "changedCount": 4,
+  "newCount": 3,
+  "changedCount": 9,
   "excludedCount": 1,
-  "vesselCount": 30
+  "vesselCount": 31
  },
  {
   "routeId": "vnhph_krinc",
@@ -198,10 +198,10 @@
   "pod": "Incheon",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 1,
-  "changedCount": 3,
+  "newCount": 11,
+  "changedCount": 9,
   "excludedCount": 1,
-  "vesselCount": 35
+  "vesselCount": 44
  },
  {
   "routeId": "krpus_vnsgn",
@@ -210,10 +210,10 @@
   "pod": "Ho Chi Minh",
   "group": "kr_pol",
   "updateDate": "11/20",
-  "newCount": 2,
-  "changedCount": 4,
-  "excludedCount": 5,
-  "vesselCount": 23
+  "newCount": 9,
+  "changedCount": 9,
+  "excludedCount": 15,
+  "vesselCount": 30
  },
  {
   "routeId": "krpus_idjkt",
@@ -223,9 +223,9 @@
   "group": "kr_pol",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 0,
-  "excludedCount": 3,
-  "vesselCount": 2
+  "changedCount": 2,
+  "excludedCount": 4,
+  "vesselCount": 3
  },
  {
   "routeId": "krpus_trist",
@@ -248,8 +248,8 @@
   "updateDate": "11/20",
   "newCount": 0,
   "changedCount": 1,
-  "excludedCount": 0,
-  "vesselCount": 12
+  "excludedCount": 1,
+  "vesselCount": 11
  },
  {
   "routeId": "vnhph_cnsha",
@@ -271,8 +271,8 @@
   "group": "cn",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 2,
-  "excludedCount": 1,
+  "changedCount": 3,
+  "excludedCount": 0,
   "vesselCount": 18
  },
  {
@@ -282,9 +282,9 @@
   "pod": "Incheon",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 13,
-  "excludedCount": 0,
+  "newCount": 1,
+  "changedCount": 18,
+  "excludedCount": 2,
   "vesselCount": 21
  },
  {
@@ -294,10 +294,10 @@
   "pod": "Incheon",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 2,
+  "newCount": 1,
+  "changedCount": 5,
   "excludedCount": 0,
-  "vesselCount": 12
+  "vesselCount": 13
  },
  {
   "routeId": "idjkt_krpus",
@@ -306,10 +306,10 @@
   "pod": "Busan",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 4,
+  "newCount": 1,
+  "changedCount": 11,
   "excludedCount": 0,
-  "vesselCount": 18
+  "vesselCount": 19
  },
  {
   "routeId": "krpus_egdam",
@@ -366,10 +366,10 @@
   "pod": "Incheon",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 13,
-  "excludedCount": 0,
-  "vesselCount": 54
+  "newCount": 6,
+  "changedCount": 26,
+  "excludedCount": 3,
+  "vesselCount": 57
  },
  {
   "routeId": "cnshk_krpus",
@@ -378,10 +378,10 @@
   "pod": "Busan",
   "group": "kr",
   "updateDate": "11/20",
-  "newCount": 1,
-  "changedCount": 14,
-  "excludedCount": 0,
-  "vesselCount": 52
+  "newCount": 6,
+  "changedCount": 31,
+  "excludedCount": 3,
+  "vesselCount": 56
  },
  {
   "routeId": "vnhph_uslax",
@@ -390,8 +390,8 @@
   "pod": "Los Angeles",
   "group": "us",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 0,
+  "newCount": 1,
+  "changedCount": 1,
   "excludedCount": 1,
   "vesselCount": 8
  },
@@ -402,10 +402,10 @@
   "pod": "LA / Long Beach",
   "group": "us",
   "updateDate": "11/20",
-  "newCount": 2,
-  "changedCount": 0,
-  "excludedCount": 0,
-  "vesselCount": 8
+  "newCount": 1,
+  "changedCount": 1,
+  "excludedCount": 1,
+  "vesselCount": 7
  },
  {
   "routeId": "vnhph_usnyc",
@@ -415,7 +415,7 @@
   "group": "us",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 1,
+  "changedCount": 2,
   "excludedCount": 0,
   "vesselCount": 10
  },
@@ -427,7 +427,7 @@
   "group": "us",
   "updateDate": "11/20",
   "newCount": 0,
-  "changedCount": 3,
+  "changedCount": 4,
   "excludedCount": 0,
   "vesselCount": 9
  },
@@ -438,10 +438,10 @@
   "pod": "Haiphong",
   "group": "kr_pol",
   "updateDate": "11/20",
-  "newCount": 0,
-  "changedCount": 2,
+  "newCount": 1,
+  "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 20
+  "vesselCount": 21
  },
  {
   "routeId": "cnngb_vnhph",
