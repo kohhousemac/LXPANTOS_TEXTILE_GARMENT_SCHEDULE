@@ -9,7 +9,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "departed",
   "changedFields": [],
   "service": "ZNS"
  },
@@ -23,7 +23,7 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "new",
+  "status": "departed",
   "changedFields": [],
   "service": "ZNS"
  },

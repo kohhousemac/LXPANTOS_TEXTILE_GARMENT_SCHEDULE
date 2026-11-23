@@ -473,11 +473,11 @@
   "pol": "Jakarta",
   "pod": "Long Beach",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 1,
-  "changedCount": 5,
-  "excludedCount": 0,
-  "vesselCount": 9
+  "updateDate": "11/23",
+  "newCount": 10,
+  "changedCount": 1,
+  "excludedCount": 3,
+  "vesselCount": 12
  },
  {
   "routeId": "idjkt_usnyc",
@@ -485,11 +485,11 @@
   "pol": "Jakarta",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 2,
-  "changedCount": 5,
-  "excludedCount": 0,
-  "vesselCount": 12
+  "updateDate": "11/23",
+  "newCount": 7,
+  "changedCount": 6,
+  "excludedCount": 1,
+  "vesselCount": 7
  },
  {
   "routeId": "khpnh_uslgb",
@@ -497,11 +497,11 @@
   "pol": "Phnom Penh",
   "pod": "Long Beach",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 0,
-  "changedCount": 2,
-  "excludedCount": 0,
-  "vesselCount": 4
+  "updateDate": "11/23",
+  "newCount": 3,
+  "changedCount": 0,
+  "excludedCount": 1,
+  "vesselCount": 6
  },
  {
   "routeId": "khpnh_usnyc",
@@ -509,11 +509,11 @@
   "pol": "Phnom Penh",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 0,
-  "changedCount": 1,
+  "updateDate": "11/23",
+  "newCount": 2,
+  "changedCount": 2,
   "excludedCount": 0,
-  "vesselCount": 4
+  "vesselCount": 6
  },
  {
   "routeId": "cnsha_docau",
@@ -545,11 +545,11 @@
   "pol": "Busan",
   "pod": "LA / Long Beach",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 13,
-  "changedCount": 0,
-  "excludedCount": 0,
-  "vesselCount": 13
+  "updateDate": "11/23",
+  "newCount": 9,
+  "changedCount": 7,
+  "excludedCount": 1,
+  "vesselCount": 22
  },
  {
   "routeId": "krpus_usoak",
@@ -557,11 +557,11 @@
   "pol": "Busan",
   "pod": "Oakland",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 9,
-  "changedCount": 0,
-  "excludedCount": 0,
-  "vesselCount": 9
+  "updateDate": "11/23",
+  "newCount": 7,
+  "changedCount": 5,
+  "excludedCount": 1,
+  "vesselCount": 15
  },
  {
   "routeId": "krpus_ussea",
@@ -569,11 +569,11 @@
   "pol": "Busan",
   "pod": "Seattle",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 5,
-  "changedCount": 0,
+  "updateDate": "11/23",
+  "newCount": 1,
+  "changedCount": 3,
   "excludedCount": 0,
-  "vesselCount": 5
+  "vesselCount": 7
  },
  {
   "routeId": "krpus_usnyc",
@@ -581,11 +581,11 @@
   "pol": "Busan",
   "pod": "New York",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 16,
-  "changedCount": 0,
-  "excludedCount": 0,
-  "vesselCount": 16
+  "updateDate": "11/23",
+  "newCount": 8,
+  "changedCount": 3,
+  "excludedCount": 4,
+  "vesselCount": 20
  },
  {
   "routeId": "krpus_ussav",
@@ -593,11 +593,11 @@
   "pol": "Busan",
   "pod": "Savannah",
   "group": "us",
-  "updateDate": "11/10",
-  "newCount": 15,
-  "changedCount": 0,
-  "excludedCount": 0,
-  "vesselCount": 15
+  "updateDate": "11/23",
+  "newCount": 5,
+  "changedCount": 6,
+  "excludedCount": 1,
+  "vesselCount": 19
  },
  {
   "routeId": "krpus_usbal",
@@ -606,7 +606,7 @@
   "pod": "Baltimore",
   "group": "us",
   "updateDate": "11/10",
-  "newCount": 4,
+  "newCount": 0,
   "changedCount": 0,
   "excludedCount": 0,
   "vesselCount": 4
