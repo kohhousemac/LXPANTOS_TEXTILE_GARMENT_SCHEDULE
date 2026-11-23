@@ -59,15 +59,16 @@
   "carrier": "CMA CGM",
   "vessel": "CSCL LONG BEACH",
   "voyage": "PEX0B0E19",
-  "etd": "11-23 (Mon)",
-  "eta": "01-11 (Mon)",
-  "tt": 49,
+  "etd": "11-27 (Fri)",
+  "eta": "01-13 (Wed)",
   "service": "PEX2",
-  "prevEtd": "11-27 (Fri)",
+  "tt": 47,
+  "prevEtd": "11-23 (Mon)",
   "prevEta": "01-11 (Mon)",
-  "prevTt": 45,
+  "prevTt": 49,
   "changedFields": [
    "etd",
+   "eta",
    "tt"
   ],
   "status": "changed"
@@ -78,8 +79,8 @@
   "voyage": "PEX0D0E19",
   "etd": "11-30 (Mon)",
   "eta": "01-18 (Mon)",
-  "tt": 49,
   "service": "PEX2",
+  "tt": 49,
   "prevEtd": "11-30 (Mon)",
   "prevEta": "01-17 (Sun)",
   "prevTt": 48,
@@ -95,8 +96,8 @@
   "voyage": "PEX0F0E19",
   "etd": "12-07 (Mon)",
   "eta": "01-25 (Mon)",
-  "tt": 49,
   "service": "PEX2",
+  "tt": 49,
   "prevEtd": "12-07 (Mon)",
   "prevEta": "01-24 (Sun)",
   "prevTt": 48,
@@ -112,8 +113,8 @@
   "voyage": "PEX0H0E19",
   "etd": "12-14 (Mon)",
   "eta": "02-01 (Mon)",
-  "tt": 49,
   "service": "PEX2",
+  "tt": 49,
   "prevEtd": "12-14 (Mon)",
   "prevEta": "01-31 (Sun)",
   "prevTt": 48,
@@ -122,5 +123,19 @@
    "tt"
   ],
   "status": "changed"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM CYRANO",
+  "voyage": "PEX0J0E19",
+  "etd": "12-21 (Mon)",
+  "eta": "02-08 (Mon)",
+  "service": "PEX2",
+  "tt": 49,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  }
 ]

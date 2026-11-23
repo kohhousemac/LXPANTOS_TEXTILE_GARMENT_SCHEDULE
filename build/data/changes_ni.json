@@ -1537,5 +1537,122 @@
   "change": "ETD changed",
   "old": "12-19 (Sat)",
   "new": "12-17 (Thu)"
+ },
+ {
+  "id": "2026-11-23-0-Shanghai|CHASTINE MAERSK",
+  "date": "2026-11-23",
+  "pol": "Shanghai",
+  "vessel": "CHASTINE MAERSK",
+  "change": "ETD changed",
+  "old": "11-27 (Fri)",
+  "new": "11-28 (Sat)"
+ },
+ {
+  "id": "2026-11-23-1-Shanghai|DYROS",
+  "date": "2026-11-23",
+  "pol": "Shanghai",
+  "vessel": "DYROS",
+  "change": "ETD changed",
+  "old": "12-02 (Wed)",
+  "new": "12-03 (Thu)"
+ },
+ {
+  "id": "2026-11-23-2-Yantian|MAERSK TORONTO",
+  "date": "2026-11-23",
+  "pol": "Yantian",
+  "vessel": "MAERSK TORONTO",
+  "change": "ETD changed",
+  "old": "12-06 (Sun)",
+  "new": "12-03 (Thu)"
+ },
+ {
+  "id": "2026-11-23-3-Yantian|MAERSK TORONTO",
+  "date": "2026-11-23",
+  "pol": "Yantian",
+  "vessel": "MAERSK TORONTO",
+  "change": "ETA changed",
+  "old": "01-14 (Thu)",
+  "new": "01-07 (Thu)"
+ },
+ {
+  "id": "2026-11-23-4-Yantian|TIANJIN MAERSK",
+  "date": "2026-11-23",
+  "pol": "Yantian",
+  "vessel": "TIANJIN MAERSK",
+  "change": "ETD changed",
+  "old": "12-13 (Sun)",
+  "new": "12-10 (Thu)"
+ },
+ {
+  "id": "2026-11-23-5-Yantian|TIANJIN MAERSK",
+  "date": "2026-11-23",
+  "pol": "Yantian",
+  "vessel": "TIANJIN MAERSK",
+  "change": "ETA changed",
+  "old": "01-21 (Thu)",
+  "new": "01-14 (Thu)"
+ },
+ {
+  "id": "2026-11-23-6-Yantian|SEASPAN AMAZON",
+  "date": "2026-11-23",
+  "pol": "Yantian",
+  "vessel": "SEASPAN AMAZON",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-17 (Thu)"
+ },
+ {
+  "id": "2026-11-23-7-Ho Chi Minh|MAERSK KEELUNG",
+  "date": "2026-11-23",
+  "pol": "Ho Chi Minh",
+  "vessel": "MAERSK KEELUNG",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-21 (Mon)"
+ },
+ {
+  "id": "2026-11-23-8-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-23",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "ETA changed",
+  "old": "02-04 (Thu)",
+  "new": "01-21 (Thu)"
+ },
+ {
+  "id": "2026-11-23-9-Ho Chi Minh|SHIMANAMI BAY",
+  "date": "2026-11-23",
+  "pol": "Ho Chi Minh",
+  "vessel": "SHIMANAMI BAY",
+  "change": "T/S changed",
+  "old": "Shanghai → Busan → Lazaro Cardenas",
+  "new": "Shanghai → Lazaro Cardenas"
+ },
+ {
+  "id": "2026-11-23-10-Ho Chi Minh|MAERSK PORT KLANG",
+  "date": "2026-11-23",
+  "pol": "Ho Chi Minh",
+  "vessel": "MAERSK PORT KLANG",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-14 (Mon)"
+ },
+ {
+  "id": "2026-11-23-11-Ho Chi Minh|AMALFI BAY",
+  "date": "2026-11-23",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY",
+  "change": "ETA changed",
+  "old": "02-11 (Thu)",
+  "new": "01-28 (Thu)"
+ },
+ {
+  "id": "2026-11-23-12-Ho Chi Minh|AMALFI BAY",
+  "date": "2026-11-23",
+  "pol": "Ho Chi Minh",
+  "vessel": "AMALFI BAY",
+  "change": "T/S changed",
+  "old": "Shanghai → Busan → Lazaro Cardenas",
+  "new": "Shanghai → Lazaro Cardenas"
  }
 ]

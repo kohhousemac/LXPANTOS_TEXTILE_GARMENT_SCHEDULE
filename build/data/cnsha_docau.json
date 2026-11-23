@@ -19,8 +19,8 @@
   "voyage": "PEX090E19",
   "etd": "11-26 (Thu)",
   "eta": "01-04 (Mon)",
-  "tt": 39,
   "service": "PEX2",
+  "tt": 39,
   "prevEtd": "11-22 (Sun)",
   "prevEta": "01-03 (Sun)",
   "prevTt": 42,
@@ -35,15 +35,16 @@
   "carrier": "CMA CGM",
   "vessel": "CSCL LONG BEACH",
   "voyage": "PEX0B0E19",
-  "etd": "11-28 (Sat)",
-  "eta": "01-11 (Mon)",
-  "tt": 44,
+  "etd": "12-02 (Wed)",
+  "eta": "01-13 (Wed)",
   "service": "PEX2",
-  "prevEtd": "12-01 (Tue)",
+  "tt": 42,
+  "prevEtd": "11-28 (Sat)",
   "prevEta": "01-11 (Mon)",
-  "prevTt": 41,
+  "prevTt": 44,
   "changedFields": [
    "etd",
+   "eta",
    "tt"
   ],
   "status": "changed"
@@ -54,8 +55,8 @@
   "voyage": "PEX0D0E19",
   "etd": "12-06 (Sun)",
   "eta": "01-18 (Mon)",
-  "tt": 43,
   "service": "PEX2",
+  "tt": 43,
   "prevEtd": "12-06 (Sun)",
   "prevEta": "01-17 (Sun)",
   "prevTt": 42,
@@ -71,8 +72,8 @@
   "voyage": "PEX0F0E19",
   "etd": "12-13 (Sun)",
   "eta": "01-25 (Mon)",
-  "tt": 43,
   "service": "PEX2",
+  "tt": 43,
   "prevEtd": "12-13 (Sun)",
   "prevEta": "01-24 (Sun)",
   "prevTt": 42,
@@ -81,5 +82,19 @@
    "tt"
   ],
   "status": "changed"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM DIGNITY",
+  "voyage": "PEX0H0E19",
+  "etd": "12-20 (Sun)",
+  "eta": "02-01 (Mon)",
+  "service": "PEX2",
+  "tt": 43,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  }
 ]

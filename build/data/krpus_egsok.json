@@ -109,7 +109,7 @@
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "CMA CGM",
@@ -123,7 +123,7 @@
   "prevEta": null,
   "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "CMA CGM",
@@ -133,53 +133,80 @@
   "eta": "01-08 (Fri)",
   "tt": 46,
   "rotation": "Busan → Ningbo → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "01-08 (Fri)",
+  "prevTt": 46,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
   "vessel": "NAVIOS BAHAMAS",
   "voyage": "IEX0B0W19",
-  "etd": "11-23 (Mon)",
+  "etd": "11-24 (Tue)",
   "eta": "01-01 (Fri)",
-  "tt": 39,
+  "tt": 38,
   "rotation": "Busan → Shekou → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "01-01 (Fri)",
+  "prevTt": 39,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "CMA CGM",
   "vessel": "NAVIOS BAHAMAS",
   "voyage": "IEX0B0W19",
-  "etd": "11-23 (Mon)",
-  "eta": "01-01 (Fri)",
-  "tt": 39,
+  "etd": "11-24 (Tue)",
+  "eta": "01-08 (Fri)",
+  "tt": 45,
   "rotation": "Busan → Shanghai → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "01-01 (Fri)",
+  "prevTt": 39,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ]
  },
  {
   "carrier": "CMA CGM",
   "vessel": "NAVIOS BAHAMAS",
   "voyage": "IEX0B0W19",
-  "etd": "11-23 (Mon)",
+  "etd": "11-24 (Tue)",
   "eta": "01-15 (Fri)",
-  "tt": 53,
+  "tt": 52,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-23 (Mon)",
+  "prevEta": "01-15 (Fri)",
+  "prevTt": 53,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM BUZIOS",
+  "voyage": "AC1070E19",
+  "etd": "11-25 (Wed)",
+  "eta": "01-15 (Fri)",
+  "tt": 51,
+  "rotation": "Busan → Qingdao → Ain Sukhna",
+  "prevEtd": "11-26 (Thu)",
+  "prevEta": "01-15 (Fri)",
+  "prevTt": 50,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "CMA CGM",
@@ -192,25 +219,11 @@
   "prevEtd": "11-24 (Tue)",
   "prevEta": "01-15 (Fri)",
   "prevTt": 52,
+  "status": "changed",
   "changedFields": [
    "etd",
    "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "CMA CGM",
-  "vessel": "CMA CGM BUZIOS",
-  "voyage": "AC1070E19",
-  "etd": "11-26 (Thu)",
-  "eta": "01-15 (Fri)",
-  "tt": 50,
-  "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  ]
  },
  {
   "carrier": "CMA CGM",
@@ -220,53 +233,62 @@
   "eta": "01-15 (Fri)",
   "tt": 48,
   "rotation": "Busan → Ningbo → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "01-15 (Fri)",
+  "prevTt": 48,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
   "vessel": "XIN TIAN JIN",
   "voyage": "IEX0F0W19",
-  "etd": "12-02 (Wed)",
+  "etd": "12-03 (Thu)",
   "eta": "01-08 (Fri)",
-  "tt": 37,
+  "tt": 36,
   "rotation": "Busan → Shekou → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "01-08 (Fri)",
+  "prevTt": 37,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "CMA CGM",
   "vessel": "XIN TIAN JIN",
   "voyage": "IEX0F0W19",
-  "etd": "12-02 (Wed)",
+  "etd": "12-03 (Thu)",
   "eta": "01-15 (Fri)",
-  "tt": 44,
+  "tt": 43,
   "rotation": "Busan → Shanghai → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "01-15 (Fri)",
+  "prevTt": 44,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "CMA CGM",
   "vessel": "XIN TIAN JIN",
   "voyage": "IEX0F0W19",
-  "etd": "12-02 (Wed)",
+  "etd": "12-03 (Thu)",
   "eta": "01-22 (Fri)",
-  "tt": 51,
+  "tt": 50,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "01-22 (Fri)",
+  "prevTt": 51,
+  "status": "changed",
+  "changedFields": [
+   "etd",
+   "tt"
+  ]
  },
  {
   "carrier": "CMA CGM",
@@ -276,11 +298,11 @@
   "eta": "01-29 (Fri)",
   "tt": 55,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-05 (Sat)",
+  "prevEta": "01-29 (Fri)",
+  "prevTt": 55,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -293,11 +315,11 @@
   "prevEtd": "12-06 (Sun)",
   "prevEta": "01-29 (Fri)",
   "prevTt": 54,
+  "status": "changed",
   "changedFields": [
    "eta",
    "tt"
-  ],
-  "status": "changed"
+  ]
  },
  {
   "carrier": "CMA CGM",
@@ -307,11 +329,11 @@
   "eta": "01-29 (Fri)",
   "tt": 51,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "01-29 (Fri)",
+  "prevTt": 51,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -321,11 +343,11 @@
   "eta": "01-22 (Fri)",
   "tt": 43,
   "rotation": "Busan → Ningbo → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "01-22 (Fri)",
+  "prevTt": 43,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -335,11 +357,11 @@
   "eta": "01-22 (Fri)",
   "tt": 43,
   "rotation": "Busan → Ningbo → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "01-22 (Fri)",
+  "prevTt": 43,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -349,11 +371,11 @@
   "eta": "01-29 (Fri)",
   "tt": 49,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-11 (Fri)",
+  "prevEta": "01-29 (Fri)",
+  "prevTt": 49,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -363,11 +385,11 @@
   "eta": "01-22 (Fri)",
   "tt": 41,
   "rotation": "Busan → Shekou → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-12 (Sat)",
+  "prevEta": "01-22 (Fri)",
+  "prevTt": 41,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -377,11 +399,11 @@
   "eta": "01-22 (Fri)",
   "tt": 41,
   "rotation": "Busan → Shanghai → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-12 (Sat)",
+  "prevEta": "01-22 (Fri)",
+  "prevTt": 41,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -391,11 +413,11 @@
   "eta": "01-29 (Fri)",
   "tt": 48,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-12 (Sat)",
+  "prevEta": "01-29 (Fri)",
+  "prevTt": 48,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -405,11 +427,11 @@
   "eta": "02-05 (Fri)",
   "tt": 50,
   "rotation": "Busan → Qingdao → Ain Sukhna",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-17 (Thu)",
+  "prevEta": "02-05 (Fri)",
+  "prevTt": 50,
+  "status": "same",
+  "changedFields": []
  },
  {
   "carrier": "CMA CGM",
@@ -419,10 +441,66 @@
   "eta": "01-29 (Fri)",
   "tt": 43,
   "rotation": "Busan → Ningbo → Ain Sukhna",
+  "prevEtd": "12-17 (Thu)",
+  "prevEta": "01-29 (Fri)",
+  "prevTt": 43,
+  "status": "same",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "TS SINGAPORE",
+  "voyage": "IEX0L0W19",
+  "etd": "12-20 (Sun)",
+  "eta": "01-29 (Fri)",
+  "tt": 40,
+  "rotation": "Busan → Shekou → Ain Sukhna",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "changedFields": [],
-  "status": "same"
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "TS SINGAPORE",
+  "voyage": "IEX0L0W19",
+  "etd": "12-20 (Sun)",
+  "eta": "01-29 (Fri)",
+  "tt": 40,
+  "rotation": "Busan → Shanghai → Ain Sukhna",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "TS SINGAPORE",
+  "voyage": "IEX0L0W19",
+  "etd": "12-20 (Sun)",
+  "eta": "02-12 (Fri)",
+  "tt": 54,
+  "rotation": "Busan → Qingdao → Ain Sukhna",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "PRESIDENT CARTER",
+  "voyage": "EX10F0W19",
+  "etd": "12-21 (Mon)",
+  "eta": "02-12 (Fri)",
+  "tt": 53,
+  "rotation": "Busan → Qingdao → Ain Sukhna",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "status": "new",
+  "changedFields": []
  }
 ]
