@@ -20,7 +20,7 @@
   "last_shift_from": "LAZARO CARDENAS (11/11, +0.4일)",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM SUCCESS E189",
@@ -43,7 +43,7 @@
   "last_shift_from": "LAZARO CARDENAS (11/17, +0.6일)",
   "skipped_ports": "",
   "first_seen": "2026-11-06",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A07 E023",
@@ -54,42 +54,19 @@
   "sha_status": "SKIP",
   "ngb_etd": "2026-10-27 16:15",
   "ngb_status": "ACTUAL",
-  "pq_eta": "2026-11-21 10:00",
-  "pq_etd": "2026-11-22 14:00",
+  "pq_eta": "2026-11-23 00:01",
+  "pq_etd": "2026-11-24 07:00",
   "pq_status": "ESTIMATED",
-  "transit_days": 25,
+  "transit_days": 26,
   "stage": "항해 중",
-  "eta_shift_days": null,
-  "delay_note": "NINGBO 선석대기 3.6일",
+  "eta_shift_days": 1.6,
+  "delay_note": "PUERTO QUETZAL부터 +1.6일 변동 · NINGBO 선석대기 3.6일",
   "wait_port": "NINGBO",
   "wait_days": 3.6,
-  "last_shift_from": "MANZANILLO (11/17, +1.8일)",
-  "skipped_ports": "BUSAN NEW PORT",
+  "last_shift_from": "PUERTO QUETZAL (11/23, +1.6일)",
+  "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
- },
- {
-  "key": "KOTA EAGLE E010",
-  "vessel": "KOTA EAGLE",
-  "service": "ASA",
-  "voyage": "E010",
-  "sha_etd": "2026-11-04 18:00",
-  "sha_status": "ACTUAL",
-  "ngb_etd": "2026-10-28 03:00",
-  "ngb_status": "SKIP",
-  "pq_eta": "2026-11-25 05:00",
-  "pq_etd": "2026-11-26 13:00",
-  "pq_status": "ESTIMATED",
-  "transit_days": 20,
-  "stage": "항해 중",
-  "eta_shift_days": null,
-  "delay_note": "MANZANILLO 선석대기 8.6일",
-  "wait_port": "MANZANILLO",
-  "wait_days": 8.6,
-  "last_shift_from": "MANZANILLO (11/06, +0.9일)",
-  "skipped_ports": "BUSAN NEW PORT",
-  "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM FOUNTAIN E186",
@@ -112,7 +89,30 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-11",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
+ },
+ {
+  "key": "KOTA EAGLE E010",
+  "vessel": "KOTA EAGLE",
+  "service": "ASA",
+  "voyage": "E010",
+  "sha_etd": "2026-11-04 18:00",
+  "sha_status": "ACTUAL",
+  "ngb_etd": "2026-10-28 03:00",
+  "ngb_status": "SKIP",
+  "pq_eta": "2026-11-28 10:00",
+  "pq_etd": "2026-11-29 18:00",
+  "pq_status": "ESTIMATED",
+  "transit_days": 24,
+  "stage": "항해 중",
+  "eta_shift_days": 3.2,
+  "delay_note": "MANZANILLO부터 +2.0일 변동 · MANZANILLO 선석대기 8.6일",
+  "wait_port": "MANZANILLO",
+  "wait_days": 8.6,
+  "last_shift_from": "MANZANILLO (11/23, +2.0일)",
+  "skipped_ports": "BUSAN NEW PORT",
+  "first_seen": "2026-10-27",
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA PELANGI E051",
@@ -135,7 +135,7 @@
   "last_shift_from": "",
   "skipped_ports": "MANZANILLO, BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A06 E016",
@@ -151,14 +151,14 @@
   "pq_status": "ESTIMATED",
   "transit_days": 23,
   "stage": "항해 중",
-  "eta_shift_days": 2.3,
-  "delay_note": "MANZANILLO부터 +2.3일 변동 · GUAYAQUIL 선석대기 2.7일",
+  "eta_shift_days": null,
+  "delay_note": "GUAYAQUIL 선석대기 2.7일",
   "wait_port": "GUAYAQUIL",
   "wait_days": 2.7,
   "last_shift_from": "MANZANILLO (11/20, +2.3일)",
   "skipped_ports": "MANZANILLO, BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA CANTIK E103",
@@ -181,7 +181,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA CAHAYA E097",
@@ -197,14 +197,14 @@
   "pq_status": "ESTIMATED",
   "transit_days": 28,
   "stage": "항해 중",
-  "eta_shift_days": 1.4,
-  "delay_note": "ENSENADA부터 +1.5일 변동 · QINGDAO 선석대기 1.1일",
+  "eta_shift_days": null,
+  "delay_note": "QINGDAO 선석대기 1.1일",
   "wait_port": "QINGDAO",
   "wait_days": 1.1,
   "last_shift_from": "ENSENADA (11/20, +1.5일)",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "EVER FORTUNE E029",
@@ -213,67 +213,67 @@
   "voyage": "E029",
   "sha_etd": "2026-11-22 14:00",
   "sha_status": "ESTIMATED",
-  "ngb_etd": "2026-11-21 03:00",
+  "ngb_etd": "2026-11-21 06:00",
   "ngb_status": "ESTIMATED",
   "pq_eta": "2026-12-11 21:00",
   "pq_etd": "2026-12-13 05:00",
   "pq_status": "ESTIMATED",
   "transit_days": 21,
   "stage": "선적 예정",
-  "eta_shift_days": -0.2,
+  "eta_shift_days": null,
   "delay_note": "LAZARO CARDENAS 선석대기 4.5일",
   "wait_port": "LAZARO CARDENAS",
   "wait_days": 4.5,
   "last_shift_from": "NINGBO (11/18, +0.5일)",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A16 E013",
   "vessel": "WAN HAI A16",
   "service": "ASA",
   "voyage": "E013",
-  "sha_etd": "2026-11-27 00:30",
+  "sha_etd": "2026-11-26 17:00",
   "sha_status": "SKIP",
-  "ngb_etd": "2026-11-27 00:30",
+  "ngb_etd": "2026-11-26 17:00",
   "ngb_status": "ESTIMATED",
-  "pq_eta": "2026-12-17 15:30",
-  "pq_etd": "2026-12-18 23:30",
+  "pq_eta": "2026-12-17 08:00",
+  "pq_etd": "2026-12-18 16:00",
   "pq_status": "ESTIMATED",
   "transit_days": 21,
   "stage": "선적 예정",
-  "eta_shift_days": 0.5,
-  "delay_note": "SHEKOU부터 +0.7일 변동",
-  "wait_port": "",
-  "wait_days": null,
-  "last_shift_from": "SHEKOU (11/20, +0.7일)",
+  "eta_shift_days": -0.3,
+  "delay_note": "NINGBO부터 -0.3일 변동 · SHEKOU 선석대기 1.2일",
+  "wait_port": "SHEKOU",
+  "wait_days": 1.2,
+  "last_shift_from": "NINGBO (11/23, -0.3일)",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A02 E019",
   "vessel": "WAN HAI A02",
   "service": "ASA",
   "voyage": "E019",
-  "sha_etd": "2026-12-01 16:00",
+  "sha_etd": "2026-12-02 00:00",
   "sha_status": "ESTIMATED",
-  "ngb_etd": "2026-11-30 06:00",
+  "ngb_etd": "2026-11-30 14:00",
   "ngb_status": "ESTIMATED",
-  "pq_eta": "2026-12-22 05:00",
-  "pq_etd": "2026-12-23 10:00",
+  "pq_eta": "2026-12-22 13:00",
+  "pq_etd": "2026-12-23 18:00",
   "pq_status": "ESTIMATED",
   "transit_days": 22,
   "stage": "선적 예정",
-  "eta_shift_days": null,
-  "delay_note": "MANZANILLO 선석대기 3.3일",
+  "eta_shift_days": 0.3,
+  "delay_note": "SHEKOU부터 +0.3일 변동 · MANZANILLO 선석대기 3.3일",
   "wait_port": "MANZANILLO",
   "wait_days": 3.3,
-  "last_shift_from": "KAOHSIUNG (11/18, +0.3일)",
+  "last_shift_from": "SHEKOU (11/23, +0.3일)",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI V01 E005",
@@ -296,7 +296,7 @@
   "last_shift_from": "QINGDAO (10/30, +1.0일)",
   "skipped_ports": "LAZARO CARDENAS, BUSAN NEW PORT, LAZARO CARDENAS",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A13 E012",
@@ -312,14 +312,14 @@
   "pq_status": "ESTIMATED",
   "transit_days": 28,
   "stage": "선적 예정",
-  "eta_shift_days": 3.2,
-  "delay_note": "NINGBO부터 +4.0일 변동",
+  "eta_shift_days": null,
+  "delay_note": "",
   "wait_port": "",
   "wait_days": null,
   "last_shift_from": "NINGBO (11/20, +4.0일)",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "CSCL SPRING E069",
@@ -342,7 +342,7 @@
   "last_shift_from": "",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM ORCHID E200",
@@ -351,12 +351,12 @@
   "voyage": "E200",
   "sha_etd": "2026-12-05 08:00",
   "sha_status": "SKIP",
-  "ngb_etd": "2026-12-03 14:00",
+  "ngb_etd": "2026-12-04 14:00",
   "ngb_status": "ESTIMATED",
   "pq_eta": "2027-01-05 21:00",
   "pq_etd": "2027-01-08 08:00",
   "pq_status": "ESTIMATED",
-  "transit_days": 33,
+  "transit_days": 32,
   "stage": "선적 예정",
   "eta_shift_days": null,
   "delay_note": "MANZANILLO 선석대기 2.8일",
@@ -365,7 +365,7 @@
   "last_shift_from": "SHANGHAI (11/06, -1.0일)",
   "skipped_ports": "ENSENADA",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A17 E014",
@@ -388,16 +388,16 @@
   "last_shift_from": "",
   "skipped_ports": "LAZARO CARDENAS",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA EMERALD E010",
   "vessel": "KOTA EMERALD",
   "service": "ASA",
   "voyage": "E010",
-  "sha_etd": "2026-12-17 19:00",
+  "sha_etd": "2026-12-17 03:00",
   "sha_status": "ESTIMATED",
-  "ngb_etd": "2026-12-15 12:00",
+  "ngb_etd": "2026-12-15 19:00",
   "ngb_status": "ESTIMATED",
   "pq_eta": "2027-01-07 20:30",
   "pq_etd": "2027-01-09 04:30",
@@ -411,7 +411,7 @@
   "last_shift_from": "MANZANILLO (11/18, +0.8일)",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA CEPAT E088",
@@ -434,7 +434,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI V02 E005",
@@ -450,14 +450,14 @@
   "pq_status": "ESTIMATED",
   "transit_days": 23,
   "stage": "선적 예정",
-  "eta_shift_days": 4.8,
-  "delay_note": "MANZANILLO부터 +4.7일 변동 · LAZARO CARDENAS 선석대기 4.2일",
+  "eta_shift_days": null,
+  "delay_note": "LAZARO CARDENAS 선석대기 4.2일",
   "wait_port": "LAZARO CARDENAS",
   "wait_days": 4.2,
   "last_shift_from": "MANZANILLO (11/20, +4.7일)",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI 711 E005",
@@ -480,21 +480,21 @@
   "last_shift_from": "",
   "skipped_ports": "LAZARO CARDENAS",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA EAGLE E011",
   "vessel": "KOTA EAGLE",
   "service": "ASA",
   "voyage": "E011",
-  "sha_etd": "2027-01-09 07:00",
+  "sha_etd": "2027-01-13 10:30",
   "sha_status": "ESTIMATED",
-  "ngb_etd": "2027-01-07 21:00",
+  "ngb_etd": "2027-01-12 02:30",
   "ngb_status": "ESTIMATED",
   "pq_eta": "2027-01-23 10:00",
   "pq_etd": "2027-01-24 18:00",
   "pq_status": "ESTIMATED",
-  "transit_days": 16,
+  "transit_days": 11,
   "stage": "선적 예정",
   "eta_shift_days": null,
   "delay_note": "",
@@ -503,7 +503,7 @@
   "last_shift_from": "",
   "skipped_ports": "BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA MANZANILLO E028",
@@ -526,30 +526,30 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A07 E024",
   "vessel": "WAN HAI A07",
   "service": "ASA",
   "voyage": "E024",
-  "sha_etd": "2027-01-09 21:00",
+  "sha_etd": "2027-01-11 12:00",
   "sha_status": "ESTIMATED",
-  "ngb_etd": "2027-01-06 11:00",
+  "ngb_etd": "2027-01-08 02:00",
   "ngb_status": "ESTIMATED",
-  "pq_eta": "2027-01-31 00:00",
-  "pq_etd": "2027-02-01 08:00",
+  "pq_eta": "2027-02-01 15:00",
+  "pq_etd": "2027-02-02 23:00",
   "pq_status": "ESTIMATED",
   "transit_days": 25,
   "stage": "선적 예정",
-  "eta_shift_days": null,
-  "delay_note": "",
+  "eta_shift_days": 1.6,
+  "delay_note": "PUERTO QUETZAL부터 +1.6일 변동",
   "wait_port": "",
   "wait_days": null,
-  "last_shift_from": "LAZARO CARDENAS (11/13, -0.8일)",
+  "last_shift_from": "PUERTO QUETZAL (11/23, +1.6일)",
   "skipped_ports": "MANZANILLO, BUSAN NEW PORT",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM MUTUALITY E117",
@@ -572,7 +572,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-20",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA PELANGI E052",
@@ -595,7 +595,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM MASCULINITY E111",
@@ -618,7 +618,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-20",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA CANTIK E104",
@@ -641,7 +641,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "EVER FORTUNE E030",
@@ -664,30 +664,30 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-13",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A16 E014",
   "vessel": "WAN HAI A16",
   "service": "ASA",
   "voyage": "E014",
-  "sha_etd": "2027-02-01 12:00",
+  "sha_etd": "2027-02-01 04:30",
   "sha_status": "ESTIMATED",
-  "ngb_etd": "2027-01-29 02:00",
+  "ngb_etd": "2027-01-28 18:30",
   "ngb_status": "ESTIMATED",
-  "pq_eta": "2027-02-22 03:00",
-  "pq_etd": "2027-02-23 11:00",
+  "pq_eta": "2027-02-21 19:30",
+  "pq_etd": "2027-02-23 03:30",
   "pq_status": "ESTIMATED",
   "transit_days": 24,
   "stage": "선적 예정",
-  "eta_shift_days": 0.5,
-  "delay_note": "LAZARO CARDENAS부터 +0.5일 변동",
+  "eta_shift_days": -0.3,
+  "delay_note": "LAZARO CARDENAS부터 -0.3일 변동",
   "wait_port": "",
   "wait_days": null,
-  "last_shift_from": "LAZARO CARDENAS (11/20, +0.5일)",
+  "last_shift_from": "LAZARO CARDENAS (11/23, -0.3일)",
   "skipped_ports": "CALLAO, BUSAN NEW PORT",
   "first_seen": "2026-11-17",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "KOTA CAHAYA E098",
@@ -710,7 +710,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-10-27",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "WAN HAI A13 E013",
@@ -733,7 +733,30 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-03",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
+ },
+ {
+  "key": "WAN HAI A02 E020",
+  "vessel": "WAN HAI A02",
+  "service": "ASA",
+  "voyage": "E020",
+  "sha_etd": "2027-02-15 02:00",
+  "sha_status": "ESTIMATED",
+  "ngb_etd": "2027-02-11 16:00",
+  "ngb_status": "ESTIMATED",
+  "pq_eta": "2027-03-07 19:00",
+  "pq_etd": "2027-03-09 03:00",
+  "pq_status": "ESTIMATED",
+  "transit_days": 24,
+  "stage": "선적 예정",
+  "eta_shift_days": null,
+  "delay_note": "",
+  "wait_port": "",
+  "wait_days": null,
+  "last_shift_from": "",
+  "skipped_ports": "",
+  "first_seen": "2026-11-23",
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM MUTUALITY E118",
@@ -756,7 +779,7 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-20",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  },
  {
   "key": "YM MASCULINITY E112",
@@ -779,6 +802,6 @@
   "last_shift_from": "",
   "skipped_ports": "",
   "first_seen": "2026-11-20",
-  "collected_at": "2026-11-20 07:55"
+  "collected_at": "2026-11-23 07:55"
  }
 ]
