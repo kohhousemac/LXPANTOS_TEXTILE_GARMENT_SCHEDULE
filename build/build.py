@@ -92,6 +92,21 @@ BW_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Port bert
 BERTH_MINI = {'vnsgn_idsrg', 'vnsgn_krpus', 'vnsgn_krinc', 'vnhph_krpus', 'vnhph_krinc', 'idjkt_cnsha', 'idjkt_krinc', 'idjkt_krpus',
               'cnsha_krpus', 'cnsha_krinc', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'krpus_trist'}
 
+TT = {}  # routeId -> average transit stats (tt_stats.py), filled in main()
+
+def tt_line(route):
+    v = TT.get(route)
+    if not v:
+        return ''
+    md = v['first'][5:].replace('-', '.')
+    parts = [f'<b>{v["avg"]:.1f}일</b>']
+    if len(v['carriers']) > 1:
+        parts.append(' · '.join(f'{c} {a:.1f}일' for c, a, _ in v['carriers']))
+    few = ' · 표본 적음' if v['n'] < 3 else ''
+    return (f'        <p class="lx-tt-avg">평균 항해일수(T/T) {parts[0]}'
+            + (f'<span class="lx-tt-by">{parts[1]}</span>' if len(parts) > 1 else '')
+            + f'<span class="lx-tt-sub">최근 2개월 출항 {v["n"]}항차 · {md}~ · 범위 {v["min"]:.0f}~{v["max"]:.0f}일{few}</span></p>\n')
+
 def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     h = ' hidden' if hidden else ''
     return f'''
@@ -111,7 +126,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="{route}">Copy</button>
         </div>
-{('        <p class="lx-lane-note">' + LANE_NOTES[route] + '</p>') if route in LANE_NOTES else ''}
+{tt_line(route)}{('        <p class="lx-lane-note">' + LANE_NOTES[route] + '</p>') if route in LANE_NOTES else ''}
         <div class="lx-table-wrap">
           <table class="lx-table" aria-label="{pol_name} to {pod_name} sailing schedule">
             <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th>{'<th>Calling Order</th>' if route in CALLING_ORDER else ''}</tr></thead>
@@ -459,8 +474,12 @@ MBL_CARRIERS = [('KMTC','KMTC (고려해운)'),('SINOKOR','SINOKOR (장금상선
 
 
 def main():
+    import tt_stats
+    TT.update(tt_stats.stats(tt_stats.update()))
     data = {}
     for p in sorted(DATA.glob('*.json')):
+        if p.stem == 'tt_history':  # build-time only (average T/T), not shipped to the page
+            continue
         v = json.loads(p.read_text(encoding='utf-8'))
         if isinstance(v, dict):
             for k in ('rows', 'data', 'results'):
