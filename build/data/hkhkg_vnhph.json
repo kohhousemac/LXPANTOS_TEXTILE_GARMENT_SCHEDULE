@@ -49,21 +49,6 @@
   "status": "departed"
  },
  {
-  "carrier": "PANOCEAN",
-  "vessel": "PANCON HARMONY",
-  "voyage": "2621S",
-  "etd": "11-21 (Sat)",
-  "eta": "11-23 (Mon)",
-  "tt": 2,
-  "closedCarriers": "PANOCEAN",
-  "bookingClosed": true,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "departed"
- },
- {
   "service": "BIH",
   "closedCarriers": "KMTC / NAMSUNG / PANOCEAN",
   "bookingClosed": true,
@@ -77,7 +62,8 @@
   "prevEta": "11-24 (Tue)",
   "prevTt": 2,
   "changedFields": [],
-  "status": "departed"
+  "status": "departed",
+  "altDates": "PANOCEAN 11-21→11-23"
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -132,30 +118,11 @@
   "status": "changed"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2623S",
-  "service": "IHS",
-  "closedCarriers": "NAMSUNG",
-  "bookingClosed": true,
-  "etd": "12-08 (Tue)",
-  "eta": "12-10 (Thu)",
-  "tt": 2,
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-09 (Wed)",
-  "prevTt": 1,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2623S",
   "service": "IHS1",
-  "closedCarriers": "KMTC",
+  "closedCarriers": "KMTC / NAMSUNG",
   "bookingClosed": true,
   "etd": "12-09 (Wed)",
   "eta": "12-10 (Thu)",
@@ -167,7 +134,8 @@
    "etd",
    "tt"
   ],
-  "status": "changed"
+  "status": "changed",
+  "altDates": "NAMSUNG 12-08→12-10"
  },
  {
   "carrier": "KMTC / NAMSUNG / PANOCEAN",
@@ -201,43 +169,6 @@
   "changedFields": [
    "etd",
    "eta"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "PANOCEAN",
-  "vessel": "STAR SKIPPER",
-  "voyage": "2624S",
-  "service": "BIH",
-  "bookingClosed": false,
-  "closedCarriers": "",
-  "altDates": "KMTC 12-21→12-23",
-  "etd": "12-21 (Mon)",
-  "eta": "12-22 (Tue)",
-  "tt": 1,
-  "prevEtd": "12-21 (Mon)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 1,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2624S",
-  "service": "IHS",
-  "closedCarriers": "NAMSUNG",
-  "bookingClosed": true,
-  "altDates": "NAMSUNG 12-22→12-24",
-  "etd": "12-22 (Tue)",
-  "eta": "12-24 (Thu)",
-  "tt": 2,
-  "prevEtd": "12-22 (Tue)",
-  "prevEta": "12-23 (Wed)",
-  "prevTt": 1,
-  "changedFields": [
-   "eta",
-   "tt"
   ],
   "status": "changed"
  }

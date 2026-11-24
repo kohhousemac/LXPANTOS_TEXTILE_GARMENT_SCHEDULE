@@ -84,7 +84,9 @@
   "prevTt": 11,
   "changedFields": [],
   "status": "departed",
-  "service": "CPX"
+  "service": "CPX",
+  "closedCarriers": "SM",
+  "bookingClosed": true
  },
  {
   "carrier": "HMM / YML",
@@ -139,7 +141,9 @@
    "eta"
   ],
   "status": "changed",
-  "service": "CPX"
+  "service": "CPX",
+  "closedCarriers": "SM",
+  "bookingClosed": true
  },
  {
   "carrier": "HMM / YML",

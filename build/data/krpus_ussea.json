@@ -11,7 +11,9 @@
   "prevTt": null,
   "status": "departed",
   "changedFields": [],
-  "service": "PNS"
+  "service": "PNS",
+  "closedCarriers": "SM",
+  "bookingClosed": true
  },
  {
   "carrier": "SM",
@@ -25,7 +27,9 @@
   "prevTt": 13,
   "changedFields": [],
   "status": "departed",
-  "service": "PNS"
+  "service": "PNS",
+  "closedCarriers": "SM",
+  "bookingClosed": true
  },
  {
   "carrier": "SM",
@@ -39,7 +43,9 @@
   "prevTt": 13,
   "changedFields": [],
   "status": "departed",
-  "service": "PNS"
+  "service": "PNS",
+  "closedCarriers": "SM",
+  "bookingClosed": true
  },
  {
   "carrier": "SM",
