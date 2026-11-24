@@ -330,7 +330,9 @@
   "prevEta": "11-29 (Sun)",
   "prevTt": 5,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "closedCarriers": "HEUNG-A / SINOKOR",
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
@@ -355,7 +357,7 @@
   "voyage": "2614S",
   "service": "KHS1",
   "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
-  "closedCarriers": "KMTC",
+  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
   "etd": "11-29 (Sun)",
   "eta": "12-05 (Sat)",
   "tt": 6,
@@ -363,7 +365,8 @@
   "prevEta": "12-05 (Sat)",
   "prevTt": 6,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "bookingClosed": true
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -378,7 +381,9 @@
   "prevEta": "12-07 (Mon)",
   "prevTt": 7,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "closedCarriers": "HEUNG-A / SINOKOR",
+  "bookingClosed": true
  },
  {
   "carrier": "DONGJIN / KMTC",
@@ -407,7 +412,7 @@
   "voyage": "2613S",
   "service": "KST",
   "rotation": "Busan → Ho Chi Minh",
-  "closedCarriers": "PANOCEAN",
+  "closedCarriers": "HEUNG-A / PANOCEAN / SINOKOR",
   "altDates": "DONGJIN 12-01→12-06",
   "etd": "12-01 (Tue)",
   "eta": "12-07 (Mon)",
@@ -416,7 +421,8 @@
   "prevEta": "12-07 (Mon)",
   "prevTt": 6,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
