@@ -238,7 +238,7 @@
   "vessel": "POS QINGDAO",
   "voyage": "1080S",
   "service": "KCH",
-  "closedCarriers": "PANOCEAN",
+  "closedCarriers": "PANOCEAN / SM LINE",
   "rotation": "Incheon → Qingdao → Haiphong",
   "etd": "11-29 (Sun)",
   "eta": "12-06 (Sun)",
@@ -247,7 +247,8 @@
   "prevEta": "12-06 (Sun)",
   "prevTt": 7,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "bookingClosed": true
  },
  {
   "carrier": "PANOCEAN",
@@ -271,7 +272,7 @@
   "vessel": "SM TOKYO",
   "voyage": "2622W",
   "service": "HP1",
-  "closedCarriers": "PANOCEAN",
+  "closedCarriers": "PANOCEAN / SM LINE",
   "rotation": "Incheon → Kwangyang → Busan → Haiphong",
   "etd": "11-30 (Mon)",
   "eta": "12-06 (Sun)",
@@ -280,7 +281,8 @@
   "prevEta": "12-06 (Sun)",
   "prevTt": 6,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "bookingClosed": true
  },
  {
   "carrier": "DONGJIN",
@@ -363,14 +365,16 @@
   "prevEta": "12-10 (Thu)",
   "prevTt": 5,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "closedCarriers": "SM LINE",
+  "bookingClosed": true
  },
  {
   "carrier": "PANOCEAN / SM LINE",
   "vessel": "PEGASUS DREAM",
   "voyage": "2624W",
   "service": "HP1",
-  "closedCarriers": "PANOCEAN",
+  "closedCarriers": "PANOCEAN / SM LINE",
   "rotation": "Incheon → Kwangyang → Busan → Haiphong",
   "altDates": "DONGJIN 12-05→12-12",
   "etd": "12-05 (Sat)",
@@ -380,7 +384,8 @@
   "prevEta": "12-11 (Fri)",
   "prevTt": 6,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "bookingClosed": true
  },
  {
   "carrier": "DONGJIN",
@@ -436,7 +441,9 @@
   "prevEta": "12-12 (Sat)",
   "prevTt": 6,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "closedCarriers": "SM LINE",
+  "bookingClosed": true
  },
  {
   "carrier": "PANOCEAN",
@@ -507,7 +514,9 @@
   "prevEta": "12-17 (Thu)",
   "prevTt": 5,
   "changedFields": [],
-  "status": "same"
+  "status": "same",
+  "closedCarriers": "SM LINE",
+  "bookingClosed": true
  },
  {
   "carrier": "PANOCEAN",

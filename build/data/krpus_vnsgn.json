@@ -688,7 +688,9 @@
    "eta",
    "tt"
   ],
-  "status": "changed"
+  "status": "changed",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true
  },
  {
   "carrier": "KMTC",
