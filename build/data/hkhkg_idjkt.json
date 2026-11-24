@@ -1,12 +1,12 @@
 [
  {
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2610S",
   "etd": "11-07 (Sat)",
   "eta": "11-16 (Mon)",
   "service": "KIS1",
-  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
   "tt": 9,
   "prevEtd": null,
@@ -17,9 +17,9 @@
  },
  {
   "service": "KIS1",
-  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "etd": "11-14 (Sat)",

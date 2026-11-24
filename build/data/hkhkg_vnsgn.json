@@ -3,7 +3,7 @@
   "service": "VTS",
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SKY ORION",
   "voyage": "2613S",
   "etd": "11-09 (Mon)",
@@ -17,9 +17,9 @@
  },
  {
   "service": "KTS",
-  "closedCarriers": "HEUNG-A / KMTC / SINOKOR",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "CA MANILA",
   "voyage": "2616S",
   "etd": "11-12 (Thu)",
@@ -33,15 +33,14 @@
  },
  {
   "service": "KVT",
-  "closedCarriers": "KMTC / NAMSUNG",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2613S",
   "etd": "11-13 (Fri)",
-  "eta": "11-15 (Sun)",
-  "altDates": "KMTC 11-13→11-16",
-  "tt": 2,
+  "eta": "11-16 (Mon)",
+  "tt": 3,
   "prevEtd": "11-13 (Fri)",
   "prevEta": "11-15 (Sun)",
   "prevTt": 2,
@@ -97,9 +96,9 @@
  },
  {
   "service": "KVT",
-  "closedCarriers": "KMTC / NAMSUNG",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STARSHIP URSA",
   "voyage": "2615S",
   "etd": "11-23 (Mon)",
@@ -109,8 +108,7 @@
   "prevEta": "11-24 (Tue)",
   "prevTt": 2,
   "changedFields": [],
-  "status": "departed",
-  "altDates": "NAMSUNG 11-22→11-24"
+  "status": "departed"
  },
  {
   "carrier": "KMTC",
@@ -151,11 +149,11 @@
   "status": "changed"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON BRIDGE",
   "voyage": "2615S",
   "service": "KVT",
-  "closedCarriers": "KMTC / NAMSUNG",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
   "etd": "11-29 (Sun)",
   "eta": "12-01 (Tue)",
@@ -167,8 +165,7 @@
    "eta",
    "tt"
   ],
-  "status": "changed",
-  "altDates": "NAMSUNG 11-28→11-30"
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -222,12 +219,10 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2614S",
   "service": "KVT",
-  "closedCarriers": "",
-  "bookingClosed": false,
   "etd": "12-04 (Fri)",
   "eta": "12-07 (Mon)",
   "tt": 3,
@@ -239,8 +234,7 @@
    "eta",
    "tt"
   ],
-  "status": "changed",
-  "altDates": "NAMSUNG 12-03→12-05"
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -298,16 +292,13 @@
   "status": "changed"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STARSHIP URSA",
   "voyage": "2616S",
   "service": "KVT",
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "altDates": "KMTC 12-12→12-15; NAMSUNG 12-13→12-15",
-  "etd": "12-14 (Mon)",
-  "eta": "12-16 (Wed)",
-  "tt": 2,
+  "etd": "12-12 (Sat)",
+  "eta": "12-15 (Tue)",
+  "tt": 3,
   "prevEtd": "12-12 (Sat)",
   "prevEta": "12-14 (Mon)",
   "prevTt": 2,
@@ -353,12 +344,10 @@
   "status": "changed"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON BRIDGE",
   "voyage": "2616S",
   "service": "KVT",
-  "closedCarriers": "",
-  "bookingClosed": false,
   "etd": "12-20 (Sun)",
   "eta": "12-22 (Tue)",
   "tt": 2,
@@ -369,8 +358,7 @@
    "etd",
    "eta"
   ],
-  "status": "changed",
-  "altDates": "NAMSUNG 12-18→12-20"
+  "status": "changed"
  },
  {
   "carrier": "KMTC",

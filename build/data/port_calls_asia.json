@@ -7368,7 +7368,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2610S",
   "seq": 1,
@@ -7381,7 +7381,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2610S",
   "seq": 2,
@@ -7394,7 +7394,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2610S",
   "seq": 3,
@@ -7407,7 +7407,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "seq": 1,
@@ -7420,7 +7420,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "seq": 2,
@@ -7433,7 +7433,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "TIANJIN VOYAGER",
   "voyage": "2610S",
   "seq": 3,
@@ -7446,7 +7446,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611S",
   "seq": 1,
@@ -7459,7 +7459,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611S",
   "seq": 2,
@@ -7472,7 +7472,7 @@
  },
  {
   "routeId": "hkhkg_idjkt",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC SHIMIZU",
   "voyage": "2611S",
   "seq": 3,
@@ -7485,7 +7485,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "SUNNY KALMIA",
   "voyage": "2621S",
   "seq": 1,
@@ -7498,7 +7498,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "SUNNY KALMIA",
   "voyage": "2621S",
   "seq": 2,
@@ -7511,7 +7511,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STAR FRONTIER",
   "voyage": "2622S",
   "seq": 1,
@@ -7524,7 +7524,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STAR FRONTIER",
   "voyage": "2622S",
   "seq": 2,
@@ -7537,7 +7537,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "KMTC",
   "vessel": "STAR EXPLORER",
   "voyage": "2622S",
   "seq": 1,
@@ -7550,7 +7550,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "KMTC",
   "vessel": "STAR EXPLORER",
   "voyage": "2622S",
   "seq": 2,
@@ -7563,7 +7563,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON HARMONY",
   "voyage": "2621S",
   "seq": 1,
@@ -7576,7 +7576,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON HARMONY",
   "voyage": "2621S",
   "seq": 2,
@@ -7589,7 +7589,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "SUNNY KALMIA",
   "voyage": "2622S",
   "seq": 1,
@@ -7602,7 +7602,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "SUNNY KALMIA",
   "voyage": "2622S",
   "seq": 2,
@@ -7615,7 +7615,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STAR FRONTIER",
   "voyage": "2623S",
   "seq": 1,
@@ -7628,7 +7628,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STAR FRONTIER",
   "voyage": "2623S",
   "seq": 2,
@@ -7641,7 +7641,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "NAMSUNG / PANOCEAN",
+  "carrier": "KMTC",
   "vessel": "STAR EXPLORER",
   "voyage": "2623S",
   "seq": 1,
@@ -7654,7 +7654,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "NAMSUNG / PANOCEAN",
+  "carrier": "KMTC",
   "vessel": "STAR EXPLORER",
   "voyage": "2623S",
   "seq": 2,
@@ -7667,7 +7667,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "SUNNY KALMIA",
   "voyage": "2623S",
   "seq": 1,
@@ -7680,7 +7680,7 @@
  },
  {
   "routeId": "hkhkg_vnhph",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "SUNNY KALMIA",
   "voyage": "2623S",
   "seq": 2,
@@ -7693,7 +7693,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SKY ORION",
   "voyage": "2613S",
   "seq": 1,
@@ -7706,7 +7706,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SKY ORION",
   "voyage": "2613S",
   "seq": 2,
@@ -7719,7 +7719,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "CA MANILA",
   "voyage": "2616S",
   "seq": 1,
@@ -7732,7 +7732,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "CA MANILA",
   "voyage": "2616S",
   "seq": 2,
@@ -7745,7 +7745,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2613S",
   "seq": 1,
@@ -7758,7 +7758,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2613S",
   "seq": 2,
@@ -7966,7 +7966,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON BRIDGE",
   "voyage": "2615S",
   "seq": 1,
@@ -7979,7 +7979,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "PANCON BRIDGE",
   "voyage": "2615S",
   "seq": 2,
@@ -7992,7 +7992,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC TAIPEIS",
   "voyage": "2614S",
   "seq": 1,
@@ -8005,7 +8005,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC TAIPEIS",
   "voyage": "2614S",
   "seq": 2,
@@ -8018,7 +8018,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SKY ORION",
   "voyage": "2614S",
   "seq": 1,
@@ -8031,7 +8031,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SKY ORION",
   "voyage": "2614S",
   "seq": 2,
@@ -8044,7 +8044,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2614S",
   "seq": 1,
@@ -8057,7 +8057,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2614S",
   "seq": 2,
@@ -8135,7 +8135,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SAWASDEE VEGA",
   "voyage": "2615S",
   "seq": 1,
@@ -8148,7 +8148,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "SAWASDEE VEGA",
   "voyage": "2615S",
   "seq": 2,
@@ -8161,7 +8161,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STARSHIP URSA",
   "voyage": "2616S",
   "seq": 1,
@@ -8174,7 +8174,7 @@
  },
  {
   "routeId": "hkhkg_vnsgn",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "STARSHIP URSA",
   "voyage": "2616S",
   "seq": 2,
