@@ -98,6 +98,7 @@ def update(today=None):
 # Lane rules that drop sailings from the tables (user instructions) also apply to the averages.
 TT_MAX = {'vnsgn_cnsha': 10, 'vnhph_cnsha': 10}
 SITC_UNDER = {'vnsgn_idjkt': 10}
+SITC_MAX = {'cnsha_vnsgn': 10}  # 2026-11-24: SITC over 10 days (incl. CBX2 to Phuoc An, ~14 days) dropped
 
 
 def carriers_now():
@@ -132,6 +133,8 @@ def stats(rows, today=None):
         if route in TT_MAX and h['tt'] > TT_MAX[route]:
             continue
         if route in SITC_UNDER and cs == ['SITC'] and h['tt'] >= SITC_UNDER[route]:
+            continue
+        if route in SITC_MAX and cs == ['SITC'] and h['tt'] > SITC_MAX[route]:
             continue
         out.setdefault(route, []).append(dict(h, carrier=' / '.join(cs)))
     res = {}
