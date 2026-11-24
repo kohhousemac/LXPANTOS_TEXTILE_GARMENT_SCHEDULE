@@ -284,6 +284,43 @@
     return td;
   }
 
+  // Single-carrier rows: the carrier name opens that carrier's point-to-point schedule page
+  // (POL/POD filled in where the carrier's site accepts them in the URL). Joint-service rows are not linked.
+  var CARRIER_SITE = {
+    'KMTC': 'https://www.ekmtc.com/index.html#/schedule/leg',
+    'SITC': 'https://ebusiness.sitcline.com/#/topMenu/voyagePlanSearch',
+    'SINOKOR': 'https://e-sinokor.com/schedule/port-to-port-schedule',
+    'HEUNG-A': 'https://ebiz.heungaline.com/Schedule',
+    'NAMSUNG': 'https://ebiz.namsung.co.kr/',
+    'PANOCEAN': 'https://container.panocean.com/',
+    'DONGJIN': 'https://esvc.djship.co.kr/gnoss/CUP_HOM_3000.do',
+    'SM LINE': 'https://esvc.smlines.com/smline/CUP_HOM_3001.do',
+    'SM': 'https://esvc.smlines.com/smline/CUP_HOM_3001.do',
+    'EMC': 'https://ss.shipmentlink.com/tvs2/jsp/TVS2_InteractiveSchedule.jsp',
+    'WHL': 'https://www.wanhai.com/views/skd/SkdByPort.xhtml?file_num=64835&parent_id=64834&top_file_num=64735',
+    'GSL': 'https://www.goldstarline.com/schedules/point_to_point',
+    'CNC': 'https://www.cnc-line.com/ebusiness/schedules',
+    'CMA CGM': 'https://www.cma-cgm.com/ebusiness/schedules',
+    'MSC': 'https://www.msc.com/en/search-a-schedule',
+    'MSK': 'https://www.maersk.com/schedules/pointToPoint',
+    'MAERSK': 'https://www.maersk.com/schedules/pointToPoint',
+    'HMM': 'https://www.hmm21.com/e-service/general/schedule/ScheduleMain.do',
+    'YML': 'https://www.yangming.com/en/esolution/schedule/point_to_point_search',
+    'YANG MING': 'https://www.yangming.com/en/esolution/schedule/point_to_point_search',
+    'CUL': 'https://www.culines.com/site/schedule_ptp',
+    'ZIM': function (pol, pod) { return 'https://www.zim.com/schedules/point-to-point?portcode=' + pol + '%3B10&portdestinationcode=' + pod + '%3B10&direction=true&fromdate=today&weeksahead=6'; },
+    'ONE': function (pol, pod) { return 'https://www.one-line.com/one-ecom/schedule/point-to-point-schedule-beta?oriLocCdParam=' + pol + '&destLocCdParam=' + pod + '&oriTermCdPara=Y&desTermCdPara=Y&nextWeekValue=28&cargoNature=GP&source=p2p&searchType=List'; }
+  };
+  function carrierUrl(carrier, routeId) {
+    var u = CARRIER_SITE[String(carrier).trim().toUpperCase()];
+    if (!u) return '';
+    if (typeof u === 'function') {
+      var p = String(routeId || '').toUpperCase().split('_');
+      return p.length === 2 ? u(p[0], p[1]) : '';
+    }
+    return u;
+  }
+
   function buildRow(v, routeId) {
     var tr = document.createElement('tr');
     tr.className = 'lx-row-carrier';
@@ -303,7 +340,16 @@
           tag.appendChild(document.createTextNode(i % 2 === 0 ? ' /' : ' / '));
           if (i % 2 === 0) tag.appendChild(document.createElement('br'));
         }
-        tag.appendChild(document.createTextNode(c));
+        var site = String(v.carrier).indexOf('/') === -1 ? carrierUrl(c, routeId) : '';
+        if (site) {
+          var link = document.createElement('a');
+          link.className = 'lx-carrier-link';
+          link.href = site; link.target = '_blank'; link.rel = 'noopener';
+          link.title = c + ' 스케줄 사이트 열기';
+          link.textContent = c;
+          link.addEventListener('click', function (e) { e.stopPropagation(); });
+          tag.appendChild(link);
+        } else tag.appendChild(document.createTextNode(c));
         if (closedList && closedList.indexOf(c) !== -1) {
           var cb = document.createElement('span');
           cb.className = 'lx-bkg-closed lx-bkg-closed--inline';

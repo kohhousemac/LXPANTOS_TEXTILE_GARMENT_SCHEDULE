@@ -184,5 +184,7 @@
 .lx-tt-avg b { color: var(--color-fg); font-size: 1.1em; margin-left: .15rem; }
 .lx-tt-by { color: var(--color-fg); }
 .lx-tt-sub { color: var(--color-fg-muted); }
+.lx-carrier-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.lx-carrier-link:hover { text-decoration-style: solid; }
 </style>
 
