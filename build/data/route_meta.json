@@ -72,6 +72,18 @@
   "vesselCount": 20
  },
  {
+  "routeId": "cnsha_twkel",
+  "label": "Shanghai → Keelung",
+  "pol": "Shanghai",
+  "pod": "Keelung",
+  "group": "cn",
+  "updateDate": "11/24",
+  "newCount": 5,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 6
+ },
+ {
   "routeId": "cnshk_vnsgn",
   "label": "Shekou → Ho Chi Minh",
   "pol": "Shekou",
