@@ -168,6 +168,50 @@ dash.calc('sailings_cc', {
     fn: function (s) { return sorted(lane(s, 'sha'), s, 'sha'); } });
   dash.calc('cnngb_gtpqz', { title: 'Ningbo → Puerto Quetzal', description: 'WHL sailings from the daily Wan Hai collection (sailings), Asia-lane shape.', inputs: ['sailings'],
     fn: function (s) { return sorted(lane(s, 'ngb'), s, 'ngb'); } });
+  // Shekou / Kaohsiung (2026-11-20): WHL ASA calls them before Ningbo/Shanghai. sailings only has
+  // sha/ngb dates, so these lanes come from port_calls: POL call (not SKIP) -> next PUERTO QUETZAL.
+  var PC_LANES = [['cnshk_gtpqz', 'SHEKOU'], ['twkhh_gtpqz', 'KAOHSIUNG']];
+  function pcSegs(sailings, pcs, port) {
+    var byV = {}, sail = {};
+    pcs.forEach(function (c) { (byV[c.vessel] = byV[c.vessel] || []).push(c); });
+    sailings.forEach(function (r) { sail[r.vessel + '|' + r.voyage] = r; });
+    var out = [];
+    Object.keys(byV).forEach(function (v) {
+      var cs = byV[v].slice().sort(function (a, b) { return T(a.eta || a.etd) - T(b.eta || b.etd); });
+      for (var i = 0; i < cs.length; i++) {
+        if (cs[i].port !== port || cs[i].status === 'SKIP' || !cs[i].etd) continue;
+        var seg = [];
+        for (var k = i; k < cs.length; k++) { seg.push(cs[k]); if (cs[k].port === 'PUERTO QUETZAL' && cs[k].status !== 'SKIP') break; }
+        var last = seg[seg.length - 1];
+        if (last.port !== 'PUERTO QUETZAL' || last.status === 'SKIP') continue;
+        var voy = cs[i].out_voy || last.in_voy;
+        out.push({ vessel: v, voyage: voy, service: cs[i].service, etd: cs[i].etd, eta: last.eta || last.etb, seg: seg, s: sail[v + '|' + voy] || null });
+      }
+    });
+    return out;
+  }
+  function pcLane(sailings, pcs, port) {
+    var now = Date.now();
+    var latest = sailings.reduce(function (m, r) { return r.collected_at > m ? r.collected_at : m; }, '').slice(0, 10);
+    return pcSegs(sailings, pcs, port).filter(function (x) {
+      return x.eta && T(x.eta) >= now - 14 * 864e5 && T(x.etd) <= now + 28 * 864e5;
+    }).sort(function (a, b) { return T(a.etd) - T(b.etd); }).map(function (x) {
+      var e = T(x.etd), a = T(x.eta), r = x.s || {};
+      var row = { carrier: 'WHL', vessel: x.vessel, voyage: x.voyage, service: x.service, etd: md(e), eta: md(a),
+        tt: Math.round((day(a) - day(e)) / 864e5), prevEtd: null, prevEta: null, prevTt: null, status: 'same', changedFields: [] };
+      var sh = Number(r.eta_shift_days);
+      if (r.eta_shift_days != null && Math.abs(sh) >= 0.25) {
+        var pa = a - sh * 864e5;
+        row.status = 'changed'; row.changedFields = ['eta', 'tt'];
+        row.prevEta = md(pa); row.prevEtd = row.etd; row.prevTt = Math.round((day(pa) - day(e)) / 864e5);
+      } else if (r.first_seen && r.first_seen === latest) row.status = 'new';
+      return row;
+    });
+  }
+  dash.calc('cnshk_gtpqz', { title: 'Shekou → Puerto Quetzal', description: 'WHL ASA sailings calling Shekou, from the daily Wan Hai port calls (port_calls).', inputs: ['sailings', 'port_calls'],
+    fn: function (s, p) { return pcLane(s, p, 'SHEKOU'); } });
+  dash.calc('twkhh_gtpqz', { title: 'Kaohsiung → Puerto Quetzal', description: 'WHL ASA sailings calling Kaohsiung, from the daily Wan Hai port calls (port_calls).', inputs: ['sailings', 'port_calls'],
+    fn: function (s, p) { return pcLane(s, p, 'KAOHSIUNG'); } });
   function title(p) { return String(p || '').toLowerCase().replace(/(^|[\s(])\w/g, function (m) { return m.toUpperCase(); }); }
   dash.calc('port_calls_gt', { title: 'Port calls (Guatemala lanes)', description: 'POL → Puerto Quetzal calls per sailing from port_calls, port_calls_asia row shape.', inputs: ['sailings', 'port_calls'],
     fn: function (sailings, pcs) {
@@ -193,9 +237,19 @@ dash.calc('sailings_cc', {
           });
         });
       });
+      PC_LANES.forEach(function (L) {
+        pcSegs(sailings, pcs, L[1]).forEach(function (x) {
+          x.seg.forEach(function (c, j) {
+            out.push({ routeId: L[0], carrier: 'WHL', vessel: x.vessel, voyage: x.voyage, seq: j + 1, port: title(c.port),
+              role: j === 0 ? 'POL' : (j === x.seg.length - 1 ? 'POD' : 'CALL'),
+              eta: j === 0 ? '' : (c.status === 'SKIP' ? '' : c.eta), etd: j === x.seg.length - 1 ? '' : (c.status === 'SKIP' ? '' : c.etd),
+              status: c.status === 'LONGTERM' ? 'ESTIMATED' : c.status, collectedAt: ((x.s && x.s.collected_at) || '').slice(0, 10) });
+          });
+        });
+      });
       return out;
     } });
   // Tables/panels may have drawn before these calcs existed: draw them again now.
-  ['rows-cnsha_gtpqz', 'rows-cnngb_gtpqz', 'pc-cnsha_gtpqz', 'pc-cnngb_gtpqz', 'last-updated-gt'].forEach(function (n) { try { dash.draw(n); } catch (e) {} });
+  ['rows-cnsha_gtpqz', 'rows-cnngb_gtpqz', 'rows-cnshk_gtpqz', 'rows-twkhh_gtpqz', 'pc-cnsha_gtpqz', 'pc-cnngb_gtpqz', 'pc-cnshk_gtpqz', 'pc-twkhh_gtpqz', 'last-updated-gt'].forEach(function (n) { try { dash.draw(n); } catch (e) {} });
 })();
 </script>

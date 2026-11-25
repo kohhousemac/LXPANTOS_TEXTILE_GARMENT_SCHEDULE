@@ -64,13 +64,16 @@ export function cors(request) {
 
 // ---------- helpers ----------
 const enc = new TextEncoder();
+// Two trackers run: the MacBook task (TRACKER_TOKEN) and the cloud routine on
+// the Mac mini (TRACKER_TOKEN_CLOUD). Either token is accepted.
 function tokenOk(request, env) {
   const t = request.headers.get('x-tracker-token') || '';
-  const want = env.TRACKER_TOKEN || '';
-  if (!want || t.length !== want.length) return false;
-  let d = 0;
-  for (let i = 0; i < t.length; i++) d |= t.charCodeAt(i) ^ want.charCodeAt(i);
-  return d === 0;
+  return [env.TRACKER_TOKEN, env.TRACKER_TOKEN_CLOUD].some((want) => {
+    if (!want || t.length !== want.length) return false;
+    let d = 0;
+    for (let i = 0; i < t.length; i++) d |= t.charCodeAt(i) ^ want.charCodeAt(i);
+    return d === 0;
+  });
 }
 
 export const normMbl = (s) => String(s || '').toUpperCase().replace(/[\s-]+/g, '');

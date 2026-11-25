@@ -1,19 +1,6 @@
 [
  {
   "carrier": "EMC",
-  "vessel": "EVER CONSIST",
-  "voyage": "0560-071S",
-  "etd": "10-29 (Thu)",
-  "eta": "11-06 (Fri)",
-  "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "departed",
-  "changedFields": []
- },
- {
-  "carrier": "EMC",
   "vessel": "EVER CANDID",
   "voyage": "0561-092S",
   "etd": "11-04 (Wed)",
@@ -22,8 +9,8 @@
   "prevEtd": "11-04 (Wed)",
   "prevEta": "11-14 (Sat)",
   "prevTt": 10,
-  "status": "departed",
-  "changedFields": []
+  "changedFields": [],
+  "status": "departed"
  },
  {
   "carrier": "EMC",
@@ -32,11 +19,11 @@
   "etd": "11-15 (Sun)",
   "eta": "11-23 (Mon)",
   "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": []
+  "prevEtd": "11-15 (Sun)",
+  "prevEta": "11-23 (Mon)",
+  "prevTt": 8,
+  "changedFields": [],
+  "status": "departed"
  },
  {
   "carrier": "EMC",
@@ -48,46 +35,62 @@
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "same",
-  "changedFields": []
+  "changedFields": [],
+  "status": "departed"
  },
  {
   "carrier": "EMC",
   "vessel": "EVER CANDID",
   "voyage": "0564-093S",
-  "etd": "11-27 (Fri)",
-  "eta": "12-05 (Sat)",
+  "etd": "11-28 (Sat)",
+  "eta": "12-06 (Sun)",
   "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": []
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 8,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "EMC",
   "vessel": "EVER CHASTE",
-  "voyage": "0565-099S",
-  "etd": "12-06 (Sun)",
-  "eta": "12-14 (Mon)",
+  "voyage": "0566-099S",
+  "etd": "12-10 (Thu)",
+  "eta": "12-18 (Fri)",
   "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "status": "same",
-  "changedFields": []
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "12-17 (Thu)",
+  "prevTt": 8,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "EMC",
   "vessel": "EVER CONSIST",
-  "voyage": "0566-073S",
-  "etd": "12-09 (Wed)",
-  "eta": "12-18 (Fri)",
+  "voyage": "0567-073S",
+  "etd": "12-11 (Fri)",
+  "eta": "12-20 (Sun)",
   "tt": 9,
+  "prevEtd": "12-11 (Fri)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 9,
+  "changedFields": [],
+  "status": "same"
+ },
+ {
+  "carrier": "EMC",
+  "vessel": "EVER CANDID",
+  "voyage": "0568-094S",
+  "etd": "12-20 (Sun)",
+  "eta": "12-28 (Mon)",
+  "tt": 8,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
-  "status": "same",
-  "changedFields": []
+  "changedFields": [],
+  "status": "new"
  }
 ]

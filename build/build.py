@@ -55,6 +55,8 @@ LANE_NOTES = {
     'cnsha_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 상해·셔커우 모두 기항, 태평양 → 파나마 운하(Balboa → Manzanillo PA) 경유',
     'cnsha_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준',
     'cnngb_gtpqz': 'WHL(완하이) AS2·ASA · 완하이 모선 추적 매일 수집 기준 · 닝보 SKIP 항차는 제외',
+    'cnshk_gtpqz': 'WHL(완하이) ASA · 완하이 모선 추적 매일 수집 기준 · 셔커우 SKIP 항차는 제외',
+    'twkhh_gtpqz': 'WHL(완하이) ASA · 완하이 모선 추적 매일 수집 기준 · 카오슝 SKIP 항차는 제외',
     'cnshk_docau': 'CMA CGM PEX2 · 운항사 항차 상세(Voyage detail) 기준 · 셔커우 선적, 상해·부산 등 기항 후 파나마 운하 경유',
     'vnhph_uslax': 'MSC PEARL 직항(West Basin) + WHL AP1 직항',
     'vnhph_usnyc': 'MSC AMERICA SERVICE 직항(Port Newark) + CMA CGM TWS 직항(Maher) · 환적편 제외 (WHL은 셔커우 환적만 있어 미포함)',
@@ -90,6 +92,21 @@ BW_PANEL = '''        <div class="lx-mkt-wrap"><p class="lx-mkt-title">Port bert
 BERTH_MINI = {'vnsgn_idsrg', 'vnsgn_krpus', 'vnsgn_krinc', 'vnhph_krpus', 'vnhph_krinc', 'idjkt_cnsha', 'idjkt_krinc', 'idjkt_krpus',
               'cnsha_krpus', 'cnsha_krinc', 'hkhkg_vnhph', 'hkhkg_vnsgn', 'hkhkg_idjkt', 'krpus_vnsgn', 'krpus_idjkt', 'krpus_trist'}
 
+TT = {}  # routeId -> average transit stats (tt_stats.py), filled in main()
+
+def tt_line(route):
+    v = TT.get(route)
+    if not v:
+        return ''
+    md = v['first'][5:].replace('-', '.')
+    parts = [f'<b>{v["avg"]:.1f}일</b>']
+    if len(v['carriers']) > 1:
+        parts.append(' · '.join(f'{c} {a:.1f}일' for c, a, _ in v['carriers']))
+    few = ' · 표본 적음' if v['n'] < 3 else ''
+    return (f'        <p class="lx-tt-avg">평균 항해일수(T/T) {parts[0]}'
+            + (f'<span class="lx-tt-by">{parts[1]}</span>' if len(parts) > 1 else '')
+            + f'<span class="lx-tt-sub">최근 2개월 출항 {v["n"]}항차 · {md}~ · 범위 {v["min"]:.0f}~{v["max"]:.0f}일{few}</span></p>\n')
+
 def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     h = ' hidden' if hidden else ''
     return f'''
@@ -109,7 +126,7 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
           </div>
           <button type="button" class="lx-btn lx-btn-sm lx-copy-table" data-route="{route}">Copy</button>
         </div>
-{('        <p class="lx-lane-note">' + LANE_NOTES[route] + '</p>') if route in LANE_NOTES else ''}
+{tt_line(route)}{('        <p class="lx-lane-note">' + LANE_NOTES[route] + '</p>') if route in LANE_NOTES else ''}
         <div class="lx-table-wrap">
           <table class="lx-table" aria-label="{pol_name} to {pod_name} sailing schedule">
             <thead><tr><th>Carrier</th><th>Vessel</th><th>Voyage</th><th>ETD</th><th>ETA</th><th>T/T</th><th>Stage</th>{'<th>Calling Order</th>' if route in CALLING_ORDER else ''}</tr></thead>
@@ -348,14 +365,14 @@ def cc_page():
 ''' + ''.join(lanes) + '''  </section>
 '''
 
-GT_IDS = ['cnsha_gtpqz', 'cnngb_gtpqz']
+GT_IDS = ['cnsha_gtpqz', 'cnngb_gtpqz', 'cnshk_gtpqz', 'twkhh_gtpqz']
 
 def gt_lane(route, pol):
     html = lane_page('x', 'x', 'gt', route, pol, 'Puerto Quetzal', False)
     m = re.search(r'(      <section class="lx-lane".*?\n      </section>\n)', html, re.S)
     s = m.group(1)
     s = re.sub(r'\n\s*<div class="lx-badges[^\n]*</div>', '', s)
-    s = s.replace('data-source="' + route + '"', 'data-source="sailings"').replace('data-source="port_calls_asia"', 'data-source="port_calls sailings"')
+    s = s.replace('data-source="' + route + '"', 'data-source="sailings port_calls"' if route in ('cnshk_gtpqz', 'twkhh_gtpqz') else 'data-source="sailings"').replace('data-source="port_calls_asia"', 'data-source="port_calls sailings"')
     s = s.replace('<span class="lx-code">' + route.split('_')[0].upper() + ' <i>→</i> GTPQZ</span>', '<span class="lx-code">' + route.split('_')[0].upper() + ' <i>→</i> GTPRQ</span>')
     return s
 
@@ -367,6 +384,8 @@ def gt_page_head():
         <button class="lx-nav-btn" id="tab-gt-all" role="tab" aria-selected="true" data-xpol="all">ALL</button>
         <button class="lx-nav-btn" id="tab-gt-sha" role="tab" aria-selected="false" aria-controls="gtpol-sha" data-xpol="sha">Shanghai</button>
         <button class="lx-nav-btn" id="tab-gt-ngb" role="tab" aria-selected="false" aria-controls="gtpol-ngb" data-xpol="ngb">Ningbo</button>
+        <button class="lx-nav-btn" id="tab-gt-skk" role="tab" aria-selected="false" aria-controls="gtpol-skk" data-xpol="skk">Shenzhen (Shekou)</button>
+        <button class="lx-nav-btn" id="tab-gt-khh" role="tab" aria-selected="false" aria-controls="gtpol-khh" data-xpol="khh">Kaohsiung</button>
       </nav>
     </div>
       <div class="lx-toolbar">
@@ -379,6 +398,10 @@ def gt_page_head():
 """ + gt_lane('cnsha_gtpqz', 'Shanghai') + """    </div>
     <div class="xpol" id="gtpol-ngb" data-xpol="ngb" role="tabpanel" aria-labelledby="tab-gt-ngb">
 """ + gt_lane('cnngb_gtpqz', 'Ningbo') + """    </div>
+    <div class="xpol" id="gtpol-skk" data-xpol="skk" role="tabpanel" aria-labelledby="tab-gt-skk">
+""" + gt_lane('cnshk_gtpqz', 'Shenzhen (Shekou)') + """    </div>
+    <div class="xpol" id="gtpol-khh" data-xpol="khh" role="tabpanel" aria-labelledby="tab-gt-khh">
+""" + gt_lane('twkhh_gtpqz', 'Kaohsiung') + """    </div>
 """
 
 def ca_markup():
@@ -451,8 +474,12 @@ MBL_CARRIERS = [('KMTC','KMTC (고려해운)'),('SINOKOR','SINOKOR (장금상선
 
 
 def main():
+    import tt_stats
+    TT.update(tt_stats.stats(tt_stats.update()))
     data = {}
     for p in sorted(DATA.glob('*.json')):
+        if p.stem == 'tt_history':  # build-time only (average T/T), not shipped to the page
+            continue
         v = json.loads(p.read_text(encoding='utf-8'))
         if isinstance(v, dict):
             for k in ('rows', 'data', 'results'):
@@ -495,7 +522,10 @@ def main():
   <div class="lx-topbar-in">
     <a class="lx-brand" href="./"><img src="{logo}" alt="LX Pantos"><span class="lx-brand-div"></span><span class="lx-brand-name">Textile / Garment Schedule</span></a>
     <button type="button" class="lx-dl-link" id="lx-download-xlsx" aria-label="아시아 전체 스케쥴 엑셀 다운로드" title="아시아 전체 스케쥴 엑셀 다운로드">다운로드</button>
+    <span class="lx-tb-break" aria-hidden="true"></span>
     <button type="button" class="lx-mbl-toggle" id="lx-mbl-toggle" aria-expanded="false" aria-controls="mbl-track"><span class="lx-mbl-dot" aria-hidden="true"></span>MBL<span class="lx-mbl-long"> 도착</span> 추적</button>
+    <a class="lx-tool-link" href="https://www.tradlinx.com/ko/container-terminal-schedule" target="_blank" rel="noopener" title="한국 컨테이너 터미널 선석 스케줄 조회 (트레드링스)" aria-label="한국 터미널 조회 (새 창)"><svg class="lx-tool-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5h12"/><path d="M4 9h16"/><path d="M14 9v4"/><rect x="11.5" y="13" width="5" height="3.5" rx=".5"/><path d="M2 21h20"/><path d="M8 5 4 9"/></svg><span class="lx-tool-txt">한국 터미널 조회</span></a>
+    <a class="lx-tool-link" href="https://www.forwarder.kr/tariff/" target="_blank" rel="noopener" title="2026년 화물자동차 안전운임(컨테이너) 요율 확인" aria-label="한국 안전운임제 확인 (새 창)"><svg class="lx-tool-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 6.5h12v10h-12z"/><path d="M13.5 10h4l3 3.2v3.3h-7"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/><path d="m5 11.3 1.8 1.8 3.4-3.6"/></svg><span class="lx-tool-txt">한국 안전운임제 확인</span></a>
     <a class="lx-staff-link" href="https://vessel-alert.pages.dev/" target="_blank" rel="noopener" title="LX Pantos staff only">Staff login</a>
     <div class="lx-mbl-pop" id="mbl-track" role="dialog" aria-label="MBL 도착 추적 메일" hidden>
       <div class="lx-mbl-head">

@@ -2,11 +2,11 @@
  {
   "country": "과테말라",
   "flag": "🇬🇹",
-  "hasIssue": false,
-  "headline": "",
-  "url": "",
+  "hasIssue": true,
+  "headline": "과테말라 상공회의소, 케찰항 화물 반출시간 단축(평일 08~16시) 철회 요구",
+  "url": "https://lahora.gt/lh-economia/jveliz/2026/11/19/camara-de-comercio-rechaza-cambios-de-horario-en-puerto-quetzal-y-senala-impacto-en-la-operacion-portuaria/",
   "holiday": "",
-  "updatedAt": "2026-11-11T11:14:19Z"
+  "updatedAt": "2026-11-20T11:07:20Z"
  },
  {
   "country": "니카라과",
@@ -15,16 +15,16 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-11T11:14:19Z"
+  "updatedAt": "2026-11-20T11:07:20Z"
  },
  {
   "country": "파나마",
   "flag": "🇵🇦",
   "hasIssue": true,
-  "headline": "파나마 운하, 일일 통항 34회로 확대·네오파나막스 최대 흘수 50ft(15.24m) 상향",
-  "url": "https://www.infobae.com/panama/2026/11/10/canal-de-panama-aumenta-a-34-los-transitos-diarios-y-eleva-el-calado-autorizado-en-las-esclusas-neopanamax/",
+  "headline": "파나마 운하, 일일 32회 이상 통항 유지 전망",
+  "url": "https://www.prensa-latina.cu/2026/11/19/canal-de-panama-preve-mantener-mas-de-32-transitos-diarios/",
   "holiday": "",
-  "updatedAt": "2026-11-11T11:14:19Z"
+  "updatedAt": "2026-11-20T11:07:20Z"
  },
  {
   "country": "엘살바도르",
@@ -33,6 +33,6 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-11T11:14:19Z"
+  "updatedAt": "2026-11-20T11:07:20Z"
  }
 ]

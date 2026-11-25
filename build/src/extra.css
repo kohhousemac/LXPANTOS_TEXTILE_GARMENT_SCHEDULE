@@ -125,6 +125,12 @@
 .lx-mbl-toggle:focus-visible { outline: 2px solid #a50034; outline-offset: 2px; }
 .lx-mbl-dot { width: .42rem; height: .42rem; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.25); }
 .lx-topbar-in .lx-mbl-toggle + .lx-staff-link { margin-left: 0; }
+.lx-tool-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; color: inherit; text-decoration: none; padding: .35rem .8rem; border: 1px solid var(--color-border-line); border-radius: 999px; white-space: nowrap; }
+.lx-tool-link:hover { border-color: #a50034; color: #a50034; }
+.lx-tool-link:focus-visible { outline: 2px solid #a50034; outline-offset: 2px; }
+.lx-tb-break { display: none; }
+.lx-tool-ic { width: 1rem; height: 1rem; flex: none; color: #a50034; }
+.lx-topbar-in .lx-mbl-toggle ~ .lx-tool-link, .lx-topbar-in .lx-tool-link + .lx-staff-link { margin-left: 0; }
 .lx-mbl-pop { position: absolute; right: 1.25rem; top: calc(100% + .45rem); width: min(31rem, calc(100vw - 2rem)); z-index: 40; background: var(--color-panel, #fff); color: var(--color-fg, #1d1d1f);
   border: 1px solid var(--color-border-line); border-radius: 14px; padding: 1rem 1.1rem 1.05rem; box-shadow: 0 18px 50px -18px rgba(20,20,30,.35), 0 2px 6px rgba(0,0,0,.06); }
 .lx-mbl-pop[hidden] { display: none; }
@@ -163,9 +169,22 @@
   .lx-topbar .lx-topbar-in { gap: .5rem; flex-wrap: nowrap; }
   .lx-mbl-long { display: none; }
   .lx-mbl-toggle, .lx-staff-link { font-size: .74rem; padding: .3rem .6rem; }
+  .lx-tool-txt { display: none; }
+  .lx-tool-link { padding: .3rem .42rem; }
+  .lx-topbar .lx-topbar-in { flex-wrap: wrap; row-gap: .55rem; }
+  .lx-tb-break { display: block; flex-basis: 100%; height: 0; }
   .lx-mbl-dot { display: none; }
-  .lx-mbl-pop { position: fixed; left: .75rem; right: .75rem; top: 3.6rem; width: auto; max-height: calc(100vh - 4.5rem); overflow: auto; }
+  .lx-mbl-pop { position: fixed; left: .75rem; right: .75rem; top: 6.2rem; width: auto; max-height: calc(100vh - 7rem); overflow: auto; }
   .lx-mbl-pop::before { display: none; }
   .lx-mbl-form { grid-template-columns: 1fr; }
 }
+/* average transit time per lane (tt_stats.py) */
+.lx-tt-avg { margin: .75rem 1.25rem 0; padding: .45rem .75rem; border-radius: 8px; background: var(--color-panel, rgba(0,0,0,.03)); border: 1px solid var(--color-border-line, rgba(0,0,0,.08));
+  font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: flex; flex-wrap: wrap; gap: .2rem .9rem; align-items: baseline; }
+.lx-tt-avg b { color: var(--color-fg); font-size: 1.1em; margin-left: .15rem; }
+.lx-tt-by { color: var(--color-fg); }
+.lx-tt-sub { color: var(--color-fg-muted); }
+.lx-carrier-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.lx-carrier-link:hover { text-decoration-style: solid; }
 </style>
+
