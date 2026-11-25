@@ -18,7 +18,7 @@ def rd(name):
     return (SRC / name).read_text(encoding='utf-8')
 
 # ---------------------------------------------------------------- lanes
-PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang',
+PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'dad': 'Da Nang', 'jkt': 'Jakarta', 'srg': 'Semarang',
         'pus': 'Busan', 'inc': 'Incheon', 'sha': 'Shanghai', 'skk': 'Shekou', 'ngb': 'Ningbo',
         'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
         'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
@@ -26,6 +26,7 @@ PORT = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semar
 ASIA = [  # (pol code, [(pod code, route id), ...]) — same order as the dashboard
     ('hcm', [('jkt', 'vnsgn_idjkt'), ('srg', 'vnsgn_idsrg'), ('pus', 'vnsgn_krpus'), ('inc', 'vnsgn_krinc'), ('sha', 'vnsgn_cnsha')]),
     ('hph', [('jkt', 'vnhph_idjkt'), ('pus', 'vnhph_krpus'), ('inc', 'vnhph_krinc'), ('sha', 'vnhph_cnsha')]),
+    ('dad', [('sha', 'vndad_cnsha')]),
     ('jkt', [('hph', 'idjkt_vnhph'), ('sha', 'idjkt_cnsha'), ('inc', 'idjkt_krinc'), ('pus', 'idjkt_krpus')]),
     ('sha', [('hph', 'cnsha_vnhph'), ('hcm', 'cnsha_vnsgn'), ('pus', 'cnsha_krpus'), ('inc', 'cnsha_krinc')]),
     ('ngb', [('hph', 'cnngb_vnhph'), ('hcm', 'cnngb_vnsgn')]),
@@ -141,10 +142,10 @@ def lane_page(page_id, tab_id, pod, route, pol_name, pod_name, hidden):
     </section>
 '''
 
-LOCODE = {'egdam': 'dam', 'egsok': 'sok', 'egaly': 'aly', 'egpsd': 'psd', 'vnsgn': 'hcm', 'vnhph': 'hph', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
+LOCODE = {'egdam': 'dam', 'egsok': 'sok', 'egaly': 'aly', 'egpsd': 'psd', 'vnsgn': 'hcm', 'vnhph': 'hph', 'vndad': 'dad', 'idjkt': 'jkt', 'idsrg': 'srg', 'krpus': 'pus', 'krinc': 'inc',
           'cnsha': 'sha', 'cnshk': 'skk', 'cnngb': 'ngb', 'twkel': 'kel', 'hkhkg': 'hkg', 'trist': 'ist',
           'uslax': 'lax', 'uslgb': 'lgb', 'usnyc': 'nyc'}
-PORT_LOCODE_NAME = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'jkt': 'Jakarta', 'srg': 'Semarang', 'pus': 'Busan', 'inc': 'Incheon',
+PORT_LOCODE_NAME = {'hcm': 'Ho Chi Minh', 'hph': 'Haiphong', 'dad': 'Da Nang', 'jkt': 'Jakarta', 'srg': 'Semarang', 'pus': 'Busan', 'inc': 'Incheon',
                     'sha': 'Shanghai', 'skk': 'Shekou', 'ngb': 'Ningbo', 'kel': 'Keelung', 'hkg': 'Hong Kong', 'ist': 'Istanbul',
                     'lax': 'Los Angeles', 'lgb': 'Long Beach', 'nyc': 'New York'}
 
@@ -170,7 +171,7 @@ def merge_new_lanes():
             ASIA.append((pol, [(pod, rid)]))
         print('auto-added lane', rid)
 
-COUNTRY = {'hcm': 0, 'hph': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'ngb': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3, 'lax': 4, 'lgb': 4, 'nyc': 5}
+COUNTRY = {'hcm': 0, 'hph': 0, 'dad': 0, 'jkt': 1, 'srg': 1, 'sha': 2, 'ngb': 2, 'skk': 2, 'hkg': 2, 'pus': 3, 'inc': 3, 'lax': 4, 'lgb': 4, 'nyc': 5}
 KR_ORDER = {'pus': 0, 'inc': 1}
 
 BUSAN_NOTE = '''
