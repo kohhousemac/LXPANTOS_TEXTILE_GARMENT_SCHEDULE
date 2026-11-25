@@ -540,6 +540,7 @@ def main():
           <option value="">선택하세요</option>
           {mbl_carrier_options}
         </select></label>
+        <label class="lx-mbl-wide"><span>HBL No. <em>선택 · 여러 개는 쉼표로 구분 · 메일에 함께 표기</em></span><input name="hbl" maxlength="200" autocomplete="off" spellcheck="false" placeholder="예) LXHCM2611001"></label>
         <label class="lx-mbl-wide"><span>메일 E-mail</span><input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="name@lxpantos.com"></label>
         <div class="lx-mbl-wide lx-mbl-ccwrap"><label for="lx-cc-input"><span>참조 CC <em>선택 · Enter로 추가 · 이 브라우저에 저장</em></span></label>
           <div class="lx-cc-box" id="lx-cc-box"><input id="lx-cc-input" autocomplete="off" spellcheck="false" inputmode="email"></div></div>

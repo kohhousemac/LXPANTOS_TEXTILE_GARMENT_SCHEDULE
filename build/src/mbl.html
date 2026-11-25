@@ -93,19 +93,19 @@
   f.addEventListener('submit', function (ev) {
     ev.preventDefault();
     if (!commit()) return;
-    var mbl = f.mbl.value.toUpperCase().replace(/[\s-]+/g, ''), carrier = f.carrier.value, email = f.email.value.trim().toLowerCase();
+    var mbl = f.mbl.value.toUpperCase().replace(/[\s-]+/g, ''), hbl = f.hbl ? f.hbl.value.trim() : '', carrier = f.carrier.value, email = f.email.value.trim().toLowerCase();
     if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return say('MBL 번호를 확인해 주세요 (영문·숫자 6~25자).');
     if (!carrier) return say('선사를 선택해 주세요.');
     if (!RE.test(email)) return say('메일은 @lxpantos.com 주소만 가능합니다.');
     var list = cc.filter(function (e) { return e !== email; });
     var btn = f.querySelector('.lx-mbl-submit'); btn.disabled = true; say('등록 중…', true);
-    call('', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, carrier: carrier, email: email, cc: list }) })
+    call('', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mbl: mbl, hbl: hbl, carrier: carrier, email: email, cc: list }) })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (x) {
         if (!x.ok) return say(x.j.error || '등록하지 못했습니다.');
         try { localStorage.setItem('lxMblEmail', email); } catch (e) {}
         say(x.j.already ? 'MBL ' + mbl + '은(는) 이미 추적 중입니다' + (list.length ? ' (CC 추가 반영).' : '.') : 'MBL ' + mbl + ' 추적을 시작했습니다. 확인 메일을 보냈고(' + (list.length ? 'CC ' + list.length + '명 포함' : 'CC 없음') + '), 내일 오전부터 매일 보고 메일이 갑니다.', true);
-        f.mbl.value = '';
+        f.mbl.value = ''; if (f.hbl) f.hbl.value = '';
       })
       .catch(function () { say('서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.'); })
       .then(function () { btn.disabled = false; });

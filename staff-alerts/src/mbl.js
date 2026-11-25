@@ -77,6 +77,9 @@ function tokenOk(request, env) {
 }
 
 export const normMbl = (s) => String(s || '').toUpperCase().replace(/[\s-]+/g, '');
+// House B/L numbers (optional, several allowed): shown in mails only, tracking uses the MBL.
+const normHbls = (s) => [...new Set(String(s || '').toUpperCase().split(/[,;\s]+/).map(normMbl).filter(Boolean))];
+const hblText = (t) => (t.hbl || []).join(', ');
 const kstDate = (d = new Date()) => new Date(d.getTime() + 9 * 3600e3).toISOString().slice(0, 10);
 
 async function listAll(env) {
@@ -140,11 +143,12 @@ export async function confirmMail(env, t) {
   const html = frame('Tracking started', `We'll check the carrier's tracking page every morning (Korea time) and send you a daily report until arrival at the port of discharge is confirmed. Tracking then ends automatically.`,
     section('Registration', kv([
       ['MBL', esc(t.mbl)],
+      hblText(t) ? ['HBL', esc(hblText(t))] : null,
       ['Carrier', esc(carrierEn(t.carrier))],
       ['To', esc(t.email)],
       (t.cc || []).length ? ['Cc', esc(t.cc.join(', '))] : null,
     ])));
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — arrival tracking started (${carrierEn(t.carrier)})`, html, t.cc || []);
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl}${hblText(t) ? ' / HBL ' + hblText(t) : ''} — arrival tracking started (${carrierEn(t.carrier)})`, html, t.cc || []);
 }
 
 const STATUS_EN = {
@@ -205,6 +209,7 @@ ${leg('To · POD', r.pod, r.ata ? 'Arrived' : 'ETA', dateBlock('eta', 'ata'))}
 
   const details = section('Shipment', kv([
     ['MBL', esc(t.mbl)],
+    hblText(t) ? ['HBL', esc(hblText(t))] : null,
     ['Carrier', esc(carrierEn(t.carrier))],
     ['Vessel / Voyage', esc([r.vessel, r.voyage].filter(Boolean).join(' / ') || '-')],
     r.transshipment ? ['Transshipment', esc(r.transshipment)] : null,
@@ -229,8 +234,8 @@ ${endNote ? `${gap(14)}<tr><td style="padding:0 28px"><table role="presentation"
   const etaMoved = first.eta && r.eta && first.eta !== r.eta;
   const tag = final ? 'Arrived' : r.status === 'not_found' ? 'Not found' : r.status === 'blocked' ? 'Carrier site unavailable'
     : etaMoved ? `ETA changed ${first.eta.slice(5, 10)} → ${r.eta.slice(5, 10)}` : `ETA ${r.eta || '-'}`;
-  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl} — ${tag} (${kstDate().slice(5).replace('-', '/')})`,
-    frame(`MBL ${esc(t.mbl)}`, r.summary ? esc(r.summary) : '', body), t.cc || [], inline);
+  await sendMail(env, [t.email], `[LX Pantos] MBL ${t.mbl}${hblText(t) ? ' / HBL ' + hblText(t) : ''} — ${tag} (${kstDate().slice(5).replace('-', '/')})`,
+    frame(`MBL ${esc(t.mbl)}${hblText(t) ? `<div style="${f(14, MUTED, false, 'margin-top:4px')}">HBL ${esc(hblText(t))}</div>` : ''}`, r.summary ? esc(r.summary) : '', body), t.cc || [], inline);
 }
 
 // ---------- handlers ----------
@@ -249,6 +254,8 @@ export async function handleMbl(request, env, url) {
     const email = String(body.email || '').trim().toLowerCase();
     if (!/^[A-Z0-9]{6,25}$/.test(mbl)) return json({ error: 'MBL 번호를 확인해 주세요 (영문·숫자 6~25자).' }, 400, c);
     if (!CARRIERS[carrier]) return json({ error: '선사를 선택해 주세요.' }, 400, c);
+    const hbl = normHbls(body.hbl);
+    if (hbl.length > 10 || hbl.some((h) => !/^[A-Z0-9]{4,25}$/.test(h))) return json({ error: 'HBL 번호를 확인해 주세요 (영문·숫자, 쉼표로 구분, 최대 10개).' }, 400, c);
     if (!/^[a-z0-9._%+-]+@lxpantos\.com$/.test(email)) return json({ error: '메일은 @lxpantos.com 주소만 가능합니다.' }, 400, c);
     const ccIn = (Array.isArray(body.cc) ? body.cc : String(body.cc || '').split(/[,;\s]+/))
       .map((e) => String(e).trim().toLowerCase()).filter(Boolean);
@@ -265,14 +272,15 @@ export async function handleMbl(request, env, url) {
     const dup = all.find((t) => t.mbl === mbl && t.email === email);
     if (dup) {
       const merged = [...new Set([...(dup.cc || []), ...cc])].slice(0, MAX_CC);
-      if (merged.length !== (dup.cc || []).length) { dup.cc = merged; await put(env, dup); }
+      const hbls = [...new Set([...(dup.hbl || []), ...hbl])].slice(0, 10);
+      if (merged.length !== (dup.cc || []).length || hbls.length !== (dup.hbl || []).length) { dup.cc = merged; dup.hbl = hbls; await put(env, dup); }
       return json({ ok: true, already: true, id: dup.id, cc: dup.cc || [], message: '이미 추적 중인 MBL입니다.' }, 200, c);
     }
     if (all.length >= ACTIVE_LIMIT) return json({ error: '현재 추적 건수가 많아 잠시 후 다시 시도해 주세요.' }, 429, c);
     if (all.filter((t) => t.email === email).length >= PER_EMAIL_LIMIT) return json({ error: `한 사람당 ${PER_EMAIL_LIMIT}건까지 추적할 수 있습니다.` }, 429, c);
 
     const t = {
-      id: crypto.randomUUID(), mbl, carrier, email, cc, state: 'active',
+      id: crypto.randomUUID(), mbl, hbl, carrier, email, cc, state: 'active',
       createdAt: new Date().toISOString(), lastReport: null, notFound: 0, reports: 0,
     };
     await put(env, t);
