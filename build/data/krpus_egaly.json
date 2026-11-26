@@ -5,8 +5,8 @@
   "voyage": "PHX060W19",
   "etd": "11-06 (Fri)",
   "eta": "12-04 (Fri)",
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "tt": 28,
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,
@@ -19,8 +19,8 @@
   "voyage": "PHX080W19",
   "etd": "11-17 (Tue)",
   "eta": "12-12 (Sat)",
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "tt": 25,
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "prevEtd": "11-17 (Tue)",
   "prevEta": "12-11 (Fri)",
   "prevTt": 24,
@@ -32,55 +32,64 @@
   "vessel": "CMA CGM D'ARTAGNAN",
   "voyage": "PHX0C0W19",
   "etd": "11-23 (Mon)",
-  "eta": "12-17 (Thu)",
+  "eta": "12-19 (Sat)",
+  "tt": 26,
   "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "tt": 24,
   "prevEtd": "11-23 (Mon)",
   "prevEta": "12-17 (Thu)",
   "prevTt": 24,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "CMA CGM ADONIS",
   "voyage": "PHX0E0W19",
-  "etd": "11-28 (Sat)",
-  "eta": "12-25 (Fri)",
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
+  "etd": "12-01 (Tue)",
+  "eta": "12-28 (Mon)",
   "tt": 27,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-25 (Fri)",
-  "prevTt": 27,
-  "changedFields": [],
-  "status": "same"
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 26,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "CMA CGM APOLLON",
   "voyage": "PHX0I0W19",
-  "etd": "12-10 (Thu)",
-  "eta": "01-06 (Wed)",
+  "etd": "12-11 (Fri)",
+  "eta": "01-08 (Fri)",
+  "tt": 28,
   "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
-  "tt": 27,
   "prevEtd": "12-10 (Thu)",
-  "prevEta": "01-06 (Wed)",
-  "prevTt": 27,
-  "changedFields": [],
-  "status": "same"
+  "prevEta": "01-07 (Thu)",
+  "prevTt": 28,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "CMA CGM PLATINUM",
   "voyage": "PHX0K0W19",
-  "etd": "12-17 (Thu)",
-  "eta": "01-13 (Wed)",
-  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
+  "etd": "12-19 (Sat)",
+  "eta": "01-15 (Fri)",
   "tt": 27,
+  "rotation": "Busan → Ningbo → Shekou → Singapore → Alexandria",
   "prevEtd": "12-17 (Thu)",
   "prevEta": "01-13 (Wed)",
   "prevTt": 27,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  }
 ]

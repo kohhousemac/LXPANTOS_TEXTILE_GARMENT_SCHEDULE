@@ -3,10 +3,10 @@
   "country": "과테말라",
   "flag": "🇬🇹",
   "hasIssue": true,
-  "headline": "과테말라 상공회의소, 케찰항 화물 반출시간 단축(평일 08~16시) 철회 요구",
-  "url": "https://lahora.gt/lh-economia/jveliz/2026/11/19/camara-de-comercio-rechaza-cambios-de-horario-en-puerto-quetzal-y-senala-impacto-en-la-operacion-portuaria/",
+  "headline": "CONSERSA, 케찰·산토토마스항에 공컨테이너 탑리프터 8대 투입",
+  "url": "https://www.mundomaritimo.cl/noticias/consersa-invierte-mas-de-us24-millones-en-la-incorporacion-de-ocho-gruas-top-lifter-en-puertos-de-guatemala",
   "holiday": "",
-  "updatedAt": "2026-11-20T11:07:20Z"
+  "updatedAt": "2026-11-25T11:07:13Z"
  },
  {
   "country": "니카라과",
@@ -15,24 +15,24 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-20T11:07:20Z"
+  "updatedAt": "2026-11-25T11:07:13Z"
  },
  {
   "country": "파나마",
   "flag": "🇵🇦",
   "hasIssue": true,
-  "headline": "파나마 운하, 일일 32회 이상 통항 유지 전망",
-  "url": "https://www.prensa-latina.cu/2026/11/19/canal-de-panama-preve-mantener-mas-de-32-transitos-diarios/",
-  "holiday": "",
-  "updatedAt": "2026-11-20T11:07:20Z"
+  "headline": "",
+  "url": "",
+  "holiday": "독립기념일 (11/28)",
+  "updatedAt": "2026-11-25T11:07:13Z"
  },
  {
   "country": "엘살바도르",
   "flag": "🇸🇻",
-  "hasIssue": false,
-  "headline": "",
-  "url": "",
+  "hasIssue": true,
+  "headline": "11/25~29 대조기 예보 — 라우니온 최대 3.6m, 아카후틀라 기준치 초과",
+  "url": "https://www.elsalvador.com/noticias/nacional/mareas-vivas-el-salvador/1305576/2026/",
   "holiday": "",
-  "updatedAt": "2026-11-20T11:07:20Z"
+  "updatedAt": "2026-11-25T11:07:13Z"
  }
 ]

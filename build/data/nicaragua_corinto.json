@@ -1,47 +1,25 @@
 [
  {
-  "pol": "Busan",
+  "pol": "Ho Chi Minh",
   "carrier": "MSK",
-  "vessel": "SEASPAN PRIDE",
-  "voyage": "647E",
-  "etd": "11-28 (Sat)",
-  "eta": "12-31 (Thu)",
-  "tt": "33d 23h",
-  "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Busan\", \"dep\": \"11-28 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-17 16:00\", \"vessel\": \"SEASPAN PRIDE / 647E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
- },
- {
-  "pol": "Busan",
-  "carrier": "MSK",
-  "vessel": "MAERSK EINDHOVEN",
-  "voyage": "648E",
-  "etd": "12-05 (Sat)",
-  "eta": "12-31 (Thu)",
-  "tt": "26d 23h",
-  "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-05 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-23 04:00\", \"vessel\": \"MAERSK EINDHOVEN / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
- },
- {
-  "pol": "Busan",
-  "carrier": "MSK",
-  "vessel": "MAERSK ESSEN",
-  "voyage": "649E",
-  "etd": "12-12 (Sat)",
-  "eta": "01-07 (Thu)",
-  "tt": "26d 23h",
-  "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
- },
- {
-  "pol": "Busan",
-  "carrier": "MSK",
-  "vessel": "MAERSK ESMERALDAS",
-  "voyage": "650E",
-  "etd": "12-19 (Sat)",
+  "vessel": "MAERSK KEELUNG",
+  "voyage": "648N",
+  "etd": "11-27 (Fri)",
   "eta": "01-14 (Thu)",
-  "tt": "26d 23h",
-  "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-19 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
+  "tt": "48d 17h",
+  "ts": "Ningbo → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-27 19:00\", \"to\": \"Ningbo\", \"arr\": \"12-02 00:00\", \"vessel\": \"MAERSK KEELUNG / 648N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-12 16:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
+ },
+ {
+  "pol": "Ho Chi Minh",
+  "carrier": "MSK",
+  "vessel": "SHIMANAMI BAY",
+  "voyage": "050N",
+  "etd": "11-28 (Sat)",
+  "eta": "01-21 (Thu)",
+  "tt": "54d 23h",
+  "ts": "Shanghai → Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-28 13:00\", \"to\": \"Shanghai\", \"arr\": \"12-04 06:00\", \"vessel\": \"SHIMANAMI BAY / 050N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-11 19:00\", \"to\": \"Busan\", \"arr\": \"12-19 03:00\", \"vessel\": \"MAERSK TOKYO / 650E\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
  },
  {
   "pol": "Shanghai",
@@ -50,31 +28,53 @@
   "voyage": "648E",
   "etd": "11-28 (Sat)",
   "eta": "12-31 (Thu)",
-  "tt": "34d 7h",
+  "tt": "34d 0h",
   "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"11-28 06:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-19 13:16\", \"vessel\": \"NAVIOS JASMINE / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
+  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"11-28 13:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-19 13:16\", \"vessel\": \"NAVIOS JASMINE / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
  },
  {
-  "pol": "Shanghai",
+  "pol": "Yantian",
   "carrier": "MSK",
-  "vessel": "CHASTINE MAERSK",
-  "voyage": "648E",
+  "vessel": "GSL GRANIA",
+  "voyage": "647E",
   "etd": "11-28 (Sat)",
   "eta": "01-07 (Thu)",
-  "tt": "40d 18h",
+  "tt": "40d 19h",
   "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"11-28 19:00\", \"to\": \"Busan\", \"arr\": \"12-05 03:00\", \"vessel\": \"CHASTINE MAERSK / 648E\"}, {\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
+  "legs": "[{\"from\": \"Yantian\", \"dep\": \"11-28 18:00\", \"to\": \"Busan\", \"arr\": \"12-03 00:01\", \"vessel\": \"GSL GRANIA / 647E\"}, {\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
  },
  {
-  "pol": "Shanghai",
+  "pol": "Nansha",
   "carrier": "MSK",
-  "vessel": "DYROS",
-  "voyage": "649E",
-  "etd": "12-03 (Thu)",
+  "vessel": "PHOENIX D",
+  "voyage": "647N",
+  "etd": "11-30 (Mon)",
+  "eta": "01-07 (Thu)",
+  "tt": "38d 16h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Nansha\", \"dep\": \"11-30 21:00\", \"to\": \"Busan\", \"arr\": \"12-04 22:30\", \"vessel\": \"PHOENIX D / 647N\"}, {\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
+ },
+ {
+  "pol": "Busan",
+  "carrier": "MSK",
+  "vessel": "SEASPAN PRIDE",
+  "voyage": "647E",
+  "etd": "12-01 (Tue)",
   "eta": "12-31 (Thu)",
-  "tt": "28d 14h",
+  "tt": "31d 14h",
   "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-03 23:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-25 07:00\", \"vessel\": \"DYROS / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
+  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-01 00:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-17 16:00\", \"vessel\": \"SEASPAN PRIDE / 647E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
+ },
+ {
+  "pol": "Ho Chi Minh",
+  "carrier": "MSK",
+  "vessel": "MAERSK PORT KLANG",
+  "voyage": "649N",
+  "etd": "12-03 (Thu)",
+  "eta": "01-28 (Thu)",
+  "tt": "57d 7h",
+  "ts": "Ningbo → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-03 05:00\", \"to\": \"Ningbo\", \"arr\": \"12-07 11:00\", \"vessel\": \"MAERSK PORT KLANG / 649N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-22 07:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-20 04:00\", \"vessel\": \"MAERSK EL ALTO / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
  },
  {
   "pol": "Shanghai",
@@ -88,103 +88,37 @@
   "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-04 19:00\", \"to\": \"Busan\", \"arr\": \"12-12 03:00\", \"vessel\": \"MAERSK SALINA / 649E\"}, {\"from\": \"Busan\", \"dep\": \"12-19 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
  },
  {
-  "pol": "Shanghai",
+  "pol": "Busan",
   "carrier": "MSK",
-  "vessel": "MAERSK TOKYO",
-  "voyage": "650E",
-  "etd": "12-11 (Fri)",
-  "eta": "01-21 (Thu)",
-  "tt": "41d 18h",
-  "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-11 19:00\", \"to\": \"Busan\", \"arr\": \"12-19 03:00\", \"vessel\": \"MAERSK TOKYO / 650E\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
- },
- {
-  "pol": "Shanghai",
-  "carrier": "MSK",
-  "vessel": "ALBERT P",
-  "voyage": "650E",
-  "etd": "12-12 (Sat)",
-  "eta": "01-07 (Thu)",
-  "tt": "27d 10h",
-  "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-12 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-01 07:00\", \"vessel\": \"ALBERT P / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
- },
- {
-  "pol": "Shanghai",
-  "carrier": "MSK",
-  "vessel": "NAVIOS DEVOTION",
-  "voyage": "651E",
-  "etd": "12-17 (Thu)",
-  "eta": "01-14 (Thu)",
-  "tt": "29d 10h",
-  "ts": "Lazaro Cardenas",
-  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-17 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-08 07:00\", \"vessel\": \"NAVIOS DEVOTION / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
- },
- {
-  "pol": "Yantian",
-  "carrier": "MSK",
-  "vessel": "MAERSK SANA",
-  "voyage": "646E",
-  "etd": "11-23 (Mon)",
+  "vessel": "MAERSK EINDHOVEN",
+  "voyage": "648E",
+  "etd": "12-05 (Sat)",
   "eta": "12-31 (Thu)",
-  "tt": "38d 15h",
-  "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Yantian\", \"dep\": \"11-23 22:00\", \"to\": \"Busan\", \"arr\": \"11-26 13:00\", \"vessel\": \"MAERSK SANA / 646E\"}, {\"from\": \"Busan\", \"dep\": \"12-05 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-23 04:00\", \"vessel\": \"MAERSK EINDHOVEN / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
- },
- {
-  "pol": "Yantian",
-  "carrier": "MSK",
-  "vessel": "GSL GRANIA",
-  "voyage": "647E",
-  "etd": "11-27 (Fri)",
-  "eta": "12-31 (Thu)",
-  "tt": "34d 21h",
-  "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Yantian\", \"dep\": \"11-27 16:00\", \"to\": \"Busan\", \"arr\": \"12-01 04:00\", \"vessel\": \"GSL GRANIA / 647E\"}, {\"from\": \"Busan\", \"dep\": \"12-05 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-23 04:00\", \"vessel\": \"MAERSK EINDHOVEN / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
+  "tt": "26d 23h",
+  "ts": "Lazaro Cardenas",
+  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-05 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-23 04:00\", \"vessel\": \"MAERSK EINDHOVEN / 648E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"12-29 05:00\", \"to\": \"Corinto\", \"arr\": \"12-31 23:00\", \"vessel\": \"SEALAND MANZANILLO / 653S\"}]"
  },
  {
   "pol": "Yantian",
   "carrier": "MSK",
   "vessel": "MAERSK TORONTO",
   "voyage": "648E",
-  "etd": "12-03 (Thu)",
+  "etd": "12-05 (Sat)",
   "eta": "01-07 (Thu)",
-  "tt": "35d 14h",
+  "tt": "34d 8h",
   "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-03 23:00\", \"to\": \"Busan\", \"arr\": \"12-08 04:00\", \"vessel\": \"MAERSK TORONTO / 648E\"}, {\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
+  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-05 04:01\", \"to\": \"Busan\", \"arr\": \"12-08 04:00\", \"vessel\": \"MAERSK TORONTO / 648E\"}, {\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
  },
  {
-  "pol": "Yantian",
+  "pol": "Ho Chi Minh",
   "carrier": "MSK",
-  "vessel": "TIANJIN MAERSK",
-  "voyage": "649E",
-  "etd": "12-10 (Thu)",
-  "eta": "01-14 (Thu)",
-  "tt": "35d 14h",
-  "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-10 23:00\", \"to\": \"Busan\", \"arr\": \"12-15 04:00\", \"vessel\": \"TIANJIN MAERSK / 649E\"}, {\"from\": \"Busan\", \"dep\": \"12-19 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
- },
- {
-  "pol": "Yantian",
-  "carrier": "MSK",
-  "vessel": "SEASPAN AMAZON",
-  "voyage": "650E",
-  "etd": "12-17 (Thu)",
-  "eta": "01-21 (Thu)",
-  "tt": "35d 14h",
-  "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-17 23:00\", \"to\": \"Busan\", \"arr\": \"12-22 04:00\", \"vessel\": \"SEASPAN AMAZON / 650E\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
- },
- {
-  "pol": "Nansha",
-  "carrier": "MSK",
-  "vessel": "PHOENIX D",
-  "voyage": "647N",
-  "etd": "11-30 (Mon)",
-  "eta": "01-07 (Thu)",
-  "tt": "39d 7h",
-  "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Nansha\", \"dep\": \"11-30 06:00\", \"to\": \"Busan\", \"arr\": \"12-03 17:30\", \"vessel\": \"PHOENIX D / 647N\"}, {\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
+  "vessel": "MAERSK KEELUNG",
+  "voyage": "650N",
+  "etd": "12-08 (Tue)",
+  "eta": "01-28 (Thu)",
+  "tt": "52d 7h",
+  "ts": "Ningbo → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-08 05:00\", \"to\": \"Ningbo\", \"arr\": \"12-13 09:00\", \"vessel\": \"MAERSK KEELUNG / 650N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-22 07:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-20 04:00\", \"vessel\": \"MAERSK EL ALTO / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
  },
  {
   "pol": "Nansha",
@@ -198,81 +132,15 @@
   "legs": "[{\"from\": \"Nansha\", \"dep\": \"12-10 08:00\", \"to\": \"Busan\", \"arr\": \"12-16 01:00\", \"vessel\": \"MAERSK MANAUS / 649N\"}, {\"from\": \"Busan\", \"dep\": \"12-19 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
  },
  {
-  "pol": "Nansha",
+  "pol": "Yantian",
   "carrier": "MSK",
-  "vessel": "BFAD PACIFIC",
-  "voyage": "650N",
-  "etd": "12-17 (Thu)",
-  "eta": "01-21 (Thu)",
-  "tt": "36d 5h",
+  "vessel": "TIANJIN MAERSK",
+  "voyage": "649E",
+  "etd": "12-10 (Thu)",
+  "eta": "01-14 (Thu)",
+  "tt": "35d 14h",
   "ts": "Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Nansha\", \"dep\": \"12-17 08:00\", \"to\": \"Busan\", \"arr\": \"12-23 01:00\", \"vessel\": \"BFAD PACIFIC / 650N\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
-  "vessel": "MAERSK KEELUNG",
-  "voyage": "648N",
-  "etd": "11-27 (Fri)",
-  "eta": "01-14 (Thu)",
-  "tt": "48d 17h",
-  "ts": "Ningbo → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-27 19:00\", \"to\": \"Ningbo\", \"arr\": \"12-01 18:00\", \"vessel\": \"MAERSK KEELUNG / 648N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-11 09:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
-  "vessel": "SHIMANAMI BAY",
-  "voyage": "050N",
-  "etd": "11-28 (Sat)",
-  "eta": "01-21 (Thu)",
-  "tt": "54d 22h",
-  "ts": "Shanghai → Busan → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-28 13:30\", \"to\": \"Shanghai\", \"arr\": \"12-04 06:00\", \"vessel\": \"SHIMANAMI BAY / 050N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-11 19:00\", \"to\": \"Busan\", \"arr\": \"12-19 03:00\", \"vessel\": \"MAERSK TOKYO / 650E\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
-  "vessel": "SHIMANAMI BAY",
-  "voyage": "050N",
-  "etd": "11-28 (Sat)",
-  "eta": "01-07 (Thu)",
-  "tt": "40d 22h",
-  "ts": "Shanghai → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-28 13:30\", \"to\": \"Shanghai\", \"arr\": \"12-04 06:00\", \"vessel\": \"SHIMANAMI BAY / 050N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-12 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-01 07:00\", \"vessel\": \"ALBERT P / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
-  "vessel": "MAERSK PORT KLANG",
-  "voyage": "649N",
-  "etd": "12-03 (Thu)",
-  "eta": "01-21 (Thu)",
-  "tt": "50d 7h",
-  "ts": "Ningbo → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-03 05:00\", \"to\": \"Ningbo\", \"arr\": \"12-07 11:00\", \"vessel\": \"MAERSK PORT KLANG / 649N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-15 07:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
-  "vessel": "AMALFI BAY",
-  "voyage": "070N",
-  "etd": "12-04 (Fri)",
-  "eta": "01-14 (Thu)",
-  "tt": "41d 13h",
-  "ts": "Shanghai → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-04 23:00\", \"to\": \"Shanghai\", \"arr\": \"12-11 06:00\", \"vessel\": \"AMALFI BAY / 070N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-17 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-08 07:00\", \"vessel\": \"NAVIOS DEVOTION / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
-  "vessel": "MAERSK KEELUNG",
-  "voyage": "650N",
-  "etd": "12-08 (Tue)",
-  "eta": "01-28 (Thu)",
-  "tt": "52d 11h",
-  "ts": "Ningbo → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-08 01:00\", \"to\": \"Ningbo\", \"arr\": \"12-13 09:00\", \"vessel\": \"MAERSK KEELUNG / 650N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-22 07:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-20 04:00\", \"vessel\": \"MAERSK EL ALTO / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
+  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-10 23:00\", \"to\": \"Busan\", \"arr\": \"12-15 04:00\", \"vessel\": \"TIANJIN MAERSK / 649E\"}, {\"from\": \"Busan\", \"dep\": \"12-19 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
  },
  {
   "pol": "Ho Chi Minh",
@@ -297,6 +165,28 @@
   "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-11 23:00\", \"to\": \"Shanghai\", \"arr\": \"12-18 06:00\", \"vessel\": \"SHIMANAMI BAY / 090N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-24 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-15 07:00\", \"vessel\": \"MAERSK BALTIMORE / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
  },
  {
+  "pol": "Shanghai",
+  "carrier": "MSK",
+  "vessel": "MAERSK TOKYO",
+  "voyage": "650E",
+  "etd": "12-11 (Fri)",
+  "eta": "01-21 (Thu)",
+  "tt": "41d 18h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-11 19:00\", \"to\": \"Busan\", \"arr\": \"12-19 03:00\", \"vessel\": \"MAERSK TOKYO / 650E\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
+ },
+ {
+  "pol": "Busan",
+  "carrier": "MSK",
+  "vessel": "MAERSK ESSEN",
+  "voyage": "649E",
+  "etd": "12-12 (Sat)",
+  "eta": "01-07 (Thu)",
+  "tt": "26d 23h",
+  "ts": "Lazaro Cardenas",
+  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-12 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"12-30 04:00\", \"vessel\": \"MAERSK ESSEN / 649E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-05 05:00\", \"to\": \"Corinto\", \"arr\": \"01-07 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 701S\"}]"
+ },
+ {
   "pol": "Ho Chi Minh",
   "carrier": "MSK",
   "vessel": "MAERSK PORT KLANG",
@@ -306,6 +196,28 @@
   "tt": "53d 4h",
   "ts": "Ningbo → Lazaro Cardenas",
   "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-14 08:00\", \"to\": \"Ningbo\", \"arr\": \"12-20 09:00\", \"vessel\": \"MAERSK PORT KLANG / 651N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-29 07:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-27 04:00\", \"vessel\": \"MAERSK EVORA / 653E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-02 05:00\", \"to\": \"Corinto\", \"arr\": \"02-04 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 705S\"}]"
+ },
+ {
+  "pol": "Nansha",
+  "carrier": "MSK",
+  "vessel": "BFAD PACIFIC",
+  "voyage": "650N",
+  "etd": "12-17 (Thu)",
+  "eta": "01-21 (Thu)",
+  "tt": "36d 5h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Nansha\", \"dep\": \"12-17 08:00\", \"to\": \"Busan\", \"arr\": \"12-23 01:00\", \"vessel\": \"BFAD PACIFIC / 650N\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
+ },
+ {
+  "pol": "Yantian",
+  "carrier": "MSK",
+  "vessel": "SEASPAN AMAZON",
+  "voyage": "650E",
+  "etd": "12-17 (Thu)",
+  "eta": "01-21 (Thu)",
+  "tt": "35d 14h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-17 23:00\", \"to\": \"Busan\", \"arr\": \"12-22 04:00\", \"vessel\": \"SEASPAN AMAZON / 650E\"}, {\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
  },
  {
   "pol": "Ho Chi Minh",
@@ -324,10 +236,21 @@
   "vessel": "AMALFI BAY",
   "voyage": "0B0N",
   "etd": "12-18 (Fri)",
-  "eta": "01-28 (Thu)",
-  "tt": "41d 13h",
+  "eta": "02-04 (Thu)",
+  "tt": "48d 13h",
   "ts": "Shanghai → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-18 23:00\", \"to\": \"Shanghai\", \"arr\": \"12-25 06:00\", \"vessel\": \"AMALFI BAY / 0B0N\"}, {\"from\": \"Shanghai\", \"dep\": \"12-31 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-22 07:00\", \"vessel\": \"WADI BANI KHALID / 653E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-18 23:00\", \"to\": \"Shanghai\", \"arr\": \"12-25 06:00\", \"vessel\": \"AMALFI BAY / 0B0N\"}, {\"from\": \"Shanghai\", \"dep\": \"01-07 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-29 07:00\", \"vessel\": \"NAVIOS LAPIS / 701E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-02 05:00\", \"to\": \"Corinto\", \"arr\": \"02-04 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 705S\"}]"
+ },
+ {
+  "pol": "Busan",
+  "carrier": "MSK",
+  "vessel": "MAERSK ESMERALDAS",
+  "voyage": "650E",
+  "etd": "12-19 (Sat)",
+  "eta": "01-14 (Thu)",
+  "tt": "26d 23h",
+  "ts": "Lazaro Cardenas",
+  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-19 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
  },
  {
   "pol": "Ho Chi Minh",
@@ -339,5 +262,71 @@
   "tt": "53d 4h",
   "ts": "Ningbo → Lazaro Cardenas",
   "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-21 08:00\", \"to\": \"Ningbo\", \"arr\": \"12-27 09:00\", \"vessel\": \"MAERSK KEELUNG / 652N\"}, {\"from\": \"Ningbo\", \"dep\": \"01-05 07:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"02-03 04:00\", \"vessel\": \"MAERSK EDINBURGH / 701E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-09 05:00\", \"to\": \"Corinto\", \"arr\": \"02-11 23:00\", \"vessel\": \"SEALAND MANZANILLO / 706S\"}]"
+ },
+ {
+  "pol": "Nansha",
+  "carrier": "MSK",
+  "vessel": "PHOENIX D",
+  "voyage": "651N",
+  "etd": "12-24 (Thu)",
+  "eta": "01-28 (Thu)",
+  "tt": "36d 5h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Nansha\", \"dep\": \"12-24 08:00\", \"to\": \"Busan\", \"arr\": \"12-30 01:00\", \"vessel\": \"PHOENIX D / 651N\"}, {\"from\": \"Busan\", \"dep\": \"01-02 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-20 04:00\", \"vessel\": \"MAERSK EL ALTO / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
+ },
+ {
+  "pol": "Shanghai",
+  "carrier": "MSK",
+  "vessel": "MAERSK BALTIMORE",
+  "voyage": "652E",
+  "etd": "12-24 (Thu)",
+  "eta": "01-21 (Thu)",
+  "tt": "29d 10h",
+  "ts": "Lazaro Cardenas",
+  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-24 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-15 07:00\", \"vessel\": \"MAERSK BALTIMORE / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
+ },
+ {
+  "pol": "Yantian",
+  "carrier": "MSK",
+  "vessel": "MAERSK LAVRAS",
+  "voyage": "651E",
+  "etd": "12-24 (Thu)",
+  "eta": "01-28 (Thu)",
+  "tt": "35d 14h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Yantian\", \"dep\": \"12-24 23:00\", \"to\": \"Busan\", \"arr\": \"12-29 04:00\", \"vessel\": \"MAERSK LAVRAS / 651E\"}, {\"from\": \"Busan\", \"dep\": \"01-02 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-20 04:00\", \"vessel\": \"MAERSK EL ALTO / 652E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-26 05:00\", \"to\": \"Corinto\", \"arr\": \"01-28 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 704S\"}]"
+ },
+ {
+  "pol": "Ho Chi Minh",
+  "carrier": "MSK",
+  "vessel": "SHIMANAMI BAY",
+  "voyage": "0D0N",
+  "etd": "12-25 (Fri)",
+  "eta": "02-18 (Thu)",
+  "tt": "55d 13h",
+  "ts": "Shanghai → Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-25 23:00\", \"to\": \"Shanghai\", \"arr\": \"01-01 06:00\", \"vessel\": \"SHIMANAMI BAY / 0D0N\"}, {\"from\": \"Shanghai\", \"dep\": \"01-08 19:00\", \"to\": \"Busan\", \"arr\": \"01-15 10:00\", \"vessel\": \"MAERSK EUREKA / 701E\"}, {\"from\": \"Busan\", \"dep\": \"01-23 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"02-10 04:00\", \"vessel\": \"SEASPAN PRIDE / 702E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-16 05:00\", \"to\": \"Corinto\", \"arr\": \"02-18 23:00\", \"vessel\": \"MAERSK NEWCASTLE / 707S\"}]"
+ },
+ {
+  "pol": "Ho Chi Minh",
+  "carrier": "MSK",
+  "vessel": "SHIMANAMI BAY",
+  "voyage": "0D0N",
+  "etd": "12-25 (Fri)",
+  "eta": "02-04 (Thu)",
+  "tt": "41d 13h",
+  "ts": "Shanghai → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"12-25 23:00\", \"to\": \"Shanghai\", \"arr\": \"01-01 06:00\", \"vessel\": \"SHIMANAMI BAY / 0D0N\"}, {\"from\": \"Shanghai\", \"dep\": \"01-07 03:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-29 07:00\", \"vessel\": \"NAVIOS LAPIS / 701E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-02 05:00\", \"to\": \"Corinto\", \"arr\": \"02-04 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 705S\"}]"
+ },
+ {
+  "pol": "Shanghai",
+  "carrier": "MSK",
+  "vessel": "SEASPAN GLORY",
+  "voyage": "652E",
+  "etd": "12-25 (Fri)",
+  "eta": "02-04 (Thu)",
+  "tt": "41d 18h",
+  "ts": "Busan → Lazaro Cardenas",
+  "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-25 19:00\", \"to\": \"Busan\", \"arr\": \"01-01 10:00\", \"vessel\": \"SEASPAN GLORY / 652E\"}, {\"from\": \"Busan\", \"dep\": \"01-09 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-27 04:00\", \"vessel\": \"MAERSK EVORA / 653E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-02 05:00\", \"to\": \"Corinto\", \"arr\": \"02-04 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 705S\"}]"
  }
 ]
