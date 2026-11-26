@@ -350,22 +350,6 @@
   "status": "departed"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2622N",
-  "service": "IHS",
-  "etd": "11-27 (Fri)",
-  "eta": "12-16 (Wed)",
-  "tt": 19,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "11-27 (Fri)",
-  "prevEta": "12-16 (Wed)",
-  "prevTt": 19,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "NAMSUNG / PANOCEAN",
   "vessel": "PEGASUS DREAM",
   "voyage": "2623E",
@@ -486,53 +470,24 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2623N",
   "service": "BIH",
   "etd": "12-05 (Sat)",
-  "eta": "12-10 (Thu)",
-  "tt": 5,
+  "eta": "12-11 (Fri)",
+  "tt": 6,
   "altDates": "PANOCEAN 12-05→12-11",
-  "closedCarriers": "KMTC",
+  "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-05 (Sat)",
   "prevEta": "12-10 (Thu)",
   "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2623N",
-  "service": "IHS",
-  "etd": "12-05 (Sat)",
-  "eta": "12-28 (Mon)",
-  "tt": 23,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-28 (Mon)",
-  "prevTt": 23,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "STARSHIP TAURUS",
-  "voyage": "2621N",
-  "service": "KHP",
-  "etd": "12-05 (Sat)",
-  "eta": "12-12 (Sat)",
-  "tt": 7,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-12 (Sat)",
-  "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC / PANOCEAN",
@@ -555,7 +510,23 @@
   "status": "changed"
  },
  {
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "STAR EXPLORER",
+  "voyage": "2623N",
+  "service": "BIH",
+  "etd": "12-06 (Sun)",
+  "eta": "12-11 (Fri)",
+  "tt": 5,
+  "closedCarriers": "KMTC",
+  "bookingClosed": false,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STARSHIP TAURUS",
   "voyage": "2621N",
   "service": "KHP",
@@ -567,22 +538,6 @@
   "prevEtd": "12-06 (Sun)",
   "prevEta": "12-13 (Sun)",
   "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "SKY TIARA",
-  "voyage": "2621N",
-  "service": "HPX1",
-  "etd": "12-07 (Mon)",
-  "eta": "12-15 (Tue)",
-  "tt": 8,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-07 (Mon)",
-  "prevEta": "12-15 (Tue)",
-  "prevTt": 8,
   "changedFields": [],
   "status": "same"
  },
@@ -619,6 +574,25 @@
   "status": "same"
  },
  {
+  "carrier": "KMTC",
+  "vessel": "SKY TIARA",
+  "voyage": "2621N",
+  "service": "HPX1",
+  "etd": "12-08 (Tue)",
+  "eta": "12-16 (Wed)",
+  "tt": 8,
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-15 (Tue)",
+  "prevTt": 8,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "NAMSUNG",
   "vessel": "SM TOKYO",
   "voyage": "2622E",
@@ -631,22 +605,6 @@
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-16 (Wed)",
   "prevTt": 8,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "service": "FS1",
-  "etd": "12-08 (Tue)",
-  "eta": "12-14 (Mon)",
-  "tt": 6,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-14 (Mon)",
-  "prevTt": 6,
   "changedFields": [],
   "status": "same"
  },
@@ -684,22 +642,6 @@
  },
  {
   "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2623N",
-  "service": "IHS",
-  "etd": "12-10 (Thu)",
-  "eta": "12-30 (Wed)",
-  "tt": 20,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "12-30 (Wed)",
-  "prevTt": 20,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
   "vessel": "STAR SKIPPER",
   "voyage": "2623N",
   "service": "BIH",
@@ -713,6 +655,25 @@
   "prevTt": 5,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "YM COOPERATION",
+  "voyage": "0063N",
+  "service": "FS1",
+  "etd": "12-11 (Fri)",
+  "eta": "12-17 (Thu)",
+  "tt": 6,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-08 (Tue)",
+  "prevEta": "12-14 (Mon)",
+  "prevTt": 6,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -783,22 +744,6 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "STARSHIP AQUILA",
-  "voyage": "2614N",
-  "service": "KHP",
-  "etd": "12-15 (Tue)",
-  "eta": "12-22 (Tue)",
-  "tt": 7,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-15 (Tue)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "KMTC",
   "vessel": "SKY MOON",
   "voyage": "2621N",
@@ -815,7 +760,7 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "STARSHIP AQUILA",
   "voyage": "2614N",
   "service": "KHP",
@@ -927,37 +872,40 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2624N",
   "service": "BIH",
   "etd": "12-19 (Sat)",
-  "eta": "12-23 (Wed)",
-  "tt": 4,
+  "eta": "12-24 (Thu)",
+  "tt": 5,
   "altDates": "PANOCEAN 12-19→12-24",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-19 (Sat)",
   "prevEta": "12-23 (Wed)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "STAR FRONTIER",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "STAR EXPLORER",
   "voyage": "2624N",
-  "service": "IHS",
-  "etd": "12-19 (Sat)",
-  "eta": "01-05 (Tue)",
-  "tt": 17,
+  "service": "BIH",
+  "etd": "12-20 (Sun)",
+  "eta": "12-24 (Thu)",
+  "tt": 4,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-19 (Sat)",
-  "prevEta": "01-05 (Tue)",
-  "prevTt": 17,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "new"
  },
  {
   "carrier": "NAMSUNG",
@@ -996,16 +944,19 @@
   "vessel": "SKY TIARA",
   "voyage": "2622N",
   "service": "HPX1",
-  "etd": "12-21 (Mon)",
-  "eta": "12-29 (Tue)",
+  "etd": "12-22 (Tue)",
+  "eta": "12-30 (Wed)",
   "tt": 8,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-21 (Mon)",
   "prevEta": "12-29 (Tue)",
   "prevTt": 8,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -1054,21 +1005,5 @@
   "prevTt": 6,
   "changedFields": [],
   "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2624N",
-  "service": "IHS",
-  "etd": "12-24 (Thu)",
-  "eta": "01-12 (Tue)",
-  "tt": 19,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
  }
 ]

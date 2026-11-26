@@ -267,17 +267,17 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC FUJIAN",
-  "voyage": "2628S",
-  "service": "VTX3",
-  "etd": "12-06 (Sun)",
+  "vessel": "TIDE VANTAGE",
+  "voyage": "2666S",
+  "service": "VTX8",
+  "etd": "12-05 (Sat)",
   "eta": "12-15 (Tue)",
-  "tt": 9,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-15 (Tue)",
-  "prevTt": 9,
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "new"
  },
  {
   "carrier": "SITC",
@@ -295,6 +295,23 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "SITC FUJIAN",
+  "voyage": "2628S",
+  "service": "VTX3",
+  "etd": "12-07 (Mon)",
+  "eta": "12-16 (Wed)",
+  "tt": 9,
+  "prevEtd": "12-06 (Sun)",
+  "prevEta": "12-15 (Tue)",
+  "prevTt": 9,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC MACAO",
   "voyage": "2626S",
   "service": "CVS2",
@@ -306,20 +323,6 @@
   "prevTt": 5,
   "changedFields": [],
   "status": "same"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC SHANDONG",
-  "voyage": "2626S",
-  "service": "VTX3",
-  "etd": "12-08 (Tue)",
-  "eta": "12-19 (Sat)",
-  "tt": 11,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
  },
  {
   "carrier": "SITC",

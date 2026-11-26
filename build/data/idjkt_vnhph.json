@@ -116,14 +116,17 @@
   "vessel": "EVER CHASTE",
   "voyage": "0562-098N",
   "service": "VMI",
-  "etd": "11-29 (Sun)",
+  "etd": "11-30 (Mon)",
   "eta": "12-07 (Mon)",
-  "tt": 8,
+  "tt": 7,
   "prevEtd": "11-29 (Sun)",
   "prevEta": "12-07 (Mon)",
   "prevTt": 8,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "EMC",
@@ -158,28 +161,34 @@
   "vessel": "ERASMUS OASIS",
   "voyage": "2655N",
   "service": "JTH",
-  "etd": "12-06 (Sun)",
-  "eta": "12-15 (Tue)",
+  "etd": "12-07 (Mon)",
+  "eta": "12-16 (Wed)",
   "tt": 9,
   "prevEtd": "12-06 (Sun)",
   "prevEta": "12-15 (Tue)",
   "prevTt": 9,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "EMC",
   "vessel": "EVER CANDID",
   "voyage": "0564-093N",
   "service": "VMI",
-  "etd": "12-08 (Tue)",
+  "etd": "12-09 (Wed)",
   "eta": "12-16 (Wed)",
-  "tt": 8,
+  "tt": 7,
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-16 (Wed)",
   "prevTt": 8,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSK",

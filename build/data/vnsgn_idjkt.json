@@ -365,15 +365,31 @@
   "vessel": "SINAR BANGKA",
   "voyage": "2634S",
   "service": "CMI2",
-  "etd": "01-01 (Fri)",
+  "etd": "01-02 (Sat)",
   "eta": "01-04 (Mon)",
-  "tt": 3,
+  "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "01-01 (Fri)",
   "prevEta": "01-04 (Mon)",
   "prevTt": 3,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "GSL",
+  "vessel": "NATTHA BHUM",
+  "voyage": "NB3/46",
+  "etd": "01-07 (Thu)",
+  "eta": "01-14 (Thu)",
+  "tt": 7,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
   "changedFields": [],
-  "status": "same"
+  "status": "new"
  }
 ]

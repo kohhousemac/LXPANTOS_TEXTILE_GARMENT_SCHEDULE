@@ -71,20 +71,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2628S",
-  "service": "VTX6",
-  "etd": "12-04 (Fri)",
-  "eta": "12-15 (Tue)",
-  "tt": 11,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC RUIDE",
   "voyage": "2624S",
   "service": "VTX2",
@@ -96,20 +82,6 @@
   "prevTt": 4,
   "changedFields": [],
   "status": "same"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2626S",
-  "service": "VTX6",
-  "etd": "12-11 (Fri)",
-  "eta": "12-22 (Tue)",
-  "tt": 11,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
  },
  {
   "carrier": "SITC",

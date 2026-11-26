@@ -323,22 +323,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "LOS ANDES BRIDGE",
-  "voyage": "0247N",
-  "service": "KCM4",
-  "etd": "11-25 (Wed)",
-  "eta": "12-03 (Thu)",
-  "tt": 8,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "11-25 (Wed)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 8,
-  "changedFields": [],
-  "status": "departed"
- },
- {
-  "carrier": "KMTC",
   "vessel": "SKY CHALLENGE",
   "voyage": "2612N",
   "service": "NKT",
@@ -370,14 +354,14 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "LOS ANDES BRIDGE",
   "voyage": "0247N",
-  "service": "NFS",
+  "service": "KCM4",
   "etd": "11-26 (Thu)",
   "eta": "12-04 (Fri)",
   "tt": 8,
-  "closedCarriers": "NAMSUNG",
+  "closedCarriers": "KMTC / NAMSUNG",
   "bookingClosed": true,
   "prevEtd": "11-26 (Thu)",
   "prevEta": "12-04 (Fri)",
@@ -678,22 +662,6 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "KOTA GAYA",
-  "voyage": "0434N",
-  "service": "NFS",
-  "etd": "12-10 (Thu)",
-  "eta": "12-18 (Fri)",
-  "tt": 8,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "12-18 (Fri)",
-  "prevTt": 8,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "PANOCEAN",
   "vessel": "SKY SUNSHINE",
   "voyage": "2614N",
@@ -756,6 +724,25 @@
   "prevTt": 8,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "NAMSUNG",
+  "vessel": "KOTA GAYA",
+  "voyage": "0434N",
+  "service": "NFS",
+  "etd": "12-11 (Fri)",
+  "eta": "12-19 (Sat)",
+  "tt": 8,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 8,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -1049,6 +1036,26 @@
   "status": "new"
  },
  {
+  "carrier": "KMTC",
+  "vessel": "POS SINGAPORE",
+  "voyage": "1044N",
+  "service": "KTX",
+  "etd": "12-22 (Tue)",
+  "eta": "12-27 (Sun)",
+  "tt": 5,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-23 (Wed)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 6,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "NAMSUNG",
   "vessel": "KMTC OSAKA",
   "voyage": "2613N",
@@ -1066,23 +1073,19 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "POS SINGAPORE",
-  "voyage": "1044N",
-  "service": "KTX",
+  "vessel": "YM CREDIBILITY",
+  "voyage": "150N",
+  "service": "CT2",
   "etd": "12-23 (Wed)",
-  "eta": "12-29 (Tue)",
-  "tt": 6,
+  "eta": "12-30 (Wed)",
+  "tt": 7,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-21 (Mon)",
-  "prevEta": "12-26 (Sat)",
-  "prevTt": 5,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "PANOCEAN",

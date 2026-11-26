@@ -308,22 +308,6 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "HUA DA 618",
-  "voyage": "1601N",
-  "service": "CS2",
-  "etd": "12-02 (Wed)",
-  "eta": "12-19 (Sat)",
-  "tt": 17,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-19 (Sat)",
-  "prevTt": 17,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "HEUNG-A / SINOKOR",
   "vessel": "INCHEON VOYAGER",
   "voyage": "2609N",
@@ -372,25 +356,6 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "STARSHIP VENUS",
-  "voyage": "2610N",
-  "service": "KCI",
-  "etd": "12-05 (Sat)",
-  "eta": "12-22 (Tue)",
-  "tt": 17,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-18 (Fri)",
-  "prevTt": 13,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
   "carrier": "SINOKOR",
   "vessel": "HEUNG-A BANGKOK",
   "voyage": "2613N",
@@ -408,19 +373,22 @@
  },
  {
   "carrier": "NAMSUNG",
-  "vessel": "APL JEDDAH",
-  "voyage": "0423N",
-  "service": "CS2",
-  "etd": "12-09 (Wed)",
-  "eta": "12-31 (Thu)",
-  "tt": 22,
+  "vessel": "STARSHIP VENUS",
+  "voyage": "2610N",
+  "service": "KCI",
+  "etd": "12-08 (Tue)",
+  "eta": "12-25 (Fri)",
+  "tt": 17,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-31 (Thu)",
-  "prevTt": 22,
-  "changedFields": [],
-  "status": "same"
+  "prevEtd": "12-05 (Sat)",
+  "prevEta": "12-22 (Tue)",
+  "prevTt": 17,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -435,22 +403,6 @@
   "prevEtd": "12-10 (Thu)",
   "prevEta": "12-24 (Thu)",
   "prevTt": 14,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "HUA YUAN FU JIAN",
-  "voyage": "1302N",
-  "service": "CS2",
-  "etd": "12-12 (Sat)",
-  "eta": "12-31 (Thu)",
-  "tt": 19,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-12 (Sat)",
-  "prevEta": "12-31 (Thu)",
-  "prevTt": 19,
   "changedFields": [],
   "status": "same"
  },
@@ -515,22 +467,6 @@
   "prevEtd": "12-18 (Fri)",
   "prevEta": "01-05 (Tue)",
   "prevTt": 18,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "APL PUSAN",
-  "voyage": "0327N",
-  "service": "CS2",
-  "etd": "12-19 (Sat)",
-  "eta": "01-13 (Wed)",
-  "tt": 25,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-19 (Sat)",
-  "prevEta": "01-13 (Wed)",
-  "prevTt": 25,
   "changedFields": [],
   "status": "same"
  },

@@ -64,15 +64,18 @@
   "vessel": "MSC UGANDA",
   "voyage": "GU646W",
   "service": "AMERICA SERVICE",
-  "etd": "11-28 (Sat)",
+  "etd": "11-29 (Sun)",
   "eta": "12-30 (Wed)",
-  "tt": 32,
+  "tt": 31,
   "rotation": "Haiphong → Vung Tau → Singapore → New York",
   "prevEtd": "11-28 (Sat)",
   "prevEta": "12-30 (Wed)",
   "prevTt": 32,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
@@ -94,15 +97,18 @@
   "vessel": "MSC VANCOUVER",
   "voyage": "GU647W",
   "service": "AMERICA SERVICE",
-  "etd": "11-30 (Mon)",
-  "eta": "12-31 (Thu)",
+  "etd": "12-01 (Tue)",
+  "eta": "01-01 (Fri)",
   "tt": 31,
   "rotation": "Haiphong → Vung Tau → Singapore → New York",
   "prevEtd": "11-30 (Mon)",
   "prevEta": "12-31 (Thu)",
   "prevTt": 31,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
@@ -120,6 +126,25 @@
   "status": "same"
  },
  {
+  "carrier": "MSC",
+  "vessel": "MSC MAEVA",
+  "voyage": "GU648W",
+  "service": "AMERICA SERVICE",
+  "etd": "12-10 (Thu)",
+  "eta": "01-10 (Sun)",
+  "tt": 31,
+  "rotation": "Haiphong → Vung Tau → Singapore → New York",
+  "prevEtd": "12-11 (Fri)",
+  "prevEta": "01-12 (Tue)",
+  "prevTt": 32,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "CMA CGM",
   "vessel": "TAIPEI TRIUMPH",
   "voyage": "TWS0Q0E19",
@@ -131,36 +156,6 @@
   "prevEtd": "12-10 (Thu)",
   "prevEta": "01-22 (Fri)",
   "prevTt": 43,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC MAEVA",
-  "voyage": "GU648W",
-  "service": "AMERICA SERVICE",
-  "etd": "12-11 (Fri)",
-  "eta": "01-12 (Tue)",
-  "tt": 32,
-  "rotation": "Haiphong → Vung Tau → Singapore → New York",
-  "prevEtd": "12-11 (Fri)",
-  "prevEta": "01-12 (Tue)",
-  "prevTt": 32,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC MAPUTO",
-  "voyage": "GU649W",
-  "service": "AMERICA SERVICE",
-  "etd": "12-16 (Wed)",
-  "eta": "01-16 (Sat)",
-  "tt": 31,
-  "rotation": "Haiphong → Vung Tau → Singapore → New York",
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "01-16 (Sat)",
-  "prevTt": 31,
   "changedFields": [],
   "status": "same"
  },
@@ -178,6 +173,24 @@
   "prevTt": 43,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC MAPUTO",
+  "voyage": "GU649W",
+  "service": "AMERICA SERVICE",
+  "etd": "12-19 (Sat)",
+  "eta": "01-19 (Tue)",
+  "tt": 31,
+  "rotation": "Haiphong → Vung Tau → Singapore → New York",
+  "prevEtd": "12-16 (Wed)",
+  "prevEta": "01-16 (Sat)",
+  "prevTt": 31,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSC",

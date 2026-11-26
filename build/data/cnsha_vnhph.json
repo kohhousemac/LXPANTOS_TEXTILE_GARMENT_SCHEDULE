@@ -239,6 +239,23 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "SITC YANTAI",
+  "voyage": "2632S",
+  "service": "CJV2",
+  "etd": "12-02 (Wed)",
+  "eta": "12-06 (Sun)",
+  "tt": 4,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 3,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC SHENZHEN",
   "voyage": "2628S",
   "service": "CJV3",
@@ -248,20 +265,6 @@
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-07 (Mon)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC YANTAI",
-  "voyage": "2632S",
-  "service": "CJV2",
-  "etd": "12-03 (Thu)",
-  "eta": "12-06 (Sun)",
-  "tt": 3,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 3,
   "changedFields": [],
   "status": "same"
  },

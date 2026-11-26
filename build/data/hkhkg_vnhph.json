@@ -85,15 +85,18 @@
   "voyage": "2623S",
   "service": "BIH",
   "etd": "12-03 (Thu)",
-  "eta": "12-04 (Fri)",
-  "tt": 1,
+  "eta": "12-05 (Sat)",
+  "tt": 2,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-04 (Fri)",
   "prevTt": 1,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -133,15 +136,18 @@
   "voyage": "2624S",
   "service": "BIH",
   "etd": "12-17 (Thu)",
-  "eta": "12-18 (Fri)",
-  "tt": 1,
+  "eta": "12-19 (Sat)",
+  "tt": 2,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-17 (Thu)",
   "prevEta": "12-18 (Fri)",
   "prevTt": 1,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",

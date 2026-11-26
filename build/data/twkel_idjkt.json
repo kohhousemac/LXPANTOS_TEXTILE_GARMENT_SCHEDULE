@@ -19,13 +19,16 @@
   "voyage": "S049",
   "service": "Taiwan - PRC - Indonesia",
   "etd": "12-04 (Fri)",
-  "eta": "12-15 (Tue)",
-  "tt": 11,
+  "eta": "12-14 (Mon)",
+  "tt": 10,
   "prevEtd": "12-04 (Fri)",
   "prevEta": "12-15 (Tue)",
   "prevTt": 11,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
@@ -40,5 +43,19 @@
   "prevTt": 10,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 352",
+  "voyage": "S050",
+  "service": "Taiwan - PRC - Indonesia",
+  "etd": "12-24 (Thu)",
+  "eta": "01-05 (Tue)",
+  "tt": 12,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  }
 ]

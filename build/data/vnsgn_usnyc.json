@@ -112,15 +112,18 @@
   "vessel": "MSC VANCOUVER",
   "voyage": "GU647W",
   "service": "AMERICA SERVICE",
-  "etd": "12-03 (Thu)",
-  "eta": "12-31 (Thu)",
+  "etd": "12-04 (Fri)",
+  "eta": "01-01 (Fri)",
   "tt": 28,
   "rotation": "Vung Tau → Singapore → New York",
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-31 (Thu)",
   "prevTt": 28,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
@@ -145,15 +148,18 @@
   "vessel": "MSC MAEVA",
   "voyage": "GU648W",
   "service": "AMERICA SERVICE",
-  "etd": "12-15 (Tue)",
-  "eta": "01-12 (Tue)",
+  "etd": "12-13 (Sun)",
+  "eta": "01-10 (Sun)",
   "tt": 28,
   "rotation": "Vung Tau → Singapore → New York",
   "prevEtd": "12-15 (Tue)",
   "prevEta": "01-12 (Tue)",
   "prevTt": 28,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
@@ -175,21 +181,6 @@
  },
  {
   "carrier": "MSC",
-  "vessel": "MSC MAPUTO",
-  "voyage": "GU649W",
-  "service": "AMERICA SERVICE",
-  "etd": "12-18 (Fri)",
-  "eta": "01-16 (Sat)",
-  "tt": 29,
-  "rotation": "Vung Tau → Singapore → New York",
-  "prevEtd": "12-18 (Fri)",
-  "prevEta": "01-16 (Sat)",
-  "prevTt": 29,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "MSC",
   "vessel": "MSC FAIRFIELD",
   "voyage": "GU650W",
   "service": "AMERICA SERVICE",
@@ -202,5 +193,24 @@
   "prevTt": 30,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC MAPUTO",
+  "voyage": "GU649W",
+  "service": "AMERICA SERVICE",
+  "etd": "12-22 (Tue)",
+  "eta": "01-19 (Tue)",
+  "tt": 28,
+  "rotation": "Vung Tau → Singapore → New York",
+  "prevEtd": "12-18 (Fri)",
+  "prevEta": "01-16 (Sat)",
+  "prevTt": 29,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

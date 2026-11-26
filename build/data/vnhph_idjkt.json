@@ -88,14 +88,17 @@
   "vessel": "ERASMUS OASIS",
   "voyage": "2656S",
   "service": "JTH",
-  "etd": "12-16 (Wed)",
+  "etd": "12-17 (Thu)",
   "eta": "12-25 (Fri)",
-  "tt": 9,
+  "tt": 8,
   "prevEtd": "12-16 (Wed)",
   "prevEta": "12-25 (Fri)",
   "prevTt": 9,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",

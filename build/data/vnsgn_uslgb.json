@@ -80,14 +80,17 @@
   "voyage": "FV646N",
   "service": "SENTOSA",
   "etd": "11-30 (Mon)",
-  "eta": "12-20 (Sun)",
-  "tt": 20,
+  "eta": "12-21 (Mon)",
+  "tt": 21,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "prevEtd": "11-30 (Mon)",
   "prevEta": "12-20 (Sun)",
   "prevTt": 20,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
@@ -120,21 +123,6 @@
   "status": "same"
  },
  {
-  "carrier": "MSC",
-  "vessel": "MSC OSCAR",
-  "voyage": "FV648N",
-  "service": "SENTOSA",
-  "etd": "12-08 (Tue)",
-  "eta": "12-29 (Tue)",
-  "tt": 21,
-  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-29 (Tue)",
-  "prevTt": 21,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "WHL",
   "vessel": "WAN HAI A03",
   "voyage": "E019",
@@ -148,6 +136,25 @@
   "prevTt": 21,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "MSC",
+  "vessel": "MSC OSCAR",
+  "voyage": "FV648N",
+  "service": "SENTOSA",
+  "etd": "12-09 (Wed)",
+  "eta": "01-01 (Fri)",
+  "tt": 23,
+  "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
+  "prevEtd": "12-08 (Tue)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 21,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
@@ -169,29 +176,36 @@
   "vessel": "MSC NEW YORK",
   "voyage": "FV649N",
   "service": "SENTOSA",
-  "etd": "12-14 (Mon)",
-  "eta": "01-05 (Tue)",
-  "tt": 22,
+  "etd": "12-16 (Wed)",
+  "eta": "01-06 (Wed)",
+  "tt": 21,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "prevEtd": "12-14 (Mon)",
   "prevEta": "01-05 (Tue)",
   "prevTt": 22,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSC",
   "vessel": "MSC LENI",
   "voyage": "FV650N",
   "service": "SENTOSA",
-  "etd": "12-21 (Mon)",
+  "etd": "12-22 (Tue)",
   "eta": "01-12 (Tue)",
-  "tt": 22,
+  "tt": 21,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "prevEtd": "12-21 (Mon)",
   "prevEta": "01-12 (Tue)",
   "prevTt": 22,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

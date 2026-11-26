@@ -167,16 +167,19 @@
   "vessel": "STARSHIP VENUS",
   "voyage": "2610N",
   "service": "KCI",
-  "etd": "12-05 (Sat)",
-  "eta": "12-18 (Fri)",
+  "etd": "12-08 (Tue)",
+  "eta": "12-21 (Mon)",
   "tt": 13,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-05 (Sat)",
   "prevEta": "12-18 (Fri)",
   "prevTt": 13,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -216,16 +219,19 @@
   "voyage": "2609N",
   "service": "ANX",
   "etd": "12-14 (Mon)",
-  "eta": "12-25 (Fri)",
-  "tt": 11,
+  "eta": "12-26 (Sat)",
+  "tt": 12,
   "altDates": "NAMSUNG 12-14→12-26",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-14 (Mon)",
   "prevEta": "12-25 (Fri)",
   "prevTt": 11,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",

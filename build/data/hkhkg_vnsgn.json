@@ -169,25 +169,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "SKY ORION",
-  "voyage": "2614S",
-  "service": "VTS",
-  "etd": "11-30 (Mon)",
-  "eta": "12-02 (Wed)",
-  "tt": 2,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 2,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "KMTC",
   "vessel": "KMTC JAKARTA",
   "voyage": "2613S",
   "service": "KTS",
@@ -201,6 +182,25 @@
   "prevTt": 2,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "SKY ORION",
+  "voyage": "2614S",
+  "service": "VTS",
+  "etd": "12-01 (Tue)",
+  "eta": "12-03 (Thu)",
+  "tt": 2,
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": "11-30 (Mon)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 2,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -325,6 +325,22 @@
  },
  {
   "carrier": "KMTC",
+  "vessel": "YM CREDIBILITY",
+  "voyage": "150S",
+  "service": "CT2",
+  "etd": "12-19 (Sat)",
+  "eta": "12-22 (Tue)",
+  "tt": 3,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "KMTC",
   "vessel": "KMTC TAIPEIS",
   "voyage": "2615S",
   "service": "VTS",
@@ -360,14 +376,14 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "YM CONTINENT",
-  "voyage": "2612S",
-  "service": "CT2",
+  "vessel": "SKY ORION",
+  "voyage": "2615S",
+  "service": "VTS",
   "etd": "12-24 (Thu)",
-  "eta": "12-28 (Mon)",
-  "tt": 4,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
+  "eta": "12-26 (Sat)",
+  "tt": 2,
+  "closedCarriers": "",
+  "bookingClosed": false,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,

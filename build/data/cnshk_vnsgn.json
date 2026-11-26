@@ -82,13 +82,16 @@
   "vessel": "WAN HAI 283",
   "voyage": "S124",
   "etd": "11-28 (Sat)",
-  "eta": "11-30 (Mon)",
-  "tt": 2,
+  "eta": "12-01 (Tue)",
+  "tt": 3,
   "prevEtd": "11-28 (Sat)",
   "prevEta": "11-30 (Mon)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
@@ -121,13 +124,16 @@
   "vessel": "INTERASIA FORWARD",
   "voyage": "S193",
   "etd": "12-04 (Fri)",
-  "eta": "12-08 (Tue)",
-  "tt": 4,
+  "eta": "12-07 (Mon)",
+  "tt": 3,
   "prevEtd": "12-04 (Fri)",
   "prevEta": "12-08 (Tue)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CNC",
@@ -146,14 +152,17 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S125",
-  "etd": "12-10 (Thu)",
+  "etd": "12-11 (Fri)",
   "eta": "12-13 (Sun)",
-  "tt": 3,
+  "tt": 2,
   "prevEtd": "12-10 (Thu)",
   "prevEta": "12-13 (Sun)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
