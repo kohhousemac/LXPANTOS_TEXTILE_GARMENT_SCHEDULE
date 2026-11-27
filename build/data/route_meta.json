@@ -646,5 +646,53 @@
   "changedCount": 3,
   "excludedCount": 0,
   "vesselCount": 10
+ },
+ {
+  "routeId": "cnsha_egdam",
+  "label": "Shanghai → Damietta",
+  "pol": "Shanghai",
+  "pod": "Damietta",
+  "group": "med",
+  "updateDate": "11/27",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "cnsha_egsok",
+  "label": "Shanghai → Ain Sokhna",
+  "pol": "Shanghai",
+  "pod": "Ain Sokhna",
+  "group": "med",
+  "updateDate": "11/27",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "cnsha_egaly",
+  "label": "Shanghai → Alexandria",
+  "pol": "Shanghai",
+  "pod": "Alexandria",
+  "group": "med",
+  "updateDate": "11/27",
+  "newCount": 4,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 4
+ },
+ {
+  "routeId": "cnsha_egpsd",
+  "label": "Shanghai → Port Said",
+  "pol": "Shanghai",
+  "pod": "Port Said",
+  "group": "med",
+  "updateDate": "11/27",
+  "newCount": 5,
+  "changedCount": 0,
+  "excludedCount": 0,
+  "vesselCount": 5
  }
 ]

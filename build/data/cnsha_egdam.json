@@ -1,0 +1,62 @@
+[
+ {
+  "carrier": "YANG MING",
+  "vessel": "YM WELLBEING",
+  "voyage": "MD12648W",
+  "etd": "11-28 (Sat)",
+  "eta": "12-28 (Mon)",
+  "tt": 30,
+  "service": "MD1",
+  "rotation": "Shanghai → Damietta",
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 30,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "YM WILLPOWER",
+  "voyage": "MD12650W",
+  "etd": "12-11 (Fri)",
+  "eta": "01-04 (Mon)",
+  "tt": 24,
+  "service": "MD1",
+  "rotation": "Shanghai → Damietta",
+  "prevEtd": "12-11 (Fri)",
+  "prevEta": "01-04 (Mon)",
+  "prevTt": 24,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "YM TROPHY",
+  "voyage": "MD12651W",
+  "etd": "12-21 (Mon)",
+  "eta": "01-14 (Thu)",
+  "tt": 24,
+  "service": "MD1",
+  "rotation": "Shanghai → Damietta",
+  "prevEtd": "12-21 (Mon)",
+  "prevEta": "01-14 (Thu)",
+  "prevTt": 24,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "YANG MING",
+  "vessel": "YM TOGETHER",
+  "voyage": "MD12652W",
+  "etd": "12-25 (Fri)",
+  "eta": "01-18 (Mon)",
+  "tt": 24,
+  "service": "MD1",
+  "rotation": "Shanghai → Damietta",
+  "prevEtd": "12-25 (Fri)",
+  "prevEta": "01-18 (Mon)",
+  "prevTt": 24,
+  "changedFields": [],
+  "status": "new"
+ }
+]

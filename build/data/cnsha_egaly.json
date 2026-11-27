@@ -1,0 +1,62 @@
+[
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM ADONIS",
+  "voyage": "PHX0E0W19",
+  "etd": "11-27 (Fri)",
+  "eta": "12-25 (Fri)",
+  "tt": 28,
+  "service": "BEX2",
+  "rotation": "Shanghai → Alexandria",
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-25 (Fri)",
+  "prevTt": 28,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM APOLLON",
+  "voyage": "PHX0I0W19",
+  "etd": "12-08 (Tue)",
+  "eta": "01-08 (Fri)",
+  "tt": 31,
+  "service": "BEX2",
+  "rotation": "Shanghai → Alexandria",
+  "prevEtd": "12-08 (Tue)",
+  "prevEta": "01-08 (Fri)",
+  "prevTt": 31,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM PLATINUM",
+  "voyage": "PHX0K0W19",
+  "etd": "12-14 (Mon)",
+  "eta": "01-14 (Thu)",
+  "tt": 31,
+  "service": "BEX2",
+  "rotation": "Shanghai → Alexandria",
+  "prevEtd": "12-14 (Mon)",
+  "prevEta": "01-14 (Thu)",
+  "prevTt": 31,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "CMA CGM SAO PAULO",
+  "voyage": "PHX0M0W19",
+  "etd": "12-21 (Mon)",
+  "eta": "01-22 (Fri)",
+  "tt": 32,
+  "service": "BEX2",
+  "rotation": "Shanghai → Alexandria",
+  "prevEtd": "12-21 (Mon)",
+  "prevEta": "01-22 (Fri)",
+  "prevTt": 32,
+  "changedFields": [],
+  "status": "new"
+ }
+]
