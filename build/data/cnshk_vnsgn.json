@@ -99,14 +99,17 @@
   "carrier": "CNC",
   "vessel": "CNC PUMA",
   "voyage": "NCX080S89",
-  "etd": "12-01 (Tue)",
+  "etd": "12-02 (Wed)",
   "eta": "12-04 (Fri)",
-  "tt": 3,
+  "tt": 2,
   "prevEtd": "12-01 (Tue)",
   "prevEta": "12-04 (Fri)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",

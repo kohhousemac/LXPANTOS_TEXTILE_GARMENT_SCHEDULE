@@ -94,15 +94,18 @@
   "vessel": "WAN HAI A05",
   "voyage": "E019",
   "service": "AP1",
-  "etd": "12-02 (Wed)",
-  "eta": "12-23 (Wed)",
+  "etd": "12-03 (Thu)",
+  "eta": "12-24 (Thu)",
   "tt": 21,
   "rotation": "Cai Mep → Los Angeles (직항)",
   "prevEtd": "12-02 (Wed)",
   "prevEta": "12-23 (Wed)",
   "prevTt": 21,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSC",

@@ -79,15 +79,18 @@
   "vessel": "WAN HAI A05",
   "voyage": "E019",
   "service": "AP1",
-  "etd": "11-30 (Mon)",
-  "eta": "12-23 (Wed)",
+  "etd": "12-01 (Tue)",
+  "eta": "12-24 (Thu)",
   "tt": 23,
   "rotation": "Haiphong → Los Angeles (직항)",
   "prevEtd": "11-30 (Mon)",
   "prevEta": "12-23 (Wed)",
   "prevTt": 23,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSC",

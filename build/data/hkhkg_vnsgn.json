@@ -118,8 +118,8 @@
   "etd": "11-28 (Sat)",
   "eta": "11-30 (Mon)",
   "tt": 2,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
+  "closedCarriers": "",
+  "bookingClosed": false,
   "prevEtd": "11-28 (Sat)",
   "prevEta": "12-01 (Tue)",
   "prevTt": 3,
@@ -151,15 +151,18 @@
   "voyage": "038S",
   "service": "CT2",
   "etd": "11-29 (Sun)",
-  "eta": "12-02 (Wed)",
-  "tt": 3,
+  "eta": "12-04 (Fri)",
+  "tt": 5,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "11-29 (Sun)",
   "prevEta": "12-02 (Wed)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -281,16 +284,19 @@
   "vessel": "SYMEON P",
   "voyage": "039S",
   "service": "CT2",
-  "etd": "12-16 (Wed)",
-  "eta": "12-19 (Sat)",
+  "etd": "12-18 (Fri)",
+  "eta": "12-21 (Mon)",
   "tt": 3,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-16 (Wed)",
   "prevEta": "12-19 (Sat)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",

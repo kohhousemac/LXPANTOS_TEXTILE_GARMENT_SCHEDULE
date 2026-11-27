@@ -349,15 +349,16 @@
   "vessel": "BELAWAN",
   "voyage": "2611N",
   "service": "KIS1",
-  "etd": "12-08 (Tue)",
-  "eta": "12-23 (Wed)",
-  "tt": 15,
+  "etd": "12-05 (Sat)",
+  "eta": "12-19 (Sat)",
+  "tt": 14,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 14,
+  "prevEta": "12-23 (Wed)",
+  "prevTt": 15,
   "changedFields": [
+   "etd",
    "eta",
    "tt"
   ],
@@ -376,22 +377,6 @@
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-19 (Sat)",
   "prevTt": 11,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "STARSHIP JUPITER",
-  "voyage": "2609N",
-  "service": "ANX",
-  "etd": "12-10 (Thu)",
-  "eta": "12-22 (Tue)",
-  "tt": 12,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 12,
   "changedFields": [],
   "status": "same"
  },
@@ -415,7 +400,26 @@
   "status": "changed"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "NAMSUNG",
+  "vessel": "STARSHIP JUPITER",
+  "voyage": "2609N",
+  "service": "ANX",
+  "etd": "12-11 (Fri)",
+  "eta": "12-23 (Wed)",
+  "tt": 12,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-22 (Tue)",
+  "prevTt": 12,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "NAMSUNG",
   "vessel": "KMTC SURABAYA",
   "voyage": "2609N",
   "service": "ANX",
@@ -424,14 +428,11 @@
   "tt": 14,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-14 (Mon)",
-  "prevEta": "12-27 (Sun)",
-  "prevTt": 13,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "KMTC",
@@ -448,6 +449,25 @@
   "prevTt": 16,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "service": "ANX",
+  "etd": "12-14 (Mon)",
+  "eta": "12-27 (Sun)",
+  "tt": 13,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-13 (Sun)",
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 14,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",

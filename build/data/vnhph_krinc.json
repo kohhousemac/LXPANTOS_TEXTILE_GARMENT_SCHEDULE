@@ -445,23 +445,7 @@
   "status": "same"
  },
  {
-  "carrier": "PANOCEAN",
-  "vessel": "PEGASUS DREAM",
-  "voyage": "2623E",
-  "service": "KHX",
-  "etd": "11-30 (Mon)",
-  "eta": "12-06 (Sun)",
-  "tt": 6,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
+  "carrier": "NAMSUNG / PANOCEAN",
   "vessel": "PEGASUS DREAM",
   "voyage": "2623E",
   "service": "KHX",
@@ -496,22 +480,6 @@
   "status": "same"
  },
  {
-  "carrier": "PANOCEAN",
-  "vessel": "SKY HOPE",
-  "voyage": "2621N",
-  "service": "KCH",
-  "etd": "12-02 (Wed)",
-  "eta": "12-08 (Tue)",
-  "tt": 6,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "KMTC",
   "vessel": "SKY MOON",
   "voyage": "2620N",
@@ -526,6 +494,25 @@
   "prevTt": 6,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "SKY HOPE",
+  "voyage": "2621N",
+  "service": "KCH",
+  "etd": "12-03 (Thu)",
+  "eta": "12-08 (Tue)",
+  "tt": 5,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 6,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC / NAMSUNG",
@@ -544,7 +531,6 @@
   "status": "same"
  },
  {
-  "altDates": "PANOCEAN 12-05→12-13",
   "carrier": "PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2623N",
@@ -634,31 +620,18 @@
   "voyage": "1080N",
   "service": "KCH",
   "etd": "12-07 (Mon)",
-  "eta": "12-13 (Sun)",
-  "tt": 6,
+  "eta": "12-12 (Sat)",
+  "tt": 5,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-07 (Mon)",
   "prevEta": "12-13 (Sun)",
   "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "PANOCEAN",
-  "vessel": "SM TOKYO",
-  "voyage": "2622E",
-  "service": "HP1",
-  "etd": "12-07 (Mon)",
-  "eta": "12-10 (Thu)",
-  "tt": 3,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-07 (Mon)",
-  "prevEta": "12-10 (Thu)",
-  "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -693,13 +666,14 @@
   "status": "same"
  },
  {
-  "carrier": "NAMSUNG",
+  "carrier": "NAMSUNG / PANOCEAN",
   "vessel": "SM TOKYO",
   "voyage": "2622E",
   "service": "KHX",
   "etd": "12-08 (Tue)",
   "eta": "12-14 (Mon)",
   "tt": 6,
+  "altDates": "PANOCEAN 12-08→12-10",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-08 (Tue)",
@@ -746,13 +720,14 @@
   "voyage": "2623N",
   "service": "BIH",
   "etd": "12-12 (Sat)",
-  "eta": "12-17 (Thu)",
-  "tt": 5,
+  "eta": "12-19 (Sat)",
+  "tt": 7,
+  "altDates": "PANOCEAN 12-12→12-17",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-12 (Sat)",
-  "prevEta": "12-19 (Sat)",
-  "prevTt": 7,
+  "prevEta": "12-17 (Thu)",
+  "prevTt": 5,
   "changedFields": [
    "eta",
    "tt"
@@ -760,19 +735,19 @@
   "status": "changed"
  },
  {
-  "altDates": "PANOCEAN 12-14→12-18",
   "carrier": "NAMSUNG / PANOCEAN",
   "vessel": "PEGASUS DREAM",
   "voyage": "2624E",
   "service": "KHX",
   "etd": "12-14 (Mon)",
-  "eta": "12-18 (Fri)",
-  "tt": 4,
+  "eta": "12-20 (Sun)",
+  "tt": 6,
+  "altDates": "PANOCEAN 12-14→12-18",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-14 (Mon)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 6,
+  "prevEta": "12-18 (Fri)",
+  "prevTt": 4,
   "changedFields": [
    "eta",
    "tt"
@@ -784,16 +759,19 @@
   "vessel": "SKY HOPE",
   "voyage": "2622N",
   "service": "KCH",
-  "etd": "12-15 (Tue)",
+  "etd": "12-16 (Wed)",
   "eta": "12-21 (Mon)",
-  "tt": 6,
+  "tt": 5,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-15 (Tue)",
   "prevEta": "12-21 (Mon)",
   "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -879,7 +857,6 @@
   "status": "same"
  },
  {
-  "altDates": "NAMSUNG 12-19→12-26, PANOCEAN 12-19→12-26",
   "carrier": "PANOCEAN",
   "vessel": "STAR EXPLORER",
   "voyage": "2624N",
@@ -1008,7 +985,6 @@
   "status": "same"
  },
  {
-  "altDates": "NAMSUNG 12-24→12-31",
   "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY KALMIA",
   "voyage": "2624N",
@@ -1016,6 +992,7 @@
   "etd": "12-24 (Thu)",
   "eta": "12-30 (Wed)",
   "tt": 6,
+  "altDates": "NAMSUNG 12-24→12-31",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-24 (Thu)",

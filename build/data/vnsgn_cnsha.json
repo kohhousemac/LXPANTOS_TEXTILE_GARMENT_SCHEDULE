@@ -291,22 +291,6 @@
   "status": "same"
  },
  {
-  "carrier": "SITC",
-  "vessel": "SITC XINGDE",
-  "voyage": "2626S",
-  "service": "VTX1",
-  "etd": "12-20 (Sun)",
-  "eta": "12-30 (Wed)",
-  "tt": 10,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
- },
- {
   "carrier": "KMTC",
   "vessel": "KMTC INCHEON",
   "voyage": "2611N",

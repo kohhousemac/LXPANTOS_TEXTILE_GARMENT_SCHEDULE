@@ -395,16 +395,19 @@
   "vessel": "STARSHIP JUPITER",
   "voyage": "2609N",
   "service": "ANX",
-  "etd": "12-10 (Thu)",
-  "eta": "12-24 (Thu)",
+  "etd": "12-11 (Fri)",
+  "eta": "12-25 (Fri)",
   "tt": 14,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-10 (Thu)",
   "prevEta": "12-24 (Thu)",
   "prevTt": 14,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",

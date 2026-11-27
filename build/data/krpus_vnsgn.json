@@ -359,23 +359,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "HEUNG-A HOCHIMINH",
-  "voyage": "2614S",
-  "service": "KHS1",
-  "etd": "12-01 (Tue)",
-  "eta": "12-07 (Mon)",
-  "tt": 6,
-  "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC",
   "vessel": "KMTC PUSAN",
   "voyage": "2614S",
   "service": "KVT",
@@ -484,6 +467,26 @@
   "status": "same"
  },
  {
+  "carrier": "KMTC",
+  "vessel": "SAWASDEE INCHEON",
+  "voyage": "2614S",
+  "service": "KHS1",
+  "etd": "12-12 (Sat)",
+  "eta": "12-18 (Fri)",
+  "tt": 6,
+  "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": "12-14 (Mon)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 6,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "DONGJIN / PANOCEAN",
   "vessel": "SAWASDEE SPICA",
   "voyage": "2613S",
@@ -556,40 +559,23 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "SAWASDEE INCHEON",
-  "voyage": "2614S",
-  "service": "KHS1",
-  "etd": "12-14 (Mon)",
-  "eta": "12-20 (Sun)",
-  "tt": 6,
-  "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-13 (Sun)",
-  "prevEta": "12-19 (Sat)",
-  "prevTt": 6,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "KMTC",
   "vessel": "KMTC OSAKA",
   "voyage": "2613S",
   "service": "KPX",
   "etd": "12-15 (Tue)",
-  "eta": "12-25 (Fri)",
-  "tt": 10,
+  "eta": "12-26 (Sat)",
+  "tt": 11,
   "rotation": "Busan → North Manila → Ho Chi Minh",
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-15 (Tue)",
   "prevEta": "12-25 (Fri)",
   "prevTt": 10,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -616,7 +602,7 @@
   "etd": "12-19 (Sat)",
   "eta": "12-26 (Sat)",
   "tt": 7,
-  "rotation": "Busan → Kwangyang → Hong Kong → Ho Chi Minh",
+  "rotation": "Busan → Kwangyang → Hong Kong → Laem Chabang → Ho Chi Minh",
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-19 (Sat)",
@@ -630,8 +616,8 @@
   "vessel": "KMTC BANGKOK",
   "voyage": "2615S",
   "service": "KHS1",
-  "etd": "12-21 (Mon)",
-  "eta": "12-27 (Sun)",
+  "etd": "12-20 (Sun)",
+  "eta": "12-26 (Sat)",
   "tt": 6,
   "rotation": "Busan → Kwangyang → Ho Chi Minh",
   "closedCarriers": "KMTC",
@@ -639,8 +625,11 @@
   "prevEtd": "12-21 (Mon)",
   "prevEta": "12-27 (Sun)",
   "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -658,6 +647,23 @@
   "prevTt": 7,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "HEUNG-A HOCHIMINH",
+  "voyage": "2615S",
+  "service": "KHS1",
+  "etd": "12-22 (Tue)",
+  "eta": "12-29 (Tue)",
+  "tt": 7,
+  "rotation": "Busan → Ulsan → Kwangyang → Ho Chi Minh",
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "KMTC",

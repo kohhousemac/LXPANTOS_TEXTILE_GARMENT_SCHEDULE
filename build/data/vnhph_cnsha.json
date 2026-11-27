@@ -290,20 +290,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "SITC YIHE",
-  "voyage": "2641N",
-  "service": "CJV6",
-  "etd": "12-21 (Mon)",
-  "eta": "12-29 (Tue)",
-  "tt": 8,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
- },
- {
-  "carrier": "SITC",
   "vessel": "HF LUCKY",
   "voyage": "2631N",
   "service": "CJV3",

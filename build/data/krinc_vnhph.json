@@ -305,14 +305,15 @@
   "voyage": "2622W",
   "service": "KHX1",
   "etd": "12-01 (Tue)",
-  "eta": "12-06 (Sun)",
-  "tt": 5,
+  "eta": "12-08 (Tue)",
+  "tt": 7,
+  "altDates": "PANOCEAN 12-01→12-07",
   "rotation": "Incheon → Kwangyang → Busan → Haiphong",
   "closedCarriers": "DONGJIN / PANOCEAN",
   "bookingClosed": true,
   "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-07 (Mon)",
-  "prevTt": 6,
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 5,
   "changedFields": [
    "eta",
    "tt"
@@ -413,8 +414,8 @@
   "eta": "12-11 (Fri)",
   "tt": 5,
   "rotation": "",
-  "closedCarriers": "",
-  "bookingClosed": false,
+  "closedCarriers": "PANOCEAN",
+  "bookingClosed": true,
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-08 (Tue)",
   "prevTt": 5,
@@ -497,8 +498,8 @@
   "vessel": "SKY HOPE",
   "voyage": "2622S",
   "service": "KCH",
-  "etd": "12-08 (Tue)",
-  "eta": "12-14 (Mon)",
+  "etd": "12-09 (Wed)",
+  "eta": "12-15 (Tue)",
   "tt": 6,
   "rotation": "Incheon → Qingdao → Haiphong",
   "closedCarriers": "PANOCEAN",
@@ -506,8 +507,11 @@
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-14 (Mon)",
   "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "PANOCEAN",
@@ -721,8 +725,8 @@
   "vessel": "SKY HOPE",
   "voyage": "2623S",
   "service": "KCH",
-  "etd": "12-21 (Mon)",
-  "eta": "12-28 (Mon)",
+  "etd": "12-22 (Tue)",
+  "eta": "12-29 (Tue)",
   "tt": 7,
   "rotation": "Incheon → Qingdao → Haiphong",
   "closedCarriers": "PANOCEAN",
@@ -730,14 +734,17 @@
   "prevEtd": "12-21 (Mon)",
   "prevEta": "12-28 (Mon)",
   "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "PANOCEAN",
   "vessel": "SM TOKYO",
   "voyage": "2624W",
-  "service": "",
+  "service": "HP1",
   "etd": "12-25 (Fri)",
   "eta": "12-31 (Thu)",
   "tt": 6,

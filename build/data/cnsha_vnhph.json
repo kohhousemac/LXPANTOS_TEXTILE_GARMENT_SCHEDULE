@@ -511,12 +511,15 @@
   "voyage": "2640S",
   "service": "VTX7",
   "etd": "12-25 (Fri)",
-  "eta": "12-27 (Sun)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
+  "eta": "12-29 (Tue)",
+  "tt": 4,
+  "prevEtd": "12-25 (Fri)",
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 2,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

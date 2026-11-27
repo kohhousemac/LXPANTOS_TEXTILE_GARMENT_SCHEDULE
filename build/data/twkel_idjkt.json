@@ -32,12 +32,12 @@
   "vessel": "WAN HAI 376",
   "voyage": "S038",
   "service": "Taiwan - PRC - Indonesia",
-  "etd": "12-18 (Fri)",
+  "etd": "12-17 (Thu)",
   "eta": "12-27 (Sun)",
-  "tt": 9,
-  "prevEtd": "12-17 (Thu)",
+  "tt": 10,
+  "prevEtd": "12-18 (Fri)",
   "prevEta": "12-27 (Sun)",
-  "prevTt": 10,
+  "prevTt": 9,
   "changedFields": [
    "etd",
    "tt"
