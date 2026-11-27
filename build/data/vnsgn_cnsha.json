@@ -101,8 +101,8 @@
   "voyage": "2627N",
   "service": "VTX2",
   "etd": "11-21 (Sat)",
-  "eta": "11-29 (Sun)",
-  "tt": 8,
+  "eta": "11-28 (Sat)",
+  "tt": 7,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "11-21 (Sat)",
@@ -132,16 +132,19 @@
   "vessel": "KMTC HAIPHONG",
   "voyage": "2609N",
   "service": "CKI",
-  "etd": "12-01 (Tue)",
-  "eta": "12-06 (Sun)",
+  "etd": "12-02 (Wed)",
+  "eta": "12-07 (Mon)",
   "tt": 5,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-01 (Tue)",
   "prevEta": "12-06 (Sun)",
   "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -201,14 +204,11 @@
   "tt": 6,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-15 (Tue)",
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-16 (Wed)",
   "prevTt": 6,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SINOKOR",
@@ -289,6 +289,22 @@
   "prevTt": 5,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC XINGDE",
+  "voyage": "2626S",
+  "service": "VTX1",
+  "etd": "12-20 (Sun)",
+  "eta": "12-30 (Wed)",
+  "tt": 10,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "KMTC",

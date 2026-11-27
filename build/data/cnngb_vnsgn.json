@@ -46,14 +46,17 @@
   "vessel": "SITC XIN",
   "voyage": "2626S",
   "service": "VTX6",
-  "etd": "11-28 (Sat)",
+  "etd": "11-27 (Fri)",
   "eta": "12-07 (Mon)",
-  "tt": 9,
+  "tt": 10,
   "prevEtd": "11-28 (Sat)",
   "prevEta": "12-07 (Mon)",
   "prevTt": 9,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",

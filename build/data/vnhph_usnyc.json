@@ -68,29 +68,29 @@
   "eta": "12-30 (Wed)",
   "tt": 31,
   "rotation": "Haiphong → Vung Tau → Singapore → New York",
-  "prevEtd": "11-28 (Sat)",
+  "prevEtd": "11-29 (Sun)",
   "prevEta": "12-30 (Wed)",
-  "prevTt": 32,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevTt": 31,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "EVER MAX",
   "voyage": "TWS0M0E19",
   "service": "TWS",
-  "etd": "11-30 (Mon)",
+  "etd": "12-01 (Tue)",
   "eta": "01-08 (Fri)",
-  "tt": 39,
+  "tt": 38,
   "rotation": "Haiphong → Hong Kong → Kaohsiung → Yantian → Colon → Savannah → New York",
   "prevEtd": "11-30 (Mon)",
   "prevEta": "01-08 (Fri)",
   "prevTt": 39,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSC",
@@ -100,15 +100,12 @@
   "etd": "12-01 (Tue)",
   "eta": "01-01 (Fri)",
   "tt": 31,
-  "rotation": "Haiphong → Vung Tau → Singapore → New York",
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-31 (Thu)",
+  "rotation": "Haiphong → Dong Nai → Singapore → New York",
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "01-01 (Fri)",
   "prevTt": 31,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "CMA CGM",
@@ -134,15 +131,11 @@
   "eta": "01-10 (Sun)",
   "tt": 31,
   "rotation": "Haiphong → Vung Tau → Singapore → New York",
-  "prevEtd": "12-11 (Fri)",
-  "prevEta": "01-12 (Tue)",
-  "prevTt": 32,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "01-10 (Sun)",
+  "prevTt": 31,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "CMA CGM",
@@ -183,14 +176,11 @@
   "eta": "01-19 (Tue)",
   "tt": 31,
   "rotation": "Haiphong → Vung Tau → Singapore → New York",
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "01-16 (Sat)",
+  "prevEtd": "12-19 (Sat)",
+  "prevEta": "01-19 (Tue)",
   "prevTt": 31,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSC",
@@ -216,10 +206,10 @@
   "eta": "02-05 (Fri)",
   "tt": 43,
   "rotation": "Haiphong → Hong Kong → Kaohsiung → Yantian → Colon → Savannah → New York",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "02-05 (Fri)",
+  "prevTt": 43,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

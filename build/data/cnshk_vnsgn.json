@@ -1,19 +1,6 @@
 [
  {
   "carrier": "WHL",
-  "vessel": "WAN HAI 296",
-  "voyage": "S065",
-  "etd": "11-10 (Tue)",
-  "eta": "11-12 (Thu)",
-  "tt": 2,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "departed"
- },
- {
-  "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S123",
   "etd": "11-12 (Thu)",
@@ -81,22 +68,7 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S124",
-  "etd": "11-28 (Sat)",
-  "eta": "12-01 (Tue)",
-  "tt": 3,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 2,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 290",
-  "voyage": "S092",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "11-28 (Sat)",
   "eta": "12-01 (Tue)",
   "tt": 3,
@@ -105,6 +77,23 @@
   "prevTt": 3,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 290",
+  "voyage": "S092",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
+  "etd": "11-29 (Sun)",
+  "eta": "12-01 (Tue)",
+  "tt": 2,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-01 (Tue)",
+  "prevTt": 3,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CNC",
@@ -123,17 +112,15 @@
   "carrier": "WHL",
   "vessel": "INTERASIA FORWARD",
   "voyage": "S193",
+  "service": "China-Vietnam Service",
   "etd": "12-04 (Fri)",
   "eta": "12-07 (Mon)",
   "tt": 3,
   "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 4,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-07 (Mon)",
+  "prevTt": 3,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "CNC",
@@ -152,27 +139,12 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S125",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "12-11 (Fri)",
   "eta": "12-13 (Sun)",
   "tt": 2,
-  "prevEtd": "12-10 (Thu)",
+  "prevEtd": "12-11 (Fri)",
   "prevEta": "12-13 (Sun)",
-  "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "WHL",
-  "vessel": "WAN HAI 290",
-  "voyage": "S093",
-  "etd": "12-13 (Sun)",
-  "eta": "12-15 (Tue)",
-  "tt": 2,
-  "prevEtd": "12-13 (Sun)",
-  "prevEta": "12-15 (Tue)",
   "prevTt": 2,
   "changedFields": [],
   "status": "same"
@@ -192,8 +164,26 @@
  },
  {
   "carrier": "WHL",
+  "vessel": "WAN HAI 290",
+  "voyage": "S093",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
+  "etd": "12-14 (Mon)",
+  "eta": "12-16 (Wed)",
+  "tt": 2,
+  "prevEtd": "12-13 (Sun)",
+  "prevEta": "12-15 (Tue)",
+  "prevTt": 2,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "WHL",
   "vessel": "WAN HAI 377",
   "voyage": "S031",
+  "service": "China-Vietnam Service",
   "etd": "12-14 (Mon)",
   "eta": "12-18 (Fri)",
   "tt": 4,
@@ -220,6 +210,7 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S126",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "12-23 (Wed)",
   "eta": "12-25 (Fri)",
   "tt": 2,
@@ -233,6 +224,7 @@
   "carrier": "WHL",
   "vessel": "INTERASIA FORWARD",
   "voyage": "S194",
+  "service": "China-Vietnam Service",
   "etd": "12-24 (Thu)",
   "eta": "12-28 (Mon)",
   "tt": 4,
@@ -246,25 +238,13 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 290",
   "voyage": "S094",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "12-27 (Sun)",
   "eta": "12-29 (Tue)",
   "tt": 2,
   "prevEtd": "12-27 (Sun)",
   "prevEta": "12-29 (Tue)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "WHL",
-  "vessel": "BUDGET VESSEL1",
-  "voyage": "S001",
-  "etd": "12-28 (Mon)",
-  "eta": "01-01 (Fri)",
-  "tt": 4,
-  "prevEtd": "12-28 (Mon)",
-  "prevEta": "01-01 (Fri)",
-  "prevTt": 4,
   "changedFields": [],
   "status": "same"
  },
@@ -280,6 +260,20 @@
   "prevTt": 3,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 315",
+  "voyage": "S273",
+  "service": "China-Vietnam Service",
+  "etd": "12-28 (Mon)",
+  "eta": "01-01 (Fri)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "CNC",
@@ -298,6 +292,7 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 377",
   "voyage": "S032",
+  "service": "China-Vietnam Service",
   "etd": "01-04 (Mon)",
   "eta": "01-08 (Fri)",
   "tt": 4,
@@ -311,6 +306,7 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S127",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "01-05 (Tue)",
   "eta": "01-07 (Thu)",
   "tt": 2,
@@ -324,6 +320,7 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 290",
   "voyage": "S095",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "01-10 (Sun)",
   "eta": "01-12 (Tue)",
   "tt": 2,
@@ -350,6 +347,7 @@
   "carrier": "WHL",
   "vessel": "INTERASIA FORWARD",
   "voyage": "S195",
+  "service": "China-Vietnam Service",
   "etd": "01-11 (Mon)",
   "eta": "01-15 (Fri)",
   "tt": 4,
@@ -363,25 +361,13 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 283",
   "voyage": "S128",
+  "service": "CHINA-THAILAND-KAMPUCHEA",
   "etd": "01-16 (Sat)",
   "eta": "01-19 (Tue)",
   "tt": 3,
   "prevEtd": "01-16 (Sat)",
   "prevEta": "01-19 (Tue)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "WHL",
-  "vessel": "BUDGET VESSEL1",
-  "voyage": "S002",
-  "etd": "01-18 (Mon)",
-  "eta": "01-22 (Fri)",
-  "tt": 4,
-  "prevEtd": "01-18 (Mon)",
-  "prevEta": "01-22 (Fri)",
-  "prevTt": 4,
   "changedFields": [],
   "status": "same"
  },
@@ -397,6 +383,20 @@
   "prevTt": 3,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "WHL",
+  "vessel": "WAN HAI 315",
+  "voyage": "S274",
+  "service": "China-Vietnam Service",
+  "etd": "01-18 (Mon)",
+  "eta": "01-22 (Fri)",
+  "tt": 4,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "CNC",

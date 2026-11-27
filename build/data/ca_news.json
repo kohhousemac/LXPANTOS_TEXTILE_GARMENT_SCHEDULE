@@ -2,11 +2,11 @@
  {
   "country": "과테말라",
   "flag": "🇬🇹",
-  "hasIssue": true,
-  "headline": "CONSERSA, 케찰·산토토마스항에 공컨테이너 탑리프터 8대 투입",
-  "url": "https://www.mundomaritimo.cl/noticias/consersa-invierte-mas-de-us24-millones-en-la-incorporacion-de-ocho-gruas-top-lifter-en-puertos-de-guatemala",
+  "hasIssue": false,
+  "headline": "",
+  "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-25T11:07:13Z"
+  "updatedAt": "2026-11-26T11:10:00Z"
  },
  {
   "country": "니카라과",
@@ -15,24 +15,24 @@
   "headline": "",
   "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-25T11:07:13Z"
+  "updatedAt": "2026-11-26T11:10:00Z"
  },
  {
   "country": "파나마",
   "flag": "🇵🇦",
   "hasIssue": true,
-  "headline": "",
-  "url": "",
+  "headline": "파나마 해사청(AMP), 전자선박등록(REN)으로 16개 이상 시스템 통합 추진(2027년 상반기 완료 목표)",
+  "url": "https://destinopanama.com.pa/2026/11/enterate-rapido-25-de-noviembre-de-2026/",
   "holiday": "독립기념일 (11/28)",
-  "updatedAt": "2026-11-25T11:07:13Z"
+  "updatedAt": "2026-11-26T11:10:00Z"
  },
  {
   "country": "엘살바도르",
   "flag": "🇸🇻",
-  "hasIssue": true,
-  "headline": "11/25~29 대조기 예보 — 라우니온 최대 3.6m, 아카후틀라 기준치 초과",
-  "url": "https://www.elsalvador.com/noticias/nacional/mareas-vivas-el-salvador/1305576/2026/",
+  "hasIssue": false,
+  "headline": "",
+  "url": "",
   "holiday": "",
-  "updatedAt": "2026-11-25T11:07:13Z"
+  "updatedAt": "2026-11-26T11:10:00Z"
  }
 ]

@@ -1798,5 +1798,14 @@
   "change": "Removed",
   "old": "12-17 (Thu)",
   "new": ""
+ },
+ {
+  "id": "2026-11-27-0-Busan|MAERSK ENSENADA",
+  "date": "2026-11-27",
+  "pol": "Busan",
+  "vessel": "MAERSK ENSENADA",
+  "change": "New sailing",
+  "old": "",
+  "new": "12-26 (Sat)"
  }
 ]

@@ -1,23 +1,6 @@
 [
  {
   "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2609S",
-  "service": "CKI",
-  "etd": "10-27 (Tue)",
-  "eta": "11-12 (Thu)",
-  "tt": 16,
-  "rotation": "",
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "10-27 (Tue)",
-  "prevEta": "11-12 (Thu)",
-  "prevTt": 16,
-  "changedFields": [],
-  "status": "departed"
- },
- {
-  "carrier": "KMTC",
   "vessel": "KMTC INCHEON",
   "voyage": "2610S",
   "service": "CKI",
@@ -100,22 +83,5 @@
   "prevTt": 13,
   "changedFields": [],
   "status": "departed"
- },
- {
-  "carrier": "KMTC",
-  "vessel": "KMTC SHIMIZU",
-  "voyage": "2611S",
-  "service": "KIS1",
-  "etd": "12-05 (Sat)",
-  "eta": "12-17 (Thu)",
-  "tt": 12,
-  "rotation": "Busan → Hong Kong → Singapore → Jakarta",
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-17 (Thu)",
-  "prevTt": 12,
-  "changedFields": [],
-  "status": "same"
  }
 ]

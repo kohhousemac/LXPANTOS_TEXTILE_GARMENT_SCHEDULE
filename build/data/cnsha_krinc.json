@@ -96,6 +96,26 @@
   "status": "departed"
  },
  {
+  "carrier": "KMTC",
+  "vessel": "SKY RAINBOW",
+  "voyage": "2614N",
+  "service": "KTX",
+  "etd": "11-27 (Fri)",
+  "eta": "12-08 (Tue)",
+  "tt": 11,
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-10 (Thu)",
+  "prevTt": 12,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY LAUREL",
   "voyage": "2626N",
@@ -103,8 +123,8 @@
   "etd": "11-27 (Fri)",
   "eta": "11-28 (Sat)",
   "tt": 1,
-  "closedCarriers": "KMTC",
-  "bookingClosed": false,
+  "closedCarriers": "KMTC / NAMSUNG",
+  "bookingClosed": true,
   "prevEtd": "11-27 (Fri)",
   "prevEta": "11-28 (Sat)",
   "prevTt": 1,
@@ -112,26 +132,10 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC",
-  "vessel": "SKY RAINBOW",
-  "voyage": "2614N",
-  "service": "KTX",
-  "etd": "11-28 (Sat)",
-  "eta": "12-10 (Thu)",
-  "tt": 12,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-10 (Thu)",
-  "prevTt": 12,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC / NAMSUNG / PANOCEAN",
+  "carrier": "NAMSUNG / PANOCEAN",
   "vessel": "PEGASUS TERA",
   "voyage": "2624E",
-  "service": "ISS2",
+  "service": "ISS",
   "etd": "11-29 (Sun)",
   "eta": "11-30 (Mon)",
   "tt": 1,
@@ -160,6 +164,25 @@
   "status": "same"
  },
  {
+  "carrier": "KMTC",
+  "vessel": "PEGASUS TERA",
+  "voyage": "2624E",
+  "service": "ISS2",
+  "etd": "11-30 (Mon)",
+  "eta": "12-01 (Tue)",
+  "tt": 1,
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "11-30 (Mon)",
+  "prevTt": 1,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "KMTC / NAMSUNG",
   "vessel": "SUNNY LAUREL",
   "voyage": "2627N",
@@ -176,36 +199,23 @@
   "status": "same"
  },
  {
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "KMTC / NAMSUNG / PANOCEAN",
   "vessel": "PEGASUS TERA",
   "voyage": "2625E",
   "service": "ISS2",
-  "etd": "12-04 (Fri)",
-  "eta": "12-06 (Sun)",
+  "etd": "12-05 (Sat)",
+  "eta": "12-07 (Mon)",
   "tt": 2,
   "closedCarriers": "KMTC",
-  "bookingClosed": false,
-  "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "PANOCEAN",
-  "vessel": "PEGASUS TERA",
-  "voyage": "2625E",
-  "service": "IS1",
-  "etd": "12-05 (Sat)",
-  "eta": "12-06 (Sun)",
-  "tt": 1,
-  "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-05 (Sat)",
   "prevEta": "12-06 (Sun)",
   "prevTt": 1,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -276,32 +286,19 @@
   "vessel": "PEGASUS TERA",
   "voyage": "2626E",
   "service": "ISS2",
-  "etd": "12-10 (Thu)",
-  "eta": "12-11 (Fri)",
+  "etd": "12-11 (Fri)",
+  "eta": "12-12 (Sat)",
   "tt": 1,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-10 (Thu)",
   "prevEta": "12-11 (Fri)",
   "prevTt": 1,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "NAMSUNG",
-  "vessel": "PEGASUS TERA",
-  "voyage": "2626E",
-  "service": "ISS",
-  "etd": "12-11 (Fri)",
-  "eta": "12-13 (Sun)",
-  "tt": 2,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-11 (Fri)",
-  "prevEta": "12-13 (Sun)",
-  "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -320,10 +317,10 @@
   "status": "same"
  },
  {
-  "carrier": "PANOCEAN",
+  "carrier": "NAMSUNG / PANOCEAN",
   "vessel": "PEGASUS TERA",
   "voyage": "2626E",
-  "service": "IS1",
+  "service": "ISS",
   "etd": "12-12 (Sat)",
   "eta": "12-13 (Sun)",
   "tt": 1,
@@ -372,16 +369,19 @@
   "vessel": "PEGASUS TERA",
   "voyage": "2627E",
   "service": "ISS2",
-  "etd": "12-16 (Wed)",
-  "eta": "12-18 (Fri)",
+  "etd": "12-17 (Thu)",
+  "eta": "12-19 (Sat)",
   "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-16 (Wed)",
   "prevEta": "12-18 (Fri)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -500,15 +500,18 @@
   "vessel": "PEGASUS TERA",
   "voyage": "2628E",
   "service": "ISS2",
-  "etd": "12-23 (Wed)",
-  "eta": "12-25 (Fri)",
+  "etd": "12-24 (Thu)",
+  "eta": "12-26 (Sat)",
   "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-23 (Wed)",
   "prevEta": "12-25 (Fri)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  }
 ]

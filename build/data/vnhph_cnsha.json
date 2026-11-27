@@ -158,14 +158,17 @@
   "vessel": "HF LUCKY",
   "voyage": "2629N",
   "service": "CJV3",
-  "etd": "12-03 (Thu)",
+  "etd": "12-02 (Wed)",
   "eta": "12-06 (Sun)",
-  "tt": 3,
+  "tt": 4,
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-06 (Sun)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -187,13 +190,16 @@
   "voyage": "2633N",
   "service": "CJV2",
   "etd": "12-07 (Mon)",
-  "eta": "12-11 (Fri)",
-  "tt": 4,
+  "eta": "12-12 (Sat)",
+  "tt": 5,
   "prevEtd": "12-07 (Mon)",
   "prevEta": "12-11 (Fri)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -231,29 +237,25 @@
   "etd": "12-14 (Mon)",
   "eta": "12-20 (Sun)",
   "tt": 6,
-  "prevEtd": "12-10 (Thu)",
-  "prevEta": "12-17 (Thu)",
-  "prevTt": 7,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": "12-14 (Mon)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 6,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
   "vessel": "SITC YOKKAICHI",
   "voyage": "2633N",
   "service": "CJV3",
-  "etd": "12-16 (Wed)",
+  "etd": "12-17 (Thu)",
   "eta": "12-20 (Sun)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-19 (Sat)",
-  "prevTt": 3,
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 4,
   "changedFields": [
-   "eta",
+   "etd",
    "tt"
   ],
   "status": "changed"
@@ -288,16 +290,33 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "SITC YIHE",
+  "voyage": "2641N",
+  "service": "CJV6",
+  "etd": "12-21 (Mon)",
+  "eta": "12-29 (Tue)",
+  "tt": 8,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "HF LUCKY",
   "voyage": "2631N",
   "service": "CJV3",
-  "etd": "12-23 (Wed)",
+  "etd": "12-22 (Tue)",
   "eta": "12-26 (Sat)",
-  "tt": 3,
+  "tt": 4,
   "prevEtd": "12-23 (Wed)",
   "prevEta": "12-26 (Sat)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

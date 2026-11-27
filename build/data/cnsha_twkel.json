@@ -25,62 +25,58 @@
   "prevEta": "11-27 (Fri)",
   "prevTt": 1,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "CUL",
   "vessel": "CUL XIAMEN",
   "voyage": "2632E",
   "service": "HDT",
-  "etd": "12-03 (Thu)",
-  "eta": "12-05 (Sat)",
-  "tt": 2,
+  "etd": "12-05 (Sat)",
+  "eta": "12-06 (Sun)",
+  "tt": 1,
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-05 (Sat)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CUL",
   "vessel": "CUL XIAMEN",
   "voyage": "2633E",
   "service": "HDT",
-  "etd": "12-08 (Tue)",
-  "eta": "12-10 (Thu)",
+  "etd": "12-12 (Sat)",
+  "eta": "12-14 (Mon)",
   "tt": 2,
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-10 (Thu)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CUL",
   "vessel": "CUL XIAMEN",
   "voyage": "2634E",
   "service": "HDT",
-  "etd": "12-15 (Tue)",
-  "eta": "12-17 (Thu)",
+  "etd": "12-19 (Sat)",
+  "eta": "12-21 (Mon)",
   "tt": 2,
   "prevEtd": "12-15 (Tue)",
   "prevEta": "12-17 (Thu)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "CUL",
-  "vessel": "CUL XIAMEN",
-  "voyage": "2635E",
-  "service": "HDT",
-  "etd": "12-22 (Tue)",
-  "eta": "12-24 (Thu)",
-  "tt": 2,
-  "prevEtd": "12-22 (Tue)",
-  "prevEta": "12-24 (Thu)",
-  "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  }
 ]

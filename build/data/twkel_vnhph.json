@@ -80,23 +80,10 @@
   "status": "same"
  },
  {
-  "carrier": "CMA CGM",
-  "vessel": "ONE PEARL RIVER",
-  "voyage": "JVH060S19",
-  "etd": "12-01 (Tue)",
-  "eta": "12-05 (Sat)",
-  "tt": 4,
-  "rotation": "Keelung → Kaohsiung → Haiphong",
-  "prevEtd": "12-01 (Tue)",
-  "prevEta": "12-05 (Sat)",
-  "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "WHL",
   "vessel": "WAN HAI 105",
   "voyage": "S471",
+  "service": "Taiwan-Haiphong Service",
   "etd": "12-02 (Wed)",
   "eta": "12-04 (Fri)",
   "tt": 2,
@@ -108,9 +95,28 @@
   "status": "same"
  },
  {
+  "carrier": "CMA CGM",
+  "vessel": "ONE PEARL RIVER",
+  "voyage": "JVH060S19",
+  "etd": "12-03 (Thu)",
+  "eta": "12-06 (Sun)",
+  "tt": 3,
+  "rotation": "Keelung → Kaohsiung → Haiphong",
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 4,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "WHL",
   "vessel": "WAN HAI 105",
   "voyage": "S472",
+  "service": "Taiwan-Haiphong Service",
   "etd": "12-08 (Tue)",
   "eta": "12-10 (Thu)",
   "tt": 2,
@@ -125,6 +131,7 @@
   "carrier": "WHL",
   "vessel": "WAN HAI 105",
   "voyage": "S473",
+  "service": "Taiwan-Haiphong Service",
   "etd": "12-15 (Tue)",
   "eta": "12-17 (Thu)",
   "tt": 2,
@@ -140,33 +147,41 @@
   "vessel": "SWAN RIVER BRIDGE",
   "voyage": "JVH0A0S19",
   "etd": "12-16 (Wed)",
-  "eta": "12-19 (Sat)",
-  "tt": 3,
+  "eta": "12-22 (Tue)",
+  "tt": 6,
   "rotation": "Keelung → Kaohsiung → Haiphong",
   "prevEtd": "12-16 (Wed)",
   "prevEta": "12-19 (Sat)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "CMA CGM",
   "vessel": "ONE PEARL RIVER",
   "voyage": "JVH0C0S19",
-  "etd": "12-20 (Sun)",
-  "eta": "12-24 (Thu)",
-  "tt": 4,
+  "etd": "12-21 (Mon)",
+  "eta": "12-29 (Tue)",
+  "tt": 8,
   "rotation": "Keelung → Kaohsiung → Haiphong",
   "prevEtd": "12-20 (Sun)",
   "prevEta": "12-24 (Thu)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 105",
   "voyage": "S474",
+  "service": "Taiwan-Haiphong Service",
   "etd": "12-22 (Tue)",
   "eta": "12-24 (Thu)",
   "tt": 2,
@@ -181,14 +196,18 @@
   "carrier": "CMA CGM",
   "vessel": "AS SUSANNA",
   "voyage": "JVH0E0S19",
-  "etd": "12-24 (Thu)",
-  "eta": "12-28 (Mon)",
-  "tt": 4,
+  "etd": "12-25 (Fri)",
+  "eta": "01-04 (Mon)",
+  "tt": 10,
   "rotation": "Keelung → Kaohsiung → Haiphong",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 4,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

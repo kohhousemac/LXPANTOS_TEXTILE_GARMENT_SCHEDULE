@@ -257,7 +257,7 @@
   "prevEta": "12-09 (Wed)",
   "prevTt": 13,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "HEUNG-A / SINOKOR",
@@ -281,15 +281,18 @@
   "voyage": "0046N",
   "service": "KCI",
   "etd": "11-27 (Fri)",
-  "eta": "12-13 (Sun)",
-  "tt": 16,
+  "eta": "12-14 (Mon)",
+  "tt": 17,
   "closedCarriers": "NAMSUNG",
   "bookingClosed": true,
   "prevEtd": "11-27 (Fri)",
   "prevEta": "12-13 (Sun)",
   "prevTt": 16,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
@@ -381,14 +384,11 @@
   "tt": 17,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-22 (Tue)",
+  "prevEtd": "12-08 (Tue)",
+  "prevEta": "12-25 (Fri)",
   "prevTt": 17,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "NAMSUNG",
@@ -411,16 +411,19 @@
   "vessel": "KMTC SURABAYA",
   "voyage": "2609N",
   "service": "ANX",
-  "etd": "12-14 (Mon)",
-  "eta": "12-31 (Thu)",
+  "etd": "12-13 (Sun)",
+  "eta": "12-30 (Wed)",
   "tt": 17,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-14 (Mon)",
   "prevEta": "12-31 (Thu)",
   "prevTt": 17,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SINOKOR",
@@ -459,16 +462,19 @@
   "vessel": "TS NAGOYA",
   "voyage": "2635N",
   "service": "KCI",
-  "etd": "12-18 (Fri)",
-  "eta": "01-05 (Tue)",
+  "etd": "12-19 (Sat)",
+  "eta": "01-06 (Wed)",
   "tt": 18,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-18 (Fri)",
   "prevEta": "01-05 (Tue)",
   "prevTt": 18,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -491,15 +497,18 @@
   "vessel": "INTERASIA ENGAGE",
   "voyage": "0047N",
   "service": "KCI",
-  "etd": "12-23 (Wed)",
+  "etd": "12-25 (Fri)",
   "eta": "01-06 (Wed)",
-  "tt": 14,
+  "tt": 12,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-23 (Wed)",
   "prevEta": "01-06 (Wed)",
   "prevTt": 14,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

@@ -172,9 +172,9 @@
   "vessel": "SNL DA LIAN",
   "voyage": "2639S",
   "service": "CJV5(SNL)",
-  "etd": "11-23 (Mon)",
-  "eta": "11-27 (Fri)",
-  "tt": 4,
+  "etd": "11-24 (Tue)",
+  "eta": "11-29 (Sun)",
+  "tt": 5,
   "prevEtd": "11-23 (Mon)",
   "prevEta": "11-29 (Sun)",
   "prevTt": 6,
@@ -197,17 +197,37 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "GW GUANGDE",
+  "voyage": "2638S",
+  "service": "VTX7",
+  "etd": "11-28 (Sat)",
+  "eta": "12-02 (Wed)",
+  "tt": 4,
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 3,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "HF LUCKY",
   "voyage": "2628S",
   "service": "CJV3",
   "etd": "11-28 (Sat)",
-  "eta": "12-02 (Wed)",
-  "tt": 4,
+  "eta": "12-01 (Tue)",
+  "tt": 3,
   "prevEtd": "11-28 (Sat)",
   "prevEta": "12-02 (Wed)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -225,37 +245,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "GW GUANGDE",
-  "voyage": "2638S",
-  "service": "VTX7",
-  "etd": "11-29 (Sun)",
-  "eta": "12-02 (Wed)",
-  "tt": 3,
-  "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-02 (Wed)",
-  "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC YANTAI",
-  "voyage": "2632S",
-  "service": "CJV2",
-  "etd": "12-02 (Wed)",
-  "eta": "12-06 (Sun)",
-  "tt": 4,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC SHENZHEN",
   "voyage": "2628S",
   "service": "CJV3",
@@ -267,6 +256,23 @@
   "prevTt": 4,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YANTAI",
+  "voyage": "2632S",
+  "service": "CJV2",
+  "etd": "12-03 (Thu)",
+  "eta": "12-06 (Sun)",
+  "tt": 3,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-06 (Sun)",
+  "prevTt": 4,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -302,13 +308,16 @@
   "voyage": "2626S",
   "service": "CJV2",
   "etd": "12-07 (Mon)",
-  "eta": "12-11 (Fri)",
-  "tt": 4,
+  "eta": "12-10 (Thu)",
+  "tt": 3,
   "prevEtd": "12-07 (Mon)",
   "prevEta": "12-11 (Fri)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -318,14 +327,11 @@
   "etd": "12-08 (Tue)",
   "eta": "12-12 (Sat)",
   "tt": 4,
-  "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-08 (Tue)",
+  "prevEtd": "12-08 (Tue)",
+  "prevEta": "12-12 (Sat)",
   "prevTt": 4,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -347,13 +353,16 @@
   "voyage": "2632S",
   "service": "CJV3",
   "etd": "12-11 (Fri)",
-  "eta": "12-15 (Tue)",
-  "tt": 4,
+  "eta": "12-16 (Wed)",
+  "tt": 5,
   "prevEtd": "12-11 (Fri)",
   "prevEta": "12-15 (Tue)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -361,13 +370,33 @@
   "voyage": "2649S",
   "service": "CJV5(SNL)",
   "etd": "12-12 (Sat)",
-  "eta": "12-17 (Thu)",
-  "tt": 5,
+  "eta": "12-16 (Wed)",
+  "tt": 4,
   "prevEtd": "12-12 (Sat)",
   "prevEta": "12-17 (Thu)",
   "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC YIHE",
+  "voyage": "2640S",
+  "service": "CJV6",
+  "etd": "12-14 (Mon)",
+  "eta": "12-20 (Sun)",
+  "tt": 6,
+  "prevEtd": "12-15 (Tue)",
+  "prevEta": "12-20 (Sun)",
+  "prevTt": 5,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -380,20 +409,6 @@
   "prevEtd": "12-15 (Tue)",
   "prevEta": "12-18 (Fri)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SITC YIHE",
-  "voyage": "2640S",
-  "service": "CJV6",
-  "etd": "12-15 (Tue)",
-  "eta": "12-20 (Sun)",
-  "tt": 5,
-  "prevEtd": "12-15 (Tue)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 5,
   "changedFields": [],
   "status": "same"
  },
@@ -413,39 +428,11 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "HF LUCKY",
-  "voyage": "2630S",
-  "service": "CJV3",
-  "etd": "12-17 (Thu)",
-  "eta": "12-22 (Tue)",
-  "tt": 5,
-  "prevEtd": "12-17 (Thu)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "SITC",
   "vessel": "GW GUANGDE",
   "voyage": "2640S",
   "service": "VTX7",
-  "etd": "12-18 (Fri)",
-  "eta": "12-22 (Tue)",
-  "tt": 4,
-  "prevEtd": "12-18 (Fri)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "SITC",
-  "vessel": "SNL DA LIAN",
-  "voyage": "2643S",
-  "service": "CJV5(SNL)",
-  "etd": "12-22 (Tue)",
-  "eta": "12-26 (Sat)",
+  "etd": "12-17 (Thu)",
+  "eta": "12-21 (Mon)",
   "tt": 4,
   "prevEtd": "12-18 (Fri)",
   "prevEta": "12-22 (Tue)",
@@ -458,17 +445,51 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "HF LUCKY",
+  "voyage": "2630S",
+  "service": "CJV3",
+  "etd": "12-17 (Thu)",
+  "eta": "12-21 (Mon)",
+  "tt": 4,
+  "prevEtd": "12-17 (Thu)",
+  "prevEta": "12-22 (Tue)",
+  "prevTt": 5,
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SNL DA LIAN",
+  "voyage": "2643S",
+  "service": "CJV5(SNL)",
+  "etd": "12-22 (Tue)",
+  "eta": "12-26 (Sat)",
+  "tt": 4,
+  "prevEtd": "12-22 (Tue)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 4,
+  "changedFields": [],
+  "status": "same"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC YANTAI",
   "voyage": "2634S",
   "service": "CJV2",
   "etd": "12-23 (Wed)",
-  "eta": "12-26 (Sat)",
-  "tt": 3,
+  "eta": "12-27 (Sun)",
+  "tt": 4,
   "prevEtd": "12-23 (Wed)",
   "prevEta": "12-26 (Sat)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -478,6 +499,20 @@
   "etd": "12-24 (Thu)",
   "eta": "12-28 (Mon)",
   "tt": 4,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 4,
+  "changedFields": [],
+  "status": "same"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "HF FORTUNE",
+  "voyage": "2640S",
+  "service": "VTX7",
+  "etd": "12-25 (Fri)",
+  "eta": "12-27 (Sun)",
+  "tt": 2,
   "prevEtd": null,
   "prevEta": null,
   "prevTt": null,

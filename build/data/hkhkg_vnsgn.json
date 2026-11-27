@@ -108,7 +108,7 @@
   "prevEta": "11-28 (Sat)",
   "prevTt": 2,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "KMTC",
@@ -116,13 +116,13 @@
   "voyage": "2612S",
   "service": "KTS",
   "etd": "11-28 (Sat)",
-  "eta": "12-01 (Tue)",
-  "tt": 3,
-  "closedCarriers": "",
-  "bookingClosed": false,
+  "eta": "11-30 (Mon)",
+  "tt": 2,
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
   "prevEtd": "11-28 (Sat)",
-  "prevEta": "11-30 (Mon)",
-  "prevTt": 2,
+  "prevEta": "12-01 (Tue)",
+  "prevTt": 3,
   "changedFields": [
    "eta",
    "tt"
@@ -139,14 +139,11 @@
   "tt": 2,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "11-30 (Mon)",
+  "prevEtd": "11-29 (Sun)",
+  "prevEta": "12-01 (Tue)",
   "prevTt": 2,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -159,13 +156,10 @@
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-01 (Tue)",
-  "prevTt": 2,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-02 (Wed)",
+  "prevTt": 3,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -193,14 +187,11 @@
   "tt": 2,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-02 (Wed)",
+  "prevEtd": "12-01 (Tue)",
+  "prevEta": "12-03 (Thu)",
   "prevTt": 2,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -239,16 +230,19 @@
   "vessel": "CA MANILA",
   "voyage": "2617S",
   "service": "KTS",
-  "etd": "12-08 (Tue)",
-  "eta": "12-10 (Thu)",
+  "etd": "12-09 (Wed)",
+  "eta": "12-11 (Fri)",
   "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-08 (Tue)",
   "prevEta": "12-10 (Thu)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -260,14 +254,11 @@
   "tt": 3,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-11 (Fri)",
+  "prevEtd": "12-10 (Thu)",
+  "prevEta": "12-13 (Sun)",
   "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -295,14 +286,11 @@
   "tt": 3,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "prevEtd": "12-15 (Tue)",
-  "prevEta": "12-18 (Fri)",
+  "prevEtd": "12-16 (Wed)",
+  "prevEta": "12-19 (Sat)",
   "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -314,14 +302,11 @@
   "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-18 (Fri)",
+  "prevEtd": "12-19 (Sat)",
   "prevEta": "12-21 (Mon)",
-  "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevTt": 2,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -333,11 +318,11 @@
   "tt": 3,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-19 (Sat)",
+  "prevEta": "12-22 (Tue)",
+  "prevTt": 3,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  },
  {
   "carrier": "KMTC",
@@ -357,25 +342,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "SAWASDEE ATLANTIC",
-  "voyage": "2613S",
-  "service": "KTS",
-  "etd": "12-22 (Tue)",
-  "eta": "12-24 (Thu)",
-  "tt": 2,
-  "closedCarriers": "",
-  "bookingClosed": false,
-  "prevEtd": "12-21 (Mon)",
-  "prevEta": "12-24 (Thu)",
-  "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "KMTC",
   "vessel": "SKY ORION",
   "voyage": "2615S",
   "service": "VTS",
@@ -384,10 +350,10 @@
   "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 2,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

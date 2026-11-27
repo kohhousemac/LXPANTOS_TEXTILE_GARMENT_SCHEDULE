@@ -11,7 +11,7 @@
   "prevEta": "12-06 (Sun)",
   "prevTt": 10,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "WHL",
@@ -22,27 +22,27 @@
   "eta": "12-14 (Mon)",
   "tt": 10,
   "prevEtd": "12-04 (Fri)",
-  "prevEta": "12-15 (Tue)",
-  "prevTt": 11,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-14 (Mon)",
+  "prevTt": 10,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "WHL",
   "vessel": "WAN HAI 376",
   "voyage": "S038",
   "service": "Taiwan - PRC - Indonesia",
-  "etd": "12-17 (Thu)",
+  "etd": "12-18 (Fri)",
   "eta": "12-27 (Sun)",
-  "tt": 10,
+  "tt": 9,
   "prevEtd": "12-17 (Thu)",
   "prevEta": "12-27 (Sun)",
   "prevTt": 10,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
@@ -52,10 +52,10 @@
   "etd": "12-24 (Thu)",
   "eta": "01-05 (Tue)",
   "tt": 12,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "01-05 (Tue)",
+  "prevTt": 12,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

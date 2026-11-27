@@ -75,13 +75,16 @@
   "voyage": "2639N",
   "service": "CJV7",
   "etd": "12-07 (Mon)",
-  "eta": "12-10 (Thu)",
-  "tt": 3,
+  "eta": "12-11 (Fri)",
+  "tt": 4,
   "prevEtd": "12-07 (Mon)",
   "prevEta": "12-10 (Thu)",
   "prevTt": 3,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -116,14 +119,17 @@
   "vessel": "SITC DALIAN",
   "voyage": "2641N",
   "service": "CJV7",
-  "etd": "12-17 (Thu)",
+  "etd": "12-18 (Fri)",
   "eta": "12-21 (Mon)",
-  "tt": 4,
+  "tt": 3,
   "prevEtd": "12-17 (Thu)",
   "prevEta": "12-21 (Mon)",
   "prevTt": 4,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -131,13 +137,16 @@
   "voyage": "2641N",
   "service": "CJV6",
   "etd": "12-19 (Sat)",
-  "eta": "01-03 (Sun)",
-  "tt": 15,
+  "eta": "12-29 (Tue)",
+  "tt": 10,
   "prevEtd": "12-19 (Sat)",
   "prevEta": "01-03 (Sun)",
   "prevTt": 15,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSK",

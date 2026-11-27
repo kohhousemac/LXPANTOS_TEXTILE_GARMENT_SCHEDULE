@@ -94,34 +94,17 @@
   "vessel": "APL ESPLANADE",
   "voyage": "CBX0O0E19",
   "service": "CBX",
-  "etd": "12-03 (Thu)",
-  "eta": "01-16 (Sat)",
-  "tt": 44,
+  "etd": "12-04 (Fri)",
+  "eta": "01-15 (Fri)",
+  "tt": 42,
   "rotation": "Vung Tau → Shanghai → Busan → Norfolk → New York",
   "prevEtd": "12-03 (Thu)",
-  "prevEta": "01-15 (Fri)",
-  "prevTt": 43,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
- },
- {
-  "carrier": "MSC",
-  "vessel": "MSC VANCOUVER",
-  "voyage": "GU647W",
-  "service": "AMERICA SERVICE",
-  "etd": "12-04 (Fri)",
-  "eta": "01-01 (Fri)",
-  "tt": 28,
-  "rotation": "Vung Tau → Singapore → New York",
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-31 (Thu)",
-  "prevTt": 28,
+  "prevEta": "01-16 (Sat)",
+  "prevTt": 44,
   "changedFields": [
    "etd",
-   "eta"
+   "eta",
+   "tt"
   ],
   "status": "changed"
  },
@@ -135,13 +118,10 @@
   "tt": 46,
   "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
   "prevEtd": "12-08 (Tue)",
-  "prevEta": "01-22 (Fri)",
-  "prevTt": 45,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "01-23 (Sat)",
+  "prevTt": 46,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSC",
@@ -152,14 +132,11 @@
   "eta": "01-10 (Sun)",
   "tt": 28,
   "rotation": "Vung Tau → Singapore → New York",
-  "prevEtd": "12-15 (Tue)",
-  "prevEta": "01-12 (Tue)",
+  "prevEtd": "12-13 (Sun)",
+  "prevEta": "01-10 (Sun)",
   "prevTt": 28,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "CMA CGM",
@@ -170,14 +147,26 @@
   "eta": "01-30 (Sat)",
   "tt": 45,
   "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
-  "prevEtd": "12-15 (Tue)",
-  "prevEta": "01-29 (Fri)",
+  "prevEtd": "12-16 (Wed)",
+  "prevEta": "01-30 (Sat)",
   "prevTt": 45,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
+ },
+ {
+  "carrier": "CMA CGM",
+  "vessel": "APL SENTOSA",
+  "voyage": "CBX0U0E19",
+  "service": "CBX",
+  "etd": "12-22 (Tue)",
+  "eta": "02-03 (Wed)",
+  "tt": 43,
+  "rotation": "Vung Tau → Yantian → Shanghai → Busan → Norfolk → New York",
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  },
  {
   "carrier": "MSC",
@@ -203,14 +192,10 @@
   "eta": "01-19 (Tue)",
   "tt": 28,
   "rotation": "Vung Tau → Singapore → New York",
-  "prevEtd": "12-18 (Fri)",
-  "prevEta": "01-16 (Sat)",
-  "prevTt": 29,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": "12-22 (Tue)",
+  "prevEta": "01-19 (Tue)",
+  "prevTt": 28,
+  "changedFields": [],
+  "status": "same"
  }
 ]

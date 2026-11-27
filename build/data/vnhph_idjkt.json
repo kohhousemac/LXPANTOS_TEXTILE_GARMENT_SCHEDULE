@@ -47,8 +47,8 @@
   "voyage": "2654S",
   "service": "JTH",
   "etd": "11-25 (Wed)",
-  "eta": "12-05 (Sat)",
-  "tt": 10,
+  "eta": "12-06 (Sun)",
+  "tt": 11,
   "prevEtd": "11-25 (Wed)",
   "prevEta": "12-05 (Sat)",
   "prevTt": 10,
@@ -91,14 +91,11 @@
   "etd": "12-17 (Thu)",
   "eta": "12-25 (Fri)",
   "tt": 8,
-  "prevEtd": "12-16 (Wed)",
+  "prevEtd": "12-17 (Thu)",
   "prevEta": "12-25 (Fri)",
-  "prevTt": 9,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevTt": 8,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",

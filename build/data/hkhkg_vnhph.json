@@ -65,22 +65,6 @@
  },
  {
   "carrier": "KMTC",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2623S",
-  "service": "IHS1",
-  "etd": "12-02 (Wed)",
-  "eta": "12-03 (Thu)",
-  "tt": 1,
-  "closedCarriers": "KMTC",
-  "bookingClosed": true,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 1,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "KMTC",
   "vessel": "STAR EXPLORER",
   "voyage": "2623S",
   "service": "BIH",
@@ -90,11 +74,27 @@
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-04 (Fri)",
+  "prevEta": "12-05 (Sat)",
+  "prevTt": 2,
+  "changedFields": [],
+  "status": "same"
+ },
+ {
+  "carrier": "KMTC",
+  "vessel": "STAR FRONTIER",
+  "voyage": "2623S",
+  "service": "IHS1",
+  "etd": "12-03 (Thu)",
+  "eta": "12-04 (Fri)",
+  "tt": 1,
+  "closedCarriers": "KMTC",
+  "bookingClosed": true,
+  "prevEtd": "12-02 (Wed)",
+  "prevEta": "12-03 (Thu)",
   "prevTt": 1,
   "changedFields": [
-   "eta",
-   "tt"
+   "etd",
+   "eta"
   ],
   "status": "changed"
  },
@@ -119,16 +119,19 @@
   "vessel": "STAR FRONTIER",
   "voyage": "2624S",
   "service": "IHS1",
-  "etd": "12-15 (Tue)",
-  "eta": "12-17 (Thu)",
+  "etd": "12-16 (Wed)",
+  "eta": "12-18 (Fri)",
   "tt": 2,
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-15 (Tue)",
   "prevEta": "12-17 (Thu)",
   "prevTt": 2,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC",
@@ -141,13 +144,10 @@
   "closedCarriers": "KMTC",
   "bookingClosed": true,
   "prevEtd": "12-17 (Thu)",
-  "prevEta": "12-18 (Fri)",
-  "prevTt": 1,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-19 (Sat)",
+  "prevTt": 2,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "KMTC",

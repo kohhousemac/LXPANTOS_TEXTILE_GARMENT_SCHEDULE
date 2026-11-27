@@ -116,12 +116,12 @@
   "vessel": "EVER CHASTE",
   "voyage": "0562-098N",
   "service": "VMI",
-  "etd": "11-30 (Mon)",
+  "etd": "11-29 (Sun)",
   "eta": "12-07 (Mon)",
-  "tt": 7,
-  "prevEtd": "11-29 (Sun)",
+  "tt": 8,
+  "prevEtd": "11-30 (Mon)",
   "prevEta": "12-07 (Mon)",
-  "prevTt": 8,
+  "prevTt": 7,
   "changedFields": [
    "etd",
    "tt"
@@ -133,14 +133,17 @@
   "vessel": "EVER CONSIST",
   "voyage": "0563-072N",
   "service": "VMI",
-  "etd": "12-03 (Thu)",
+  "etd": "12-04 (Fri)",
   "eta": "12-10 (Thu)",
-  "tt": 7,
+  "tt": 6,
   "prevEtd": "12-03 (Thu)",
   "prevEta": "12-10 (Thu)",
   "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "MSK",
@@ -164,14 +167,11 @@
   "etd": "12-07 (Mon)",
   "eta": "12-16 (Wed)",
   "tt": 9,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-15 (Tue)",
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-16 (Wed)",
   "prevTt": 9,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "EMC",
@@ -181,14 +181,11 @@
   "etd": "12-09 (Wed)",
   "eta": "12-16 (Wed)",
   "tt": 7,
-  "prevEtd": "12-08 (Tue)",
+  "prevEtd": "12-09 (Wed)",
   "prevEta": "12-16 (Wed)",
-  "prevTt": 8,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevTt": 7,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSK",
@@ -268,10 +265,10 @@
   "etd": "12-24 (Thu)",
   "eta": "12-28 (Mon)",
   "tt": 4,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "12-28 (Mon)",
+  "prevTt": 4,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

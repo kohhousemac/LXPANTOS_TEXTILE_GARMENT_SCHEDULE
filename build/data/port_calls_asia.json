@@ -67,10 +67,10 @@
   "seq": 1,
   "port": "Ningbo",
   "role": "POL",
-  "eta": "2026-12-01 22:00",
-  "etd": "2026-12-03 12:00",
+  "eta": "2026-12-02 09:00",
+  "etd": "2026-12-03 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -80,10 +80,10 @@
   "seq": 2,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-12-04 18:00",
-  "etd": "2026-12-05 12:00",
+  "eta": "2026-12-05 05:00",
+  "etd": "2026-12-05 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -93,10 +93,10 @@
   "seq": 3,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-12-06 08:00",
-  "etd": "2026-12-06 18:00",
+  "eta": "2026-12-06 19:00",
+  "etd": "2026-12-07 05:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -106,10 +106,10 @@
   "seq": 4,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-08 00:00",
-  "etd": "2026-12-09 06:00",
+  "eta": "2026-12-08 11:00",
+  "etd": "2026-12-09 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -171,10 +171,10 @@
   "seq": 1,
   "port": "Ningbo",
   "role": "POL",
-  "eta": "2026-12-03 01:00",
-  "etd": "2026-12-04 15:00",
+  "eta": "2026-12-03 00:00",
+  "etd": "2026-12-04 14:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -184,10 +184,10 @@
   "seq": 2,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-12-08 18:00",
-  "etd": "2026-12-10 04:00",
+  "eta": "2026-12-08 17:00",
+  "etd": "2026-12-10 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_docau",
@@ -770,9 +770,9 @@
   "port": "Shanghai",
   "role": "POL",
   "eta": "2026-11-26 18:30",
-  "etd": "2026-11-27 12:00",
+  "etd": "2026-11-27 12:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krinc",
@@ -782,10 +782,10 @@
   "seq": 2,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-11-28 21:30",
-  "etd": "2026-11-29 10:30",
+  "eta": "2026-11-28 22:00",
+  "etd": "2026-11-29 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krinc",
@@ -847,10 +847,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-12-02 13:30",
-  "etd": "2026-12-03 07:30",
+  "eta": "2026-12-02 14:00",
+  "etd": "2026-12-03 08:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krinc",
@@ -860,10 +860,10 @@
   "seq": 2,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-04 17:00",
-  "etd": "2026-12-05 06:00",
+  "eta": "2026-12-04 17:30",
+  "etd": "2026-12-05 06:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krinc",
@@ -967,45 +967,6 @@
   "eta": "2026-12-10 12:30",
   "etd": "2026-12-11 01:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_krpus",
-  "carrier": "KMTC",
-  "vessel": "SKY VICTORIA",
-  "voyage": "2632E",
-  "seq": 1,
-  "port": "Shanghai",
-  "role": "POL",
-  "eta": "2026-11-04 23:00",
-  "etd": "2026-11-05 09:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_krpus",
-  "carrier": "KMTC",
-  "vessel": "SKY VICTORIA",
-  "voyage": "2632E",
-  "seq": 2,
-  "port": "Ningbo",
-  "role": "CALL",
-  "eta": "2026-11-06 00:01",
-  "etd": "2026-11-10 10:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_krpus",
-  "carrier": "KMTC",
-  "vessel": "SKY VICTORIA",
-  "voyage": "2632E",
-  "seq": 3,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-11-12 23:00",
-  "etd": "2026-11-13 18:00",
-  "status": "ACTUAL",
   "collectedAt": "2026-11-26 07:00"
  },
  {
@@ -1460,10 +1421,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-28 13:00",
-  "etd": "2026-11-29 06:00",
+  "eta": "2026-11-28 18:00",
+  "etd": "2026-11-29 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -1473,10 +1434,10 @@
   "seq": 2,
   "port": "Ningbo",
   "role": "CALL",
-  "eta": "2026-11-30 00:30",
-  "etd": "2026-11-30 17:30",
+  "eta": "2026-11-30 05:30",
+  "etd": "2026-11-30 22:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -1486,10 +1447,10 @@
   "seq": 3,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-02 07:30",
-  "etd": "2026-12-02 22:30",
+  "eta": "2026-12-02 11:00",
+  "etd": "2026-12-03 02:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -1681,10 +1642,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-12-05 13:30",
-  "etd": "2026-12-06 06:30",
+  "eta": "2026-12-05 17:00",
+  "etd": "2026-12-06 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -1694,10 +1655,10 @@
   "seq": 2,
   "port": "Ningbo",
   "role": "CALL",
-  "eta": "2026-12-06 18:00",
-  "etd": "2026-12-07 11:00",
+  "eta": "2026-12-07 04:30",
+  "etd": "2026-12-07 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -1707,10 +1668,10 @@
   "seq": 3,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-09 01:00",
-  "etd": "2026-12-09 16:00",
+  "eta": "2026-12-09 13:00",
+  "etd": "2026-12-10 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -2035,10 +1996,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-26 08:00",
-  "etd": "2026-11-28 13:00",
+  "eta": "2026-11-26 17:00",
+  "etd": "2026-11-28 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2048,10 +2009,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-02 00:00",
-  "etd": "2026-12-03 02:00",
+  "eta": "2026-12-01 15:00",
+  "etd": "2026-12-02 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2061,10 +2022,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-12-01 04:00",
-  "etd": "2026-12-02 22:00",
+  "eta": "2026-12-01 15:00",
+  "etd": "2026-12-03 09:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2074,10 +2035,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-06 09:00",
-  "etd": "2026-12-07 11:00",
+  "eta": "2026-12-06 20:00",
+  "etd": "2026-12-07 22:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2087,10 +2048,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-12-04 08:00",
-  "etd": "2026-12-06 02:00",
+  "eta": "2026-12-04 14:00",
+  "etd": "2026-12-06 08:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2100,10 +2061,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-09 16:00",
-  "etd": "2026-12-10 16:00",
+  "eta": "2026-12-09 22:00",
+  "etd": "2026-12-10 22:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2116,7 +2077,7 @@
   "eta": "2026-12-03 07:00",
   "etd": "2026-12-05 05:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2129,7 +2090,7 @@
   "eta": "2026-12-07 14:00",
   "etd": "2026-12-08 02:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2142,7 +2103,7 @@
   "eta": "2026-12-09 11:00",
   "etd": "2026-12-09 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -2155,7 +2116,7 @@
   "eta": "2026-12-10 20:00",
   "etd": "2026-12-12 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2525,7 +2486,7 @@
   "eta": "2026-11-22 06:00",
   "etd": "2026-11-23 23:30",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-22 06:00",
   "actualDep": "2026-11-23 23:30"
  },
@@ -2537,10 +2498,12 @@
   "seq": 2,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-11-25 11:00",
-  "etd": "2026-11-26 01:00",
+  "eta": "2026-11-25 18:00",
+  "etd": "2026-11-26 03:52",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-25 18:00",
+  "actualDep": "2026-11-26 03:52"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2550,10 +2513,10 @@
   "seq": 3,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-11-28 23:00",
-  "etd": "2026-11-30 09:00",
+  "eta": "2026-11-29 02:00",
+  "etd": "2026-11-30 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2564,10 +2527,11 @@
   "port": "Shanghai",
   "role": "POL",
   "eta": "2026-11-23 18:36",
-  "etd": "2026-11-27 04:00",
+  "etd": "2026-11-27 02:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-23 18:36"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-23 18:36",
+  "actualDep": "2026-11-27 02:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2577,10 +2541,10 @@
   "seq": 2,
   "port": "Wenzhou",
   "role": "CALL",
-  "eta": "2026-11-27 23:00",
-  "etd": "2026-11-28 15:00",
+  "eta": "2026-11-28 00:00",
+  "etd": "2026-11-28 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2590,10 +2554,10 @@
   "seq": 3,
   "port": "Laem Chabang",
   "role": "CALL",
-  "eta": "2026-12-03 20:00",
-  "etd": "2026-12-04 22:00",
+  "eta": "2026-12-03 21:00",
+  "etd": "2026-12-04 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2603,10 +2567,10 @@
   "seq": 4,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-12-06 13:00",
-  "etd": "2026-12-07 17:00",
+  "eta": "2026-12-06 14:00",
+  "etd": "2026-12-07 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2655,10 +2619,11 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-26 10:00",
-  "etd": "2026-11-28 12:00",
+  "eta": "2026-11-26 18:06",
+  "etd": "2026-11-29 01:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 18:06"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2668,10 +2633,10 @@
   "seq": 2,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-11-30 01:00",
-  "etd": "2026-11-30 19:00",
+  "eta": "2026-11-30 14:00",
+  "etd": "2026-12-01 08:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2681,10 +2646,10 @@
   "seq": 3,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-12-03 19:00",
-  "etd": "2026-12-05 05:00",
+  "eta": "2026-12-04 08:00",
+  "etd": "2026-12-05 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2694,10 +2659,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-30 18:00",
-  "etd": "2026-12-02 16:00",
+  "eta": "2026-11-30 17:00",
+  "etd": "2026-12-02 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2707,10 +2672,10 @@
   "seq": 2,
   "port": "Ningbo",
   "role": "CALL",
-  "eta": "2026-12-03 01:00",
-  "etd": "2026-12-04 15:00",
+  "eta": "2026-12-03 00:00",
+  "etd": "2026-12-04 14:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2720,10 +2685,10 @@
   "seq": 3,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-12-08 18:00",
-  "etd": "2026-12-10 04:00",
+  "eta": "2026-12-08 17:00",
+  "etd": "2026-12-10 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2736,7 +2701,7 @@
   "eta": "2026-12-01 15:00",
   "etd": "2026-12-03 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2749,7 +2714,7 @@
   "eta": "2026-12-04 23:00",
   "etd": "2026-12-05 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -2762,7 +2727,7 @@
   "eta": "2026-12-08 11:00",
   "etd": "2026-12-09 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -4014,71 +3979,6 @@
  },
  {
   "routeId": "cnshk_krinc",
-  "carrier": "KMTC",
-  "vessel": "POS YOKOHAMA",
-  "voyage": "1600N",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "2026-11-06 21:30",
-  "etd": "2026-11-07 05:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "KMTC",
-  "vessel": "POS YOKOHAMA",
-  "voyage": "1600N",
-  "seq": 2,
-  "port": "Shantou",
-  "role": "CALL",
-  "eta": "2026-11-08 09:48",
-  "etd": "2026-11-08 10:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "KMTC",
-  "vessel": "POS YOKOHAMA",
-  "voyage": "1600N",
-  "seq": 3,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-11-12 18:00",
-  "etd": "2026-11-13 15:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "KMTC / NAMSUNG",
-  "vessel": "KMTC POHANG",
-  "voyage": "2615N",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "2026-11-07 23:18",
-  "etd": "2026-11-08 16:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "KMTC / NAMSUNG",
-  "vessel": "KMTC POHANG",
-  "voyage": "2615N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-11-12 01:00",
-  "etd": "2026-11-12 18:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krinc",
   "carrier": "PANOCEAN",
   "vessel": "POS QINGDAO",
   "voyage": "1078N",
@@ -4489,10 +4389,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-11-28 20:30",
-  "etd": "2026-11-29 09:30",
+  "eta": "2026-11-28 21:00",
+  "etd": "2026-11-29 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4502,10 +4402,10 @@
   "seq": 2,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-11-30 08:30",
-  "etd": "2026-11-30 19:30",
+  "eta": "2026-11-30 09:00",
+  "etd": "2026-11-30 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4515,10 +4415,10 @@
   "seq": 3,
   "port": "Pyeongtaek",
   "role": "CALL",
-  "eta": "2026-12-03 11:30",
-  "etd": "2026-12-03 21:00",
+  "eta": "2026-12-03 12:00",
+  "etd": "2026-12-03 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4528,10 +4428,10 @@
   "seq": 4,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-03 23:30",
-  "etd": "2026-12-04 16:30",
+  "eta": "2026-12-04 00:00",
+  "etd": "2026-12-04 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4671,10 +4571,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-12-04 18:30",
-  "etd": "2026-12-06 20:30",
+  "eta": "2026-12-04 03:30",
+  "etd": "2026-12-06 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4684,10 +4584,10 @@
   "seq": 2,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-09 19:30",
-  "etd": "2026-12-10 12:30",
+  "eta": "2026-12-09 04:30",
+  "etd": "2026-12-09 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4895,7 +4795,7 @@
   "eta": "2026-12-02 10:00",
   "etd": "2026-12-04 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4908,7 +4808,7 @@
   "eta": "2026-12-08 01:30",
   "etd": "2026-12-09 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -4986,45 +4886,6 @@
   "eta": "2026-12-18 12:30",
   "etd": "2026-12-19 04:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "2026-11-04 11:00",
-  "etd": "2026-11-05 14:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "CALL",
-  "eta": "2026-11-09 00:00",
-  "etd": "2026-11-09 21:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "HEUNG-A / KMTC / SINOKOR",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 3,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-11-12 01:00",
-  "etd": "2026-11-13 16:00",
-  "status": "ACTUAL",
   "collectedAt": "2026-11-26 07:00"
  },
  {
@@ -5773,10 +5634,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-12-04 18:30",
-  "etd": "2026-12-06 20:30",
+  "eta": "2026-12-04 03:30",
+  "etd": "2026-12-06 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -5786,10 +5647,10 @@
   "seq": 2,
   "port": "Incheon",
   "role": "CALL",
-  "eta": "2026-12-09 19:30",
-  "etd": "2026-12-10 12:30",
+  "eta": "2026-12-09 04:30",
+  "etd": "2026-12-09 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -5799,10 +5660,10 @@
   "seq": 3,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-11 12:00",
-  "etd": "2026-12-13 03:00",
+  "eta": "2026-12-10 21:00",
+  "etd": "2026-12-12 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -6060,9 +5921,9 @@
   "port": "Shekou",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-06",
+  "etd": "2026-12-08",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -6073,10 +5934,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-08",
+  "eta": "2026-12-11",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -6208,36 +6069,6 @@
   "etd": "2026-12-19 15:00",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_vnsgn",
-  "carrier": "WHL",
-  "vessel": "WAN HAI 296",
-  "voyage": "S065",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "2026-11-09 15:48",
-  "etd": "2026-11-10 12:48",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-09 15:48",
-  "actualDep": "2026-11-10 12:48"
- },
- {
-  "routeId": "cnshk_vnsgn",
-  "carrier": "WHL",
-  "vessel": "WAN HAI 296",
-  "voyage": "S065",
-  "seq": 2,
-  "port": "Ho Chi Minh",
-  "role": "POD",
-  "eta": "2026-11-12 15:30",
-  "etd": "2026-11-13 18:24",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-12 15:30",
-  "actualDep": "2026-11-13 18:24"
  },
  {
   "routeId": "cnshk_vnsgn",
@@ -6570,9 +6401,9 @@
   "port": "Shekou",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-08",
+  "etd": "2026-12-14",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -6583,10 +6414,10 @@
   "seq": 2,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-12-10",
+  "eta": "2026-12-17",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -6787,34 +6618,6 @@
   "port": "Ho Chi Minh",
   "role": "POD",
   "eta": "2026-12-29",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_vnsgn",
-  "carrier": "WHL",
-  "vessel": "BUDGET VESSEL1",
-  "voyage": "S001",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-28",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_vnsgn",
-  "carrier": "WHL",
-  "vessel": "BUDGET VESSEL1",
-  "voyage": "S001",
-  "seq": 2,
-  "port": "Ho Chi Minh",
-  "role": "POD",
-  "eta": "2027-01-01",
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-11 08:11",
@@ -7209,10 +7012,10 @@
   "seq": 1,
   "port": "Hong Kong",
   "role": "POL",
-  "eta": "2026-12-07 23:30",
-  "etd": "2026-12-08 10:00",
+  "eta": "2026-12-08 00:00",
+  "etd": "2026-12-08 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "hkhkg_vnhph",
@@ -7225,7 +7028,7 @@
   "eta": "2026-12-09 18:00",
   "etd": "2026-12-10 20:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "hkhkg_vnsgn",
@@ -8094,9 +7897,9 @@
   "port": "Jakarta",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-27",
+  "etd": "2026-12-02",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -8107,10 +7910,10 @@
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-09",
+  "eta": "2026-12-15",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -8171,13 +7974,13 @@
   "vessel": "HAPPY LUCKY",
   "voyage": "2646N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-01 01:00"
+  "etd": "2026-12-04"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -8185,12 +7988,12 @@
   "vessel": "HAPPY LUCKY",
   "voyage": "2646N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-13 02:00",
+  "eta": "2026-12-16",
   "etd": ""
  },
  {
@@ -8364,68 +8167,68 @@
  },
  {
   "routeId": "idjkt_krinc",
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-24 14:18",
-  "etd": "2026-11-26 20:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "eta": "2026-11-24 14:00",
+  "etd": "2026-11-27 05:00",
+  "status": "ACTUAL",
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 2,
   "port": "Ho Chi Minh",
   "role": "CALL",
-  "eta": "2026-11-29 07:00",
-  "etd": "2026-12-01 07:00",
+  "eta": "2026-11-29 16:00",
+  "etd": "2026-11-30 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 3,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-12-03 14:30",
-  "etd": "2026-12-04 16:00",
+  "eta": "2026-12-02 23:30",
+  "etd": "2026-12-04 01:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 4,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-04 18:30",
-  "etd": "2026-12-06 20:30",
+  "eta": "2026-12-04 03:30",
+  "etd": "2026-12-06 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 5,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-09 19:30",
-  "etd": "2026-12-10 12:30",
+  "eta": "2026-12-09 04:30",
+  "etd": "2026-12-09 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -9027,81 +8830,81 @@
  },
  {
   "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-23 20:00",
-  "etd": "2026-11-26 15:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "eta": "2026-11-24 14:00",
+  "etd": "2026-11-27 05:00",
+  "status": "ACTUAL",
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 2,
   "port": "Ho Chi Minh",
   "role": "CALL",
-  "eta": "2026-11-28 01:30",
-  "etd": "2026-11-29 01:30",
+  "eta": "2026-11-29 16:00",
+  "etd": "2026-11-30 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 3,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-12-01 09:00",
-  "etd": "2026-12-01 22:30",
+  "eta": "2026-12-02 23:30",
+  "etd": "2026-12-04 01:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 4,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-02 01:00",
-  "etd": "2026-12-03 03:00",
+  "eta": "2026-12-04 03:30",
+  "etd": "2026-12-06 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 5,
   "port": "Incheon",
   "role": "CALL",
-  "eta": "2026-12-06 02:00",
-  "etd": "2026-12-06 19:00",
+  "eta": "2026-12-09 04:30",
+  "etd": "2026-12-09 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
+  "carrier": "KMTC",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 6,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-07 18:30",
-  "etd": "2026-12-08 09:30",
+  "eta": "2026-12-10 21:00",
+  "etd": "2026-12-12 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -15515,10 +15318,10 @@
   "seq": 1,
   "port": "Haiphong",
   "role": "POL",
-  "eta": "2026-12-02 00:00",
-  "etd": "2026-12-03 02:00",
+  "eta": "2026-12-01 15:00",
+  "etd": "2026-12-02 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -15528,10 +15331,10 @@
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-06 15:00",
-  "etd": "2026-12-08 11:00",
+  "eta": "2026-12-06 06:00",
+  "etd": "2026-12-08 02:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -15541,10 +15344,10 @@
   "seq": 1,
   "port": "Haiphong",
   "role": "POL",
-  "eta": "2026-12-06 09:00",
-  "etd": "2026-12-07 11:00",
+  "eta": "2026-12-06 20:00",
+  "etd": "2026-12-07 22:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -15554,10 +15357,10 @@
   "seq": 2,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-08 18:00",
-  "etd": "2026-12-09 12:00",
+  "eta": "2026-12-09 05:00",
+  "etd": "2026-12-09 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -15567,10 +15370,10 @@
   "seq": 3,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-11 21:00",
-  "etd": "2026-12-13 17:00",
+  "eta": "2026-12-12 08:00",
+  "etd": "2026-12-14 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_idjkt",
@@ -15738,45 +15541,6 @@
   "role": "POD",
   "eta": "2026-11-13 21:00",
   "etd": "2026-11-14 08:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vnhph_krinc",
-  "carrier": "KMTC",
-  "vessel": "KMTC POHANG",
-  "voyage": "2615N",
-  "seq": 1,
-  "port": "Haiphong",
-  "role": "POL",
-  "eta": "2026-11-04 13:30",
-  "etd": "2026-11-05 12:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vnhph_krinc",
-  "carrier": "KMTC",
-  "vessel": "KMTC POHANG",
-  "voyage": "2615N",
-  "seq": 2,
-  "port": "Shekou",
-  "role": "CALL",
-  "eta": "2026-11-07 23:18",
-  "etd": "2026-11-08 16:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vnhph_krinc",
-  "carrier": "KMTC",
-  "vessel": "KMTC POHANG",
-  "voyage": "2615N",
-  "seq": 3,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-11-12 01:00",
-  "etd": "2026-11-12 18:00",
   "status": "ACTUAL",
   "collectedAt": "2026-11-26 07:00"
  },
@@ -16852,9 +16616,9 @@
   "port": "Haiphong",
   "role": "POL",
   "eta": "2026-11-26 09:00",
-  "etd": "2026-11-27 10:00",
+  "etd": "2026-11-27 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_krinc",
@@ -16864,10 +16628,10 @@
   "seq": 2,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-11-28 20:30",
-  "etd": "2026-11-29 09:30",
+  "eta": "2026-11-28 21:00",
+  "etd": "2026-11-29 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_krinc",
@@ -16877,10 +16641,10 @@
   "seq": 3,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-11-30 08:30",
-  "etd": "2026-11-30 19:30",
+  "eta": "2026-11-30 09:00",
+  "etd": "2026-11-30 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_krinc",
@@ -16890,10 +16654,10 @@
   "seq": 4,
   "port": "Pyeongtaek",
   "role": "CALL",
-  "eta": "2026-12-03 11:30",
-  "etd": "2026-12-03 21:00",
+  "eta": "2026-12-03 12:00",
+  "etd": "2026-12-03 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_krinc",
@@ -16903,10 +16667,10 @@
   "seq": 5,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-03 23:30",
-  "etd": "2026-12-04 16:30",
+  "eta": "2026-12-04 00:00",
+  "etd": "2026-12-04 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_krinc",
@@ -17031,13 +16795,13 @@
   "vessel": "HEUNG-A YOUNG",
   "voyage": "2619N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Haiphong",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-30 18:30"
+  "etd": "2026-12-02"
  },
  {
   "routeId": "vnhph_krinc",
@@ -17045,12 +16809,12 @@
   "vessel": "HEUNG-A YOUNG",
   "voyage": "2619N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-08 07:00",
+  "eta": "2026-12-09",
   "etd": ""
  },
  {
@@ -17339,7 +17103,7 @@
   "eta": "",
   "etd": "2026-12-08",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -17350,10 +17114,10 @@
   "seq": 2,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-15",
+  "eta": "2026-12-16",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -18344,13 +18108,13 @@
   "vessel": "HEUNG-A YOUNG",
   "voyage": "2619N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Haiphong",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-30 18:30"
+  "etd": "2026-12-02"
  },
  {
   "routeId": "vnhph_krpus",
@@ -18358,12 +18122,12 @@
   "vessel": "HEUNG-A YOUNG",
   "voyage": "2619N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-06 09:00",
+  "eta": "2026-12-07",
   "etd": ""
  },
  {
@@ -18554,13 +18318,13 @@
   "vessel": "KOBE TRADER",
   "voyage": "2610N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Haiphong",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-04 03:00"
+  "etd": "2026-12-03"
  },
  {
   "routeId": "vnhph_krpus",
@@ -18568,12 +18332,12 @@
   "vessel": "KOBE TRADER",
   "voyage": "2610N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-16 09:00",
+  "eta": "2026-12-22",
   "etd": ""
  },
  {
@@ -18639,7 +18403,7 @@
   "eta": "",
   "etd": "2026-12-08",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -18650,10 +18414,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-13",
+  "eta": "2026-12-14",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -19922,7 +19686,7 @@
   "eta": "2026-11-16 18:00",
   "etd": "2026-11-17 02:06",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-16 18:00",
   "actualDep": "2026-11-17 02:06"
  },
@@ -19937,7 +19701,7 @@
   "eta": "2026-11-18 19:54",
   "etd": "2026-11-20 14:30",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 19:54",
   "actualDep": "2026-11-20 14:30"
  },
@@ -19950,10 +19714,11 @@
   "port": "Xiamen",
   "role": "CALL",
   "eta": "2026-11-25 19:36",
-  "etd": "2026-11-26 11:00",
+  "etd": "2026-11-26 04:48",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-25 19:36"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-25 19:36",
+  "actualDep": "2026-11-26 04:48"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -19963,10 +19728,10 @@
   "seq": 4,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-11-28 00:00",
+  "eta": "2026-11-28 03:00",
   "etd": "2026-11-30 19:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -20026,13 +19791,13 @@
   "vessel": "CHENNAI VOYAGER",
   "voyage": "2610N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-01 02:00"
+  "etd": "2026-12-03"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -20040,12 +19805,12 @@
   "vessel": "CHENNAI VOYAGER",
   "voyage": "2610N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-07 14:00",
+  "eta": "2026-12-10",
   "etd": ""
  },
  {
@@ -20056,10 +19821,10 @@
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
-  "eta": "2026-12-03 19:00",
-  "etd": "2026-12-05 05:00",
+  "eta": "2026-12-04 08:00",
+  "etd": "2026-12-05 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -20069,10 +19834,10 @@
   "seq": 2,
   "port": "Ningbo",
   "role": "CALL",
-  "eta": "2026-12-09 10:00",
-  "etd": "2026-12-11 00:00",
+  "eta": "2026-12-09 23:00",
+  "etd": "2026-12-11 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -20082,10 +19847,10 @@
   "seq": 3,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-11 09:00",
-  "etd": "2026-12-13 07:00",
+  "eta": "2026-12-11 22:00",
+  "etd": "2026-12-13 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -20128,34 +19893,6 @@
  },
  {
   "routeId": "vnsgn_idjkt",
-  "carrier": "GSL",
-  "vessel": "NATTHA BHUM",
-  "voyage": "NB3/42/068S",
-  "seq": 1,
-  "port": "Ho Chi Minh",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-11-06",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-06 12:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnsgn_idjkt",
-  "carrier": "GSL",
-  "vessel": "NATTHA BHUM",
-  "voyage": "NB3/42/068S",
-  "seq": 2,
-  "port": "Jakarta",
-  "role": "POD",
-  "eta": "2026-11-11",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnsgn_idjkt",
   "carrier": "SITC",
   "vessel": "SITC YUHE",
   "voyage": "2630S",
@@ -20165,7 +19902,7 @@
   "eta": "2026-11-13 08:24",
   "etd": "2026-11-14 11:04",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-13 08:24",
   "actualDep": "2026-11-14 11:04"
  },
@@ -20180,7 +19917,7 @@
   "eta": "2026-11-18 22:54",
   "etd": "2026-11-19 16:37",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 22:54",
   "actualDep": "2026-11-19 16:37"
  },
@@ -20271,9 +20008,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-19",
+  "etd": "2026-11-27",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -20284,10 +20021,10 @@
   "seq": 2,
   "port": "Jakarta",
   "role": "POD",
-  "eta": "2026-11-24",
+  "eta": "2026-12-03",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -20390,9 +20127,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-02",
+  "etd": "2026-12-11",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -20403,10 +20140,10 @@
   "seq": 2,
   "port": "Jakarta",
   "role": "POD",
-  "eta": "2026-12-08",
+  "eta": "2026-12-17",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-06 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -20459,7 +20196,7 @@
   "eta": "2026-12-04 00:00",
   "etd": "2026-12-05 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_idjkt",
@@ -20472,7 +20209,7 @@
   "eta": "2026-12-07 21:00",
   "etd": "2026-12-09 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_idsrg",
@@ -20732,32 +20469,6 @@
   "eta": "2026-12-06",
   "etd": "2026-12-07",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vnsgn_krinc",
-  "carrier": "KMTC",
-  "vessel": "POS SINGAPORE",
-  "voyage": "1042N",
-  "seq": 1,
-  "port": "Ho Chi Minh",
-  "role": "POL",
-  "eta": "2026-11-05 18:20",
-  "etd": "2026-11-06 02:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vnsgn_krinc",
-  "carrier": "KMTC",
-  "vessel": "POS SINGAPORE",
-  "voyage": "1042N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-11-12 07:00",
-  "etd": "2026-11-13 03:00",
-  "status": "ACTUAL",
   "collectedAt": "2026-11-26 07:00"
  },
  {
@@ -21342,55 +21053,55 @@
  },
  {
   "routeId": "vnsgn_krinc",
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
-  "eta": "2026-11-29 07:00",
-  "etd": "2026-12-01 07:00",
+  "eta": "2026-11-29 16:00",
+  "etd": "2026-11-30 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 2,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-12-03 14:30",
-  "etd": "2026-12-04 16:00",
+  "eta": "2026-12-02 23:30",
+  "etd": "2026-12-04 01:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-04 18:30",
-  "etd": "2026-12-06 20:30",
+  "eta": "2026-12-04 03:30",
+  "etd": "2026-12-06 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
-  "carrier": "KMTC",
+  "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 4,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-09 19:30",
-  "etd": "2026-12-10 12:30",
+  "eta": "2026-12-09 04:30",
+  "etd": "2026-12-09 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -21546,7 +21257,7 @@
   "eta": "2026-11-27 17:00",
   "etd": "2026-11-28 14:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -21559,7 +21270,7 @@
   "eta": "2026-12-01 08:00",
   "etd": "2026-12-02 07:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -21572,7 +21283,7 @@
   "eta": "2026-12-02 10:00",
   "etd": "2026-12-04 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -21585,7 +21296,7 @@
   "eta": "2026-12-08 01:30",
   "etd": "2026-12-09 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -22659,7 +22370,7 @@
   "eta": "2026-11-23 06:00",
   "etd": "2026-11-23 21:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 06:00",
   "actualDep": "2026-11-23 21:00"
  },
@@ -22674,7 +22385,7 @@
   "eta": "2026-11-29 23:00",
   "etd": "2026-11-30 13:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22687,7 +22398,7 @@
   "eta": "2026-11-30 21:00",
   "etd": "2026-12-01 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22791,7 +22502,9 @@
   "eta": "2026-11-25 05:00",
   "etd": "2026-11-26 00:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-25 05:00",
+  "actualDep": "2026-11-26 03:20"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22801,10 +22514,10 @@
   "seq": 2,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-11-28 12:00",
-  "etd": "2026-11-29 19:00",
+  "eta": "2026-11-29 06:00",
+  "etd": "2026-11-30 22:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22814,10 +22527,10 @@
   "seq": 3,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-02 20:00",
-  "etd": "2026-12-03 15:00",
+  "eta": "2026-12-03 23:00",
+  "etd": "2026-12-04 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22880,9 +22593,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "2026-11-26 22:00",
-  "etd": "2026-11-28 00:00",
+  "etd": "2026-11-28 12:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22895,7 +22608,7 @@
   "eta": "",
   "etd": "",
   "status": "SKIP",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22905,10 +22618,10 @@
   "seq": 3,
   "port": "Laem Chabang",
   "role": "CALL",
-  "eta": "2026-11-29 16:00",
-  "etd": "2026-11-30 03:00",
+  "eta": "2026-11-30 04:00",
+  "etd": "2026-11-30 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22918,10 +22631,10 @@
   "seq": 4,
   "port": "Kwangyang",
   "role": "CALL",
-  "eta": "2026-12-06 11:30",
-  "etd": "2026-12-06 23:00",
+  "eta": "2026-12-06 23:30",
+  "etd": "2026-12-07 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -22931,10 +22644,10 @@
   "seq": 5,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-07 06:00",
-  "etd": "2026-12-08 00:00",
+  "eta": "2026-12-07 18:00",
+  "etd": "2026-12-08 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -23042,46 +22755,46 @@
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
+  "carrier": "NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "2026-11-29 07:00",
-  "etd": "2026-12-01 07:00",
+  "etd": "2026-11-30 07:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
+  "carrier": "NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 2,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-12-03 14:30",
-  "etd": "2026-12-04 16:00",
+  "eta": "2026-12-02 14:30",
+  "etd": "2026-12-03 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
+  "carrier": "NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-04 18:30",
-  "etd": "2026-12-06 20:30",
+  "eta": "2026-12-03 18:30",
+  "etd": "2026-12-05 20:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
+  "carrier": "NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 4,
@@ -23090,11 +22803,11 @@
   "eta": "2026-12-09 19:30",
   "etd": "2026-12-10 12:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
+  "carrier": "NAMSUNG",
   "vessel": "KMTC XIAMEN",
   "voyage": "2609N",
   "seq": 5,
@@ -23103,11 +22816,11 @@
   "eta": "2026-12-11 12:00",
   "etd": "2026-12-13 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "NAMSUNG",
   "vessel": "STARSHIP URSA",
   "voyage": "2615N",
   "seq": 1,
@@ -23116,33 +22829,33 @@
   "eta": "2026-12-01 22:00",
   "etd": "2026-12-02 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "NAMSUNG",
   "vessel": "STARSHIP URSA",
   "voyage": "2615N",
   "seq": 2,
   "port": "Kwangyang",
   "role": "CALL",
-  "eta": "2026-12-07 18:00",
-  "etd": "2026-12-08 07:30",
+  "eta": "2026-12-08 04:00",
+  "etd": "2026-12-08 17:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC / NAMSUNG",
+  "carrier": "NAMSUNG",
   "vessel": "STARSHIP URSA",
   "voyage": "2615N",
   "seq": 3,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-08 15:30",
-  "etd": "2026-12-09 12:30",
+  "eta": "2026-12-09 01:30",
+  "etd": "2026-12-09 22:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -24556,48 +24269,6 @@
  },
  {
   "routeId": "vnsgn_usnyc",
-  "carrier": "MSC",
-  "vessel": "MSC VANCOUVER",
-  "voyage": "GU647W",
-  "seq": 1,
-  "port": "Vung Tau",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-01",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-10",
-  "source": "p2p"
- },
- {
-  "routeId": "vnsgn_usnyc",
-  "carrier": "MSC",
-  "vessel": "MSC VANCOUVER",
-  "voyage": "GU647W",
-  "seq": 2,
-  "port": "Singapore",
-  "role": "CALL",
-  "eta": "2026-12-03",
-  "etd": "2026-12-05",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-10",
-  "source": "p2p"
- },
- {
-  "routeId": "vnsgn_usnyc",
-  "carrier": "MSC",
-  "vessel": "MSC VANCOUVER",
-  "voyage": "GU647W",
-  "seq": 3,
-  "port": "New York",
-  "role": "POD",
-  "eta": "2026-12-31",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-10",
-  "source": "p2p"
- },
- {
-  "routeId": "vnsgn_usnyc",
   "carrier": "CMA CGM",
   "vessel": "APL ESPLANADE",
   "voyage": "CBX0O0E19",
@@ -24670,9 +24341,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-08",
+  "etd": "2026-12-13",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -24683,10 +24354,10 @@
   "seq": 2,
   "port": "New York",
   "role": "POD",
-  "eta": "2027-01-07",
+  "eta": "2027-01-10",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-11 08:11",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -24792,84 +24463,6 @@
   "etd": "2026-11-27 08:00",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-17 07:17"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "2026-10-27 08:06",
-  "etd": "2026-10-29 16:02",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 2,
-  "port": "Ho Chi Minh",
-  "role": "CALL",
-  "eta": "2026-11-01 07:00",
-  "etd": "2026-11-01 23:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 3,
-  "port": "Hong Kong",
-  "role": "CALL",
-  "eta": "",
-  "etd": "",
-  "status": "SKIP",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 4,
-  "port": "Shekou",
-  "role": "CALL",
-  "eta": "2026-11-04 11:00",
-  "etd": "2026-11-05 14:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 5,
-  "port": "Incheon",
-  "role": "CALL",
-  "eta": "2026-11-09 00:00",
-  "etd": "2026-11-09 21:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 6,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-11-12 01:00",
-  "etd": "2026-11-13 16:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -25279,13 +24872,13 @@
   "vessel": "SWAN RIVER BRIDGE",
   "voyage": "JVH0A0S19",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Keelung",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-10"
+  "etd": "2026-12-16"
  },
  {
   "routeId": "twkel_vnhph",
@@ -25293,12 +24886,12 @@
   "vessel": "SWAN RIVER BRIDGE",
   "voyage": "JVH0A0S19",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-15",
+  "eta": "2026-12-22",
   "etd": ""
  },
  {
@@ -25335,13 +24928,13 @@
   "vessel": "SURABAYA VOYAGER",
   "voyage": "2615N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-05"
+  "etd": "2026-12-09"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -25349,12 +24942,12 @@
   "vessel": "SURABAYA VOYAGER",
   "voyage": "2615N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-10",
+  "eta": "2026-12-15",
   "etd": ""
  },
  {
@@ -25363,13 +24956,13 @@
   "vessel": "HAPPY LUCKY",
   "voyage": "2646N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-08"
+  "etd": "2026-12-11"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -25377,12 +24970,12 @@
   "vessel": "HAPPY LUCKY",
   "voyage": "2646N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-13",
+  "eta": "2026-12-16",
   "etd": ""
  },
  {
@@ -25391,13 +24984,13 @@
   "vessel": "MSC ELOANE",
   "voyage": "FV646N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-26"
+  "etd": "2026-11-30"
  },
  {
   "routeId": "vnsgn_uslgb",
@@ -25405,12 +24998,12 @@
   "vessel": "MSC ELOANE",
   "voyage": "FV646N",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-12 07:20",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Long Beach",
   "role": "POD",
-  "eta": "2026-12-18",
+  "eta": "2026-12-21",
   "etd": ""
  },
  {
@@ -25582,9 +25175,9 @@
   "port": "Shekou",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-24",
+  "etd": "2026-11-27",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 07:40",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25595,10 +25188,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-11-28",
+  "eta": "2026-11-30",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 07:40",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25610,9 +25203,9 @@
   "port": "Haiphong",
   "role": "POL",
   "eta": "",
-  "etd": "2026-11-28",
+  "etd": "2026-11-29",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 07:40",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25626,7 +25219,7 @@
   "eta": "2026-12-30",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 07:40",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25722,9 +25315,9 @@
   "port": "Jakarta",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-05 07:00",
+  "etd": "2026-12-05",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 12:30",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25735,10 +25328,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-14 14:00",
+  "eta": "2026-12-14",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 12:30",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25750,9 +25343,9 @@
   "port": "Jakarta",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-12 07:00",
+  "etd": "2026-12-12",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 12:30",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -25763,10 +25356,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-21 14:00",
+  "eta": "2026-12-21",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-16 12:30",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -26206,71 +25799,6 @@
   "collectedAt": "2026-11-26 07:00"
  },
  {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2609S",
-  "seq": 1,
-  "port": "Busan",
-  "role": "POL",
-  "eta": "2026-10-26 14:14",
-  "etd": "2026-10-27 21:46",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2609S",
-  "seq": 2,
-  "port": "Kwangyang",
-  "role": "CALL",
-  "eta": "2026-10-28 06:24",
-  "etd": "2026-10-29 00:06",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2609S",
-  "seq": 3,
-  "port": "Shanghai",
-  "role": "CALL",
-  "eta": "2026-10-30 16:28",
-  "etd": "2026-10-31 02:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2609S",
-  "seq": 4,
-  "port": "Ningbo",
-  "role": "CALL",
-  "eta": "2026-11-03 16:45",
-  "etd": "2026-11-04 02:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHANGHAI",
-  "voyage": "2609S",
-  "seq": 5,
-  "port": "Jakarta",
-  "role": "POD",
-  "eta": "2026-11-12 14:30",
-  "etd": "2026-11-13 20:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
   "routeId": "cnsha_krinc",
   "carrier": "KMTC",
   "vessel": "SKY RAINBOW",
@@ -26565,13 +26093,13 @@
   "carrier": "GSL",
   "vessel": "SAN PEDRO",
   "voyage": "UFM/120",
-  "collectedAt": "2026-11-18 17:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-17 07:30",
+  "etd": "2026-12-17",
   "status": "ESTIMATED"
  },
  {
@@ -26579,12 +26107,12 @@
   "carrier": "GSL",
   "vessel": "SAN PEDRO",
   "voyage": "UFM/120",
-  "collectedAt": "2026-11-18 17:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Jakarta",
   "role": "POD",
-  "eta": "2026-12-23 09:00",
+  "eta": "2026-12-23",
   "etd": "",
   "status": "ESTIMATED"
  },
@@ -26593,13 +26121,13 @@
   "carrier": "SINOKOR",
   "vessel": "KMTC XIAMEN",
   "voyage": "2610S",
-  "collectedAt": "2026-11-18 17:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-17 16:30",
+  "etd": "2026-12-17",
   "status": "ESTIMATED"
  },
  {
@@ -26607,12 +26135,12 @@
   "carrier": "SINOKOR",
   "vessel": "KMTC XIAMEN",
   "voyage": "2610S",
-  "collectedAt": "2026-11-18 17:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p",
   "seq": 2,
   "port": "Jakarta",
   "role": "POD",
-  "eta": "2026-12-23 11:30",
+  "eta": "2026-12-23",
   "etd": "",
   "status": "ESTIMATED"
  },
@@ -27075,7 +26603,7 @@
   "eta": "2026-12-10 00:30",
   "etd": "2026-12-10 16:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -27088,7 +26616,7 @@
   "eta": "2026-12-12 12:00",
   "etd": "2026-12-13 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -27101,7 +26629,7 @@
   "eta": "2026-12-20 10:00",
   "etd": "2026-12-21 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -27114,7 +26642,7 @@
   "eta": "2026-12-21 09:00",
   "etd": "2026-12-21 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_uslax",
@@ -28038,10 +27566,11 @@
   "seq": 1,
   "port": "Ningbo",
   "role": "POL",
-  "eta": "2026-11-25 21:00",
-  "etd": "2026-11-28 01:00",
+  "eta": "2026-11-26 11:18",
+  "etd": "2026-11-27 16:45",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 11:18"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -28051,10 +27580,10 @@
   "seq": 2,
   "port": "Sihanoukville",
   "role": "CALL",
-  "eta": "2026-12-02 23:00",
-  "etd": "2026-12-04 09:00",
+  "eta": "2026-12-02 14:00",
+  "etd": "2026-12-04 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -28064,10 +27593,10 @@
   "seq": 3,
   "port": "Laem Chabang",
   "role": "CALL",
-  "eta": "2026-12-05 01:00",
-  "etd": "2026-12-05 21:00",
+  "eta": "2026-12-04 16:00",
+  "etd": "2026-12-05 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -28077,10 +27606,10 @@
   "seq": 4,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-12-07 12:00",
-  "etd": "2026-12-08 12:00",
+  "eta": "2026-12-07 03:00",
+  "etd": "2026-12-08 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krinc",
@@ -30330,9 +29859,9 @@
   "port": "Shanghai",
   "role": "POL",
   "eta": "2026-11-22 19:00",
-  "etd": "2026-11-26 23:59",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "etd": "2026-11-27 00:00",
+  "status": "ACTUAL",
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -30342,10 +29871,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-11-28 07:30",
-  "etd": "2026-11-29 08:30",
+  "eta": "2026-11-28 07:00",
+  "etd": "2026-11-30 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_krpus",
@@ -31389,7 +30918,7 @@
   "eta": "2026-11-27 23:00",
   "etd": "2026-11-29 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -31402,7 +30931,7 @@
   "eta": "2026-12-01 00:00",
   "etd": "2026-12-02 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -31415,7 +30944,7 @@
   "eta": "2026-12-08 08:30",
   "etd": "2026-12-09 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -31428,7 +30957,7 @@
   "eta": "2026-12-12 19:30",
   "etd": "2026-12-13 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -31441,7 +30970,7 @@
   "eta": "2026-12-13 16:00",
   "etd": "2026-12-14 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -31452,9 +30981,9 @@
   "port": "Busan",
   "role": "POD",
   "eta": "2026-12-14 19:30",
-  "etd": "2026-12-17 20:30",
+  "etd": "2026-12-16 17:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -31956,79 +31485,6 @@
  },
  {
   "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 1,
-  "port": "Ho Chi Minh",
-  "role": "POL",
-  "eta": "2026-11-01 07:00",
-  "etd": "2026-11-01 23:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-01 03:00",
-  "actualDep": "2026-11-01 23:20"
- },
- {
-  "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 2,
-  "port": "Hong Kong",
-  "role": "CALL",
-  "eta": "",
-  "etd": "",
-  "status": "SKIP",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 3,
-  "port": "Shekou",
-  "role": "CALL",
-  "eta": "2026-11-04 11:00",
-  "etd": "2026-11-05 14:30",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-04 12:00",
-  "actualDep": "2026-11-05 14:39"
- },
- {
-  "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 4,
-  "port": "Incheon",
-  "role": "CALL",
-  "eta": "2026-11-09 00:00",
-  "etd": "2026-11-09 21:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-08 23:00",
-  "actualDep": "2026-11-09 22:00"
- },
- {
-  "routeId": "vnsgn_krpus",
-  "carrier": "KMTC",
-  "vessel": "YEOSU VOYAGER",
-  "voyage": "2608N",
-  "seq": 5,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-11-12 01:00",
-  "etd": "2026-11-13 16:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-12 05:36",
-  "actualDep": "2026-11-13 15:42"
- },
- {
-  "routeId": "vnsgn_krpus",
   "carrier": "NAMSUNG",
   "vessel": "KMTC OSAKA",
   "voyage": "2611N",
@@ -32302,9 +31758,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "2026-11-19 06:00",
-  "etd": "2026-11-20 13:05",
+  "etd": "2026-11-20 14:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-19 06:00",
   "actualDep": "2026-11-20 13:05"
  },
@@ -32319,7 +31775,7 @@
   "eta": "",
   "etd": "",
   "status": "SKIP",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -32331,8 +31787,9 @@
   "role": "POD",
   "eta": "2026-11-26 14:30",
   "etd": "2026-11-26 19:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "status": "ACTUAL",
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 06:42"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -32343,9 +31800,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "2026-11-20 02:00",
-  "etd": "2026-11-21 10:30",
+  "etd": "2026-11-21 12:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-20 02:00",
   "actualDep": "2026-11-21 10:30"
  },
@@ -32357,10 +31814,10 @@
   "seq": 2,
   "port": "Laem Chabang",
   "role": "CALL",
-  "eta": "2026-11-23 08:08",
-  "etd": "2026-11-24 00:03",
+  "eta": "2026-11-23 13:00",
+  "etd": "2026-11-24 00:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 08:08",
   "actualDep": "2026-11-24 00:03"
  },
@@ -32375,7 +31832,7 @@
   "eta": "",
   "etd": "",
   "status": "SKIP",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -32388,7 +31845,7 @@
   "eta": "2026-12-01 04:00",
   "etd": "2026-12-01 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -32401,7 +31858,7 @@
   "eta": "2026-12-02 00:30",
   "etd": "2026-12-02 09:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_krpus",
@@ -33904,10 +33361,10 @@
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-20 14:30",
-  "etd": "2026-11-22 17:35",
+  "eta": "2026-11-20 04:00",
+  "etd": "2026-11-22 20:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-20 14:30",
   "actualDep": "2026-11-22 17:35"
  },
@@ -33919,10 +33376,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-24 04:45",
+  "eta": "2026-11-23 20:00",
   "etd": "2026-11-25 00:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 04:45"
  },
  {
@@ -33936,7 +33393,7 @@
   "eta": "2026-11-30 03:30",
   "etd": "2026-12-01 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -33949,7 +33406,7 @@
   "eta": "2026-12-04 12:00",
   "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -33962,7 +33419,7 @@
   "eta": "2026-12-06 16:00",
   "etd": "2026-12-07 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -33975,7 +33432,7 @@
   "eta": "2026-12-08 07:00",
   "etd": "2026-12-09 02:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -33988,7 +33445,7 @@
   "eta": "2026-12-10 17:00",
   "etd": "2026-12-11 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -33998,10 +33455,10 @@
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-21 10:43",
+  "eta": "2026-11-19 11:00",
   "etd": "2026-11-22 11:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 10:43",
   "actualDep": "2026-11-22 11:00"
  },
@@ -34013,10 +33470,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-23 15:22",
-  "etd": "2026-11-24 10:00",
+  "eta": "2026-11-23 14:00",
+  "etd": "2026-11-24 14:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 15:22"
  },
  {
@@ -34027,10 +33484,10 @@
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-11-29 05:00",
-  "etd": "2026-11-30 00:30",
+  "eta": "2026-11-30 21:00",
+  "etd": "2026-12-01 16:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34040,10 +33497,10 @@
   "seq": 4,
   "port": "Busan",
   "role": "CALL",
-  "eta": "2026-12-03 13:00",
-  "etd": "2026-12-04 00:00",
+  "eta": "2026-12-05 05:00",
+  "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34053,10 +33510,10 @@
   "seq": 5,
   "port": "Incheon",
   "role": "CALL",
-  "eta": "2026-12-05 04:00",
-  "etd": "2026-12-06 00:00",
+  "eta": "2026-12-06 20:00",
+  "etd": "2026-12-07 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34066,10 +33523,10 @@
   "seq": 6,
   "port": "Qingdao",
   "role": "CALL",
-  "eta": "2026-12-07 00:00",
-  "etd": "2026-12-07 18:00",
+  "eta": "2026-12-08 16:00",
+  "etd": "2026-12-09 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34079,10 +33536,10 @@
   "seq": 7,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-08 18:00",
-  "etd": "2026-12-09 14:00",
+  "eta": "2026-12-10 10:00",
+  "etd": "2026-12-11 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34197,9 +33654,9 @@
   "port": "Jakarta",
   "role": "POL",
   "eta": "2026-11-25 19:30",
-  "etd": "2026-11-27 08:30",
+  "etd": "2026-11-27 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34209,10 +33666,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-28 18:30",
-  "etd": "2026-11-29 14:30",
+  "eta": "2026-11-29 06:00",
+  "etd": "2026-11-29 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34222,10 +33679,10 @@
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-05 01:30",
-  "etd": "2026-12-05 14:30",
+  "eta": "2026-12-05 10:00",
+  "etd": "2026-12-06 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34235,10 +33692,10 @@
   "seq": 4,
   "port": "Busan",
   "role": "CALL",
-  "eta": "2026-12-07 07:30",
-  "etd": "2026-12-08 02:30",
+  "eta": "2026-12-08 16:00",
+  "etd": "2026-12-09 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34248,10 +33705,10 @@
   "seq": 5,
   "port": "Incheon",
   "role": "CALL",
-  "eta": "2026-12-09 02:30",
-  "etd": "2026-12-09 21:30",
+  "eta": "2026-12-10 11:00",
+  "etd": "2026-12-11 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34261,10 +33718,10 @@
   "seq": 6,
   "port": "Qingdao",
   "role": "CALL",
-  "eta": "2026-12-10 17:30",
-  "etd": "2026-12-11 12:30",
+  "eta": "2026-12-12 02:00",
+  "etd": "2026-12-12 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34274,10 +33731,10 @@
   "seq": 7,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-13 03:30",
-  "etd": "2026-12-14 01:30",
+  "eta": "2026-12-14 12:00",
+  "etd": "2026-12-15 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_cnsha",
@@ -34735,10 +34192,10 @@
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-20 14:30",
-  "etd": "2026-11-22 17:35",
+  "eta": "2026-11-20 04:00",
+  "etd": "2026-11-22 20:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-20 14:30",
   "actualDep": "2026-11-22 17:35"
  },
@@ -34750,10 +34207,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-24 04:45",
+  "eta": "2026-11-23 20:00",
   "etd": "2026-11-25 00:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 04:45"
  },
  {
@@ -34767,7 +34224,7 @@
   "eta": "2026-11-30 03:30",
   "etd": "2026-12-01 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34780,7 +34237,7 @@
   "eta": "2026-12-04 12:00",
   "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34793,7 +34250,7 @@
   "eta": "2026-12-06 16:00",
   "etd": "2026-12-07 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34803,10 +34260,10 @@
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-21 10:43",
+  "eta": "2026-11-19 11:00",
   "etd": "2026-11-22 11:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 10:43",
   "actualDep": "2026-11-22 11:00"
  },
@@ -34818,10 +34275,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-23 15:22",
-  "etd": "2026-11-24 10:00",
+  "eta": "2026-11-23 14:00",
+  "etd": "2026-11-24 14:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 15:22"
  },
  {
@@ -34832,10 +34289,10 @@
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-11-29 05:00",
-  "etd": "2026-11-30 00:30",
+  "eta": "2026-11-30 21:00",
+  "etd": "2026-12-01 16:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34845,10 +34302,10 @@
   "seq": 4,
   "port": "Busan",
   "role": "CALL",
-  "eta": "2026-12-03 13:00",
-  "etd": "2026-12-04 00:00",
+  "eta": "2026-12-05 05:00",
+  "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34858,10 +34315,10 @@
   "seq": 5,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-05 04:00",
-  "etd": "2026-12-06 00:00",
+  "eta": "2026-12-06 20:00",
+  "etd": "2026-12-07 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34872,9 +34329,9 @@
   "port": "Jakarta",
   "role": "POL",
   "eta": "2026-11-25 19:30",
-  "etd": "2026-11-27 08:30",
+  "etd": "2026-11-27 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34884,10 +34341,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-28 18:30",
-  "etd": "2026-11-29 14:30",
+  "eta": "2026-11-29 06:00",
+  "etd": "2026-11-29 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34897,10 +34354,10 @@
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-05 01:30",
-  "etd": "2026-12-05 14:30",
+  "eta": "2026-12-05 10:00",
+  "etd": "2026-12-06 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34910,10 +34367,10 @@
   "seq": 4,
   "port": "Busan",
   "role": "CALL",
-  "eta": "2026-12-07 07:30",
-  "etd": "2026-12-08 02:30",
+  "eta": "2026-12-08 16:00",
+  "etd": "2026-12-09 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -34923,10 +34380,10 @@
   "seq": 5,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-09 02:30",
-  "etd": "2026-12-09 21:30",
+  "eta": "2026-12-10 11:00",
+  "etd": "2026-12-11 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krinc",
@@ -35148,10 +34605,10 @@
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-20 14:30",
-  "etd": "2026-11-22 17:35",
+  "eta": "2026-11-20 04:00",
+  "etd": "2026-11-22 20:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-20 14:30",
   "actualDep": "2026-11-22 17:35"
  },
@@ -35163,10 +34620,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-24 04:45",
+  "eta": "2026-11-23 20:00",
   "etd": "2026-11-25 00:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 04:45"
  },
  {
@@ -35180,7 +34637,7 @@
   "eta": "2026-11-30 03:30",
   "etd": "2026-12-01 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35193,7 +34650,7 @@
   "eta": "2026-12-04 12:00",
   "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35203,10 +34660,10 @@
   "seq": 1,
   "port": "Jakarta",
   "role": "POL",
-  "eta": "2026-11-21 10:43",
+  "eta": "2026-11-19 11:00",
   "etd": "2026-11-22 11:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 10:43",
   "actualDep": "2026-11-22 11:00"
  },
@@ -35218,10 +34675,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-23 15:22",
-  "etd": "2026-11-24 10:00",
+  "eta": "2026-11-23 14:00",
+  "etd": "2026-11-24 14:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 15:22"
  },
  {
@@ -35232,10 +34689,10 @@
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-11-29 05:00",
-  "etd": "2026-11-30 00:30",
+  "eta": "2026-11-30 21:00",
+  "etd": "2026-12-01 16:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35245,10 +34702,10 @@
   "seq": 4,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-03 13:00",
-  "etd": "2026-12-04 00:00",
+  "eta": "2026-12-05 05:00",
+  "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35259,9 +34716,9 @@
   "port": "Jakarta",
   "role": "POL",
   "eta": "2026-11-25 19:30",
-  "etd": "2026-11-27 08:30",
+  "etd": "2026-11-27 18:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35271,10 +34728,10 @@
   "seq": 2,
   "port": "Surabaya",
   "role": "CALL",
-  "eta": "2026-11-28 18:30",
-  "etd": "2026-11-29 14:30",
+  "eta": "2026-11-29 06:00",
+  "etd": "2026-11-29 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35284,10 +34741,10 @@
   "seq": 3,
   "port": "Shekou",
   "role": "CALL",
-  "eta": "2026-12-05 01:30",
-  "etd": "2026-12-05 14:30",
+  "eta": "2026-12-05 10:00",
+  "etd": "2026-12-06 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35297,10 +34754,10 @@
   "seq": 4,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-07 07:30",
-  "etd": "2026-12-08 02:30",
+  "eta": "2026-12-08 16:00",
+  "etd": "2026-12-09 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_krpus",
@@ -35525,10 +34982,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-11-29 05:00",
-  "etd": "2026-11-30 00:30",
+  "eta": "2026-11-30 21:00",
+  "etd": "2026-12-01 16:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35538,10 +34995,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "CALL",
-  "eta": "2026-12-03 13:00",
-  "etd": "2026-12-04 00:00",
+  "eta": "2026-12-05 05:00",
+  "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35551,10 +35008,10 @@
   "seq": 3,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-05 04:00",
-  "etd": "2026-12-06 00:00",
+  "eta": "2026-12-06 20:00",
+  "etd": "2026-12-07 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35567,7 +35024,7 @@
   "eta": "2026-11-30 03:30",
   "etd": "2026-12-01 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35580,7 +35037,7 @@
   "eta": "2026-12-04 12:00",
   "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35593,7 +35050,7 @@
   "eta": "2026-12-06 16:00",
   "etd": "2026-12-07 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35603,10 +35060,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-12-05 01:30",
-  "etd": "2026-12-05 14:30",
+  "eta": "2026-12-05 10:00",
+  "etd": "2026-12-06 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35616,10 +35073,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "CALL",
-  "eta": "2026-12-07 07:30",
-  "etd": "2026-12-08 02:30",
+  "eta": "2026-12-08 16:00",
+  "etd": "2026-12-09 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35629,10 +35086,10 @@
   "seq": 3,
   "port": "Incheon",
   "role": "POD",
-  "eta": "2026-12-09 02:30",
-  "etd": "2026-12-09 21:30",
+  "eta": "2026-12-10 11:00",
+  "etd": "2026-12-11 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krinc",
@@ -35972,10 +35429,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-11-29 05:00",
-  "etd": "2026-11-30 00:30",
+  "eta": "2026-11-30 21:00",
+  "etd": "2026-12-01 16:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -35985,10 +35442,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-03 13:00",
-  "etd": "2026-12-04 00:00",
+  "eta": "2026-12-05 05:00",
+  "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36001,7 +35458,7 @@
   "eta": "2026-11-30 03:30",
   "etd": "2026-12-01 10:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36014,7 +35471,7 @@
   "eta": "2026-12-04 12:00",
   "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36027,7 +35484,7 @@
   "eta": "2026-12-02 10:00",
   "etd": "2026-12-04 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36040,7 +35497,7 @@
   "eta": "2026-12-08 01:30",
   "etd": "2026-12-09 05:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36053,7 +35510,7 @@
   "eta": "2026-12-09 10:00",
   "etd": "2026-12-10 04:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36066,7 +35523,7 @@
   "eta": "2026-12-11 05:00",
   "etd": "2026-12-11 21:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36079,7 +35536,7 @@
   "eta": "2026-12-12 10:00",
   "etd": "2026-12-13 07:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36092,7 +35549,7 @@
   "eta": "2026-12-13 14:00",
   "etd": "2026-12-15 09:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36102,10 +35559,10 @@
   "seq": 1,
   "port": "Shekou",
   "role": "POL",
-  "eta": "2026-12-05 01:30",
-  "etd": "2026-12-05 14:30",
+  "eta": "2026-12-05 10:00",
+  "etd": "2026-12-06 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36115,36 +35572,10 @@
   "seq": 2,
   "port": "Busan",
   "role": "POD",
-  "eta": "2026-12-07 07:30",
-  "etd": "2026-12-08 02:30",
+  "eta": "2026-12-08 16:00",
+  "etd": "2026-12-09 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "2026-12-10 10:00",
-  "etd": "2026-12-10 22:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-14 17:00",
-  "etd": "2026-12-15 21:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnshk_krpus",
@@ -36248,7 +35679,7 @@
   "eta": "2026-11-19 19:00",
   "etd": "2026-11-20 18:48",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-19 19:00",
   "actualDep": "2026-11-20 18:48"
  },
@@ -36263,7 +35694,7 @@
   "eta": "2026-11-23 13:48",
   "etd": "2026-11-24 16:12",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 13:48",
   "actualDep": "2026-11-24 16:12"
  },
@@ -36275,10 +35706,10 @@
   "seq": 1,
   "port": "Ho Chi Minh",
   "role": "POL",
-  "eta": "2026-11-26 18:00",
-  "etd": "2026-11-27 15:00",
+  "eta": "2026-11-26 21:30",
+  "etd": "2026-11-27 22:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_idjkt",
@@ -36291,7 +35722,7 @@
   "eta": "2026-11-30 19:00",
   "etd": "2026-12-02 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_idjkt",
@@ -36450,7 +35881,7 @@
   "eta": "2026-11-19 06:24",
   "etd": "2026-11-19 18:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-19 06:24",
   "actualDep": "2026-11-19 18:18"
  },
@@ -36465,7 +35896,7 @@
   "eta": "2026-11-23 18:48",
   "etd": "2026-11-24 07:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 18:48",
   "actualDep": "2026-11-24 07:00"
  },
@@ -36480,7 +35911,7 @@
   "eta": "2026-11-27 17:00",
   "etd": "2026-11-28 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_idjkt",
@@ -36493,7 +35924,7 @@
   "eta": "2026-11-24 17:12",
   "etd": "2026-11-25 18:24",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 17:12",
   "actualDep": "2026-11-25 18:24"
  },
@@ -36506,9 +35937,10 @@
   "port": "Qinzhou",
   "role": "CALL",
   "eta": "2026-11-26 06:00",
-  "etd": "2026-11-27 08:00",
+  "etd": "2026-11-27 22:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 06:00"
  },
  {
   "routeId": "vnhph_idjkt",
@@ -36518,10 +35950,10 @@
   "seq": 3,
   "port": "Laem Chabang",
   "role": "CALL",
-  "eta": "2026-11-30 21:00",
-  "etd": "2026-12-01 12:00",
+  "eta": "2026-12-01 11:00",
+  "etd": "2026-12-02 02:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_idjkt",
@@ -36531,10 +35963,10 @@
   "seq": 4,
   "port": "Kuantan",
   "role": "CALL",
-  "eta": "2026-12-03 06:00",
-  "etd": "2026-12-03 20:00",
+  "eta": "2026-12-03 19:00",
+  "etd": "2026-12-04 09:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_idjkt",
@@ -36544,10 +35976,10 @@
   "seq": 5,
   "port": "Jakarta",
   "role": "POD",
-  "eta": "2026-12-05 15:00",
-  "etd": "2026-12-06 15:00",
+  "eta": "2026-12-06 03:00",
+  "etd": "2026-12-07 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36620,7 +36052,7 @@
   "eta": "2026-11-14 09:18",
   "etd": "2026-11-15 11:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-14 09:18",
   "actualDep": "2026-11-15 11:18"
  },
@@ -36635,7 +36067,7 @@
   "eta": "2026-11-18 23:06",
   "etd": "2026-11-19 15:36",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 23:06",
   "actualDep": "2026-11-19 15:36"
  },
@@ -36650,7 +36082,7 @@
   "eta": "2026-11-23 18:00",
   "etd": "2026-11-24 09:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 18:00",
   "actualDep": "2026-11-24 09:00"
  },
@@ -36665,7 +36097,7 @@
   "eta": "2026-11-24 21:30",
   "etd": "2026-11-25 09:36",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 21:30",
   "actualDep": "2026-11-25 09:36"
  },
@@ -36680,7 +36112,7 @@
   "eta": "2026-11-21 03:00",
   "etd": "2026-11-22 02:06",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 03:00",
   "actualDep": "2026-11-22 02:06"
  },
@@ -36692,10 +36124,12 @@
   "seq": 2,
   "port": "Laem Chabang",
   "role": "CALL",
-  "eta": "2026-11-26 21:00",
-  "etd": "2026-11-27 13:00",
+  "eta": "2026-11-25 21:00",
+  "etd": "2026-11-26 11:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-25 21:00",
+  "actualDep": "2026-11-26 11:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36705,10 +36139,10 @@
   "seq": 3,
   "port": "Qinzhou",
   "role": "CALL",
-  "eta": "2026-11-30 03:00",
+  "eta": "2026-11-30 05:00",
   "etd": "2026-11-30 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36721,7 +36155,7 @@
   "eta": "2026-12-01 08:00",
   "etd": "2026-12-02 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36734,7 +36168,7 @@
   "eta": "2026-11-27 17:00",
   "etd": "2026-11-28 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36747,7 +36181,7 @@
   "eta": "2026-12-02 04:00",
   "etd": "2026-12-03 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36760,7 +36194,7 @@
   "eta": "2026-12-06 18:00",
   "etd": "2026-12-07 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -36773,7 +36207,7 @@
   "eta": "2026-12-08 08:00",
   "etd": "2026-12-09 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "idjkt_vnhph",
@@ -37040,7 +36474,7 @@
   "eta": "2026-11-16 20:00",
   "etd": "2026-11-17 16:42",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-16 20:00",
   "actualDep": "2026-11-17 16:42"
  },
@@ -37055,7 +36489,7 @@
   "eta": "2026-11-21 12:00",
   "etd": "2026-11-22 08:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 12:00",
   "actualDep": "2026-11-22 08:18"
  },
@@ -37070,7 +36504,7 @@
   "eta": "2026-11-19 10:00",
   "etd": "2026-11-20 21:12",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-19 10:00",
   "actualDep": "2026-11-20 21:12"
  },
@@ -37085,7 +36519,7 @@
   "eta": "2026-11-24 17:12",
   "etd": "2026-11-25 18:24",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 17:12",
   "actualDep": "2026-11-25 18:24"
  },
@@ -37100,7 +36534,7 @@
   "eta": "2026-11-18 12:48",
   "etd": "2026-11-20 00:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 12:48",
   "actualDep": "2026-11-20 00:18"
  },
@@ -37115,7 +36549,7 @@
   "eta": "2026-11-21 20:12",
   "etd": "2026-11-22 08:54",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 20:12",
   "actualDep": "2026-11-22 08:54"
  },
@@ -37130,7 +36564,7 @@
   "eta": "2026-11-24 13:24",
   "etd": "2026-11-25 17:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 13:24",
   "actualDep": "2026-11-25 17:18"
  },
@@ -37145,7 +36579,7 @@
   "eta": "2026-11-19 18:00",
   "etd": "2026-11-23 14:54",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-19 18:00",
   "actualDep": "2026-11-23 14:54"
  },
@@ -37160,8 +36594,9 @@
   "eta": "2026-11-25 22:48",
   "etd": "2026-11-26 12:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-25 22:48"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-25 22:48",
+  "actualDep": "2026-11-26 12:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37171,10 +36606,10 @@
   "seq": 3,
   "port": "Da Nang",
   "role": "CALL",
-  "eta": "2026-11-27 21:00",
-  "etd": "2026-11-28 09:00",
+  "eta": "2026-11-28 08:00",
+  "etd": "2026-11-28 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37184,10 +36619,10 @@
   "seq": 4,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-11-29 06:00",
-  "etd": "2026-11-30 10:00",
+  "eta": "2026-11-29 17:00",
+  "etd": "2026-11-30 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37200,7 +36635,7 @@
   "eta": "2026-11-21 12:00",
   "etd": "2026-11-24 22:20",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 12:00",
   "actualDep": "2026-11-24 22:20"
  },
@@ -37215,7 +36650,7 @@
   "eta": "2026-11-27 10:00",
   "etd": "2026-11-28 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37228,7 +36663,7 @@
   "eta": "2026-11-29 07:00",
   "etd": "2026-11-30 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37238,10 +36673,11 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-25 18:00",
-  "etd": "2026-11-27 00:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "eta": "2026-11-26 06:00",
+  "etd": "2026-11-27 02:00",
+  "status": "ACTUAL",
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 06:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37254,7 +36690,7 @@
   "eta": "2026-11-30 13:00",
   "etd": "2026-12-01 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37264,10 +36700,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-26 23:00",
-  "etd": "2026-11-29 06:00",
+  "eta": "2026-11-27 07:00",
+  "etd": "2026-11-28 11:30",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37277,10 +36713,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-02 20:00",
-  "etd": "2026-12-03 20:00",
+  "eta": "2026-12-02 01:00",
+  "etd": "2026-12-03 01:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37290,10 +36726,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-11-26 15:00",
-  "etd": "2026-11-28 11:00",
+  "eta": "2026-11-26 07:00",
+  "etd": "2026-11-28 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37303,10 +36739,10 @@
   "seq": 2,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-11-30 22:00",
-  "etd": "2026-12-01 12:00",
+  "eta": "2026-11-30 14:00",
+  "etd": "2026-12-01 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37316,10 +36752,10 @@
   "seq": 3,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-02 19:00",
-  "etd": "2026-12-04 05:00",
+  "eta": "2026-12-02 11:00",
+  "etd": "2026-12-03 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37329,10 +36765,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-12-01 15:00",
-  "etd": "2026-12-03 11:00",
+  "eta": "2026-12-01 13:00",
+  "etd": "2026-12-03 09:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37342,10 +36778,10 @@
   "seq": 2,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-12-05 00:00",
-  "etd": "2026-12-05 18:00",
+  "eta": "2026-12-04 22:00",
+  "etd": "2026-12-05 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37355,10 +36791,10 @@
   "seq": 3,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-07 17:00",
-  "etd": "2026-12-08 19:00",
+  "eta": "2026-12-07 15:00",
+  "etd": "2026-12-08 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37368,10 +36804,10 @@
   "seq": 1,
   "port": "Shanghai",
   "role": "POL",
-  "eta": "2026-12-05 21:00",
-  "etd": "2026-12-07 15:00",
+  "eta": "2026-12-05 17:00",
+  "etd": "2026-12-07 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37381,10 +36817,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-11 02:00",
-  "etd": "2026-12-12 04:00",
+  "eta": "2026-12-10 22:00",
+  "etd": "2026-12-12 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -37684,7 +37120,7 @@
   "eta": "2026-11-14 16:12",
   "etd": "2026-11-16 15:48",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-14 16:12",
   "actualDep": "2026-11-16 15:48"
  },
@@ -37699,7 +37135,7 @@
   "eta": "2026-11-21 09:00",
   "etd": "2026-11-21 17:30",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 09:00",
   "actualDep": "2026-11-21 17:30"
  },
@@ -37714,7 +37150,7 @@
   "eta": "2026-11-22 23:00",
   "etd": "2026-11-24 21:24",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-22 23:00",
   "actualDep": "2026-11-24 21:24"
  },
@@ -37726,10 +37162,10 @@
   "seq": 2,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-11-29 09:00",
+  "eta": "2026-11-29 20:00",
   "etd": "2026-11-30 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnsgn",
@@ -37846,7 +37282,7 @@
   "eta": "2026-11-16 21:54",
   "etd": "2026-11-17 22:48",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-16 21:54",
   "actualDep": "2026-11-17 22:48"
  },
@@ -37861,7 +37297,7 @@
   "eta": "2026-11-22 20:48",
   "etd": "2026-11-25 06:36",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-22 20:48",
   "actualDep": "2026-11-25 06:36"
  },
@@ -37874,9 +37310,9 @@
   "port": "Shanghai",
   "role": "POD",
   "eta": "2026-11-25 21:18",
-  "etd": "2026-11-27 07:00",
+  "etd": "2026-11-27 03:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-25 21:18"
  },
  {
@@ -37890,7 +37326,7 @@
   "eta": "2026-11-20 09:30",
   "etd": "2026-11-21 09:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-20 09:30",
   "actualDep": "2026-11-21 09:00"
  },
@@ -37902,10 +37338,11 @@
   "seq": 2,
   "port": "Ningbo",
   "role": "CALL",
-  "eta": "2026-11-25 14:00",
-  "etd": "2026-11-29 06:00",
+  "eta": "2026-11-26 05:30",
+  "etd": "2026-11-28 02:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 05:30"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -37915,10 +37352,10 @@
   "seq": 3,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-11-29 15:00",
-  "etd": "2026-12-01 13:00",
+  "eta": "2026-11-28 11:00",
+  "etd": "2026-12-01 08:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnsgn_cnsha",
@@ -38135,7 +37572,7 @@
   "eta": "2026-11-18 03:24",
   "etd": "2026-11-19 02:12",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 03:24",
   "actualDep": "2026-11-19 02:12"
  },
@@ -38150,7 +37587,7 @@
   "eta": "2026-11-23 05:48",
   "etd": "2026-11-24 02:54",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 05:48",
   "actualDep": "2026-11-24 02:54"
  },
@@ -38221,7 +37658,7 @@
   "eta": "2026-11-21 12:00",
   "etd": "2026-11-22 08:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 12:00",
   "actualDep": "2026-11-22 08:18"
  },
@@ -38236,7 +37673,7 @@
   "eta": "2026-11-24 18:06",
   "etd": "2026-11-25 03:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 18:06",
   "actualDep": "2026-11-25 03:00"
  },
@@ -38248,10 +37685,11 @@
   "seq": 3,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-11-26 16:00",
-  "etd": "2026-11-28 18:00",
+  "eta": "2026-11-26 21:54",
+  "etd": "2026-11-28 14:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 21:54"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38264,7 +37702,7 @@
   "eta": "2026-11-24 13:24",
   "etd": "2026-11-25 17:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 13:24",
   "actualDep": "2026-11-25 17:18"
  },
@@ -38276,10 +37714,10 @@
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-11-29 06:00",
-  "etd": "2026-12-01 02:00",
+  "eta": "2026-11-29 20:30",
+  "etd": "2026-12-01 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38292,7 +37730,7 @@
   "eta": "2026-11-29 07:00",
   "etd": "2026-11-30 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38305,7 +37743,7 @@
   "eta": "2026-12-02 02:00",
   "etd": "2026-12-02 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38318,7 +37756,7 @@
   "eta": "2026-12-04 18:00",
   "etd": "2026-12-06 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38331,7 +37769,7 @@
   "eta": "2026-12-06 16:00",
   "etd": "2026-12-08 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38344,7 +37782,7 @@
   "eta": "2026-11-30 13:00",
   "etd": "2026-12-01 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38357,7 +37795,7 @@
   "eta": "2026-12-02 22:00",
   "etd": "2026-12-03 16:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38370,7 +37808,7 @@
   "eta": "2026-12-06 01:00",
   "etd": "2026-12-07 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vnhph_cnsha",
@@ -38560,7 +37998,7 @@
   "eta": "2026-11-18 17:04",
   "etd": "2026-11-19 16:52",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 17:04",
   "actualDep": "2026-11-19 16:52"
  },
@@ -38575,7 +38013,7 @@
   "eta": "2026-11-21 04:00",
   "etd": "2026-11-21 14:12",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 04:00",
   "actualDep": "2026-11-21 14:12"
  },
@@ -38590,7 +38028,7 @@
   "eta": "2026-11-22 14:54",
   "etd": "2026-11-23 02:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-22 14:54",
   "actualDep": "2026-11-23 02:18"
  },
@@ -38605,7 +38043,7 @@
   "eta": "2026-11-24 10:30",
   "etd": "2026-11-25 10:24",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 10:30",
   "actualDep": "2026-11-25 10:24"
  },
@@ -38620,7 +38058,7 @@
   "eta": "2026-11-18 19:31",
   "etd": "2026-11-20 19:31",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 19:31",
   "actualDep": "2026-11-20 19:31"
  },
@@ -38635,7 +38073,7 @@
   "eta": "2026-11-21 12:00",
   "etd": "2026-11-24 22:20",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 12:00",
   "actualDep": "2026-11-24 22:20"
  },
@@ -38650,7 +38088,7 @@
   "eta": "2026-11-27 10:00",
   "etd": "2026-11-28 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38663,7 +38101,7 @@
   "eta": "2026-11-29 07:00",
   "etd": "2026-11-30 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38676,7 +38114,7 @@
   "eta": "2026-11-23 14:18",
   "etd": "2026-11-24 14:02",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 14:18",
   "actualDep": "2026-11-24 14:02"
  },
@@ -38689,10 +38127,11 @@
   "port": "Xiamen",
   "role": "CALL",
   "eta": "2026-11-26 02:24",
-  "etd": "2026-11-26 15:00",
+  "etd": "2026-11-26 10:30",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
-  "actualArr": "2026-11-26 02:24"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 02:24",
+  "actualDep": "2026-11-26 10:30"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38702,10 +38141,10 @@
   "seq": 3,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-11-27 04:00",
-  "etd": "2026-11-27 14:00",
+  "eta": "2026-11-27 09:00",
+  "etd": "2026-11-27 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38715,10 +38154,10 @@
   "seq": 4,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-11-28 20:00",
-  "etd": "2026-11-30 02:00",
+  "eta": "2026-11-28 23:00",
+  "etd": "2026-11-30 05:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38728,10 +38167,12 @@
   "seq": 1,
   "port": "Ningbo",
   "role": "POL",
-  "eta": "2026-11-24 17:00",
-  "etd": "2026-11-26 05:00",
+  "eta": "2026-11-24 23:54",
+  "etd": "2026-11-25 21:50",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-24 23:54",
+  "actualDep": "2026-11-25 21:50"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38741,10 +38182,10 @@
   "seq": 2,
   "port": "Shanghai",
   "role": "CALL",
-  "eta": "2026-11-26 15:00",
-  "etd": "2026-11-28 11:00",
+  "eta": "2026-11-26 07:00",
+  "etd": "2026-11-28 03:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38754,10 +38195,10 @@
   "seq": 3,
   "port": "Hong Kong",
   "role": "CALL",
-  "eta": "2026-11-30 22:00",
-  "etd": "2026-12-01 12:00",
+  "eta": "2026-11-30 14:00",
+  "etd": "2026-12-01 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38767,10 +38208,10 @@
   "seq": 4,
   "port": "Haiphong",
   "role": "POD",
-  "eta": "2026-12-02 19:00",
-  "etd": "2026-12-04 05:00",
+  "eta": "2026-12-02 11:00",
+  "etd": "2026-12-03 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -38880,7 +38321,7 @@
   "eta": "2026-11-15 19:30",
   "etd": "2026-11-16 17:06",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-15 19:30",
   "actualDep": "2026-11-16 17:06"
  },
@@ -38895,7 +38336,7 @@
   "eta": "2026-11-18 03:30",
   "etd": "2026-11-18 13:06",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-18 03:30",
   "actualDep": "2026-11-18 13:06"
  },
@@ -38910,7 +38351,7 @@
   "eta": "2026-11-22 10:48",
   "etd": "2026-11-22 22:36",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-22 10:48",
   "actualDep": "2026-11-22 22:36"
  },
@@ -38925,7 +38366,7 @@
   "eta": "2026-11-23 19:00",
   "etd": "2026-11-24 14:00",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-23 19:00",
   "actualDep": "2026-11-24 14:00"
  },
@@ -38937,10 +38378,12 @@
   "seq": 5,
   "port": "Ho Chi Minh",
   "role": "POD",
-  "eta": "2026-11-26 05:00",
-  "etd": "2026-11-27 04:00",
+  "eta": "2026-11-26 08:54",
+  "etd": "2026-11-27 00:18",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00",
+  "actualArr": "2026-11-26 08:54",
+  "actualDep": "2026-11-27 00:18"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -39179,62 +38622,6 @@
   "port": "Busan",
   "role": "POD",
   "eta": "2026-12-10",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 07:05",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2622N",
-  "seq": 1,
-  "port": "Haiphong",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-11-27",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 07:05",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2622N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-14",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 07:05",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2623N",
-  "seq": 1,
-  "port": "Haiphong",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-11",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 07:05",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "SUNNY KALMIA",
-  "voyage": "2623N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-28",
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-24 07:05",
@@ -40095,9 +39482,9 @@
   "port": "Shanghai",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-17",
+  "etd": "2026-12-18",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 11:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -40111,7 +39498,7 @@
   "eta": "2026-12-27",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 11:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -40302,9 +39689,9 @@
   "port": "Shanghai",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-01 19:30",
+  "etd": "2026-12-05",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -40315,10 +39702,10 @@
   "seq": 2,
   "port": "Keelung (Taipei)",
   "role": "POD",
-  "eta": "2026-12-03 02:30",
+  "eta": "2026-12-06",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -40330,9 +39717,9 @@
   "port": "Shanghai",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-08 21:30",
+  "etd": "2026-12-12",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -40343,10 +39730,10 @@
   "seq": 2,
   "port": "Keelung (Taipei)",
   "role": "POD",
-  "eta": "2026-12-10 04:30",
+  "eta": "2026-12-14",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 12:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -40372,34 +39759,6 @@
   "port": "Keelung (Taipei)",
   "role": "POD",
   "eta": "2026-12-17 05:30",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 12:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnsha_twkel",
-  "carrier": "CUL",
-  "vessel": "CUL XIAMEN",
-  "voyage": "2635E",
-  "seq": 1,
-  "port": "Shanghai",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-22 23:30",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-24 12:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnsha_twkel",
-  "carrier": "CUL",
-  "vessel": "CUL XIAMEN",
-  "voyage": "2635E",
-  "seq": 2,
-  "port": "Keelung (Taipei)",
-  "role": "POD",
-  "eta": "2026-12-24 05:30",
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-24 12:00",
@@ -40441,58 +39800,6 @@
   "role": "POD",
   "eta": "2026-12-08 09:00",
   "etd": "2026-12-10 01:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHIMIZU",
-  "voyage": "2611S",
-  "seq": 1,
-  "port": "Busan",
-  "role": "POL",
-  "eta": "2026-12-02 20:18",
-  "etd": "2026-12-05 21:18",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHIMIZU",
-  "voyage": "2611S",
-  "seq": 2,
-  "port": "Hong Kong",
-  "role": "CALL",
-  "eta": "2026-12-08 20:48",
-  "etd": "2026-12-10 00:18",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHIMIZU",
-  "voyage": "2611S",
-  "seq": 3,
-  "port": "Singapore",
-  "role": "CALL",
-  "eta": "2026-12-13 19:48",
-  "etd": "2026-12-16 09:18",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "krpus_idjkt",
-  "carrier": "KMTC",
-  "vessel": "KMTC SHIMIZU",
-  "voyage": "2611S",
-  "seq": 4,
-  "port": "Jakarta",
-  "role": "POD",
-  "eta": "2026-12-17 21:48",
-  "etd": "2026-12-21 02:18",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-26 07:00"
  },
@@ -40987,90 +40294,6 @@
  },
  {
   "routeId": "cnshk_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "JIRA BHUM",
-  "voyage": "0015W",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-11-29",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "JIRA BHUM",
-  "voyage": "0015W",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-12-18",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "MARIA C",
-  "voyage": "0099N",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-05",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "MARIA C",
-  "voyage": "0099N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-12-14",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-10",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-12-18",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krinc",
   "carrier": "PANOCEAN",
   "vessel": "SKY HOPE",
   "voyage": "2622N",
@@ -41094,34 +40317,6 @@
   "etd": "2026-12-21 18:00",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "JIRA BHUM",
-  "voyage": "0015W",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-11-29",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "JIRA BHUM",
-  "voyage": "0015W",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-16",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
  },
  {
   "routeId": "cnshk_krpus",
@@ -41174,90 +40369,6 @@
   "port": "Shanghai",
   "role": "POD",
   "eta": "2026-12-10",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_cnsha",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA DA 618",
-  "voyage": "1601N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-02",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_cnsha",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA DA 618",
-  "voyage": "1601N",
-  "seq": 2,
-  "port": "Shanghai",
-  "role": "POD",
-  "eta": "2026-12-21",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_cnsha",
-  "carrier": "NAMSUNG",
-  "vessel": "APL JEDDAH",
-  "voyage": "0423N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-09",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_cnsha",
-  "carrier": "NAMSUNG",
-  "vessel": "APL JEDDAH",
-  "voyage": "0423N",
-  "seq": 2,
-  "port": "Shanghai",
-  "role": "POD",
-  "eta": "2027-01-04",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_cnsha",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA YUAN FU JIAN",
-  "voyage": "1302N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-12",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_cnsha",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA YUAN FU JIAN",
-  "voyage": "1302N",
-  "seq": 2,
-  "port": "Shanghai",
-  "role": "POD",
-  "eta": "2027-01-04",
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-25 07:00",
@@ -41346,62 +40457,6 @@
   "collectedAt": "2026-11-26 07:00"
  },
  {
-  "routeId": "vnhph_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "MARIA C",
-  "voyage": "0099N",
-  "seq": 1,
-  "port": "Haiphong",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-04",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "MARIA C",
-  "voyage": "0099N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-12-14",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "seq": 1,
-  "port": "Haiphong",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-08",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krinc",
-  "carrier": "NAMSUNG",
-  "vessel": "YM COOPERATION",
-  "voyage": "0063N",
-  "seq": 2,
-  "port": "Incheon",
-  "role": "POD",
-  "eta": "2026-12-18",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
-  "source": "p2p"
- },
- {
   "routeId": "vnhph_uslax",
   "carrier": "MSC",
   "vessel": "MSC GIULIA",
@@ -41466,9 +40521,9 @@
   "port": "Ho Chi Minh",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-14",
+  "etd": "2026-12-16",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -41479,10 +40534,10 @@
   "seq": 2,
   "port": "Long Beach",
   "role": "POD",
-  "eta": "2027-01-05",
+  "eta": "2027-01-06",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-25 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -41496,7 +40551,7 @@
   "eta": "2026-11-19 19:36",
   "etd": "2026-11-20 08:45",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-19 19:36",
   "actualDep": "2026-11-20 08:45"
  },
@@ -41511,7 +40566,7 @@
   "eta": "2026-11-21 08:24",
   "etd": "2026-11-21 23:24",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 08:24",
   "actualDep": "2026-11-21 23:24"
  },
@@ -41526,7 +40581,7 @@
   "eta": "2026-11-24 08:36",
   "etd": "2026-11-25 01:06",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-24 08:36",
   "actualDep": "2026-11-25 01:06"
  },
@@ -41538,10 +40593,10 @@
   "seq": 4,
   "port": "Tokyo",
   "role": "CALL",
-  "eta": "2026-11-28 20:00",
+  "eta": "2026-11-29 02:30",
   "etd": "2026-11-29 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41554,7 +40609,7 @@
   "eta": "2026-11-29 16:00",
   "etd": "2026-11-30 00:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41567,7 +40622,7 @@
   "eta": "2026-11-30 01:00",
   "etd": "2026-11-30 11:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41580,7 +40635,7 @@
   "eta": "2026-12-03 07:00",
   "etd": "2026-12-05 05:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41593,7 +40648,7 @@
   "eta": "2026-11-21 14:30",
   "etd": "2026-11-22 07:03",
   "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "actualArr": "2026-11-21 14:30",
   "actualDep": "2026-11-22 07:03"
  },
@@ -41605,10 +40660,10 @@
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-11-26 01:00",
+  "eta": "2026-11-26 12:00",
   "etd": "2026-11-29 17:00",
-  "status": "ACTUAL",
-  "collectedAt": "2026-11-26 07:00"
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41618,10 +40673,10 @@
   "seq": 1,
   "port": "Da Nang",
   "role": "POL",
-  "eta": "2026-11-27 21:00",
-  "etd": "2026-11-28 09:00",
+  "eta": "2026-11-28 08:00",
+  "etd": "2026-11-28 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41631,10 +40686,10 @@
   "seq": 2,
   "port": "Haiphong",
   "role": "CALL",
-  "eta": "2026-11-29 06:00",
-  "etd": "2026-11-30 10:00",
+  "eta": "2026-11-29 17:00",
+  "etd": "2026-11-30 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41644,10 +40699,10 @@
   "seq": 3,
   "port": "Nansha",
   "role": "CALL",
-  "eta": "2026-12-01 18:00",
-  "etd": "2026-12-02 10:00",
+  "eta": "2026-12-02 05:00",
+  "etd": "2026-12-02 21:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41657,10 +40712,10 @@
   "seq": 4,
   "port": "Xiamen",
   "role": "CALL",
-  "eta": "2026-12-03 08:00",
-  "etd": "2026-12-04 04:00",
+  "eta": "2026-12-03 19:00",
+  "etd": "2026-12-04 15:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41668,12 +40723,12 @@
   "vessel": "SITC YIHE",
   "voyage": "2639N",
   "seq": 5,
-  "port": "Tokyo",
+  "port": "Yokohama",
   "role": "CALL",
-  "eta": "2026-12-07 23:00",
-  "etd": "2026-12-08 11:00",
+  "eta": "2026-12-08 09:00",
+  "etd": "2026-12-08 17:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41681,12 +40736,12 @@
   "vessel": "SITC YIHE",
   "voyage": "2639N",
   "seq": 6,
-  "port": "Yokohama",
+  "port": "Kawasaki",
   "role": "CALL",
-  "eta": "2026-12-08 12:00",
-  "etd": "2026-12-08 20:00",
+  "eta": "2026-12-08 18:00",
+  "etd": "2026-12-09 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41694,12 +40749,12 @@
   "vessel": "SITC YIHE",
   "voyage": "2639N",
   "seq": 7,
-  "port": "Kawasaki",
+  "port": "Nagoya",
   "role": "CALL",
-  "eta": "2026-12-08 21:00",
-  "etd": "2026-12-09 07:00",
+  "eta": "2026-12-09 18:00",
+  "etd": "2026-12-10 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41707,25 +40762,12 @@
   "vessel": "SITC YIHE",
   "voyage": "2639N",
   "seq": 8,
-  "port": "Nagoya",
-  "role": "CALL",
-  "eta": "2026-12-09 21:00",
-  "etd": "2026-12-10 15:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "vndad_cnsha",
-  "carrier": "SITC",
-  "vessel": "SITC YIHE",
-  "voyage": "2639N",
-  "seq": 9,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-13 04:00",
-  "etd": "2026-12-15 02:00",
+  "eta": "2026-12-13 01:00",
+  "etd": "2026-12-14 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41791,10 +40833,10 @@
   "seq": 1,
   "port": "Da Nang",
   "role": "POL",
-  "eta": "2026-12-06 10:00",
-  "etd": "2026-12-07 02:00",
+  "eta": "2026-12-06 18:00",
+  "etd": "2026-12-07 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -41804,10 +40846,10 @@
   "seq": 2,
   "port": "Shanghai",
   "role": "POD",
-  "eta": "2026-12-10 20:00",
-  "etd": "2026-12-12 12:00",
+  "eta": "2026-12-11 04:00",
+  "etd": "2026-12-12 20:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "vndad_cnsha",
@@ -42571,7 +41613,7 @@
   "eta": "2026-12-06 16:00",
   "etd": "2026-12-08 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -42584,7 +41626,7 @@
   "eta": "2026-12-10 23:00",
   "etd": "2026-12-11 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -42597,7 +41639,7 @@
   "eta": "2026-12-12 20:00",
   "etd": "2026-12-14 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnsha_vnhph",
@@ -42635,58 +41677,6 @@
   "role": "POD",
   "eta": "2026-12-22 02:00",
   "etd": "2026-12-23 04:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC SHANDONG",
-  "voyage": "2626S",
-  "seq": 1,
-  "port": "Shanghai",
-  "role": "POL",
-  "eta": "2026-12-06 13:00",
-  "etd": "2026-12-08 11:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC SHANDONG",
-  "voyage": "2626S",
-  "seq": 2,
-  "port": "Wenzhou",
-  "role": "CALL",
-  "eta": "2026-12-09 09:00",
-  "etd": "2026-12-10 01:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC SHANDONG",
-  "voyage": "2626S",
-  "seq": 3,
-  "port": "Laem Chabang",
-  "role": "CALL",
-  "eta": "2026-12-15 06:00",
-  "etd": "2026-12-18 02:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnsha_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC SHANDONG",
-  "voyage": "2626S",
-  "seq": 4,
-  "port": "Ho Chi Minh",
-  "role": "POD",
-  "eta": "2026-12-19 17:00",
-  "etd": "2026-12-20 17:00",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-26 07:00"
  },
@@ -42753,7 +41743,7 @@
   "eta": "2026-12-04 18:00",
   "etd": "2026-12-06 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -42766,7 +41756,7 @@
   "eta": "2026-12-06 16:00",
   "etd": "2026-12-08 12:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -42779,7 +41769,7 @@
   "eta": "2026-12-10 23:00",
   "etd": "2026-12-11 13:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnhph",
@@ -42792,7 +41782,7 @@
   "eta": "2026-12-12 20:00",
   "etd": "2026-12-14 06:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -42802,10 +41792,10 @@
   "seq": 1,
   "port": "Ningbo",
   "role": "POL",
-  "eta": "2026-11-27 03:00",
+  "eta": "2026-11-28 18:00",
   "etd": "2026-11-30 08:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -42818,7 +41808,7 @@
   "eta": "2026-12-01 13:00",
   "etd": "2026-12-02 05:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -42831,7 +41821,7 @@
   "eta": "2026-12-06 00:00",
   "etd": "2026-12-07 10:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -42844,7 +41834,7 @@
   "eta": "2026-12-08 02:00",
   "etd": "2026-12-09 04:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "cnngb_vnsgn",
@@ -42857,137 +41847,7 @@
   "eta": "2026-12-10 19:00",
   "etd": "2026-12-11 23:00",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2628S",
-  "seq": 1,
-  "port": "Ningbo",
-  "role": "POL",
-  "eta": "2026-12-01 20:00",
-  "etd": "2026-12-04 20:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2628S",
-  "seq": 2,
-  "port": "Xiamen",
-  "role": "CALL",
-  "eta": "2026-12-06 01:00",
-  "etd": "2026-12-06 20:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2628S",
-  "seq": 3,
-  "port": "Sihanoukville",
-  "role": "CALL",
-  "eta": "2026-12-10 15:00",
-  "etd": "2026-12-12 01:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2628S",
-  "seq": 4,
-  "port": "Laem Chabang",
-  "role": "CALL",
-  "eta": "2026-12-12 17:00",
-  "etd": "2026-12-13 19:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC KANTO",
-  "voyage": "2628S",
-  "seq": 5,
-  "port": "Ho Chi Minh",
-  "role": "POD",
-  "eta": "2026-12-15 10:00",
-  "etd": "2026-12-16 14:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2626S",
-  "seq": 1,
-  "port": "Ningbo",
-  "role": "POL",
-  "eta": "2026-12-08 15:00",
-  "etd": "2026-12-11 20:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2626S",
-  "seq": 2,
-  "port": "Xiamen",
-  "role": "CALL",
-  "eta": "2026-12-13 01:00",
-  "etd": "2026-12-13 20:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2626S",
-  "seq": 3,
-  "port": "Sihanoukville",
-  "role": "CALL",
-  "eta": "2026-12-17 15:00",
-  "etd": "2026-12-19 01:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2626S",
-  "seq": 4,
-  "port": "Laem Chabang",
-  "role": "CALL",
-  "eta": "2026-12-19 17:00",
-  "etd": "2026-12-20 19:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
- },
- {
-  "routeId": "cnngb_vnsgn",
-  "carrier": "SITC",
-  "vessel": "SITC RUNDE",
-  "voyage": "2626S",
-  "seq": 5,
-  "port": "Ho Chi Minh",
-  "role": "POD",
-  "eta": "2026-12-22 10:00",
-  "etd": "2026-12-23 14:00",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00"
+  "collectedAt": "2026-11-27 08:00"
  },
  {
   "routeId": "twkel_idjkt",
@@ -42998,9 +41858,9 @@
   "port": "Keelung",
   "role": "POL",
   "eta": "",
-  "etd": "2026-12-17",
+  "etd": "2026-12-18",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -43014,147 +41874,7 @@
   "eta": "2026-12-27",
   "etd": "",
   "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2623N",
-  "seq": 1,
-  "port": "Haiphong",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-05",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "vnhph_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "STAR FRONTIER",
-  "voyage": "2623N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-28",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA DA 618",
-  "voyage": "1601N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-02",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA DA 618",
-  "voyage": "1601N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-26",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "APL JEDDAH",
-  "voyage": "0423N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-09",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "APL JEDDAH",
-  "voyage": "0423N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2027-01-02",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA YUAN FU JIAN",
-  "voyage": "1302N",
-  "seq": 1,
-  "port": "Jakarta",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-12",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "idjkt_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "HUA YUAN FU JIAN",
-  "voyage": "1302N",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2027-01-07",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "MANZANILLO BRIDGE",
-  "voyage": "2602W",
-  "seq": 1,
-  "port": "Shekou",
-  "role": "POL",
-  "eta": "",
-  "etd": "2026-12-05",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
-  "source": "p2p"
- },
- {
-  "routeId": "cnshk_krpus",
-  "carrier": "NAMSUNG",
-  "vessel": "MANZANILLO BRIDGE",
-  "voyage": "2602W",
-  "seq": 2,
-  "port": "Busan",
-  "role": "POD",
-  "eta": "2026-12-26",
-  "etd": "",
-  "status": "ESTIMATED",
-  "collectedAt": "2026-11-26 07:00",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  },
  {
@@ -43183,6 +41903,370 @@
   "etd": "",
   "status": "ESTIMATED",
   "collectedAt": "2026-11-26 07:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "carrier": "SITC",
+  "vessel": "GW GUANGDE",
+  "voyage": "2640S",
+  "seq": 1,
+  "port": "Shanghai",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-17",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_vnhph",
+  "carrier": "SITC",
+  "vessel": "GW GUANGDE",
+  "voyage": "2640S",
+  "seq": 2,
+  "port": "Haiphong",
+  "role": "POD",
+  "eta": "2026-12-21",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "carrier": "SITC",
+  "vessel": "TIDE VANTAGE",
+  "voyage": "2666S",
+  "seq": 1,
+  "port": "Shanghai",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-06",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "carrier": "SITC",
+  "vessel": "TIDE VANTAGE",
+  "voyage": "2666S",
+  "seq": 2,
+  "port": "Ho Chi Minh",
+  "role": "POD",
+  "eta": "2026-12-16",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "carrier": "SITC",
+  "vessel": "SITC HONGKONG",
+  "voyage": "2638S",
+  "seq": 1,
+  "port": "Shanghai",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_vnsgn",
+  "carrier": "SITC",
+  "vessel": "SITC HONGKONG",
+  "voyage": "2638S",
+  "seq": 2,
+  "port": "Ho Chi Minh",
+  "role": "POD",
+  "eta": "2026-12-28",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_krpus",
+  "carrier": "KMTC",
+  "vessel": "QINGDAO VOYAGER",
+  "voyage": "2609N",
+  "seq": 1,
+  "port": "Shanghai",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-17",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_krpus",
+  "carrier": "KMTC",
+  "vessel": "QINGDAO VOYAGER",
+  "voyage": "2609N",
+  "seq": 2,
+  "port": "Busan",
+  "role": "POD",
+  "eta": "2026-12-19",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnsgn_krpus",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "seq": 1,
+  "port": "Ho Chi Minh",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnsgn_krpus",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "seq": 2,
+  "port": "Busan",
+  "role": "POD",
+  "eta": "2026-12-27",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnsgn_krinc",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "seq": 1,
+  "port": "Ho Chi Minh",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnsgn_krinc",
+  "carrier": "KMTC / NAMSUNG",
+  "vessel": "KMTC SURABAYA",
+  "voyage": "2609N",
+  "seq": 2,
+  "port": "Incheon",
+  "role": "POD",
+  "eta": "2026-12-25",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "carrier": "NAMSUNG",
+  "vessel": "KMTC SEOUL",
+  "voyage": "2608N",
+  "seq": 1,
+  "port": "Haiphong",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "carrier": "NAMSUNG",
+  "vessel": "KMTC SEOUL",
+  "voyage": "2608N",
+  "seq": 2,
+  "port": "Busan",
+  "role": "POD",
+  "eta": "2026-12-24",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "carrier": "PANOCEAN",
+  "vessel": "SKY IRIS",
+  "voyage": "2619N",
+  "seq": 1,
+  "port": "Haiphong",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "carrier": "PANOCEAN",
+  "vessel": "SKY IRIS",
+  "voyage": "2619N",
+  "seq": 2,
+  "port": "Busan",
+  "role": "POD",
+  "eta": "2026-12-24",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "carrier": "PANOCEAN",
+  "vessel": "SM TOKYO",
+  "voyage": "2623E",
+  "seq": 1,
+  "port": "Haiphong",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krpus",
+  "carrier": "PANOCEAN",
+  "vessel": "SM TOKYO",
+  "voyage": "2623E",
+  "seq": 2,
+  "port": "Busan",
+  "role": "POD",
+  "eta": "2026-12-27",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krinc",
+  "carrier": "PANOCEAN",
+  "vessel": "SM TOKYO",
+  "voyage": "2623E",
+  "seq": 1,
+  "port": "Haiphong",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_krinc",
+  "carrier": "PANOCEAN",
+  "vessel": "SM TOKYO",
+  "voyage": "2623E",
+  "seq": 2,
+  "port": "Incheon",
+  "role": "POD",
+  "eta": "2026-12-24",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_cnsha",
+  "carrier": "SITC",
+  "vessel": "SIRI BHUM",
+  "voyage": "2650N",
+  "seq": 1,
+  "port": "Haiphong",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "vnhph_cnsha",
+  "carrier": "SITC",
+  "vessel": "SIRI BHUM",
+  "voyage": "2650N",
+  "seq": 2,
+  "port": "Shanghai",
+  "role": "POD",
+  "eta": "2026-12-24",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_krinc",
+  "carrier": "KMTC",
+  "vessel": "PANCON GLORY",
+  "voyage": "2638E",
+  "seq": 1,
+  "port": "Shanghai",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnsha_krinc",
+  "carrier": "KMTC",
+  "vessel": "PANCON GLORY",
+  "voyage": "2638E",
+  "seq": 2,
+  "port": "Incheon",
+  "role": "POD",
+  "eta": "2026-12-19",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnshk_krinc",
+  "carrier": "PANOCEAN",
+  "vessel": "ASL QINGDAO",
+  "voyage": "2615N",
+  "seq": 1,
+  "port": "Shekou",
+  "role": "POL",
+  "eta": "",
+  "etd": "2026-12-18",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
+  "source": "p2p"
+ },
+ {
+  "routeId": "cnshk_krinc",
+  "carrier": "PANOCEAN",
+  "vessel": "ASL QINGDAO",
+  "voyage": "2615N",
+  "seq": 2,
+  "port": "Incheon",
+  "role": "POD",
+  "eta": "2026-12-19",
+  "etd": "",
+  "status": "ESTIMATED",
+  "collectedAt": "2026-11-27 08:00",
   "source": "p2p"
  }
 ]

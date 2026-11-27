@@ -106,13 +106,10 @@
   "tt": 27,
   "rotation": "Busan → Tanjung Pelepas (T/S) → Port Said East",
   "prevEtd": "11-29 (Sun)",
-  "prevEta": "12-24 (Thu)",
-  "prevTt": 25,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 27,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSK",
@@ -123,13 +120,10 @@
   "tt": 37,
   "rotation": "Busan → Ningbo (T/S) → Port Said East",
   "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-31 (Thu)",
-  "prevTt": 28,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "01-09 (Sat)",
+  "prevTt": 37,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSK",
@@ -140,13 +134,10 @@
   "tt": 28,
   "rotation": "Busan → Tanjung Pelepas (T/S) → Port Said East",
   "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-31 (Thu)",
-  "prevTt": 26,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "01-02 (Sat)",
+  "prevTt": 28,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSK",
@@ -157,13 +148,10 @@
   "tt": 33,
   "rotation": "Busan → Ningbo (T/S) → Port Said East",
   "prevEtd": "12-07 (Mon)",
-  "prevEta": "01-07 (Thu)",
-  "prevTt": 31,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "01-09 (Sat)",
+  "prevTt": 33,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSK",
@@ -174,13 +162,10 @@
   "tt": 28,
   "rotation": "Busan → Tanjung Pelepas (T/S) → Port Said East",
   "prevEtd": "12-12 (Sat)",
-  "prevEta": "01-07 (Thu)",
-  "prevTt": 26,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "01-09 (Sat)",
+  "prevTt": 28,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSK",

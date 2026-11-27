@@ -95,19 +95,18 @@
   "status": "departed"
  },
  {
-  "carrier": "HEUNG-A / KMTC / NAMSUNG / SINOKOR",
-  "vessel": "KMTC XIAMEN",
-  "voyage": "2609N",
-  "service": "ANX",
-  "etd": "11-26 (Thu)",
-  "eta": "12-09 (Wed)",
+  "carrier": "NAMSUNG",
+  "vessel": "INTERASIA ENGAGE",
+  "voyage": "0046N",
+  "service": "KCI",
+  "etd": "11-27 (Fri)",
+  "eta": "12-10 (Thu)",
   "tt": 13,
-  "altDates": "NAMSUNG 11-26→12-06",
-  "closedCarriers": "KMTC / NAMSUNG",
-  "bookingClosed": false,
-  "prevEtd": "11-26 (Thu)",
-  "prevEta": "12-06 (Sun)",
-  "prevTt": 10,
+  "closedCarriers": "NAMSUNG",
+  "bookingClosed": true,
+  "prevEtd": "11-27 (Fri)",
+  "prevEta": "12-09 (Wed)",
+  "prevTt": 12,
   "changedFields": [
    "eta",
    "tt"
@@ -115,20 +114,23 @@
   "status": "changed"
  },
  {
-  "carrier": "NAMSUNG",
-  "vessel": "INTERASIA ENGAGE",
-  "voyage": "0046N",
-  "service": "KCI",
+  "carrier": "KMTC",
+  "vessel": "KMTC XIAMEN",
+  "voyage": "2609N",
+  "service": "ANX",
   "etd": "11-27 (Fri)",
   "eta": "12-09 (Wed)",
   "tt": 12,
-  "closedCarriers": "NAMSUNG",
+  "closedCarriers": "KMTC",
   "bookingClosed": true,
-  "prevEtd": "11-27 (Fri)",
+  "prevEtd": "11-26 (Thu)",
   "prevEta": "12-09 (Wed)",
-  "prevTt": 12,
-  "changedFields": [],
-  "status": "same"
+  "prevTt": 13,
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "HEUNG-A / NAMSUNG / SINOKOR",
@@ -152,15 +154,18 @@
   "voyage": "2609N",
   "service": "ANX",
   "etd": "12-02 (Wed)",
-  "eta": "12-15 (Tue)",
-  "tt": 13,
+  "eta": "12-13 (Sun)",
+  "tt": 11,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-02 (Wed)",
   "prevEta": "12-15 (Tue)",
   "prevTt": 13,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -172,14 +177,11 @@
   "tt": 13,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-05 (Sat)",
-  "prevEta": "12-18 (Fri)",
+  "prevEtd": "12-08 (Tue)",
+  "prevEta": "12-21 (Mon)",
   "prevTt": 13,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "NAMSUNG",
@@ -203,33 +205,35 @@
   "voyage": "2609N",
   "service": "ANX",
   "etd": "12-11 (Fri)",
-  "eta": "12-23 (Wed)",
-  "tt": 12,
+  "eta": "12-24 (Thu)",
+  "tt": 13,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-11 (Fri)",
   "prevEta": "12-23 (Wed)",
   "prevTt": 12,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "KMTC / NAMSUNG",
   "vessel": "KMTC SURABAYA",
   "voyage": "2609N",
   "service": "ANX",
-  "etd": "12-14 (Mon)",
-  "eta": "12-26 (Sat)",
+  "etd": "12-13 (Sun)",
+  "eta": "12-25 (Fri)",
   "tt": 12,
-  "altDates": "NAMSUNG 12-14→12-26",
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-14 (Mon)",
-  "prevEta": "12-25 (Fri)",
-  "prevTt": 11,
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 12,
   "changedFields": [
-   "eta",
-   "tt"
+   "etd",
+   "eta"
   ],
   "status": "changed"
  },
@@ -238,16 +242,20 @@
   "vessel": "TS NAGOYA",
   "voyage": "2635N",
   "service": "KCI",
-  "etd": "12-18 (Fri)",
-  "eta": "01-01 (Fri)",
-  "tt": 14,
+  "etd": "12-19 (Sat)",
+  "eta": "01-03 (Sun)",
+  "tt": 15,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-18 (Fri)",
   "prevEta": "01-01 (Fri)",
   "prevTt": 14,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "NAMSUNG",
@@ -270,15 +278,18 @@
   "vessel": "INTERASIA ENGAGE",
   "voyage": "0047N",
   "service": "KCI",
-  "etd": "12-23 (Wed)",
+  "etd": "12-25 (Fri)",
   "eta": "01-02 (Sat)",
-  "tt": 10,
+  "tt": 8,
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-23 (Wed)",
   "prevEta": "01-02 (Sat)",
   "prevTt": 10,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  }
 ]

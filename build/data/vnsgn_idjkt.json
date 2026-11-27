@@ -154,13 +154,10 @@
   "closedCarriers": "",
   "bookingClosed": false,
   "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-08 (Tue)",
-  "prevTt": 5,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-09 (Wed)",
+  "prevTt": 6,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SINOKOR",
@@ -252,14 +249,11 @@
   "tt": 6,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-22 (Tue)",
+  "prevEtd": "12-17 (Thu)",
+  "prevEta": "12-23 (Wed)",
   "prevTt": 6,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -351,14 +345,11 @@
   "tt": 6,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "12-30 (Wed)",
-  "prevEta": "01-05 (Tue)",
+  "prevEtd": "12-31 (Thu)",
+  "prevEta": "01-06 (Wed)",
   "prevTt": 6,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -370,26 +361,26 @@
   "tt": 2,
   "closedCarriers": "",
   "bookingClosed": false,
-  "prevEtd": "01-01 (Fri)",
+  "prevEtd": "01-02 (Sat)",
   "prevEta": "01-04 (Mon)",
-  "prevTt": 3,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevTt": 2,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "GSL",
   "vessel": "NATTHA BHUM",
   "voyage": "NB3/46",
+  "service": "",
   "etd": "01-07 (Thu)",
   "eta": "01-14 (Thu)",
   "tt": 7,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "01-07 (Thu)",
+  "prevEta": "01-14 (Thu)",
+  "prevTt": 7,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

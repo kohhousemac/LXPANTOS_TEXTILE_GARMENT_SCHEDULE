@@ -84,13 +84,10 @@
   "tt": 21,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "prevEtd": "11-30 (Mon)",
-  "prevEta": "12-20 (Sun)",
-  "prevTt": 20,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-21 (Mon)",
+  "prevTt": 21,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "WHL",
@@ -112,15 +109,18 @@
   "vessel": "MSC ERICA",
   "voyage": "FV647N",
   "service": "SENTOSA",
-  "etd": "12-04 (Fri)",
+  "etd": "12-05 (Sat)",
   "eta": "12-23 (Wed)",
-  "tt": 19,
+  "tt": 18,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
   "prevEtd": "12-04 (Fri)",
   "prevEta": "12-23 (Wed)",
   "prevTt": 19,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "WHL",
@@ -146,15 +146,11 @@
   "eta": "01-01 (Fri)",
   "tt": 23,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
-  "prevEtd": "12-08 (Tue)",
-  "prevEta": "12-29 (Tue)",
-  "prevTt": 21,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "01-01 (Fri)",
+  "prevTt": 23,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "WHL",
@@ -180,15 +176,11 @@
   "eta": "01-06 (Wed)",
   "tt": 21,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
-  "prevEtd": "12-14 (Mon)",
-  "prevEta": "01-05 (Tue)",
-  "prevTt": 22,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": "12-16 (Wed)",
+  "prevEta": "01-06 (Wed)",
+  "prevTt": 21,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "MSC",
@@ -199,13 +191,10 @@
   "eta": "01-12 (Tue)",
   "tt": 21,
   "rotation": "Vung Tau → Yantian → Xiamen → Long Beach",
-  "prevEtd": "12-21 (Mon)",
+  "prevEtd": "12-22 (Tue)",
   "prevEta": "01-12 (Tue)",
-  "prevTt": 22,
-  "changedFields": [
-   "etd",
-   "tt"
-  ],
-  "status": "changed"
+  "prevTt": 21,
+  "changedFields": [],
+  "status": "same"
  }
 ]

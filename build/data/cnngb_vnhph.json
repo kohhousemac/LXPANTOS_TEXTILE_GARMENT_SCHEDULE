@@ -47,8 +47,8 @@
   "voyage": "2639S",
   "service": "CJV5(SNL)",
   "etd": "11-20 (Fri)",
-  "eta": "11-27 (Fri)",
-  "tt": 7,
+  "eta": "11-29 (Sun)",
+  "tt": 9,
   "prevEtd": "11-20 (Fri)",
   "prevEta": "11-29 (Sun)",
   "prevTt": 9,
@@ -61,8 +61,8 @@
   "voyage": "2632S",
   "service": "CJV4",
   "etd": "11-24 (Tue)",
-  "eta": "11-29 (Sun)",
-  "tt": 5,
+  "eta": "11-28 (Sat)",
+  "tt": 4,
   "prevEtd": "11-24 (Tue)",
   "prevEta": "11-29 (Sun)",
   "prevTt": 5,
@@ -74,14 +74,14 @@
   "vessel": "SIRI BHUM",
   "voyage": "2647S",
   "service": "CJV5(SNL)",
-  "etd": "11-26 (Thu)",
+  "etd": "11-25 (Wed)",
   "eta": "12-02 (Wed)",
-  "tt": 6,
+  "tt": 7,
   "prevEtd": "11-26 (Thu)",
   "prevEta": "12-02 (Wed)",
   "prevTt": 6,
   "changedFields": [],
-  "status": "same"
+  "status": "departed"
  },
  {
   "carrier": "SITC",
@@ -105,14 +105,11 @@
   "etd": "12-06 (Sun)",
   "eta": "12-12 (Sat)",
   "tt": 6,
-  "prevEtd": "12-02 (Wed)",
-  "prevEta": "12-08 (Tue)",
+  "prevEtd": "12-06 (Sun)",
+  "prevEta": "12-12 (Sat)",
   "prevTt": 6,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -134,27 +131,33 @@
   "voyage": "2649S",
   "service": "CJV5(SNL)",
   "etd": "12-10 (Thu)",
-  "eta": "12-17 (Thu)",
-  "tt": 7,
+  "eta": "12-16 (Wed)",
+  "tt": 6,
   "prevEtd": "12-10 (Thu)",
   "prevEta": "12-17 (Thu)",
   "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
   "vessel": "SITC ANHE",
   "voyage": "2634S",
   "service": "CJV4",
-  "etd": "12-16 (Wed)",
+  "etd": "12-17 (Thu)",
   "eta": "12-21 (Mon)",
-  "tt": 5,
+  "tt": 4,
   "prevEtd": "12-16 (Wed)",
   "prevEta": "12-21 (Mon)",
   "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -164,15 +167,11 @@
   "etd": "12-19 (Sat)",
   "eta": "12-26 (Sat)",
   "tt": 7,
-  "prevEtd": "12-16 (Wed)",
-  "prevEta": "12-22 (Tue)",
-  "prevTt": 6,
-  "changedFields": [
-   "etd",
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEtd": "12-19 (Sat)",
+  "prevEta": "12-26 (Sat)",
+  "prevTt": 7,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -193,12 +192,12 @@
   "vessel": "SIRI BHUM",
   "voyage": "2651S",
   "service": "CJV5(SNL)",
-  "etd": "12-24 (Thu)",
+  "etd": "12-23 (Wed)",
   "eta": "12-29 (Tue)",
-  "tt": 5,
-  "prevEtd": "12-23 (Wed)",
+  "tt": 6,
+  "prevEtd": "12-24 (Thu)",
   "prevEta": "12-29 (Tue)",
-  "prevTt": 6,
+  "prevTt": 5,
   "changedFields": [
    "etd",
    "tt"

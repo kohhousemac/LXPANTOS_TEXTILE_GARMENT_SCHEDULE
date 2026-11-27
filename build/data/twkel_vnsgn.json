@@ -125,15 +125,15 @@
   "vessel": "WAN HAI 288",
   "voyage": "S116",
   "service": "Japan Kansai-Vietnam Service",
-  "etd": "12-12 (Sat)",
-  "eta": "12-17 (Thu)",
+  "etd": "12-13 (Sun)",
+  "eta": "12-18 (Fri)",
   "tt": 5,
   "prevEtd": "12-12 (Sat)",
-  "prevEta": "12-18 (Fri)",
-  "prevTt": 6,
+  "prevEta": "12-17 (Thu)",
+  "prevTt": 5,
   "changedFields": [
-   "eta",
-   "tt"
+   "etd",
+   "eta"
   ],
   "status": "changed"
  },

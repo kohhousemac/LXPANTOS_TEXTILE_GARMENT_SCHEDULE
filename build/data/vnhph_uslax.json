@@ -188,10 +188,10 @@
   "eta": "01-18 (Mon)",
   "tt": 25,
   "rotation": "Haiphong → Los Angeles (직항)",
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "01-18 (Mon)",
+  "prevTt": 25,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

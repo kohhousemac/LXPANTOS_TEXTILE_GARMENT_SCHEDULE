@@ -159,8 +159,8 @@
   "voyage": "2646S",
   "service": "CVS2",
   "etd": "11-23 (Mon)",
-  "eta": "11-28 (Sat)",
-  "tt": 5,
+  "eta": "11-29 (Sun)",
+  "tt": 6,
   "prevEtd": "11-13 (Fri)",
   "prevEta": "11-20 (Fri)",
   "prevTt": 7,
@@ -196,20 +196,6 @@
   "status": "same"
  },
  {
-  "carrier": "SITC",
-  "vessel": "SITC WENDE",
-  "voyage": "2624S",
-  "service": "VTX2",
-  "etd": "11-28 (Sat)",
-  "eta": "12-03 (Thu)",
-  "tt": 5,
-  "prevEtd": "11-28 (Sat)",
-  "prevEta": "12-03 (Thu)",
-  "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "EMC",
   "vessel": "UNI-POPULAR",
   "voyage": "0398-520S",
@@ -222,6 +208,23 @@
   "prevTt": 5,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "SITC",
+  "vessel": "SITC WENDE",
+  "voyage": "2624S",
+  "service": "VTX2",
+  "etd": "11-29 (Sun)",
+  "eta": "12-04 (Fri)",
+  "tt": 5,
+  "prevEtd": "11-28 (Sat)",
+  "prevEta": "12-03 (Thu)",
+  "prevTt": 5,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "EMC",
@@ -267,20 +270,6 @@
  },
  {
   "carrier": "SITC",
-  "vessel": "TIDE VANTAGE",
-  "voyage": "2666S",
-  "service": "VTX8",
-  "etd": "12-05 (Sat)",
-  "eta": "12-15 (Tue)",
-  "tt": 10,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
-  "changedFields": [],
-  "status": "new"
- },
- {
-  "carrier": "SITC",
   "vessel": "SITC MINGDE",
   "voyage": "2624S",
   "service": "VTX2",
@@ -295,20 +284,34 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "TIDE VANTAGE",
+  "voyage": "2666S",
+  "service": "VTX8",
+  "etd": "12-06 (Sun)",
+  "eta": "12-16 (Wed)",
+  "tt": 10,
+  "prevEtd": "12-05 (Sat)",
+  "prevEta": "12-15 (Tue)",
+  "prevTt": 10,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC FUJIAN",
   "voyage": "2628S",
   "service": "VTX3",
   "etd": "12-07 (Mon)",
   "eta": "12-16 (Wed)",
   "tt": 9,
-  "prevEtd": "12-06 (Sun)",
-  "prevEta": "12-15 (Tue)",
+  "prevEtd": "12-07 (Mon)",
+  "prevEta": "12-16 (Wed)",
   "prevTt": 9,
-  "changedFields": [
-   "etd",
-   "eta"
-  ],
-  "status": "changed"
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "SITC",
@@ -339,20 +342,6 @@
   "status": "same"
  },
  {
-  "carrier": "EMC",
-  "vessel": "UNI-PREMIER",
-  "voyage": "0401-458S",
-  "service": "JCH",
-  "etd": "12-09 (Wed)",
-  "eta": "12-16 (Wed)",
-  "tt": 7,
-  "prevEtd": "12-09 (Wed)",
-  "prevEta": "12-16 (Wed)",
-  "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
- },
- {
   "carrier": "SITC",
   "vessel": "SUNRISE DRAGON",
   "voyage": "2628S",
@@ -367,18 +356,39 @@
   "status": "same"
  },
  {
+  "carrier": "EMC",
+  "vessel": "UNI-PREMIER",
+  "voyage": "0401-458S",
+  "service": "JCH",
+  "etd": "12-11 (Fri)",
+  "eta": "12-17 (Thu)",
+  "tt": 6,
+  "prevEtd": "12-09 (Wed)",
+  "prevEta": "12-16 (Wed)",
+  "prevTt": 7,
+  "changedFields": [
+   "etd",
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
+ },
+ {
   "carrier": "SITC",
   "vessel": "SITC XINGDE",
   "voyage": "2626S",
   "service": "VTX1",
-  "etd": "12-13 (Sun)",
-  "eta": "12-18 (Fri)",
+  "etd": "12-14 (Mon)",
+  "eta": "12-19 (Sat)",
   "tt": 5,
   "prevEtd": "12-13 (Sun)",
   "prevEta": "12-18 (Fri)",
   "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SITC",
@@ -410,6 +420,20 @@
  },
  {
   "carrier": "SITC",
+  "vessel": "SITC HONGKONG",
+  "voyage": "2638S",
+  "service": "VTX8",
+  "etd": "12-18 (Fri)",
+  "eta": "12-28 (Mon)",
+  "tt": 10,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
+ },
+ {
+  "carrier": "SITC",
   "vessel": "SITC RENDE",
   "voyage": "2626S",
   "service": "VTX3",
@@ -431,13 +455,10 @@
   "eta": "12-27 (Sun)",
   "tt": 5,
   "prevEtd": "12-22 (Tue)",
-  "prevEta": "12-26 (Sat)",
-  "prevTt": 4,
-  "changedFields": [
-   "eta",
-   "tt"
-  ],
-  "status": "changed"
+  "prevEta": "12-27 (Sun)",
+  "prevTt": 5,
+  "changedFields": [],
+  "status": "same"
  },
  {
   "carrier": "EMC",
@@ -475,10 +496,10 @@
   "etd": "12-24 (Thu)",
   "eta": "12-29 (Tue)",
   "tt": 5,
-  "prevEtd": null,
-  "prevEta": null,
-  "prevTt": null,
+  "prevEtd": "12-24 (Thu)",
+  "prevEta": "12-29 (Tue)",
+  "prevTt": 5,
   "changedFields": [],
-  "status": "new"
+  "status": "same"
  }
 ]

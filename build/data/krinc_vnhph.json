@@ -257,8 +257,8 @@
   "eta": "12-05 (Sat)",
   "tt": 6,
   "rotation": "Incheon → Hong Kong → Haiphong",
-  "closedCarriers": "",
-  "bookingClosed": false,
+  "closedCarriers": "PANOCEAN",
+  "bookingClosed": true,
   "prevEtd": "11-29 (Sun)",
   "prevEta": "12-05 (Sat)",
   "prevTt": 6,
@@ -283,7 +283,7 @@
   "status": "same"
  },
  {
-  "carrier": "PANOCEAN / SM LINE",
+  "carrier": "SM LINE",
   "vessel": "SM TOKYO",
   "voyage": "2622W",
   "service": "HP1",
@@ -291,7 +291,7 @@
   "eta": "12-06 (Sun)",
   "tt": 6,
   "rotation": "Incheon → Kwangyang → Busan → Haiphong",
-  "closedCarriers": "PANOCEAN / SM LINE",
+  "closedCarriers": "SM LINE",
   "bookingClosed": true,
   "prevEtd": "11-30 (Mon)",
   "prevEta": "12-06 (Sun)",
@@ -300,21 +300,24 @@
   "status": "same"
  },
  {
-  "carrier": "DONGJIN",
+  "carrier": "DONGJIN / PANOCEAN",
   "vessel": "SM TOKYO",
   "voyage": "2622W",
   "service": "KHX1",
   "etd": "12-01 (Tue)",
-  "eta": "12-07 (Mon)",
-  "tt": 6,
+  "eta": "12-06 (Sun)",
+  "tt": 5,
   "rotation": "Incheon → Kwangyang → Busan → Haiphong",
-  "closedCarriers": "DONGJIN",
+  "closedCarriers": "DONGJIN / PANOCEAN",
   "bookingClosed": true,
   "prevEtd": "12-01 (Tue)",
   "prevEta": "12-07 (Mon)",
   "prevTt": 6,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "eta",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "DONGJIN",
@@ -346,23 +349,6 @@
   "bookingClosed": true,
   "prevEtd": "12-02 (Wed)",
   "prevEta": "12-07 (Mon)",
-  "prevTt": 5,
-  "changedFields": [],
-  "status": "same"
- },
- {
-  "carrier": "PANOCEAN",
-  "vessel": "STAR SKIPPER",
-  "voyage": "2623S",
-  "service": "BIH",
-  "etd": "12-03 (Thu)",
-  "eta": "12-08 (Tue)",
-  "tt": 5,
-  "rotation": "",
-  "closedCarriers": "PANOCEAN",
-  "bookingClosed": true,
-  "prevEtd": "12-03 (Thu)",
-  "prevEta": "12-08 (Tue)",
   "prevTt": 5,
   "changedFields": [],
   "status": "same"
@@ -417,6 +403,26 @@
   "prevTt": 7,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "STAR SKIPPER",
+  "voyage": "2623S",
+  "service": "BIH",
+  "etd": "12-06 (Sun)",
+  "eta": "12-11 (Fri)",
+  "tt": 5,
+  "rotation": "",
+  "closedCarriers": "",
+  "bookingClosed": false,
+  "prevEtd": "12-03 (Thu)",
+  "prevEta": "12-08 (Tue)",
+  "prevTt": 5,
+  "changedFields": [
+   "etd",
+   "eta"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "SM LINE",
@@ -678,17 +684,20 @@
   "vessel": "PEGASUS DREAM",
   "voyage": "2625W",
   "service": "KHX1",
-  "etd": "12-20 (Sun)",
+  "etd": "12-21 (Mon)",
   "eta": "12-27 (Sun)",
-  "tt": 7,
+  "tt": 6,
   "rotation": "Incheon → Kwangyang → Busan → Haiphong",
   "closedCarriers": "DONGJIN",
   "bookingClosed": true,
   "prevEtd": "12-20 (Sun)",
   "prevEta": "12-27 (Sun)",
   "prevTt": 7,
-  "changedFields": [],
-  "status": "same"
+  "changedFields": [
+   "etd",
+   "tt"
+  ],
+  "status": "changed"
  },
  {
   "carrier": "DONGJIN",
@@ -723,5 +732,22 @@
   "prevTt": 7,
   "changedFields": [],
   "status": "same"
+ },
+ {
+  "carrier": "PANOCEAN",
+  "vessel": "SM TOKYO",
+  "voyage": "2624W",
+  "service": "",
+  "etd": "12-25 (Fri)",
+  "eta": "12-31 (Thu)",
+  "tt": 6,
+  "rotation": "",
+  "closedCarriers": "PANOCEAN",
+  "bookingClosed": true,
+  "prevEtd": null,
+  "prevEta": null,
+  "prevTt": null,
+  "changedFields": [],
+  "status": "new"
  }
 ]

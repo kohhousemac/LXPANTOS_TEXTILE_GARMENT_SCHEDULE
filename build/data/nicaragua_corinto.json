@@ -2,17 +2,6 @@
  {
   "pol": "Ho Chi Minh",
   "carrier": "MSK",
-  "vessel": "MAERSK KEELUNG",
-  "voyage": "648N",
-  "etd": "11-27 (Fri)",
-  "eta": "01-14 (Thu)",
-  "tt": "48d 17h",
-  "ts": "Ningbo → Lazaro Cardenas",
-  "legs": "[{\"from\": \"Ho Chi Minh\", \"dep\": \"11-27 19:00\", \"to\": \"Ningbo\", \"arr\": \"12-02 00:00\", \"vessel\": \"MAERSK KEELUNG / 648N\"}, {\"from\": \"Ningbo\", \"dep\": \"12-12 16:00\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-06 04:00\", \"vessel\": \"MAERSK ESMERALDAS / 650E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-12 05:00\", \"to\": \"Corinto\", \"arr\": \"01-14 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 702S\"}]"
- },
- {
-  "pol": "Ho Chi Minh",
-  "carrier": "MSK",
   "vessel": "SHIMANAMI BAY",
   "voyage": "050N",
   "etd": "11-28 (Sat)",
@@ -328,5 +317,16 @@
   "tt": "41d 18h",
   "ts": "Busan → Lazaro Cardenas",
   "legs": "[{\"from\": \"Shanghai\", \"dep\": \"12-25 19:00\", \"to\": \"Busan\", \"arr\": \"01-01 10:00\", \"vessel\": \"SEASPAN GLORY / 652E\"}, {\"from\": \"Busan\", \"dep\": \"01-09 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-27 04:00\", \"vessel\": \"MAERSK EVORA / 653E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"02-02 05:00\", \"to\": \"Corinto\", \"arr\": \"02-04 23:00\", \"vessel\": \"MAERSK NEWHAVEN / 705S\"}]"
+ },
+ {
+  "pol": "Busan",
+  "carrier": "MSK",
+  "vessel": "MAERSK ENSENADA",
+  "voyage": "651E",
+  "etd": "12-26 (Sat)",
+  "eta": "01-21 (Thu)",
+  "tt": "26d 23h",
+  "ts": "Lazaro Cardenas",
+  "legs": "[{\"from\": \"Busan\", \"dep\": \"12-26 14:30\", \"to\": \"Lazaro Cardenas\", \"arr\": \"01-13 04:00\", \"vessel\": \"MAERSK ENSENADA / 651E\"}, {\"from\": \"Lazaro Cardenas\", \"dep\": \"01-19 05:00\", \"to\": \"Corinto\", \"arr\": \"01-21 23:00\", \"vessel\": \"SEALAND MANZANILLO / 703S\"}]"
  }
 ]
